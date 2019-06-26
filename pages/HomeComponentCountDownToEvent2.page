@@ -1,0 +1,19 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="true">
+
+    <style type="text/css" media="all">
+        body{margin: 0; padding: 0; color: #00000; background-color: #BEE3E3;}
+        #DIV_Container {background-color: #BEE3E3; foreground-color: #39292;}
+    </style>
+    <div id="DIV_Container" align="LEFT">
+        <table>
+            <tr>
+                <td>
+                    <iframe src="http://free.timeanddate.com/countdown/i2u9lqt4/n419/cf114/cm0/cu4/ct0/cs1/ca0/co1/cr0/ss0/cac009/cpc009/pcfff/tcfff/fs100/szw320/szh135/tatCOUNTDOWN/tac009/tptTime%20since%20Event%20started%20in/tpc009/iso2012-01-03T08:00:00/bat4/bac009" frameborder="0" width="322" height="137"></iframe>
+                </td>
+                <td>
+                    <B>With this approach we can type additional information about the up coming event.  We can even include an image of our choosing!  See the money image?</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+</apex:page>

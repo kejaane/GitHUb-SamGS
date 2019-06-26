@@ -1,0 +1,2879 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayouts>
+        <fullName>Plan_Search</fullName>
+        <fields>Plan_Id__c</fields>
+        <fields>Plan_Name__c</fields>
+        <fields>CDH__c</fields>
+        <fields>CDH_Fund_Type__c</fields>
+        <fields>CDH_Type__c</fields>
+        <fields>Name</fields>
+        <label>Plan Search</label>
+    </compactLayouts>
+    <fields>
+        <fullName>All_Market_Segments__c</fullName>
+        <externalId>false</externalId>
+        <label>All Market Segments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Large(1000+)</fullName>
+                    <default>false</default>
+                    <label>Large(1000+)</label>
+                </value>
+                <value>
+                    <fullName>Large(200-999)</fullName>
+                    <default>false</default>
+                    <label>Large(200-999)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AllergySerumsComment__c</fullName>
+        <description>b-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AllergySerumsComment</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AllergySerums__c</fullName>
+        <externalId>false</externalId>
+        <label>AllergySerums</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ApplyCoinsuranceToOOP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ApplyCoinsuranceToOOP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ApplyCopayToOOP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ApplyCopayToOOP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ApplyDeductibleToOOP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ApplyDeductibleToOOP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ApplyPerAdmissionCopayToOOP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ApplyPerAdmissionCopayToOOP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apply_Coinsurance_To_OOP__c</fullName>
+        <externalId>false</externalId>
+        <label>Apply Coinsurance To OOP</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Apply_Copay_To_OOP__c</fullName>
+        <externalId>false</externalId>
+        <label>Apply Copay To OOP</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Apply_Deductible_To_OOP__c</fullName>
+        <externalId>false</externalId>
+        <label>Apply Deductible To OOP</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Apply_Per_Admission_Copay_To_OOP__c</fullName>
+        <externalId>false</externalId>
+        <label>Apply Per Admission Copay To OOP</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BDF_Configuration_Last_Updated__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>BDF Configuration Last Updated</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>BenefitPeriodMaximum__c</fullName>
+        <description>B-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>BenefitPeriodMaximum</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CDH_Fund_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>CDH Fund Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BlueFund</fullName>
+                    <default>false</default>
+                    <label>BlueFund</label>
+                </value>
+                <value>
+                    <fullName>Compatible</fullName>
+                    <default>false</default>
+                    <label>Compatible</label>
+                </value>
+                <value>
+                    <fullName>Blue Fund</fullName>
+                    <default>false</default>
+                    <label>Blue Fund</label>
+                </value>
+                <value>
+                    <fullName>Compatitble</fullName>
+                    <default>false</default>
+                    <label>Compatitble</label>
+                </value>
+                <value>
+                    <fullName>HRA Non-Integrated - Medical &amp;amp; RX ded not combined</fullName>
+                    <default>false</default>
+                    <label>HRA Non-Integrated - Medical &amp;amp; RX ded not combined</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CDH_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>CDH Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HSA</fullName>
+                    <default>false</default>
+                    <label>HSA</label>
+                </value>
+                <value>
+                    <fullName>HRA Integrated</fullName>
+                    <default>false</default>
+                    <label>HRA Integrated</label>
+                </value>
+                <value>
+                    <fullName>HRA Non-Integrated</fullName>
+                    <default>false</default>
+                    <label>HRA Non-Integrated</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CDH__c</fullName>
+        <externalId>false</externalId>
+        <label>CDH</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CF_ProductId__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>CF ProductId</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Coinsurance_DefaultAmount_c__c</fullName>
+        <externalId>false</externalId>
+        <label>Coinsurance_DefaultAmount__c</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Configuration_Last_Updated__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>BRF Configuration Last Updated</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Copay_Type_1_DefaultAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Copay_Type_1_DefaultAmount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Copay_Type_1_IsCovered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Copay_Type_1_IsCovered</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Copay_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Copay Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PCP Copay</fullName>
+                    <default>false</default>
+                    <label>PCP Copay</label>
+                </value>
+                <value>
+                    <fullName>Specialist Copay</fullName>
+                    <default>false</default>
+                    <label>Specialist Copay</label>
+                </value>
+                <value>
+                    <fullName>General Copay</fullName>
+                    <default>false</default>
+                    <label>General Copay</label>
+                </value>
+                <value>
+                    <fullName>Per Admission Copay</fullName>
+                    <default>false</default>
+                    <label>Per Admission Copay</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CountOfNetworks__c</fullName>
+        <externalId>false</externalId>
+        <label>CountOfNetworks</label>
+        <summaryForeignKey>AIA_Plan_Network__c.Plan__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_of_Networks__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of Networks</label>
+        <summaryForeignKey>AIA_Plan_Network__c.Plan__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Data_Load__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Data Load</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DeductibleAccumulatorMethod__c</fullName>
+        <externalId>false</externalId>
+        <label>DeductibleAccumulatorMethod</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Stacked</fullName>
+                    <default>false</default>
+                    <label>Stacked</label>
+                </value>
+                <value>
+                    <fullName>Unstacked</fullName>
+                    <default>false</default>
+                    <label>Unstacked</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DiabeticSuppCopayApply__c</fullName>
+        <externalId>false</externalId>
+        <label>DiabeticSuppCopayApply</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Exclude</fullName>
+                    <default>false</default>
+                    <label>Exclude</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DiabeticSuppDedApply__c</fullName>
+        <externalId>false</externalId>
+        <label>DiabeticSuppDedApply</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Exclude</fullName>
+                    <default>false</default>
+                    <label>Exclude</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DiabeticSuppMandateApply__c</fullName>
+        <externalId>false</externalId>
+        <label>DiabeticSuppMandateApply</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Effective_Date__c</fullName>
+        <description>The date that the plan is available</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ErectileDysfuncComment__c</fullName>
+        <description>b-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>ErectileDysfuncComment</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ErectileDysfunc__c</fullName>
+        <externalId>false</externalId>
+        <label>ErectileDysfunc</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ExtID__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>ExtID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FamilyDedCalculation__c</fullName>
+        <description>B-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>FamilyDedCalculation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FamilyOOPCalculation__c</fullName>
+        <description>B-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>FamilyOOPCalculation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FertilityAgentsComment__c</fullName>
+        <description>b-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>FertilityAgentsComment</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FertilityAgents__c</fullName>
+        <externalId>false</externalId>
+        <label>FertilityAgents</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Full_Plan_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Plan_Name__c +  IF(ISBLANK(Option__c), '', ' ' + Option__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Plan Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GenDispsng__c</fullName>
+        <externalId>false</externalId>
+        <label>GenDispsng</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MANDATORY</fullName>
+                    <default>false</default>
+                    <label>MANDATORY</label>
+                </value>
+                <value>
+                    <fullName>RESTRICTED</fullName>
+                    <default>false</default>
+                    <label>RESTRICTED</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY-standard: member charged applicable copay</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY-standard: member charged applicable copay</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GenReferralDescription__c</fullName>
+        <description>b-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>GenReferralDescription</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GenReferral__c</fullName>
+        <description>b-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>GenReferral</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GenStepTherapy__c</fullName>
+        <externalId>false</externalId>
+        <label>GenStepTherapy</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GrowthHormone__c</fullName>
+        <externalId>false</externalId>
+        <label>GrowthHormone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HBSelectGeneric__c</fullName>
+        <externalId>false</externalId>
+        <label>HBSelectGeneric</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Waive Ded/Waive Copay (Standard)</fullName>
+                    <default>false</default>
+                    <label>Waive Ded/Waive Copay (Standard)</label>
+                </value>
+                <value>
+                    <fullName>Waive Ded/Apply Copay</fullName>
+                    <default>false</default>
+                    <label>Waive Ded/Apply Copay</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Benefit_Summary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Has Benefit Summary</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>INN_OON_Ded_Contribute_To_Each_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>INN &amp; OON Ded Contribute To Each Other</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INN_and_OON_Annual_Maximum_combined__c</fullName>
+        <externalId>false</externalId>
+        <label>INN and OON Annual Maximum combined</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INN_and_OON_Lifetime_Maximum_combined__c</fullName>
+        <externalId>false</externalId>
+        <label>INN and OON Lifetime Maximum combined</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INN_and_OON_OOP_Contribute_To_Each_Other__c</fullName>
+        <description>AIA Q2 2017 Release</description>
+        <externalId>false</externalId>
+        <label>INN and OON OOP Contribute To Each Other</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INN_or_Contracted_Provider_Penalty__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>INN or Contracted Provider Penalty</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IntegratedDedIndicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>No Longer Used</description>
+        <externalId>false</externalId>
+        <label>IntegratedDedIndicator</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IntegratedOOPIndicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IntegratedOOPIndicator</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Integrated_DedIndicator__c</fullName>
+        <externalId>false</externalId>
+        <label>Integrated DedIndicator</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Integrated_OOP_Indicator__c</fullName>
+        <externalId>false</externalId>
+        <label>Integrated OOP Indicator</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Jurisdiction__c</fullName>
+        <externalId>false</externalId>
+        <label>Jurisdiction</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                    <label>MD</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>Federal</fullName>
+                    <default>false</default>
+                    <label>Federal</label>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                    <label>VA</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Entity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GHMSI</fullName>
+                    <default>false</default>
+                    <label>GHMSI</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice</fullName>
+                    <default>false</default>
+                    <label>BlueChoice</label>
+                </value>
+                <value>
+                    <fullName>CFMI</fullName>
+                    <default>false</default>
+                    <label>CFMI</label>
+                </value>
+                <value>
+                    <fullName>CFBC</fullName>
+                    <default>false</default>
+                    <label>CFBC</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                    <label>MD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Magellan_Behavioral_Health__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Magellan Behavioral Health</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailOrdDispnsMaintDaysSupp__c</fullName>
+        <externalId>false</externalId>
+        <label>MailOrdDispnsMaintDaysSupp</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailOrdDispnsNMaintDaysSupp__c</fullName>
+        <externalId>false</externalId>
+        <label>MailOrdDispnsNMaintDaysSupp</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailOrderAllDrugs__c</fullName>
+        <externalId>false</externalId>
+        <label>MailOrderAllDrugs</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Network_Levels__c</fullName>
+        <externalId>false</externalId>
+        <label>Network Levels</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>National</fullName>
+                    <default>false</default>
+                    <label>National</label>
+                </value>
+                <value>
+                    <fullName>RX Choice</fullName>
+                    <default>false</default>
+                    <label>RX Choice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Network__c</fullName>
+        <externalId>false</externalId>
+        <label>Network</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>One</fullName>
+                    <default>false</default>
+                    <label>One</label>
+                </value>
+                <value>
+                    <fullName>Two</fullName>
+                    <default>false</default>
+                    <label>Two</label>
+                </value>
+                <value>
+                    <fullName>Three</fullName>
+                    <default>false</default>
+                    <label>Three</label>
+                </value>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>National</fullName>
+                    <default>false</default>
+                    <label>National</label>
+                </value>
+                <value>
+                    <fullName>RX Choice</fullName>
+                    <default>false</default>
+                    <label>RX Choice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <description>B-03464</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>OON_Fully_Insured__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>OON - Fully Insured</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OOPAccumulatorMethod__c</fullName>
+        <externalId>false</externalId>
+        <label>OOPAccumulatorMethod</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Stacked</fullName>
+                    <default>false</default>
+                    <label>Stacked</label>
+                </value>
+                <value>
+                    <fullName>Unstacked</fullName>
+                    <default>false</default>
+                    <label>Unstacked</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OTCCovered__c</fullName>
+        <externalId>false</externalId>
+        <label>OTCCovered</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Option__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Option</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OralChemoCopayApply__c</fullName>
+        <externalId>false</externalId>
+        <label>OralChemoCopayApply</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Exclude</fullName>
+                    <default>false</default>
+                    <label>Exclude</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OralChemoDedApply__c</fullName>
+        <externalId>false</externalId>
+        <label>OralChemoDedApply</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Exclude</fullName>
+                    <default>false</default>
+                    <label>Exclude</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OralChemoMandateApply__c</fullName>
+        <externalId>false</externalId>
+        <label>OralChemoMandateApply</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Other_Requirements__c</fullName>
+        <description>B-03464</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Other Requirements</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PCS_Last_Updated_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>PCS Last Updated Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Product_NameL__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Parent Product Name</label>
+        <length>100000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Parent_Product__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Parent Product</label>
+        <length>100000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PlanType__c</fullName>
+        <externalId>false</externalId>
+        <label>Plan Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Non-Standard</fullName>
+                    <default>false</default>
+                    <label>Non-Standard</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Plan_Active_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Plan Active Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Plan_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique Key in PCS</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>true</externalId>
+        <label>PCS Plan Id</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Plan_Name__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Plan Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PreRenewalPlanID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>true</externalId>
+        <label>PreRenewalPlanID</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>PrescriptionComments__c</fullName>
+        <description>B-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>PrescriptionComments</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PrescriptionCovrdArrngmnt__c</fullName>
+        <description>B-03443</description>
+        <externalId>false</externalId>
+        <label>PrescriptionCovrdArrngmnt</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Carved Out</fullName>
+                    <default>false</default>
+                    <label>Carved Out</label>
+                </value>
+                <value>
+                    <fullName>Covered under Drug Program</fullName>
+                    <default>false</default>
+                    <label>Covered under Drug Program</label>
+                </value>
+                <value>
+                    <fullName>Not Covered under Drug Program</fullName>
+                    <default>false</default>
+                    <label>Not Covered under Drug Program</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PrevntvCovrd__c</fullName>
+        <externalId>false</externalId>
+        <label>PrevntvCovrd</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PrevntvDrugCopayAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>PrevntvDrugCopayAmount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PriorAuth__c</fullName>
+        <externalId>false</externalId>
+        <label>PriorAuth</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PriorCarrierDedCred__c</fullName>
+        <externalId>false</externalId>
+        <label>PriorCarrierDedCred</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Medical</fullName>
+                    <default>false</default>
+                    <label>Medical</label>
+                </value>
+                <value>
+                    <fullName>Dental</fullName>
+                    <default>false</default>
+                    <label>Dental</label>
+                </value>
+                <value>
+                    <fullName>Vision</fullName>
+                    <default>false</default>
+                    <label>Vision</label>
+                </value>
+                <value>
+                    <fullName>CareFirst Private Exchange</fullName>
+                    <default>false</default>
+                    <label>CareFirst Private Exchange</label>
+                </value>
+                <value>
+                    <fullName>Drug</fullName>
+                    <default>false</default>
+                    <label>Drug</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Last_Updated_String_Format__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Product Last Updated String Format</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Last_Updated__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Product Last Updated</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Product_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Line</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DENTAL</fullName>
+                    <default>false</default>
+                    <label>DENTAL</label>
+                </value>
+                <value>
+                    <fullName>HMO</fullName>
+                    <default>false</default>
+                    <label>HMO</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy</fullName>
+                    <default>false</default>
+                    <label>Pharmacy</label>
+                </value>
+                <value>
+                    <fullName>POS</fullName>
+                    <default>false</default>
+                    <label>POS</label>
+                </value>
+                <value>
+                    <fullName>PPO</fullName>
+                    <default>false</default>
+                    <label>PPO</label>
+                </value>
+                <value>
+                    <fullName>VISION</fullName>
+                    <default>false</default>
+                    <label>VISION</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>HCR</fullName>
+                    <default>false</default>
+                    <label>HCR</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Exit</fullName>
+                    <default>false</default>
+                    <label>Exit</label>
+                </value>
+                <value>
+                    <fullName>UM</fullName>
+                    <default>false</default>
+                    <label>UM</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Sub Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DHMO</fullName>
+                    <default>false</default>
+                    <label>DHMO</label>
+                </value>
+                <value>
+                    <fullName>Traditional</fullName>
+                    <default>false</default>
+                    <label>Traditional</label>
+                </value>
+                <value>
+                    <fullName>Preferred</fullName>
+                    <default>false</default>
+                    <label>Preferred</label>
+                </value>
+                <value>
+                    <fullName>BlueDental Plus</fullName>
+                    <default>false</default>
+                    <label>BlueDental Plus</label>
+                </value>
+                <value>
+                    <fullName>BlueDental Basic (Non DHMO)</fullName>
+                    <default>false</default>
+                    <label>BlueDental Basic (Non DHMO)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <description>US258
+This field holds values from the PCS specific field : Product Family Description</description>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BlueChoice Advantage CDH Integrated</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Advantage CDH Integrated</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice Advantage CDH Non-Integrated</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Advantage CDH Non-Integrated</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice Advantage</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Advantage</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice HMO Referral Integrated Ded &gt; 1K</fullName>
+                    <default>false</default>
+                    <label>BlueChoice HMO Referral Integrated Ded &gt; 1K</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice Referral Non-Integrated Deductible</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Referral Non-Integrated Deductible</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice HMO Open Access</fullName>
+                    <default>false</default>
+                    <label>BlueChoice HMO Open Access</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice HMO Open Access HDHP Integrated Deductible</fullName>
+                    <default>false</default>
+                    <label>BlueChoice HMO Open Access HDHP Integrated Deductible</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice HMO</fullName>
+                    <default>false</default>
+                    <label>BlueChoice HMO</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice HMO Open Access HDHP Non Integrated Deductible</fullName>
+                    <default>false</default>
+                    <label>BlueChoice HMO Open Access HDHP Non Integrated Deductible</label>
+                </value>
+                <value>
+                    <fullName>BluePreferred HDHP Integrated Deductible</fullName>
+                    <default>false</default>
+                    <label>BluePreferred HDHP Integrated Deductible</label>
+                </value>
+                <value>
+                    <fullName>BluePreferred HDHP Non Integrated Deductible</fullName>
+                    <default>false</default>
+                    <label>BluePreferred HDHP Non Integrated Deductible</label>
+                </value>
+                <value>
+                    <fullName>BluePreferred PPO</fullName>
+                    <default>false</default>
+                    <label>BluePreferred PPO</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice Opt Out Open Access</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Opt Out Open Access</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice Opt Out Plus Open Access HDHP Integrated Deductible</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Opt Out Plus Open Access HDHP Integrated Deductible</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice Opt Out Plus Open Access HDHP Non Integrated Deductible</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Opt Out Plus Open Access HDHP Non Integrated Deductible</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice Opt Out Plus Open Access</fullName>
+                    <default>false</default>
+                    <label>BlueChoice Opt Out Plus Open Access</label>
+                </value>
+                <value>
+                    <fullName>BlueChoice HMO Referral Non-Integrated Ded &gt;1K</fullName>
+                    <default>false</default>
+                    <label>BlueChoice HMO Referral Non-Integrated Ded &gt;1K</label>
+                </value>
+                <value>
+                    <fullName>"BPH	BluePreferred HDHP Integrated Deductible"</fullName>
+                    <default>false</default>
+                    <label>"BPH	BluePreferred HDHP Integrated Deductible"</label>
+                </value>
+                <value>
+                    <fullName>Catastrophic</fullName>
+                    <default>false</default>
+                    <label>Catastrophic</label>
+                </value>
+                <value>
+                    <fullName>Capital Care Advantage</fullName>
+                    <default>false</default>
+                    <label>Capital Care Advantage</label>
+                </value>
+                <value>
+                    <fullName>Capital Care HMO</fullName>
+                    <default>false</default>
+                    <label>Capital Care HMO</label>
+                </value>
+                <value>
+                    <fullName>Dental Test</fullName>
+                    <default>false</default>
+                    <label>Dental Test</label>
+                </value>
+                <value>
+                    <fullName>VAES HMO</fullName>
+                    <default>false</default>
+                    <label>VAES HMO</label>
+                </value>
+                <value>
+                    <fullName>VAES Comprehensive</fullName>
+                    <default>false</default>
+                    <label>VAES Comprehensive</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Triple Option - Integrated ≥ 1K (HB1)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Triple Option - Integrated ≥ 1K (HB1)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Triple Option - Integrated  &lt; 1K(HB1)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Triple Option - Integrated  &lt; 1K(HB1)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue 2.0 /Plus Dual Option (Bcoop) Integrated ≥1K (HB2)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue 2.0 /Plus Dual Option (Bcoop) Integrated ≥1K (HB2)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated ≥1K  (HB2)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated ≥1K  (HB2)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue 2.0/Plus Dual Option (Bcoop) Integrated &lt;1K  (HB2)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue 2.0/Plus Dual Option (Bcoop) Integrated &lt;1K  (HB2)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated &lt;1K  (HB2)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated &lt;1K  (HB2)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Advantage  Integrated ≥ 1K (HB3)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Advantage  Integrated ≥ 1K (HB3)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Advantage - Nonintegrated ≥ $1K (HB3)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Advantage - Nonintegrated ≥ $1K (HB3)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Advantage  -Integrated &lt; 1K  (HB3)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Advantage  -Integrated &lt; 1K  (HB3)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Advantage -- Nonintegrated &lt; $1K (HB3)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Advantage -- Nonintegrated &lt; $1K (HB3)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue HMO Open Access - Integrated  ≥1K  (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue HMO Open Access - Integrated  ≥1K  (HB4)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue HMO Open Access - Nonintegrated ≥1K  (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue HMO Open Access - Nonintegrated ≥1K  (HB4)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue HMO Open Access - Integrated &lt;1K  (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue HMO Open Access - Integrated &lt;1K  (HB4)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue HMO  Open Access- Nonintegrated &lt;1K (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue HMO  Open Access- Nonintegrated &lt;1K (HB4)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue BluePreferred -  Integrated   ≥1K  (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue BluePreferred -  Integrated   ≥1K  (HB4)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue BluePreferred - Nonintegrated ≥1K  (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue BluePreferred - Nonintegrated ≥1K  (HB4)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue BluePreferred -Integrated &lt;1K (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue BluePreferred -Integrated &lt;1K (HB4)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue BluePreferred - Nonintegrated &lt;1K  (HB4)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue BluePreferred - Nonintegrated &lt;1K  (HB4)</label>
+                </value>
+                <value>
+                    <fullName>DHP Group Conversion (This Is Now Considered BChoice GC)</fullName>
+                    <default>false</default>
+                    <label>DHP Group Conversion (This Is Now Considered BChoice GC)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Dual Option -Integrated ≥ 1K  (HB1)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Dual Option -Integrated ≥ 1K  (HB1)</label>
+                </value>
+                <value>
+                    <fullName>HealthyBlue Dual Option - Integrated &lt; 1K  (HB1)</fullName>
+                    <default>false</default>
+                    <label>HealthyBlue Dual Option - Integrated &lt; 1K  (HB1)</label>
+                </value>
+                <value>
+                    <fullName>Medigap I</fullName>
+                    <default>false</default>
+                    <label>Medigap I</label>
+                </value>
+                <value>
+                    <fullName>Medigap A</fullName>
+                    <default>false</default>
+                    <label>Medigap A</label>
+                </value>
+                <value>
+                    <fullName>Medigap B</fullName>
+                    <default>false</default>
+                    <label>Medigap B</label>
+                </value>
+                <value>
+                    <fullName>Medigap C</fullName>
+                    <default>false</default>
+                    <label>Medigap C</label>
+                </value>
+                <value>
+                    <fullName>Medigap F</fullName>
+                    <default>false</default>
+                    <label>Medigap F</label>
+                </value>
+                <value>
+                    <fullName>Medigap G</fullName>
+                    <default>false</default>
+                    <label>Medigap G</label>
+                </value>
+                <value>
+                    <fullName>Medigap L</fullName>
+                    <default>false</default>
+                    <label>Medigap L</label>
+                </value>
+                <value>
+                    <fullName>Medigap M</fullName>
+                    <default>false</default>
+                    <label>Medigap M</label>
+                </value>
+                <value>
+                    <fullName>Medigap N</fullName>
+                    <default>false</default>
+                    <label>Medigap N</label>
+                </value>
+                <value>
+                    <fullName>Protection 65 (Medigap)</fullName>
+                    <default>false</default>
+                    <label>Protection 65 (Medigap)</label>
+                </value>
+                <value>
+                    <fullName>Medical and Rx deductibles are combined</fullName>
+                    <default>false</default>
+                    <label>Medical and Rx deductibles are combined</label>
+                </value>
+                <value>
+                    <fullName>Multi-state plan (on exchange only), fully integrated</fullName>
+                    <default>false</default>
+                    <label>Multi-state plan (on exchange only), fully integrated</label>
+                </value>
+                <value>
+                    <fullName>Multi-state plan (on exchange only), non-integrated</fullName>
+                    <default>false</default>
+                    <label>Multi-state plan (on exchange only), non-integrated</label>
+                </value>
+                <value>
+                    <fullName>Medical and Rx deductibles are not combined</fullName>
+                    <default>false</default>
+                    <label>Medical and Rx deductibles are not combined</label>
+                </value>
+                <value>
+                    <fullName>BCBS65 (Medigap)</fullName>
+                    <default>false</default>
+                    <label>BCBS65 (Medigap)</label>
+                </value>
+                <value>
+                    <fullName>Traditional Group &gt;65</fullName>
+                    <default>false</default>
+                    <label>Traditional Group &gt;65</label>
+                </value>
+                <value>
+                    <fullName>Traditional Indemnity And Group Standard &lt;65</fullName>
+                    <default>false</default>
+                    <label>Traditional Indemnity And Group Standard &lt;65</label>
+                </value>
+                <value>
+                    <fullName>Traditional Comprehensive Indemnity And Personal Comp</fullName>
+                    <default>false</default>
+                    <label>Traditional Comprehensive Indemnity And Personal Comp</label>
+                </value>
+                <value>
+                    <fullName>HSA Compatible HD Non Integrated</fullName>
+                    <default>false</default>
+                    <label>HSA Compatible HD Non Integrated</label>
+                </value>
+                <value>
+                    <fullName>Wrap Indemnity</fullName>
+                    <default>false</default>
+                    <label>Wrap Indemnity</label>
+                </value>
+                <value>
+                    <fullName>Vision Test</fullName>
+                    <default>false</default>
+                    <label>Vision Test</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PrscrbdOrlContrcptvAndDevc__c</fullName>
+        <externalId>false</externalId>
+        <label>PrscrbdOrlContrcptvAndDevc</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Woman’s Preventive Services (standard with Preventive $0 copay unless religious exclusion)</fullName>
+                    <default>false</default>
+                    <label>Woman’s Preventive Services (standard with Preventive $0 copay unless religious exclusion)</label>
+                </value>
+                <value>
+                    <fullName>Woman’s Preventive Services Exempt – No Benefits</fullName>
+                    <default>false</default>
+                    <label>Woman’s Preventive Services Exempt – No Benefits</label>
+                </value>
+                <value>
+                    <fullName>Woman’s Preventive Services Accommodated – Full Exemption</fullName>
+                    <default>false</default>
+                    <label>Woman’s Preventive Services Accommodated – Full Exemption</label>
+                </value>
+                <value>
+                    <fullName>Woman’s Preventive Services Accommodated – Emergency Contraception</fullName>
+                    <default>false</default>
+                    <label>Woman’s Preventive Services Accommodated – Emergency Contraception</label>
+                </value>
+                <value>
+                    <fullName>Mandated Benefits (standard for Grandfathered unless Preventive / WPS chosen) Oral, Transdermal, Non-surgical Injectables, Cervical Cap and Diaphargms.</fullName>
+                    <default>false</default>
+                    <label>Mandated Benefits (standard for Grandfathered unless Preventive / WPS chosen) Oral, Transdermal, Non-surgical Injectables, Cervical Cap and Diaphargms.</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>QA_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>QA Complete</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>QA_Completed_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>QA Completed Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>QA_Completed_by__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>QA Completed by</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReferralSpecDescription__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Referral Spec Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ReferralSpec__c</fullName>
+        <description>b-03443</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>ReferralSpec</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RetDispnsMaintDaysSupp__c</fullName>
+        <externalId>false</externalId>
+        <label>RetDispnsMaintDaysSupp</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RetDispnsNMaintDaysSupp__c</fullName>
+        <externalId>false</externalId>
+        <label>RetDispnsNMaintDaysSupp</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RetMailDispnsMaintLimitation__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>RetMailDispnsMaintLimitation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RetMailDispnsMaint__c</fullName>
+        <externalId>false</externalId>
+        <label>RetMailDispnsMaint</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Up to 90 day supply 2 copays (standard)</fullName>
+                    <default>false</default>
+                    <label>Up to 90 day supply 2 copays (standard)</label>
+                </value>
+                <value>
+                    <fullName>Voluntary Maintenance Choice</fullName>
+                    <default>false</default>
+                    <label>Voluntary Maintenance Choice</label>
+                </value>
+                <value>
+                    <fullName>Voluntary Maintenance Choice (custom)</fullName>
+                    <default>false</default>
+                    <label>Voluntary Maintenance Choice (custom)</label>
+                </value>
+                <value>
+                    <fullName>Mandatory Maintenance Choice</fullName>
+                    <default>false</default>
+                    <label>Mandatory Maintenance Choice</label>
+                </value>
+                <value>
+                    <fullName>Mandatory Maintenance Choice (custom)</fullName>
+                    <default>false</default>
+                    <label>Mandatory Maintenance Choice (custom)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RxFundamentalApply__c</fullName>
+        <externalId>false</externalId>
+        <label>RxFundamentalApply</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RxFundamentalDedCopayRule__c</fullName>
+        <externalId>false</externalId>
+        <label>RxFundamentalDedCopayRule</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Waive Ded/Waive Copay (Standard)</fullName>
+                    <default>false</default>
+                    <label>Waive Ded/Waive Copay (Standard)</label>
+                </value>
+                <value>
+                    <fullName>Waive Ded/Apply Copay</fullName>
+                    <default>false</default>
+                    <label>Waive Ded/Apply Copay</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Skeleton_Plan__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Has_Benefit_Summary__c = true, false, true)</formula>
+        <label>Skeleton Plan</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Termination_Date__c</fullName>
+        <description>The date the product is not available to be selected for quoting</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Three_Month_Deductible_Carryover__c</fullName>
+        <externalId>false</externalId>
+        <label>Three Month Deductible</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TierCount__c</fullName>
+        <externalId>false</externalId>
+        <label>TierCount</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>X01_Program__c</fullName>
+        <description>Vision attribute Release 2A</description>
+        <externalId>false</externalId>
+        <label>01 Program</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>30 - Core BlueVision</fullName>
+                    <default>false</default>
+                    <label>30 - Core BlueVision</label>
+                </value>
+                <value>
+                    <fullName>31 - Core BlueVision</fullName>
+                    <default>false</default>
+                    <label>31 - Core BlueVision</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>X05OptionsString__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>05OptionsString</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X05Options__c</fullName>
+        <externalId>false</externalId>
+        <label>05Options</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>07-Includes Tint and Excludes Referral Exam</fullName>
+                    <default>false</default>
+                    <label>07-Includes Tint and Excludes Referral Exam</label>
+                </value>
+                <value>
+                    <fullName>08–Group w/ Medical Option(s)</fullName>
+                    <default>false</default>
+                    <label>08–Group w/ Medical Option(s)</label>
+                </value>
+                <value>
+                    <fullName>09–Freestanding Vision Group</fullName>
+                    <default>false</default>
+                    <label>09–Freestanding Vision Group</label>
+                </value>
+                <value>
+                    <fullName>Other (nonstandard)</fullName>
+                    <default>false</default>
+                    <label>Other (nonstandard)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>X06RenewalPeriodString__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>06RenewalPeriodString</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X06RenewalPeriod__c</fullName>
+        <externalId>false</externalId>
+        <label>06RenewalPeriod</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>07–12 Months</fullName>
+                    <default>false</default>
+                    <label>07–12 Months</label>
+                </value>
+                <value>
+                    <fullName>08–24 Months</fullName>
+                    <default>false</default>
+                    <label>08–24 Months</label>
+                </value>
+                <value>
+                    <fullName>11–Exam &amp; Lens 12 Months; Frames 24 Months</fullName>
+                    <default>false</default>
+                    <label>11–Exam &amp; Lens 12 Months; Frames 24 Months</label>
+                </value>
+                <value>
+                    <fullName>Other (nonstandard)</fullName>
+                    <default>false</default>
+                    <label>Other (nonstandard)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>X07BenefitRenewsString__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>07BenefitRenewsString</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X07BenefitRenews__c</fullName>
+        <externalId>false</externalId>
+        <label>07BenefitRenews</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>07–Calendar Year</fullName>
+                    <default>false</default>
+                    <label>07–Calendar Year</label>
+                </value>
+                <value>
+                    <fullName>08–Contract Year</fullName>
+                    <default>false</default>
+                    <label>08–Contract Year</label>
+                </value>
+                <value>
+                    <fullName>09–Date of Service</fullName>
+                    <default>false</default>
+                    <label>09–Date of Service</label>
+                </value>
+                <value>
+                    <fullName>Other (nonstandard)</fullName>
+                    <default>false</default>
+                    <label>Other (nonstandard)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>X08RenewalType__c</fullName>
+        <externalId>false</externalId>
+        <label>08RenewalType</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>01-Contract Year</fullName>
+                    <default>false</default>
+                    <label>01-Contract Year</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>isDrugCount__c</fullName>
+        <externalId>false</externalId>
+        <label>isDrugCount</label>
+        <summaryFilterItems>
+            <field>AIA_Related_Plans__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Drug</value>
+        </summaryFilterItems>
+        <summaryForeignKey>AIA_Related_Plans__c.Plan__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>AIA Object - Object used to store plans send from PCS</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Plan</label>
+    <nameField>
+        <displayFormat>P-{00000}</displayFormat>
+        <label>SFDC Plan Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Plans</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Parent_Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Plan_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Plan_Id__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Option__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Plan_Name__c</searchFilterFields>
+        <searchFilterFields>Plan_Id__c</searchFilterFields>
+        <searchResultsAdditionalFields>Plan_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Line__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Plan_Id__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Option__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Parent_Product__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Jurisdiction__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CDH__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All3</fullName>
+        <columns>NAME</columns>
+        <columns>Full_Plan_Name__c</columns>
+        <columns>PlanType__c</columns>
+        <columns>Product_Category__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Plan_Id__c</columns>
+        <columns>Product_Line__c</columns>
+        <columns>Product_Status__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Skeleton_Plan__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Category__c</field>
+            <operation>equals</operation>
+            <value>Medical</value>
+        </filters>
+        <label>All Medical Plans</label>
+    </listViews>
+    <listViews>
+        <fullName>Allnew</fullName>
+        <columns>NAME</columns>
+        <columns>Full_Plan_Name__c</columns>
+        <columns>PlanType__c</columns>
+        <columns>Product_Category__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Plan_Id__c</columns>
+        <columns>Product_Line__c</columns>
+        <columns>Product_Status__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Skeleton_Plan__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Skeleton_Products</fullName>
+        <columns>NAME</columns>
+        <columns>Plan_Name__c</columns>
+        <columns>Option__c</columns>
+        <columns>Jurisdiction__c</columns>
+        <columns>PlanType__c</columns>
+        <columns>CDH__c</columns>
+        <columns>CDH_Fund_Type__c</columns>
+        <columns>CDH_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Plan_Id__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Skeleton Products</label>
+    </listViews>
+    <webLinks>
+        <fullName>Run_DDP2</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Run DDP2</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__looplus?sessionId={!$Api.Session_ID}&amp;eid={!AIA_Plan__c.Id}&amp;ddpIds=a1FP0000004eHPq</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Run_DDPTestplan</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Run DDPTestplan</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__looplus?sessionId={!$Api.Session_ID}&amp;eid={!AIA_Plan__c.Id}</url>
+    </webLinks>
+</CustomObject>

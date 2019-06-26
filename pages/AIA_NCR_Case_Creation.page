@@ -1,0 +1,128 @@
+<!-- 
+ *===================================================================================================
+ * Date         : 01/21/2018
+ * Developer    : Rajesh Pennam
+ * Purpose      : This is the VF page for NCR Case Creation
+ *===================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date          Developer     Tag   Description
+ *===================================================================================================
+ * 02/12/2018 | Rajesh Pennam |    | This page is used to create NCR Case from Opportunity
+ *===================================================================================================
+ -->
+
+
+<apex:page showHeader="true" standardController="Case" extensions="AIA_NCR_CaseExt" sidebar="false" 
+           lightningStylesheets="true" docType="html-5.0" recordSetVar="NCRcases" action="{!pageNavigation}">
+    
+   <apex:slds rendered="{!!isClassic}"/>
+   <style>
+       .pbButton{text-align: center !important;}
+       .pbButton:last-child {padding-right: 400px !important;}
+       .pickListHt{height:30px;}
+   </style>
+      
+    <apex:form >
+        <apex:pageBlock title="Case Information">
+            <apex:actionFunction name="cancelRec" action="{!cancelFun}" immediate="true"/>
+
+        <apex:pageBlockButtons >
+            <div align="center">
+                <apex:commandButton value="Save" action="{!Save}" />
+                <!--<apex:commandButton value="Cancel1" action="{!Cancel}" immediate="true"/>-->
+                <apex:commandButton value="Cancel" onclick="return cancelRec();" />
+                <!-- <apex:commandButton value="Save & New" action="{!Quicksave}"/>
+                <apex:commandButton value="Save & Close" action="{!QuickClose}"/> -->
+            </div>    
+        </apex:pageBlockButtons>
+        
+         <!---------------------- This block is for displaying Case Information --------------------------------->
+            <apex:pageBlockSection title="Case Information" id="pgbs1" collapsible="false">
+                <apex:outputField value="{!NCRCase.OwnerId}"/> 
+                <apex:inputField value="{!NCRCase.Status}" styleClass="pickListHt" required="true"/>
+                
+                <!--<apex:outputPanel style="position:relative;left:252px;">
+                     <div class="slds-container--small"> -->
+                          <apex:inputField value="{!NCRCase.Opportunity__c}" rendered="{!!isClassic}"/> 
+                       <!--<c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="Opportunity" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Opportunity" SetValueToField="{!NCRCase.Opportunity__c}" SetNameToField="{!OpportunityName}"/>                  
+                    </div>
+                </apex:outputpanel> -->  
+                <apex:inputField value="{!NCRCase.Priority}" styleClass="pickListHt"/> 
+                <apex:inputField value="{!NCRCase.AIA_Benefit_Design__c}" rendered="{!!isClassic}"/> 
+                 
+                    
+               <!-- <apex:outputPanel style="position:relative;left:252px;" >
+                     <div class="slds-container--small"> 
+                           <apex:inputField value="{!NCRCase.Opportunity__c}" rendered="{!!isClassic}"/> 
+                       <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="AIA_Benefit_Design__c" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Benefit Design" SetValueToField="{!NCRCase.AIA_Benefit_Design__c}" SetNameToField="{!NCRCase.AIA_Benefit_Design__c}"/>                    
+                    </div>
+                </apex:outputpanel> -->
+                <apex:outputField value="{!NCRCase.recordtypeid}" />
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem> 
+                <apex:inputField value="{!NCRCase.Origin}" styleClass="pickListHt"  required="true"/>    
+            </apex:pageBlockSection>
+            
+             <!---------------------- This block is for displaying Case Details --------------------------------->
+            
+            <apex:pageBlockSection title="Case Details" id="pgbs2" collapsible="false">
+                
+                <apex:inputField value="{!NCRCase.Subject}"/>
+                    <!--<apex:outputPanel >
+                      <div class="slds-container--small">
+                     <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="Contact" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Contact" SetValueToField="{!NCRCase.Contact.id}" SetNameToField="{!NCRCase.Contact.Name}"/>
+                     </div> 
+                 </apex:outputPanel> -->
+                <apex:inputField value="{!NCRCase.Description}"/>
+                <apex:inputField value="{!NCRCase.ContactId}" rendered="{!!isClassic}"/>  
+                
+            
+            </apex:pageBlockSection>
+            
+            <!---------------------- This block is for displaying NCR Case Details --------------------------------->
+            
+            <apex:pageBlockSection title="NCR Information" id="pgbs3" collapsible="fasle" columns="1" >
+                <apex:pageBlockSection columns="2" >
+                    <apex:inputField value="{!NCRCase.AI_Project_Manager_del__c}" styleClass="pickListHt" />
+                </apex:pageBlockSection>
+                 
+                  <!--<apex:outputPanel style="position:relative; left:200px;"> 
+                     <div class="slds-container--small">
+                         <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="User" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="AI Project Manager" SetValueToField="{!NCRCase.AI_Project_Manager_del__r.id}" SetNameToField="{!NCRCase.AI_Project_Manager_del__r.Name}"/>
+                     </div>
+                  </apex:outputPanel> -->
+                <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                <apex:inputField value="{!NCRCase.Operational_Review_Completed__c}"/>
+                <apex:inputField value="{!NCRCase.Reason_for_NAEGS_Change_Request__c}" styleClass="pickListHt"/>
+                <apex:inputField value="{!NCRCase.Status_of_NAEGS_Change_Request__c}" styleClass="pickListHt"/>
+                <apex:inputField value="{!NCRCase.Revision_Numbr_on_NAEG_Sections_impacted__c}" />
+                <apex:inputField value="{!NCRCase.Name_of_NAEG_Template__c}"/>
+                <apex:inputField value="{!NCRCase.Urgt_Due_Date_for_Completed_NAEG_Modif__c}" />
+                <apex:inputField value="{!NCRCase.Details_of_Change_Required_for_this_NAEG__c}"/>
+                <apex:inputField value="{!NCRCase.iLog_Number_If_applicable_Title__c}"/>
+                <apex:inputField value="{!NCRCase.Modified_By_NAEGS_Track_ID_Number__c}"/>
+                <apex:inputField value="{!NCRCase.Effective_Date_of_NAEGS_Change__c}"/>
+                <apex:inputField value="{!NCRCase.NAEGS_Change_Request_Workflow__c}"/>
+                <apex:inputField value="{!NCRCase.Type__c}" styleClass="pickListHt"/>
+                <apex:inputField value="{!NCRCase.Privacy_Item__c}" styleClass="pickListHt"/>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                <apex:inputField value="{!NCRCase.Path__c}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>      
+        
+           <!---------------------- This block is for Web Information, Commeneted this to make it uniform with Classic --------------------------------->
+           
+            <!-- <apex:pageBlockSection title="Web Information" collapsible="false">
+                <apex:inputField value="{!NCRCase.SuppliedEmail}"/>
+                <apex:inputField value="{!NCRCase.SuppliedCompany}"/>
+                <apex:inputField value="{!NCRCase.SuppliedName}"/>
+                <apex:inputField value="{!NCRCase.SuppliedPhone}"/>
+            </apex:pageBlockSection> --->
+            
+            
+            
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

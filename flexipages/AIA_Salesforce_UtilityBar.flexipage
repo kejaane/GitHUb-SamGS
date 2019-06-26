@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>notes:utilityBarNoteList</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>eager</name>
+                <type>decorator</type>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>entityNames</name>
+                <value>[&quot;AIA_Document__c&quot;,&quot;Account&quot;,&quot;AIA_Address__c&quot;,&quot;AIA_Benefit_Design_Form__c&quot;,&quot;AIA_Benefit_Design__c&quot;,&quot;Benfit_Request_Form__c&quot;,&quot;AIA_Benefit_Design_Product__c&quot;,&quot;Case&quot;,&quot;Contact&quot;,&quot;Contract&quot;,&quot;Dashboard&quot;,&quot;AIA_Department__c&quot;,&quot;ContentDocument&quot;,&quot;AIA_FACET_Class__c&quot;,&quot;AIA_FACET_Sub_Group__c&quot;,&quot;AIA_FACET_Group__c&quot;,&quot;FSP_GP__c&quot;,&quot;AIA_Group_Structure_Form_Product__c&quot;,&quot;AIA_Group_Structure_Request_Form__c&quot;,&quot;ID_Card__c&quot;,&quot;AIA_Implementation__c&quot;,&quot;ContentNote&quot;,&quot;Opportunity&quot;,&quot;AIA_Package__c&quot;,&quot;Partner__c&quot;,&quot;AIA_Plan__c&quot;,&quot;PRF__c&quot;,&quot;Proposed_Products__c&quot;,&quot;AIA_Vendor__c&quot;,&quot;Workplan_Stage__c&quot;]</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>height</name>
+                <type>decorator</type>
+                <value>480</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>icon</name>
+                <type>decorator</type>
+                <value>fallback</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <type>decorator</type>
+                <value>Recent Items</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>maxRecords</name>
+                <value>20</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>scrollable</name>
+                <type>decorator</type>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>width</name>
+                <type>decorator</type>
+                <value>340</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:recentItems</componentName>
+        </componentInstances>
+        <name>utilityItems</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>AIA Salesforce UtilityBar</masterLabel>
+    <template>
+        <name>one:utilityBarTemplateDesktop</name>
+    </template>
+    <type>UtilityBar</type>
+</FlexiPage>

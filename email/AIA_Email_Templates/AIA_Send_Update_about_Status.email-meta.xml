@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>41.0</apiVersion>
+    <available>true</available>
+    <description>An email notification must be sent out the MAST team (MAST@carefirst.com) that the GSRF is assigned to MAST role on the Account team.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AIA Send Update about Status</name>
+    <style>none</style>
+    <subject>- Effective Date   - GSRF Complete</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

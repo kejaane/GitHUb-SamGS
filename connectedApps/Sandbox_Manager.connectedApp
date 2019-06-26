@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>salesforcecoe@carefirst.com</contactEmail>
+    <label>Sandbox Manager</label>
+    <oauthConfig>
+        <callbackUrl>https://carefirst.my.salesforce.com/services/authcallback/Sandbox_Manager</callbackUrl>
+        <consumerKey>3MVG9aFryxgomHTZBf2tPqyBm7VuovOwOGPwLEbzSD.emiAask67LY7yscTjkZ_CUZ_P.ByoTBZQPcxrRb6YE</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

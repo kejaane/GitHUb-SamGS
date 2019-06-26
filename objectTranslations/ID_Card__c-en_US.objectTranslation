@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Status Comments --></label>
+        <name>Approval_Status_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved by Legal? --></label>
+        <name>Approved_by_Legal__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approver Notified --></label>
+        <name>Approver_Notified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are there any special requests? --></label>
+        <name>Are_there_any_special_requests__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BRF Id --></label>
+        <name>BRF_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of vendors --></label>
+        <name>Count_of_vendors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of submission form --></label>
+        <name>Date_of_submission_form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- FlexLink --></label>
+        <name>FlexLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Card Vendor --></label>
+        <name>ID_Card_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation__c</name>
+        <relationshipLabel><!-- ID Cards --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is CareFirst Producing ID Card --></label>
+        <name>Is_CareFirst_Producing_ID_Card__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is there a performance Agreement? --></label>
+        <name>Is_there_a_performance_Agreement__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is there an unique number? --></label>
+        <name>Is_there_an_unique_number__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MAST Tech Approver --></label>
+        <name>MAST_Tech_Approver_Id__c</name>
+        <relationshipLabel><!-- ID Cards (MAST Tech Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mast Tech - Approver --></label>
+        <name>Mast_Tech_Approver__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mast Tech User --></label>
+        <name>Mast_Tech_User__c</name>
+        <relationshipLabel><!-- ID Cards (Mast Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Member Level Products Comments --></label>
+        <name>Member_Level_Products_Comments1__c</name>
+    </fields>
+    <fields>
+        <help><!-- All ID Cards with PCP&apos;s are Member Level.  If Non-Parallel with non-PCP benefits, ID Cards cannot be done at Member Level.  If Non-Parallel with PCP benefits, the non-PCP products will be at Contract level. --></help>
+        <label><!-- Member Level --></label>
+        <name>Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Member level Products --></label>
+        <name>Member_level_Products__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Member level products comments --></label>
+        <name>Member_level_products_comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Miscellaneous / ID Card Comments --></label>
+        <name>Miscellaneous_ID_Card_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Request --></label>
+        <name>Special_Request__c</name>
+    </fields>
+    <fields>
+        <help><!-- Special Request to show PCP as Not Required? --></help>
+        <label><!-- Special Request to show PCP as Not Req --></label>
+        <name>Special_Request_to_show_PCP_as_Not_Req__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Special Request to show PCP as Not Required? --></help>
+        <label><!-- Special Request to show PCP as Not Req --></label>
+        <name>Special_Request_to_show_PCP_as_Not_Requi__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Special Requests? --></label>
+        <name>Special_Requests__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Stuffer Request? --></label>
+        <name>Special_Stuffer_Request__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Will ID Card Require a Logo? --></label>
+        <name>Will_ID_Card_Require_a_Logo__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Will a Non-CareFirst Vendor Logo be Need --></label>
+        <name>Will_a_Non_CareFirst_Vendor_Logo_be_Need__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- products selected count --></label>
+        <name>products_selected_count__c</name>
+    </fields>
+    <fields>
+        <label><!-- sent to approval? --></label>
+        <name>sent_to_approval__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>ID Card</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ID Cards</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>ID Card Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Service Phone Number --></label>
+            <section>Custom Service Phone Number</section>
+        </sections>
+        <sections>
+            <label><!-- FlexLink/Labor Account --></label>
+            <section>FlexLink/Labor Account</section>
+        </sections>
+        <sections>
+            <label><!-- ID Card Benefit Messages --></label>
+            <section>ID Card Benefit Messages</section>
+        </sections>
+        <sections>
+            <label><!-- ID Card Details --></label>
+            <section>ID Card Details</section>
+        </sections>
+        <sections>
+            <label><!-- Member Level --></label>
+            <section>Member Level</section>
+        </sections>
+        <sections>
+            <label><!-- Member Level Products --></label>
+            <section>Member Level Products</section>
+        </sections>
+        <sections>
+            <label><!-- Miscellaneous --></label>
+            <section>Miscellaneous</section>
+        </sections>
+        <sections>
+            <label><!-- Special Stuffer Request? --></label>
+            <section>Special Stuffer Request?</section>
+        </sections>
+        <sections>
+            <label><!-- Triple Option Products --></label>
+            <section>Triple Option Products</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- ID Card --></label>
+        <name>ID_Card</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- EID01: Please provide a value since this ID Card requires a Non-CareFirst vendor logo --></errorMessage>
+        <name>EID01</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- At least one record needs to be added to Vendor related list before it can be sent for Approval --></errorMessage>
+        <name>EID02</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID03: Please provide a value since this there is a unique number --></errorMessage>
+        <name>EID03</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID04: Please provide a value since there are special requests for this ID Card --></errorMessage>
+        <name>EID04</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fill out when &quot;Is CareFirst Producing ID Card&quot; field is selected as No --></errorMessage>
+        <name>EID05</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please add vendors in the related list --></errorMessage>
+        <name>EID06</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select atleast one product --></errorMessage>
+        <name>EID07</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- In Progress is not allowed when status is in Review --></errorMessage>
+        <name>EID08</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID09: Special Requests should be filled when &quot;Are there any special requests ?&quot; is Yes --></errorMessage>
+        <name>EID09</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID10: To be filled out  when &quot;Will a Non-CareFirst Vendor Logo be Needed?&quot; is Yes --></errorMessage>
+        <name>EID10</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID11: Approver cannot select other than approved or rejected in status field --></errorMessage>
+        <name>EID11</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID: User can only set status to &quot;In Progress&quot; --></errorMessage>
+        <name>EID12</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID13: Approver can set status only to either Approved or Rejected --></errorMessage>
+        <name>EID13</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID14: When status is Approved or Rejected or In-Review, it cannot be submitted again --></errorMessage>
+        <name>EID14</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EID15:When Status is Rejected, Comments needs to be added --></errorMessage>
+        <name>EID15</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_Member_Level_Product --></label>
+        <name>Add_Member_Level_Product</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_for_Approval --></label>
+        <name>Submit_for_Approval</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CommunityUserAccountName__c</fullName>
+        <defaultValue>"Community_User_Account"</defaultValue>
+        <description>Name of the default communiyt user account to use when creating a Community Contact type for User provisioning</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>CommunityUserAccountName</label>
+        <length>60</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EmailEncodingKey__c</fullName>
+        <defaultValue>"UTF-8"</defaultValue>
+        <description>Character encoding to use for email text e.g. 'UTF-8'</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Character encoding to use for email text e.g. 'UTF-8'</inlineHelpText>
+        <label>EmailEncodingKey</label>
+        <length>40</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExternalSupportEmail__c</fullName>
+        <defaultValue>"seyitbek.usmanov@carefirst.com"</defaultValue>
+        <description>External (e.g. CIAM, BrokerPortal team) email address(es) to use. If multiple, use comma separator</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>External (e.g. CIAM, BrokerPortal team) email address(es) to use. If multiple, use comma separator</inlineHelpText>
+        <label>ExternalSupportEmail</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InternalSupportEmail__c</fullName>
+        <defaultValue>"seyitbek.usmanov@carefirst.com"</defaultValue>
+        <description>Salesforce team email address to use to notify of processing errors</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Salesforce team email address to use to notify of processing errors</inlineHelpText>
+        <label>InternalSupportEmail</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This indicates if the configuration should be used for the current sandbox. Only one UserProvisioningConfig should be checked Active. If multiple are checked, the DEV configuration will be used.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>This indicates if the configuration should be used for the current sandbox. Only one UserProvisioningConfig should be checked Active. If multiple are checked, the DEV configuration will be used.</inlineHelpText>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LanguageLocaleKey__c</fullName>
+        <defaultValue>"en_US"</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>LanguageLocaleKey</label>
+        <length>120</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LicenseCategoryString__c</fullName>
+        <defaultValue>"Small/Mid Community User"</defaultValue>
+        <description>LicenseCategoryString to use. e.g. Small/Mid Community User</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>LicenseCategoryString to use. e.g. Small/Mid Community User</inlineHelpText>
+        <label>LicenseCategoryString</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LocaleSidKey__c</fullName>
+        <defaultValue>"en_US"</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>LocaleSidKey</label>
+        <length>5</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProfileName__c</fullName>
+        <defaultValue>"Customer Community Plus Login User"</defaultValue>
+        <description>Profile name for Community Users</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Profile name for Community Users</inlineHelpText>
+        <label>ProfileName</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SendUserEmail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Notify user when their record is created</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Notify user when their record is created</inlineHelpText>
+        <label>SendUserEmail</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TimeZoneSidKey__c</fullName>
+        <defaultValue>"America/New_York"</defaultValue>
+        <description>time zone to use e.g. America/New_York</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>time zone to use e.g. America/New_York</inlineHelpText>
+        <label>TimeZoneSidKey</label>
+        <length>40</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserLicenseString__c</fullName>
+        <defaultValue>"Customer Community Plus Login"</defaultValue>
+        <description>UserLicenseString to use when creating new community users</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>UserLicenseString to use when creating new community users</inlineHelpText>
+        <label>UserLicenseString</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Configuration settings for User Provisioning web service</description>
+    <label>UserProvisioningConfig</label>
+    <pluralLabel>UserProvisioningConfigs</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

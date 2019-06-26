@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- DBE_WH --></label>
+        <name>DBE_WH__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP_GP --></label>
+        <name>FSP_GP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax_Id --></label>
+        <name>Tax_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2-50 RecordType --></label>
+        <name>X2_50_RecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- 51+ RecordType --></label>
+        <name>X51_RecordType__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>FSP_GP_Lookup</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FSP_GP_Lookup</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

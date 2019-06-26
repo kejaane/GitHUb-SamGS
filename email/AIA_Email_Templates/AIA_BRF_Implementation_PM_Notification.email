@@ -1,0 +1,6 @@
+Please establish Account Kick-off Meetings for the following Account:
+
+1. Message: "Establish Account Kick-off Meetings"
+2. URL for quote: https://carefirst.my.salesforce.com/{!Benfit_Request_Form__c.File_Net_Doc_Id__c}
+3. Account name: {!Benfit_Request_Form__c.Account__c}
+4. Benefit effective date: {!Benfit_Request_Form__c.Benefit_Effective_Date__c}

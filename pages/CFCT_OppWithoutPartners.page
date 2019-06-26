@@ -1,0 +1,72 @@
+<!--
+========================================================================================
+//      Date: 07/28/2011
+// Developer: Tom Barrett (TPB)
+//   Purpose: This VF page makes use of the CFCT_OppWithoutPartners_controller.
+//            This page will display opportunities without Partners and when the user 
+//            clicks on an opportunity name the details page appears at the bottom.  
+//            This gives the user the ability to quickly edit the opportunties in the list.
+// ========================================================================================
+//                                 Update History
+// Date       Developer      	Description
+// ========================================================================================
+// 08/14/2018 Debkanti	|T01|	Added SLDS to make compatable with classic and lightning. 
+// ========================================================================================
+-->
+
+<apex:page controller="CFCT_OppWithoutPartners_controller" tabStyle="Opportunity" lightningStylesheets="true">
+    <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <style>
+    {! IF(! IsClassic,'.slds-scope h3{font-size: 14px;font-weight: 600;}','')}
+    {! IF(! IsClassic,'body .slds-vf-data-table th{font-weight: 600;font-size: 14px;}','')}
+    {! IF(! IsClassic,'body .slds-vf-data-table td, body .slds-vf-data-table .dataCell, .slds-vf-scope .slds-vf-data-table td, .slds-vf-scope .slds-vf-data-table .dataCell {white-space: normal;padding-bottom: .5rem;padding-top: .8rem;}','')}
+    </style>
+     <!-- T01 -- End -->
+    <apex:pageMessages escape="false" />
+    <apex:sectionHeader title="Opportunities" subtitle="Opportunities without Partners"/>    
+    <h3>Click on an opportunity name, scroll down to the Partner related list and enter a Partner(s)</h3> 
+    <apex:pageblock >        
+        <apex:form >          
+            <apex:pageblocktable value="{!opps}" var="opp">            
+<!--         
+                <apex:column footerValue="Click on an opportunity name, scroll down to the Partner related list and enter a Partner(s)">
+                    <apex:facet name="header">{!$ObjectType.Opportunity.Label}</apex:facet>
+                        <apex:commandlink >
+                            {!opp.name}
+                            <apex:param name="cid" value="{!opp.id}"/>
+                        </apex:commandlink>
+                </apex:column>
+-->    
+                <apex:column footerValue="Click on an opportunity name, scroll down to the Partner related list and enter a Partner(s)" headerValue="{!$ObjectType.Opportunity.Label}">                                        
+                    <apex:commandlink >{!opp.name}
+                        <apex:param name="cid" value="{!opp.id}"/>
+                    </apex:commandlink>
+                </apex:column>             
+                <apex:column value="{!opp.owner.name}" footerValue="Page {!PageNumber} of {!TotalPages} : : {!recCount} total records"/> 
+                <apex:facet name="header">
+                    <apex:panelGrid columns="6" rendered="{!SysAdmin}"> <!--Only Render the buttons if an Admin is viewing the page-->  
+                        <apex:commandLink action="{!ssc.first}" value="First"/>
+                        <apex:commandLink action="{!ssc.previous}" value="Previous"/>
+                        <apex:commandLink action="{!ssc.next}" value="Next"/>                        
+                        <apex:commandLink action="{!ssc.last}" value="Last"/> 
+                        <apex:commandLink action="{!emailUsers}" value="Email Users"
+                                          onClick="return confirm('Are you sure?')"/>                                            
+                    </apex:panelGrid>
+                </apex:facet>  
+                <apex:facet name="footer">
+                    <apex:panelGrid columns="6" rendered="{!SysAdmin}"> <!--Only Render the buttons if an Admin is viewing the page--> 
+                        <apex:commandLink action="{!ssc.first}" value="First"/> 
+                        <apex:commandLink action="{!ssc.previous}" value="Previous"/>
+                        <apex:commandLink action="{!ssc.next}" value="Next"/>                        
+                        <apex:commandLink action="{!ssc.last}" value="Last"/> 
+                        <apex:commandLink action="{!emailUsers}" value="Email Users"
+                                          onClick="return confirm('Are you sure?')"/>                                         
+                    </apex:panelGrid>
+                </apex:facet>                 
+            </apex:pageBlockTable>            
+        </apex:form>            
+    </apex:pageBlock>
+    <apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="true" title="false"/> 
+</apex:page>

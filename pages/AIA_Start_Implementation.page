@@ -1,0 +1,18 @@
+<!-- ===================================================================================================
+* Date         : 05/05/2018
+* Developer    : Laveen Kattela
+* Purpose      : This VF is invoked when user clicks on Start Implementation Button on UI which makes IMP status from Not Started to In-Progress on method call - ChangeStatus
+*
+*                All this functionality is created as a part of US-362
+*                
+*                
+*===================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date       Developer     Tag   Description
+*===========+============+=====+====================================================================
+* 05/05/2018 | Laveen    | T01 | Initial version  
+*===========+============+=====+=================================================================== -->  
+<apex:page standardController="AIA_Implementation__c" action="{!ChangeStatus}" extensions="AIA_StartImplementationController" docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false">
+<apex:pageMessages ></apex:pageMessages>
+</apex:page>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Dental Only</fullName>
+        <default>false</default>
+        <label>Dental Only</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medical Only</fullName>
+        <default>false</default>
+        <label>Medical Only</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ancillary Only</fullName>
+        <default>false</default>
+        <label>Ancillary Only</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medical + Ancillary</fullName>
+        <default>false</default>
+        <label>Medical + Ancillary</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network Leasing Local</fullName>
+        <default>false</default>
+        <label>Network Leasing Local</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shared Processing - Flexx</fullName>
+        <default>false</default>
+        <label>Shared Processing - Flexx</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shared Processing - Nasco</fullName>
+        <default>false</default>
+        <label>Shared Processing - Nasco</label>
+    </standardValue>
+</StandardValueSet>

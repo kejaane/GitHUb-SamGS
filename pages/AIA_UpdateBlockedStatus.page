@@ -1,0 +1,84 @@
+<!-- 
+*============================================================================================
+* Date         : 05/22/2018
+* Developer    : AG
+* Purpose      : This page is called when user clicks Action to update Status for a list of Workplan tasks.
+*============================================================================================
+*                                 Update History
+*                                 ---------------
+* Date          Developer         Tag       Description
+*============================================================================================
+
+*============================================================================================
+-->
+
+
+<apex:page showHeader="false" standardController="Workplan_Task__c" recordSetVar="Tasks"  extensions="AIA_UpdateBlockedStatus_Controller"
+           sidebar="false" lightningStylesheets="true" docType="html-5.0">    
+    
+    <apex:slds />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+     <c:AIA_ReassignTask_CSS />   
+   
+    <apex:form id="fm" enctype="multipart/form-data" styleClass="myFormStyle">
+         <apex:outputPanel id="pnl1" rendered="{!ShowMainPanel}" >
+              <apex:pageBlock id="pgb">
+                <div class="slds-form-element" style="align:center;">
+                <b><apex:outputLabel value="Update Status to Blocked" style="margin-left:220px;color:#484848; font-size:18px; padding-left:50px;"/></b> 
+                    <hr/>  <apex:pageMessages />
+                    <br/>
+                </div>                  
+                <div class="slds-grid">
+                    <div class="slds-col" style="width:80%;">               
+                        <div class="slds-form-element" >
+                            <label style="color:#c23934">*</label><label>Which Subprocess is causing the block?</label><br/>
+                            <div class="slds-form-element__control">
+                                <apex:selectList styleclass="slds-select" value="{!SubProcess_selected}"  size="1" >
+                                    <apex:selectoptions value="{!lstSubProcess}" ></apex:selectoptions>
+                                    <apex:actionSupport event="onchange" reRender="slTask" action="{!changeSubprocess}"/>
+                                </apex:selectList>                            
+                            </div>
+                        </div>
+                        
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="slds-col" style="width:80%;">               
+                        <div class="slds-form-element" >
+                            <label style="color:#c23934">*</label><label>Which Task is causing the block?</label><br/>
+                            <div class="slds-form-element__control">
+                                <apex:selectList styleclass="slds-select" id="slTask" value="{!BlockerTask_selected}"  size="1" >
+                                    <apex:selectoptions value="{!lstWPTask}" ></apex:selectoptions>
+                                </apex:selectList>                            
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                  <br/>
+                        <div class="slds-form-element" >
+                            <label style="color:#c23934"></label><label>Comments (Recommended)</label><br/>
+                            <div class="slds-form-element__control">
+                                <apex:inputfield styleClass="slds-textarea" value="{!objTask.Comments__c}"></apex:inputfield>
+                            </div>
+                        </div>
+                  <br/>
+                   <apex:pageBlockButtons location="bottom" id="footerID"> 
+                 <div id="tst1" style="margin-bottom:0px;background:#f2f2f2;height:62px;padding-top:12px;border: 1px solid #dddbda;">
+                    <apex:commandButton style="height:35px;width:75px;margin-left:615px;border:1px solid #2574a9" value="Cancel" action="{!CancelUpdate}" immediate="true"  />
+                    <apex:commandButton value="Update" action="{!UpdateTaskStatus}" style="height:37px;width:90px;background:#2574a9; color:white;" />
+                    </div>    
+                </apex:pageBlockButtons>
+              </apex:pageBlock>
+        </apex:outputPanel> 
+        <apex:outputPanel id="pnl2" rendered="{!!ShowMainPanel}" > 
+            <apex:pageBlock >
+            <div align="center" >
+                <apex:outputText style="font-weight: normal;" value="{!strMessage}"/> <br/><br/> 
+                 <apex:commandButton value="Ok" action="{!CancelUpdate}" styleClass="padding-left:15px;"/>
+                </div>
+            <br/> 
+                </apex:pageBlock>
+            </apex:outputPanel>
+          
+    </apex:form>
+</apex:page>

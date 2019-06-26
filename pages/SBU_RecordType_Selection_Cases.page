@@ -1,0 +1,64 @@
+<!--
+// ========================================================================================
+//   Date: 07/24/2016
+//   Developer: Ashish Ojha (AO)
+//   Purpose: This page is going to be used by "Change Case type" button on case.
+//            This button will be available on all SBU page layout. Becasue we introduced a
+//            custom visual force page for "Member Type" Case, the standard change recrod type 
+//            functionalty was not enough to do propper redirecting into the custom visualforce page.
+//            
+// ========================================================================================
+//                  Update History
+// Date       Developer     Description
+// ========================================================================================
+// 
+// ========================================================================================
+-->
+
+
+<apex:page standardController="Case" extensions="SBU_RecordTypeSelection_Cases_Controller"  >
+<apex:sectionHeader subtitle="{!case.caseNumber}" title="Case Record Type Change"  />
+<apex:outputLabel >Use this page to change the record type for this case. 
+</apex:outputLabel>
+<br/><br/>  
+<apex:outputLabel >When changing the record type for a record, existing picklist values do not change automatically. We recommend updating existing picklist values on the record where appropriate. 
+</apex:outputLabel>
+<br/><br/>
+<apex:messages />
+
+
+    <apex:form >
+        <apex:pageblock title="Select New Record Type">
+            <apex:pageBlockSection columns="1" >
+            <apex:outputField value="{!case.caseNumber}"/>
+             <apex:outputField value="{!case.RecordTypeid}"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel > New Record Type </apex:outputLabel>
+                    <apex:selectList value="{!selected}" size="1" required="true">
+                        <apex:selectOptions value="{!selop}"> 
+                        <!-- the values in the selop is being retrieved from getselop() method -->                        
+                        </apex:selectOptions>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageblockButtons location="bottom" >
+               <apex:commandButton value="Continue" action="{!Continuous}"/> <!-- contains the logic for change of record type-->
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageblockButtons>
+        </apex:pageblock>
+
+        <apex:outputLabel value="Available Case Record Types" style="font-weight:bold" />
+        <br/><br/> 
+            <apex:dataTable value="{!RecordTypes}" var="RecordType" columns="2" Border="1" cellpadding="1" >
+                <apex:column >
+                    <apex:facet name="header">Record Type Name</apex:facet>
+                    <apex:outputText value="{!RecordType.Name}" style="font-weight:bold"> </apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Description</apex:facet>
+                    <apex:outputText value="{!RecordType.Description}"> </apex:outputText>
+                </apex:column>
+   </apex:dataTable>
+
+    </apex:form>
+</apex:page>

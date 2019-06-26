@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- The AVP who works with the partner for the training program --></help>
+        <label><!-- AVP --></label>
+        <name>AVP__c</name>
+        <relationshipLabel><!-- Engagements (AVP) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>51-199 New Business</masterLabel>
+            <translation><!-- 51-199 New Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51-199 Renewals</masterLabel>
+            <translation><!-- 51-199 Renewals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFA</masterLabel>
+            <translation><!-- CFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Business</masterLabel>
+            <translation><!-- Commercial Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEHBP Account Management</masterLabel>
+            <translation><!-- FEHBP Account Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare/Education/Par</masterLabel>
+            <translation><!-- Healthcare/Education/Par --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor Affairs</masterLabel>
+            <translation><!-- Labor Affairs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS</masterLabel>
+            <translation><!-- NCAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State &amp; Municipalities</masterLabel>
+            <translation><!-- State &amp; Municipalities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NCAS Segment Leader --></label>
+        <name>NCAS_Segment_Leader__c</name>
+        <relationshipLabel><!-- Engagements (NCAS Segment Leader) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- New Business Segment Leader --></label>
+        <name>New_Business_Segment_Leader__c</name>
+        <relationshipLabel><!-- Engagements (New Business Segment Leader) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Partner --></label>
+        <name>Partner__c</name>
+        <relationshipLabel><!-- Engagements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service Account Team --></label>
+        <name>Service_Account_Team__c</name>
+        <picklistValues>
+            <masterLabel>Team Indigo</masterLabel>
+            <translation><!-- Team Indigo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Ocean</masterLabel>
+            <translation><!-- Team Ocean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Royal</masterLabel>
+            <translation><!-- Team Royal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Sapphire</masterLabel>
+            <translation><!-- Team Sapphire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Sky</masterLabel>
+            <translation><!-- Team Sky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Teal</masterLabel>
+            <translation><!-- Team Teal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The team leader who works with the partner on the training program --></help>
+        <label><!-- Team Leader --></label>
+        <name>Team_Leader__c</name>
+        <relationshipLabel><!-- Engagements (Team Leader) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 200+ Segment Leaders --></label>
+        <name>X200_Segment_Leaders__c</name>
+        <relationshipLabel><!-- Engagements (200+ Segment Leaders) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 51-199 Segment Leader --></label>
+        <name>X51_199_Segment_Leader__c</name>
+        <relationshipLabel><!-- Engagements (51-199 Segment Leader) --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Engagement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Engagements</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Engagement Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Segment Leaders --></label>
+            <section>Segment Leaders</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

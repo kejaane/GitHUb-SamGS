@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>User Adoption Survey</name>
+    <style>freeForm</style>
+    <subject>SFDC User Adoption Survey</subject>
+    <textOnly>SalesForce.com Continuous Learning Sessions - a monthly forum for you to gain additional knowledge, ask questions, and share ideas to help you effectively use the system to your advantage. 
+
+Get the most out of SalesForce.com.  Make it work for you.  Learn how to stay in constant contact with your groups using mass emails, or track your own book of business with reports.  Take a session on how to keep everything at your fingertips - all of your documents, notes, and emails tied to your Account or Opportunity.  Learn how to get mobile with Mobile Lite for your smart phone.  These and other tips and tricks will help you gain and manage your book of business.
+
+Whether your group is on one legacy system or multiple legacy systems, you have one view of your customer using Salesforce.com.
+
+So that the sessions are focused on your needs, we would like your feedback via this brief survey in order to; rank the topics by their importance to you and to illicit new topics of interest.   
+
+Your input is valuable to us.  Your survey responses are anonymous.
+
+Thank you in advance for your cooperation.
+
+
+Copy and paste the link below into your browser address bar to get started.
+
+http://www.surveymonkey.com/s/YK9YF9J</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

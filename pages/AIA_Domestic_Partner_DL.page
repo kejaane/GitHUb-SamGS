@@ -1,0 +1,263 @@
+<!--
+*=================================================================================================
+* Date         : 08/16/2017
+* Developer    : Debkanti
+* Purpose      : This class function is to create Custom VF page for Domestic partner and implement 
+the validations accordingly which are not possible in standard page*
+*==================================================================================================
+*                                 Update History
+*                                 --------------
+* Date        Developer    Tag     Description
+*===========+============+=====+===================================================================
+* 08/16/2017| Raviteja   |     | Initial Version                                         
+* 10/03/2017| Asif K     |     | Made all question & description fields as apex:outputfield.
+*								 Adjusted spacing for all questions and answers. Indented code.
+* 02/12/2018| Gayathri P | T01 | Added slds classes to match the look and feel of lightning 
+* 								 view with classic.
+*===========+============+=====+===================================================================
+-->
+
+<apex:page standardController="AIA_Benefit_Design_Form__c" extensions="AIA_Domestic_Partner_Controller" id="pg" lightningStylesheets="true">
+    <apex:pageMessages ></apex:pageMessages>
+    <!--T01  Start-->
+    <apex:slds rendered="{!!isClassic}"/>
+    <!--T01  End-->
+    <style type="text/css">
+        .helpButton {
+        	display: inline !important;
+        }
+        .largeBox{
+            width:500px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        <!--T01  Start-->
+        {! if(! isClassic,'.bPageBlock{border:none !important;box-shadow: none !important;}'+
+        '.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 310px !important;}'+
+        '.slds-scope .bPageBlock .pbSubheader{background-color:#D5D8DC;}'+
+        '.slds-scope .slds-select {width:60%;}'+
+        '.slds-scope textarea{width:60%;resize:none;}'+
+        '.slds-scope .slds-textarea {width:60%;}'+
+        '.slds-scope .slds-input{width:60%;}','')}
+        <!--T01  End-->
+    </style>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+<apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.4/jquery.autosize.min.js" />
+
+    <script>
+    function getbdpvalue(){
+        var val1 = document.getElementById('pg:fm:pb:pbs2:adp').value;
+        if (val1 =='Same-sex only'){
+            document.getElementById('pg:fm:pb:pbs4:a2a').value = 'Same Sex';
+        }
+        else if(val1 =='Same and opposite-sex'){
+            document.getElementById('pg:fm:pb:pbs4:a2a').value = 'Both';
+        }
+            else{
+                document.getElementById('pg:fm:pb:pbs4:a2a').value = '';
+            }
+    }
+    
+    j$ = jQuery.noConflict();
+    j$(document).ready(function() { 
+        j$('.readonly').removeAttr( "rows" );
+        j$('.readonly').autosize();
+        //generic error
+        /*j$('.message ').hide();
+        if(j$('.message ').length>0){
+            j$('.pbBody').prepend('<div class="pbError" id="errorDiv_ep">Error: Invalid Data. <br>Review all error messages below to correct your data.</div>');
+        		    
+        }*/        
+        j$("select.readonly :selected").each(function(){
+            j$(this).parent().data("default", this);
+        });
+        
+        j$("select.readonly").change(function(e) {
+            j$(j$(this).data("default")).prop("selected", true);
+        });
+        
+        //document.getElementsByClassName("readonly").readOnly = true;
+        j$('.readonly').attr('readonly','true');
+        var getUrlParameter = function getUrlParameter(sParam) {
+            //T01 window function is used here to get the url of the page not for navigation.
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+            
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+                
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+        
+        var bdid = getUrlParameter('CF00N60000002jAke');
+        var bdidbackend = getUrlParameter('CF00N60000002jAke_lkid');
+        if((bdid!=undefined&&bdid!=''&&bdid!='null')&&(bdidbackend!=undefined&&bdidbackend!=''&&bdidbackend!='null')){
+            document.getElementById('pg:fm:pb:pbs1:bdid').value=bdid;
+            document.getElementById('pg:fm:pb:pbs1:bdid_lkid').value=bdidbackend;
+            getGroupers();
+        }
+        //to auto populate c6a when user populates value in c5a
+        j$(document).on('keyup','.c5a',function(){
+            if(j$('.c5a').val().length>0){
+                j$('.c6a').val('Yes');
+            }
+            else{
+                j$('.c6a').val('');
+            }
+        });
+        //to auto populate c7b when user populates value in c7a
+        j$(document).on('keyup','.c7a',function(){
+            if(j$('.c7a').val().length>0){
+                j$('.c7b').val('Yes');
+            }
+            else{
+                j$('.c7b').val('');
+            }
+        });
+        //to auto populate c2b when user populates value in c2a
+        j$(document).on('change','.c2a',function(){
+            if(j$('.c2a').val()!=''){
+                j$('.c2b').val('Yes');
+            }
+            else{
+                j$('.c2b').val('');
+            }
+        });
+    });
+    function getGroupers() {
+        var BDname = j$('.bdname').val();
+        CallApexMethod(BDname);
+    }
+    function setGroupers(groupernumbers,legalEntity) {
+        j$('.groupernums').val(groupernumbers);
+        j$('.legalEntity').val(legalEntity);
+    }
+    </script>
+    <apex:form id="fm">
+        <apex:actionFunction immediate="true" name="CallApexMethod" action="{!getGroupers}" onComplete="setGroupers('{!grouperNums}','{!legalEntity}');">
+            <apex:param id="anode" name="node" value=""/>
+        </apex:actionFunction>
+        <div style="background-color:rgb(248,248,248);">
+            <div style="{!if(isClassic,'margin-left:20%; margin-right:15%;','')}">
+                <apex:pageBlock title="Benefit Design Form Edit" mode="edit" id="pb" >
+                    
+                    <apex:pageBlockButtons >
+                        <div class="slds-grid slds-wrap slds-align--absolute-center">
+                           <apex:commandButton action="{!save}" value="Save" styleClass="slds-button slds-button_neutral"/>
+                        <apex:commandButton action="{!savenew}" value="Save & New" styleClass="slds-button slds-button_neutral"/>
+                        <apex:commandButton action="{!cancel}" value="Cancel" styleClass="slds-button slds-button_neutral"/>
+                        </div>
+                    </apex:pageBlockButtons>
+                    
+                    <apex:pageBlockSection columns="2" id="pbs1" >
+                        <apex:inputField styleClass="bdname" id="bdid" value="{!AIA_Benefit_Design_Form__c.Benefit_Design__c}" /> <!-- onchange="getGroupers()"  -->
+                        
+                        <apex:outputField styleClass="readonly" style="-webkit-appearance: none;" value="{!AIA_Benefit_Design_Form__c.RecordtypeId}"/>
+                        <apex:inputField styleClass="groupernums  slds-input" value="{!AIA_Benefit_Design_Form__c.Group_Numbers__c}"/>
+                        <apex:inputField styleClass="legalEntity slds-select" value="{!AIA_Benefit_Design_Form__c.Legal_Entity__c}"/>
+                    </apex:pageBlockSection> 
+                    
+                    
+                    <apex:pageBlockSection title="Section A: Domestic Partnership Includes" columns="1"  id="pbs2">
+                        <apex:inputField required="true" value="{!AIA_Benefit_Design_Form__c.Domestic_Partnership_includes__c}" id="adp" onchange="getbdpvalue();" styleClass="slds-select"/>
+                    </apex:pageBlockSection>
+                    
+                    
+                    <apex:pageBlockSection title="Section B: Comment" columns="1" >
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.Bq__c}"/>
+                        <apex:inputField styleClass="largeBox slds-textarea" value="{!AIA_Benefit_Design_Form__c.Answer_B__c}"/>
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockSection title="Section C: Domestic Partnership Requirements" columns="1" id="pbs4">
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.Description__c}"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.QC1__c}" id="questionC1"/>
+                        <apex:inputField required="true" value="{!AIA_Benefit_Design_Form__c.Answer_C1__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.Q2a__c}"/>
+                        <apex:inputField required="true" styleClass="c2a slds-select" value="{!AIA_Benefit_Design_Form__c.Answer_2a__c}" id="a2a"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.QC2b__c}"/>
+                        <apex:inputField required="true" styleClass="c2b slds-select" value="{!AIA_Benefit_Design_Form__c.AnswerC2b__c}"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.QC3__c}"/>
+                        <apex:inputField required="true" value="{!AIA_Benefit_Design_Form__c.Answer_C3__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.C4q__c}"/>
+                        <apex:inputField required="true" value="{!AIA_Benefit_Design_Form__c.Answer_C4__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.C5aq__c}"/>
+                        <apex:inputField required="true" styleClass="c5a slds-input" value="{!AIA_Benefit_Design_Form__c.How_many_months_3_36_have_the_Subscrib__c}"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.C5bq__c}"/>
+                        <apex:inputField required="true" styleClass="c6a slds-select" value="{!AIA_Benefit_Design_Form__c.Answer_C5b__c}"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.C6q__c}"/>
+                        <apex:inputField required="true" value="{!AIA_Benefit_Design_Form__c.Answer_C6__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.C7aq__c}"/>
+                        <apex:inputField required="true" styleClass="c7a slds-input" value="{!AIA_Benefit_Design_Form__c.Answer_C7a__c}"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.C7bq__c}"/>
+                        <apex:inputField required="true" styleClass="c7b slds-select" value="{!AIA_Benefit_Design_Form__c.Answer_C7b__c}"/>
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockSection title="Section D: Financially Interdependent Requirements" columns="1">
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.Domestic_Partner_Section_D_HeaderComment__c}"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly"  value="{!AIA_Benefit_Design_Form__c.D1q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D1__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D2q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D2__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D3__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D3__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D4q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D4__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D5q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D5__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D6q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D6__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D7q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D7__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D8q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D8__c}" styleClass="slds-select"/>
+                        <br/>
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.D9q__c}"/>
+                        <apex:inputField required="True" value="{!AIA_Benefit_Design_Form__c.Answer_D9__c}" styleClass="slds-select"/> 
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockSection title="Section E: Eligibility of Dependent Children" columns="1" >
+                        
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.Eq__c}"/>
+                        <apex:inputField required="True"  value="{!AIA_Benefit_Design_Form__c.Answer_E__c}" styleClass="slds-select"/>
+                        <apex:inputField styleClass="largeBox slds-input" value="{!AIA_Benefit_Design_Form__c.Answer_E_Comments__c}"/>
+                        
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockSection title="Section F: COBRA Coverage" columns="1">
+                        <apex:inputField styleClass="largeBox readonly" value="{!AIA_Benefit_Design_Form__c.Fq__c}"/>
+                        <apex:inputField required="True"  value="{!AIA_Benefit_Design_Form__c.Answer_F__c}" styleClass="slds-select"/>
+                    </apex:pageBlockSection>
+                    
+                </apex:pageBlock>
+            </div>
+        </div>
+    </apex:form>
+    
+</apex:page>

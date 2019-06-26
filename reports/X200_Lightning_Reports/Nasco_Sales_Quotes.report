@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Document__c.Document_Type__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Opportunity.Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Document__c.Document_View__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Opportunity.Service_Rep__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>AIA_Document__c.Document_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Quote,Signed Quote,Unsigned Quote</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Opportunity.Effective_Date__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>12/31/2017</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AIA_Document__c.Account_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Nasco Sales Quotes</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AIA_Document__c@AIA_Document__c.Opportunity__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>AIA_Document__c.Approval_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

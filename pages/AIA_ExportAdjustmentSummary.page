@@ -1,0 +1,44 @@
+<!--==========================================================================================================================
+* Date         : 2/07/2018
+* Developer    : Raviteja V
+* Purpose      : This VF page function is to export adjustment summary doc on approved status
+*============================================================================================================================
+*                                 Update History
+*                                 --------------
+* Date       |  Developer       | Tag | Description
+*============+==================================+=====+======================================================================
+* 2/15/2018 |  Raviteja V       |     | Initial Version                                         
+*============+==================+=====+======================================================================================
+-->
+<apex:page standardController="AIA_Benefit_Design__c" extensions="AIA_ExportAdjustmentSummary" >
+   <span style='display:none'>{!AIA_Benefit_Design__c.Status__c}</span>
+  <apex:include pageName="BusyIndicator"/> 
+  <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+  <apex:pageMessages ></apex:pageMessages>
+  <script> 
+    // Show the busy model image when page is first loaded.
+    window.onload = function()
+    {      
+       // After showing the modal window call a script function which will in turn
+       // call the controller extension function.
+       showBusyThenCallScript('isApproved'); 
+    }
+  </script>
+  
+  <apex:form id="theForm">
+  
+    <!-- Define a function callable from Javascript.  This will in turn call the controller extension function. -->
+    <apex:actionFunction name="isApproved" action="{!isApproved}" onComplete="hideBusy();" rerender="theForm"/>
+
+    <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}" escape="false"/><br/><br/><br/>
+        <apex:commandButton value="Ok" action="{!backtoBD}"/>
+      </div>  
+    </apex:outputPanel>
+    
+  </apex:form> 
+  
+</apex:page>

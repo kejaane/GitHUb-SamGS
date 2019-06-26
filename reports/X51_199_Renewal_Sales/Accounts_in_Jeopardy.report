@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Account_in_Jeopardy__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.AVP__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Lead_Rep_Name_User__c</field>
+    </columns>
+    <description>Accounts that are in Jeopardy</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Business__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>51-199 Renewal Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Account_in_Jeopardy__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>DESCRIPTION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Accounts in Jeopardy</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

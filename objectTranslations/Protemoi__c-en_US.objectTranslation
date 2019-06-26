@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Protemoi --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- Protemoi --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Next Action To Deepen Relationship --></label>
+        <name>Next_action_to_Deepen_Relationship__c</name>
+    </fields>
+    <fields>
+        <help><!-- User can select only the Opportunities which are related to above selected Account --></help>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Protemoi --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Path To Raving Fan --></label>
+        <name>Path_To_Raving_Fan__c</name>
+        <picklistValues>
+            <masterLabel>Acquaintance</masterLabel>
+            <translation><!-- Acquaintance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curious Skeptic</masterLabel>
+            <translation><!-- Curious Skeptic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raving Fan</masterLabel>
+            <translation><!-- Raving Fan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solid Working Relationship</masterLabel>
+            <translation><!-- Solid Working Relationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Target</masterLabel>
+            <translation><!-- Target --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trusted Advisor</masterLabel>
+            <translation><!-- Trusted Advisor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Protemoi Type --></label>
+        <name>Protemoi_Type__c</name>
+        <picklistValues>
+            <masterLabel>Client or Prospect</masterLabel>
+            <translation><!-- Client or Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interesting Partner</masterLabel>
+            <translation><!-- Interesting Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic Partner</masterLabel>
+            <translation><!-- Strategic Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strong Influencer</masterLabel>
+            <translation><!-- Strong Influencer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Thinking Preference --></label>
+        <name>Thinking_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Analytical Thinker</masterLabel>
+            <translation><!-- Analytical Thinker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Empathetic Thinker</masterLabel>
+            <translation><!-- Empathetic Thinker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Oriented Thinker</masterLabel>
+            <translation><!-- Implementation Oriented Thinker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visionary Thinker</masterLabel>
+            <translation><!-- Visionary Thinker --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Protemoi</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Protemoi</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Protemoi Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Protemoi Process --></label>
+            <section>Protemoi Process</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

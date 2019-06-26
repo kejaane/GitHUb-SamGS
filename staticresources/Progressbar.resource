@@ -1,0 +1,1 @@
+Files of mime type image/gif are not supported for data protection. The file(s) cannot be uploaded via CipherCloud gateway. : 16-loader_spinner.txt

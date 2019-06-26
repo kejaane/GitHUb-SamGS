@@ -1,0 +1,90 @@
+<!--==============================================================================================================
+ * Date         : 
+ * Developer    : 
+ * Purpose      : Back Button after BRF is marked Sold
+ *================================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date         Developer    Tag   Description
+ *============+============+=====+================================================================================                                          
+ * 09/03/2018  | Arshia Gulati      | T01    | Validate MHP input for BRF Sold on BRF Page  
+ *============+============+=====+================================================================================
+ -->
+<apex:page standardController="Benfit_Request_Form__c" title="Mark BRF Sold" extensions="AIA_BRFSoldController" action="{!updateBRF}" lightningStylesheets="true">
+<apex:stylesheet value="{!URLFOR($Resource.SLDS_VF, '/SLDS/assets/styles/salesforce-lightning-design-system-vf.css')}" />
+<apex:slds rendered="{! !isClassic}"/> 
+<style>
+   {! if(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 45px !important;}','')}
+   {! if(! isClassic,'select{background-color: #fff;color: #16325c;border: 1px solid #d8dde6;border-radius: .25rem;width: 100%;transition: border .1s linear,background-color .1s linear;height: calc(1.875rem + (1px * 2));}','')}
+   
+</style>
+    <apex:form styleClass="slds-scope">
+        <!-- T01-Start -->
+        <Script>
+  			function chk()
+  			{
+      			checkMHP();
+  			}
+  		</script>
+         <apex:pageBlock >
+             <div align="center" style="font-size:large;">
+                 Mark BRF Sold
+                 <br/> 
+                 <br/> 
+            </div> 
+             <apex:pageMessages />
+            
+        <apex:outputPanel rendered="{!displayMHPPanel}">
+            <br/> <br/>
+            <div align="left" style="width:90%">
+                <b>{!$ObjectType.Benfit_Request_Form__c.Fields.MHP_Acknowledgement__c.Label}</b>
+                <br/>               
+                 <apex:outputText value="{!brfObj.MHP_Acknowledgement__c}" ></apex:outputText>               
+            	<br/>
+                <br/>
+                <b>{!$ObjectType.Benfit_Request_Form__c.Fields.Submit_Medical_Plan_s_for_MHP_Testing__c.Label}</b>                
+                <br/>   
+                <apex:inputCheckbox id="chkAck" value="{!brfObj.Submit_Medical_Plan_s_for_MHP_Testing__c}" onclick="chk()" />                                        
+                <apex:actionFunction action="{!MHPPass}" name="checkMHP"  />
+            <br/> 
+            </div>  
+        </apex:outputPanel>
+             <apex:outputPanel rendered="{!displayConfirmation}" id="confirmSold">
+            <br/> <br/>
+             <div align="center">
+                 Are you sure to mark BRF as Sold? 
+            </div>   
+            <br/> 
+            <div align="center" draggable="false" >
+                <apex:commandButton value="Yes" action="{!Save}" styleClass="slds-button slds-button_neutral" />                
+                <apex:commandButton value="Cancel" action="{!Cancel}" styleClass="slds-button slds-button_neutral" />
+            </div>
+        </apex:outputPanel>
+             <br/> <br/>
+          <!--   <apex:outputLink value="/{!brfId}">Back to Benefit Request Form</apex:outputLink>    -->
+             <apex:commandLink value="Back to Benefit Request Form" action="{!Cancel}" />
+            </apex:pageBlock>
+        
+       <!-- T01-End -->
+             <!-- Deprecating old code -->
+             <!--
+        <apex:outputPanel rendered="{!displayerror}">
+            <apex:outputLink value="/{!brfId}">Back to Benefit Request Form</apex:outputLink>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{! !isClassic}">
+        <apex:outputPanel rendered="{!!displayerror}">
+            <br/> <br/>
+             <div align="center">
+                 Are you sure to mark BRF as Sold? 
+            </div>   
+            <br/> <br/>
+            <div align="center" draggable="false" >
+                <apex:commandButton value="Yes" action="{!Save}" styleClass="slds-button slds-button_neutral"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}" styleClass="slds-button slds-button_neutral"/>
+            </div>
+        </apex:outputPanel>
+        </apex:outputPanel>
+		-->
+    </apex:form>
+
+</apex:page>

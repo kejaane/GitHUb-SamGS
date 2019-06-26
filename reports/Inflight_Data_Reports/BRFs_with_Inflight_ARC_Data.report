@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Benfit_Request_Form__c$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Status__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$ARC_Approval_Status__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Funding_Arrangements__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$BRF_Owner_Full_Name__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Opportunity_Type__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Opportunity__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$ARC_Approval_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Pending,No Decision</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Test for EGP Account</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>BRFs with Inflight ARC Data</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Benefit_Request_Form__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Benfit_Request_Form__c$ARC_Approval_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

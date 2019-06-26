@@ -1,0 +1,285 @@
+<!-- 
+/*=========================================================================================
+ * Date			: 4/10/15
+ * Developer	: Ken Gill
+ * Purpose   	:
+ *              This page represents an automation console for a selected
+ *              SOP type from the AutomationProcessList view. The page
+ *              displays a table of available commands in the top portion
+ *              of the window as well as a command output console area in
+ *              the lower part of the window.
+ *
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 10/15/15  |  KG    |	Initial Version                                         
+ *   	     |        | 
+ *=========================================================================================
+ *
+ -->
+<apex:page controller="AutomationProcessController" tabStyle="CF_Processes__tab" sidebar="false">
+<apex:includeScript value="{!URLFOR($Resource.JQuery, 'jquery-2.1.4.min.js')}" />
+<script>
+$j= jQuery.noConflict();
+</script>
+<style>
+.overlay
+{
+   background-color: #000;
+   opacity: .5;
+   filter: alpha(opacity=50);
+   position: fixed; top: 0; left: 0;
+   width: 100%; height: 100%;
+   z-index: 10;
+}
+.overlaymsg
+{
+  position: absolute;
+  background-color: #CFEEF8;
+  padding: 10px;
+  width: 80%;
+  height: 50%;
+  font-size: 2em;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  top: 50px; bottom: 50px; left: 50px; right: 50px;
+  /*margin-left: calc ((100% -width)/2);
+  margin-top: calc ((100% - height)/2); */
+}
+</style>
+
+    <apex:messages />
+
+<script>
+
+/*var consoleDOMElementId = 'j_id0:j_id4:pb:pbs2:pbsi:console'; */
+var consoleDOMElementId = 'j_id0:j_id5:pb:pbs2:pbsi:console';
+
+function logToConsole( textid, msg ) {
+    //alert( document.getElementById('j_id0:j_id2:pb:pbs2:pbsi:console').innerHTML);
+    //will give alert box msg 'undefined' : alert( document.getElementById('{!$Component.pb.pbs2.pbsi.console}').value);
+    //alert("called with element id" + textid + " and message = " + msg);
+    var consoleTextArea = document.getElementById(textid);
+    consoleTextArea.innerHTML += msg + "<br>" ;
+    consoleTextArea.scrollTop = 99999;    // this will cause the console to automatically scroll down to track new messages added
+    //document.getElementById('{!$Component.pb.pbs2.pbsi.console}').innerHTML += "\n" + msg;
+}
+
+function displayPopup(inputmessage) {
+   // create overlay and append to page
+   var overlay = document.createElement("div");
+   overlay.setAttribute("id","overlay");
+   overlay.setAttribute("class", "overlay");
+   document.body.appendChild(overlay);
+
+   // create message and append to overlay
+   var msg = document.createElement("div");
+   var txt =
+      document.createTextNode( inputmessage + "(Click to close.)");
+   msg.appendChild(txt);
+   msg.setAttribute("id", "msg")
+   msg.setAttribute("class","overlaymsg");
+
+   // click to restore page
+   msg.onclick=restore;
+
+   // append message to overlay
+   document.body.appendChild(msg);
+}
+
+// restore page to normal
+function restore() {
+   document.body.removeChild(document.getElementById("overlay"));
+   document.body.removeChild(document.getElementById("msg"))
+}
+ 
+//-------------------------------------------------------
+// This Javascript code supports batch command execution.
+//-------------------------------------------------------
+
+// pollerTimerId - the id of the batch command status polling timer. Used to stop the timer when batch command finishes
+var pollerTimerId;
+
+// boolean flag to indicate batch command completed. Set by the pollBatchCommand action function
+var batchCommand="";
+var batchCommandFinished = 0; // 1 means complete, 0 - in progress
+var batchCommandMesage = "";  // batch update message on status
+var batchCommandResult = "";  // this is set to AutomationCommand.PASS,FAIL by controller
+
+// wrapper function called by apex command button. It does 2 things - start the batch command and then start the
+// command status polling job. It does this by calling 2 action functions.
+//
+function startAndPollBatch(status, cmd) {
+	console.log( "Status received by startAndPollBatch:" + status);
+	//logToConsole(consoleDOMElementId, "Status received by startAndPollBatch:" + status);
+	if( status != "Running") return;
+	
+	console.log("Start batch process..");
+	//logToConsole('{!$Component.pb.pbs2.pbsi.console}', 'Start batch wrapper'); 
+	//logToConsole(consoleDOMElementId, 'Start batch process ..');
+		// send action by calling actionFunction
+	startBatchCommand(cmd);
+		// set up recurring polling of batch command status
+	pollerTimerId = setInterval( pollBatchCommand, 3000, cmd );
+}
+
+function updateCommandOutcome( cmdname, result, status) {
+
+	console.log("updateCommandOutcome(" + cmdname + "," + result + "," + status + ") called");
+	console.log($j('#td'));
+	console.log($j("td[-data-id='result.CheckRecyclingEmpty']"));
+	/*console.log($j("td[-data-id='result.' + cmdname]")); */
+	console.log($j("[data-id='result." + cmdname + "']"));
+	/* $j("td[-data-id='result.CheckRecyclingEmpty']").innerHTML = result; */
+	
+	$j("[data-id='result." + cmdname + "']").text(result);
+	
+
+//    var msg = document.getElementById("result." + cmdname);
+//    msg.innerHTML = result;
+//    
+//    var msg = document.getElementById("status." + status);
+//    msg.innerHTML = status;
+    
+}
+
+/* action function to start batch command */
+function startBatchCommand(cmd) {
+	console.log("startBatchCommand action function called with arg=" + cmd);
+}
+
+/* action function to poll status of a command */
+/*
+function pollBatchCommand(cmd) {
+	console.log("pollBatchCommand actionFunction called with arg=" + cmd);
+	//batchCommandFinished++;
+	checkBatchCompletion();
+	console.log ("batchCommandMessage=" + batchCommandMessage);
+	//if( batchCommandFinished > 5) {
+	if( batchCommandFinished == 1) {
+		clearInterval(pollerTimerId); // stop the timer
+		batchCommandFinished = 0; // reset for next batch command
+	}
+}
+*/
+
+</script>
+
+
+   <apex:form >
+
+
+    	<apex:actionFunction name="checkBatchCompletion" action="{!checkCompletion}" 
+                     onComplete="batchCommand='{!currentCommand.verb}';batchCommandFinished='{!commandStatus}';batchCommandResult='{!commandResult}';batchCommandMessage='{!commandResultMessage}';" 
+                     reRender="commandsDiv"
+                     />  
+                     <!--  the reRender will cause Status to update in the top command list view -->
+        <script>
+        
+			/* action function to poll status of a command */
+			function pollBatchCommand(cmd) {
+				console.log("pollBatchCommand actionFunction called with arg=" + cmd);
+				//batchCommandFinished++;
+				checkBatchCompletion();
+				console.log ("batchCommandMessage=" + batchCommandMessage);
+				logToConsole(consoleDOMElementId, "Update: " + batchCommandMessage);
+				//if( batchCommandFinished > 5) {
+				if( batchCommandFinished == "Complete") {  // equivalent to AutomationCommand.COMPLETE
+					clearInterval(pollerTimerId); // stop the timer
+					//logToConsole('j_id0:j_id4:pb:pbs2:pbsi:console', "Completed");
+					// logToConsole(consoleDOMElementId,'Result:	' + batchCommandMessage + '<br/>Status:	' + batchCommandFinished);
+					logToConsole(consoleDOMElementId,'Output:	' + batchCommandMessage + '<br/>Result:	' + batchCommandResult);
+					updateCommandOutcome( batchCommand, batchCommandResult, batchCommandFinished); 
+					batchCommandFinished = 0; // reset for next batch command	
+					batchCommand= "";	
+					batchCommandResult = "";
+					batchCommandMessage = "";							
+				}
+			}
+        </script>
+        
+
+  		<!-- Display the link to the Standard Operating Procedure document (static resource) for this process -->      
+        <apex:pageBlock title="{!automationImportMgrDelegate.importTitle} Automation Commands" id="pb">
+        <apex:variable var="SOP_Name" value="{!automationImportMgrDelegate.importSOPResourceFileName}" />
+   		<a href="{!URLFOR($Resource[SOP_Name])}" target="_blank">View SOP Document</a>
+   		<br/>
+         
+        
+ <apex:pageBlockSection title="Command List" columns="1" >
+<apex:outputPanel layout="block"  style="overflow:auto; height:400px; width:100%" >
+
+            <apex:pageBlockTable id="commandsDiv" rowClasses="odd,even" 
+                                 width="80%" border="1" cellPadding="4" styleClass="tableClass" value="{!commands}" var="command">
+                
+                 <apex:column width="2%" >
+                    <apex:facet name="header" >Step</apex:facet>
+                    {!command.Step}
+                </apex:column> 
+                
+                 <apex:column width="10%" >
+                    <apex:facet name="header" >Command</apex:facet>
+                    {!command.Name}
+                </apex:column> 
+                <!--<apex:column value="{!command.Verb}" />
+                -->
+                
+                <apex:column width="5%" html--align="center">
+                    <apex:facet name="header">Type</apex:facet>
+                    {!IF(command.isBatch, "Batch", "Simple")}
+                </apex:column> 
+                                
+                <apex:column width="40%" >
+                    <apex:facet name="header">Description</apex:facet>
+                    {!command.Description}
+                </apex:column> 
+                
+                <div id="result.{!command.Verb}"> 
+                <apex:column width="10%" html--align="center" html-data-id="result.{!command.Verb}">
+                    <apex:facet name="header">Result</apex:facet>
+                    {!command.Result}
+                </apex:column>
+                </div>
+                
+                <div id="status.{!command.Verb}">
+                    <apex:column width="10%" html--align="center">
+                        <apex:facet name="header" >Status</apex:facet>
+                        {!command.Status}
+                    </apex:column>
+                    
+                </div>
+              
+                <apex:column width="10%" >
+                    <apex:facet name="header" >Command</apex:facet>
+                    <apex:commandButton value="Execute" action="{!execute}" onclick="logToConsole(consoleDOMElementId, '<br/>--- Step {!command.Step} ---<br/>Command:	{!command.Name}');" 
+                                               onComplete="logToConsole(consoleDOMElementId,'Output:	{!commandResultMessage}<br/>Result:	{!commandResult}');updateCommandOutcome(  '{!currentCommand.Verb}', '{!commandResult}', '{!commandStatus}');return true;" reRender="commandsDiv" rendered="{!!command.isBatch}">
+                        <apex:param name="verb" value="{!command.verb}" />
+                    </apex:commandButton>
+           
+                    <apex:commandbutton value="Execute" action="{!execute}" onclick="logToConsole(consoleDOMElementId, '<br/>--- Step {!command.Step} ---<br/>Command:	{!command.Name}');" 
+                                               onComplete="logToConsole(consoleDOMElementId,'Output:	{!commandResultMessage}<br/>Result:	{!commandResult}');batchCommand='RunEnrollmentMain51';startAndPollBatch('{!commandStatus}',batchCommand); return true; " reRender="commandsDiv" rendered="{!command.isBatch}" >
+                        <apex:param name="verb" value="{!command.verb}" />
+                    </apex:commandButton>                                        
+                </apex:column>
+
+                
+            </apex:pageBlockTable>
+	 </apex:outputPanel>
+</apex:pageBlockSection>
+ 
+ 
+ <apex:pageBlockSection id="pbs2" columns="1"  title="Output Console" >
+	<apex:pageBlockSectionItem id="pbsi" >
+		<apex:outputPanel id="console" layout="block" style="overflow:auto;height:300px;width:100%;color:blue;" >
+		<!-- command output will appear here during runtime -->
+		</apex:outputPanel>
+	</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+</apex:pageBlock>       
+        
+    </apex:form>
+</apex:page>

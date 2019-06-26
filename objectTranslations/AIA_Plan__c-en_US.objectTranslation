@@ -1,0 +1,1554 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- All Market Segments --></label>
+        <name>All_Market_Segments__c</name>
+        <picklistValues>
+            <masterLabel>Large(1000+)</masterLabel>
+            <translation><!-- Large(1000+) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large(200-999)</masterLabel>
+            <translation><!-- Large(200-999) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AllergySerumsComment --></label>
+        <name>AllergySerumsComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- AllergySerums --></label>
+        <name>AllergySerums__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ApplyCoinsuranceToOOP --></label>
+        <name>ApplyCoinsuranceToOOP__c</name>
+    </fields>
+    <fields>
+        <label><!-- ApplyCopayToOOP --></label>
+        <name>ApplyCopayToOOP__c</name>
+    </fields>
+    <fields>
+        <label><!-- ApplyDeductibleToOOP --></label>
+        <name>ApplyDeductibleToOOP__c</name>
+    </fields>
+    <fields>
+        <label><!-- ApplyPerAdmissionCopayToOOP --></label>
+        <name>ApplyPerAdmissionCopayToOOP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apply Coinsurance To OOP --></label>
+        <name>Apply_Coinsurance_To_OOP__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Apply Copay To OOP --></label>
+        <name>Apply_Copay_To_OOP__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Apply Deductible To OOP --></label>
+        <name>Apply_Deductible_To_OOP__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Apply Per Admission Copay To OOP --></label>
+        <name>Apply_Per_Admission_Copay_To_OOP__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BDF Configuration Last Updated --></label>
+        <name>BDF_Configuration_Last_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- BenefitPeriodMaximum --></label>
+        <name>BenefitPeriodMaximum__c</name>
+    </fields>
+    <fields>
+        <label><!-- CDH Fund Type --></label>
+        <name>CDH_Fund_Type__c</name>
+        <picklistValues>
+            <masterLabel>Blue Fund</masterLabel>
+            <translation><!-- Blue Fund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueFund</masterLabel>
+            <translation><!-- BlueFund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compatible</masterLabel>
+            <translation><!-- Compatible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compatitble</masterLabel>
+            <translation><!-- Compatitble --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HRA Non-Integrated - Medical &amp;amp; RX ded not combined</masterLabel>
+            <translation><!-- HRA Non-Integrated - Medical &amp;amp; RX ded not combined --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CDH Type --></label>
+        <name>CDH_Type__c</name>
+        <picklistValues>
+            <masterLabel>HRA Integrated</masterLabel>
+            <translation><!-- HRA Integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HRA Non-Integrated</masterLabel>
+            <translation><!-- HRA Non-Integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSA</masterLabel>
+            <translation><!-- HSA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CDH --></label>
+        <name>CDH__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CF ProductId --></label>
+        <name>CF_ProductId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coinsurance_DefaultAmount__c --></label>
+        <name>Coinsurance_DefaultAmount_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Configuration Last Updated --></label>
+        <name>Configuration_Last_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay_Type_1_DefaultAmount --></label>
+        <name>Copay_Type_1_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay_Type_1_IsCovered --></label>
+        <name>Copay_Type_1_IsCovered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type --></label>
+        <name>Copay_Type__c</name>
+        <picklistValues>
+            <masterLabel>General Copay</masterLabel>
+            <translation><!-- General Copay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCP Copay</masterLabel>
+            <translation><!-- PCP Copay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Admission Copay</masterLabel>
+            <translation><!-- Per Admission Copay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialist Copay</masterLabel>
+            <translation><!-- Specialist Copay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CountOfNetworks --></label>
+        <name>CountOfNetworks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Networks --></label>
+        <name>Count_of_Networks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Load --></label>
+        <name>Data_Load__c</name>
+    </fields>
+    <fields>
+        <label><!-- DeductibleAccumulatorMethod --></label>
+        <name>DeductibleAccumulatorMethod__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stacked</masterLabel>
+            <translation><!-- Stacked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unstacked</masterLabel>
+            <translation><!-- Unstacked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DiabeticSuppCopayApply --></label>
+        <name>DiabeticSuppCopayApply__c</name>
+        <picklistValues>
+            <masterLabel>Exclude</masterLabel>
+            <translation><!-- Exclude --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DiabeticSuppDedApply --></label>
+        <name>DiabeticSuppDedApply__c</name>
+        <picklistValues>
+            <masterLabel>Exclude</masterLabel>
+            <translation><!-- Exclude --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DiabeticSuppMandateApply --></label>
+        <name>DiabeticSuppMandateApply__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ErectileDysfuncComment --></label>
+        <name>ErectileDysfuncComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- ErectileDysfunc --></label>
+        <name>ErectileDysfunc__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- FamilyDedCalculation --></label>
+        <name>FamilyDedCalculation__c</name>
+    </fields>
+    <fields>
+        <label><!-- FamilyOOPCalculation --></label>
+        <name>FamilyOOPCalculation__c</name>
+    </fields>
+    <fields>
+        <label><!-- FertilityAgentsComment --></label>
+        <name>FertilityAgentsComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- FertilityAgents --></label>
+        <name>FertilityAgents__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Full Plan Name --></label>
+        <name>Full_Plan_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GenDispsng --></label>
+        <name>GenDispsng__c</name>
+        <picklistValues>
+            <masterLabel>MANDATORY</masterLabel>
+            <translation><!-- MANDATORY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RESTRICTED</masterLabel>
+            <translation><!-- RESTRICTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY</masterLabel>
+            <translation><!-- VOLUNTARY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY-standard: member charged applicable copay</masterLabel>
+            <translation><!-- VOLUNTARY-standard: member charged applicable copay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GenReferralDescription --></label>
+        <name>GenReferralDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- GenReferral --></label>
+        <name>GenReferral__c</name>
+    </fields>
+    <fields>
+        <label><!-- GenStepTherapy --></label>
+        <name>GenStepTherapy__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GrowthHormone --></label>
+        <name>GrowthHormone__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HBSelectGeneric --></label>
+        <name>HBSelectGeneric__c</name>
+        <picklistValues>
+            <masterLabel>Waive Ded/Apply Copay</masterLabel>
+            <translation><!-- Waive Ded/Apply Copay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waive Ded/Waive Copay (Standard)</masterLabel>
+            <translation><!-- Waive Ded/Waive Copay (Standard) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Has Benefit Summary --></label>
+        <name>Has_Benefit_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN &amp; OON Ded Contribute To Each Other --></label>
+        <name>INN_OON_Ded_Contribute_To_Each_Other__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN and OON Annual Maximum combined --></label>
+        <name>INN_and_OON_Annual_Maximum_combined__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN and OON Lifetime Maximum combined --></label>
+        <name>INN_and_OON_Lifetime_Maximum_combined__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN and OON OOP Contribute To Each Other --></label>
+        <name>INN_and_OON_OOP_Contribute_To_Each_Other__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN or Contracted Provider Penalty --></label>
+        <name>INN_or_Contracted_Provider_Penalty__c</name>
+    </fields>
+    <fields>
+        <label><!-- IntegratedDedIndicator --></label>
+        <name>IntegratedDedIndicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- IntegratedOOPIndicator --></label>
+        <name>IntegratedOOPIndicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integrated DedIndicator --></label>
+        <name>Integrated_DedIndicator__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Integrated OOP Indicator --></label>
+        <name>Integrated_OOP_Indicator__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Federal</masterLabel>
+            <translation><!-- Federal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>Legal_Entity__c</name>
+        <picklistValues>
+            <masterLabel>B</masterLabel>
+            <translation><!-- B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice</masterLabel>
+            <translation><!-- BlueChoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFBC</masterLabel>
+            <translation><!-- CFBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFMI</masterLabel>
+            <translation><!-- CFMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GHMSI</masterLabel>
+            <translation><!-- GHMSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Magellan Behavioral Health --></label>
+        <name>Magellan_Behavioral_Health__c</name>
+    </fields>
+    <fields>
+        <label><!-- MailOrdDispnsMaintDaysSupp --></label>
+        <name>MailOrdDispnsMaintDaysSupp__c</name>
+    </fields>
+    <fields>
+        <label><!-- MailOrdDispnsNMaintDaysSupp --></label>
+        <name>MailOrdDispnsNMaintDaysSupp__c</name>
+    </fields>
+    <fields>
+        <label><!-- MailOrderAllDrugs --></label>
+        <name>MailOrderAllDrugs__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Network Levels --></label>
+        <name>Network_Levels__c</name>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RX Choice</masterLabel>
+            <translation><!-- RX Choice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One</masterLabel>
+            <translation><!-- One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RX Choice</masterLabel>
+            <translation><!-- RX Choice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Three</masterLabel>
+            <translation><!-- Three --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Two</masterLabel>
+            <translation><!-- Two --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON - Fully Insured --></label>
+        <name>OON_Fully_Insured__c</name>
+    </fields>
+    <fields>
+        <label><!-- OOPAccumulatorMethod --></label>
+        <name>OOPAccumulatorMethod__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stacked</masterLabel>
+            <translation><!-- Stacked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unstacked</masterLabel>
+            <translation><!-- Unstacked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OTCCovered --></label>
+        <name>OTCCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Option --></label>
+        <name>Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- OralChemoCopayApply --></label>
+        <name>OralChemoCopayApply__c</name>
+        <picklistValues>
+            <masterLabel>Exclude</masterLabel>
+            <translation><!-- Exclude --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OralChemoDedApply --></label>
+        <name>OralChemoDedApply__c</name>
+        <picklistValues>
+            <masterLabel>Exclude</masterLabel>
+            <translation><!-- Exclude --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OralChemoMandateApply --></label>
+        <name>OralChemoMandateApply__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Other Requirements --></label>
+        <name>Other_Requirements__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCS Last Updated Date --></label>
+        <name>PCS_Last_Updated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Product Name --></label>
+        <name>Parent_Product_NameL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Product --></label>
+        <name>Parent_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Type --></label>
+        <name>PlanType__c</name>
+        <picklistValues>
+            <masterLabel>Non-Standard</masterLabel>
+            <translation><!-- Non-Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Plan Active Date --></label>
+        <name>Plan_Active_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCS Plan Id --></label>
+        <name>Plan_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Name --></label>
+        <name>Plan_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- PreRenewalPlanID --></label>
+        <name>PreRenewalPlanID__c</name>
+    </fields>
+    <fields>
+        <label><!-- PrescriptionComments --></label>
+        <name>PrescriptionComments__c</name>
+    </fields>
+    <fields>
+        <label><!-- PrescriptionCovrdArrngmnt --></label>
+        <name>PrescriptionCovrdArrngmnt__c</name>
+        <picklistValues>
+            <masterLabel>Carved Out</masterLabel>
+            <translation><!-- Carved Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Covered under Drug Program</masterLabel>
+            <translation><!-- Covered under Drug Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Covered under Drug Program</masterLabel>
+            <translation><!-- Not Covered under Drug Program --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PrevntvCovrd --></label>
+        <name>PrevntvCovrd__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PrevntvDrugCopayAmount --></label>
+        <name>PrevntvDrugCopayAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- PriorAuth --></label>
+        <name>PriorAuth__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PriorCarrierDedCred --></label>
+        <name>PriorCarrierDedCred__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Category --></label>
+        <name>Product_Category__c</name>
+        <picklistValues>
+            <masterLabel>CareFirst Private Exchange</masterLabel>
+            <translation><!-- CareFirst Private Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug</masterLabel>
+            <translation><!-- Drug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical</masterLabel>
+            <translation><!-- Medical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Last Updated String Format --></label>
+        <name>Product_Last_Updated_String_Format__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Last Updated --></label>
+        <name>Product_Last_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Line --></label>
+        <name>Product_Line__c</name>
+        <picklistValues>
+            <masterLabel>DENTAL</masterLabel>
+            <translation><!-- DENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HMO</masterLabel>
+            <translation><!-- HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POS</masterLabel>
+            <translation><!-- POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPO</masterLabel>
+            <translation><!-- PPO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISION</masterLabel>
+            <translation><!-- VISION --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Status --></label>
+        <name>Product_Status__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exit</masterLabel>
+            <translation><!-- Exit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCR</masterLabel>
+            <translation><!-- HCR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UM</masterLabel>
+            <translation><!-- UM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Sub Category --></label>
+        <name>Product_Sub_Category__c</name>
+        <picklistValues>
+            <masterLabel>BlueDental Basic (Non DHMO)</masterLabel>
+            <translation><!-- BlueDental Basic (Non DHMO) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueDental Plus</masterLabel>
+            <translation><!-- BlueDental Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHMO</masterLabel>
+            <translation><!-- DHMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred</masterLabel>
+            <translation><!-- Preferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traditional</masterLabel>
+            <translation><!-- Traditional --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>"BPH	BluePreferred HDHP Integrated Deductible"</masterLabel>
+            <translation><!-- &quot;BPH	BluePreferred HDHP Integrated Deductible&quot; --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCBS65 (Medigap)</masterLabel>
+            <translation><!-- BCBS65 (Medigap) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Advantage</masterLabel>
+            <translation><!-- BlueChoice Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Advantage CDH Integrated</masterLabel>
+            <translation><!-- BlueChoice Advantage CDH Integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Advantage CDH Non-Integrated</masterLabel>
+            <translation><!-- BlueChoice Advantage CDH Non-Integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice HMO</masterLabel>
+            <translation><!-- BlueChoice HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice HMO Open Access</masterLabel>
+            <translation><!-- BlueChoice HMO Open Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice HMO Open Access HDHP Integrated Deductible</masterLabel>
+            <translation><!-- BlueChoice HMO Open Access HDHP Integrated Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice HMO Open Access HDHP Non Integrated Deductible</masterLabel>
+            <translation><!-- BlueChoice HMO Open Access HDHP Non Integrated Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice HMO Referral Integrated Ded &gt; 1K</masterLabel>
+            <translation><!-- BlueChoice HMO Referral Integrated Ded &gt; 1K --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice HMO Referral Non-Integrated Ded &gt;1K</masterLabel>
+            <translation><!-- BlueChoice HMO Referral Non-Integrated Ded &gt;1K --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Opt Out Open Access</masterLabel>
+            <translation><!-- BlueChoice Opt Out Open Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Opt Out Plus Open Access</masterLabel>
+            <translation><!-- BlueChoice Opt Out Plus Open Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Opt Out Plus Open Access HDHP Integrated Deductible</masterLabel>
+            <translation><!-- BlueChoice Opt Out Plus Open Access HDHP Integrated Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Opt Out Plus Open Access HDHP Non Integrated Deductible</masterLabel>
+            <translation><!-- BlueChoice Opt Out Plus Open Access HDHP Non Integrated Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueChoice Referral Non-Integrated Deductible</masterLabel>
+            <translation><!-- BlueChoice Referral Non-Integrated Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BluePreferred HDHP Integrated Deductible</masterLabel>
+            <translation><!-- BluePreferred HDHP Integrated Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BluePreferred HDHP Non Integrated Deductible</masterLabel>
+            <translation><!-- BluePreferred HDHP Non Integrated Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BluePreferred PPO</masterLabel>
+            <translation><!-- BluePreferred PPO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Capital Care Advantage</masterLabel>
+            <translation><!-- Capital Care Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Capital Care HMO</masterLabel>
+            <translation><!-- Capital Care HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catastrophic</masterLabel>
+            <translation><!-- Catastrophic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHP Group Conversion (This Is Now Considered BChoice GC)</masterLabel>
+            <translation><!-- DHP Group Conversion (This Is Now Considered BChoice GC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental Test</masterLabel>
+            <translation><!-- Dental Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSA Compatible HD Non Integrated</masterLabel>
+            <translation><!-- HSA Compatible HD Non Integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue 2.0 /Plus Dual Option (Bcoop) Integrated ≥1K (HB2)</masterLabel>
+            <translation><!-- HealthyBlue 2.0 /Plus Dual Option (Bcoop) Integrated ≥1K (HB2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue 2.0/Plus Dual Option (Bcoop) Integrated &lt;1K  (HB2)</masterLabel>
+            <translation><!-- HealthyBlue 2.0/Plus Dual Option (Bcoop) Integrated &lt;1K  (HB2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated &lt;1K  (HB2)</masterLabel>
+            <translation><!-- HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated &lt;1K  (HB2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated ≥1K  (HB2)</masterLabel>
+            <translation><!-- HealthyBlue 2.0/Plus Dual Option (Bcoop) Nonintegrated ≥1K  (HB2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Advantage  -Integrated &lt; 1K  (HB3)</masterLabel>
+            <translation><!-- HealthyBlue Advantage  -Integrated &lt; 1K  (HB3) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Advantage  Integrated ≥ 1K (HB3)</masterLabel>
+            <translation><!-- HealthyBlue Advantage  Integrated ≥ 1K (HB3) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Advantage - Nonintegrated ≥ $1K (HB3)</masterLabel>
+            <translation><!-- HealthyBlue Advantage - Nonintegrated ≥ $1K (HB3) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Advantage -- Nonintegrated &lt; $1K (HB3)</masterLabel>
+            <translation><!-- HealthyBlue Advantage - -  Nonintegrated &lt; $1K (HB3) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue BluePreferred -  Integrated   ≥1K  (HB4)</masterLabel>
+            <translation><!-- HealthyBlue BluePreferred -  Integrated   ≥1K  (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue BluePreferred - Nonintegrated &lt;1K  (HB4)</masterLabel>
+            <translation><!-- HealthyBlue BluePreferred - Nonintegrated &lt;1K  (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue BluePreferred - Nonintegrated ≥1K  (HB4)</masterLabel>
+            <translation><!-- HealthyBlue BluePreferred - Nonintegrated ≥1K  (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue BluePreferred -Integrated &lt;1K (HB4)</masterLabel>
+            <translation><!-- HealthyBlue BluePreferred -Integrated &lt;1K (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Dual Option - Integrated &lt; 1K  (HB1)</masterLabel>
+            <translation><!-- HealthyBlue Dual Option - Integrated &lt; 1K  (HB1) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Dual Option -Integrated ≥ 1K  (HB1)</masterLabel>
+            <translation><!-- HealthyBlue Dual Option -Integrated ≥ 1K  (HB1) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue HMO  Open Access- Nonintegrated &lt;1K (HB4)</masterLabel>
+            <translation><!-- HealthyBlue HMO  Open Access- Nonintegrated &lt;1K (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue HMO Open Access - Integrated  ≥1K  (HB4)</masterLabel>
+            <translation><!-- HealthyBlue HMO Open Access - Integrated  ≥1K  (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue HMO Open Access - Integrated &lt;1K  (HB4)</masterLabel>
+            <translation><!-- HealthyBlue HMO Open Access - Integrated &lt;1K  (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue HMO Open Access - Nonintegrated ≥1K  (HB4)</masterLabel>
+            <translation><!-- HealthyBlue HMO Open Access - Nonintegrated ≥1K  (HB4) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Triple Option - Integrated  &lt; 1K(HB1)</masterLabel>
+            <translation><!-- HealthyBlue Triple Option - Integrated  &lt; 1K(HB1) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue Triple Option - Integrated ≥ 1K (HB1)</masterLabel>
+            <translation><!-- HealthyBlue Triple Option - Integrated ≥ 1K (HB1) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical and Rx deductibles are combined</masterLabel>
+            <translation><!-- Medical and Rx deductibles are combined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical and Rx deductibles are not combined</masterLabel>
+            <translation><!-- Medical and Rx deductibles are not combined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap A</masterLabel>
+            <translation><!-- Medigap A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap B</masterLabel>
+            <translation><!-- Medigap B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap C</masterLabel>
+            <translation><!-- Medigap C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap F</masterLabel>
+            <translation><!-- Medigap F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap G</masterLabel>
+            <translation><!-- Medigap G --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap I</masterLabel>
+            <translation><!-- Medigap I --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap L</masterLabel>
+            <translation><!-- Medigap L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap M</masterLabel>
+            <translation><!-- Medigap M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medigap N</masterLabel>
+            <translation><!-- Medigap N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-state plan (on exchange only), fully integrated</masterLabel>
+            <translation><!-- Multi-state plan (on exchange only), fully integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-state plan (on exchange only), non-integrated</masterLabel>
+            <translation><!-- Multi-state plan (on exchange only), non-integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Protection 65 (Medigap)</masterLabel>
+            <translation><!-- Protection 65 (Medigap) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traditional Comprehensive Indemnity And Personal Comp</masterLabel>
+            <translation><!-- Traditional Comprehensive Indemnity And Personal Comp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traditional Group &gt;65</masterLabel>
+            <translation><!-- Traditional Group &gt;65 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traditional Indemnity And Group Standard &lt;65</masterLabel>
+            <translation><!-- Traditional Indemnity And Group Standard &lt;65 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VAES Comprehensive</masterLabel>
+            <translation><!-- VAES Comprehensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VAES HMO</masterLabel>
+            <translation><!-- VAES HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision Test</masterLabel>
+            <translation><!-- Vision Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrap Indemnity</masterLabel>
+            <translation><!-- Wrap Indemnity --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PrscrbdOrlContrcptvAndDevc --></label>
+        <name>PrscrbdOrlContrcptvAndDevc__c</name>
+        <picklistValues>
+            <masterLabel>Mandated Benefits (standard for Grandfathered unless Preventive / WPS chosen) Oral, Transdermal, Non-surgical Injectables, Cervical Cap and Diaphargms.</masterLabel>
+            <translation><!-- Mandated Benefits (standard for Grandfathered unless Preventive / WPS chosen) Oral, Transdermal, Non-surgical Injectables, Cervical Cap and Diaphargms. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woman’s Preventive Services (standard with Preventive $0 copay unless religious exclusion)</masterLabel>
+            <translation><!-- Woman’s Preventive Services (standard with Preventive $0 copay unless religious exclusion) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woman’s Preventive Services Accommodated – Emergency Contraception</masterLabel>
+            <translation><!-- Woman’s Preventive Services Accommodated – Emergency Contraception --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woman’s Preventive Services Accommodated – Full Exemption</masterLabel>
+            <translation><!-- Woman’s Preventive Services Accommodated – Full Exemption --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woman’s Preventive Services Exempt – No Benefits</masterLabel>
+            <translation><!-- Woman’s Preventive Services Exempt – No Benefits --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- QA Complete --></label>
+        <name>QA_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- QA Completed Date --></label>
+        <name>QA_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- QA Completed by --></label>
+        <name>QA_Completed_by__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Spec Description --></label>
+        <name>ReferralSpecDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReferralSpec --></label>
+        <name>ReferralSpec__c</name>
+    </fields>
+    <fields>
+        <label><!-- RetDispnsMaintDaysSupp --></label>
+        <name>RetDispnsMaintDaysSupp__c</name>
+    </fields>
+    <fields>
+        <label><!-- RetDispnsNMaintDaysSupp --></label>
+        <name>RetDispnsNMaintDaysSupp__c</name>
+    </fields>
+    <fields>
+        <label><!-- RetMailDispnsMaintLimitation --></label>
+        <name>RetMailDispnsMaintLimitation__c</name>
+    </fields>
+    <fields>
+        <label><!-- RetMailDispnsMaint --></label>
+        <name>RetMailDispnsMaint__c</name>
+        <picklistValues>
+            <masterLabel>Mandatory Maintenance Choice</masterLabel>
+            <translation><!-- Mandatory Maintenance Choice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mandatory Maintenance Choice (custom)</masterLabel>
+            <translation><!-- Mandatory Maintenance Choice (custom) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Up to 90 day supply 2 copays (standard)</masterLabel>
+            <translation><!-- Up to 90 day supply 2 copays (standard) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voluntary Maintenance Choice</masterLabel>
+            <translation><!-- Voluntary Maintenance Choice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voluntary Maintenance Choice (custom)</masterLabel>
+            <translation><!-- Voluntary Maintenance Choice (custom) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RxFundamentalApply --></label>
+        <name>RxFundamentalApply__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RxFundamentalDedCopayRule --></label>
+        <name>RxFundamentalDedCopayRule__c</name>
+        <picklistValues>
+            <masterLabel>Waive Ded/Apply Copay</masterLabel>
+            <translation><!-- Waive Ded/Apply Copay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waive Ded/Waive Copay (Standard)</masterLabel>
+            <translation><!-- Waive Ded/Waive Copay (Standard) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Skeleton Plan --></label>
+        <name>Skeleton_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Date --></label>
+        <name>Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Three Month Deductible --></label>
+        <name>Three_Month_Deductible_Carryover__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TierCount --></label>
+        <name>TierCount__c</name>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 01 Program --></label>
+        <name>X01_Program__c</name>
+        <picklistValues>
+            <masterLabel>30 - Core BlueVision</masterLabel>
+            <translation><!-- 30 - Core BlueVision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31 - Core BlueVision</masterLabel>
+            <translation><!-- 31 - Core BlueVision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 05OptionsString --></label>
+        <name>X05OptionsString__c</name>
+    </fields>
+    <fields>
+        <label><!-- 05Options --></label>
+        <name>X05Options__c</name>
+        <picklistValues>
+            <masterLabel>07-Includes Tint and Excludes Referral Exam</masterLabel>
+            <translation><!-- 07-Includes Tint and Excludes Referral Exam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08–Group w/ Medical Option(s)</masterLabel>
+            <translation><!-- 08–Group w/ Medical Option(s) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09–Freestanding Vision Group</masterLabel>
+            <translation><!-- 09–Freestanding Vision Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (nonstandard)</masterLabel>
+            <translation><!-- Other (nonstandard) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 06RenewalPeriodString --></label>
+        <name>X06RenewalPeriodString__c</name>
+    </fields>
+    <fields>
+        <label><!-- 06RenewalPeriod --></label>
+        <name>X06RenewalPeriod__c</name>
+        <picklistValues>
+            <masterLabel>07–12 Months</masterLabel>
+            <translation><!-- 07–12 Months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08–24 Months</masterLabel>
+            <translation><!-- 08–24 Months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11–Exam &amp; Lens 12 Months; Frames 24 Months</masterLabel>
+            <translation><!-- 11–Exam &amp; Lens 12 Months; Frames 24 Months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (nonstandard)</masterLabel>
+            <translation><!-- Other (nonstandard) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 07BenefitRenewsString --></label>
+        <name>X07BenefitRenewsString__c</name>
+    </fields>
+    <fields>
+        <label><!-- 07BenefitRenews --></label>
+        <name>X07BenefitRenews__c</name>
+        <picklistValues>
+            <masterLabel>07–Calendar Year</masterLabel>
+            <translation><!-- 07–Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08–Contract Year</masterLabel>
+            <translation><!-- 08–Contract Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09–Date of Service</masterLabel>
+            <translation><!-- 09–Date of Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (nonstandard)</masterLabel>
+            <translation><!-- Other (nonstandard) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 08RenewalType --></label>
+        <name>X08RenewalType__c</name>
+        <picklistValues>
+            <masterLabel>01-Contract Year</masterLabel>
+            <translation><!-- 01-Contract Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- isDrugCount --></label>
+        <name>isDrugCount__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plans</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Plan Layout</layout>
+        <sections>
+            <label><!-- Configuration Details --></label>
+            <section>Configuration Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Medical --></label>
+            <section>Medical</section>
+        </sections>
+        <sections>
+            <label><!-- Misc --></label>
+            <section>Misc</section>
+        </sections>
+        <sections>
+            <label><!-- Pharmacy --></label>
+            <section>Pharmacy</section>
+        </sections>
+        <sections>
+            <label><!-- QA Audit --></label>
+            <section>QA Audit</section>
+        </sections>
+        <sections>
+            <label><!-- Vision --></label>
+            <section>Vision</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Run_DDP2 --></label>
+        <name>Run_DDP2</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDPTestplan --></label>
+        <name>Run_DDPTestplan</name>
+    </webLinks>
+</CustomObjectTranslation>

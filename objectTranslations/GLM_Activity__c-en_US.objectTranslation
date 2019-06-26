@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Where location (class, trigger, etc.) where the GLM framework was used and the threshold was met. --></help>
+        <label><!-- Activity Origin --></label>
+        <name>Activity_Origin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calculated Threshold % --></label>
+        <name>Calculated_Threshold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit Max --></label>
+        <name>Limit_Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit Used --></label>
+        <name>Limit_Used__c</name>
+    </fields>
+    <fields>
+        <help><!-- Threshold value that was set on the GLM__mdt.Threshold  field for the given governor limit. --></help>
+        <label><!-- Threshold % --></label>
+        <name>Threshold__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>GLM Activity</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>GLM Activities</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>GLM Activity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

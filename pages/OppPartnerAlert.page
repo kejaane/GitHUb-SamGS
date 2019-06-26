@@ -1,0 +1,21 @@
+<apex:page standardController="Opportunity" extensions="OppPartnerExtension"
+           standardStylesheets="true" tabstyle="Opportunity" showHeader="false">
+    <style>
+        #DIV_Container{padding: 0; margin: 0; background-color: #F3F3EC;}
+    </style>
+    
+    <div id="DIV_Container">                
+        <apex:outputText style="Color:#FF3300; background-color:yellow; font-style:bold" 
+                        value="Remember to enter partner(s)"
+                        rendered="{!NOT(hasPartners)}"> 
+
+<!--                    value="{!hasPartners}"> -->                       
+                       
+<!-- This routine jumps us to the partner screen if a partner record does not exists               
+          <script>
+              parent.location.href = '/opp/partneredit.jsp?id={!Opportunity.Id}&fid={!Opportunity.AccountId}&retURL=%2F{!Opportunity.Id}';
+          </script>    
+-->  
+        </apex:outputText>
+    </div>
+</apex:page>

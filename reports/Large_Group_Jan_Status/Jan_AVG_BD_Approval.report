@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_67862091</developerName>
+        <masterLabel>Implementation Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Benfit_Request_Form__c$Request_Type__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Renewal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renewal - Administrative Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renewal - Benefit Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renewal - Admin and Benefit Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renew As-is</sourceValue>
+            </sourceValues>
+            <value>Renewal</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Prospect/New</sourceValue>
+            </sourceValues>
+            <value>New</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Off-Cycle - Administrative Change</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Off-Cycle - Benefit Change</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Off-Cycle - Administrative and Benefit Change</sourceValue>
+            </sourceValues>
+            <value>Off Cycle</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Set-up Change - Admin and Benefit Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set-up Change - Benefit Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set-up Change - Administrative Changes</sourceValue>
+            </sourceValues>
+            <value>Setup Change</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Average</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Days_to_Approve_BDF__c</column>
+        </chartSummaries>
+        <chartType>Line</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_67862091</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Benfit_Request_Form__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Request_Type__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$ARC_Approval_Initial_Submission_Date__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$ARC_Approval_Status__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r$Business_Type__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Days_to_Approve_BDF__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Approval_Initial_Submission_Date__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_67862091</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Jan AVG BD Approval</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>BRF_w_Implementation_and_w_BD__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Benfit_Request_Form__c.Implementations__r$Effective_Date__c</dateColumn>
+        <endDate>2018-01-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-01</startDate>
+    </timeFrameFilter>
+</Report>

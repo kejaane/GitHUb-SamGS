@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_54096437</developerName>
+        <masterLabel>Business Area</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Opportunity$Business__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>51-199 Renewal Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Labor Renewal Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Local Renewal Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>National Renewal Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Regional Renewal Sales</sourceValue>
+            </sourceValues>
+            <value>Renewal Business</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>New Business Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Labor New Business Sales</sourceValue>
+            </sourceValues>
+            <value>New Business</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$RFP_Dept_Recpt_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Date_Assigned__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Date_Released__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Lead_Rep_Name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Medical_Products__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Medical_Products_Other__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$CDH_Products__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Dental_Employer_Sponsored__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Vision_Empl_Sponsored__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Prescription_Rx__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Vision_Voluntary__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Dental_Voluntary__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Shared_Processing__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Proposal_Coordinators__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Potential_Contracts__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Status__c</field>
+    </columns>
+    <description>Short criteria ( optimized)</description>
+    <filter>
+        <booleanFilter>(1 AND 2 AND 3) AND (4 OR ( 5 AND 6) OR (7 AND 8))</booleanFilter>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$Type_of_Work__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Project</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$Underwriting_Entity__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DC,MD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>PRF__c.CF_Proposal_Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>In Progress</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Complete</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$Date_Released__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:7</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$Date_Released__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:7</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Type_of_Work__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Underwriting_Entity__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CF Weekly Proposal Activity - spm</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opps_with_RFP_and_With_PRF__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Opportunity.RFP__r.Proposal_Request_Forms__r$Status__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

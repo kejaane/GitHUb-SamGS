@@ -1,0 +1,16 @@
+<table height="400" width="600" cellpadding="5" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<font face="arial" size="3">Please search in Salesforce.com for the account shown below. &nbsp;Next locate the latest SOLD opportunity and screen shot the entire Legacy System Information section. &nbsp;Finally, reply to this email and paste the copied section into the email and send it to&nbsp;</font><font color="#0000ee" face="Calibri, sans-serif"><u>EmployerPortalUseraccountrequest@carefirst.com</u></font><font face="Calibri, sans-serif"><span style="font-size: 11pt;">.</span></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><br></span></div>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<div><font face="arial" size="3" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Account Owner Name:&nbsp;</font><font face="arial">{!Account.OwnerFullName}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial" size="3" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></font></div><div><font face="arial" size="3" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Account Owner Email:&nbsp;</font><font face="arial">{!Account.OwnerEmail}</font></div><font face="arial" size="3" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><div><font face="arial" size="3" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></font></div>Account Name:&nbsp;{!Account.Name}</font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">First Name: {!Contact.FirstName}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">Last Name: {!Contact.LastName}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">Email: {!Contact.Email}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">Employer Group Portal: {!if(Contact.Employer_Group_Portal__c, "Yes","No")}</font></div>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r3" locked="0" aEditID="c1r3" >
+<![CDATA[]]></td>
+</tr>
+</table>

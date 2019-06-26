@@ -1,0 +1,3 @@
+A Benefit Request Form has been submitted to Underwriting for {!Benfit_Request_Form__c.Account_Name__c}. Click on the URL below to access the Benefit Request Form details:
+
+{!Benfit_Request_Form__c.Link}

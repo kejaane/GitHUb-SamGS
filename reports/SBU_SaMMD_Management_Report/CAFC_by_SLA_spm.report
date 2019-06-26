@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Case.Closed_Age_0_2__c:SUM + Case.Closed_Age_3_7__c:SUM + Case.Closed_Age_8_14__c:SUM+Case.Closed_Age_15_21__c:SUM+Case.Closed_Age_22_30__c:SUM+Case.Closed_Age_31__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Sum of all closed cases</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Closed Cases</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(Case.Closed_Age_31__c:SUM = 0, 0,(Case.Closed_Age_31__c:SUM/(Case.Closed_Age_0_2__c:SUM+Case.Closed_Age_3_7__c:SUM+Case.Closed_Age_8_14__c:SUM+Case.Aged_15_21__c:SUM+Case.Closed_Age_22_30__c:SUM+Case.Closed_Age_31__c:SUM)))</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>This column defines the percentage of closed cases aged &gt; 31 days</description>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Closed % GT 31</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(Case.CAFC__c:SUM = 0, 0,(Case.CAFC__c:SUM/(Case.Closed_Age_0_2__c:SUM+Case.Closed_Age_3_7__c:SUM+Case.Closed_Age_8_14__c:SUM+Case.Aged_15_21__c:SUM+Case.Closed_Age_22_30__c:SUM+Case.Closed_Age_31__c:SUM)))</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>This field calculates the percentage of cases those were &apos;Closed At First Contact&apos;</description>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>CAFC Percentage</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_38466259</developerName>
+        <masterLabel>Origin</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ORIGIN</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Email</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email Thread</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Broker Sales MD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Broker Sales 4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Retro activity Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: SBC Project</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: BCS Specialist</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Small Medium Group</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Royal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Indigo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Ocean</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Sapphire</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Sky</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Teal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Compliance</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA1</column>
+        </chartSummaries>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>Case.CAFC__c</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Case.SLA_Category__c</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Closed_Age_0_2__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Closed_Age_3_7__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Closed_Age_8_14__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Closed_Age_15_21__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Closed_Age_22_30__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Closed_Age_31__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.CAFC__c</field>
+    </columns>
+    <description>This report provides a summary of &apos;Closed at First Contact&apos; cases grouped by &apos;SLA&apos; and break-down of &apos;Closed Age&apos; columns</description>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.SBU_Group_Case,Case.SBU_Member_Case,Case.SBU_Non_Member_Case,Case.SBU_Broker_Support_Internal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Received_Date__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Reason__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>C001-Closed First Contact</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_38466259</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.SLA_Category__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CAFC by SLA-spm</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

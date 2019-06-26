@@ -1,0 +1,106 @@
+<!--==============================================================================================================
+ * Date         : 04/18/2017
+ * Developer    : Satya Tirumalasetti
+ * Purpose      : To add proposed products to the ID card record. This is in ID card layout as inline VF page
+ *================================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date         Developer    Tag   Description
+ *============+============+=====+================================================================================
+ * 04/18/2017 | Satya      |     | Initial Version   
+ * 02/13/2018 | Satya      | T01 | Added to show messages as per the user interface       
+ *===========+=============+=====+================================================================================
+-->
+<apex:page standardController="ID_Card__c" extensions="AIA_IDCardExtController" lightningStyleSheets="{!!isClassic}">
+    <!--T01 Start-->
+    <apex:slds rendered="{!!isClassic}"/>
+    <Style>
+        .slds-scope .slds-select {
+        width: 40%;
+        }
+        .slds-scope a.slds-button {
+         width: 55px;
+        }
+        .slds-scope .slds-form-element {
+        width: 50px;
+        }
+    </Style>
+    <!--T01 End-->
+  <apex:form >
+    <apex:pageblock >
+      
+      <apex:pageBlockSection title="ID Card Details" columns="1" id="prdId" >
+               
+        <apex:pageBlockSectionItem >
+          Member Level Products:  
+          <apex:inputField styleClass="form-control input slds-select" style="{! if(isClassic,'width:10%;','')}" value="{!idCardRec.Member_level_Products__c}" onchange="showProducts();"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            Member Level Product List:
+            <apex:outputField value="{!idCardRec.Member_level_products_comments__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            Member Level Products Comments:
+            <apex:inputField value="{!idCardRec.Member_Level_Products_Comments1__c}"/>
+        </apex:pageBlockSectionItem>
+      
+      </apex:pageBlockSection>
+      <!--<apex:pageMessages /> -->
+      <apex:outputPanel rendered="{!!isClassic}"> <!--T01 Changes start-->
+           <div class="slds-scope">
+               <div class="slds-p-left--large slds-p-top_x-large slds-p-bottom_x-large" style="font-size:15px">
+                    <apex:pageMessages />
+                </div>
+            </div>
+       </apex:outputPanel>
+      <apex:outputPanel rendered="{!isClassic}">
+           <apex:pageMessages /> 
+       </apex:outputPanel> <!-- T01 ends -->
+      <apex:outputPanel id="opnl" >
+        <apex:pageBlock rendered="{!showTable}" >
+        <apex:outputPanel >
+          <apex:pageblocktable value="{!ppWrapperList}" var="pp">
+             <apex:column >
+                 <apex:outputPanel rendered="{!isClassic}">
+               <apex:inputCheckbox value="{!pp.isSelected}"/>
+                 </apex:outputPanel>
+                 <apex:outputPanel rendered="{!!isClassic}">
+                     <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    
+                                    <label class="slds-checkbox">
+                                        <apex:inputcheckbox value="{!pp.isSelected}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>  
+                   </apex:outputPanel>
+             </apex:column>
+             <apex:column value="{!pp.Name}" headerValue="Product Id"/>
+             <apex:column value="{!pp.PlanName}" headerValue="Plan Name"/>
+             <apex:column value="{!pp.ProductCategory }" headerValue="Product Category"/>
+             <apex:column value="{!pp.Custom  }" headerValue="Custom"/>
+           </apex:pageblocktable>
+           </apex:outputPanel>
+           
+           </apex:pageBlock>
+           
+            <div align = "center">
+                  <!--<apex:commandButton value="Save" action="{!saveData}" />-->
+                  <apex:commandLink value="Save" target="_top" styleClass="btn slds-button_neutral slds-button" style="text-decoration:none;padding:4px;"  action="{!saveData}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <apex:commandLink value="Reset" target="_top" styleClass="btn slds-button_neutral slds-button" style="text-decoration:none;padding:4px;"  action="{!resetToNo}"/>
+            </div> 
+        </apex:outputPanel>
+      
+    </apex:pageblock> 
+    
+     <!-- </apex:outputPanel>-->
+    <apex:actionFunction action="{!showProducts}" name="showProducts" reRender="opnl"/>
+  </apex:form>
+  <script>
+    function setFocusOnLoad() {}
+  </script>
+  
+</apex:page>

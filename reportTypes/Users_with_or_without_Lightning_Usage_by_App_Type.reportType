@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>other</category>
+    <deployed>false</deployed>
+    <description>Description: Represents number of users on Lightning Experience and Salesforce Mobile</description>
+    <label>Users with or without Lightning Usage by App Type</label>
+    <sections>
+        <masterLabel>LightningUsageByAppTypeMetrics</masterLabel>
+    </sections>
+</ReportType>

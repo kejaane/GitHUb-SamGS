@@ -1,0 +1,43 @@
+<!--===================================================================================================================
+ * Date       : 9/18/2017
+ * Developer  : Rajesh Nagandla
+ * Purpose    : Invoking AIA_GSM_SubmitforApproval from submit for approval button on GSRF for internal approval process.
+ *              Validates all the conditions and submits for approval, if satisfies all the conditions.
+ *                                 Update History
+ *                                 ---------------
+ * Date       |     Developer        | Tag |   Description
+ *============+============+=========================================================================================
+ *============+============+=========================================================================================
+-->
+<apex:page standardController="AIA_Group__c" extensions="AIA_GSM_CustomNewlistbuttonController">
+   
+  <apex:include pageName="BusyIndicator"/> 
+  <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+  <apex:pageMessages ></apex:pageMessages>
+  <script> 
+    // Show the busy model image when page is first loaded.
+    window.onload = function()
+    {      
+       // After showing the modal window call a script function which will in turn
+       // call the controller extension function.
+       showBusyThenCallScript('parentislocked'); 
+    }
+  </script>
+  
+  <apex:form id="theForm">
+  
+    <!-- Define a function callable from Javascript.  This will in turn call the controller extension function. -->
+    <apex:actionFunction name="parentislocked" action="{!parentislocked}" onComplete="hideBusy();" rerender="theForm"/>
+
+    <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}" escape="false"/><br/><br/><br/>
+        <apex:commandButton value="Ok" action="{!backtogsrf}"/>
+      </div>  
+    </apex:outputPanel>
+    
+  </apex:form> 
+  
+</apex:page>

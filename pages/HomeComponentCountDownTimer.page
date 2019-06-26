@@ -1,0 +1,15 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false">
+    <apex:stylesheet value="{!URLFOR($Resource.CountDownTimerStyles, 'CountDownTimerStyles.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.MiscJS, 'CountDownTimer.js')}"/>     
+    <apex:outputpanel styleClass="countdowntimerstyle06" layout="block">  
+        <CENTER><FONT Color="white" size="4">QTB Coming</FONT></CENTER><br/>
+        <CENTER>
+        <FONT color="yellow" size="2"> <!--size 2 is the best fit for all three browser types-->
+            <SPAN id="days">0</SPAN>D&nbsp;
+            <SPAN id="hours">0</SPAN>H&nbsp;
+            <SPAN id="minutes">0</SPAN>M&nbsp;
+            <SPAN id="seconds">0</SPAN>S        
+        </FONT><br/>        
+        </CENTER>
+    </apex:outputpanel>
+</apex:page>

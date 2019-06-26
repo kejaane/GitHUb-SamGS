@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>1ST EQUICOR</fullName>
+        <default>false</default>
+        <label>1ST EQUICOR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>1ST HEALTH</fullName>
+        <default>false</default>
+        <label>1ST HEALTH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ADMINISTRATOR</fullName>
+        <default>false</default>
+        <label>ADMINISTRATOR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ADVANCE PCS</fullName>
+        <default>false</default>
+        <label>ADVANCE PCS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AETNA</fullName>
+        <default>false</default>
+        <label>AETNA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AETNA GLOBAL</fullName>
+        <default>false</default>
+        <label>AETNA GLOBAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AIG LIFE</fullName>
+        <default>false</default>
+        <label>AIG LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ALL AMERICA</fullName>
+        <default>false</default>
+        <label>ALL AMERICA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ALLIANZ</fullName>
+        <default>false</default>
+        <label>ALLIANZ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ALPHA DATA</fullName>
+        <default>false</default>
+        <label>ALPHA DATA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AMER BANKERS</fullName>
+        <default>false</default>
+        <label>AMER BANKERS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AMER CAPITAL</fullName>
+        <default>false</default>
+        <label>AMER CAPITAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AMERIHEALTH</fullName>
+        <default>false</default>
+        <label>AMERIHEALTH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AMER LIFE</fullName>
+        <default>false</default>
+        <label>AMER LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ANTHEM</fullName>
+        <default>false</default>
+        <label>ANTHEM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ANTHM BEN ADM</fullName>
+        <default>false</default>
+        <label>ANTHM BEN ADM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BALTO LIFE</fullName>
+        <default>false</default>
+        <label>BALTO LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BANKERS LIFE</fullName>
+        <default>false</default>
+        <label>BANKERS LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BCBSND</fullName>
+        <default>false</default>
+        <label>BCBSND</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BCBSNJ</fullName>
+        <default>false</default>
+        <label>BCBSNJ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BCBSRI</fullName>
+        <default>false</default>
+        <label>BCBSRI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BCBS TRIGON</fullName>
+        <default>false</default>
+        <label>BCBS TRIGON</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BCBS WEST PA</fullName>
+        <default>false</default>
+        <label>BCBS WEST PA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BC INDEPEN</fullName>
+        <default>false</default>
+        <label>BC INDEPEN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BC NC</fullName>
+        <default>false</default>
+        <label>BC NC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BC SC</fullName>
+        <default>false</default>
+        <label>BC SC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BEN PLAN SRV</fullName>
+        <default>false</default>
+        <label>BEN PLAN SRV</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BROK CONCEPT</fullName>
+        <default>false</default>
+        <label>BROK CONCEPT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CANADA LIFE</fullName>
+        <default>false</default>
+        <label>CANADA LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CAREFIRST</fullName>
+        <default>false</default>
+        <label>CAREFIRST</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CFS</fullName>
+        <default>false</default>
+        <label>CFS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CHOICE CARE</fullName>
+        <default>false</default>
+        <label>CHOICE CARE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CHP</fullName>
+        <default>false</default>
+        <label>CHP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CIGNA</fullName>
+        <default>false</default>
+        <label>CIGNA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CIGNA DENTAL</fullName>
+        <default>false</default>
+        <label>CIGNA DENTAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CMP</fullName>
+        <default>false</default>
+        <label>CMP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CMPNION LIFE</fullName>
+        <default>false</default>
+        <label>CMPNION LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CMRCIAL LIFE</fullName>
+        <default>false</default>
+        <label>CMRCIAL LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COLONIAL</fullName>
+        <default>false</default>
+        <label>COLONIAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COMBINED INS</fullName>
+        <default>false</default>
+        <label>COMBINED INS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONFED LIFE</fullName>
+        <default>false</default>
+        <label>CONFED LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONN GENERAL</fullName>
+        <default>false</default>
+        <label>CONN GENERAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONSUMR DNTL</fullName>
+        <default>false</default>
+        <label>CONSUMR DNTL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONTINENTAL</fullName>
+        <default>false</default>
+        <label>CONTINENTAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CORE SOURCE</fullName>
+        <default>false</default>
+        <label>CORE SOURCE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CORP BEN</fullName>
+        <default>false</default>
+        <label>CORP BEN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COVENTRY</fullName>
+        <default>false</default>
+        <label>COVENTRY</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CUNA MUTUAL</fullName>
+        <default>false</default>
+        <label>CUNA MUTUAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DELTA DENTAL</fullName>
+        <default>false</default>
+        <label>DELTA DENTAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DENTAL INSUR</fullName>
+        <default>false</default>
+        <label>DENTAL INSUR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DESTINY</fullName>
+        <default>false</default>
+        <label>DESTINY</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DHP</fullName>
+        <default>false</default>
+        <label>DHP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DNTL BEN PRV</fullName>
+        <default>false</default>
+        <label>DNTL BEN PRV</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EASTERN RISK</fullName>
+        <default>false</default>
+        <label>EASTERN RISK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ECKARD</fullName>
+        <default>false</default>
+        <label>ECKARD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMP BEN</fullName>
+        <default>false</default>
+        <label>EMP BEN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMP REINSUR</fullName>
+        <default>false</default>
+        <label>EMP REINSUR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXCESS HLTH</fullName>
+        <default>false</default>
+        <label>EXCESS HLTH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXPRESS SCRIPTS</fullName>
+        <default>false</default>
+        <label>EXPRESS SCRIPTS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FIDELITY INS</fullName>
+        <default>false</default>
+        <label>FIDELITY INS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FIDELITY SEC</fullName>
+        <default>false</default>
+        <label>FIDELITY SEC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FORTIS BENEF</fullName>
+        <default>false</default>
+        <label>FORTIS BENEF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FT DEARBORN</fullName>
+        <default>false</default>
+        <label>FT DEARBORN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FUTURE HLTH</fullName>
+        <default>false</default>
+        <label>FUTURE HLTH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GARDIAN DNTL</fullName>
+        <default>false</default>
+        <label>GARDIAN DNTL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GEN AMER LIF</fullName>
+        <default>false</default>
+        <label>GEN AMER LIF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GENCARE</fullName>
+        <default>false</default>
+        <label>GENCARE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GERBER LIFE</fullName>
+        <default>false</default>
+        <label>GERBER LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GETTYSBRG</fullName>
+        <default>false</default>
+        <label>GETTYSBRG</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GREENSPRING</fullName>
+        <default>false</default>
+        <label>GREENSPRING</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GRP AMERICA</fullName>
+        <default>false</default>
+        <label>GRP AMERICA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GRP BENEFIT</fullName>
+        <default>false</default>
+        <label>GRP BENEFIT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GRP HEALTH ADM</fullName>
+        <default>false</default>
+        <label>GRP HEALTH ADM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GRP LTD CNA</fullName>
+        <default>false</default>
+        <label>GRP LTD CNA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GRT WST LIFE</fullName>
+        <default>false</default>
+        <label>GRT WST LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GTE</fullName>
+        <default>false</default>
+        <label>GTE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GUARDIAN</fullName>
+        <default>false</default>
+        <label>GUARDIAN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HARLEYSVILLE</fullName>
+        <default>false</default>
+        <label>HARLEYSVILLE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HARTFORD</fullName>
+        <default>false</default>
+        <label>HARTFORD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HMO</fullName>
+        <default>false</default>
+        <label>HMO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HOME INSUR</fullName>
+        <default>false</default>
+        <label>HOME INSUR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HOME LIFE</fullName>
+        <default>false</default>
+        <label>HOME LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HUMANA</fullName>
+        <default>false</default>
+        <label>HUMANA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IAA</fullName>
+        <default>false</default>
+        <label>IAA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INDSCHLINSUR</fullName>
+        <default>false</default>
+        <label>INDSCHLINSUR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INSURCONAMER</fullName>
+        <default>false</default>
+        <label>INSURCONAMER</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INTEGRA</fullName>
+        <default>false</default>
+        <label>INTEGRA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JEFFPILOTINS</fullName>
+        <default>false</default>
+        <label>JEFFPILOTINS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JHMLIC</fullName>
+        <default>false</default>
+        <label>JHMLIC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JOHN ALDEN</fullName>
+        <default>false</default>
+        <label>JOHN ALDEN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JOHN HANCOCK</fullName>
+        <default>false</default>
+        <label>JOHN HANCOCK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KAISER PERM</fullName>
+        <default>false</default>
+        <label>KAISER PERM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KANAWHA</fullName>
+        <default>false</default>
+        <label>KANAWHA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KLAIS&amp;CO</fullName>
+        <default>false</default>
+        <label>KLAIS&amp;CO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LAFAYETTELIF</fullName>
+        <default>false</default>
+        <label>LAFAYETTELIF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LAMA LIFE</fullName>
+        <default>false</default>
+        <label>LAMA LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LIBERTY LIFE</fullName>
+        <default>false</default>
+        <label>LIBERTY LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LIFE AD &amp; D</fullName>
+        <default>false</default>
+        <label>LIFE AD &amp; D</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LIFEINSURCO</fullName>
+        <default>false</default>
+        <label>LIFEINSURCO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LOOMIS</fullName>
+        <default>false</default>
+        <label>LOOMIS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LUMENOUS</fullName>
+        <default>false</default>
+        <label>LUMENOUS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MAMSI INSUR</fullName>
+        <default>false</default>
+        <label>MAMSI INSUR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MANU LIFE</fullName>
+        <default>false</default>
+        <label>MANU LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MASS MUTUAL</fullName>
+        <default>false</default>
+        <label>MASS MUTUAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MD AUTO SERV</fullName>
+        <default>false</default>
+        <label>MD AUTO SERV</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MD IPA</fullName>
+        <default>false</default>
+        <label>MD IPA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MED CLMS MGT</fullName>
+        <default>false</default>
+        <label>MED CLMS MGT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MEDCO</fullName>
+        <default>false</default>
+        <label>MEDCO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MEDCOST BEN</fullName>
+        <default>false</default>
+        <label>MEDCOST BEN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MED INSUR CO</fullName>
+        <default>false</default>
+        <label>MED INSUR CO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MED LIFE</fullName>
+        <default>false</default>
+        <label>MED LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MED STOP</fullName>
+        <default>false</default>
+        <label>MED STOP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MET LIFE</fullName>
+        <default>false</default>
+        <label>MET LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MID ATL VISN</fullName>
+        <default>false</default>
+        <label>MID ATL VISN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MLH MAMS</fullName>
+        <default>false</default>
+        <label>MLH MAMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MW POMFREY</fullName>
+        <default>false</default>
+        <label>MW POMFREY</label>
+    </standardValue>
+    <standardValue>
+        <fullName>N AMER PLAN</fullName>
+        <default>false</default>
+        <label>N AMER PLAN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NATIONWIDE</fullName>
+        <default>false</default>
+        <label>NATIONWIDE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NATL BEN ADM</fullName>
+        <default>false</default>
+        <label>NATL BEN ADM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NEWENGLAND</fullName>
+        <default>false</default>
+        <label>NEWENGLAND</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NO AMER LIFE</fullName>
+        <default>false</default>
+        <label>NO AMER LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NO PREVIOUS CARRIER</fullName>
+        <default>false</default>
+        <label>NO PREVIOUS CARRIER</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NORTHWESTERN</fullName>
+        <default>false</default>
+        <label>NORTHWESTERN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NY LIFE</fullName>
+        <default>false</default>
+        <label>NY LIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OPTIMUM</fullName>
+        <default>false</default>
+        <label>OPTIMUM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PANAMERICAN</fullName>
+        <default>false</default>
+        <label>PANAMERICAN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PANAMLIFE</fullName>
+        <default>false</default>
+        <label>PANAMLIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PAULREVERE</fullName>
+        <default>false</default>
+        <label>PAULREVERE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PENSACOLA</fullName>
+        <default>false</default>
+        <label>PENSACOLA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PERFORMAX</fullName>
+        <default>false</default>
+        <label>PERFORMAX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PHARMACARE</fullName>
+        <default>false</default>
+        <label>PHARMACARE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PHILAMERLIFE</fullName>
+        <default>false</default>
+        <label>PHILAMERLIFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PHN HMO</fullName>
+        <default>false</default>
+        <label>PHN HMO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PHOENIX</fullName>
+        <default>false</default>
+        <label>PHOENIX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PIONEER MGT</fullName>
+        <default>false</default>
+        <label>PIONEER MGT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PLANNED ADM</fullName>
+        <default>false</default>
+        <label>PLANNED ADM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PREF HLTH</fullName>
+        <default>false</default>
+        <label>PREF HLTH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRINCIPAL</fullName>
+        <default>false</default>
+        <label>PRINCIPAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PROVIDENT</fullName>
+        <default>false</default>
+        <label>PROVIDENT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRUDENTIAL</fullName>
+        <default>false</default>
+        <label>PRUDENTIAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RELIANCE</fullName>
+        <default>false</default>
+        <label>RELIANCE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RXSOL</fullName>
+        <default>false</default>
+        <label>RXSOL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>S CENTRAL</fullName>
+        <default>false</default>
+        <label>S CENTRAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SEABOARD</fullName>
+        <default>false</default>
+        <label>SEABOARD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SECURITY MUT</fullName>
+        <default>false</default>
+        <label>SECURITY MUT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SELF FUNDED</fullName>
+        <default>false</default>
+        <label>SELF FUNDED</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SHENANDOAH</fullName>
+        <default>false</default>
+        <label>SHENANDOAH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SHPPARDPRATT</fullName>
+        <default>false</default>
+        <label>SHPPARDPRATT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STATE MUTUAL</fullName>
+        <default>false</default>
+        <label>STATE MUTUAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STDINSURCO</fullName>
+        <default>false</default>
+        <label>STDINSURCO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SUNLIFE CAN</fullName>
+        <default>false</default>
+        <label>SUNLIFE CAN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TEACHERS INS</fullName>
+        <default>false</default>
+        <label>TEACHERS INS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TERMLIFEAD&amp;D</fullName>
+        <default>false</default>
+        <label>TERMLIFEAD&amp;D</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TIAA CREF</fullName>
+        <default>false</default>
+        <label>TIAA CREF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TRANSGENERAL</fullName>
+        <default>false</default>
+        <label>TRANSGENERAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TRANS OCCID</fullName>
+        <default>false</default>
+        <label>TRANS OCCID</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TRAVELERS</fullName>
+        <default>false</default>
+        <label>TRAVELERS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TUCKER ADM</fullName>
+        <default>false</default>
+        <label>TUCKER ADM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UNIONCENTRAL</fullName>
+        <default>false</default>
+        <label>UNIONCENTRAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UNITD WI LIF</fullName>
+        <default>false</default>
+        <label>UNITD WI LIF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UNITED INS</fullName>
+        <default>false</default>
+        <label>UNITED INS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UNITEDOMAHA</fullName>
+        <default>false</default>
+        <label>UNITEDOMAHA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UNKNOWN</fullName>
+        <default>true</default>
+        <label>UNKNOWN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UNUM</fullName>
+        <default>false</default>
+        <label>UNUM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>USACORPCARE</fullName>
+        <default>false</default>
+        <label>USACORPCARE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>US BENEFITS</fullName>
+        <default>false</default>
+        <label>US BENEFITS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>US LIFE NY</fullName>
+        <default>false</default>
+        <label>US LIFE NY</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VALUE HLTH</fullName>
+        <default>false</default>
+        <label>VALUE HLTH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VariousHMO</fullName>
+        <default>false</default>
+        <label>VariousHMO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VISION SERV</fullName>
+        <default>false</default>
+        <label>VISION SERV</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WA NATL INS</fullName>
+        <default>false</default>
+        <label>WA NATL INS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WOHLERS&amp;CO</fullName>
+        <default>false</default>
+        <label>WOHLERS&amp;CO</label>
+    </standardValue>
+</StandardValueSet>

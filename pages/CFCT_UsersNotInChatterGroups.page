@@ -1,0 +1,80 @@
+<!--=========================================================================================
+//      Date: 12/27/2012
+// Developer: Tom Barrett (TPB)
+//   Purpose: This class controller is used to produce a list of FULL LICENSED users who are 
+//            not in the supplied Chatter Group(s).
+//            The CFCT_UsersNotInChatterGroups visualforce page references this controller
+//     
+//            There are 3 public methods that 3 buttons on the vf page reference
+//            1. Emails to the person executing the code the list shown on the vf page.
+//               If it is detected that none of the supplied Chatter Groups exist then a
+//               message is displayed.
+//               if it is detected that one or more of the supplied Chatter Groups entered 
+//               do not exist as an actual Chatter Group then the page will display the issue
+//               and the email will display the list of missing Chatter Groups at the footer
+//               of the HTML table the HTML table.
+//            2. Excludes selected userfrom the QA process by setting the 
+//               Exclude_From_Chatter_QA__c checkbox field on the User object.
+//            3. Add User to Group adds the selected users to the associated Chatter Group        
+//=========================================================================================
+//                                 Update History
+// Date          Developer      Description
+//=========================================================================================
+// 05/09/2016    TPB            Added the UserLicense column and moved the order of the 
+//                              command buttons.
+//08/14/2018 Debkanti	|T01|	Added SLDS to make compatable with classic and lightning. 
+//=========================================================================================
+-->
+<apex:page Controller="CFCT_UsersNotInChatterGroups_Controller" action="{!startProcess}" lightningStylesheets="true">
+    <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <style>
+    {! IF(! IsClassic,'.slds-scope *, .slds-scope *:before, .slds-scope *:after {color: black;}','')}
+    {! IF(! IsClassic,'body .pbHeader .pbTitle:first-child, body .pbHeader .pbButton:first-child, .slds-vf-scope .pbHeader .pbTitle:first-child, .slds-vf-scope .pbHeader .pbButton:first-child {width: 37% !important;}','')}
+    </style>
+     <!-- T01 -- End -->
+    <style>
+        .headerRow.ColumnHeaders {
+            background-color: #4682B4 !important;
+            background-image: none !important;
+            color: #CC0000 !important
+            font-size:100% !important        
+        }
+        .odd {
+            background-color: #F8F8FF;
+        }
+        .even {
+            background-color: #F0F8FF;
+        }
+    </style>
+
+    <apex:pagemessages escape="false"/>
+    <apex:form id="UsersMissingInChatterGroups">
+        <apex:pageblock title="Users Missing From Chatter Groups">
+            <apex:pageblockButtons >     
+                <apex:commandbutton action="{!AddUserToGroup}" value="Add User To Group" title="Adds the associated user to the selected group"/>          
+                <apex:commandButton action="{!ExcludeUserFromProcess}" value="Exclude User" title="Exclude selected user from this list in the future"/>                
+                <apex:commandButton action="{!EmailList}" value="Email Results" title="Email the list to you"/>
+            </apex:pageblockButtons>
+            <apex:pageblocktable value="{!UserChatterGroupList}" var="item" rowClasses="even,odd">
+                <apex:column headervalue="Select Record" headerClass="ColumnHeaders" width="80">
+                    <apex:inputcheckbox value="{!item.recordSelect}"/>
+                </apex:column>
+                <apex:column headervalue="Chatter Group" headerClass="ColumnHeaders">
+                    <apex:outputLink value="/{!item.GroupId}">{!item.ChatterGroupName}</apex:outputLink>
+                    <apex:facet name="footer">{!ChatterGroupsMissingMessage}
+                    </apex:facet>
+                </apex:column>
+                <!-- <apex:column value="{!item.UserName}" headervalue="User Name" headerClass="ColumnHeaders"/> -->
+                <apex:column headervalue="User Name" headerClass="ColumnHeaders">     
+                <apex:outputlink value="/{!item.Userid}?noredirect=1">{!item.UserName}</apex:outputLink>
+                </apex:column>
+                 
+                <apex:column headervalue="License Type" headerClass="ColumnHeaders">   
+                    {!item.LicenseType}
+                </apex:column>               
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

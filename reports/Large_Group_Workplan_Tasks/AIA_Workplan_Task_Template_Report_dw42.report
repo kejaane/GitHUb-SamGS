@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Workplan_Task_Template__c$Stage__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task_Template__c$Name</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task_Template__c$Description__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Workplan_Task_Template__c$Expected_SLA__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task_Template__c$Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Workplan_Task_Template__c$Acc_Team_Role_for_New_Business__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>BeneFact Coder,Benefit Tester,NASCO Benefit Coder,MAIN Tech,MAST Tech,Stop Table Tech,BeneFact Portal Tech</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Workplan_Task_Template__c$Acc_Team_Role_for_New_Business__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Workplan_Task_Template__c$Acc_Team_Role_for_Renewal_Business__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cumberland Ops Tasks</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AIA_Workplan_Task_Template__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Workplan_Task_Template__c$Description__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Workplan_Task_Template__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

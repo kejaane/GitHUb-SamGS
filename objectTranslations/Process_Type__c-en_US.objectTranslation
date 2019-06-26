@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Sub Process Must Be Completed --></label>
+        <name>All_Sub_Process_Must_Be_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Sub-Processes --></label>
+        <name>Number_of_Sub_Processes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Condition --></label>
+        <name>Process_Condition__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-Cycle</masterLabel>
+            <translation><!-- Off-Cycle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Termination</masterLabel>
+            <translation><!-- Termination --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Process Template Stage --></label>
+        <name>Process_Name_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>ARC Approval</masterLabel>
+            <translation><!-- ARC Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account &amp; Member Tools</masterLabel>
+            <translation><!-- Account &amp; Member Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Coding, Loading, &amp; Testing</masterLabel>
+            <translation><!-- Benefit Coding, Loading, &amp; Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design &amp; Creation of NAEGS</masterLabel>
+            <translation><!-- Benefit Design &amp; Creation of NAEGS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request</masterLabel>
+            <translation><!-- Benefit Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing (Monthly) Invoices</masterLabel>
+            <translation><!-- Billing (Monthly) Invoices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dead</masterLabel>
+            <translation><!-- Dead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment &amp; ID Card Generation</masterLabel>
+            <translation><!-- Enrollment &amp; ID Card Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure &amp; Admin Setup</masterLabel>
+            <translation><!-- Group Structure &amp; Admin Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Enrollment, Materials, &amp; Support</masterLabel>
+            <translation><!-- Open Enrollment, Materials, &amp; Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Sales Document Generation</masterLabel>
+            <translation><!-- Post Sales Document Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal</masterLabel>
+            <translation><!-- Proposal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Delivered</masterLabel>
+            <translation><!-- Quote Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP</masterLabel>
+            <translation><!-- RFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriting</masterLabel>
+            <translation><!-- Underwriting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Process Name --></label>
+        <name>Process_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>ARC Approval</masterLabel>
+            <translation><!-- ARC Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account &amp; Member Tools</masterLabel>
+            <translation><!-- Account &amp; Member Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Coding, Loading, &amp; Testing</masterLabel>
+            <translation><!-- Benefit Coding, Loading, &amp; Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design &amp; Creation of NAEGS</masterLabel>
+            <translation><!-- Benefit Design &amp; Creation of NAEGS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request</masterLabel>
+            <translation><!-- Benefit Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing (Monthly) Invoices</masterLabel>
+            <translation><!-- Billing (Monthly) Invoices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dead</masterLabel>
+            <translation><!-- Dead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment &amp; ID Card Generation</masterLabel>
+            <translation><!-- Enrollment &amp; ID Card Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure &amp; Admin Setup</masterLabel>
+            <translation><!-- Group Structure &amp; Admin Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Enrollment, Materials, &amp; Support</masterLabel>
+            <translation><!-- Open Enrollment, Materials, &amp; Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Sales Document Generation</masterLabel>
+            <translation><!-- Post Sales Document Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal</masterLabel>
+            <translation><!-- Proposal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Delivered</masterLabel>
+            <translation><!-- Quote Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP</masterLabel>
+            <translation><!-- RFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriting</masterLabel>
+            <translation><!-- Underwriting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Progress</masterLabel>
+            <translation><!-- In-Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub Process Type Count --></label>
+        <name>Sub_Process_Type_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used For --></label>
+        <name>Used_For__c</name>
+        <picklistValues>
+            <masterLabel>Post-Sales</masterLabel>
+            <translation><!-- Post-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sales</masterLabel>
+            <translation><!-- Pre-Sales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Process Template</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Process Templates</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Process Type Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,904 @@
+<!--
+*=================================================================================================================
+* Date         : 01/26/2018
+* Developer    : Goutham Rapolu
+* Purpose      : Component for New Benefit Request Form page with Both Layout.
+*				 This component is embeded inside AIA_Create_New_BRF.app which is rendered inside
+*				 AIA_BRF_RecordTypeRedirect.vfp
+*=================================================================================================================
+*                                 Update History
+*                                 ++++++++++++++
+*   Date        Developer       Tag   Description
+*============+================+=====+=============================================================================
+* 01/26/2018 | Goutham Rapolu |     | Initial Version                                         
+* 03/21/2018 | Gayathri 	  | T01 | Updated Output url tag for cancel button and Added methods for navigation to BRF 
+									  detail page and cancel button.  
+* 10/05/2018 | Arshia		  | T02 | Change for MHP US771
+*===========+=================+=====+=============================================================================
+*
+-->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:LightningQuickAction,force:hasRecordId" 
+                access="global" controller="AIA_Create_New_BRF" >
+    
+    
+    <!-- Set Acc id, Acc name, Opp Id, Opp name, PRF id, PRF name -->
+    <aura:attribute name="AccountId"  type="String" access="global"  />
+    <aura:attribute name="AccountName"  type="String" access="global" />
+    <aura:attribute name="ParentAccID"  type="String" access="global"  />
+    <aura:attribute name="OpportunityId"  type="String" access="global"  />
+    <aura:attribute name="OpportunityName"  type="String" access="global" />
+    <aura:attribute name="PRFId"  type="String" access="global"  />
+    <aura:attribute name="PRFName"  type="String" access="global" />
+    <aura:attribute name="BDId"  type="String" access="global"  />
+    <aura:attribute name="BCName"  type="String" access="global" />
+    <!-- Calling Controller Init method -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- Attributes used to Check if user has access to edit the field -->
+    <aura:attribute name="BenEffDateDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFRequestTypeDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFBenPeriodDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFCtrlPlanDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFStatusDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFJurDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFSSSizeDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFContractPeriodDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="NoOfContractPeriodDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFEGWPDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFFlexLinkDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="ReligExemDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFRegAccDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="MHPTestResDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFFundingArrDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFStopLossDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="NPStopLossDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFSpecificStopLossOptionDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFAggregateStopLossDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFStopLossContractPeriodDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFAtlfundingDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFCreditDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="CreditRecommDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFBrokerCCDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BrokerConAmountDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="ContractCountDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="EmpConAmountDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="AltNetReqDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="CommToUWDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFIDProtectDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFEnrollTypeDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFEnrollOptionDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="OtherEnrollOptionDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="EnrollVendorDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFARCStatusDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="ARCCommDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="EscSRMgmgtDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="SrMgmtCommDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFSalesmgmtDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="SalesMgmtStausCommDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="ValidCedeUploadedDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="RequestCedeUploadedDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFZipCodeValidDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFAMDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFAEDisabled"  type="Boolean" default="false"  />
+    <aura:attribute name="BRFSalesSegmentDisabled"  type="Boolean" default="false"  />
+    <!-- Return URL -->
+    <aura:attribute name="returnURL" type="String" access="public" default=""/>
+    <!-- Initiate new BRF -->
+    <aura:attribute name="newBRF" type="Benfit_Request_Form__c"
+                    default="{ 'sobjectType': 'Benfit_Request_Form__c',
+                             'Broker_Consultant_Compensation__c':'Commission (%)',
+                             'Contract_Period__c':'Standard - 12 Months',
+                             'Benefit_Period__c' : 'Contract',
+                             'FlexLink_Picklist__c':'No',
+                             'EGWP_Picklist__c':'No',
+                             'Grandfathered_Status__c':'Non-Grandfathered',
+                             'Grandfathered_PPACA_Status__c':'Yes',
+                             'Broker_Consultant_Amount__c':'3.5',
+                             'Enrollment_Type__c':'Parallel',
+                             'Status__c': 'New', }"/>
+    
+    <aura:attribute name="objInfo" type="Benfit_Request_Form__c" default="{sobjectType : 'Benfit_Request_Form__c'}" />
+    
+    
+    <!-- / PAGE HEADER -->
+    <div class="slds-box slds-theme_shade slds-theme_alert-texture" style="width:330px" >
+      <p  style="font-size:120%" class="slds-text-heading--label"><b>New Benefit Request Form</b><br/><p style="font-size:80%">Record Type: <b style="font-size:120%">Both</b></p></p>  
+	</div>
+    
+    <div class="slds-col slds-col--padded slds-p-top--large">
+    <!-- Error Handling -->
+    {!v.body}
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme--default ">
+            <!-- CREATE NEW Account FORM -->
+            
+            
+            <form class="slds-form--stacked">
+                <div class="slds">
+                    <h3 class="slds-section-title--divider">Account Information</h3>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2">
+                            <br/>
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" for="select-01">  
+                                        Account
+                                    </label>
+                                    <br/>
+                                    <ui:outputURL label="{!v.AccountName}" target="_top" value="{!v.AccountId}" />
+                                </div>
+                            </div>
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                  <c:Lookup objectType="Account" 
+                                              label="Sub Group Account"
+                                              selectedRecordId="{!v.newBRF.Sub_Group_Account__c }"
+                                              readOnly="false"
+                                              showFiveRecent="false"
+                                              FieldAPI="Sub_Group_Account__c"
+                                              ParentAccId="{!v.ParentAccID}"
+                                              />
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                    <br/>
+                    <h3 class="slds-section-title--divider">Contact Information</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                <c:Lookup objectType="User" 
+                                              label="Account Executive"
+                                              selectedRecordId="{!v.newBRF.Account_Executive_Account_Team__c }"
+                                              readOnly="{!v.BRFAEDisabled}"
+                                              showFiveRecent="false"
+                                              />
+                                 </div>
+                            </div>    
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                   <c:Lookup objectType="User" 
+                                              label="Account Manager"
+                                              selectedRecordId="{!v.newBRF.Account_Manager_Account_Team__c }"
+                                              readOnly="{!v.BRFAMDisabled}"
+                                              showFiveRecent="false"
+                                              />                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                  <label class="slds-form-element__label" for="select-01">  
+                                        Broker/Consultant Name
+                                    </label>
+                                    <br/>
+                                    <ui:outputtext value="{!v.BCName}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>     <br/>                   
+                    <h3 class="slds-section-title--divider">Benefit Request Form Detail</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                  <label class="slds-form-element__label" for="select-01">  
+                                        Proposal Request Form
+                                    </label>
+                                    <br/>
+                                    <ui:outputURL label="{!v.PRFName}" target="_top" value="{!v.PRFId}" />
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                  <label class="slds-form-element__label" for="select-01">  
+                                        Opportunity
+                                    </label>
+                                    <br/>
+                                    <ui:outputURL label="{!v.OpportunityName}" target="_top" value="{!v.OpportunityId}" />
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>   
+                                        Request Type
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFRequestType" class="slds-select"
+                                                        value="{!v.newBRF.Request_Type__c}"
+                                                        required="True" disabled="{!v.BRFRequestTypeDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" for="select-01">
+                                        <span class="required" style="color:red">*</span>   
+                                        Benefit Effective Date
+                                    </label>
+                                    <ui:inputDate aura:id="BenEffDate" 
+                                                  class="slds-input dateField"
+                                                  format="MM/dd/yyyy"
+                                                  labelClass="slds-form-element__label"
+                                                  value="{!v.newBRF.Benefit_Effective_Date__c}"
+                                                  Required="True"
+                                                  displayDatePicker="true"
+                                                  disabled="{!v.BenEffDateDisabled}"
+                                                  requiredIndicatorClass="slds-required">
+                                    </ui:inputDate>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>
+                                        Benefit Period
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFBenPeriod" class="slds-select"
+                                                        value="{!v.newBRF.Benefit_Period__c}" disabled="{!v.BRFBenPeriodDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>
+                                        Control Plan
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFCtrlPlan" class="slds-select"
+                                                        value="{!v.newBRF.Control_Plan__c}" disabled="{!v.BRFCtrlPlanDisabled}"
+                                                       	/>
+                                    </div>
+                                </div>
+                            </div>             
+                         </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        Benefit Request Form Status
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFStatus" class="slds-select"  
+                                                        value="{!v.newBRF.Status__c}" disabled="{!v.BRFStatusDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        Jurisdiction
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFJur" class="slds-select"
+                                                        value="{!v.newBRF.Jurisdiction__c}" disabled="{!v.BRFJurDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>
+                                        Sales Segment Size
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFSSSize" class="slds-select"
+                                                        value="{!v.newBRF.Sales_Segment_Size__c}" disabled="{!v.BRFSSSizeDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           title="If Non-Standard is selected, please fill in the Number of Months for Contract Period field.">
+                                        <span class="required" style="color:red">*</span>
+                                        Contract Period
+                                        <lightning:icon iconName="utility:help" variant="help" size="xx-small"/>
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFContractPeriod" class="slds-select"
+                                                        value="{!v.newBRF.Contract_Period__c}" disabled="{!v.BRFContractPeriodDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Number of Months for Contract Period
+                                    </label>
+                                    <ui:inputtext class="slds-input" disabled="{!v.NoOfContractPeriodDisabled}"
+                                                  value="{!v.newBRF.Number_of_Months_for_Contract_Period__c}"/> 
+                                </div>
+                            </div> 
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>
+                                        EGWP
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFEGWP" class="slds-select"
+                                                        value="{!v.newBRF.EGWP_Picklist__c}" disabled="{!v.BRFEGWPDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>
+                                        FlexLink
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFFlexLink" class="slds-select"
+                                                        value="{!v.newBRF.FlexLink_Picklist__c}" disabled="{!v.BRFFlexLinkDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>                   
+                    <h3 class="slds-section-title--divider">ACA and Other Mandates</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <c:DEPENDENT_PICKLIST objectType="Benfit_Request_Form__c" 
+                                                  parentPicklistApiname="Grandfathered_Status__c"
+                                                  dependentPicklistApiname="Grandfathered_PPACA_Status__c"
+                                                  parentPicklistvalue="{!v.newBRF.Grandfathered_Status__c}"
+                                                  dependentPicklistvalue="{!v.newBRF.Grandfathered_PPACA_Status__c}"
+                                                  />
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-checkbox slds-form-element__label" for="requiredCheckbox"  >
+                                        Religious Exemption 
+                                    </label>
+                                    <label class="slds-checkbox">
+                                        <ui:inputcheckbox disabled="{!v.ReligExemDisabled}" value="{!v.newBRF.Exemption__c}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div> 
+                            
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        Religious Accommodation
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFRegAcc" class="slds-select"
+                                                        value="{!v.newBRF.Accommodation__c}" disabled="{!v.BRFRegAccDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- T02 -->
+                    <h3 class="slds-section-title--divider">Mental Health Parity</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:900px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        MHP Acknowledgement
+                                    </label>
+                                    <br/>                    
+                						For risk business, the medical benefits must be tested by CareFirst for Mental Health Parity compliance and may require changes after final sale.                         
+            						<br/>
+                                </div>
+                                <br/>
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+   <!--<label class="slds-checkbox slds-form-element__label" for="requiredCheckbox"  >
+                                        Medical Plan(s) will be MHP Tested
+                                    </label>-->
+                                    <label class="slds-checkbox slds-form-element__label"  for="requiredCheckbox" 
+                                           title="For Risk business, I acknowledge that I will submit the sold medical benefits to the Actuarial team for Mental Health Parity testing.">
+                                        Medical Plan(s) will be MHP Tested
+                                        <lightning:icon iconName="utility:help" variant="help" size="xx-small"/>
+                                    </label>
+                                     <label class="slds-checkbox">
+                                         <!-- <ui:inputtext class="slds-input" value="{!v.newBRF.zzzMHP_Test_Result__c}" disabled="{!v.MHPTestResDisabled}"/>  -->
+                                        <ui:inputcheckbox disabled="{!v.MHPTestResDisabled}" value="{!v.newBRF.Submit_Medical_Plan_s_for_MHP_Testing__c}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+					<!-- T02 -->
+                    <br/>                   
+                    <h3 class="slds-section-title--divider">Underwriting Information</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        <span class="required" style="color:red">*</span>
+                                        Funding Arrangement
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFFundingArr" class="slds-select"
+                                                        value="{!v.newBRF.Funding_Arrangements__c}" disabled="{!v.BRFFundingArrDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        <span class="required" style="color:red">*</span>
+                                        Stop Loss
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFStopLoss" class="slds-select"
+                                                        value="{!v.newBRF.Stop_Loss__c}" disabled="{!v.BRFStopLossDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Non-Preferred Stop Loss Carrier
+                                    </label>
+                                    <ui:inputtext class="slds-input" disabled="{!v.NPStopLossDisabled}"
+                                                      value="{!v.newBRF.Non_Preferred_Stop_Loss_Carrier__c}"/> 
+                                </div>
+                            </div>   
+                            
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        Specific Stop Loss Options
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFSpecificStopLossOption" class="slds-select"
+                                                        value="{!v.newBRF.Specific_Stop_Loss_Options__c}" disabled="{!v.BRFSpecificStopLossOptionDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        Aggregate Stop Loss Options
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFAggregateStopLoss" class="slds-select" disabled="{!v.BRFAggregateStopLossDisabled}"
+                                                        value="{!v.newBRF.Aggregate_Stop_Loss_Options__c}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        Stop Loss Contract Period
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFStopLossContractPeriod" class="slds-select"
+                                                        value="{!v.newBRF.Stop_Loss_Contract_Period__c}" disabled="{!v.BRFStopLossContractPeriodDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        Claims Funding
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFAtlfunding" class="slds-select"
+                                                        value="{!v.newBRF.Alternate_Funding__c}" disabled="{!v.BRFAtlfundingDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        Requested Credits
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFCredit" class="slds-select"
+                                                        value="{!v.newBRF.Credits__c}" disabled="{!v.BRFCreditDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Credit Recommendation
+                                    </label>
+                                    <ui:inputtext class="slds-input" disabled="{!v.CreditRecommDisabled}"
+                                                      value="{!v.newBRF.Credit_Recommendation__c}"/> 
+                                </div>
+                            </div>                             
+                        </div>
+                        
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        <span class="required" style="color:red">*</span>
+                                        Broker/Consultant Compensation
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFBrokerCC" class="slds-select" disabled="{!v.BRFBrokerCCDisabled}"
+                                                        value="{!v.newBRF.Broker_Consultant_Compensation__c}" 
+                                                        />
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        <span class="required" style="color:red">*</span>
+                                        Broker/Consultant Amount
+                                    </label>
+                                    <lightning:input type="decimal" label="" name="" disabled="{!v.BrokerConAmountDisabled}"
+                                                     value="{!v.newBRF.Broker_Consultant_Amount__c}"/>
+                               </div>
+                            </div>  
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        <span class="required" style="color:red">*</span>
+                                        Contract Count
+                                    </label>
+                                    <lightning:input type="number" label="" name="" disabled="{!v.ContractCountDisabled}"
+                                                     value="{!v.newBRF.Contract_Count__c}"/>
+                                   </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Employer Contribution Amount
+                                    </label>
+                                    <lightning:input type="number" label="" name="" disabled="{!v.EmpConAmountDisabled}"
+                                                     value="{!v.newBRF.Employer_Contribution_Amount__c}"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-checkbox slds-form-element__label" for="requiredCheckbox"  >
+                                        Alternate Networks Requested
+                                    </label>
+                                    <label class="slds-checkbox">
+                                        <ui:inputcheckbox disabled="{!v.AltNetReqDisabled}" value="{!v.newBRF.Alternate_Networks_Requested__c}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-checkbox slds-form-element__label" for="requiredCheckbox"  >
+                                        Submitted to Underwriting
+                                    </label>
+                                    <label class="slds-checkbox">
+                                        <ui:inputcheckbox disabled="True" value="{!v.newBRF.Submit_to_Underwriting__c}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Comments for Underwriting
+                                    </label>
+                                    <lightning:input type="text" label="" name="" disabled="{!v.CommToUWDisabled}"
+                                                     value="{!v.newBRF.Underwriting_Comments__c}"/> 
+                                </div>
+                            </div>
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>
+                                        Identity Protection
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect disabled="{!v.BRFIDProtectDisabled}"
+                                                        aura:id="BRFIDProtect" class="slds-select" 
+                                                        value="{!v.newBRF.Identity_Protection__c}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>                   
+                    <h3 class="slds-section-title--divider">Enrollment Information</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01">
+                                        <span class="required" style="color:red">*</span>
+                                        Enrollment Type
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFEnrollType" class="slds-select"  
+                                                        value="{!v.newBRF.Enrollment_Type__c}" disabled="{!v.BRFEnrollTypeDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>                    
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" 
+                                           style="width:300px; margin-left:25px;" 
+                                           for="select-01"
+                                           title="If Other is selected, please fill in the details for Other Enrollment Option and Enrollment Vendor.">
+                                        Enrollment Option
+                                        <lightning:icon iconName="utility:help" variant="help" size="xx-small"/>
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFEnrollOption" class="slds-select"
+                                                        value="{!v.newBRF.Enrollment_Option__c}" disabled="{!v.BRFEnrollOptionDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Other Enrollment Option
+                                    </label>
+                                    <lightning:input type="text" label="" name="" disabled="{!v.OtherEnrollOptionDisabled}"
+                                                     value="{!v.newBRF.Other_Enrollment_Option__c}"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Enrollment Vendor
+                                    </label>
+                                    <lightning:input type="text" label="" name="" disabled="{!v.EnrollVendorDisabled}"
+                                                     value="{!v.newBRF.Enrollment_Vendor__c}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>                   
+                    <h3 class="slds-section-title--divider">ARC</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01" >
+                                        ARC Approval Status
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFARCStatus" class="slds-select"  disabled="{!v.BRFARCStatusDisabled}"
+                                                        value="{!v.newBRF.ARC_Approval_Status__c}" />
+                                    </div>
+                                </div>
+                            </div>       
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <ui:inputDate aura:id="ARCInitialDate" 
+                                                  label="ARC Approval Initial Submission Date" 
+                                                  class="slds-input dateField"
+                                                  labelClass="slds-form-element__label"
+                                                  value="{!v.newBRF.ARC_Approval_Initial_Submission_Date__c}"
+                                                  disabled="true"
+                                                  displayDatePicker="true"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <ui:inputDate aura:id="ARCApprovalDate" 
+                                                  label="ARC Approval Date" 
+                                                  class="slds-input dateField"
+                                                  labelClass="slds-form-element__label"
+                                                  value="{!v.newBRF.ARC_Approval_Date__c}"
+                                                  disabled="true"
+                                                  displayDatePicker="true"/>
+                                </div>
+                            </div>
+							<div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:500px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        ARC Comments
+                                    </label>
+                                    <lightning:inputrichtext value="{!v.newBRF.ARC_Comments__c}" disabled="{!v.ARCCommDisabled}"/> 
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-checkbox slds-form-element__label" for="requiredCheckbox"  >
+                                        Escalated to Senior Management
+                                    </label>
+                                    <label class="slds-checkbox">
+                                        <ui:inputcheckbox disabled="{!v.EscSRMgmgtDisabled}" value="{!v.newBRF.Escalated_to_Senior_Management__c}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Senior Management Comments
+                                    </label>
+                                    <lightning:input type="text" label="" name="" disabled="{!v.SrMgmtCommDisabled}"
+                                                     value="{!v.newBRF.Senior_Management_Comments__c}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>                   
+                    <h3 class="slds-section-title--divider">Sales Management Approval</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        Sales Management Approval Status
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFSalesmgmt" class="slds-select"
+                                                        value="{!v.newBRF.Sales__c}" disabled="{!v.BRFSalesmgmtDisabled}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>                             
+                            <br/>  <div class="slds-form-element ">
+                            <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                <c:Lookup objectType="User" 
+                                          label="Sales Management Approval"
+                                          selectedRecordId="{!v.newBRF.Sales_Management_Approval__c }"
+                                          readOnly="{!v.BRFSalesSegmentDisabled}"
+                                          showFiveRecent="false"
+                                          />
+                            </div>
+                            </div>
+                        </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-form-element__label" >
+                                        Sales Management Status Comments
+                                    </label>
+                                    <lightning:input type="text" label="" name="" disabled="{!v.SalesMgmtStausCommDisabled}"
+                                                     value="{!v.newBRF.Comments__c}"/> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br/>                   
+                    <h3 class="slds-section-title--divider">Cede Information</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-checkbox slds-form-element__label" for="requiredCheckbox"  >
+                                        Valid Cede Document Uploaded
+                                    </label>
+                                    <label class="slds-checkbox">
+                                        <ui:inputcheckbox disabled="{!v.ValidCedeUploadedDisabled}" value="{!v.newBRF.Valid_Cede_Document_Uploaded__c}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <label class="slds-checkbox slds-form-element__label" for="requiredCheckbox"  >
+                                        Request Cede Document
+                                    </label>
+                                    <label class="slds-checkbox">
+                                        <ui:inputcheckbox disabled="{!v.RequestCedeUploadedDisabled}" value="{!v.newBRF.Request_Cede_Document__c}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    
+                    <br/>                   
+                    <h3 class="slds-section-title--divider">Zip Code Verification</h3>
+                    <br/>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-form-element "  style="margin-right:-100px;">
+                                <div class="slds-form-element__control" style="margin-right:-100px;">
+                                    <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                                           >
+                                        Zip Code Validation
+                                    </label>
+                                    <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                                        <ui:inputSelect aura:id="BRFZipCodeValid" class="slds-select" disabled="{!v.BRFZipCodeValidDisabled}"
+                                                        value="{!v.newBRF.Zip_Code_Validation__c}"
+                                                        />
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    <ui:inputDate aura:id="BenZipVerDate" 
+                                                  label="Verification Date" 
+                                                  class="slds-input dateField"
+                                                  labelClass="slds-form-element__label"
+                                                  value="{!v.newBRF.Verification_Date__c}"
+                                                  Required="True"
+                                                  disabled="true"
+                                                  displayDatePicker="true"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                            <div class="slds-col--padded slds-size--1-of-1 slds-small-size--1-of-2">
+                                <div class="slds-form-element ">
+                                    <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                        <label class="slds-form-element__label" >
+                                            Verified By
+                                        </label>
+                                        <lightning:input type="text" label="" name="" disabled="true"
+                                                     value="{!v.newBRF.Verified_By__c}"/>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                </div>
+            </form>
+            
+            <!-- / CREATE NEW Account FORM -->
+        </fieldset>
+        
+        <!-- / BOXED AREA -->
+        
+        <!-- / CREATE NEW Account -->
+        {!v.body}
+        <br/>
+        <div align="center" draggable="false" >
+            <button class="slds-button slds-button_neutral">
+                <ui:outputURL label="Save Benefit Request Form" target="_top" click="{!c.createBRF}" value="" />
+            </button>&nbsp;
+            <button class="slds-button slds-button_neutral">
+                <!--T01 Updated the tag by adding click instead of value-->
+                <ui:outputURL label="Cancel" target="_top" click="{!c.returnURL}" value="" />
+            	<!--T01-->
+            </button>
+        </div>
+        <br/><br/>        
+    </div>   
+</aura:component>

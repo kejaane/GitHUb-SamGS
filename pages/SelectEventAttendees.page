@@ -1,0 +1,21 @@
+<apex:page StandardController="Event" extensions="SelectEventAttendees_controller_ext" showHeader="true" sidebar="true" tabstyle="Event" >>
+    <apex:pageMessages escape="false" />
+    <apex:sectionHeader title="Event" subtitle="Select Attendees"/>   
+    <apex:form > 
+        <apex:pageblock title="Invite List">
+            <apex:selectCheckboxes value="{!selectedAttendees}" layout="pageDirection">
+            <apex:selectOptions value="{!items}"/>
+            </apex:selectCheckboxes><br/>
+            <apex:pageblockSection title="Append or Overwrite the Event's List of Attendees field ">    
+                <apex:selectRadio value="{!OverwriteIt}" >
+                    <apex:selectOption itemValue="Append" itemlabel="Append"/>
+                    <apex:selectOption itemValue="Overwrite" itemlabel="Overwrite"/>                    
+                </apex:selectRadio> 
+            </apex:pageblockSection>               
+            <apex:pageBlockButtons >      
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Back" action="{!Back}" />
+            </apex:pageBlockButtons> 
+        </apex:pageblock>        
+    </apex:form>
+</apex:page>

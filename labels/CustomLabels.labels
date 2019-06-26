@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?><CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AIA_PP_Error_Msg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_PP_Error_Msg</shortDescription>
+        <value>A Marked Up Benefit Summary document is required for a custom product. Please attach a Marked Up Benefit Summary document to this product and then set it as custom.</value>
+    </labels>
+    <labels>
+        <fullName>AIA_ParentWPTSID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_ParentWPTSID</shortDescription>
+        <value>CF00N600000030UI2_lkid</value>
+    </labels>
+    <labels>
+        <fullName>AIA_ParentWPTSName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_ParentWPTSName</shortDescription>
+        <value>CF00N600000030UI2</value>
+    </labels>
+    <labels>
+        <fullName>AIA_SFDC_Org_Domain</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_SFDC_Org_Domain</shortDescription>
+        <value>https://carefirst.my.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>AIA_SpmssUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_SpmssUser</shortDescription>
+        <value>00560000001gp81</value>
+    </labels>
+    <labels>
+        <fullName>AIA_User_Detail_For_Sending_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_User_Detail_For_Sending_Email</shortDescription>
+        <value>networkaccess@carefirst.com</value>
+    </labels>
+    <labels>
+        <fullName>AIA_WPTID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_WPTID</shortDescription>
+        <value>CF00N600000030UBi_lkid</value>
+    </labels>
+    <labels>
+        <fullName>AIA_WPTName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_WPTName</shortDescription>
+        <value>CF00N600000030UBi</value>
+    </labels>
+    <labels>
+        <fullName>AIA_WP_SubProcess_EmailTemplate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_WP_SubProcess_EmailTemplate</shortDescription>
+        <value>A CareFirst assignment for {0} has been assigned to you that needs your attention. Please reference the assignment information below and submit your response to {1} at {2}. Thank you. &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+Date and Time of Assignment: {3} &lt;br/&gt;
+Due Date:{4} &lt;br/&gt;
+Assignment Description: {5}</value>
+    </labels>
+    <labels>
+        <fullName>AIA_WP_SubProcess_EmailTemplate_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_WP_SubProcess_EmailTemplate_2</shortDescription>
+        <value>An assignment for {0} has been assigned to you that needs your attention. Please click the attached link to review the task information. &lt;br/&gt;&lt;br/&gt;&lt;br/&gt; 
+
+Link: {1}</value>
+    </labels>
+    <labels>
+        <fullName>AIA_Workplan_Blocking_Task_Notification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA Workplan Blocking Task Notification</shortDescription>
+        <value>Hello {0} {1},&lt;br/&gt;&lt;br/&gt;You have identified that a task is completed or not required for {2}. However, this task is preventing a user from completing additional tasks for this account. Please view the blocked task comments below to determine the issue.  Once you have addressed the issue, please notify the team member assigned to the blocked task that the issue has been resolved.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Account Name:&lt;/b&gt; {2}&lt;br/&gt;&lt;b&gt;Task Description:&lt;/b&gt; {3}&lt;br/&gt;&lt;b&gt;Blocked Tasks Comments:&lt;/b&gt; {4}&lt;br/&gt;&lt;br/&gt;Please click the below link to review the Task Information. &lt;br/&gt;&lt;b&gt;Task Link:&lt;/b&gt; {5}&lt;br/&gt;&lt;b&gt;Blocked Task Link:&lt;/b&gt; {6}</value>
+    </labels>
+    <labels>
+        <fullName>Admin_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Admin DDP</shortDescription>
+        <value>a190z000008v8An</value>
+    </labels>
+    <labels>
+        <fullName>AiA_Email_Body_For_BRF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AiA_Email_Body_For_BRF</shortDescription>
+        <value>Please verify the zip code for the following Account and provide the result on the link below:&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+Account Name: {0}&lt;br/&gt; 
+Account Full Address: {1}&lt;br/&gt;
+Company Website: {2}&lt;br/&gt;
+Link to Benefit Request Form: https://carefirst.my.salesforce.com/{3}</value>
+    </labels>
+    <labels>
+        <fullName>BrokerPortalCommunity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BrokerPortalCommunity</shortDescription>
+        <value>SaleforceSAMMDBrokerCommunity</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Community_Plus_Login_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Community Plus Login User</shortDescription>
+        <value>00e600000016Bb9</value>
+    </labels>
+    <labels>
+        <fullName>SBU_Record_type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SBU Record type</shortDescription>
+        <value>Group Case; Member Case; Non-Member Case</value>
+    </labels>
+    <labels>
+        <fullName>Saleforce_Certificate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AIA_Salesforce Certificate</shortDescription>
+        <value>salesforce_prod_carefirst_com</value>
+    </labels>
+</CustomLabels>

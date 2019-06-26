@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Opportunities$Lead_Rep_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Effective_Date__c</field>
+    </columns>
+    <description>Used in conjunction with a Facet report to detect variances</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Opportunities$Market_Segment__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>51-199</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities$StageName</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Proposal,Sold</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Opps_Facet_Check</name>
+    <reportType>Accounts_w_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Opportunities$Effective_Date__c</dateColumn>
+        <endDate>2010-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2010-01-01</startDate>
+    </timeFrameFilter>
+</Report>

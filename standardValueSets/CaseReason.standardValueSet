@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Benefit Question</fullName>
+        <default>false</default>
+        <label>Benefit Question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Changes to Group Contract</fullName>
+        <default>false</default>
+        <label>Changes to Group Contract</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>EGP Error</fullName>
+        <default>false</default>
+        <label>EGP Error</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>EGP Error - No Account ID</fullName>
+        <default>false</default>
+        <label>EGP Error - No Account ID</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>EGP Error - Read Time Out</fullName>
+        <default>false</default>
+        <label>EGP Error - Read Time Out</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Enrollment Question</fullName>
+        <default>false</default>
+        <label>Enrollment Question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>General Question / Request</fullName>
+        <default>false</default>
+        <label>General Question / Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Invoice and Billing Issue</fullName>
+        <default>false</default>
+        <label>Invoice and Billing Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Materials Request</fullName>
+        <default>false</default>
+        <label>Materials Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Request</fullName>
+        <default>false</default>
+        <label>Meeting Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Monthly Reporting Email</fullName>
+        <default>false</default>
+        <label>Monthly Reporting Email</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Feature / Request</fullName>
+        <default>false</default>
+        <label>New Feature / Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Initiative / Executive Request</fullName>
+        <default>false</default>
+        <label>New Initiative / Executive Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Password Reset</fullName>
+        <default>false</default>
+        <label>Password Reset</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Post Implementation Problem / Question</fullName>
+        <default>false</default>
+        <label>Post Implementation Problem / Question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Renewal Question</fullName>
+        <default>false</default>
+        <label>Renewal Question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reporting</fullName>
+        <default>false</default>
+        <label>Reporting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reporting Support</fullName>
+        <default>false</default>
+        <label>Reporting Support</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Service/Claims Issue</fullName>
+        <default>false</default>
+        <label>Service/Claims Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>User Access</fullName>
+        <default>false</default>
+        <label>User Access</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

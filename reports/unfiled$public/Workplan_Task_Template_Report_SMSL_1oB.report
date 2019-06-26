@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task_Template__c.Description__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task_Template__c.Acc_Team_Role_for_New_Business__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task_Template__c.Acc_Team_Role_for_Renewal_Business__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6</booleanFilter>
+        <criteriaItems>
+            <column>Workplan_Task_Template__c.Acc_Team_Role_for_New_Business__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Ancillary Analyst</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task_Template__c.Acc_Team_Role_for_New_Business__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NASCO Benefit Coder</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task_Template__c.Acc_Team_Role_for_New_Business__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Benefit Tester</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task_Template__c.Acc_Team_Role_for_Renewal_Business__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Ancillary Analyst</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task_Template__c.Acc_Team_Role_for_Renewal_Business__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NASCO Benefit Coder</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task_Template__c.Acc_Team_Role_for_Renewal_Business__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Benefit Tester</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Workplan Task Template Report - SMSL</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Workplan_Task_Template__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Workplan_Task_Template__c.Acc_Team_Role_for_New_Business__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

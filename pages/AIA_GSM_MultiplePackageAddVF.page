@@ -1,0 +1,227 @@
+<!--===================================================================================================================
+* Date       : 9/18/2017
+* Developer  : Raviteja vadapalli
+* Purpose    : Vf page for add multiple Package at the same time and add /remove the particualr data/line item.
+*                                 Update History
+*                                 ---------------
+* Date       |     Developer        | Tag |   Description
+*============+======================+=====+====================================================================================
+* 02/06/2018|		Raviteja    	| T01  | Added SLDS changes
+* 02/22/2018|       Debkanti        | T02  | Added Javascript to fetch the input no of rows and modified the add more row section
+*                                            and chenge the "Ok" button functionality.
+*============+======================+=====+====================================================================================
+-->
+<apex:page standardController="AIA_Package__c" extensions="AIA_GSM_MultiplePackageAdd" sidebar="false" lightningStylesheets="true">
+    <head>
+       <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.AIA_GSRFMultiplePages,'glyphicons-only-bootstrap-master/css/bootstrap.min.css')}"/>
+        <!-- T01 -- End --> 
+        <style>
+            
+            .message{
+            display:none;
+            }
+            .size:not(.multi){
+            width:80px !important;
+            }
+            .dates{
+            width:90px !important;
+            }
+            
+            .container {
+            min-width: 100%;
+            }
+            select[multiple], select[size] {
+            font-size: 12px;
+            }
+            .size1:not(.multi){
+            width:140px;
+            }
+            .size2:not(.multi){
+            width:100px !important;
+            }
+            .size3:not(.multi){
+            width:60px;
+            }
+            .logoutLink {
+            color: #FF0000;
+            }
+            th[id*='gsrfhide'], td[id*='gsrfhide'],.dateFormat{
+            display:none;
+            }
+            .multiSelectPicklistTable tbody tr:first-child{
+                display:none
+            }
+            <!-- T01 -- Start -->  
+                {! IF(! IsClassic,'.slds-scope .slds-table--cell-buffer tr>td:first-child, .slds-scope .slds-table--cell-buffer tr>th:first-child, .slds-scope .slds-table_cell-buffer tr>td:first-child, .slds-scope .slds-table_cell-buffer tr>th:first-child {                padding-left: 0rem !important;            }            .multi{            height:100px !important;            }   ','')}                                               
+                {! IF(! IsClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 280px !important;}','')}        
+                {! IF(! IsClassic,'input,select,textarea{min-width:35px !important;}.multiSelectPicklistCell a {width:25px;height:25px}','')}
+                {! IF(! IsClassic,'.headerRow{font-size:9.5px !important}','.headerRow{font-size:12px !important;overflow-x: auto !important;}')}    		
+                {! IF(! IsClassic,'.vision{margin-left:-350px !important}','')}    		
+            <!-- T01 -- End -->            
+        </style>
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+        <apex:includeScript value="{!$Resource.AIA_GSM_LineItems}"/>
+    </head>
+    <script>
+    j$ = jQuery.noConflict();
+    function arrows(){
+             var right="{!URLFOR($Resource.AIA_GSRFRelatedArrows,'Us-660-arrows/right-arrow.png')}";
+             var left="{!URLFOR($Resource.AIA_GSRFRelatedArrows,'Us-660-arrows/left-arrow.png')}";
+             {! if(! isClassic,"j$('.picklistArrowRight').parent().css('background-image','url('+right+')');j$('.picklistArrowRight').parent().css('background-repeat','no-repeat');j$('.picklistArrowLeft').parent().css('background-image','url('+left+')');j$('.picklistArrowLeft').parent().css('background-repeat','no-repeat');","")}   
+            {! if(! isClassic,"j$('.picklistArrowRight,.picklistArrowLeft').remove()","")} 
+         }
+     j$(document).ready(function() { 
+         arrows();
+         
+    });
+    <!-- T02 -- Start --> 
+        j$(document).on('keyup','.inp',function(){
+            var size=j$('.inp').val();
+            j$('.donebtn').attr('onclick','passparams('+size+');return false;');
+        });
+    <!-- T02 -- End -->
+      </script>
+    
+    <apex:form id="modal">
+    <!-- T01 -- Start -->
+    <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}"/><br/><br/><br/>
+        <!--apex:commandButton value="Ok" action="{!cancel}"/-->
+        <!-- T02 -- Start -->
+                <apex:commandButton value="Ok" action="{!refresh}"/>
+                <!-- T02 -- End -->
+      </div>  
+    </apex:outputPanel>
+<!--T01    - End -->
+    </apex:form>
+    <!--apex:form style="margin-left:15px">
+    
+    Add <apex:inputText value="{!multipleRowsize}"/> more rows
+        <apex:commandButton value="Done" onclick="passparam();" immediate="true" rerender="table"/>
+        <apex:actionFunction action="{!multipleRows}" name="passparam" >
+            <apex:param assignTo="{!multipleRowsize}" value="{!multipleRowsize}"/>
+        </apex:actionFunction>
+    </apex:form-->
+    <apex:form >
+        <!-- T02 -- Start --> 
+        <!--Passing parameters to size in controller where onclick is prepared by JS -->
+        <apex:actionFunction name="passparams" action="{!multipleRows}"  reRender="table" immediate="true" oncomplete="loadtexts();arrows();">
+            <apex:param name="p1" assignTo="{!multipleRowsize}" value=""  />
+        </apex:actionFunction> 
+        Add&nbsp;<apex:inputText value="{!multipleRowsize}" styleClass="inp"/> more rows&nbsp;
+        <apex:commandbutton value="Done" onclick="" styleclass="donebtn" oncomplete="loadtexts();arrows();"/>
+        <!-- T02 -- End -->
+
+        <div class="container">
+            <div class="table-responsive"> 
+                <apex:pageBlock title="Add Packages"  >
+<apex:pagemessages />
+
+                    <apex:pageBlockButtons >
+                        <apex:commandButton value="Save" action="{!save}" oncomplete="loadtexts();checkerror();arrows();" reRender="table,modal" />
+                        <apex:commandButton value="Cancel" action="{!cancel}" />
+                    </apex:pageBlockButtons>
+                    
+                    
+                    <apex:pageBlockTable value="{!packgs}" var="a" id="table"  styleClass="slds-table slds-table_bordered slds-table_cell-buffer" >  
+
+                        <apex:variable value="{!0}" var="Cnt"/>
+                        
+                        <apex:column headervalue="Action" >
+                            <apex:commandlink value="X" action="{!removeRowFromList}" immediate="true" rerender="table" style="color:red;size:2px" oncomplete="loadtexts();arrows();">
+                                <!-- Pass the row number to the controller so that we know which row to remove -->
+                                <apex:param name="index" value="{!Cnt}" assignTo="{!rowToRemove}"/>
+                            </apex:commandlink> 
+                            <apex:variable var="Cnt" value="{!Cnt+1}"/>              
+                        </apex:column> 
+                        <apex:column headerValue="Package Code"  >
+                            <apex:inputField value="{!a.Name}"  required="true" styleClass="size"/>
+                        </apex:column>
+                        <apex:column headerValue="Effective Date">
+                           <apex:inputField value="{!a.Effective_new_Date__c}"  styleClass="dates"  />
+                        </apex:column>   
+                        <apex:column headerValue="Termination Date">
+                            <apex:inputField value="{!a.TERM_Date__c}"  styleClass="dates"  />
+                        </apex:column>                   
+                        <apex:column headerValue="Employee Status" >
+                            <div Class='emp' style="display:none;    position: relative;
+                                                    margin-left: -100px;
+                                                    z-index: 99;" >
+                                <apex:inputField value="{!a.Employee_Status__c}" styleClass="size multi employee" onchange="getText(this,'gettext')" />
+                            </div>
+                            <div class="requiredInput">
+                                <div class="requiredBlock"></div>
+                             <label class='glyphicon glyphicon-sound-stereo hidee' style="font-size:20px;color:grey"></label><br/>
+                            <span class='erroricon' style="color: #d74c3b;;font-style: bold;display:none"><b>Error:</b> You must enter a value</span>
+                            </div>
+                                <label class='selectedvalsemp' style="font-size:10px"></label>
+                        </apex:column>
+                        <apex:column headerValue="Package Code Notes">
+                            <apex:inputField value="{!a.Package_Code_Notes_Picklist__c}" style="width:100px !important" styleClass="size slds-input"/>
+                        </apex:column>
+                        <apex:column headerValue="Package Code Notes Other">
+                            <apex:inputField value="{!a.Package_Code_Notes_Other__c}" styleClass="size" style="width:130px !important"/>
+                        </apex:column>
+                        <apex:column headerValue="Coverage Levels">
+                            <apex:inputField value="{!a.Coverage_Levels__c}" styleClass="size slds-input" style="width:100px !important" id="coveragelevel"/>
+                        </apex:column>
+                        <apex:column headerValue="Limited Coverage">
+                            <div Class='limitedcov' style="display:none;    position: relative;
+                                                           margin-left: -280px;
+                                                           z-index: 99;">
+                                <apex:inputField value="{!a.Limited_Coverage__c}" styleClass="size multi limiteds" onchange="getText(this,'gettext')" />
+                            </div>
+                            <div class="conrequiredInput">
+                                <div class="requiredBlock"></div>
+                            <label class='glyphicon glyphicon-sound-stereo hidec' style="font-size:20px;color:grey"></label><br/>
+                            <span class='erroricon' style="color: #d74c3b;;font-style: bold;display:none"><b>Error:</b> You must enter a value</span>
+                            </div>
+                            <label class='selectedvalsltd' style="font-size:10px"></label>
+                            
+                        </apex:column>
+                        <apex:column headerValue="Medical Benefit">
+                            <apex:inputField value="{!a.Medical_Benefit__c}" styleClass="size2"/>
+                        </apex:column>
+                        <apex:column headerValue="Drug">
+                            <apex:inputField value="{!a.Drug__c}" styleClass="size" style="width:20px !important"/>
+                        </apex:column>
+                        <apex:column headerValue="Group Structure Request Form" id="gsrfhide" >
+                            <apex:inputField value="{!a.Group_Structure_Request_Form__c}"  styleClass="size gsrfhide"  />
+                        </apex:column>
+                        <apex:column headerValue="Vision">
+                            <div Class='vision' style="display:none;    position: relative;
+                                                           margin-left: -300px;
+                                                           z-index: 99;">
+                            <apex:inputField value="{!a.Vision__c}" styleClass="size multi visionfield" onchange="getText(this,'gettext')" />
+                            </div>
+                            <div >
+                                <div ></div>
+                             <label class='glyphicon glyphicon-sound-stereo hidevision' style="font-size:20px;color:grey"></label><br/>
+                            </div>
+                            <label class='selectedvalsvision' style="font-size:10px"></label>
+                                
+                        </apex:column>
+                        <apex:column headerValue="Product">
+                            <apex:inputField value="{!a.Group_Structure_Request_Form_Product__c}" styleClass="size"/>
+                        </apex:column>
+                    </apex:pageBlockTable> 
+                    
+                    <apex:pageblockButtons location="bottom">
+                        <div style="text-align:Middle;margin-right:30px;font-weight:bold;">
+                            <apex:commandLink value="Add New Row" action="{!addRow}" rerender="table" immediate="true" oncomplete="loadtexts();arrows();" />
+                            &nbsp;|&nbsp;&nbsp;
+                            <apex:commandLink value="Remove Last Row" action="{!removeRow}" rerender="table" immediate="true"  oncomplete="loadtexts();arrows();" />                
+                        </div>
+                    </apex:pageblockButtons>  
+                    
+                </apex:pageBlock>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

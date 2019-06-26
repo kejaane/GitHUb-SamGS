@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Checkbox --></label>
+        <name>Checkbox__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to allow grouping of module dependent records together. --></help>
+        <label><!-- Module Name --></label>
+        <name>Module_Name__c</name>
+        <picklistValues>
+            <masterLabel>Application Level</masterLabel>
+            <translation><!-- Application Level --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deprovision User</masterLabel>
+            <translation><!-- Deprovision User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profile Audit</masterLabel>
+            <translation><!-- Profile Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provision User</masterLabel>
+            <translation><!-- Provision User --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number --></label>
+        <name>Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a detailed description that describes the records purpose and allows the user to understand how to use and which support field(s) are needed. --></help>
+        <label><!-- Record Description --></label>
+        <name>Record_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Text Area 255 --></label>
+        <name>Text_Area_255__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>SM Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SM Settings</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>SM Setting Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- ESMS001: Emails must be separated by comma only, cannot end with a comma and cannot be blank. --></errorMessage>
+        <name>ESMS001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS002: Sandbox Names must be separated by comma only and cannot end with a comma. --></errorMessage>
+        <name>ESMS002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS003: The Timeout Number cannot be be less than 10 seconds for callouts and it cannot be blank. --></errorMessage>
+        <name>ESMS003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS004: The Record Description field cannot be blank --></errorMessage>
+        <name>ESMS004</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS005: The following fields cannot be edited: Label, SM Setting Name or Record Description. --></errorMessage>
+        <name>ESMS005</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS006: Profile Names must be separated by comma only and cannot end with a comma. --></errorMessage>
+        <name>ESMS006</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS007: Log Deletion Number cannot be be less than 30 but 0 or blank is allowed.  If set to zero or blank then no deletion of the log records will occur. --></errorMessage>
+        <name>ESMS007</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS008: Only the Text Area 255 field can be filled in for this record. --></errorMessage>
+        <name>ESMS008</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS009: Only the Number field can be filled in for this record. --></errorMessage>
+        <name>ESMS009</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS010: Only the Checkbox field can be filled in for this record. --></errorMessage>
+        <name>ESMS010</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS011: Named Credential Chunk Setting must be between 1 and 10. --></errorMessage>
+        <name>ESMS011</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESMS012: The Email Log Delay Number must be between 5 and 60. --></errorMessage>
+        <name>ESMS012</name>
+    </validationRules>
+</CustomObjectTranslation>

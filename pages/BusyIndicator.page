@@ -1,0 +1,19 @@
+<!-- Author: Bill Dodson        -->
+<!-- Created: February 20, 2017 -->
+<!-- Description:               -->
+<!-- This page is used to display a busy indicator when making a server call. -->
+<!-- History:                                                                 -->
+<!-- March 4, 2017  Bill Dodson, Initial version.                              --> 
+<!--                                                                          -->
+<apex:page >
+  <apex:includeScript value="{!$Resource.BusyIndicatorJS}" />
+  <apex:styleSheet value="{!$Resource.BusyIndicatorCSS}" />
+
+  <div id="busyIndicator" class="busyIndicator">
+    <div class="busyIndicator-overlay"></div>
+    <div class="busyIndicator-img">
+      <div class="loading"/>
+      Processing, please wait...
+    </div>
+  </div>
+</apex:page>

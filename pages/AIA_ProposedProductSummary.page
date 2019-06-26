@@ -1,0 +1,431 @@
+<!--==============================================================================================================
+ * Date         : 08/08/2016
+ * Developer    : Sandeep Sankaye
+ * Purpose      : Proposed Product Intermediate page for user to enter data            
+ *================================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date         Developer    Tag   Description
+ *============+============+=====+================================================================================
+ * 08/08/2016 | Goutham      |     | Initial Version                                         
+ * 02/27/2017 | Asif K       | T01 | Story 3316. Added Sub Group Account Field
+ * 03/05/2017 | Rajesh Pennam| T02 | Story 3750. Added Idnetity Protection Mandate Field   
+ * 03/07/2017 | Goutham      | T03 | Story 3680. Updated Vision Layout as per US: B-03680   
+ * 03/14/2017 | Asif K       | T04 | Story 3513. Updated information section to add BRF Account 
+ * 03/17/2017 | Sree Harsha  | T05 | Story 03681. Updated Layout to only include fields given in the user story.
+ * 03/30/2017 | Sree Harsha  | T06 | Story B-03469. Updated Layout to add field FirstHelp given in the user story.
+ * 04/01/2017 | Asif K       | T07 | Added Rider Comments field Medical and removed Rider for others
+ * 04/05/2017 | Rajesh Pennam| T08 | Updated the layouts 
+ * 04/13/2017 | Asif K       | T09 | Removed references of T02 as part of Story B-03894
+ * 04/22/2017 | Asif K       | T10 | Removed Cafeteria for medical
+ * 05/12/2017 | Ramakrishna  | T11 | Added the field 'Account_Specified_Dental_Product_Name__c' 
+ * 11/03/2017 |   Sajitha Y  | T12 | Added DM/Wellness Section US -250
+ * 1/24/2017  |   Raviteja   | T13 | Added code to make it compatible for lightning
+ * 3/22/2017  |   Raviteja   | T14 | Added code for adding fields us 479
+* 05/14/2017  |   Sajitha Y  | T15 | Commented Save & Get Benefits button to stop PCS call as per US 1650
+*  09/5/2017  | Arshia G  	 | T16 | Updated MHP section for US771
+ *===========+=============+=====+================================================================================
+-->
+<apex:page standardController="Proposed_Products__c" extensions="AIA_ProposedProductExtension" lightningStylesheets="true">
+    <!-- T13 - start -->
+    <apex:slds rendered="{! !isClassic }"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- T13 - end -->
+    <apex:sectionHeader title="Proposed Products Edit" subtitle="{!Proposed_Products__c.Name}"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+    <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.4/jquery.autosize.min.js" />
+    <!-- T13 - start -->
+    <style>
+       {! if(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 350px !important}','')}        
+
+                {! IF(! IsClassic,'.multiSelectPicklistCell{padding-right: 40px !important;}','')}
+        
+      {! if(! isClassic,'  body .detailList, body .detailList table, .slds-scope .detailList, .slds-scope .detailList table {    table-layout: auto;}        .picklistArrowRight,.picklistArrowLeft{        height: 100% !important;    width: 100% !important;        }            ','')} 
+    </style>
+    <!-- T13 - End -->
+    <script>
+    j$ = jQuery.noConflict();
+    j$(document).ready(function(){
+        //T-01 start
+        //{! if(! isClassic,"j$('.picklistArrowRight').attr('src','https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png');         j$('.picklistArrowRight').parent().css('height','100%');             j$('.picklistArrowRight').parent().css('width','30%');          j$('.picklistArrowLeft').attr('src','https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png');         j$('.picklistArrowLeft').parent().css('height','100%');             j$('.picklistArrowLeft').parent().css('width','30%');          j$('.multiSelectPicklistCell').next().children(':first').css('margin-left','-70px');         j$('.multiSelectPicklistCell').closest('table').closest('.detailList').css('margin-left','-122px');         ","")}         
+        j$ = jQuery.noConflict();
+    function arrows(){
+             var right="{!URLFOR($Resource.AIA_GSRFRelatedArrows,'Us-660-arrows/right-arrow.png')}";
+             var left="{!URLFOR($Resource.AIA_GSRFRelatedArrows,'Us-660-arrows/left-arrow.png')}";
+             {! if(! isClassic,"j$('.picklistArrowRight').parent().css('background-image','url('+right+')');j$('.picklistArrowRight').parent().css('background-repeat','no-repeat');j$('.picklistArrowLeft').parent().css('background-image','url('+left+')');j$('.picklistArrowLeft').parent().css('background-repeat','no-repeat');","")}   
+            {! if(! isClassic,"j$('.picklistArrowRight,.picklistArrowLeft').remove()","")} 
+         }
+        //<!-- Start T16 -->
+      
+        showmhp();        
+         j$(document).on("change",'.medicalfund',function(){            
+             showmhp();
+          });        
+        j$(document).on("change",'.productcat',function(){            
+             showmhp();
+          });
+        
+        function showmhp(){            
+        	var prodcategory=j$('.productcat').val();
+             var fundingarr=j$('.medicalfund').val();
+                       
+             if(prodcategory=='Medical' && fundingarr=='Risk'){
+       		 j$('[id$=mhpack]').show();                          
+             }
+            else 
+                 {
+                    j$('[id$=mhpack]').hide();
+                 }
+    	    }
+        //<!-- End T16 -->            
+     j$(document).ready(function() { 
+         arrows();
+         
+    });
+        //T-01 End
+        var tagn=j$('.productcat').prop('tagName');
+        var category='';
+        if(tagn=='SPAN'){
+        category=j$('.productcat').text();
+        }
+        else{
+        category=j$('.productcat').val();
+        }
+             var fundarr=j$('.medicalfund').val();
+             if(category=='Medical' && (fundarr=='ASO'||fundarr=='Risk') && j$('.message').length==0 ){
+                j$('.medicaldmwellness').prop( "checked", true );
+             }
+        if(fundarr=='ASO' && j$('.message').length==0 ){
+                 j$('.nonsf').val('No');
+             }
+             else if(fundarr=='Risk'  && j$('.message').length==0 ){
+                 j$('.nonsf').val('');
+             }
+        if(j$('.medicaldmwellness').is( ":checked" )  && j$('.message').length==0 ){
+                j$('.customwelness').prop( "checked", false );
+                j$('.standalone').val('No');
+                j$('.sawelness').val('No');
+             }
+         j$(document).on("change",'.medicalfund',function(){
+            var category=j$('.productcat').val();
+             var fundarr=j$('.medicalfund').val();
+             if(category=='Medical' && (fundarr=='ASO'||fundarr=='Risk')){
+                j$('.medicaldmwellness').prop( "checked", true );
+             }
+             if(fundarr=='ASO'){
+                 j$('.nonsf').val('No');
+             }
+             else if(fundarr=='Risk'){
+                 j$('.nonsf').val('');
+             }
+          });
+        j$(document).on("change",'.medicaldmwellness',function(){
+            if(j$('.medicaldmwellness').is( ":checked" ) ){
+                j$('.customwelness').prop( "checked", false );
+                j$('.standalone').val('No');
+                j$('.sawelness').val('No');
+             }
+            
+          });
+        
+    });
+    </script>
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock title="Proposed Products Edit" id="medical" rendered="{!isMedical}" mode="edit">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <!--Commented button to stop PCS call as per US1650-->
+               <!-- <apex:commandButton value="Save & Get Benefits" action="{!saveandGetBenefits}" rendered="{!hasBnefitSummary}"/> -->
+                <apex:commandButton value="Cancel" action="{!cancel}"/>                
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection title="Information" columns="2">
+                <apex:inputField value="{!Proposed_Products__c.Benefit_Request_Form__c}" required="true"/>
+                <!-- Start T16 -->
+          		<!--
+                <apex:outputField value="{!Proposed_Products__c.RecordTypeid}" />  -->
+				&nbsp;   
+                <!-- End T16 -->
+                <!--<apex:inputField value="{!Proposed_Products__c.Custom__c}" required="false"/>-->
+                <apex:inputField styleClass="productcat" value="{!Proposed_Products__c.Product_Category__c}" required="false"/>
+                <apex:inputField styleClass="medicalfund" value="{!Proposed_Products__c.Funding_Arrangement__c}" required="true"/>                
+                <apex:inputField value="{!Proposed_Products__c.Product_Line__c}" required="false"/> 
+                <apex:inputField value="{!Proposed_Products__c.Plan_Name__c}" required="false"/> 
+                <apex:inputField value="{!Proposed_Products__c.Integrated_Carved_Out_Vendor__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Integrated_Deductible_Integrator__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Integrated_OOP_Integration__c}" required="false"/>
+                <!--<apex:inputField value="{!Proposed_Products__c.Cafeteria__c}" required="false"/> T10 -->
+                <apex:inputField value="{!Proposed_Products__c.BRF_Account__c}" required="false"/> <!--T04-->
+                <apex:inputField value="{!Proposed_Products__c.Sub_Group_Account__c}" required="false"/> <!-- T01 -->
+                <apex:inputField value="{!Proposed_Products__c.FirstHelp__c}" required="false"/> <!-- T06 -->
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Proposed_Products__c.Rider__c}" required="true"/> <!--T07-->
+                <apex:inputField value="{!Proposed_Products__c.Rider_Comments__c}" style="{!if(!isClassic,'width:100%','')}" required="false"/> <!--T07-->
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Medical" columns="2">
+                <apex:inputField value="{!Proposed_Products__c.Account_Specified_Medical_Product_Name__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Deductible__c}" required="true"/>
+                <apex:inputField value="{!Proposed_Products__c.CDH__c}" required="true"/>
+                
+                
+                <apex:outputField value="{!Proposed_Products__c.Grandfathered_Status__c}" rendered="{!If(IsGrandfathered==True,True,False)}"/>
+                <apex:inputField value="{!Proposed_Products__c.Grandfathered_Status__c}" required="false" rendered="{!If(IsGrandfathered==False,True,False)}"/>
+                
+                
+                <apex:inputField value="{!Proposed_Products__c.CDH_Fund_Type__c}" required="true"/>
+                <apex:inputField value="{!Proposed_Products__c.Integrated_Non_Integrated__c}" required="true"/>
+                <apex:inputField value="{!Proposed_Products__c.CDH_Type__c}" required="true"/>
+                <apex:inputField value="{!Proposed_Products__c.Grandfathered_PPACA_Status__c}" required="true"/>
+                <apex:inputField value="{!Proposed_Products__c.FSA_BlueFund__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Blue_Rewards__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Comments__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Out_of_Pocket_Max__c}" required="true"/>
+              <!--  <apex:inputField value="{!Proposed_Products__c.Core_DM_Wellness__c}" required="false"/> -->
+                <apex:inputField value="{!Proposed_Products__c.RX_OOP_Max_Integration__c}" required="false"/>
+                <!-----------------------------Moving to DM/Wellness Section--------------------------------------------------->
+              <!--   <apex:inputField value="{!Proposed_Products__c.Custom_Core_DM_Wellness__c}" required="false"/>-->
+              <!--   <apex:inputField value="{!Proposed_Products__c.Custom_Wellness__c}" required="false"/>-->
+             <!--    <apex:inputField value="{!Proposed_Products__c.Stand_Alone_Disease_Management__c}" required="false"/>-->
+              <!--   <apex:inputField value="{!Proposed_Products__c.Stand_Alone_Wellness__c}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.Integrated_OOP_Max_Carved_Out_Vendor__c}" required="false"/>
+                <!-- T14 start -->
+                <apex:inputField value="{!Proposed_Products__c.Non_Standard_Fee_Schedule__c}" styleClass="nonsf" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Non_Standard_Fee_Schedule_Comments__c}" required="false"/>
+                <!-- T14 End -->
+                
+                <!--<apex:inputField value="{!Proposed_Products__c.Has_Benefit_Details__c}" required="false"/>-->
+                <apex:pageBlockSectionItem />
+                <!--apex:inputField value="{!Proposed_Products__c.Network_Levels__c}" /-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Medical_Product_Option__c}" required="true"/>-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Integrated_Carved_Out_Vendor__c}" required="false"/>-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Drug_Product_Options__c}" required="true"/>-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Cafeteria__c}" required="false"/>-->
+            </apex:pageBlockSection>
+           <!---T12 start---->
+                <apex:pageBlockSection title="DM/Wellness" columns="2">
+                <apex:inputField styleClass="medicaldmwellness" value="{!Proposed_Products__c.Custom_Core_DM_Wellness__c}" required="false"/>
+                 <apex:inputField styleClass="standalone" value="{!Proposed_Products__c.Stand_Alone_Disease_Management__c}" required="false"/>
+                <apex:inputField styleClass="customwelness" value="{!Proposed_Products__c.Custom_Wellness__c}" required="false"/>
+                <apex:inputField styleClass="sawelness" value="{!Proposed_Products__c.Stand_Alone_Wellness__c}" required="false"/>
+                <apex:outputText style="font-weight: bold;" value="DM/Wellness Rules"/><apex:outputLabel ></apex:outputLabel>
+                <apex:image url="/servlet/servlet.FileDownload?file={!$Setup.AIA_MCP_DM_Wellness__c.Document_Id__c}" width="532" height="202"/>
+            </apex:pageBlockSection>
+            <!---T12 End---->
+            <!-- Start T16 -->
+			<!--
+            <apex:pageBlockSection title="Mental Health Parity" columns="2">
+                <apex:inputField value="{!Proposed_Products__c.MHP_Test_Result__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.MHP_Test_Completed_Date__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.MHP_Test_Comments__c}" required="false"/>
+                <apex:inputField style="white-space: pre-wrap !important;" value="{!Proposed_Products__c.MHP_Test_Completed_By__c}" required="false"/>
+            </apex:pageBlockSection>
+-->            
+			<apex:pageBlockSection id="mhpack" title="Mental Health Parity" columns="1">
+                <b>{!$ObjectType.Proposed_Products__c.Fields.MHP_Acknowledgement__c.Label}</b>
+                <br/>                    
+                For risk business, the medical benefits must be tested by CareFirst for Mental Health Parity compliance and may require changes after final sale.                         
+            	<br/> 
+            </apex:pageBlockSection>
+            <!-- End T16 -->
+            
+        </apex:pageBlock>
+        <apex:pageBlock title="Proposed Products Edit" id="drug" rendered="{!isDrug}" mode="edit">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+               <!--Commented button to stop PCS call as per US1650-->
+               <!-- <apex:commandButton value="Save & Get Benefits" action="{!saveandGetBenefits}" rendered="{!hasBnefitSummary}"/> -->
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+
+            
+
+            <apex:pageBlockSection title="Information" columns="2">
+                <apex:inputField value="{!Proposed_Products__c.Benefit_Request_Form__c}" required="true"/>
+                <apex:outputField value="{!Proposed_Products__c.RecordTypeid}" />
+                <!--<apex:inputField value="{!Proposed_Products__c.Custom__c}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.Product_Category__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Funding_Arrangement__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Product_Line__c}" required="false"/>
+                <!--<apex:inputField value="{!Proposed_Products__c.Jurisdiction__c}" required="false"/> -->
+                <!--<apex:inputField value="{!Proposed_Products__c.Plan_Name__c}" required="false"/>-->
+                
+                <apex:inputField value="{!Proposed_Products__c.Plan_Name__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Account_Specified_Drug_Product_Name__c}" required="false"/>
+                <!--<apex:inputField value="{!Proposed_Products__c.Rider__c}" required="false"/> -->
+               <!-- <apex:inputField value="{!Proposed_Products__c.Rebates_Withheld_by_CareFirst__c}" required="false" rendered="{!(if(BRFASO  = true, true, false))}"/> -->
+                <apex:inputField value="{!Proposed_Products__c.CareFirst_Formulary_Selection__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Accumulation_Period__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Exclusive_Specialty_Provider_Network__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.ExtraCare_Health_Care_Card__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Network__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Carve_Out_Integration__c}" required="false"/>
+                <!--<apex:inputField value="{!Proposed_Products__c.Product_Financial_Arrangement__c}" required="false"/> -->
+                <apex:inputField value="{!Proposed_Products__c.Related_Medical_Product__c}" required="false"/>
+                
+                <!--<apex:inputField value="{!Proposed_Products__c.Deductible__c}" required="false"/>-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Out_of_Pocket_Max__c}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.BRF_Account__c}" required="false"/> <!--T04-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Cafeteria__c}" required="false"/> -->
+                <!--<apex:inputField value="{!Proposed_Products__c.Rider__c}" required="false"/>  -->
+                <!--<apex:inputField value="{!Proposed_Products__c.Rider_Comments__c}" required="false"/> T07-->
+                <apex:inputField value="{!Proposed_Products__c.Sub_Group_Account__c}" required="false"/> <!-- T01 -->
+                
+                <apex:inputField value="{!Proposed_Products__c.Addition_to_Platform_Indicator__c}" required="false"/>
+
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Cost Share" columns="2">
+            
+                <apex:inputField value="{!Proposed_Products__c.Integrated_Deductible_Integrator__c}" required="false"/>    
+                <apex:inputField value="{!Proposed_Products__c.DeductibleAccumulatorMethod__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Integrated_OOP_Integration__c}" required="false"/> 
+                <apex:inputField value="{!Proposed_Products__c.Out_of_Pocket_Accumulator_Method__c}" required="false"/>
+                    
+            </apex:pageBlockSection>
+            
+
+            <apex:pageBlockSection title="Plan Specific Information" columns="2">
+                
+                <apex:inputField value="{!Proposed_Products__c.DiabeticSuppMandateApply__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Generic_Dispensing__c}" required="false" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,true,false),false)) || IF(DrugASO = true,true,false)}"/>
+                <apex:inputField value="{!Proposed_Products__c.Generic_Step_Therapy__c}" required="false" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,true,false),false)) || IF(DrugASO = true,true,false)}"/>
+                <apex:inputField value="{!Proposed_Products__c.Maintenance_Choice__c}" required="false" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,true,false),false)) || IF(DrugASO = true,true,false)}"/>    
+                <apex:inputField value="{!Proposed_Products__c.MailOrdDispnsMaintDaysSupp__c}" required="false" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,true,false),false)) || IF(DrugASO = true,true,false)}"/>
+                <apex:inputField value="{!Proposed_Products__c.MailOrdDispnsNMaintDaysSupp__c}" required="false" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,true,false),false)) || IF(DrugASO = true,true,false)}"/>
+                <apex:inputField value="{!Proposed_Products__c.OralChemoMandateApply__c}" required="false" />
+                <apex:inputField value="{!Proposed_Products__c.Other_Requirements__c}" required="false" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,true,false),false)) || IF(DrugASO = true,true,false)}"/>               
+                <apex:inputField value="{!Proposed_Products__c.TierCount__c}" required="true" />
+                <apex:inputField value="{!Proposed_Products__c.Prior_Authorization__c}" required="false" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,true,false),false)) || IF(DrugASO = true,true,false)}"/>
+                <apex:inputField value="{!Proposed_Products__c.Formulary_Picklist__c}" required="true" rendered="True"/>
+                <apex:inputField value="{!Proposed_Products__c.Preventive_Drugs_Copay_Amount__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Integrated_Carved_Out_Vendor__c}" required="false"/>
+                
+                <apex:outputField value="{!Proposed_Products__c.Generic_Step_Therapy__c}" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,false,true),true)) && IF(DrugASO = False,true,false)}" />
+                <apex:outputField value="{!Proposed_Products__c.Generic_Dispensing__c}" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,false,true),true)) && IF(DrugASO = False,true,false)}" />
+                <apex:outputField value="{!Proposed_Products__c.Prior_Authorization__c}" rendered="{!(IF(skeletonplan =True ,IF( Drugrisk =True,false,true),true)) && IF(DrugASO = False,true,false)}" />
+                
+            </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+        <apex:pageBlock title="Proposed Products Edit" id="dental" rendered="{!isDental}"  mode="edit">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <!--Commented button to stop PCS call as per US1650-->
+               <!-- <apex:commandButton value="Save & Get Benefits" action="{!saveandGetBenefits}" rendered="{!hasBnefitSummary}"/> -->
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+
+
+            <apex:pageBlockSection title="Information" columns="2">
+                <!--<apex:inputField value="{!Proposed_Products__c.Name}" required="false"/>-->
+                
+                <apex:inputField value="{!Proposed_Products__c.Benefit_Request_Form__c}" required="true"/>
+                <apex:outputField value="{!Proposed_Products__c.RecordTypeid}" />
+                <!--<apex:inputField value="{!Proposed_Products__c.Custom__c}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.Product_Category__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Funding_Arrangement__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Product_Line__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Plan_Name__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Related_Medical_Product__c}" required="false"/>
+                <!--<apex:inputField value="{!Proposed_Products__c.Rider__c}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.Cafeteria__c}" required="false"/> <!--T05-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Rider__c}" required="false"/> 
+                <apex:inputField value="{!Proposed_Products__c.Rider_Comments__c}" required="false"/> T07-->
+                <apex:inputField value="{!Proposed_Products__c.BRF_Account__c}" required="false"/> <!--T04-->
+                <apex:inputField value="{!Proposed_Products__c.Sub_Group_Account__c}" required="false"/>  <!--T04 -->
+            </apex:pageBlockSection>
+
+
+            <apex:pageBlockSection title="Dental" columns="2">
+                <apex:inputField value="{!Proposed_Products__c.PDPD_ID__c}" required="false"/> <!--T05-->
+                <apex:inputField value="{!Proposed_Products__c.Employer_Arrangement__c}" required="true"/> 
+                <apex:inputField value="{!Proposed_Products__c.Benefits_Renew__c}" required="false"/> <!--T05-->
+                <apex:inputField value="{!Proposed_Products__c.Comments__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Deductible_Applies__c}" required="false"/> <!--T05-->
+                <apex:inputField value="{!Proposed_Products__c.Orthodontia_Endorsement__c}" required="false"/> <!--T05-->
+                <apex:inputField value="{!Proposed_Products__c.Account_Specified_Dental_Product_Name__c}" required="false"/> <!--T11-->
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+        
+    <!-------------------------------------------T03-Start----------------------------------------->
+        <apex:pageBlock title="Proposed Products Edit" id="vision" rendered="{!isVision}" mode="edit">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <!--Commented button to stop PCS call as per US1650-->
+               <!-- <apex:commandButton value="Save & Get Benefits" action="{!saveandGetBenefits}" rendered="{!hasBnefitSummary}"/> -->
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+
+
+            <apex:pageBlockSection title="Information" columns="2">
+                <!--<apex:inputField value="{!Proposed_Products__c.Name}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.Benefit_Request_Form__c}" required="true"/>
+                <apex:outputField value="{!Proposed_Products__c.RecordTypeid}" />
+                <!--<apex:inputField value="{!Proposed_Products__c.Custom__c}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.Product_Category__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Funding_Arrangement__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Product_Line__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Plan_Name__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Related_Medical_Product__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.BRF_Account__c}" required="false"/> <!--T04-->
+                <!--<apex:inputField value="{!Proposed_Products__c.Rider__c}" required="false"/> -->
+                <apex:inputField value="{!Proposed_Products__c.Cafeteria__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Addition_to_Platform_Indicator__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Sub_Group_Account__c}" required="false"/>  <!--T01 -->
+            </apex:pageBlockSection>
+
+
+            <apex:pageBlockSection title="Vision" columns="2">
+                <apex:inputField value="{!Proposed_Products__c.Account_Specified_Vision_Product_Name__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.Employer_Arrangement__c}" required="true"/>
+                <apex:inputField value="{!Proposed_Products__c.Vision_Comments__c}" required="{!Proposed_Products__c.Vision_Benefit_Period__c=='Other'}"/>
+                <apex:inputField value="{!Proposed_Products__c.Vision_Benefit_Period__c}" required="false"/>
+                <apex:inputField value="{!Proposed_Products__c.X05_Options__c}" required="false"/>
+                <!--<apex:inputField value="{!Proposed_Products__c.Type__c}" required="false"/>-->
+                <apex:inputField value="{!Proposed_Products__c.X06_Renewal_Period__c}" required="false"/>
+                <br></br>
+                <apex:inputField value="{!Proposed_Products__c.X07_Benefit_Renews__c}" required="false"/>
+                <br></br>
+                <apex:inputField value="{!Proposed_Products__c.X08_Renewal_Type__c}" required="false"/>
+                
+                
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+        
+    <!-------------------------------------------T03-END----------------------------------------->
+   
+        <apex:pageBlock title="Proposed Products" id="privateExhange" rendered="{!isPrivateExchange}">
+
+        <apex:pageBlockSection title="Information" columns="2">
+            <apex:outputField title="Proposed Products Id" value="{!Proposed_Products__c.Name}"/>
+            <apex:outputField title="Product Category" value="{!Proposed_Products__c.Product_Category__c}"/>
+            <apex:outputField title="Benefit Request Form" value="{!Proposed_Products__c.Benefit_Request_Form__c}"/>
+            <apex:outputField title="Funding Arrangement" value="{!Proposed_Products__c.Funding_Arrangement__c}"/>
+            <!--<apex:outputField title="Custom" value="{!Proposed_Products__c.Custom__c}"/>-->
+            <apex:outputField title="Exchange Package Option" value="{!Proposed_Products__c.Exchange_Package_Option__c}"/>
+            <apex:outputField title="ARC Approved" value="{!Proposed_Products__c.ARC_Approved__c}"/>
+            <apex:inputField value="{!Proposed_Products__c.BRF_Account__c}" required="false"/> <!--T04-->
+            <apex:outputField title="Plan Name" value="{!Proposed_Products__c.Plan_Name__c}"/>
+            <apex:inputField value="{!Proposed_Products__c.Sub_Group_Account__c}" required="false"/> <!-- T01 -->
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Private Exchange Section" columns="2">
+            <apex:outputField title="Blue Rewards" value="{!Proposed_Products__c.Blue_Rewards__c}"/>
+            <apex:outputField title="Exchange CDH Type" value="{!Proposed_Products__c.Exchange_CDH_Type__c}"/>
+            <apex:outputField title="Exchange CDH Fund Type" value="{!Proposed_Products__c.Exchange_CDH_Fund_Type__c}"/>
+            <apex:outputField title="Comments" value="{!Proposed_Products__c.Comments__c}"/>
+        </apex:pageBlockSection>
+
+
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

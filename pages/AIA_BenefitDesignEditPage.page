@@ -1,0 +1,94 @@
+<!--====================================================================================================================
+* Date         : 10/28/2016
+* Developer    : Harsha
+* Purpose      : visualforce page, AIA_BenefitDesignEditPage, for adding BD under implementation.
+*=====================================================================================================================
+*                                 Update History
+* -----------------------------------------------------------------------------------------------------------------
+* Date       | Developer      | Tag |     Description
+*============+============+===========================================================================================
+* 10/28/2016 | Harsha         |     | Initial Version                                         
+* 02/27/2017 | Ramakrishna    | T01 | Added logic to hide the section when  error message true (incase of 2nd DB adding for Implementation) 
+* 01/29/2018 | Satya          | T02 | Made changes to the page to have lightning look & feel by adding slds tags. Also it conditionally
+*                                     displays VF page as per the user interface
+* 03/14/2018 | Debkanti		  | T03 | Made changes to lookup field to works like lightning.
+* 03/14/2018 | Raviteja		  | T04 | Made changes to disable button to avoid multiple creation of record
+* 11/08/2018 | Raviteja		  | T05 | added dummy recordsetvar
+*============+============+===========================================================================================
+-->
+<apex:page standardController="AIA_Benefit_Design__c" recordSetVar="a" extensions="AIA_BenefitDesignEditPageController" lightningStylesheets="{!!isClassic}" >
+    <!-- T04 start-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+     function checkdisable(){
+     	if(!showError){
+       		$('.savebtn').css("pointer-events", "none");
+         }
+     else{
+            $('.savebtn').css('pointer-events','auto');
+     }
+     }
+     function btndisable(){
+       		$('.savebtn').css("pointer-events", "none");
+         }
+     </script>
+    <!-- T04 End-->
+<apex:slds rendered="{!!isClassic}" />
+        
+    <style>
+        body input[type="text"], .slds-scope input[type="text"] {
+    min-width: 9rem; }
+    </style>
+    <apex:form >
+                     <!-- Start T01 -->
+                           <div class="slds-scope">
+                                 <div class="slds-p-left--large slds-p-top_x-large slds-p-bottom_x-large slds-text-body--regular">
+                                   <apex:pageMessages />
+                                </div>
+                           </div>
+
+         <!-- End T01 -->  
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="top">
+            <apex:outputPanel rendered="{!!isClassic}"> <!--T02 Changes start-->
+            <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center" >
+                <apex:commandButton rendered="{!!showError}" action="{!save}" onclick="btndisable()" value="Save"  styleClass="slds-button slds-button_neutral savebtn" />    <!-- T01 added Rendered condition-->
+                                <!-- Start T01 removed this button as only 1 BD is allowed per implementation-->
+             <!--   <apex:commandButton rendered="{!!showError}" disabled="{!showError}" action="{!saveandNew}" value="Save & New"/> -->  
+                                <!-- End T01 removed this button as only 1 BD is allowed per implementation-->
+                <apex:commandButton action="{!cancel}" value="Back to Implementation" styleClass="slds-button slds-button_neutral" />
+                </div>
+            </apex:outputPanel> <!--T02 Changes end-->
+            
+            <apex:outputPanel rendered="{!isClassic}">
+            <apex:commandButton rendered="{!!showError}" action="{!save}"  onclick="btndisable()"  value="Save" styleclass="savebtn"/>    <!-- T01 added Rendered condition-->
+                                <!-- Start T01 removed this button as only 1 BD is allowed per implementation-->
+             <!--   <apex:commandButton rendered="{!!showError}" disabled="{!showError}" action="{!saveandNew}" value="Save & New"/> -->  
+                                <!-- End T01 removed this button as only 1 BD is allowed per implementation-->
+                <apex:commandButton action="{!cancel}" value="Back to Implementation"/>
+            </apex:outputPanel>
+            </apex:pageBlockButtons> 
+              
+            <!-- T03 Start -->
+            <!--<apex:pageBlockSection title="INFORMATION" rendered="{!!showError && !isClassic}" columns="2">  
+             
+                    <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="AIA_Implementation__c" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Implementation" SetValueToField="{!benefitDesign.Implementation__c}" SetNameToField="{!implementationName}"/>
+                 
+                    <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="Account" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Account" SetValueToField="{!benefitDesign.Account__c}" SetNameToField="{!accountName}"/>
+               
+                    <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="Benfit_Request_Form__c" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Benfit Request Form" SetValueToField="{!benefitDesign.Benefit_Request_Form__c}" SetNameToField="{!benefitRequestFormName}"/>
+                  
+                    <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="Account" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Parent Account" SetValueToField="{!benefitDesign.Parent_Account__c}" SetNameToField="{!parentAccountName}"/>
+                  
+            </apex:pageBlockSection> -->
+            <!-- T03 End -->
+            <apex:pageBlockSection title="INFORMATION" rendered="{!!showError}" columns="2">  <!-- T01 added Rendered condition-->
+                <apex:inputfield value="{!benefitDesign.Implementation__c}" />
+                <apex:inputfield value="{!benefitDesign.Account__c}" /> 
+                <apex:inputfield value="{!benefitDesign.Benefit_Request_Form__c}" /> 
+                <apex:inputfield value="{!benefitDesign.Parent_Account__c}" /> <!--Added by Asif. 27Feb2016. Story 3416-->
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

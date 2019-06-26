@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Contracts__c</fullName>
+        <description>Holds the current Termed Contract count for 51+.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Holds the current Termed Contract count for 51+.</inlineHelpText>
+        <label>Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Groups__c</fullName>
+        <description>Holds the current value of Termed Groups for 51+.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Holds the current Termed Contract count for 51+.</inlineHelpText>
+        <label>Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jurisdiction__c</fullName>
+        <description>Jurisdiction to which the total pertains.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Jurisdiction to which the total pertains.</inlineHelpText>
+        <label>Jurisdiction</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <description>Holds the current # of Termed Contracts and Groups for 51+.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Enrollment Summary 51+ Terms</label>
+    <visibility>Public</visibility>
+</CustomObject>

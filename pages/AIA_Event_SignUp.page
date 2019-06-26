@@ -1,0 +1,29 @@
+<!-- 
+*============================================================================================
+* Date         : 01/21/2018
+* Developer    : Rajesh Pennam
+* Purpose      : This page is called when a button is clicked on Event object called Sign up. 
+*                It adds the user who is clicking the button as an attendee to the event.
+*============================================================================================
+*                                 Update History
+*                                 ---------------
+* Date          Developer         Tag       Description
+*============================================================================================
+* 01/26/2018 | Rajesh Pennam    | T01   | Intial Development. 
+*============================================================================================
+-->
+
+<apex:page standardcontroller="Event" extensions="AIA_EventSignUpExtn" lightningStylesheets="{!!isClassic}" action="{!SignUpOnload}">
+    <apex:slds rendered="{!!isClassic}"/> 
+    <div class="slds-scope"> 
+      <apex:pageMessages ></apex:pageMessages>
+        <apex:outputPanel id="redirectPanel" >
+            <apex:outputText rendered="{!shouldRedirect}">
+                     <h3> Redirecting... </h3>
+                <script type="text/javascript">
+                    window.top.location.href = '{!redirectUrl}';
+                </script>
+            </apex:outputText>
+        </apex:outputPanel>
+    </div>
+</apex:page>

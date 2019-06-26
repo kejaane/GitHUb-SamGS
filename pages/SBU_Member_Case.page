@@ -1,0 +1,622 @@
+<!--
+// ========================================================================================
+//   Date: 07/24/2016
+//   Developer: Ashish Ojha (AO)
+//   Purpose: This page will be displayed when a user choses SBU_Member type case. The new Button 
+// will redirect to this page when the Member case record type is selected. This Page calls 
+// SBU_Member_Case_Controller which will help retrieve subscriber data into the case
+// ========================================================================================
+//                  Update History
+// Date         Developer            Description
+// ========================================================================================
+// 01/15/17   | Ashish Ojha AO          | Updated display of member eligibility section to show as output panel instead of a data table 
+                                           because the volume of data would increase as we query historical data
+// 3/21/17    | Laveen Kattela (LK)     | Updated To & From Date range filter,Vertical scroll bar,
+//                                        Auto-population of date ranges and Member Id Card section Code
+// 05/15/17   | Ashish Ojha AO          | Updated to comment out those itmes that are not as part of deployment for 06/23/17 
+//                                        deployment
+// ========================================================================================
+-->
+
+<apex:page standardController="Case" extensions="SBU_Member_Case_Controller"  action="{!getRedir}" sidebar="False" showHeader="false" >
+<!--
+    <script >   
+        function EligibilityRef(radioButton,radioid) {
+            alert('PlanID    : ' + radioButton); 
+            callCreateCase(radioButton);
+           <!-- return false; 
+        }
+    </script>
+    -->
+ <style>
+    /* This is for the full screen DIV */
+    .popupBackground {
+        /* Background color */
+        background-color:black;
+        opacity: 0.20;
+        filter: alpha(opacity = 20);
+    
+        /* Dimensions */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 998;
+        position: absolute;
+        
+        /* Mouse */
+        cursor:wait;
+    }
+    
+        div.container {
+            width: 80%;
+        }
+        .ch{
+        text-align:center;
+        }
+        .chrigh{
+        text-align:right;
+        }
+        .dataTables_wrapper .dataTables_length{
+            float:right;
+            //margin-right:800px;
+        }
+        .dataTables_wrapper .dataTables_filter{
+            float:left;
+        }
+        
+        
+    
+ 
+    /* This is for the message DIV */
+    .PopupPanel {
+        /* Background color */
+        border: solid 2px #ffba1a;
+        background-color: white;
+ 
+        /* Dimensions */
+        left: 54%;
+        width: 200px;
+        margin-left: -100px;
+        top: 50%;
+        height: 75px;
+        margin-top: -25px;
+        z-index: 999;
+        position: fixed;
+        
+        /* Mouse */
+        cursor:pointer;
+    }
+    .tresults{
+        
+    }
+    .apexp,
+    #elgTable{
+        width: 100% !Important;
+    }
+</style>    
+    <apex:actionStatus id="myStatus" stopText="">
+        <apex:facet name="start">
+            <div>
+                <div class="popupBackground" />
+                <div class="PopupPanel">
+                    <table  border="0" bordercolor="red"  width="100%" height="100%">
+                        <tr>
+                            <td align="center"><b>Please Wait</b></td>
+                        </tr>
+                        <tr>
+                            <td valign="center" align="center"><img src="{!$Resource.Progressbar}"/></td>
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </apex:facet>
+    </apex:actionStatus>
+    
+<!-- redeirect method to redirect a case to generic page when the record type selected is not Sbu_Member_case -->
+    <apex:form id="frm"> <!-- the entire form is given an id named frm this is the tag name for this form-->
+    <!-- jQuery lib -->
+        <apex:includescript value="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"/>
+        <apex:includeScript value="{!URLFOR($Resource.daterange, 'jquery-ui.js')}"/>                
+        <apex:stylesheet value="{!URLFOR($Resource.daterange, 'jquery-ui.css')}"/>
+    
+    <!-- tableSorter lib -->
+        <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/js/jquery.tablesorter.min.js"/>
+        <apex:stylesheet value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/css/theme.blue.css"/>
+        
+        <!-- datatables.net lib -->
+        <apex:includeScript value="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"/>
+        <apex:stylesheet value="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"/>
+    
+    <apex:actionFunction action="{!createCase}" name="grpVal"  reRender="frm,members,pbs" status="myStatus">
+        <apex:param value="{!selectGroup}" name="group" assignTo="{!selectGroup}"/>
+    </apex:actionFunction>
+    <apex:actionFunction action="{!setEligibility}" name="caseVal"  reRender="MemDetail,MemElg,frm,grp,jsPanel" status="myStatus"/>  
+
+    <apex:actionFunction action="{!assignEligibility}"  name="callCreateCase" reRender="MemDetail,MemElg,frm" status="myStatus">
+        <apex:param value="{!planid}" name="plan" assignTo="{!planid}"/>
+             <!-- as soon as u use action function it will refresh but we are using empty outputpanel to not refresh or else we lose the checked radio button-->
+    </apex:actionFunction>
+    <!-- action attribute has the responsibility to redirect to a standard page or a custom page  -->
+        <apex:pageBlock id="pgb"> <!-- Every tag creates its  own area and used to call this particual pageblock-->
+        <apex:pagemessages id="errorid" showDetail="false"/> <!-- this is just an error message -->
+            <apex:pageBlockSection title="Search Members" columns="3"> <!-- are giving a title to the page block section-->
+                                     
+                  <apex:inputfield label="Subscriber ID *" value="{!casRec.Subscriber_ID__c}" />
+
+                  <!--so in the controller class the the inputted value of Subriber id -->   
+                  <apex:commandButton value="Get Data" action="{!callWithSubscriberId}" reRender="pgb" status="myStatus"/>
+                  <!-- upon Clicking the 'Get data' callWithSubscriberId method which exists inside the class will be called and 
+                                 by rerender we are refreshing the case and showing the data retrieved from the wrapper class -->
+                     
+            </apex:pageBlockSection>
+            
+            
+            
+            <apex:pageblockSection id="pbsgrp" columns="1" > 
+             
+                <apex:pageblockTable value="{!lstSubscriber}" id="subsTable" var="Subs" rendered="{!isGroup}">
+                         <apex:column id="clm">
+                             <apex:facet name="header">Action</apex:facet>
+                             <input type="radio" name="plan" value="{!Subs.GroupID}"  onchange="grpVal(this.value);return false;"/> 
+                         </apex:column>
+                          <apex:column value="{!Subs.GroupId}" headerValue="Group ID"/>
+                        <apex:column value="{!Subs.groupName}" headerValue="Group Name"/>
+                        <apex:column value="{!Subs.subscriberFirstName}" headerValue="First Name"/>
+                        <apex:column value="{!Subs.subscriberLastName}" headerValue="Last Name"/>
+                        <apex:column value="{!Subs.subscriberCity}" headerValue="City"/>
+                        <apex:column value="{!Subs.subscriberState}" headerValue="State"/>
+                        <apex:column value="{!Subs.subscriberZip}" headerValue="Zip"/>
+                        <apex:column value="{!Subs.subEligibilityIndicator}" headerValue="Eligibility"/>
+                        <apex:column headerValue="Original Effective Date"> 
+                            <apex:outputText value="{!left(Subs.subOrgEffectiveDate,10)}"> </apex:outputText>
+                        </apex:column>
+                        <apex:column value="{!Subs.subOriginalSubscriberID}" headerValue="Orig Sub ID" />
+                        
+
+                    </apex:pageblockTable>
+                </apex:pageblockSection>  
+             
+                
+           <apex:pageblockSection id="pbs" >   
+                <apex:pageBlockSectionItem rendered="{!isTable}" id="members" >
+                <!-- rendered means either to show a table or not to show the table. Since we are doing !istable initially the table will not be shown
+                only after clicking get data we make the table visible --> 
+                
+                <apex:outputLabel >Members *</apex:outputLabel> 
+                    <apex:selectList multiselect="false" size="1" value="{!selectMember}" onchange="caseVal();">
+                    <!-- we are showing the unique value of that picklist  and is populated with 'lstwrap'-->
+                        <apex:selectOptions value="{!lstWrap}"></apex:selectOptions>                         
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+          <!-- AO begin -05/15/17 - this section is to be uncommented when we are ready with the functionility for member id card request
+                  <apex:pageBlockSectionItem rendered="{!isTable}" id="membersidcard" >
+                    <apex:outputLabel title="Please check the checkbox if this is a Member ID Card request" >Members Id Card Request</apex:outputLabel>
+                     <apex:outputpanel id="checkbx">
+                    <apex:inputCheckbox value="{!casRec.Member_ID_Card__c}"/>
+                         <apex:actionSupport event="onchange"  rerender="midsect" />
+                    </apex:outputpanel>
+                </apex:pageBlockSectionItem>
+                
+                
+         AO - end -    uncomment untill here   -->  
+            
+             
+                </apex:pageblockSection>
+               
+                
+                <apex:variable var="i" value="{!0}"/>
+
+                
+                <apex:pageBlockSection rendered="{!isEligibilityTable }" title="Eligibility Selection" columns="1" collapsible="True">
+                
+                <apex:outputlabel rendered="{!if(lstEligibility.size >0,false,true)}"> No Records To Display</apex:outputlabel>
+                    <tr>                       
+                       <td>
+                        <div>       
+                            <label for="from" style="margin-left:20px;"> Date From : </label>      
+                            <input class="dp" type="text" id="from"   name="from"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+                            <label for="to"> Date To : </label>        
+                            <input class="dp" type="text" id="to" name="to"/>       
+                        </div>      
+                       </td>       
+                    </tr>
+                        
+                   <!-- AO changes O1/15/2017 Updated display of eigibility section to show as output panel instead of a data table 
+                   because the volume of data would increase as we query historical data -->          
+                   <apex:outputPanel id="thePanel" layout="block" rendered="{!if(lstEligibility.size >0,true,false)}">
+                   
+ 
+                            <table id="elgTable"  cellspacing="0" style="width:100%" >
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Eligibility Description</th>
+                                        <th>Product</th>
+                                        <th>Effective Date</th>
+                                        <th>Termination Date</th>
+                                        <th>Plan ID</th>
+                                        <th>Plan Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    
+                                    <apex:repeat value="{!lstEligibility}" var="Eligibility" id="theRepeat">
+                                        <tr>
+                                            <td>
+                                            <input type="radio" name="plan" value="{!i}"  onchange="callCreateCase(this.value);return false;"/> 
+                                            <apex:variable var="i" value="{!i+1}"/>
+                                            </td>
+                                            <td>{!Eligibility.memProcessEligIndDesc}</td>
+                                            <td>{!Eligibility.productCategoryDescription}</td>
+                                            <td>{!Eligibility.effectiveDate}</td>
+                                            <td>{!Eligibility.terminationDate}</td>
+                                            <td>{!Eligibility.classPlanID}</td>
+                                            <td>{!Eligibility.planDescription}</td>                                         
+                                        </tr>
+                                    </apex:repeat>
+                                    
+                                </tbody>
+                            </table>
+                            
+                        </apex:outputPanel>
+                 <!-- AO changes End -->
+                </apex:pageBlocksection>
+                <!-- AO begin -05/15/17 - this section is to be uncommented when we are ready with the functionility for member id card request
+                <apex:outputPanel id="midsect">
+                    <apex:pageBlockSection title="Member Id Card" columns="1"  rendered="{!casRec.Member_ID_Card__c}" >
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel title="Please enter a 'Effective Date' not greater than 62 days in Future" >Effective Date*</apex:outputLabel>
+                                <apex:outputPanel >
+                                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                                    <apex:outputPanel layout="block" styleClass="requiredBlock"/>                           
+                                    <apex:inputField value="{!casRec.Effective_Date_Member_ID_Card__c}"  />  
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Type*</apex:outputLabel>
+                                <apex:outputPanel >
+                                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                                    <apex:outputPanel layout="block" styleClass="requiredBlock"/>                           
+                                    <apex:inputField value="{!casRec.Type_of_Request__c}" />  
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel >Category*</apex:outputLabel>
+                                <apex:outputPanel >
+                                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                                    <apex:outputPanel layout="block" styleClass="requiredBlock"/> 
+                                    <apex:inputField value="{!casRec.Category__c}"  /> 
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                            
+                            
+                            
+                         
+                     </apex:pageBlockSection>
+                 </apex:outputPanel>
+         AO - end -    uncomment untill here    -->
+         
+                <apex:pageBlockSection title="Member Detail" columns="2" id="MemDetail" >
+                    <apex:outputField value="{!casRec.Subscriber_ID__c}"  />  
+                    <apex:outputField value="{!casRec.M_Street__c}" />
+                    <apex:outputField value="{!casRec.M_First_Name__c}"  />
+                    <apex:outputField value="{!casRec.M_City__c}" />
+                    <apex:outputField value="{!casRec.M_Last_Name__c}" />
+                    <apex:outputField value="{!casRec.M_State__c}" />
+                    <apex:outputField value="{!casRec.M_Relationship__c}" />
+                    <apex:outputField value="{!casRec.M_Country__c}" />  
+                    <apex:outputField value="{!casRec.M_ID__c}" />
+                    <apex:outputField value="{!casRec.M_Zip_Code__c}" />                   
+                    <apex:outputField value="{!casRec.M_Age__c}" />
+                    <apex:outputField value="{!casRec.M_Phone__c}" />
+                    <apex:outputField value="{!casRec.M_Date_of_Birth__c}" />
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Other Members Associated To Case" columns="2">
+                <apex:inputField value="{!casRec.Related_Relationships__c}" />
+                </apex:pageBlockSection>
+                
+                
+                <apex:pageBlockSection title="Member Eligibility Information" columns="2" id="MemElg" >
+                    
+                    <apex:outputField value="{!casRec.E_Description__c}" />
+                    <apex:outputField value="{!casRec.E_Effective_date__c}" />
+                    <apex:outputField value="{!casRec.E_Product__c}" />
+                    <apex:outputField value="{!casRec.E_Termination_date__c}" />
+                    <apex:outputField value="{!casRec.E_Plan_ID__c}" />
+                    <apex:outputField value="{!casRec.E_Plan_Description__c}" />
+                    
+                </apex:pageBlockSection>
+                 <apex:pageBlockSection title="Contact Info" columns="2">                    
+                    <apex:inputField value="{!casRec.Contact_Type__c}"  /> 
+                    <apex:inputField value="{!casRec.Status}" Label="Status" required="true"/>
+                    <apex:inputField value="{!casRec.ContactID}" label="Contact Name" />                  
+                    <apex:outputText value="{!casRec.Market_Segment__c}" label="Market Segment"/>              
+                    <apex:outputField value="{!casRec.Contact.Phone}" label="Contact Phone" />
+                    <apex:outputField value="{!casRec.Contact.Email}" label="Contact Email"/>
+                    <apex:pageBlockSectionItem > </apex:pageBlockSectionItem> 
+                                                          
+                  
+                 </apex:pageBlockSection>
+                   
+                   <apex:pageBlockSection title="Group Information" columns="2" id="grp">
+                     <apex:inputField value="{!casRec.Group__c}"  />
+                     <apex:inputField value="{!casRec.New_Group_ID__c}"/> 
+                     <apex:outputField value="{!casRec.Group_ID__c}"/>
+                </apex:pageBlockSection>
+                
+                 
+                 <apex:pageBlockSection title="Broker Information" columns="2">                    
+                  
+                    <apex:inputField value="{!casRec.Broker_Agent__c}"/>
+                    <apex:inputField value="{!casRec.Broker_Agency__c}" label="Broker Agency"/>
+                    <apex:inputField value="{!casRec.Broker_ID__c}" label="Broker ID"/>
+                    <apex:inputField value="{!casRec.FSPGP__c}" label="FSP/GP"/>                  
+                    <apex:OutputText value="{!casRec.Broker_Agent__r.Phone}" label="Broker Phone"/>                
+                    <apex:OutputField value="{!casRec.FSP_GP_ID__c}" Label="FSP/GP ID" />                    
+                    <apex:OutputField value="{!casRec.Broker_Agent__r.Email}"/> 
+                     
+                 </apex:pageBlockSection>
+                 
+                 
+               
+                
+                <apex:pageBlockSection title="Case Information" columns="2">
+                  
+                  <apex:OutputField value="{!CasRec.RecordTypeID}"/>   
+                  <apex:OutputText value="{!casRec.Broker_Status__c}"/>
+                  <apex:outputField value="{!casRec.ownerId}" />
+                  <apex:inputField value="{!casRec.Priority}" />
+                  <apex:inputField value="{!casRec.CaseNumber}"/>
+                  <apex:inputField value="{!casRec.SLA_Category__c}" label="SLA Category *"/> 
+
+                  <apex:inputField value="{!casRec.origin}" label="Origin *" />  
+                  <apex:inputField value="{!casRec.Broker_Service_Team__c}" label="Broker Service Team *" />  
+                  <apex:inputField value="{!casRec.Subject}" label="Subject *" />
+           <!-- Duplicate case is not part of this relese and will be commented out until further notice 
+                  <apex:inputField value="{!casRec.Duplicate_Case__c}" /> 
+                                    <apex:pageBlockSectionItem > </apex:pageBlockSectionItem> 
+                  <apex:inputField value="{!casRec.parentid}" /> 
+            -->      
+                   <apex:pageBlockSectionItem > </apex:pageBlockSectionItem> 
+                  <apex:inputField value="{!casRec.Description}" label="Description *" style="width: 200px; height: 80px" />
+
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Facets Fields" columns="2">
+                  
+                  <apex:OutputField value="{!casRec.Facets_case_ID__c}"/>   
+                  <apex:OutputText value="{!casRec.Facets_Status__c}"/>
+                  <apex:inputField value="{!casRec.Facets_Subject__c}" label=" Facets Subject *"/>
+                  <apex:inputField value="{!casRec.Routed_To__c}"/>
+                  <apex:inputField value="{!casRec.Facets_Category__c}" label=" Facets Category *"/>
+                  <apex:inputField value="{!casRec.Routed_To_Description__c}"/>
+                  
+                </apex:pageBlockSection>
+                
+                 <apex:pageBlockSection title="Description Information" columns="2">
+                    
+                   
+
+                  <apex:inputfield value="{!casRec.Resolution_Reason_Code__c}"/>
+                  <apex:pageBlockSectionItem > </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!casRec.Reason__c}" label="Internal Reason Code"/>
+                  <apex:pageBlockSectionItem > </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!casRec.Resolution_Reason__c}" style="width: 200px; height: 80px"/>
+                  <apex:pageBlockSectionItem > </apex:pageBlockSectionItem>
+                  <apex:outputField value="{!casRec.CreatedbyId}"/>
+                  <apex:outputField value="{!casRec.Received_Date__c}"/>
+                  <apex:outputField value="{!casRec.ClosedDate}"/>
+                  <apex:outputField value="{!casRec.LastModifiedByid}"/>
+                 
+                </apex:pageBlockSection>
+                
+                  <apex:pageBlockButtons >
+                    <apex:commandbutton action="{!assignPlan}" value="Save"/>
+                    <apex:commandButton action="{!cancel}" value="Cancel"/>
+                  </apex:pageBlockButtons>
+                
+                
+               
+              
+              
+        </apex:pageBlock>
+        
+        <apex:outputPanel id="jsPanel">
+            <script>
+             $( ".dp" ).datepicker({        
+                    inline: true,       
+                    dateFormat: "mm/dd/yy"      
+                });     
+                        
+                $.fn.dataTable.ext.search.push(         
+                    function( settings, data, dataIndex ) {     
+                        console.log('*******');     
+                         var iFini = $("#from").val() //document.getElementById('from').value;      
+                         console.log(iFini);        
+                         var iFfin = $("#to").val() //document.getElementById('to').value;      
+                         //var iStartDateCol = 4; 
+                         var iStartDateColeff = 3;    
+                         var iEndDateCol = 4; 
+                         var effCol = 3;    
+                         var tCol = 4; 
+                         var fdate = $("#from").val() 
+                         var tdate = $("#to").val()
+                         
+                         console.log(iFini);        
+                         console.log(iFini.substring(6,10)+' '+ iFini.substring(3,5)+' '+iFini.substring(0,2) );        
+                         iFini = iFini.substring(6,10)+iFini.substring(0,2)+iFini.substring(3,5);       
+                         iFfin = iFfin.substring(6,10)+iFfin.substring(0,2)+iFfin.substring(3,5); 
+                         fdate = fdate.substring(6,10)+fdate.substring(0,2)+fdate.substring(3,5);
+                         tdate = tdate.substring(6,10)+tdate.substring(0,2)+tdate.substring(3,5);                        
+                         console.log("from date***"+fdate);        
+                         console.log("toDate***"+tdate);        
+                                
+                         //var datofini=data[iEndDateCol].substring(6,10)+ data[iEndDateCol].substring(0,2) + data[iEndDateCol].substring(3,5); 
+                         //var datofeff=data[iStartDateColeff].substring(6,10)+ data[iStartDateColeff].substring(0,2) + data[iStartDateColeff].substring(3,5);
+                         var effDate=data[effCol].substring(6,10)+ data[effCol].substring(0,2) + data[effCol].substring(3,5); 
+                         var terDate=data[tCol].substring(6,10)+ data[tCol].substring(0,2) + data[tCol].substring(3,5);
+                         console.log("*eff date***"+effDate);
+                         console.log("*ter date***"+terDate);
+                         if(terDate ==="") 
+                         {
+                             return true;
+                         }    
+                         if ( fdate === "" || tdate === "" )        
+                        {       
+                            return true;        
+                        }       
+                        else        
+                        {       
+                                    
+                            if( fdate != "" && tdate != "")     
+                            {       
+                                    if(isBetween(fdate,tdate,effDate) ||isBetween(fdate,tdate,terDate) )
+                                    return true;
+                                    else if(isBetween(effDate,terDate,fdate) ||isBetween(effDate,terDate,tdate))
+                                    return true;
+                                    else{                                   
+                                        return false;
+                                    }
+                                    
+                                       
+                            }       
+                              
+                        }       
+                                
+                                
+                    }       
+                            
+                );
+                
+                function getLastDateOfMonth(Year,Month){
+                     return(new Date((new Date(Year, Month+1,1))-1));
+                 }
+                
+                $(document).ready(function() {
+                
+                     var d = new Date();
+                      var dm =(d.getMonth())-3 ;
+                      //alert(dm);
+                      d.setDate(1);
+                      d.setMonth(dm);
+                      
+                      var monvalue = d.getMonth();
+                      if(dm < 0)
+                      monvalue =monvalue +1;
+                     
+                     var std = ""+monvalue+"/"+d.getDate()+"/"+d.getFullYear();
+                     //alert("From : "+std);
+                     
+                     $( "#from" ).datepicker( "setDate", std  );
+                     
+                     var date = new Date();
+                     var d2 = new Date(date.getFullYear(), date.getMonth() + 2, 0);
+
+                                        
+                    //var std2 = ""+d2.getMonth()+"/"+d2.getDate()+"/"+d2.getFullYear();
+                    var mon2value = d2.getMonth();
+                    var yearvalue = d2.getFullYear();
+                    //if(mon2value != 11)
+                    mon2value = mon2value+1;
+                    
+                    
+                    
+                    var std2 = ""+mon2value+"/"+d2.getDate()+"/"+d2.getFullYear();
+                    $( "#to" ).datepicker( "setDate", std2);
+                     //alert(std2);
+                    console.log(" to date : "+std2);
+                    
+                    
+                
+                    var table = $("[id$='elgTable']").DataTable({
+                        "info":true,
+                         
+                        "bFilter":true,  
+                                                     
+                      //  "margin":"auto",
+                       "clear": "both",
+                       "border-collapse":"collapse",
+                       
+                      
+                       "word-wrap":"break-word",
+                        "autoWidth": true,
+                       "sPaginationType": "full_numbers",
+                       "paging":true,                       
+                       "scrollY":"200px",
+                        //"scrollX": true,
+                       "paging":true,
+                       "columnDefs": [{ width: 10, targets: 0 }],
+                       "fixedColumns": false,
+                        "order": [[1, 'asc']]
+                    });
+                    table.draw();       
+                        
+                            
+                    $( ".dp" ).datepicker({     
+                        inline: true,       
+                        dateFormat: "mm/dd/yy"      
+                    });     
+            
+                    var dateFormat = "mm/dd/yy",        
+                      from = $( "#from" )       
+                        .datepicker({       
+                                
+                          changeMonth: true,        
+                          numberOfMonths: 3     
+                        })      
+                        .on( "change", function() {     
+                          to.datepicker( "option", "minDate", getDate( this ) );        
+                        }),     
+                      to = $( "#to" ).datepicker({      
+                        defaultDate: "+1w",     
+                        changeMonth: true,      
+                        numberOfMonths: 3       
+                      })        
+                      .on( "change", function() {       
+                        from.datepicker( "option", "maxDate", getDate( this ) );        
+                      });       
+                        
+                    function getDate( element ) {       
+                      var date;     
+                      try {     
+                        date = $.datepicker.parseDate( dateFormat, element.value );     
+                      } catch( error ) {        
+                        date = null;        
+                      }     
+                        
+                      return date;      
+                    }       
+                            
+                    $('#from, #to').change( function() {        
+                        table.draw();       
+                        //alert($("#from").val());      
+                    } );
+                     
+                     
+                    
+                });
+                
+                function isBetween(stdate, enddate, currentDate)
+                {
+                        if (currentDate >= stdate && currentDate <= enddate ){
+                             return true;
+                        }
+                        else{
+                            return false;
+                        }
+                
+                }
+                
+             </script>
+         </apex:outputPanel>  
+    </apex:form>
+</apex:page>

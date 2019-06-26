@@ -1,0 +1,10 @@
+<apex:page standardController="Opportunity" extensions="SurveyContactsController" action="{!SurveyContactsController}" sidebar="false" showheader="false">
+<font size="3" color="blue"> <b> Refreshing Survey Contacts List . . .  </b> </font> 
+<!--    <apex:outputPanel id="refresh" rendered="true">    -->
+    <apex:outputPanel id="refresh1" rendered="{!refreshPage}">
+      <script>
+       window.top.location='/{!Opportunity.id}';
+      </script>
+    </apex:outputPanel>
+<!--    </apex:outputPanel>   -->
+</apex:page>

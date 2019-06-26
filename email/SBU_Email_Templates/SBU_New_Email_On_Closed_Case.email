@@ -1,0 +1,38 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">Dear {!Case.OwnerFirstName} ,</font></p><p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><br></font></p><p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">Closed Case#<span style="background-color: rgb(255, 255, 255);">{!Case.CaseNumber}&nbsp;</span>has a new email from {!Contact.Name}</font></p>
+
+
+
+
+
+
+
+
+<p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">Please review the case as necessary</font></p><p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">Detail Case Link : {!Case.Link}</font></p><p class="p2" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><br></font></p><p class="p2" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><br></font></p><p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">Thank You,</font></p><p class="p1" style="color: rgb(0, 0, 0);">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">SFDC Team</font></p><p class="p1" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">SFDCSupport@carefirst.com</font></p><p class="p1" style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

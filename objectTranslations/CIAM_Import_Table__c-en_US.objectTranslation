@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Agency_Agent_ID --></label>
+        <name>Agency_Agent_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency ID --></label>
+        <name>Agency_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Name --></label>
+        <name>Agency_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Type --></label>
+        <name>Agency_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent_First Name --></label>
+        <name>Agent_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent ID --></label>
+        <name>Agent_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Last Name --></label>
+        <name>Agent_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Middle Initial --></label>
+        <name>Agent_Middle_Initial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Name --></label>
+        <name>Agent_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Title --></label>
+        <name>Broker_Title__c</name>
+        <picklistValues>
+            <masterLabel>Assistant</masterLabel>
+            <translation><!-- Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Broker</masterLabel>
+            <translation><!-- Direct Broker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Broker</masterLabel>
+            <translation><!-- General Broker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Principal Broker</masterLabel>
+            <translation><!-- Principal Broker --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Email Address --></label>
+        <name>Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Federation ID --></label>
+        <name>Federation_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processed --></label>
+        <name>Processed__c</name>
+    </fields>
+    <fields>
+        <label><!-- User ID --></label>
+        <name>User_ID__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>CIAM Import Table</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CIAM Import Tables</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

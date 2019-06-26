@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Additional Benefit --></label>
+        <name>Additional_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- AnnualMaximumApplies Default --></label>
+        <name>AnnualMaximumApplies_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Annual Maximum Applies --></label>
+        <name>AnnualMaximumApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BDP Name --></label>
+        <name>BDPName__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF/ BD # --></label>
+        <name>BRF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Custom --></label>
+        <name>Benefit_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design Product --></label>
+        <name>Benefit_Design_Product__c</name>
+        <relationshipLabel><!-- Grouper --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Non-Standard --></label>
+        <name>Benefit_Non_Standard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cloned From --></label>
+        <name>Cloned_From__c</name>
+        <relationshipLabel><!-- Grouper --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance Additional Increment --></label>
+        <name>CoInsurance_AddIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance Default --></label>
+        <name>CoInsurance_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance High --></label>
+        <name>CoInsurance_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance Increment --></label>
+        <name>CoInsurance_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance Invalid Increment --></label>
+        <name>CoInsurance_InvalidIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance Low --></label>
+        <name>CoInsurance_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance --></label>
+        <name>CoInsurance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Davis String --></label>
+        <name>DavisString__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Deductible Applies Default --></label>
+        <name>DeductibleApplies_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Deductible Applies --></label>
+        <name>DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Type --></label>
+        <name>Group_Type__c</name>
+        <picklistValues>
+            <masterLabel>Benefit Group</masterLabel>
+            <translation><!-- Benefit Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost Share Group</masterLabel>
+            <translation><!-- Cost Share Group --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grouper Name Edited --></label>
+        <name>Grouper_Name_Edited__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouper Record Type --></label>
+        <name>Grouper_Record_Type__c</name>
+        <picklistValues>
+            <masterLabel>BDD</masterLabel>
+            <translation><!-- BDD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF</masterLabel>
+            <translation><!-- BRF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grouper RecordtypeName --></label>
+        <name>Grouper_RecordtypeName__c</name>
+    </fields>
+    <fields>
+        <label><!-- InNetwork Id --></label>
+        <name>InNetwork__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN IsCovered Default --></label>
+        <name>IsCovered_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN IsCovered --></label>
+        <name>IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+        <relationshipLabel><!-- Grouper --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- OON Annual MaximumApplies Default --></label>
+        <name>OON_AnnualMaximumApplies_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Annual MaximumApplies --></label>
+        <name>OON_AnnualMaximumApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON CoInsurance AddIncrement --></label>
+        <name>OON_CoInsurance_AddIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON CoInsurance Default --></label>
+        <name>OON_CoInsurance_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON CoInsurance High --></label>
+        <name>OON_CoInsurance_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON CoInsurance Increment --></label>
+        <name>OON_CoInsurance_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON CoInsurance InvalidIncrement --></label>
+        <name>OON_CoInsurance_InvalidIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON CoInsurance Low --></label>
+        <name>OON_CoInsurance_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON CoInsurance --></label>
+        <name>OON_CoInsurance__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON DavisString --></label>
+        <name>OON_DavisString__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON DeductibleApplies Default --></label>
+        <name>OON_DeductibleApplies_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON DeductibleApplies --></label>
+        <name>OON_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON IsCovered Default --></label>
+        <name>OON_IsCovered_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON IsCovered --></label>
+        <name>OON_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ONN Network Id --></label>
+        <name>OON_OutNetwork__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCS Grouper Id --></label>
+        <name>PCS_Grouper_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- PPName --></label>
+        <name>PPName__c</name>
+    </fields>
+    <fields>
+        <help><!-- The product category --></help>
+        <label><!-- Product Category --></label>
+        <name>Product_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Products --></label>
+        <name>Proposed_Products__c</name>
+        <relationshipLabel><!-- Grouper --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Grouper</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Grouper</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <fieldSets>
+        <label><!-- Include on Adjustment Summary --></label>
+        <name>Include_on_Adjustment_Summary</name>
+    </fieldSets>
+    <layouts>
+        <layout>BDP Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Grouper Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dental Fields --></label>
+            <section>Dental Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Benefit Design Product Record Type --></description>
+        <label><!-- BD Product --></label>
+        <name>BD_Product</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Proposed Product --></label>
+        <name>Proposed_Proposed</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- EBRF001: The Grouper cannot be modified after BRF has been submitted for ARC Approval. --></errorMessage>
+        <name>EBRF001</name>
+    </validationRules>
+</CustomObjectTranslation>

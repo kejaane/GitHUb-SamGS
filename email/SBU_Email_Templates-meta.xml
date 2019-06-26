@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>SBU Email Templates</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <role>SBU_Accounts_Service_Rep</role>
+        <role>SBU_Management</role>
+        <role>SBU_Service</role>
+        <role>SBU_Staff_and_Assistants</role>
+        <role>VicePresidentandStaffLaborSales</role>
+        <role>VicePresidentsandStaff</role>
+    </sharedTo>
+</EmailFolder>

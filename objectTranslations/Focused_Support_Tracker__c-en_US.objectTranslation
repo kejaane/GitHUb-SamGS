@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Assigned Desk --></label>
+        <name>Assigned_Desk__c</name>
+        <picklistValues>
+            <masterLabel>IT Desk</masterLabel>
+            <translation><!-- IT Desk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SME Desk</masterLabel>
+            <translation><!-- SME Desk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Focused Support Tracker (Assigned To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Benefit Coding</masterLabel>
+            <translation><!-- Benefit Coding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design</masterLabel>
+            <translation><!-- Benefit Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Testing</masterLabel>
+            <translation><!-- Benefit Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing</masterLabel>
+            <translation><!-- Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueFund</masterLabel>
+            <translation><!-- BlueFund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueRewards</masterLabel>
+            <translation><!-- BlueRewards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CareFirst Systems</masterLabel>
+            <translation><!-- CareFirst Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claims</masterLabel>
+            <translation><!-- Claims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Davis</masterLabel>
+            <translation><!-- Davis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit Card</masterLabel>
+            <translation><!-- Debit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EDC/Setup</masterLabel>
+            <translation><!-- EDC/Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employer Portal</masterLabel>
+            <translation><!-- Employer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment</masterLabel>
+            <translation><!-- Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facets Systems</masterLabel>
+            <translation><!-- Facets Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature Request</masterLabel>
+            <translation><!-- Feature Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure</masterLabel>
+            <translation><!-- Group Structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID Card</masterLabel>
+            <translation><!-- ID Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Materials</masterLabel>
+            <translation><!-- Marketing Materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration</masterLabel>
+            <translation><!-- Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyAccount</masterLabel>
+            <translation><!-- MyAccount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASCO Systems</masterLabel>
+            <translation><!-- NASCO Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business</masterLabel>
+            <translation><!-- New Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-Cycle Renewal</masterLabel>
+            <translation><!-- Off-Cycle Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Enrollment</masterLabel>
+            <translation><!-- Open Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sale</masterLabel>
+            <translation><!-- Pre-Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation><!-- Rates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlements</masterLabel>
+            <translation><!-- Settlements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor</masterLabel>
+            <translation><!-- Vendor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Detailed description of the issue being faced --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Date to Complete --></label>
+        <name>ETC_Date_Time_Tracker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Subject --></label>
+        <name>Email_Subject__c</name>
+    </fields>
+    <fields>
+        <help><!-- SME or IT Desk user or Super user who received the information from affected user and opened the ticket --></help>
+        <label><!-- Opened By --></label>
+        <name>Opened_By__c</name>
+        <relationshipLabel><!-- Focused Support Tracker (Opened By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>Critical</masterLabel>
+            <translation><!-- Critical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Release --></label>
+        <name>Release__c</name>
+        <picklistValues>
+            <masterLabel>Lightning Release</masterLabel>
+            <translation><!-- Lightning Release --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Affected business user who is facing the issue --></help>
+        <label><!-- Reported By --></label>
+        <name>Reported_By__c</name>
+        <relationshipLabel><!-- Focused Support Tracker (Reported By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resolution Provided --></label>
+        <name>Resolution_Provided__c</name>
+    </fields>
+    <fields>
+        <label><!-- Root Cause Category --></label>
+        <name>Root_Cause_Category__c</name>
+        <picklistValues>
+            <masterLabel>Access Rights Issue</masterLabel>
+            <translation><!-- Access Rights Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admin Task</masterLabel>
+            <translation><!-- Admin Task --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COTS Issue</masterLabel>
+            <translation><!-- COTS Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coding Issue</masterLabel>
+            <translation><!-- Coding Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Could not Duplicate</masterLabel>
+            <translation><!-- Could not Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Issue</masterLabel>
+            <translation><!-- Data Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design Issue</masterLabel>
+            <translation><!-- Design Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documentation Issue</masterLabel>
+            <translation><!-- Documentation Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environment Issue</masterLabel>
+            <translation><!-- Environment Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Issue</masterLabel>
+            <translation><!-- Integration Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid/Incorrect Test Case</masterLabel>
+            <translation><!-- Invalid/Incorrect Test Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Data Issue</masterLabel>
+            <translation><!-- Migration Data Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missed QA Test</masterLabel>
+            <translation><!-- Missed QA Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missed Unit Test</masterLabel>
+            <translation><!-- Missed Unit Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missed in Training</masterLabel>
+            <translation><!-- Missed in Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planning</masterLabel>
+            <translation><!-- Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requirements Issue</masterLabel>
+            <translation><!-- Requirements Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Third Party Tool Issue</masterLabel>
+            <translation><!-- Third Party Tool Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Version Conflict</masterLabel>
+            <translation><!-- Version Conflict --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Root Cause Detail --></label>
+        <name>Root_Cause_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Analysis in Progress</masterLabel>
+            <translation><!-- Analysis in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate</masterLabel>
+            <translation><!-- Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid</masterLabel>
+            <translation><!-- Invalid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Information</masterLabel>
+            <translation><!-- Pending Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolved</masterLabel>
+            <translation><!-- Resolved --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Focused Support Tracker</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Focused Support Tracker</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Defect Tracker Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Root Cause --></label>
+            <section>Root Cause</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Create_Another_Observation --></label>
+        <name>Create_Another_Observation</name>
+    </webLinks>
+</CustomObjectTranslation>

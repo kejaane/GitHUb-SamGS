@@ -1,0 +1,431 @@
+<!--=================================================================================================
+* Date         : 09/18/2017
+* Developer    : Rajesh Pennam
+* Purpose      : This component has custom sytling for the Admin Form
+*                           
+*
+*==================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date        Developer    Tag     Description
+*==================================================================================================
+* 08/16/2017| Rajesh Pennam    |     | Initial Version. It is developed according to US 286                                     
+*
+*==================================================================================================
+*/
+-->
+
+
+
+<apex:component >
+
+  <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+ <script>
+ <!-- This code is used to autopopulate the Child Dependents of Domestic Partner,Medicare-eligible Domestic Partner,Medicare-eligible Child Dependents of DP when Domestic Partner is 'No'  US 286-->
+ j$ = jQuery.noConflict();
+    
+    j$(document).ready(function(){
+    
+      j$('.readonly').attr('readonly','true');
+      j$(document).on('change','.DMP',function(){
+        if(j$('.DMP').val() == 'No') {
+          j$('.CDDP').val('No');
+          //j$('.CDRT').val('No');
+          j$('.CDML').val('No');
+          j$('.CDME').val('No');
+        }
+      });
+      j$(document).on('change','.DMP',function(){
+        if(j$('.DMP').val() != 'No') {
+          j$('.CDDP').val('None');
+          //j$('.CDRT').val('None');
+          j$('.CDML').val('None');
+          j$('.CDME').val('None');
+        }
+      });
+    });
+    
+    <!-- This code is used to autopopulate Retirees (Self-Insured) if Funding Arrangement is 'Risk' US 286  -->
+    j$ = jQuery.noConflict();
+    
+    j$(document).ready(function(){
+    
+      j$('.readonly').attr('readonly','true');
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() == 'Risk') {
+          j$('.RES').val('N/A');          
+        }
+      });
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() != 'Risk') {
+          j$('.RES').val('None');
+        }
+      });
+    });
+    
+    <!-- This code is used to autopopulate Retirees (Self-Insured) if Funding Arrangement is 'ASO' US 286 -->
+    j$ = jQuery.noConflict();
+    
+    j$(document).ready(function(){
+    
+      j$('.readonly').attr('readonly','true');
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() == 'ASO') {
+          j$('.REF').val('N/A');          
+        }
+      });
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() != 'ASO') {
+          j$('.REF').val('None');
+        }
+      });
+    });
+    
+       
+    <!-- This code is used to autopopulate Continuation field to 'No' if FundingArrangement is 'ASO' and viceversa US 286-->
+    j$ = jQuery.noConflict();
+    
+    j$(document).ready(function(){
+    
+      j$('.readonly').attr('readonly','true');
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() == 'ASO') {
+          j$('.Con').val('No');          
+        }
+      });
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() != 'ASO') {
+          j$('.Con').val('Yes');
+        }
+      });
+    });
+    
+    <!-- This code is used to autopopulate Child Dependent Mandates field to 'Maryland' if FundingArrangement is 'Risk' and Jurisdiction is 'MD' US 286-->
+    j$ = jQuery.noConflict();
+    
+    j$(document).ready(function(){
+    
+      j$('.readonly').attr('readonly','true');
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() == 'Risk' && j$('.Jur').val() == 'MD') {
+          j$('.CDM').val('Maryland');          
+        }
+      });
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() != 'Risk') {
+          j$('.CDM').val('None');
+        }
+      });
+    });
+    
+    <!-- This code is used to autopopulate Child Dependent Mandates field to 'DC/VA' if FundingArrangement is 'Risk' and Jurisdiction is 'DC' or 'VA' US 286-->
+    j$ = jQuery.noConflict();
+    
+    j$(document).ready(function(){
+    
+      j$('.readonly').attr('readonly','true');
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() == 'Risk' && (j$('.Jur').val() == 'DC' || j$('.Jur').val() == 'VA'  )) {
+          j$('.CDM').val('DC/VA');          
+        }
+      });
+      j$(document).on('change','.FN',function(){
+        if(j$('.FN').val() != 'Risk') {
+          j$('.CDM').val('None');
+        }
+      });
+    });
+          
+        
+    </script>
+    
+    <style type="text/css">
+   .pickListHt{
+      height:30px;
+      }
+    .TextBorder{
+      border: 1px solid #dddbda !important;
+      -webkit-box-shadow: #fffafa 0 0 0 1px inset !important;
+      box-shadow: #f5f2f2 0 0 0 1px inset !important;
+      }
+    .pbButton{
+      text-align: center !important;
+      }
+    .pbButton:last-child {
+      padding-right: 400px !important;
+      }
+      .smallBox{
+            width:450px;
+            height:60px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .smallBox1{
+            width:450px;
+            height:40px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .largeBox{
+            width:450px;
+            height:240px;
+        }
+        p {outline-color:grey;}
+        p.dashed {outline-style: dashed;}
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .largeBox{
+            width:450px;
+            height:230px;
+        }
+        .mediumBox{
+            width:450px;
+            height:130px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .mediumBox1{
+            width:450px;
+            height:90px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .mediumBox8{
+            width:450px;
+            height:60px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .mediumBox2{
+            width:450px;
+            height:60px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .VerylargeBox2{
+            width:450px;
+            height:260px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .VerylargeBox5{
+            width:450px;
+            height:365px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .VerylargeBox3{
+            width:450px;
+            height:190px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .VerylargeBox{
+            width:450px;
+            height:300px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .largeBox4{
+            width:450px;
+            height:150px;
+        }
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        
+        <!------ This Styling is for Classic --->
+        
+        
+        .readonly{
+            background-color:rgb(248,248,248);  
+            border:0px;
+            overflow:hidden;
+            resize:none;
+        }
+        .largeBoxCla {
+            height: 200px;
+            width : 450px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        <!-- font: 400 13.3333px Arial !important;color: black !important; height:auto !important; -->
+
+    
+      .smallBoxCla{
+            width:450px;
+            height:40px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .smallBox1Cla{
+            width:450px;
+            height:30px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .largeBoxCla{
+            width:450px;
+            height:140px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .mediumBoxCla{
+            width:450px;
+            height:90px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        
+        .mediumBox1Cla{
+            width:450px;
+            height:60px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .mediumBox8Cla{
+            width:450px;
+            height:40px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .mediumBox2Cla{
+            width:450px;
+            height:40px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .VerylargeBox2Cla{
+            width:450px;
+            height:180px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .VerylargeBox5Cla{
+            width:450px;
+            height:220px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .VerylargeBox3Cla{
+            width:450px;
+            height:120px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .VerylargeBoxCla{
+            width:450px;
+            height:200px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        .largeBox4Cla{
+            width:450px;
+            height:100px;
+            font: 400 13.3333px Arial !important;
+            border: 1px solid;
+            border-bottom-color:#bdbdbd; 
+            border-top-color:#bdbdbd;    
+            border-left-color:#bdbdbd;   
+            border-right-color:#bdbdbd;  
+        }
+        
+        
+    </style> 
+    
+</apex:component>

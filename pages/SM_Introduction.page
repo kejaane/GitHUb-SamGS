@@ -1,0 +1,63 @@
+<apex:page controller="SM_IntroductionController" showHeader="false"  sidebar="false" title="Sandbox Manager Application" >   
+    <STYLE TYPE="text/css">
+        TD{font-size: 12pt;}
+        Body{background-color: #f4f7f7; }
+    </STYLE>
+    
+    <table ALIGN="CENTER" BORDER="0" CELLSPACING="2" WIDTH="80%">        
+        <tr>
+            <td ALIGN="CENTER">                 
+                <font size="8" color="#f4f7f7" style="BACKGROUND-COLOR: #3188bc">Welcome To The Sandbox Manager Application</font>
+            </td>
+        </tr>
+        <tr>
+            <td ALIGN="CENTER">
+                <p><apex:image id="SM" value="{!AppIcon}" width="480" height="220"/></p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <font size="5" color="#3188bc">      
+                    Sandbox Manager is a custom application envisioned, designed and developed by Thomas Barrett.<br/><br/>
+                    The current version provides three modules:
+                    <ul style="list-style-type:circle">
+                        <li>De-provisioning of existing users in all sandboxes connected to production</li>
+                        <li>Provisioning of new users in selected sandboxes connected to production</li>
+                        <li>Profile Auditing of production and selected sandboxes connected to production</li>
+                    </ul>                 
+                </font>
+
+                <font size="6" color="#f4f7f7" style="BACKGROUND-COLOR: #3188bc">Prerequisites</font>
+                <font size="5" color="#3188bc">  
+                    <ul style="list-style-type:circle">
+                        <li>Install the application in production</li>
+                        <li>Create a Connected App</li>
+                        <li>Create an Auth Provider</li>
+                        <li>Create Named Credential(s)</li>
+                        <li>Install the app in each sandbox that was setup using Named Credentials</li>
+                    </ul>         
+                
+                    For full details on getting started with the prerequisite steps listed above refer to the 'Sandbox Manager App User and Design Guide' or 
+                    the FirstStart document section titled 'Sandbox Manager Application' which can be found on the Salesforce CoE SharePoint site.  
+                    If you have trouble finding it reach out to the Salesforce CoE team -- they are a bunch of really nice folks who would be glad to assist you.  
+                	<p>           
+                 		While you are at it, ask the Salesforce CoE team for a copy of the SandboxManagerAppDemo video file.  If you upload it in Salesforce as a File (not document) and make sure the 
+                 		name is exactly as spelled here then a link will appear on this page so you have quick easy access to it anytime right within Salesforce.                                          
+                    </p>
+                </font>
+            </td>               
+        </tr> 
+
+        <tr>
+            <td>
+                <p>                    
+                    <font size="6" color="#f4f7f7" style="BACKGROUND-COLOR: #3188bc">Additional Information</font><br/>
+                    <font size="4" color="#3188bc">                                
+                        <apex:outputlink rendered="{!IF(userDesignDocExists, true, false)}" onClick="window.open('{!userDesignDoc}')">Sandbox Manager App User and Design Guide</apex:outputlink><br/><br/>  
+                        <apex:outputlink rendered="{!IF(demoExists,true, false)}" value="#" onClick="window.open('{!demo}')">Sandbox Manager App Demo Video File</apex:outputlink><br/><br/>                              
+                    </font>
+                </p>
+            </td>
+        </tr>
+    </table>
+</apex:page>

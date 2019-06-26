@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Customer Service Numbers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If it is Green record is active, if it is Red record is not active --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area --></label>
+        <name>Area__c</name>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life Insurance</masterLabel>
+            <translation><!-- Life Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Member Services</masterLabel>
+            <translation><!-- Member Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provider Services</masterLabel>
+            <translation><!-- Provider Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Area --></label>
+        <name>Other_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence --></label>
+        <name>Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Hours --></label>
+        <name>Service_Hours__c</name>
+        <picklistValues>
+            <masterLabel>24/7 - 363 Days</masterLabel>
+            <translation><!-- 24/7 - 363 Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24/7 - 365 Days</masterLabel>
+            <translation><!-- 24/7 - 365 Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom/Other</masterLabel>
+            <translation><!-- Custom/Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Service Number --></label>
+        <name>Service_Number__c</name>
+        <picklistValues>
+            <masterLabel>Non-PGA</masterLabel>
+            <translation><!-- Non-PGA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance</masterLabel>
+            <translation><!-- Performance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Term Date Verification --></label>
+        <name>Term_Date_Verification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term Date --></label>
+        <name>Term_Date__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>AIA Customer Service</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Service Numbers</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>AIA Customer Service Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- CS001: Please enter Comments --></errorMessage>
+        <name>CS001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CS002: Please enter Value for Other Field below. --></errorMessage>
+        <name>CS002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CS003: Enter Valid Phone number --></errorMessage>
+        <name>CS003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CS004: You cannot have value in Other Field below --></errorMessage>
+        <name>CS004</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CS005: Term Date cannot be lesser than Effective Date --></errorMessage>
+        <name>CS005</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- View_Add_Customer_Service_Details --></label>
+        <name>View_Add_Customer_Service_Details</name>
+    </webLinks>
+</CustomObjectTranslation>

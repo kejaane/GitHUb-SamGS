@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AIA_Implementation__c$Name</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r$Workplan_Stage__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r$Tasks_Completed__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Business_Type__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Risk_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>AIA_Implementation__c.AIA_Workplan_Stage1__r$Workplan_Stage__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Setup CVS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AIA_Implementation__c.AIA_Workplan_Stage1__r$Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>In Progress,Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AIA_Implementation__c.AIA_Workplan_Stage1__r.AIA_Workplan_Assignment__r$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Notify CVS Account has been Sold with RX</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>CVS Carve In</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Implementations_with_Stages_and_Assignments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>AIA_Implementation__c.AIA_Workplan_Stage1__r$CreatedDate</dateColumn>
+        <endDate>2021-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2012-01-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Assigned_Desk__c</fullName>
+        <externalId>false</externalId>
+        <label>Assigned Desk</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SME Desk</fullName>
+                    <default>true</default>
+                    <label>SME Desk</label>
+                </value>
+                <value>
+                    <fullName>IT Desk</fullName>
+                    <default>false</default>
+                    <label>IT Desk</label>
+                </value>
+                <value>
+                    <fullName>Super User Desk</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Super User Desk</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Focused_Support_Tracker</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Benefit Coding</fullName>
+                    <default>false</default>
+                    <label>Benefit Coding</label>
+                </value>
+                <value>
+                    <fullName>Benefit Design</fullName>
+                    <default>false</default>
+                    <label>Benefit Design</label>
+                </value>
+                <value>
+                    <fullName>Benefit Testing</fullName>
+                    <default>false</default>
+                    <label>Benefit Testing</label>
+                </value>
+                <value>
+                    <fullName>Billing</fullName>
+                    <default>false</default>
+                    <label>Billing</label>
+                </value>
+                <value>
+                    <fullName>BlueFund</fullName>
+                    <default>false</default>
+                    <label>BlueFund</label>
+                </value>
+                <value>
+                    <fullName>BlueRewards</fullName>
+                    <default>false</default>
+                    <label>BlueRewards</label>
+                </value>
+                <value>
+                    <fullName>CareFirst Systems</fullName>
+                    <default>false</default>
+                    <label>CareFirst Systems</label>
+                </value>
+                <value>
+                    <fullName>Claims</fullName>
+                    <default>false</default>
+                    <label>Claims</label>
+                </value>
+                <value>
+                    <fullName>Contract</fullName>
+                    <default>false</default>
+                    <label>Contract</label>
+                </value>
+                <value>
+                    <fullName>Davis</fullName>
+                    <default>false</default>
+                    <label>Davis</label>
+                </value>
+                <value>
+                    <fullName>Debit Card</fullName>
+                    <default>false</default>
+                    <label>Debit Card</label>
+                </value>
+                <value>
+                    <fullName>EDC/Setup</fullName>
+                    <default>false</default>
+                    <label>EDC/Setup</label>
+                </value>
+                <value>
+                    <fullName>Employer Portal</fullName>
+                    <default>false</default>
+                    <label>Employer Portal</label>
+                </value>
+                <value>
+                    <fullName>Enrollment</fullName>
+                    <default>false</default>
+                    <label>Enrollment</label>
+                </value>
+                <value>
+                    <fullName>Facets Systems</fullName>
+                    <default>false</default>
+                    <label>Facets Systems</label>
+                </value>
+                <value>
+                    <fullName>Feature Request</fullName>
+                    <default>false</default>
+                    <label>Feature Request</label>
+                </value>
+                <value>
+                    <fullName>Group Structure</fullName>
+                    <default>false</default>
+                    <label>Group Structure</label>
+                </value>
+                <value>
+                    <fullName>ID Card</fullName>
+                    <default>false</default>
+                    <label>ID Card</label>
+                </value>
+                <value>
+                    <fullName>Marketing Materials</fullName>
+                    <default>false</default>
+                    <label>Marketing Materials</label>
+                </value>
+                <value>
+                    <fullName>Migration</fullName>
+                    <default>false</default>
+                    <label>Migration</label>
+                </value>
+                <value>
+                    <fullName>MyAccount</fullName>
+                    <default>false</default>
+                    <label>MyAccount</label>
+                </value>
+                <value>
+                    <fullName>NASCO Systems</fullName>
+                    <default>false</default>
+                    <label>NASCO Systems</label>
+                </value>
+                <value>
+                    <fullName>New Business</fullName>
+                    <default>false</default>
+                    <label>New Business</label>
+                </value>
+                <value>
+                    <fullName>Off-Cycle Renewal</fullName>
+                    <default>false</default>
+                    <label>Off-Cycle Renewal</label>
+                </value>
+                <value>
+                    <fullName>Open Enrollment</fullName>
+                    <default>false</default>
+                    <label>Open Enrollment</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy</fullName>
+                    <default>false</default>
+                    <label>Pharmacy</label>
+                </value>
+                <value>
+                    <fullName>Pre-Sale</fullName>
+                    <default>false</default>
+                    <label>Pre-Sale</label>
+                </value>
+                <value>
+                    <fullName>Rates</fullName>
+                    <default>false</default>
+                    <label>Rates</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+                <value>
+                    <fullName>Salesforce</fullName>
+                    <default>false</default>
+                    <label>Salesforce</label>
+                </value>
+                <value>
+                    <fullName>Service</fullName>
+                    <default>false</default>
+                    <label>Service</label>
+                </value>
+                <value>
+                    <fullName>Settlements</fullName>
+                    <default>false</default>
+                    <label>Settlements</label>
+                </value>
+                <value>
+                    <fullName>Vendor</fullName>
+                    <default>false</default>
+                    <label>Vendor</label>
+                </value>
+                <value>
+                    <fullName>Admin Task</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Admin Task</label>
+                </value>
+                <value>
+                    <fullName>Clarification</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Clarification</label>
+                </value>
+                <value>
+                    <fullName>Defect</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Defect</label>
+                </value>
+                <value>
+                    <fullName>Enhancement</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Enhancement</label>
+                </value>
+                <value>
+                    <fullName>Existing Prod Issue</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Existing Prod Issue</label>
+                </value>
+                <value>
+                    <fullName>Observation</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Observation</label>
+                </value>
+                <value>
+                    <fullName>User Training</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>User Training</label>
+                </value>
+                <value>
+                    <fullName>Workaround</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Workaround</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Detailed description of the issue being faced</inlineHelpText>
+        <label>Description</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ETC_Date_Time_Tracker__c</fullName>
+        <description>Ticket Resolution Date</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Expected Date to Complete</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Email_Subject__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Email Subject</label>
+        <length>80</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opened_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>SME or IT Desk user or Super user who received the information from affected user and opened the ticket</inlineHelpText>
+        <label>Opened By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Defect_Opened_By</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Critical</fullName>
+                    <default>false</default>
+                    <label>Critical</label>
+                </value>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>true</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Release__c</fullName>
+        <externalId>false</externalId>
+        <label>Release</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lightning Release</fullName>
+                    <default>false</default>
+                    <label>Lightning Release</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Reported_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Affected business user who is facing the issue</inlineHelpText>
+        <label>Reported By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Reported_By</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resolution_Provided__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Resolution Provided</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Root_Cause_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Root Cause Category</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Access Rights Issue</fullName>
+                    <default>false</default>
+                    <label>Access Rights Issue</label>
+                </value>
+                <value>
+                    <fullName>Admin Task</fullName>
+                    <default>false</default>
+                    <label>Admin Task</label>
+                </value>
+                <value>
+                    <fullName>Coding Issue</fullName>
+                    <default>false</default>
+                    <label>Coding Issue</label>
+                </value>
+                <value>
+                    <fullName>COTS Issue</fullName>
+                    <default>false</default>
+                    <label>COTS Issue</label>
+                </value>
+                <value>
+                    <fullName>Could not Duplicate</fullName>
+                    <default>false</default>
+                    <label>Could not Duplicate</label>
+                </value>
+                <value>
+                    <fullName>Data Issue</fullName>
+                    <default>false</default>
+                    <label>Data Issue</label>
+                </value>
+                <value>
+                    <fullName>Design Issue</fullName>
+                    <default>false</default>
+                    <label>Design Issue</label>
+                </value>
+                <value>
+                    <fullName>Documentation Issue</fullName>
+                    <default>false</default>
+                    <label>Documentation Issue</label>
+                </value>
+                <value>
+                    <fullName>Environment Issue</fullName>
+                    <default>false</default>
+                    <label>Environment Issue</label>
+                </value>
+                <value>
+                    <fullName>Integration Issue</fullName>
+                    <default>false</default>
+                    <label>Integration Issue</label>
+                </value>
+                <value>
+                    <fullName>Invalid/Incorrect Test Case</fullName>
+                    <default>false</default>
+                    <label>Invalid/Incorrect Test Case</label>
+                </value>
+                <value>
+                    <fullName>Migration Data Issue</fullName>
+                    <default>false</default>
+                    <label>Migration Data Issue</label>
+                </value>
+                <value>
+                    <fullName>Missed in Training</fullName>
+                    <default>false</default>
+                    <label>Missed in Training</label>
+                </value>
+                <value>
+                    <fullName>Missed QA Test</fullName>
+                    <default>false</default>
+                    <label>Missed QA Test</label>
+                </value>
+                <value>
+                    <fullName>Missed Unit Test</fullName>
+                    <default>false</default>
+                    <label>Missed Unit Test</label>
+                </value>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                    <label>Planning</label>
+                </value>
+                <value>
+                    <fullName>Requirements Issue</fullName>
+                    <default>false</default>
+                    <label>Requirements Issue</label>
+                </value>
+                <value>
+                    <fullName>Third Party Tool Issue</fullName>
+                    <default>false</default>
+                    <label>Third Party Tool Issue</label>
+                </value>
+                <value>
+                    <fullName>Version Conflict</fullName>
+                    <default>false</default>
+                    <label>Version Conflict</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Root_Cause_Detail__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Root Cause Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Analysis in Progress</fullName>
+                    <default>false</default>
+                    <label>Analysis in Progress</label>
+                </value>
+                <value>
+                    <fullName>Pending Information</fullName>
+                    <default>false</default>
+                    <label>Pending Information</label>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                    <label>Resolved</label>
+                </value>
+                <value>
+                    <fullName>Invalid</fullName>
+                    <default>false</default>
+                    <label>Invalid</label>
+                </value>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                    <label>Duplicate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom object created by AIA team, for tracking defects raised by users during production checkout or warranty support</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Focused Support Tracker</label>
+    <nameField>
+        <displayFormat>Ticket-{0000}</displayFormat>
+        <label>Ticket Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Focused Support Tracker</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All_Tickets_wtwoeut</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Category__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Description__c</columns>
+        <columns>Reported_By__c</columns>
+        <columns>Opened_By__c</columns>
+        <columns>Assigned_Desk__c</columns>
+        <columns>Email_Subject__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>IMPACT</fullName>
+        <columns>Email_Subject__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Category__c</columns>
+        <columns>Description__c</columns>
+        <columns>Reported_By__c</columns>
+        <columns>Opened_By__c</columns>
+        <columns>Assigned_Desk__c</columns>
+        <columns>Root_Cause_Detail__c</columns>
+        <columns>Root_Cause_Category__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>greaterThan</operation>
+            <value>Ticket-0333</value>
+        </filters>
+        <label>IMPACT</label>
+    </listViews>
+    <listViews>
+        <fullName>Unresolved</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Category__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Description__c</columns>
+        <columns>Reported_By__c</columns>
+        <columns>Opened_By__c</columns>
+        <columns>Assigned_Desk__c</columns>
+        <columns>ETC_Date_Time_Tracker__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Resolved,Invalid,Duplicate</value>
+        </filters>
+        <filters>
+            <field>Assigned_Desk__c</field>
+            <operation>equals</operation>
+            <value>SME Desk</value>
+        </filters>
+        <label>Unresolved - SME Desk</label>
+    </listViews>
+    <listViews>
+        <fullName>Unresolved_IT_Desk</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Category__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Description__c</columns>
+        <columns>Reported_By__c</columns>
+        <columns>Opened_By__c</columns>
+        <columns>Assigned_Desk__c</columns>
+        <columns>ETC_Date_Time_Tracker__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Resolved,Invalid,Duplicate</value>
+        </filters>
+        <filters>
+            <field>Assigned_Desk__c</field>
+            <operation>equals</operation>
+            <value>IT Desk</value>
+        </filters>
+        <label>Unresolved - IT Desk</label>
+    </listViews>
+    <webLinks>
+        <fullName>Create_Another_Observation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Another Observation</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/lightning/o/Focused_Support_Tracker__c/new?count=1&amp;nooverride=1</url>
+    </webLinks>
+</CustomObject>

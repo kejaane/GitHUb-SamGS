@@ -1,0 +1,2 @@
+{!Account.LastModifiedBy} has populated/updated the Nasco account number for {!Account.Account_Legal_Name__c}. Effective immediately, the Nasco account number is {!Account.NASCO_Account_Number__c}. To view the account record in AIA, please click the link below. 
+{!Account.Link}.

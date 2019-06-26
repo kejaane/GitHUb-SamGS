@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupColumn>GRAND_SUMMARY</groupColumn>
+    <mappings>
+        <sourceField>FORMULA1</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Active_User_License_Trends__c.Total_Active_Users__c</targetField>
+    </mappings>
+    <name>Active User License Trends</name>
+    <runningUser>thomas.barrett@carefirst.com</runningUser>
+    <sourceReport>QA_Reports/Active_User_License_Trend_Totals</sourceReport>
+    <targetObject>Active_User_License_Trends__c</targetObject>
+</AnalyticSnapshot>

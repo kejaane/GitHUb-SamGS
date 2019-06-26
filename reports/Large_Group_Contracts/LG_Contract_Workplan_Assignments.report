@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Stage__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>FK_$AIA_Implementation__c.Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Task_Name__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Assigned_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Date_Completed__c</field>
+    </columns>
+    <description>Fiscal Year</description>
+    <filter>
+        <criteriaItems>
+            <column>AIA_Workplan_Assignment__c.Assigned_To__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>karina rodriguez,pirro,deborah kelly,daywawn jones,etheridge,rosetta stevenson,rachel smith,hardtke</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>LG Contract Workplan Assignments</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AIA_Workplan_Assignment__c@AIA_Workplan_Assignment__c.Post_Sales_Implementation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>AIA_Workplan_Assignment__c.Assigned_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

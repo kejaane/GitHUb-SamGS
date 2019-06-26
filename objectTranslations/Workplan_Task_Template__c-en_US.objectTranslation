@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Acc Team Role for New Business --></label>
+        <name>Acc_Team_Role_for_New_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acc Team Role for Renewal Business --></label>
+        <name>Acc_Team_Role_for_Renewal_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- To be entered by user --></help>
+        <label><!-- Expected SLA --></label>
+        <name>Expected_SLA__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number --></label>
+        <name>Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Id --></label>
+        <name>Queue_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Name --></label>
+        <name>Queue_Name__c</name>
+        <picklistValues>
+            <masterLabel>AIA Admin Queue</masterLabel>
+            <translation><!-- AIA Admin Queue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related Object API Name --></label>
+        <name>Related_Object_API_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Day Type --></label>
+        <name>SLA_Day_Type__c</name>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calendar</masterLabel>
+            <translation><!-- Calendar --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Send Notification --></label>
+        <name>Send_Notification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>SequenceNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Started</masterLabel>
+            <translation><!-- Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub Process Type --></label>
+        <name>Sub_Process_Type__c</name>
+        <relationshipLabel><!-- Workplan Task Template --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Task Completion Events --></label>
+        <name>Task_Completion_Events__c</name>
+        <picklistValues>
+            <masterLabel>Insert</masterLabel>
+            <translation><!-- Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Task Completion Criteria Expression --></label>
+        <name>Task_Completion_Expression__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Creation Criteria Expression --></label>
+        <name>Task_Creation_Criteria_Expression__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto-Updated by trigger on Workplan Task Rules object. This should not be changed manually. --></help>
+        <label><!-- Task Creation Events --></label>
+        <name>Task_Creation_Events__c</name>
+        <picklistValues>
+            <masterLabel>Insert</masterLabel>
+            <translation><!-- Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Task Generation Criteria Expression --></label>
+        <name>Task_Generation_Criteria_Expression__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Generation Events --></label>
+        <name>Task_Generation_Events__c</name>
+        <picklistValues>
+            <masterLabel>Insert</masterLabel>
+            <translation><!-- Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Task Owner Type --></label>
+        <name>Task_Owner_Type__c</name>
+        <picklistValues>
+            <masterLabel>Account Owner</masterLabel>
+            <translation><!-- Account Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Team Role</masterLabel>
+            <translation><!-- Account Team Role --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF Owner</masterLabel>
+            <translation><!-- BRF Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity Owner</masterLabel>
+            <translation><!-- Opportunity Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queue</masterLabel>
+            <translation><!-- Queue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Task Owner --></label>
+        <name>Task_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Type --></label>
+        <name>Task_Type__c</name>
+        <picklistValues>
+            <masterLabel>Automated recording of this event</masterLabel>
+            <translation><!-- Automated recording of this event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual</masterLabel>
+            <translation><!-- Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual / SF should auto close this task</masterLabel>
+            <translation><!-- Manual / SF should auto close this task --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optional</masterLabel>
+            <translation><!-- Optional --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Used For --></label>
+        <name>Used_For__c</name>
+        <picklistValues>
+            <masterLabel>Post-Sales</masterLabel>
+            <translation><!-- Post-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sales</masterLabel>
+            <translation><!-- Pre-Sales --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Workplan Task Template</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Workplan Task Template</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Workplan Task Template Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Task Creation Criteria --></label>
+            <section>Task Creation Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Task Parameters --></label>
+            <section>Task Parameters</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- EWPTT001: When Task Owner Type is QUEUE, Queue Name cannot be blank --></errorMessage>
+        <name>EWPTT001</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,129 @@
+<!--
+*====================================================================================================================
+* Date       : 05/17/2018
+* Developer  : Raviteja Vadapalli
+* Purpose    : Visualforce component to show donut per each process on Implementation Dashboard. US463
+*                               ========[Update History]=======
+*                     -----------------------------------------------------
+* Date         Developer    Tag         Description
+*====================================================================================================================
+* 05/17/2018 | Raviteja V |     | Initial version
+*====================================================================================================================
+-->
+<apex:component controller="AIA_Impl_TileBoard_Controller">
+
+    <apex:attribute name="procID" type="String" required="false" assignTo="{!processID}"
+        description="ID of the Process record. This will be input to component controller in order to retrieve the list of sub processes associated with this process id"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <apex:includeScript value="{!URLFOR($Resource.AIADonut,'js/d3.min.js')}"/>
+
+    <link href="files/implementation-dashboard-started/styles.css" type="text/css" rel="stylesheet"
+    />
+    <link href="{!URLFOR($Resource.AIADonut,'css/font-awesome.min.css')}"
+        type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        type="text/css" rel="stylesheet" />
+    <link href="{!URLFOR($Resource.AIADonut,'css/all.css')}" type="text/css" rel="stylesheet" />
+
+    <apex:includeScript value="{!URLFOR($Resource.AIADonut,'js/donut-pie-chart.js')}"
+    />
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var lstName = [];
+            lstName = {!lstNames
+            };
+            console.log(lstName);
+
+            console.log(lstName.length);
+            var colors = [];
+            colors = {!lstTileColorsforDonuts
+            };
+            var data = '[';
+
+            console.log(lstName);
+            console.log(lstName.length);
+            for (var i = 0; i < lstName.length; i++) {
+                data += '{"name":"' + lstName[i] + '",';
+                data += '"hvalue":50,';
+                data += '"color":"' + colors[i%7] + '"},';
+            }
+            data = data.replace(/,\s*$/, "");
+            data = data + ']';
+            data = JSON.parse(data)
+            console.log(data);
+            //console.log(JSON.stringify(data));
+            // init the pie
+            $(".{!ProcessDonutID}").donutpie();
+
+
+
+            // update it with some fake data
+            $(".{!ProcessDonutID}").donutpie('update', data);
+
+
+        });
+
+    </script>
+    <style>
+        .percentageBox {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                padding: 2rem;
+	        }
+        
+        .percentageDiv {
+            position: absolute;
+            float: left;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            font-family: 'OpenSans-Light', 'Open Sans Light', 'Open Sans';
+            font-weight: 200;
+            font-style: normal;
+            font-size: 48px;
+            color: #003399;
+            text-align: center;
+        }
+        
+        .checkmark {
+            margin-top: 0px;
+            position: absolute;
+            max-width: 30px !important;
+        }
+        .container{
+        	text-align:center;
+            display: inline;
+        }
+
+    </style>
+    <apex:attribute name="ProcessDonutID" description="This is the ID of Process Donut."
+        type="String" required="true" />
+    <apex:attribute name="SubProcessBoxSetID" description="This is the ID of SubProcess box list."
+        type="String" required="true" />
+    <apex:outputPanel rendered="{! If(donutPercentage=='100',true,false)}">
+        <img class="checkmark" src="{!URLFOR($Resource.AIADonut,'image/checkmark.png')}"
+        />
+        <!--green checkmark only for 100% completed tasks-->
+    </apex:outputPanel>
+    <div class="container">
+        <div id="{!ProcessDonutID}" class="processDonut">
+            <div class="{!ProcessDonutID}" style="pointer-events:none">
+                <apex:outputPanel rendered="{! If(donutPercentage!='',true,false)}">
+                    <div class="percentageBox">
+                        <label class="percentageDiv">{!donutPercentage }%</label>
+                        <!-- showing percentage inside dounot with help of class-->
+                    </div>
+                </apex:outputPanel>
+            </div>
+        </div>   
+    </div>
+    <!--donut which indicates the process-->
+    <!--
+    <div class="mx-1 subProcessList" id="{!SubProcessBoxSetID}"> </div>
+    list of sub process boxes
+    -->
+
+</apex:component>

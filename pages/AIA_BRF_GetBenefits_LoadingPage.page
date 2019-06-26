@@ -1,0 +1,166 @@
+<!--==========================================================================================================================
+ *                                 Update History
+ *                                 --------------
+ * Date       |  Developer       | Tag | Description
+ *============+==================+=====+======================================================================================
+ * 01/15/2018 | Satya            | T01 | Made changes to the page as a part of lightning migration (US600)
+ *============+==================+=====+======================================================================================
+-->
+
+
+<apex:page standardController="Proposed_Products__c" docType="html-5.0" sidebar="false" 
+    standardStylesheets="false" extensions="AIA_BRF_GetBenefits_Controller">
+    
+    <apex:slds rendered="{!!isClassic}"/> <!--T01 Changes start-->
+   <apex:form style="height:590px">
+   <apex:outputPanel rendered="{!!isClassic}"> <!--T01 Changes start-->
+                           <div class="slds-scope">
+                                 <div class="slds-p-left--large slds-p-top_x-large slds-p-bottom_x-large" style="font-size:15px">
+                                   <apex:pageMessages />
+                                </div>
+                           </div>
+                        </apex:outputPanel> 
+                         <apex:outputPanel rendered="{!isClassic}">
+                           <apex:pageMessages /> 
+                        </apex:outputPanel> <!--T01 Changes end-->
+ 
+ 
+        <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS092, 'assets/styles/salesforce-lightning-design-system-vf.css')}"
+            />
+            <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/bootstrap.css')}" rel="stylesheet"
+            />
+            <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/bootstrap-theme.css')}" rel="stylesheet"
+            />
+            <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/overwrite.css')}" rel="stylesheet"
+            />
+            <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/brokerNew.css')}" rel="stylesheet"
+            />
+            <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/common-use.css')}" rel="stylesheet"
+            />
+            <link rel="stylesheet" href="{!URLFOR($Resource.JQuery, 'jquery-ui.css')}"/>   
+                             
+          <apex:includeScript value="{!URLFOR($Resource.JQuery, 'jquery-1.12.4.js')}" /> 
+          <apex:includeScript value="{!URLFOR($Resource.JQuery, 'jquery-ui.js')}" />                 
+           
+            <style>
+                table.grayTab tbody tr td {
+                    padding: 0 0 0 10px;
+                }
+                
+                select {
+                    border: none;
+                }
+                .ui-accordion-header{   
+                                    
+                    padding-left:25px !important;       
+                }
+                
+                .form-control {
+                    border: none;
+                    box-shadow: none;
+                    border-radius: none;
+                    box-shadow: none;
+                }
+                .popupBackground {
+                /* Background color */
+                background-color:black;
+                opacity: 0.2;
+                filter: alpha(opacity = 20);
+            
+                /* Dimensions */
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 9998;
+                position: absolute;
+                
+                /* Mouse */
+                cursor:wait;
+                background-color:black;
+            
+                }
+                .middle {
+                    vertical-align: middle;
+                }
+                
+                .gray {
+                    color: #9aa0a0;
+                }
+                
+                .width5 {
+                    width: 40%;
+                }
+                
+                .width2 {
+                    width: 10%;
+                }
+                
+                input[type=text].input {
+                    border: none;
+                    margin: 0 0 0 0;
+                    padding: 0 0 0 0;
+                }
+            #loading-img {      
+                background: url(/img/loading32.gif) center center no-repeat;        
+                height: 100%;       
+                z-index: 20;        
+            }       
+                    
+            .overlay {      
+                background: #e9e9e9;        
+                     
+                position: absolute;     
+                top: 0;     
+                right: 0;       
+                bottom: 0;      
+                left: 0;        
+                opacity: 0.7;       
+            }
+            </style>
+                                
+            </head>
+            </html>
+            
+            <apex:actionFunction action="{!RedirectToSumaryPage}" name="redirect"  >
+                                       
+                                    </apex:actionFunction>
+             
+           
+             <div>
+           <apex:outputPanel rendered="{!show}"> <!-- T01 Added rendered condition as a part of lightning migration (US600)-->
+             <div  class="popupBackground" > </div>
+            <div class="overlay" id="overlaypanel">     
+                <div id="loading-img"></div>        
+            </div>
+            </apex:outputPanel>
+            <br/>
+            <br/>
+            <br/>
+            
+            </div>
+            
+            <script> 
+    // Show the busy model image when page is first loaded.
+    // T01 added if cindition as a part of lightning migration (US600)
+    var stringvalue = '{!show}';   
+    if ( stringvalue == "true"){   
+       onload = function()
+    {      
+        
+       // After showing the modal window call a script function which will in turn
+       // call the controller extension function.
+       setTimeout(function(){ redirect(); }, 3000);  
+    
+    }
+    }
+    
+  </script> 
+                
+           
+            
+    </apex:form>
+</apex:page>

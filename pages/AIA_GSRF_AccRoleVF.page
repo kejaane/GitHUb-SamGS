@@ -1,0 +1,22 @@
+<!--==========================================================================================================================
+* Date         : 9/21/2017
+* Developer    : Sajitha Y
+* Purpose      : (GSRF  Drawloop US-87).This page is used to validate the status of group structure request form based on the 
+                                        Status it will redirect to drawloop.
+*============================================================================================================================
+*                                 Update History
+*                                 --------------
+* Date       |  Developer       | Tag | Description
+*============+==================+=====+======================================================================================
+* 9/21/2017 |  Sajitha Y        |     | Initial Version
+* 02/10/2018 | Rajesh Nagandla  | T01 | Added SLDS to all components in page                                         
+*============+==================+=====+======================================================================================
+-->
+<apex:page standardController="AIA_Group_Structure_Request_Form__c" extensions="AIA_GSRF_ACCRoleController" action="{!custombuttonvalidation}" lightningStylesheets="true">
+    <!--T01 - start -->
+    <apex:slds rendered="{! !isClassic}"/>
+    <!--T01 - End -->
+    <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.status__c}</span>
+    <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.Implementation__c}</span>
+    <apex:pageMessages ></apex:pageMessages>
+</apex:page>

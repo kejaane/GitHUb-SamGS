@@ -1,0 +1,52 @@
+<!--    
+/*=========================================================================================
+ * Date         : 08/01/2016
+ * Developer    : Laveen Kattela
+ * Purpose      : This VF page refers to the Static Resource for broker Portal Communities 
+ *                Communities Metadata which includes CSS(Bootstrap), JS , AngularJS & etc
+ *                
+ *=========================================================================================
+ * Update History
+ *  ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 08/01/16   |  Laveen Kattela    | Initial Version                                          
+ *===========+============+================================================================
+ */
+-->
+
+<apex:page doctype="html-5.0" showheader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" standardstylesheets="false" id="apexpage">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yet another megamenu for Bootstrap 3" />
+    <meta name="author" content="@geedmo" />
+    <title>CareFirst_ Salesforce Communities: Landing Page </title>
+	<apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'content/js/jquery.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/css/bootstrap.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/css/bootstrap-theme.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/css/site.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/css/cfmegamenu.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/css/overwrite.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/css/brokerNew.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/css/common-use.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, 'content/css/_ie8fix.css')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'content/js/bootstrap.min.js')}"/>
+    <apex:includeScript value="{!URLFor($Resource.angularjs)}" />
+    <!--<apex:includeScript value="{!URLFOR($Resource.Communities_Resource, '/vendor-libs/js/jquery/jquery.js') }" /> --> 
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/js/brokerscript.js')}"/>
+    
+    <apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'vendor-libs/dynamitable/dynamitable.jquery.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'content/js/jquery.min.js')}"/>
+  <!--  <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/js/script.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Communities_Resource, '/content/js/svgeezy.min.js')}"/>  -->
+    <apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'vendor-libs/jquery/jquery.dropkick-1.0.0.js')}"/> 
+    
+    
+    
+     
+    
+    
+    
+    
+</apex:page>

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AIADoc approval status --></label>
+        <name>AIADoc_approval_status__c</name>
+    </fields>
+    <fields>
+        <label><!-- AIA BD Not Required --></label>
+        <name>AIA_BD_Not_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Option --></label>
+        <name>AIA_Enrollment_Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Type --></label>
+        <name>AIA_Enrollment_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Vendor --></label>
+        <name>AIA_Enrollment_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- AIA GS Doc Not Required --></label>
+        <name>AIA_GS_Doc_Not_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Structure Request Form --></label>
+        <name>AIA_Group_Structure_Request_Form__c</name>
+        <relationshipLabel><!-- Implementations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment End Date --></label>
+        <name>AIA_Open_Enrollment_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Meeting End Date --></label>
+        <name>AIA_Open_Enrollment_Meeting_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Meeting Start Date --></label>
+        <name>AIA_Open_Enrollment_Meeting_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Start Date --></label>
+        <name>AIA_Open_Enrollment_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Enrollment Option --></label>
+        <name>AIA_Other_Enrollment_Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Notification --></label>
+        <name>AIA_Send_Notification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acc Microsoft URL populated --></label>
+        <name>Acc_Microsoft_URL_populated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Implementations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account city state zip --></label>
+        <name>Account_city_state_zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account street Address --></label>
+        <name>Account_street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- All tasks are completed --></label>
+        <name>All_tasks_are_completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Automated Enrollment Received --></label>
+        <name>Automated_Enrollment_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- AutorabitExtId__c --></label>
+        <name>AutorabitExtId__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD approved --></label>
+        <name>BD_approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- BICC Request Date --></label>
+        <name>BICC_Request_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- BICC Requested By --></label>
+        <name>BICC_Requested_By__c</name>
+        <relationshipLabel><!-- Implementations (BICC Requested By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- BRFId --></label>
+        <name>BRFId__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Account Legal Name --></label>
+        <name>BRF_Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Benefit Effective Date --></label>
+        <name>BRF_Benefit_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Blue Rewards --></label>
+        <name>BRF_Blue_Rewards__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF CDH Type --></label>
+        <name>BRF_CDH_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF CDH --></label>
+        <name>BRF_CDH__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Control plan 680 --></label>
+        <name>BRF_Control_plan_680__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Control plan --></label>
+        <name>BRF_Control_plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Custom Wellness --></label>
+        <name>BRF_Custom_Wellness__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF FA --></label>
+        <name>BRF_FA__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF FSA BlueFund --></label>
+        <name>BRF_FSA_BlueFund__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF FlexLink --></label>
+        <name>BRF_FlexLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Funding Arrangement --></label>
+        <name>BRF_Funding_Arrangement__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Integrated DM/Wellness --></label>
+        <name>BRF_Integrated_DM_Wellness__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF New Dental Products --></label>
+        <name>BRF_New_Dental_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF New Products --></label>
+        <name>BRF_New_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF New Rx Products --></label>
+        <name>BRF_New_Rx_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF New Vision Products --></label>
+        <name>BRF_New_Vision_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Religious Accomodation --></label>
+        <name>BRF_Religious_Accomodation__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Request Type --></label>
+        <name>BRF_Request_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Rx Integration --></label>
+        <name>BRF_Rx_Integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Sales Segment Size --></label>
+        <name>BRF_Sales_Segment_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Status --></label>
+        <name>BRF_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Backend BRF Effective Date --></label>
+        <name>Backend_BRF_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Backend Name --></label>
+        <name>Backend_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- BenefitDesign Status --></label>
+        <name>BenefitDesign_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design Document Uploaded --></label>
+        <name>Benefit_Design_Document_Uploaded__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most Recent Revision Date of associated benefit design record. Not shown to the user on layout.This is updated whenever the associated Benefit Design record is approved. --></help>
+        <label><!-- Benefit Design Revision Date - Technical --></label>
+        <name>Benefit_Design_Revision_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Technical field used to capture associated Most Recent Benefit Design records&apos; version number. Not shown to the user on layout.This is updated whenever the associated Benefit Design record is approved. --></help>
+        <label><!-- Benefit Design Revision Number-Technical --></label>
+        <name>Benefit_Design_Revision_Number_Technical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Request Form --></label>
+        <name>Benefit_Request_Form__c</name>
+        <relationshipLabel><!-- Implementations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Type --></label>
+        <name>Business_Type__c</name>
+        <picklistValues>
+            <masterLabel>NCR</masterLabel>
+            <translation><!-- NCR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-Cycle - Benefit change</masterLabel>
+            <translation><!-- Off-Cycle - Benefit change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-cycle - Administrative change</masterLabel>
+            <translation><!-- Off-cycle - Administrative change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect/New</masterLabel>
+            <translation><!-- Prospect/New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Implementations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Claims Settlem Proc Setup/Updated By --></label>
+        <name>Claims_Settlem_Proc_SetupUpdated_By__c</name>
+        <relationshipLabel><!-- Implementations (Claims Settlem Proc Setup/Updated By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Claims Settlem Proc Setup/Updated Date --></label>
+        <name>Claims_Settlem_Proc_Setup_Updated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Implementation Ended --></label>
+        <name>Date_Implementation_Ended__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Implementation Started --></label>
+        <name>Date_Implementation_Started__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Recipient Email --></label>
+        <name>DocuSign_Recipient_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Recipient Name --></label>
+        <name>DocuSign_Recipient_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Status --></label>
+        <name>DocuSign_Status__c</name>
+        <relationshipLabel><!-- Implementations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Docusign Document send user --></label>
+        <name>Docusign_Document_send_user__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Document sending user Name --></label>
+        <name>Docusign_Document_sending_user_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Document sending user --></label>
+        <name>Docusign_Document_sending_user__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Submitter --></label>
+        <name>Docusign_Submitter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Processed --></label>
+        <name>Enrollment_Processed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Errors Completed --></label>
+        <name>Errors_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fully-Insured Acct 1st Bill Release Date --></label>
+        <name>Fully_Insured_Acct_1st_Bill_Release_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSRF approved --></label>
+        <name>GSRF_approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- GS Doc Status --></label>
+        <name>GS_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate Workplan Stages Value --></label>
+        <name>Generate_Workplan_Stages_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate Workplan Stages --></label>
+        <name>Generate_Workplan_Stages__c</name>
+    </fields>
+    <fields>
+        <label><!-- Imp Coordinator --></label>
+        <name>Imp_Coordinator__c</name>
+        <relationshipLabel><!-- Implementations (Imp Coordinator) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Imp PM --></label>
+        <name>Imp_PM__c</name>
+        <relationshipLabel><!-- Implementations (Imp PM) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Imp in-progress --></label>
+        <name>Imp_in_progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Imp not started --></label>
+        <name>Imp_not_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Days remaining until Implementation Effective Date --></help>
+        <label><!-- Implementation Countdown --></label>
+        <name>Implementation_Countdown__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation_Hyperlink_QuickAction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Plan Timeline (Days) --></label>
+        <name>Implementation_Plan_Timeline_Days__c</name>
+        <picklistValues>
+            <masterLabel>120</masterLabel>
+            <translation><!-- 120 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>180</masterLabel>
+            <translation><!-- 180 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90</masterLabel>
+            <translation><!-- 90 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Maintenance File Date --></label>
+        <name>Last_Maintenance_File_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manual Enrollment Received --></label>
+        <name>Manual_Enrollment_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manual Termination Spreadsheet Complete --></label>
+        <name>Manual_Termination_Spreadsheet_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Microsite CWR # --></label>
+        <name>Microsite_CWR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Microsite Completed Date --></label>
+        <name>Microsite_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Microsite Request Date --></label>
+        <name>Microsite_Request_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Microsite Requested By --></label>
+        <name>Microsite_Requested_By__c</name>
+        <relationshipLabel><!-- Implementations (Microsite Requested By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Blocked Tasks --></label>
+        <name>Number_of_Blocked_Tasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Tasks (SLA Broken) --></label>
+        <name>Number_of_Tasks_SLA_Broken__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off-Cycle Billing Change Date --></label>
+        <name>Off_Cycle_Billing_Change_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opp Business Type --></label>
+        <name>Opp_Business_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Implementations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- OpptyId --></label>
+        <name>OpptyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Comments --></label>
+        <name>PCP_Error_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Notes --></label>
+        <name>PCP_Error_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCP Errors Date --></label>
+        <name>PCP_Errors_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCP Errors --></label>
+        <name>PCP_Errors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Account --></label>
+        <name>Parent_Account__c</name>
+        <relationshipLabel><!-- Implementations (Sub Group Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Production Cards Mailed --></label>
+        <name>Production_Cards_Mailed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Production Cards Ordered --></label>
+        <name>Production_Cards_Ordered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risk Type --></label>
+        <name>Risk_Type__c</name>
+        <picklistValues>
+            <masterLabel>ASO</masterLabel>
+            <translation><!-- ASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk</masterLabel>
+            <translation><!-- Risk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SearchLight/HealthCheck Verified By --></label>
+        <name>SearchLight_HealthCheck_Verified_By__c</name>
+        <relationshipLabel><!-- Implementations (SearchLight/HealthCheck Verified By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SearchLight/HealthCheck Verified Date --></label>
+        <name>SearchLight_HealthCheck_Verified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Self-Insured Acct 1st Mthly Settlem Date --></label>
+        <name>Self_Insured_Acct_1st_Mthly_Settlem_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Self-Insured Acct 1st Wkly Invoice Date --></label>
+        <name>Self_Insured_Acct_1st_Wkly_Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Settlements status of AIADoc --></label>
+        <name>Settlements_status_of_AIADoc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Progress</masterLabel>
+            <translation><!-- In-Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Structure&apos;s Level of Complexity --></label>
+        <name>Structure_s_Level_of_Complexity__c</name>
+        <picklistValues>
+            <masterLabel>Complex</masterLabel>
+            <translation><!-- Complex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simple</masterLabel>
+            <translation><!-- Simple --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Complex</masterLabel>
+            <translation><!-- Very Complex --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub Group Account --></label>
+        <name>Sub_Group_Account__c</name>
+        <relationshipLabel><!-- Implementations (Sub Group Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Target Enrollment Received --></label>
+        <name>Target_Enrollment_Received__c</name>
+    </fields>
+    <fields>
+        <help><!-- Click here to view the tasks for which SLA is broken, for this implementation. --></help>
+        <label><!-- View SLA Broken Tasks --></label>
+        <name>View_SLA_Broken_Tasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- WPTask update number --></label>
+        <name>WPTask_update_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type --></label>
+        <name>Workplan_Type__c</name>
+        <relationshipLabel><!-- Implementations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- oppMarketSeg --></label>
+        <name>oppMarketSeg__c</name>
+    </fields>
+    <fields>
+        <label><!-- vision with platform indicator --></label>
+        <name>vision_with_platform_indicator__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Implementation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Implementations</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>AIA Post Sales Implementation Layout</layout>
+        <sections>
+            <label><!-- Benefit Request Form Details --></label>
+            <section>Benefit Request Form Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment --></label>
+            <section>Enrollment</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Process --></label>
+            <section>Implementation Process</section>
+        </sections>
+        <sections>
+            <label><!-- Invoicing and Billing Data --></label>
+            <section>Invoicing and Billing Data</section>
+        </sections>
+        <sections>
+            <label><!-- Member Tools Data --></label>
+            <section>Member Tools Data</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update Implementation --></label>
+        <name>AIA_Implementation_View</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Custom Subprocess --></label>
+        <name>Create_Custom_Subprocess</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Custom Task --></label>
+        <name>Create_Custom_Task</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- You Cannot Uncheck Generate Workplan Stages --></errorMessage>
+        <name>EIMP001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EIMP002 : The Parent Account related to this Implementation has Sub Groups associated. Please select a valid Sub Group Account. --></errorMessage>
+        <name>EIMP002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EIMP003 : The Account related to this Implementation does not have Sub Groups associated. Please clear the value in this field --></errorMessage>
+        <name>EIMP003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- User cannot change the status once it is &quot;Completed&quot; --></errorMessage>
+        <name>IMP004</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- BD_Clone_With_Products --></label>
+        <name>BD_Clone_With_Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_for_Docusign --></label>
+        <name>Send_for_Docusign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Start_Implementation --></label>
+        <name>Start_Implementation</name>
+    </webLinks>
+</CustomObjectTranslation>

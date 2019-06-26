@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1/15/15 This tab is no longer used. This is for Hoovers.</description>
+    <frameHeight>800</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>BAL People</label>
+    <motif>Custom15: People</motif>
+    <url>https://ah.hoovers.com/BALPeople.aspx?CRM=SFDC&amp;CRMU={!Organization.Id}&amp;SSO={!API.Session_ID}&amp;URL={!API.Partner_Server_URL_160}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

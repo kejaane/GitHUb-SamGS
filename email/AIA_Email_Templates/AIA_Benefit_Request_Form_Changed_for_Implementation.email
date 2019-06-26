@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><blockquote style="margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none; color: rgb(38, 38, 38); font-family: &quot;Proxima Nova&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);"><br></blockquote><blockquote style="margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none; color: rgb(38, 38, 38); font-family: &quot;Proxima Nova&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);"><br></blockquote><blockquote style="margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none; color: rgb(38, 38, 38); font-family: &quot;Proxima Nova&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);"><br></blockquote><blockquote style="margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none; color: rgb(38, 38, 38); font-family: &quot;Proxima Nova&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">Implementation {!AIA_Implementation__c.Backend_Name__c} for {!AIA_Implementation__c.Account__c} has been updated with a new sold Benefit Request Form effective {!AIA_Implementation__c.Backend_BRF_Effective_Date__c}. Please review the details here: {!AIA_Implementation__c.Link}</blockquote><blockquote style="margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none; color: rgb(38, 38, 38); font-family: &quot;Proxima Nova&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);"><br>Thanks,<br>AIA Support</blockquote></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundingArrangement --></label>
+        <name>FundingArrangement__c</name>
+    </fields>
+    <fields>
+        <label><!-- IS_ASO_Only --></label>
+        <name>IS_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsMandateTrue --></label>
+        <name>IsMandateTrue__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsRequired --></label>
+        <name>IsRequired__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Required --></label>
+        <name>Is_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limitation Type --></label>
+        <name>Limitation_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCS Benefit Id --></label>
+        <name>PCS_Benefit_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentBenefitName --></label>
+        <name>ParentBenefitName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PlanID --></label>
+        <name>PlanID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Benefit Grouper Name --></label>
+        <name>Plan_Benefit_Grouper_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Benefit Parent Name --></label>
+        <name>Plan_Benefit_Parent_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Copay Type --></label>
+        <name>Plan_Copay_Type__c</name>
+        <relationshipLabel><!-- Plan Benefit Comment Codes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Plan Limitation --></label>
+        <name>Plan_Limitation__c</name>
+        <relationshipLabel><!-- Plan Benefit Comment Codes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RecordType --></label>
+        <name>RecordType__c</name>
+        <picklistValues>
+            <masterLabel>BDD</masterLabel>
+            <translation><!-- BDD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF</masterLabel>
+            <translation><!-- BRF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Additional Ranges</masterLabel>
+            <translation><!-- Additional Ranges --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comments</masterLabel>
+            <translation><!-- Comments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limit</masterLabel>
+            <translation><!-- Limit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limitation</masterLabel>
+            <translation><!-- Limitation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mandates</masterLabel>
+            <translation><!-- Mandates --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Variation Condition ID --></label>
+        <name>Variation_Condition_ID__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan Benefit Comment Codes</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plan Benefit Comment Codes</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Plan Benefit Comment Codes Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

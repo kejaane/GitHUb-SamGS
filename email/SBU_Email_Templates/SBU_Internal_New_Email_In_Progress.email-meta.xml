@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Template to send the case owner a notification when there’s a ‘New Email’ added to a ‘Case’.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>ZZ_SBU Internal: New Email (In-Progress)</name>
+    <style>formalLetter</style>
+    <subject>{!Case.CaseNumber} has a new Email</subject>
+    <textOnly>Dear {!Case.OwnerFirstName},
+
+
+
+{!Case.CaseNumber} has a ‘New Email&apos; from {!Contact.Name}
+
+Please review the case as necessary
+
+Detail Case Link: {!Case.Link}
+
+
+
+Thank You,
+
+SFDC Team
+
+SFDCSupport@carefirst.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

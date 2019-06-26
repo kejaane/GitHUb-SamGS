@@ -1,0 +1,141 @@
+<!-- 
+*===================================================================================================
+* Date         : 04/24/2018
+* Developer    : Rajesh Pennam
+* Purpose      : This is the VF page which will be added to User Page in Lightning to view his accounts
+*===================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date          Developer     Tag   Description
+*===================================================================================================
+* 05/17/2018 | Rajesh Pennam |     | This page is used Add/Replace the Account Team Members
+* 05/18/2018 | Rajesh Pennam | T02 | Rendering the Accounts header to display it only after clicking on 
+*                                    View All
+* 03/26/2019  | Naga K       | T03 | Changed reference from standard obj to custom obj
+*===================================================================================================-->
+
+<apex:page sidebar="false" lightningStylesheets="true" docType="html-5.0" showHeader="false" controller="AIA_User_Account_View_Controller">
+<apex:slds />
+    <apex:stylesheet value="{!URLFOR($Resource.AIAToastMessage, '/styles/salesforce-lightning-design-system.min.css')}"/>
+    <c:AIA_Account_Team_Roles_Component_CSS />
+    <apex:form id="TheForm" style="margin-top:-18px;">
+        
+      <!-- ************************* -->
+      <!-- The below block used to display the accounts related to logged in user    -->
+      <apex:pageBlock id="TablePanel">
+         <apex:outputPanel rendered="{!showallAcc}"> <!-- T02 -->
+          <div style="background: rgba(194, 199, 196, 0.19);padding: 10px;" >
+              <span class="slds-icon_container slds-icon-standard-announcement"> 
+                  <svg aria-hidden="true" class="slds-icon"
+                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                  </svg>   
+                  <span class="slds-assistive-text">Announcement</span>
+              </span>
+              <span style="font-size: 16px;font-weight: bold;">My Accounts</span>
+          </div> 
+          </apex:outputPanel>
+         <div style="clear: both;"></div>
+        <apex:pageMessages id="errmsg"/>
+        <div >
+            <div style="float:left;padding-top: 13px;" >
+                {!accountCount}  Accounts  |  Sorted by {!sortFieldLabel} 
+            </div>
+            <div style="float:right;padding-top: 10px;padding-bottom: 10px;">
+                <apex:commandButton value="Manage Team Members" action="{!manageTeamMembers}"  reRender="errmsg" /> 
+            </div>
+            
+          </div>
+            <!-- Account table -->
+            <!--<apex:facet name="stop">-->
+           
+                      
+               <apex:pageBlockTable value="{!CurrentAccountList}" var="a" headerClass="headHeight" styleClass="slds-table slds-table_bordered slds-table_cell-buffer" style="width:100%">
+                    
+                    <!-- This column is for checkbox dispaly -->
+                     <apex:column >
+                        <apex:facet name="header">
+                           <!-- <apex:inputCheckbox id="checkAll"  styleclass="checkAll"  /> -->
+                             <apex:inputCheckBox value="{!selectAllCKbox}" id="check-box" >
+                                <apex:actionSupport event="onchange" rerender="TablePanel" action="{!UpdateAccountSelectedSet}" />
+                               </apex:inputcheckbox>
+                        </apex:facet>
+                        <!--<apex:inputCheckbox value="{!accWrap.selected}" id="inputId"/>-->
+                           <apex:inputCheckBox value="{!a.aCheckBox}" id="inputId" Styleclass="cb-element"/>
+                        </apex:column>
+                   
+                   
+                  <!-- This column is for Account Name dispaly and sort them --> 
+                  <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="Account.name" assignTo="{!SortField}" />
+                           <apex:outputText value="{!$ObjectType.Account.Fields.Name.Label}{!IF(SortField=='Account.name',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                     <!--T03 change-->
+                     <apex:outputLink value="/{!a.aAccount.AccountId__c}" target="_self">{!a.accountName}</apex:outputlink>
+                  </apex:column>
+                  
+                  <!-- This colum is for Team Role display and sort -->
+                  
+                   <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="TeamMemberRole" assignTo="{!SortField}" />
+                           <apex:outputText value="Role {!IF(SortField=='TeamMemberRole',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                     <apex:outputField value="{!a.aAccount.TeamMemberRole__c }" />
+                  </apex:column> 
+                  <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="CreatedDate" assignTo="{!SortField}" />
+                           <apex:outputText value="Added on {!IF(SortField=='CreatedDate',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                     <apex:outputtext value="{!a.addedOn}" />
+                  </apex:column>
+                  
+                  <!-- This column used to display Active Tasks assigned to logged in user-->
+                   
+                   <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                            <apex:param name="SortField" value="taskCount" assignTo="{!SortField}" />
+                           <apex:outputText value="Active Task {!IF(SortField=='taskCount',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                     <apex:outputText value="{!a.taskCount }" />
+                  </apex:column>
+            </apex:pageBlockTable>
+          <br/>
+          
+          <!-- This part is used for View All, since intially we display only 10 records and once user clicks on View All then he can all the records with Pagination -->
+          
+            <!--</apex:facet>-->
+                  <div align="center">
+             <apex:pageBlock >
+               <!--  <div style="padding-bottom:10px;">  -->
+                    <apex:commandLink action="{!viewAll}" value="View All" target="_blank" rendered="{!!showallAcc}"/>
+               <!--  </div> -->
+            </apex:pageBlock>
+            
+            <apex:pageBlock >
+            <span class="page-buttons" style="float: left; margin-bottom: 5px;"> 
+                
+                <apex:commandButton value="First" rerender="TablePanel" action="{!previousFirstAccount}" disabled="{!prev}"  rendered="{!showallAcc}" /> 
+                <apex:commandButton value="Previous" rerender="TablePanel" action="{!previousAccount}" disabled="{!prev}" rendered="{!showallAcc}" /> 
+                <apex:commandButton value="Next" rerender="TablePanel" action="{!nextAccount}" disabled="{!nxt}" rendered="{!showallAcc}" />
+                <apex:commandButton value="Last" rerender="TablePanel" action="{!nextLastAccount}" disabled="{!nxt}" rendered="{!showallAcc}" />
+            </span>
+                </apex:pageBlock>
+         </div>
+        
+      </apex:pageBlock>
+
+        
+   </apex:form>
+
+</apex:page>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>IntegrationLog__c.timeStamp__c</field>
+    </columns>
+    <columns>
+        <field>IntegrationLog__c.transactionID__c</field>
+    </columns>
+    <columns>
+        <field>IntegrationLog__c.msgType__c</field>
+    </columns>
+    <columns>
+        <field>IntegrationLog__c.msgData__c</field>
+    </columns>
+    <columns>
+        <field>IntegrationLog__c.relatedData__c</field>
+    </columns>
+    <columns>
+        <field>IntegrationLog__c.source__c</field>
+    </columns>
+    <columns>
+        <field>IntegrationLog__c.target__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>IntegrationLog__c.source__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>egp</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>3/1/2019 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Integration Log</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$IntegrationLog__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>IntegrationLog__c.timeStamp__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>IntegrationLog__c.timeStamp__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

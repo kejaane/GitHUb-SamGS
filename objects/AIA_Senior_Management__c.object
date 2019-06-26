@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AIA_Senior_Management__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AIA Senior Management</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>This used to update Escalate to Senior Management flag from Event Trigger for AIA ARC Meeting</description>
+    <enableFeeds>false</enableFeeds>
+    <label>AIA Senior Management</label>
+    <visibility>Public</visibility>
+</CustomObject>

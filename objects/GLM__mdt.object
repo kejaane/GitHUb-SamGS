@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Used by code to include this threshold</description>
+        <externalId>false</externalId>
+        <fieldManageability>Locked</fieldManageability>
+        <label>IsActive</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Send_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked the GLM class will send an email to the sfdc team</description>
+        <externalId>false</externalId>
+        <fieldManageability>Locked</fieldManageability>
+        <label>Send Email</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Store__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If true the GLM class will store the details if the threshold is reached</description>
+        <externalId>false</externalId>
+        <fieldManageability>Locked</fieldManageability>
+        <label>Store</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Text_Area_255__c</fullName>
+        <description>Used for GLM records that are not part of the governmor limit checks but may have miscellanous uses such as emailing.</description>
+        <externalId>false</externalId>
+        <fieldManageability>Locked</fieldManageability>
+        <label>Text_Area_255</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Threshold__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>Locked</fieldManageability>
+        <label>Threshold</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <description>Used to store the governor limit thresholds for the GLM class framework to use.</description>
+    <label>GLM</label>
+    <pluralLabel>GLM</pluralLabel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All_Custom</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Threshold__c</columns>
+        <columns>Store__c</columns>
+        <columns>Send_Email__c</columns>
+        <columns>IsActive__c</columns>
+        <columns>Text_Area_255__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All-Custom</label>
+        <sharedTo>
+            <group>SystemAdministrators</group>
+        </sharedTo>
+    </listViews>
+    <validationRules>
+        <fullName>GLM001</fullName>
+        <active>true</active>
+        <description>Threshold Range</description>
+        <errorConditionFormula>Threshold__c &gt; 0.95</errorConditionFormula>
+        <errorDisplayField>Threshold__c</errorDisplayField>
+        <errorMessage>EGLM001: Threshold cannot be more than 95%.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GLM002</fullName>
+        <active>true</active>
+        <description>Prevent both send email and store fields from being unchecked</description>
+        <errorConditionFormula>Send_Email__c = false &amp;&amp; 
+ Store__c = false</errorConditionFormula>
+        <errorMessage>EGLM002: Both Send Email and Store cannot be unchecked!  Please choose one or both.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GLM003</fullName>
+        <active>true</active>
+        <errorConditionFormula>DeveloperName = 'Support_Team_Email_Addresses' &amp;&amp; 
+(CONTAINS(Text_Area_255__c, ";") || 
+MID(Text_Area_255__c,LEN(Text_Area_255__c), 1) = ',')</errorConditionFormula>
+        <errorDisplayField>Text_Area_255__c</errorDisplayField>
+        <errorMessage>GLM003: Email Addresses must be separated by comma and cannot end with a comma or semi-colon.</errorMessage>
+    </validationRules>
+</CustomObject>

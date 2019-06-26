@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AIA Dental Support Area Notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA Dental Support Area Notification</name>
+    <style>formalLetter</style>
+    <subject>Dental Products Approved on Benefit Request Form for {!Benfit_Request_Form__c.Account__c}</subject>
+    <textOnly>Dental Products have been approved on Benefit Request Form {!Benfit_Request_Form__c.Name} for {!Benfit_Request_Form__c.Account__c}
+
+You can access the Benefit Request Form here: {!Benfit_Request_Form__c.Link}
+
+Thanks,
+AIA Automation</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

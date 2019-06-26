@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>40.0</apiVersion>
+    <available>true</available>
+    <description>US 106 send email to Account team members about approved by Account</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AIA GSRF Approved by account</name>
+    <style>none</style>
+    <subject>- effectivedate   - Approved group structure for distribution</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

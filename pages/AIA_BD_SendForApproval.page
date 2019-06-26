@@ -1,0 +1,42 @@
+<!--====================================================================================================================
+* Date         : 02/05/2017
+* Developer    : Asif Kutagulla
+* Purpose      : VF page which is called when Send For Approval button is clicked
+ *                on the Benefit Design record. This is created to replace existing onclick javascript
+*=====================================================================================================================
+*                                 Update History
+* -----------------------------------------------------------------------------------------------------------------
+* Date       | Developer      | Tag |     Description
+*============+============+===========================================================================================
+* 01/29/2018 | Satya          | T01 | Made changes to the page to have lightning look & feel by adding slds tag and 
+*                                     lightning stylesheets. Also it conditionally displays VF page style as per the
+*                                     user interface
+*============+============+===========================================================================================
+-->
+
+
+<apex:page standardController="AIA_Benefit_Design__c" extensions="AIA_BD_SendForApproval_Extension" action="{!updateBD}" lightningStylesheets="{!!isClassic}">
+<apex:slds rendered="{!!isClassic}"/>
+    <apex:form >
+        <apex:pageBlock rendered="{!showMsg}">
+            <apex:outputPanel rendered="{!!isClassic}"> <!--T01 Changes start-->
+                           <div class="slds-scope">
+                                 <div class="slds-p-left--large slds-p-top_x-large slds-p-bottom_x-large slds-text-body--regular">
+                                   <apex:pageMessages />
+                                </div>
+                           </div>
+                        </apex:outputPanel> 
+                        <apex:outputPanel rendered="{!isClassic}">
+                           <apex:pageMessages /> 
+                        </apex:outputPanel> <!--T01 Changes end-->
+            <apex:pageBlockButtons location="bottom">
+              <apex:outputPanel rendered="{!!isClassic}"> <!--T01 Changes start-->
+                    <apex:commandButton value="Back" action="{!back}" styleClass="slds-button slds-button_neutral" />
+               </apex:outputPanel>  <!--T01 Changes end-->
+               <apex:outputPanel rendered="{!isClassic}">
+                     <apex:commandButton value="Back" action="{!back}"/>
+                 </apex:outputPanel>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

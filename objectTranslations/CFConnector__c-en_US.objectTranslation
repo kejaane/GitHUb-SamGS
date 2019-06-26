@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- User can view only the contacts from CF BCBS Account --></help>
+        <label><!-- Connector Name --></label>
+        <name>Connector_Name__c</name>
+        <relationshipLabel><!-- CFConnector (ConnectorName) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Connector Role --></label>
+        <name>Connector_Role__c</name>
+        <picklistValues>
+            <masterLabel>Executive</masterLabel>
+            <translation><!-- Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manager/Director</masterLabel>
+            <translation><!-- Manager/Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Intermediary Company Type --></label>
+        <name>Intermediary_CompanyType__c</name>
+        <picklistValues>
+            <masterLabel>Audit, tax &amp; consulting firm</masterLabel>
+            <translation><!-- Audit, tax &amp; consulting firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker</masterLabel>
+            <translation><!-- Broker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chambers of commerce</masterLabel>
+            <translation><!-- Chambers of commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charitable organization</masterLabel>
+            <translation><!-- Charitable organization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community organization</masterLabel>
+            <translation><!-- Community organization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community outreach</masterLabel>
+            <translation><!-- Community outreach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting house</masterLabel>
+            <translation><!-- Consulting house --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Economic development</masterLabel>
+            <translation><!-- Economic development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering firm</masterLabel>
+            <translation><!-- Engineering firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FSP/GP</masterLabel>
+            <translation><!-- FSP/GP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT professionals</masterLabel>
+            <translation><!-- IT professionals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investment management firm</masterLabel>
+            <translation><!-- Investment management firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law firm</masterLabel>
+            <translation><!-- Law firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lobbyists</masterLabel>
+            <translation><!-- Lobbyists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office technology firm</masterLabel>
+            <translation><!-- Office technology firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Philanthropic</masterLabel>
+            <translation><!-- Philanthropic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Intermediary Company --></label>
+        <name>Intermediary_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intermediay Company Contact --></label>
+        <name>Intermediay_CompanyContact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity_del__c</name>
+        <relationshipLabel><!-- CFConnector --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Target Account Type --></label>
+        <name>Target_Account_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- User Can View Contacts of selected Target Company only --></help>
+        <label><!-- Target Company Contact --></label>
+        <name>Target_Company_Contact__c</name>
+        <relationshipLabel><!-- CFConnector --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- User can view only 51+ Accounts --></help>
+        <label><!-- Target Company --></label>
+        <name>Target_Company__c</name>
+        <relationshipLabel><!-- CFConnector --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Top Account --></label>
+        <name>Top_Account__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>CFConnector</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CFConnector</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>CFConnector Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,203 @@
+<!--==========================================================================================================================
+* Date         : 8/18/2017
+* Developer    : Sajitha Y
+* Purpose      : Benefit Design MCP Form creation(US-123).
+*============================================================================================================================
+*                                 Update History
+*                                 --------------
+* Date       |  Developer                       | Tag | Description
+*============+==================================+=====+======================================================================
+* 8/18/2017 |  Sajitha Y, Nagandla Rajesh       |     | Initial Version  
+* 02/05/2018|  Gayathri Palanisamy				| T02 | Added slds classes to match the look and feel of lightning 
+* 									      				view with classic.
+*============+==================+=====+======================================================================================
+-->
+<apex:page standardController="AIA_Benefit_Design_Form__c" extensions="AIA_MCP_Controller" id="pg" sidebar="false" lightningStylesheets="true">
+    <apex:pageMessages ></apex:pageMessages>
+  <apex:stylesheet value="{!$Resource.AIA_BDF_MCP_Style}" />
+   <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+<apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.4/jquery.autosize.min.js" />
+    <script>
+    j$ = jQuery.noConflict();
+    j$(document).ready(function() {
+        j$('.otherphone,.othervendor').prop("disabled", true);   
+    });
+     function funding(){
+        var v = document.getElementById('pg:fm:pb:pbs1:fundar').value;
+     CallApexMethod(v);// this call the action function
+  } 
+    
+  j$(document).on('click','.radio', function() {
+      if(!j$(this).prop("checked")){
+          j$('.radio').prop("checked",false);
+            j$(this).prop("checked",false);
+      }else{
+          j$('.radio').prop("checked",false);
+          j$(this).prop("checked",true);
+      }
+  if(j$(this).hasClass('other')){
+              j$('.otherphone,.othervendor').prop("disabled", false); 
+              j$('.otherphone,.othervendor').attr("required", true);
+   }else{
+              j$('.otherphone,.othervendor').val("");
+              j$('.otherphone,.othervendor').prop("disabled", true);
+       
+       }
+});
+
+    </script>
+    <!--T02  Start-->
+    <apex:slds rendered="{!!isClassic}" />
+    <style>
+        .helpButton {
+        	display: inline !important;
+        }
+    	.slds-scope .slds-table td{white-space: normal;}
+        .slds-scope .bPageBlock .pbSubheader{background-color:#D5D8DC;}
+        .bPageBlock{border:none !important;box-shadow: none !important;}
+        {! if(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 240px !important;}','')}  
+    	
+    </style>
+    <!--T02  End-->
+    <apex:form id="fm">
+         
+   <apex:actionFunction immediate="true" name="CallApexMethod" action="{!getFundar}"   reRender="pbs3,pbs4,pbs5" >
+   <apex:param id="anode" name="node" value=""/>
+   </apex:actionFunction> 
+        
+        <!-------------------------------------------- BDF Edit Page -----------------------------------------------------> 
+        
+        <apex:pageBlock title="MCP Form Edit" mode="edit" id="pb">
+            <apex:pageBlockButtons >
+                <div class="slds-button slds-grid slds-grid--align-center">
+                	<apex:commandButton action="{!save}" value="Save" styleClass="slds-button slds-button_neutral"/>
+                	<apex:commandButton action="{!mcpsavenew}" value="Save & New" styleClass="slds-button slds-button_neutral"/>
+                	<apex:commandButton action="{!cancelcustom}" value="Cancel" immediate="true"
+		                    html-formnovalidate="formnovalidate" styleClass="slds-button slds-button_neutral"/>
+                </div>
+            </apex:pageBlockButtons>
+            <!-------------------------------------------- BDF Fields ----------------------------------------------------->
+            <apex:pageBlockSection columns="2" id="pbs1">
+                	<apex:inputField value="{!AIA_Benefit_Design_Form__c.Benefit_Design__c}" styleClass="slds-lookup__search-input" />   
+                	<apex:inputField value="{!AIA_Benefit_Design_Form__c.Funding_Arrangement__c}"  id="fundar" onchange="funding()" styleClass="slds-select"/>
+                	<apex:outputLabel ></apex:outputLabel>    
+                	<apex:inputField value="{!AIA_Benefit_Design_Form__c.Managed_Care_Comments__c}" id="c" styleClass="slds-input"/>
+                	<apex:outputLabel ></apex:outputLabel>
+                	<apex:inputField value="{!AIA_Benefit_Design_Form__c.Group_Numbers__c}" styleClass="slds-input"/>
+                </apex:pageBlockSection> 
+           <!--------------------------------------------Selected BDP'S ----------------------------------------------------->
+            <!--<apex:pageBlock title="Selected Benefit Design Products" id="pbs">
+                <apex:pageBlockTable value="{!lstbdp}" var="bdp">
+                    <apex:column headerValue="Selected">
+                        <apex:inputcheckbox value="{!bdp.SelectBDP__c}" selected="True" disabled="true" />
+                    </apex:column>
+                    <apex:column value="{!bdp.name}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlock>-->
+  <!--------------------------------------------Vendor Information Section ----------------------------------------------------->
+      <apex:pageBlock title="Vendor Information Section" id="pbs2">
+                <table class="VenInfo slds-table slds-table_bordered slds-table_cell-buffer">
+                    <tr class="slds-text-title--caps">
+                        <th scope="col">Select </th>
+                    	<th style="width:40" scope="col">Vendor Name</th>
+                    	<th scope="col">Vendor Phone</th>
+                    </tr>
+                    
+                    <tr >
+                        <td>
+                          <apex:inputField styleclass="radio" value="{!AIA_Benefit_Design_Form__c.MCP_Checkbox__c}"  />
+                        </td>
+                        <td>
+                            <div class="slds-cell--wrap">
+                              <apex:outputLabel >Care Management – Includes IP Mental Health/substance Abuse Precertification via Magellan. For CFMI products with no Magellan contract</apex:outputLabel>
+                            </div>
+                         </td>
+                        <td>
+                        <apex:outputLabel >1-866-773-2884</apex:outputLabel>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td>
+                          <apex:inputField styleclass="radio" value="{!AIA_Benefit_Design_Form__c.MCP_Checkbox2__c}"  />
+                        </td>
+                        <td>
+                          <apex:outputLabel >Care Management and Magellan Mental Health/Substance Abuse (for BluePreferred, IP only Level II, Level III, CFMI products with Magellan, BlueChoice or HealthyBlue products)</apex:outputLabel>
+                        </td>
+                        <td>
+                          <apex:outputLabel >1-866-773-2884 – Care Management,1-800-245-7013 – Magellan </apex:outputLabel>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <apex:inputField styleclass="radio other" value="{!AIA_Benefit_Design_Form__c.MCP_Checkbox3__c}"  />
+                        </td>
+                        <td>
+                          <apex:outputLabel >Other</apex:outputLabel>&nbsp;&nbsp;(Enter Other Vendor Name)&nbsp;&nbsp;
+                             <apex:inputField value="{!AIA_Benefit_Design_Form__c.MCP_Other_Vendor_Name__c}" id="oname" styleclass="othervendor"/> 
+                        </td>
+                        <td>
+                            <apex:inputField value="{!AIA_Benefit_Design_Form__c.MCP_Other_Vendor_Phone__c}" id="ophone" styleclass="otherphone"/> 
+                        </td>
+                    </tr>
+                </table>
+                     
+         </apex:pageBlock>
+            
+            <!----------------------------------------OutPatient Authorization Program -------------------------------------------------->
+            
+            <apex:pageBlockSection title="Outpatient Authorization Program" columns="2" id="pbs3" >
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.Home_Health_Care__c}" id="hhc"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.Home_Health_Care__c}" id="hhc1" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.Clinical_Trials__c}" id="ct"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.Clinical_Trials__c}" id="ct1" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.Hospice_Care__c}" id="hc"/>
+                 <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.Hospice_Care__c}" id="hc1" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.Habilitative_Services_for_Children__c}" id="hsc"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.Habilitative_Services_for_Children__c}" id="hsc1" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.Artificial_Insemination_IVF__c}" id="ai"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.Artificial_Insemination_IVF__c}" id="ai1" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.IVF__c}" id="ivf"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.IVF__c}" id="ivf1" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.Early_Intervention_Services__c}" id="eis"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.Early_Intervention_Services__c}" id="eis1" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.General_Anesthesia_for_Dental_care__c}" id="gad"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.General_Anesthesia_for_Dental_care__c}" id="gad1" styleclass="slds-select"/><!-- Not populating Yes -->
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.Applied_Behavioral_Analysis__c}" id="aba"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true" value="{!AIA_Benefit_Design_Form__c.Applied_Behavioral_Analysis__c}" id="aba1" styleclass="slds-select"/>
+                <apex:inputField value="{!AIA_Benefit_Design_Form__c.OP_Private_Duty_Nursing__c}" styleclass="slds-select"/>
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select"  value="{!AIA_Benefit_Design_Form__c.Attended_Sleep_Studies__c}" id="ass"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" required="true"  value="{!AIA_Benefit_Design_Form__c.Attended_Sleep_Studies__c}" id="ass1"/>
+            </apex:pageBlockSection>
+            
+            <!-------------------------------------------- PCMH / TCCI Program ----------------------------------------------------->
+            
+            <apex:pageBlockSection title="PCMH / TCCI Program" columns="1" id="pbs4">
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select"  value="{!AIA_Benefit_Design_Form__c.Patient_Centered_Medical_Home__c}" id="pcm"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}"   value="{!AIA_Benefit_Design_Form__c.Patient_Centered_Medical_Home__c}" id="pcm1" styleclass="slds-select"/>
+            </apex:pageBlockSection>
+            
+            <!-------------------------------------------- TCCI Cost Share Waiver----------------------------------------------------->
+            
+            <apex:pageBlockSection title="TCCI Cost Share Waiver" columns="1" id="pbs5">
+                <apex:inputField html-disabled="true" rendered="{!IF(fundArg!='ASO' ,true,false)}" styleclass="reqchange slds-select" value="{!AIA_Benefit_Design_Form__c.TCCI_Cost_Share_Waiver__c}" id="tcci"/>
+                <apex:inputField rendered="{!IF(fundArg=='ASO' ,true,false)}" value="{!AIA_Benefit_Design_Form__c.TCCI_Cost_Share_Waiver__c}" id="tcci1" styleclass="slds-select"/>
+            </apex:pageBlockSection>
+            
+            <!-------------------------------------------- DM/Wellness ----------------------------------------------------->
+            
+            <apex:pageBlockSection title="DM/Wellness" columns="1" id="pbs6">
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Integrated_DM_Wellness__c}" id="dw" />
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Stand_Alone_Disease_Management__c}" id="sad"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Stand_Alone_Wellness__c }" id="saw"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Customized_Wellness_Services__c}" id="cws"/>
+                </apex:pageBlockSection>
+            
+            <!-----------------------------------Additional and/or Nonstandard MC Provisions ---------------------------------------->
+            
+            <apex:pageBlockSection title="Additional and/or Non-standard Managed Care Provisions" columns="1">
+                <apex:inputField styleClass="largeBox slds-input" value="{!AIA_Benefit_Design_Form__c.Comments__c}"/>
+            </apex:pageBlockSection>
+      </apex:pageBlock>    
+    </apex:form>
+    
+</apex:page>

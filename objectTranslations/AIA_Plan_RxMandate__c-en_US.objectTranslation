@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ExtId --></label>
+        <name>ExtId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Apply --></label>
+        <name>Mandate_Apply__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mandate Description --></label>
+        <name>Mandate_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Effective Date --></label>
+        <name>Mandate_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Jurisdiction --></label>
+        <name>Mandate_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Name --></label>
+        <name>Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Term Date --></label>
+        <name>Mandate_Term_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network Rules AliasName --></label>
+        <name>Network_Rules_AliasName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan --></label>
+        <name>Plan__c</name>
+        <relationshipLabel><!-- AIA Plan RxMandates --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>AIA Plan RxMandate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AIA Plan RxMandates</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>AIA Plan RxMandate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- For Network Rules Plan Attribute --></description>
+        <label><!-- Network Rules --></label>
+        <name>Network_Rules</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For Rx Mandate Drug --></description>
+        <label><!-- Plan Rx Mandate --></label>
+        <name>Plan_Rx_Mandate</name>
+    </recordTypes>
+</CustomObjectTranslation>

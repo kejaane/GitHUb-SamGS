@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To access 100 - 199 Large Group check box field in opportunity</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>100 - 199 Large Group</label>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.X100_199_Large_Group__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

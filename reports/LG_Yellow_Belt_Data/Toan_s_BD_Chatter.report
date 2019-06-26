@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AIA_Benefit_Design__c.FeedItems$Body</field>
+    </columns>
+    <columns>
+        <field>AIA_Benefit_Design__c$Name</field>
+    </columns>
+    <columns>
+        <field>AIA_Benefit_Design__c.FeedItems.Comments$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>AIA_Benefit_Design__c.FeedItems.Comments$CommentBody</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>AIA_Benefit_Design__c.FeedItems$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>toan nguyen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AIA_Benefit_Design__c.FeedItems.Comments$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>toan nguyen</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AIA_Benefit_Design__c.FeedItems$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Toan&apos;s BD Chatter</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AIA_BD_w_Chatter__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>AIA_Benefit_Design__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

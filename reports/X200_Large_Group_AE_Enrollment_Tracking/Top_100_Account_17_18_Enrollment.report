@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>Enrollment__c$Curr_Fiscal_Year__c</acrossGroupingContext>
+        <calculatedFormula>IF(PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY) = 0, 0, Enrollment__c.Contracts__c:SUM / 
+PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY))</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>GRAND_SUMMARY</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Retention Percentage Grd</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>Enrollment__c$Curr_Fiscal_Year__c</acrossGroupingContext>
+        <calculatedFormula>Enrollment__c.Contracts__c:SUM -  PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, Enrollment__c.Opportunity__c.Account.Name, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA3</developerName>
+        <downGroupingContext>Enrollment__c$Opportunity__c.Account</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>YTD Gain / Lost</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>Enrollment__c$Curr_Fiscal_Year__c</acrossGroupingContext>
+        <calculatedFormula>IF(PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY) = 0, 0, Enrollment__c.Contracts__c:SUM / 
+PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY))</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA4</developerName>
+        <downGroupingContext>Enrollment__c$Opportunity__c.Compensation_Owner__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Retention % By Comp Owner</masterLabel>
+        <scale>1</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>Enrollment__c$Curr_Fiscal_Year__c</acrossGroupingContext>
+        <calculatedFormula>IF(PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY) = 0, 0, Enrollment__c.Contracts__c:SUM  - 
+PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY))</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA5</developerName>
+        <downGroupingContext>GRAND_SUMMARY</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>YTD Overall</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Enrollment__c$Contracts__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Enrollment__c$Curr_Baseline_Contracts__c</field>
+    </columns>
+    <columns>
+        <field>Enrollment__c$Name</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND 2 AND 4) OR (1 AND 3 AND 4) OR (1 AND 5 AND 4) OR (1 AND 6 AND 4) OR (1 AND 7 AND 4) OR (1 AND 8 AND 4)</booleanFilter>
+        <criteriaItems>
+            <column>Enrollment__c$Processed_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>M</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Account</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>All Risk,Allegis,American Association For The Advancement,Cardiology Foundation,Anne Arundel County Public,Anne Arundel,Asbury,Avalon Bay,Baltimore City Public,Billy Casper,Board of Child,Burke &amp; Herbert,Calvert County,Capital Vision,Cecil County,Charles County,Doctors Community</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Account</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Charles E Smith,Chemonics,Chesapeake Urology,City of Baltimore,City of Salisbury,CWA,Allegany County,County of Anne Arundel,Cowan,Crestline,Danfoss,DVCC,Eagle Alliance,Education Affiliates,Enterprise Community,Erickson Living,Kent County</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.SBU__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Large</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Account</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Commissioners of Queen Anne&apos;s County,Evapco,Fairfax County Public,Freedom Network,FutureCare,Goucher,Guest Services,Harford County Government,Harford County Public,Homewood,Howard County Public,Howard Hughes,Union of Operating Engineers,Johns Hopkins University,Mirmiran,Keller,Knorr,Laureate,Loyola,Mangione</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Account</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Maryland Health,Maryland Transit,Marymount,Mary&apos;s Center,Mayor and City,McDaniel,Medstar,Mercy,Miles,Modern Technology,Montgomery County,Monumental,Mount Vernon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Account</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>National Geographic,National Spine,NMS,Pandora,Perdue,Prince George&apos;s Community,Prince George&apos;s County Public,Priority One,Pivot,Michel,Sibley,Smithsonian,St. Mary&apos;s,St Mary&apos;s,State of Maryland,Tessco,American University,Worcester County</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Account</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Donohoe,Georgetown,Henry M,Sheridan,Whiting,Transit Employee,Armour,Unity Health,Vane Brothers,Venable,Gas Light,WMATA,Wicomico County,Westat,Zenimax</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Curr_Fiscal_Year__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Opportunity__c.Compensation_Owner__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Opportunity__c.Account</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Top 100 Account &apos;17-&apos;18 Enrollment</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Enrollments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Enrollment__c$Enrl_Rpt_Dt__c</dateColumn>
+        <endDate>2018-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-01-01</startDate>
+    </timeFrameFilter>
+</Report>

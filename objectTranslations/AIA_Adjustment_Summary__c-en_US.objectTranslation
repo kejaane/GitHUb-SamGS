@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Benefit Design --></label>
+        <name>Benefit_Design__c</name>
+        <relationshipLabel><!-- Adjustments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Changed Form --></label>
+        <name>Changed_Form__c</name>
+        <picklistValues>
+            <masterLabel>Admin form</masterLabel>
+            <translation><!-- Admin form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ancillary form</masterLabel>
+            <translation><!-- Ancillary form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Domestic Partner Exception Request Form</masterLabel>
+            <translation><!-- Domestic Partner Exception Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managed Care Program</masterLabel>
+            <translation><!-- Managed Care Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPACA</masterLabel>
+            <translation><!-- PPACA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product NAEGS</masterLabel>
+            <translation><!-- Product NAEGS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date / Time of Change --></label>
+        <name>Date_Time_of_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Changed --></label>
+        <name>Field_Changed__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Value --></label>
+        <name>New_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous value --></label>
+        <name>Previous_value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for change --></label>
+        <name>Reason_for_change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of Change --></label>
+        <name>Type_of_Change__c</name>
+        <picklistValues>
+            <masterLabel>Adjustment Termination Notice</masterLabel>
+            <translation><!-- Adjustment Termination Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative NAEGS</masterLabel>
+            <translation><!-- Administrative NAEGS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Adjustment</masterLabel>
+            <translation><!-- Benefit Adjustment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal Notice - No Change (Renewing As Is)</masterLabel>
+            <translation><!-- Renewal Notice - No Change (Renewing As Is) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal Notice - With Changes</masterLabel>
+            <translation><!-- Renewal Notice - With Changes --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Adjustment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Adjustments</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Benefit Design Audit Trail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

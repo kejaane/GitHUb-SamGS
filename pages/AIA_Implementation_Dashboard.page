@@ -1,0 +1,136 @@
+<!--
+*====================================================================================================================
+* Date       : 05/20/2018
+* Developer  : Asif Kutagulla
+* Purpose    : Visualforce page to show Implmentation Dashboard on the Implementation record. This is added as a 
+*              layout component on Implemenation lightning record page. Story:US463. This gives an Implemenation
+*              a comprehensive view of the current status of an Implementation.
+*                               ========[Update History]=======
+*                     -----------------------------------------------------
+* Date         Developer    Tag         Description
+*====================================================================================================================
+* 05/20/2018 | Asif K     |     | Initial version
+*====================================================================================================================
+-->
+<apex:page standardStylesheets="false" title="Implementation Dashboard" standardController="AIA_Implementation__c"
+            lightningStylesheets="true" extensions="AIA_Implementation_Dashboard_Extn" docType="html-5.0">
+    <apex:slds />
+    
+    <c:AIA_Implementation_Dashboard_CSS />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap-grid.min.css"
+    />
+    
+    <!--
+    <apex:pageMessage summary="Tasks are not generated for this Implementation. Please set the status of this implementation to In Progress."
+        severity="INFO" strength="3" rendered="{! IF(lstProcesses.size==0, true, false) }"
+    />
+    <apex:pageMessage summary="Number of processes generated for this Implementation is not correct, please raise a ticket  in OneStop"
+        severity="ERROR" strength="3" rendered="{! IF(AND(NOT(ISBLANK(lstProcesses)),lstProcesses.size>0, OR(lstProcesses.size<8,lstProcesses.size>8)), true, false) }"
+    />
+    -->
+    <apex:pageMessages escape="true" />
+    <apex:includeScript value="{!URLFOR($Resource.AIADonut,'/js/jquery-3.3.1.min.js')}"/>
+    <apex:form styleClass="slds-scope" rendered="{! IF(lstProcesses.size==8, true, false) }">
+        
+        <div id="spinner" class="slds-spinner_container slds-is-relative" style="margin-top:10%;">
+            <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+        
+        <div class="col-md-12 mt-5 slds-hide" style="" id="mainDashboardDiv">
+            <div class="row">
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[0].Stage__c} </h1> <!-- class="processNameStyle" -->
+                    </div>
+                    <c:AIA_Implementation_Dashboard_Donut ProcessDonutID="ProcessDonut1" procID="{!lstProcesses[0].Id}" SubProcessBoxSetID="SubProcessBoxesSet1"/>
+                    <apex:outputPanel id="Process0">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process0" procID="{!lstProcesses[0].Id}" />
+                    </apex:outputPanel>
+                </div>
+
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[1].Stage__c} </h1>
+                    </div>
+                    <c:AIA_Implementation_Dashboard_Donut ProcessDonutID="ProcessDonut2" procID="{!lstProcesses[1].Id}" SubProcessBoxSetID="SubProcessBoxesSet2"/>
+                    <apex:outputPanel id="Process1" style="">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process1" procID="{!lstProcesses[1].Id}" />
+                    </apex:outputPanel>
+                </div>
+
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[2].Stage__c} </h1>
+                    </div>
+                    <c:AIA_Implementation_Dashboard_Donut ProcessDonutID="ProcessDonut3" procID="{!lstProcesses[2].Id}" SubProcessBoxSetID="SubProcessBoxesSet3"/>
+                    <apex:outputPanel id="Process2">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process2" procID="{!lstProcesses[2].Id}" />
+                    </apex:outputPanel>
+                </div>
+
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[3].Stage__c} </h1>
+                    </div>
+                    <c:AIA_Implementation_Dashboard_Donut procID="{!lstProcesses[3].Id}" ProcessDonutID="ProcessDonut4" SubProcessBoxSetID="SubProcessBoxesSet4"/>
+                    <apex:outputPanel id="Process3">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process3" procID="{!lstProcesses[3].Id}" />
+                    </apex:outputPanel>
+                </div>
+
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[4].Stage__c} </h1>
+                    </div>
+                   <c:AIA_Implementation_Dashboard_Donut procID="{!lstProcesses[4].Id}" ProcessDonutID="ProcessDonut5" SubProcessBoxSetID="SubProcessBoxesSet5"/>
+                    <apex:outputPanel id="Process4">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process4" procID="{!lstProcesses[4].Id}" />
+                    </apex:outputPanel>
+                </div>
+
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[5].Stage__c} </h1>
+                    </div>
+                    <c:AIA_Implementation_Dashboard_Donut procID="{!lstProcesses[5].Id}" ProcessDonutID="ProcessDonut6" SubProcessBoxSetID="SubProcessBoxesSet6"/> 
+                    <apex:outputPanel id="Process5">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process5" procID="{!lstProcesses[5].Id}" />
+                    </apex:outputPanel>
+                </div>
+
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[6].Stage__c} </h1>
+                    </div>
+                     <c:AIA_Implementation_Dashboard_Donut procID="{!lstProcesses[6].Id}" ProcessDonutID="ProcessDonut7" SubProcessBoxSetID="SubProcessBoxesSet7"/>  
+                    <apex:outputPanel id="Process6">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process6" procID="{!lstProcesses[6].Id}" />
+                    </apex:outputPanel>
+                </div>
+
+                <div class="d-inline colWidth">
+                    <div style="height:20px; text-align:center; margin-left:5px; margin-right:5px;"> 
+                        <h1> {!lstProcesses[7].Stage__c} </h1> 
+                    </div>
+                     <c:AIA_Implementation_Dashboard_Donut procID="{!lstProcesses[7].Id}" ProcessDonutID="ProcessDonut8" SubProcessBoxSetID="SubProcessBoxesSet8"/> 
+                    <apex:outputPanel id="Process7">
+                        <c:AIA_Impl_TileBoard ProcessHtmlID="Process7" procID="{!lstProcesses[7].Id}" />
+                    </apex:outputPanel>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+    
+    <script type="text/javascript">
+        setTimeout(function(){ 
+            document.getElementById('spinner').classList.add('slds-hide');
+            document.getElementById('mainDashboardDiv').classList.remove('slds-hide');
+        }, 1000);
+    </script>
+    
+    <!--<c:AIA_Implementation_Dashboard_JS />-->
+</apex:page>

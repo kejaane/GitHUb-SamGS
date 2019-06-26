@@ -1,0 +1,105 @@
+<!--
+/* =========================================================================================
+ * Date         : 08/01/2016
+ * Developer    : Laveen Kattela
+ * Purpose      : This VF Component referes to the Broker portal Community Footer Section for all pages
+ *                1.It Includes all the Hyper links under "About Us","Legal & Mandates","Other Information" and "News" Section
+ *                2.Today's Date   3.Hyper links for "Connect with us" section - Icons(Fackebook,linkedIn,Youtube &etc)
+ *=========================================================================================
+ * Update History
+ *  ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 08/01/16   |  Laveen Kattela    | Initial Version                                          
+ *===========+============+================================================================
+ */
+ -->
+<apex:component >
+ <!-- ### DESKTOP / TABLET FOOTER ### -->
+
+<div class="footer">
+    <footer>
+        <div class="container clearfix pl0">
+            <div class="col-md-10 hidden-xs hidden-sm p0 footerItem">
+                <div class=" p0">
+
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="https://broker.carefirst.com/brokers/about-us/company-overview.page?">Company Overview</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/about-us/our-history.page?">Our History</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/about-us/corporate-offices-and-affiliates.page?">Corporate Offices &amp; Locations</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/about-us/service-area.page?">Service Area</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/annual-reports/current-annual-report.page?">Annual Reports</a></li>
+                    </ul>  
+                </div> 
+                <div class="  p0">
+                    <h4>Legal &amp; Mandates </h4>
+                    <ul>
+                        <li><a href="https://broker.carefirst.com/brokers/mandates-policies/healthcare-fraud-prevention.page?">Health Care Fraud Prevention</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/mandates-policies/internet-privacy-policy.page?">Internet Privacy Policy</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/mandates-policies/machine-readable-data.page?">Machine Readable Data</a></li>
+                    </ul>  
+                </div>
+
+                <div class="  p0">
+                    <h4>Other Information</h4>
+                    <ul>
+                        <li><a href="http://www.carefirstcommitment.com/html/index.html">Community</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/contact-us/contact-us.page?">Contact Us</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/vitality/vitality-magazine.page?">Vitality Magazine</a></li>
+                        <li><a href="https://broker.carefirst.com/brokers/contact-us/broker-feedback.page">Have a Question?</a></li>
+                    </ul>  
+                </div> 
+                <div class=" p0">
+                    <h4>News</h4>
+                    <ul>
+                        <li><a href="https://broker.carefirst.com/brokers/news/2016/archive.page?">News Archive</a></li>
+                    </ul>  
+                </div>         
+
+            </div>
+            <div class="col-md-2 col-sm-12 pr0 mr0 r">
+                <form class="form-horizontal">
+                    <div class=" col-sm-12 p0">
+                        <strong  class="control-label  col-sm-12 p0">Today’s Date:<span id="current-date"></span>
+                            <!-- <span class="visible-xs dib">&nbsp; |&nbsp;&nbsp;   &copy;  2014 CareFirst</span> --></strong>
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>     
+                <div class="text">
+                    <div id="sm-icons">
+                        <p>Connect with us:</p>
+                        <a href="http://www.carefirst.com/redirects/FacebookRedirect.html" target="_blank">
+                            <img src="{!URLFOR($Resource.Communities_Resource, '/content/img/icon-facebook-footer.png')}" alt="Facebook"/></a> 
+                            <a href="http://www.carefirst.com/redirects/TwitterRedirect.html" target="_blank"><img src="{!URLFOR($Resource.Communities_Resource, '/content/img/icon-twitter-footer.png')}" alt="Twitter"/></a>
+                            <a href="http://www.carefirst.com/redirects/YouTubeRedirect.html" target="_blank"><img src="{!URLFOR($Resource.Communities_Resource, '/content/img/icon-youtube-footer.png')}" alt="YouTube"/></a> 
+                            <a href="http://www.linkedin.com/company/carefirst-bluecross-blueshield" target="_blank"><img src="{!URLFOR($Resource.Communities_Resource, '/content/img/icon-linkedin-footer.png')}" alt="LinkedIn"/></a>
+                            <a href="http://www.carefirst.com/mobileaccess" target="_blank"><img src="{!URLFOR($Resource.Communities_Resource, '/content/img/icon-mobile-footer.png')}" alt="Mobile"/></a> 
+                        </div>
+                        <p class="ml15">Serving Maryland, the District of Columbia and portions of Virginia. CareFirst BlueCross BlueShield is the shared business name of CareFirst of Maryland,Inc. and Group Hospitalization and Medical Services, Inc. CareFirst BlueChoice, Inc., an affiliate company, also offers health benefit products and services on this site.</p>
+                        <p class="ml15">CareFirst BlueCross BlueShield and CareFirst BlueChoice, Inc. are independent licensees of the Blue Cross and Blue Shield Association. ® Registered trademark of the Blue Cross and Blue Shield Association. ® Registered trademark of CareFirst of Maryland, Inc.</p>
+                    </div>
+                    <!-- END .text --> 
+                </div>
+                <!-- END .container --> 
+            </footer>
+        </div>
+        <script type="text/javascript">
+
+                     var d = new Date();
+                     document.getElementById("current-date").innerHTML = (d.getMonth() + 1) + '/' + d.getDate() + '/' +  d.getFullYear();
+                     $('.shopAlternatButton').click(function(e){
+                           e.stopPropagation();
+                     });
+        </script>
+        <!-- ### MEGAMENU APPEND CLASS TO ANOTHER ELEMENT  ### -->
+        <script>
+            $('li.dropdown').hover(
+                function(){ $(this).find('.mm-arrow').addClass('hover') },
+                function(){ $(this).find('.mm-arrow').removeClass('hover') }
+                )
+        </script>
+
+        
+</apex:component>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_72193332</developerName>
+        <masterLabel>Division (Updated)</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Enrollment__c$Opportunity__c.Division__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Strategic Accounts 1000+</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Healthcare/Education/Par</sourceValue>
+            </sourceValues>
+            <value>Strategic Accounts 1000+</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Enrollment__c$Contracts__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.SBU__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Large</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Lead_Rep_Name_User__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Natalie Colling,Brandon Servary,Tester Tester</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Market_Segment_New__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>51-199,200-999,1000+</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Opportunity.AIA_200,Opportunity.X51</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Euro,Vocus,Asbestos Workers Local 24</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Processed_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>D,R,V</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>Enrollment__c$Enrl_Rpt_Dt__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Opportunity__c.Compensation_Owner__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Opportunity__c.Account</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>200+ LG AE Monthly Enrollment_rg</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Enrollments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Enrollment__c$Enrl_Rpt_Dt__c</dateColumn>
+        <endDate>2019-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-02-01</startDate>
+    </timeFrameFilter>
+</Report>

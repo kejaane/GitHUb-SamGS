@@ -1,0 +1,24 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><font face="Times New Roman">
+
+<br></font></p><p style="margin: 0in 0in 10pt;"><font face="Calibri">Dear {!Case.SLA_Category__c} team supervisor&nbsp;,</font></p><p style="margin: 0in 0in 10pt;"><font face="Calibri"><br></font></p><p><font face="Times New Roman">
+
+<font face="Calibri"><font face="Times New Roman"><font face="Calibri">Elite Case#{!Case.CaseNumber}&nbsp;has not been 'Accepted' by a user in 4 hours after it was received.</font></font></font></font></p><p><br></p><p><font face="Calibri">Please review the 'Elite' case and assign&nbsp;as necessary to meet&nbsp;the 'Service Level Agreements'.</font></p><p><font face="Calibri"><br></font></p><p style="margin: 0in 0in 10pt;"><font face="Calibri">Detail Case Link : {!Case.Link}</font></p><p><font face="Times New Roman">
+
+<font face="Calibri">&nbsp;</font></font></p><p><font face="Times New Roman">
+
+<br></font></p><p style="margin: 0in 0in 10pt;"><font face="Calibri">Thank You,</font></p><p style="margin: 0in 0in 10pt;"><font face="Calibri"><font face="Times New Roman"><font face="Calibri">SFDC Team</font></font></font></p><p><font face="Times New Roman">
+
+</font><span style='line-height: 115%; font-family: "Calibri",sans-serif; font-size: 11pt; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: "Times New Roman"; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;'><a href="mailto:SFDCSupport@carefirst.com">SFDCSupport@carefirst.com</a></span></p><p><span style='line-height: 115%; font-family: "Calibri",sans-serif; font-size: 11pt; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: "Times New Roman"; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;'><br></span></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

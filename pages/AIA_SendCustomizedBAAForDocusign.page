@@ -1,0 +1,24 @@
+<!-- =======================================================================================================
+ * Date         : 11/29/2017
+ * Developer    : Satya Tirumalasetti
+ * Purpose      : VF page which is called when Send For Docusign button is clicked on the Implementation 
+ *               record to chekc if current user is eligible to send document for signature or not
+ *=======================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date      +  Developer   + Tag + Description
+ *===========+==============+============================================================================
+ * 11/29/2017|  Satya       |     | Initial Version.
+ *===========+==============+=====+======================================================================
+-->
+
+<apex:page standardController="AIA_Document__c" extensions="AIA_Send_Customized_BAA_For_Docusign" action="{!sendToBAADocusign}">
+  <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Back" action="{!back}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

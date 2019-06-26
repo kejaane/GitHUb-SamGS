@@ -1,0 +1,112 @@
+<!--=========================================================================================
+ * Date         : 08/16/2017
+ * Developer    : Debkanti Pal
+ * Purpose      : Custom page to for selecting Recordtype of Benefit Design Form.           
+ *
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer          Tag             Description
+ *===========+=================+======+==============================================
+ * 02/01/2018| Rajesh Nagandla | T01  |   Added SLDS to all components in page 
+ *===========+============+================================================================
+-->
+
+<apex:page standardController="AIA_Benefit_Design_Form__c" extensions="AIA_Ben_Form_RedirectExtensionController" lightningStylesheets="true"> 
+    <!--T01 - start -->
+    <apex:slds rendered="{! !isClassic}"/>
+    <style>
+   
+    body .bPageTitle .pageTitleIcon, .slds-scope .bPageTitle .pageTitleIcon {
+    display: block !important;
+    background-image: url(/img/icon/custom51_100/dice32.png) !important;
+    background-position: 0 0 !important;
+    width: 32px !important;
+    height: 32px !important;
+    }
+    .slds-input{
+        width:20rem !important;
+        }
+    </style>
+    <!--T01 - End -->
+    <apex:form styleClass="slds-scope" >
+        <!--T01 - Start -->
+        <apex:sectionHeader title="New Benefit Design Form" />
+        <!--T01 - End -->
+        <!--T01 - Start: Removed Below logic as per Review Comments
+        <apex:sectionHeader title="New Benefit Design Form" subtitle="Select Benefit Design Form Record Type"/>
+        <div class="slds-box slds-theme_default">
+        <p class='slds-text-body_regular'>Select a record type for the new benefit design form. To skip this page in the future, change your record type settings on your personal setup page.</p>
+        </div> 
+        T01 - End: -->
+        
+        <apex:pageBlock mode="edit" title="Select Benefit Design Form Record Type">
+            <apex:pageBlockSection columns="1">
+                <table style="width:100%" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <tr>
+                        <td >
+                            <apex:selectList size="1" value="{!Selected}" styleClass="{! if(isClassic,'','slds-input')}">
+                                <apex:outputText > Record Type of new record </apex:outputText> &nbsp;&nbsp;
+                                <apex:selectOptions value="{!items}"></apex:selectOptions>
+                            </apex:selectList>
+                        </td>
+                    </tr>  
+                </table>
+            </apex:pageBlockSection>
+            <table style="width:70%"  >
+                <tr>
+                    <td width="40%">
+                    </td>
+                    <td>
+                        <apex:commandButton value="Continue" action="{!selectedvalue}"/>
+                        <apex:commandButton value="Cancel" action="{!cancel}"/>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+        <Table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <div class="slds-box slds-theme_default">
+            <p style="font-family: arial; font-size: 9pt;"><b>
+                Available Benefit Design Form Record Types</b></p>
+            </div>
+        </Table>
+        <style>
+        Table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        }
+        th{
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 4px;
+        }
+        td{
+             padding: 5px;
+            }
+        </style>
+        <Table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <tr>
+                <th bgcolor="#D5D8DC" border = "1px solid" text-align = "left" >Record Type Name</th>
+                <th bgcolor="#D5D8DC" border = "1px solid" text-align = "left" >Description</th>
+            </tr>
+            <tr>
+                <td border = "1px solid" text-align = "left"> <b>Admin </b></td>
+                <td border = "1px solid" text-align = "left">Admin</td>
+
+            </tr>
+            <tr>
+                <td border = "1px solid" text-align = "left"> <b>Domestic Partner - Self Insured Only</b></td>
+                <td border = "1px solid" text-align = "left">Domestic Partner - Self Insured Only</td>
+
+            </tr>
+            <tr>
+                <td border = "1px solid" text-align = "left"> <b>MCP - Full Managed Care </b></td>
+                <td border = "1px solid" text-align = "left"> Managed Care Program (MCP) - Full Managed Care </td>
+            </tr>
+            <tr>
+                <td border = "1px solid" text-align = "left"> <b>MCP - Non Standard </b></td>
+                <td border = "1px solid" text-align = "left"> Managed Care Program (MCP) - Non Standard </td>
+            </tr>
+        </Table>
+    </apex:form>
+</apex:page>

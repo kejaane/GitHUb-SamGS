@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r.Workplan_Stage__r.AIA_Workplan_Assignment__r$Task_Description__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r.Workplan_Stage__r.AIA_Workplan_Assignment__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r.Workplan_Stage__r.AIA_Workplan_Assignment__r$Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r.Workplan_Stage__r.AIA_Workplan_Assignment__r$Date_Completed__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AIA_Implementation__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r$Workplan_Stage_Category__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AIA_Implementation__c.AIA_Workplan_Stage1__r.Workplan_Stage__r$Workplan_Stage__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Active Workplan Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Workplan_for_Active_Implementation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>AIA_Implementation__c$Automated_Enrollment_Received__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

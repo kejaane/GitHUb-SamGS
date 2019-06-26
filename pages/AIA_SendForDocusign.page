@@ -1,0 +1,51 @@
+<!-- 
+ *===========================================================================================================
+ * Date         : 11/02/2017
+ * Developer    : Satya Tirumalasetti
+ * Purpose      : VF page which is called when Send For Docusign button is clicked on the Implementation 
+ *               record to chekc if current user is eligible to send document for signature or not
+ *===========================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date      +  Developer   + Tag + Description
+ *===========+==============+================================================================================
+ * 11/02/2017| Satya        |     | Initial Version.
+ * 12/26/2017| Satya        | T01 | Added escape="false" in apex:pagemessages tag to display error 
+ *                                  messages involving multiple lines. US287.
+ * 02/12/2017| Satya        | T02 | Added to distinguish between classic and lightning as per user Interface
+ *===========+==============+=====+==========================================================================
+-->
+
+<apex:page standardController="AIA_Implementation__c" extensions="AIA_Send_For_Docusign" action="{!sendToDocusign}">
+  <apex:slds rendered="{!!isClassic}" />
+  <Style>
+        .slds-scope .slds-font {
+            font-size:15px;
+        }
+  </Style>
+  <apex:form >
+        <apex:pageBlock >
+          <!--  <apex:pageMessages escape="false"/> --T01-->
+            <apex:outputPanel rendered="{!!isClassic}"> <!--T02 Changes start-->
+               <div class="slds-scope">
+                    <div class="slds-p-left--large slds-p-top_x-large slds-p-bottom_x-large slds-font">
+                       <apex:pageMessages escape="false"/>
+                    </div>
+               </div>
+            </apex:outputPanel> 
+            <apex:outputPanel rendered="{!isClassic}">
+               <apex:pageMessages escape="false"/> 
+            </apex:outputPanel> <!--T02 Changes end-->
+            <apex:pageBlockButtons location="bottom">
+            <apex:outputPanel rendered="{!!isClassic}"> <!--T02 Changes start-->
+            <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center" >
+                <apex:commandButton value="Back" action="{!back}" styleClass="slds-button slds-button_neutral"/>
+            </div>
+            </apex:outputPanel> 
+            <apex:outputPanel rendered="{!isClassic}">
+                <apex:commandButton value="Back" action="{!back}"/>
+            </apex:outputPanel> <!--T02 Changes end-->
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

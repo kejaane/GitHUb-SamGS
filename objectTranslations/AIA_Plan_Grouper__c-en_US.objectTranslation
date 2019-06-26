@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AnnualMaximumApplies --></label>
+        <name>AnnualMaximumApplies__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CoInsurance AddIncrement --></label>
+        <name>CoInsurance_AddIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- CoInsurance High --></label>
+        <name>CoInsurance_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- CoInsurance Increment --></label>
+        <name>CoInsurance_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- CoInsurance InvalidIncrement --></label>
+        <name>CoInsurance_InvalidIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- CoInsurance Low --></label>
+        <name>CoInsurance_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- CoInsurance --></label>
+        <name>CoInsurance__c</name>
+    </fields>
+    <fields>
+        <label><!-- DavisString --></label>
+        <name>DavisString__c</name>
+    </fields>
+    <fields>
+        <label><!-- DeductibleApplies --></label>
+        <name>DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISExisting_Grouper --></label>
+        <name>ISExisting_Grouper__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsCovered --></label>
+        <name>IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>False</masterLabel>
+            <translation><!-- False --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>True</masterLabel>
+            <translation><!-- True --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PCS Grouper Id --></label>
+        <name>PCS_Grouper_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- PlanId --></label>
+        <name>PlanId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Grouper Name --></label>
+        <name>Plan_Grouper_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Network --></label>
+        <name>Plan_Network__c</name>
+        <relationshipLabel><!-- Plan Grouper --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Plan --></label>
+        <name>Plan__c</name>
+        <relationshipLabel><!-- Plan Grouper --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Record Type --></label>
+        <name>Record_Type__c</name>
+        <picklistValues>
+            <masterLabel>BDD</masterLabel>
+            <translation><!-- BDD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF</masterLabel>
+            <translation><!-- BRF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Benefit Group</masterLabel>
+            <translation><!-- Benefit Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost Share Group</masterLabel>
+            <translation><!-- Cost Share Group --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan Grouper</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plan Grouper</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Plan Group Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

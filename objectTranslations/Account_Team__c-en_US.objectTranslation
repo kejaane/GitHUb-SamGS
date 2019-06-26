@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Access --></label>
+        <name>AccountAccessLevel__c</name>
+        <picklistValues>
+            <masterLabel>Edit</masterLabel>
+            <translation><!-- Edit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read Only</masterLabel>
+            <translation><!-- Read Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>AccountId__c</name>
+        <relationshipLabel><!-- Account Teams --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case Access Level --></label>
+        <name>CaseAccessLevel__c</name>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read Only</masterLabel>
+            <translation><!-- Read Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact Access --></label>
+        <name>ContactAccessLevel__c</name>
+        <picklistValues>
+            <masterLabel>Edit</masterLabel>
+            <translation><!-- Edit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read Only</masterLabel>
+            <translation><!-- Read Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Access Level --></label>
+        <name>OpportunityAccessLevel__c</name>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Team Role --></label>
+        <name>TeamMemberRole__c</name>
+        <picklistValues>
+            <masterLabel>AIA Admin</masterLabel>
+            <translation><!-- AIA Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AIA User</masterLabel>
+            <translation><!-- AIA User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Dedicated Representative</masterLabel>
+            <translation><!-- Account Dedicated Representative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Executive</masterLabel>
+            <translation><!-- Account Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Manager</masterLabel>
+            <translation><!-- Account Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actuary</masterLabel>
+            <translation><!-- Actuary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auditor</masterLabel>
+            <translation><!-- Auditor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automated Enrollment Tech</masterLabel>
+            <translation><!-- Automated Enrollment Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCM Coordinator</masterLabel>
+            <translation><!-- BCM Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Coder</masterLabel>
+            <translation><!-- BeneFact Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Portal Tech</masterLabel>
+            <translation><!-- BeneFact Portal Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Tester</masterLabel>
+            <translation><!-- BeneFact Tester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Admin Manager</masterLabel>
+            <translation><!-- Benefit Admin Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Coder</masterLabel>
+            <translation><!-- Benefit Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Contract Specialist</masterLabel>
+            <translation><!-- Benefit Contract Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Approvers</masterLabel>
+            <translation><!-- Benefit Design Approvers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Tester</masterLabel>
+            <translation><!-- Benefit Tester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Tech</masterLabel>
+            <translation><!-- Billing Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue Rewards Tech</masterLabel>
+            <translation><!-- Blue Rewards Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueFund</masterLabel>
+            <translation><!-- BlueFund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cede Document Tech</masterLabel>
+            <translation><!-- Cede Document Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claims</masterLabel>
+            <translation><!-- Claims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Advisory Services</masterLabel>
+            <translation><!-- Client Advisory Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Coordinator</masterLabel>
+            <translation><!-- Contract Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Manager</masterLabel>
+            <translation><!-- Contract Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Tech</masterLabel>
+            <translation><!-- Contract Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Tech</masterLabel>
+            <translation><!-- Enrollment Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facets Migration Contact</masterLabel>
+            <translation><!-- Facets Migration Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Coordinator</masterLabel>
+            <translation><!-- Implementation Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Manager</masterLabel>
+            <translation><!-- Implementation Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAIN Tech</masterLabel>
+            <translation><!-- MAIN Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAST Tech</masterLabel>
+            <translation><!-- MAST Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Magellan Tech</masterLabel>
+            <translation><!-- Magellan Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Management Tech</masterLabel>
+            <translation><!-- Medical Management Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTS Claims</masterLabel>
+            <translation><!-- OTS Claims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations Tech Support Tech</masterLabel>
+            <translation><!-- Operations Tech Support Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGA Tech</masterLabel>
+            <translation><!-- PGA Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Guarantee Coordinator</masterLabel>
+            <translation><!-- Performance Guarantee Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy Management</masterLabel>
+            <translation><!-- Pharmacy Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy Operations</masterLabel>
+            <translation><!-- Pharmacy Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Production ID Card Tech</masterLabel>
+            <translation><!-- Production ID Card Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Specialist</masterLabel>
+            <translation><!-- Proposal Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA Auditor</masterLabel>
+            <translation><!-- QA Auditor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Assistant</masterLabel>
+            <translation><!-- Sales Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlements Analyst</masterLabel>
+            <translation><!-- Settlements Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stop Table Tech</masterLabel>
+            <translation><!-- Stop Table Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriter</masterLabel>
+            <translation><!-- Underwriter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision Analyst</masterLabel>
+            <translation><!-- Vision Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wellness Tech</masterLabel>
+            <translation><!-- Wellness Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workforce Management</masterLabel>
+            <translation><!-- Workforce Management --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>UserId__c</name>
+        <relationshipLabel><!-- Account Teams --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- My Account Team --></label>
+        <name>test_field_for_filters__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Team</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Teams</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

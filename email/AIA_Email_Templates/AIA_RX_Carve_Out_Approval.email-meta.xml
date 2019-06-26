@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AIA RX Carve-Out Approval</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA RX Carve-Out Approval</name>
+    <style>formalLetter</style>
+    <subject>{!Benfit_Request_Form__c.Account__c} with RX Carve-Out Needs to Be Approved</subject>
+    <textOnly>Please approve the requested to continue offering RX Carve-Out for this account:
+Account Name: {!Benfit_Request_Form__c.Account__c}
+Effective Date: {!Benfit_Request_Form__c.Benefit_Effective_Date__c}
+Benefit Request Form: {!Benfit_Request_Form__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

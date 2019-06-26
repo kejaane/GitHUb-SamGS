@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- BDD Custom Name --></label>
+        <name>BDD_Custom_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Custom Mapping Name --></label>
+        <name>BRF_Custom_Mapping_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouper Name --></label>
+        <name>Grouper_Name__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>BRF Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BRF Mapping</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

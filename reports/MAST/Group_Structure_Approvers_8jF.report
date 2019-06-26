@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.AccountTeamMembers__r$TeamMemberRole__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.AccountTeamMembers__r$TeamMemberRole__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.AccountTeamMembers__r$UserId__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Barbara Gerber,Cherrice Davis,Crystal Dove,Donna Hase,Elizabeth Fuhrman,Jennifer Fowler,Jose Cabrera,Karen Gambrell,Kelly Coiner,Linda Pierce,Linda Thompson,Lindsay Caldwell,Lisa Quigg,Lynn Dods-Liming,Madelyn Ciotola,Maria Douthitt,Marlies Fisher,Matthew Fritz,Michele Weiss,Michelle Finney,Molly McAllen,Paulette Freeman,Sandy Santoni,Shannon Yospa,Sheray Austin,Sherry Schuyler,Susan Sachs,Vanessa Potts</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.AccountTeamMembers__r$UserId__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Group Structure Approvers</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_With_Custom_Accountteam__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

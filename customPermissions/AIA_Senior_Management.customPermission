@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Ignore validation for AIA_Senior_Management to update Senior Management Comments after ARC Approval</description>
+    <label>AIA Senior Management</label>
+</CustomPermission>

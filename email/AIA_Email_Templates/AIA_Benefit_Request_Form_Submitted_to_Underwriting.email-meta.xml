@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AIA Benefit Request Form Submitted to Underwriting</name>
+    <style>none</style>
+    <subject>Benefit Request Form Sent to Underwriting for {!Benfit_Request_Form__c.Account_Name__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,195 @@
+<!--
+// ========================================================================================
+//   Date: 10/25/2017
+//   Developer: Arshia Gulati
+//   Purpose: This page will appear as a new Tab 'Related Entity' on Service Cloud Console for SBU profiles.
+//   This Page calls RelatedEntitiesController class that will call service layer to retrieve Related Entities 
+//   from Facets DataLookUp Service.
+// ========================================================================================
+//                  Update History
+// Date       Developer     Description
+// ========================================================================================
+// 10/25/17   Initial Version
+// ========================================================================================
+-->
+<apex:page sidebar="False" showHeader="true" standardController="Related_Entity__c" extensions="RelatedEntitiesController" >       
+     <style>
+    /* This is for the full screen DIV */
+    .popupBackground {
+        /* Background color */
+        background-color:black;
+        opacity: 0.20;
+        filter: alpha(opacity = 20);
+    
+        /* Dimensions */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 998;
+        position: absolute;
+        
+        /* Mouse */
+        cursor:wait;
+    }
+        .ch{
+        text-align:center;
+        }
+        .chrigh{
+        text-align:right;
+        }
+        .dataTables_wrapper .dataTables_length{
+            float:right;
+            margin-right:1200px;
+        }
+        .dataTables_wrapper .dataTables_filter{
+            float:left;
+        }
+         .dp{
+        text-align:right;
+        }
+    
+ 
+    /* This is for the message DIV */
+    .PopupPanel {
+        /* Background color */
+        border: solid 2px #ffba1a;
+        background-color: white;
+ 
+        /* Dimensions */
+        left: 54%;
+        width: 200px;
+        margin-left: -100px;
+        top: 50%;
+        height: 75px;
+        margin-top: -25px;
+        z-index: 999;
+        position: fixed;
+        
+        /* Mouse */
+        cursor:pointer;
+    }
+         .tresults{        
+    }
+    .apexp,
+    #relTable{
+        width: 100% !Important;
+    }
+</style>    
+    <apex:actionStatus id="myStatus" stopText="">
+        <apex:facet name="start">
+            <div>
+                <div class="popupBackground" /> <!-- calling the CSS classes -->
+                <div class="PopupPanel">
+                    <table  border="0" bordercolor="red"  width="100%" height="100%">
+                        <tr>
+                            <td align="center"><b>Please Wait</b></td>
+                        </tr>
+                        <tr>
+                            <td valign="center" align="center"><img src="{!$Resource.Progressbar}"/></td>
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </apex:facet>
+    </apex:actionStatus>
+
+<apex:form id="frm" style="height:100%">
+    <!-- jQuery lib -->
+        <apex:includescript value="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"/>
+        <apex:includeScript value="{!URLFOR($Resource.daterange, 'jquery-ui.js')}"/>                
+        <apex:stylesheet value="{!URLFOR($Resource.daterange, 'jquery-ui.css')}"/>
+    
+    <!-- tableSorter lib -->
+        <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/js/jquery.tablesorter.min.js"/>
+        <apex:stylesheet value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/css/theme.blue.css"/>
+        
+        <!-- datatables.net lib -->
+        <apex:includeScript value="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"/>
+        <apex:stylesheet value="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"/>
+    
+    <apex:actionFunction action="{!ShowREDetails}"  name="entSelected" reRender="relDetail" status="myStatus">
+        <apex:param value="{!selectedEntityId}" name="relDetail" assignTo="{!selectedEntityId}"/>
+    </apex:actionFunction>
+    <apex:pageBlock id="pgb">
+        <apex:pagemessages id="errorid" showDetail="false"  ></apex:pagemessages>
+        <apex:pageBlockSection title="Search Related Entities" columns="2" id="pgs" showHeader="true">  
+            <apex:inputfield label="Group ID *" value="{!objRelEnt.Group_ID__c}"/>
+            <apex:commandButton value="Get Related Entities" action="{!getRelatedEntities}" reRender="errorid,jsPanel,pbsgrp,relDetail" status="myStatus"/>
+         </apex:pageBlockSection>   
+        
+        <apex:pageblockSection title="Related Entities" id="pbsgrp" columns="1" collapsible="false" showHeader="false">          
+            <apex:outputPanel id="thePanel"  layout="block" rendered="{!showREList}" > 
+                <table id="relTable"  cellspacing="0" style="width:100%" columns="1">
+                                <thead >
+                                    <tr> 
+                                        <th ><font size="2" >Action</font></th>
+                                        <th><font size="2" >Category</font></th>
+                                        <th><font size="2" >Type</font></th>
+                                        <th><font size="2" >Name</font></th>
+                                        <th><font size="2" >City</font></th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>                              
+                                    
+                                    <apex:repeat value="{!lstRelEnt}" var="Elig" id="theRepeat">
+                                        <tr>
+                                            <td>
+                                            <input type="radio" name="entityId" value="{! Elig.Entity_ID__c + '-' + Elig.Type_Code__c}"   onchange="entSelected(this.value);return true;"/> 
+                                            </td>
+                                            <td>{!Elig.Category__c}</td>
+                                            <td>{!Elig.Type_Code__c}</td>
+                                            <td>{!Elig.Name}</td>
+                                            <td>{!Elig.City__c}</td>                                       
+                                        </tr>                                        
+                                    </apex:repeat>                                    
+                                </tbody>
+                            </table>                                                 
+                </apex:outputPanel>           
+                </apex:pageblockSection>         
+                  <apex:outputPanel id="relDetail">
+            <apex:pageBlockSection title="Related Entity Details" columns="2" collapsible="True" id="relDetails" rendered="{!showREDet}" >                  
+                <apex:outputField value="{!selectedRE.Entity_ID__c}" />
+                <apex:outputField value="{!selectedRE.AddressLine1__c}" label="Address"/>                
+                <apex:outputField value="{!selectedRE.Name}" />  
+                <apex:outputField value="{!selectedRE.AddressLine2__c}" label=""/>  
+                <apex:outputField value="{!selectedRE.Category__c}" />
+                <apex:outputField value="{!selectedRE.AddressLine3__c}" label=""/>  
+                <apex:outputField value="{!selectedRE.Type_Desc__c}" label="Type" />
+                <apex:outputField value="{!selectedRE.AddressLine4__c}" label=""/>  
+                <apex:outputText rendered="{!if(OR(ISBLANK(selectedRE.County__c),selectedRE.County__c == ''),false,true)}"> </apex:outputText>
+                <apex:outputField value="{!selectedRE.County__c}" label="" rendered="{!if(OR(ISBLANK(selectedRE.County__c),selectedRE.County__c == ''),false,true)}"/>  
+                <apex:outputField value="{!selectedRE.Effective_Date__c}" />
+                <apex:outputField value="{!selectedRE.Phone__c}" label="Phone"/>
+                <apex:outputField value="{!selectedRE.Termination_Date__c}" />
+                <apex:outputField value="{!selectedRE.Email__c}" label="Email"/>                                   
+                <apex:outputField value="{!selectedRE.Relationship_Term_Reason_Desc__c}" label="Relationship Termination Reason"/>
+                <apex:outputField value="{!selectedRE.Fax__c}" label="Fax"/>  
+                </apex:pageBlockSection>
+                </apex:outputPanel>
+                <apex:pageBlockButtons >                    
+                <apex:commandButton action="{!CustomCancel}" value="Refresh"/>
+                </apex:pageBlockButtons>
+        </apex:pageBlock>       
+           <apex:outputPanel id="jsPanel">
+            <script>
+               var table = $("[id$='relTable']").DataTable({                    
+                      "info":true,                         
+                      "bFilter":false,
+                      "word-wrap": "nowrap",
+                      "lengthChange": false,                   
+                      "paging":true, 
+                      "sPaginationType": "full_numbers",
+                      "scrollY":"100px",
+                      "scrollX": true,
+                      "columnDefs": [{ "min-width": "20" }],        
+                      "columnDefs": [{ "orderable": false, "targets": 0 }],
+                      "width": "40px",
+                      "order": [[1, 'asc']]
+                    });
+                    table.draw();  
+               </script>
+         </apex:outputPanel>     
+    </apex:form>
+</apex:page>

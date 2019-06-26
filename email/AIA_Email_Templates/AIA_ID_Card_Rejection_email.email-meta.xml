@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AIA ID Card Rejection email</name>
+    <style>none</style>
+    <subject>{!ID_Card__c.Name} for {!ID_Card__c.Implementation__c} has been Rejected. Needs more information</subject>
+    <textOnly>{!ID_Card__c.Name} for {!ID_Card__c.Implementation__c} has been Rejected.
+
+You may navigate to the ID Card by clicking on the link below {!ID_Card__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

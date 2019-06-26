@@ -1,0 +1,9 @@
+<messaging:emailTemplate subject="{!relatedTo.Account_Legal_Name__c} - Effective Date {!relatedTo.Effective_date_format__c} - Approved group structure for Account approval." recipientType="User" relatedToType="AIA_Group_Structure_Request_Form__c">
+<messaging:htmlEmailBody >
+{!relatedTo.Account_Legal_Name__c} - Effective Date {!relatedTo.Effective_date_format__c} BGI = {! IF(relatedTo.Base_Group_Impact__c==True,'Y','N')} - Approved group structure for Account approval
+
+<br></br><br></br>
+Thanks,<br></br>
+AIA Automation
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

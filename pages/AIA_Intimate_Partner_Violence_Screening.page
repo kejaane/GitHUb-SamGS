@@ -1,0 +1,26 @@
+<apex:page standardController="AIA_Benefit_Design_Product__c" >
+
+ <style type="text/css">   
+        .imgclass:hover{   
+            background-image: url(/img/help/helpOrbs.gif);   
+            background-repeat: no-repeat;   
+            width: 16px;   
+            height: 15px;      
+            background-position: right;   
+          
+        }   
+        .imgclass{   
+            background-image: url(/img/help/helpOrbs.gif);   
+            background-repeat: no-repeat;   
+            width: 16px;   
+            height: 15px;   
+        }   
+    </style> 
+    
+  <!-- Begin Default Content REMOVE THIS -->
+  <Strong><h1>Intimate Partner Violence Screening :</h1></Strong>
+<img src="/s.gif" Class="imgclass" title="Turnkey for all existing accounts, New Accounts effective 5/1/13 and after. " />
+The USPSTF recommendation includes screening for intimate partner violence, such as domestic violence, for women of childbearing age and provide or refer women who screen positive to intervention services. <br> </br>
+
+This recommendation applies to women who do not have signs or symptoms of abuse
+</apex:page>

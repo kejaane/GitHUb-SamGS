@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- InNetwork Id --></label>
+        <name>InNetwork__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network ID --></label>
+        <name>Network_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- OutNetwork Id --></label>
+        <name>OON_OutNetwork__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan --></label>
+        <name>Plan__c</name>
+        <relationshipLabel><!-- Plan Network --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Record Type --></label>
+        <name>Record_Type__c</name>
+        <picklistValues>
+            <masterLabel>BDD</masterLabel>
+            <translation><!-- BDD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF</masterLabel>
+            <translation><!-- BRF --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan Network</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plan Network</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Plan Network Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

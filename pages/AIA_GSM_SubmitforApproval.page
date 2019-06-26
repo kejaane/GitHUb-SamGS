@@ -1,0 +1,52 @@
+<!--===================================================================================================================
+ * Date       : 9/18/2017
+ * Developer  : Rajesh Nagandla
+ * Purpose    : Invoking AIA_GSM_SubmitforApproval from submit for approval button on GSRF for internal approval process.
+ *              Validates all the conditions and submits for approval, if satisfies all the conditions.
+ *                                 Update History
+ *                                 ---------------
+ * Date       |     Developer        | Tag |   Description
+ *============+============+=========================================================================================
+ * 9/21/2017  | Ravi Teja Vadapalli  | T02 | Added code to for External approval process 
+ * 02/13/2018 | Phanishankar P       | T03 | Added SLDS to all components in page
+ *============+============+=========================================================================================
+-->
+<apex:page standardController="AIA_Group_Structure_Request_Form__c" extensions="AIA_GSM_SubmitforApprovalController" lightningStylesheets="true">
+    <!--T03 - start -->
+    <apex:slds rendered="{! !isClassic}"/>
+    <!--T03 - End -->
+    <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.status__c}</span>
+    <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.Alpha_Prefix_is_missing__c }</span>
+    <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.NASCO_Account_Number__c }</span>
+    <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.Implementation__c}
+        {!AIA_Group_Structure_Request_Form__c.ownerid}{!AIA_Group_Structure_Request_Form__c.Processing_Type__c}</span>
+   
+  <apex:include pageName="BusyIndicator"/> 
+  <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+  <apex:pageMessages ></apex:pageMessages>
+  <script> 
+    // Show the busy model image when page is first loaded.
+    window.onload = function()
+    {      
+       // After showing the modal window call a script function which will in turn
+       // call the controller extension function.
+       showBusyThenCallScript('submitforapproval'); 
+    }
+  </script>
+  
+  <apex:form id="theForm" styleClass="slds-scope">
+  
+    <!-- Define a function callable from Javascript.  This will in turn call the controller extension function. -->
+    <apex:actionFunction name="submitforapproval" action="{!submitforapproval}" onComplete="hideBusy();" rerender="theForm"/>
+
+    <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}" escape="false"/><br/><br/><br/>
+        <apex:commandButton value="Ok" action="{!backtogsrf}" styleClass="slds-button slds-button_neutral"/>
+      </div>  
+    </apex:outputPanel>
+    
+  </apex:form> 
+</apex:page>

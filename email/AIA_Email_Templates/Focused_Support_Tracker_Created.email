@@ -1,0 +1,16 @@
+Dear Team,
+
+Thank you for your inquiry. A ticket has been created and will be assigned shortly for a resolution.
+
+Ticket Number: {!Focused_Support_Tracker__c.Name}    
+Status: {!Focused_Support_Tracker__c.Status__c}
+Assigned Desk: {!Focused_Support_Tracker__c.Assigned_Desk__c}   
+Priority: {!Focused_Support_Tracker__c.Priority__c}
+Opened By: {!Focused_Support_Tracker__c.Opened_By__c}         
+Cetegory: {!Focused_Support_Tracker__c.Category__c}
+Reported By: {!Focused_Support_Tracker__c.Reported_By__c}       
+Assigned to: {!Focused_Support_Tracker__c.Assigned_To__c}
+
+Regards,
+
+SFDC Lightning Support

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Assignments Must Be Completed --></label>
+        <name>All_Assignments_Must_Be_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Order --></label>
+        <name>Display_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration (Business Hours) --></label>
+        <name>Duration_Business_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration (Hours) --></label>
+        <name>Duration_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation__c</name>
+        <relationshipLabel><!-- Workplan Stage --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mark Not Required --></label>
+        <name>Mark_Not_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Workplan Stage --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Workplan Stage --></label>
+        <name>Parent_Workplan_Stage__c</name>
+        <relationshipLabel><!-- Workplan Stage --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent Workplan Type Stage --></label>
+        <name>Parent_Workplan_Type_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start SubProcess --></label>
+        <name>Start_SubProcess__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Required</masterLabel>
+            <translation><!-- Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- % Tasks Completed --></label>
+        <name>Tasks_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Stage Category --></label>
+        <name>Workplan_Stage_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Stage --></label>
+        <name>Workplan_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type Stage --></label>
+        <name>Workplan_Type_Stage__c</name>
+        <relationshipLabel><!-- Workplan Stage --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type --></label>
+        <name>Workplan_Type__c</name>
+        <relationshipLabel><!-- Workplan Stage --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- # of Completed Tasks --></label>
+        <name>of_Completed_Tasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Total Tasks --></label>
+        <name>of_Total_Tasks__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Workplan Stage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Workplan Stage</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Workplan Stage (Process) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Workplan Stage (Sub-Process) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Object Relationships --></label>
+            <section>Object Relationships</section>
+        </sections>
+        <sections>
+            <label><!-- Progress --></label>
+            <section>Progress</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Process --></label>
+        <name>Process</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sub-Process --></label>
+        <name>Sub_Process</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- EWPS001: End date Cannot Be Earlier than Start Date --></errorMessage>
+        <name>EWPS001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPS002: User cannot change the status once it is &quot;Completed&quot; --></errorMessage>
+        <name>EWPS002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPS003: User cannot change the status once it is &quot;Not Required&quot; --></errorMessage>
+        <name>EWPS003</name>
+    </validationRules>
+</CustomObjectTranslation>

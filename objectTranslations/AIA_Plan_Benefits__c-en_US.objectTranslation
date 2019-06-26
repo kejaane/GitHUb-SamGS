@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Benefit Group --></label>
+        <name>Benefit_Group__c</name>
+        <relationshipLabel><!-- Plan Benefits --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Name --></label>
+        <name>Benefit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit --></label>
+        <name>Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coinsurance - AmountHigh --></label>
+        <name>Coinsurance_AmountHigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coinsurance - AmountIncrement --></label>
+        <name>Coinsurance_AmountIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coinsurance - AmountLow --></label>
+        <name>Coinsurance_AmountLow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coinsurance-Amount-AddtionalIncrements --></label>
+        <name>Coinsurance_Amount_AddtionalIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coinsurance_Amount_InvalidIncrements --></label>
+        <name>Coinsurance_Amount_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coinsurance-DefaultAmount --></label>
+        <name>Coinsurance_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -AmountRange-High --></label>
+        <name>Copay_AmountHigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay - AmountRange-Increment --></label>
+        <name>Copay_AmountIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay - AmountRange-Low --></label>
+        <name>Copay_AmountLow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -AmountRange-AdditionalIncrements --></label>
+        <name>Copay_AmountRange_AdditionalIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -AmountRange-InvalidIncrements --></label>
+        <name>Copay_AmountRange_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PCPCopay-AdditionalIncrements --></label>
+        <name>Copay_PCPCopay_AdditionalIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PCPCopay-Amount --></label>
+        <name>Copay_PCPCopay_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PCPCopay-High --></label>
+        <name>Copay_PCPCopay_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PCPCopay-Increment --></label>
+        <name>Copay_PCPCopay_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PCPCopay-InvalidIncrements --></label>
+        <name>Copay_PCPCopay_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PCPCopay-Low --></label>
+        <name>Copay_PCPCopay_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PerAdmissionCopay-AddtlIncrements --></label>
+        <name>Copay_PerAdmissionCopay_AddtlIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PerAdmissionCopay-Amount --></label>
+        <name>Copay_PerAdmissionCopay_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PerAdmissionCopay-High --></label>
+        <name>Copay_PerAdmissionCopay_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PerAdmissionCopay-Increment --></label>
+        <name>Copay_PerAdmissionCopay_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay-PerAdmissionCopay-InvalidIncrement --></label>
+        <name>Copay_PerAdmissionCopay_InvalidIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -PerAdmissionCopay-Low --></label>
+        <name>Copay_PerAdmissionCopay_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -SpecialistCopay-AddIncrements --></label>
+        <name>Copay_SpecialistCopay_AddIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -SpecialistCopay-Amount --></label>
+        <name>Copay_SpecialistCopay_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -SpecialistCopay-High --></label>
+        <name>Copay_SpecialistCopay_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -SpecialistCopay-Increment --></label>
+        <name>Copay_SpecialistCopay_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -SpecialistCopay-InvalidIncrements --></label>
+        <name>Copay_SpecialistCopay_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay -SpecialistCopay-Low --></label>
+        <name>Copay_SpecialistCopay_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - AliasName --></label>
+        <name>Copay_Type_1_AliasName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - Benefit Comment Codes --></label>
+        <name>Copay_Type_1_Benefit_Comment_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - DeductibleApplies --></label>
+        <name>Copay_Type_1_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copay_Type_1_DefaultAmount --></label>
+        <name>Copay_Type_1_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - Individual Mandate --></label>
+        <name>Copay_Type_1_Individual_Mandate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - IsCovered --></label>
+        <name>Copay_Type_1_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - Is ASO Only --></label>
+        <name>Copay_Type_1_Is_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - Jurisdiction` --></label>
+        <name>Copay_Type_1_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - Mandate Name --></label>
+        <name>Copay_Type_1_Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - MaxAgeFrom --></label>
+        <name>Copay_Type_1_MaxAgeFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - MaxAgeTo --></label>
+        <name>Copay_Type_1_MaxAgeTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - MaxAgeType --></label>
+        <name>Copay_Type_1_MaxAgeType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - MaxApply --></label>
+        <name>Copay_Type_1_MaxApply__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - MaxDurationType --></label>
+        <name>Copay_Type_1_MaxDurationType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - MaxDuration --></label>
+        <name>Copay_Type_1_MaxDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - MaxType --></label>
+        <name>Copay_Type_1_MaxType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - Max --></label>
+        <name>Copay_Type_1_Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - TierAgeFrom --></label>
+        <name>Copay_Type_1_TierAgeFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - TierAgeTo --></label>
+        <name>Copay_Type_1_TierAgeTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - TierAgeType --></label>
+        <name>Copay_Type_1_TierAgeType__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1- TierLimitDurationType --></label>
+        <name>Copay_Type_1_TierLimitDurationType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - TierLimitFrom --></label>
+        <name>Copay_Type_1_TierLimitFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - TierLimitTo --></label>
+        <name>Copay_Type_1_TierLimitTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 1 - TierLimitType --></label>
+        <name>Copay_Type_1_TierLimitType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - AliasName --></label>
+        <name>Copay_Type_2_AliasName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - Benefit Comment Codes --></label>
+        <name>Copay_Type_2_Benefit_Comment_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - DeductibleApplies --></label>
+        <name>Copay_Type_2_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copay_Type_2_DefaultAmount --></label>
+        <name>Copay_Type_2_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - Individual Mandate --></label>
+        <name>Copay_Type_2_Individual_Mandate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - IsCovered --></label>
+        <name>Copay_Type_2_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - Is ASO Only --></label>
+        <name>Copay_Type_2_Is_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - Jurisdiction` --></label>
+        <name>Copay_Type_2_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - Mandate Name --></label>
+        <name>Copay_Type_2_Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - MaxAgeFrom --></label>
+        <name>Copay_Type_2_MaxAgeFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - MaxAgeTo --></label>
+        <name>Copay_Type_2_MaxAgeTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - MaxAgeType --></label>
+        <name>Copay_Type_2_MaxAgeType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - MaxApply --></label>
+        <name>Copay_Type_2_MaxApply__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - MaxDurationType --></label>
+        <name>Copay_Type_2_MaxDurationType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - MaxDuration --></label>
+        <name>Copay_Type_2_MaxDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - MaxType --></label>
+        <name>Copay_Type_2_MaxType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - Max --></label>
+        <name>Copay_Type_2_Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - TierAgeFrom --></label>
+        <name>Copay_Type_2_TierAgeFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - TierAgeTo --></label>
+        <name>Copay_Type_2_TierAgeTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - TierAgeType --></label>
+        <name>Copay_Type_2_TierAgeType__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - TierLimitDurationType --></label>
+        <name>Copay_Type_2_TierLimitDurationType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - TierLimitFrom --></label>
+        <name>Copay_Type_2_TierLimitFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - TierLimitTo --></label>
+        <name>Copay_Type_2_TierLimitTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Type 2 - TierLimitType --></label>
+        <name>Copay_Type_2_TierLimitType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share-AdditionalIncrements --></label>
+        <name>Cost_Share_AdditionalIncrements__c</name>
+    </fields>
+    <fields>
+        <help><!-- Help Text --></help>
+        <label><!-- Cost Share - Default Amount --></label>
+        <name>Cost_Share_Default_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share - High --></label>
+        <name>Cost_Share_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share - Increment --></label>
+        <name>Cost_Share_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share-InvalidIncrements --></label>
+        <name>Cost_Share_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share - Low --></label>
+        <name>Cost_Share_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share-PeriodValue --></label>
+        <name>Cost_Share_PeriodValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share-TimeValue --></label>
+        <name>Cost_Share_TimeValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share Type --></label>
+        <name>Cost_Share_Type__c</name>
+        <picklistValues>
+            <masterLabel>Dropdown_Yes_No</masterLabel>
+            <translation><!-- Dropdown_Yes_No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Text</masterLabel>
+            <translation><!-- Text --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Davis Benefit Variable --></label>
+        <name>Davis_Benefit_Variable__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouper Name --></label>
+        <name>Grouper_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Mandate --></label>
+        <name>Has_Mandate__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISExisting_Benefit --></label>
+        <name>ISExisting_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is ASO Only --></label>
+        <name>IS_ASO_Only__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IsAppGlobalCoinsurance --></label>
+        <name>IsAppGlobalCoinsurance__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsAppGlobalCopay --></label>
+        <name>IsAppGlobalCopay__c</name>
+    </fields>
+    <fields>
+        <label><!-- MandateLockDownInd --></label>
+        <name>MandateLockDownInd__c</name>
+    </fields>
+    <fields>
+        <label><!-- MappingBRFBenefitID --></label>
+        <name>MappingBRFBenefitID__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_Benefit_Comment_Codes --></label>
+        <name>MaxLimitation_Benefit_Comment_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_Jurisdiction --></label>
+        <name>MaxLimitation_Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>V - VA</masterLabel>
+            <translation><!-- V - VA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_Mandate_Ind --></label>
+        <name>MaxLimitation_Mandate_Ind__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_Mandate_Name --></label>
+        <name>MaxLimitation_Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_MaxAgeFrom --></label>
+        <name>MaxLimitation_MaxAgeFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_MaxAgeTo --></label>
+        <name>MaxLimitation_MaxAgeTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_MaxAgeType --></label>
+        <name>MaxLimitation_MaxAgeType__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_MaxApply --></label>
+        <name>MaxLimitation_MaxApply__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_MaxDurationType --></label>
+        <name>MaxLimitation_MaxDurationType__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_MaxDuration --></label>
+        <name>MaxLimitation_MaxDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_MaxType --></label>
+        <name>MaxLimitation_MaxType__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxLimitation_Max_Value --></label>
+        <name>MaxLimitation_Max_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxPayment_High --></label>
+        <name>MaxPayment_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxPayment_Increment --></label>
+        <name>MaxPayment_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxPayment_Low --></label>
+        <name>MaxPayment_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- MinPayment_Hiigh --></label>
+        <name>MinPayment_Hiigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- MinPayment_Increment --></label>
+        <name>MinPayment_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- MinPayment_Low --></label>
+        <name>MinPayment_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCS Benefit Id --></label>
+        <name>PCS_Benefit_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Benefit Name --></label>
+        <name>Parent_Benefit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Period Value --></label>
+        <name>Period_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- PlaceOfService --></label>
+        <name>PlaceOfService__c</name>
+    </fields>
+    <fields>
+        <label><!-- Place of Service --></label>
+        <name>Place_of_Service__c</name>
+        <picklistValues>
+            <masterLabel>Freestanding</masterLabel>
+            <translation><!-- Freestanding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inpatient</masterLabel>
+            <translation><!-- Inpatient --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outpatient</masterLabel>
+            <translation><!-- Outpatient --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Plan --></label>
+        <name>Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProviderType --></label>
+        <name>ProviderType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provider Type --></label>
+        <name>Provider_Type__c</name>
+        <picklistValues>
+            <masterLabel>Facility</masterLabel>
+            <translation><!-- Facility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facility Practitioner</masterLabel>
+            <translation><!-- Facility Practitioner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCP</masterLabel>
+            <translation><!-- PCP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialist</masterLabel>
+            <translation><!-- Specialist --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Record Type --></label>
+        <name>Record_Type__c</name>
+        <picklistValues>
+            <masterLabel>BDD</masterLabel>
+            <translation><!-- BDD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF</masterLabel>
+            <translation><!-- BRF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- CostShare-ThreeMonth DeductibleCarryover --></label>
+        <name>Three_Month_Deductible_Carryover__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Time Benefit --></label>
+        <name>Time_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Benefit</masterLabel>
+            <translation><!-- Benefit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost Share</masterLabel>
+            <translation><!-- Cost Share --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Variation Condition ID --></label>
+        <name>Variation_Condition_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variation Name --></label>
+        <name>Variation_Name__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan Benefits</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plan Benefits</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Plan Benefits Layout</layout>
+        <sections>
+            <label><!-- CoInsurance --></label>
+            <section>CoInsurance</section>
+        </sections>
+        <sections>
+            <label><!-- Copay - Defaults --></label>
+            <section>Copay - Defaults</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Range - PCS Copay --></label>
+            <section>Copay Range - PCS Copay</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Range - Per Admission --></label>
+            <section>Copay Range - Per Admission</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Range - Specialist Copay --></label>
+            <section>Copay Range - Specialist Copay</section>
+        </sections>
+        <sections>
+            <label><!-- Cost Share --></label>
+            <section>Cost Share</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Variation --></label>
+            <section>Variation</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

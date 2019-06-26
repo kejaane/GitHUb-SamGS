@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Broker Role --></label>
+        <name>Broker_Role__c</name>
+        <picklistValues>
+            <masterLabel>Assistant</masterLabel>
+            <translation><!-- Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker Agent</masterLabel>
+            <translation><!-- Broker Agent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Completed --></label>
+        <name>Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Region --></label>
+        <name>DB_Region__c</name>
+        <picklistValues>
+            <masterLabel>APAC</masterLabel>
+            <translation><!-- APAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMEA</masterLabel>
+            <translation><!-- EMEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- When checked the user receives the Deactivate User process results via email. --></help>
+        <label><!-- Deactivate Recipient --></label>
+        <name>Deactivate_Recipient__c</name>
+    </fields>
+    <fields>
+        <help><!-- When checked the user is not included in the Quality Center Chatter Group QA Process --></help>
+        <label><!-- Exclude from Chatter QA --></label>
+        <name>Exclude_From_Chatter_QA__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the Facets user id. This is used by the Facets Integration when submitting case create/update requests --></help>
+        <label><!-- Facets User ID --></label>
+        <name>Facets_User_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Federation ID --></label>
+        <name>Federation_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Rep Number --></label>
+        <name>Lead_Rep_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the user is a Lead Rep this field should remain check-marked so that the user will be available for selection as a Lead Rep on the Opportunity record. --></help>
+        <label><!-- Lead Rep --></label>
+        <name>Lead_Rep__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the SBU/Area the User resides in. --></help>
+        <label><!-- License Category --></label>
+        <name>License__c</name>
+        <picklistValues>
+            <masterLabel>AAA</masterLabel>
+            <translation><!-- AAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CD</masterLabel>
+            <translation><!-- CD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEP</masterLabel>
+            <translation><!-- FEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large</masterLabel>
+            <translation><!-- Large --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Admin</masterLabel>
+            <translation><!-- Sales Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small</masterLabel>
+            <translation><!-- Small --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small/Medium</masterLabel>
+            <translation><!-- Small/Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small/Mid Community User</masterLabel>
+            <translation><!-- Small/Mid Community User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA</masterLabel>
+            <translation><!-- TPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriters-U/W</masterLabel>
+            <translation><!-- Underwriters-U/W --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Check if the user should never be deactivated from an automated process. --></help>
+        <label><!-- No Auto Deactivate --></label>
+        <name>No_Auto_Deactivate__c</name>
+    </fields>
+    <fields>
+        <help><!-- When checked and the user is deactivated/de-provisioned, Sandbox Manager will not de-provision users in sandboxes. --></help>
+        <label><!-- Bypass SM Deprovision --></label>
+        <name>SM_Bypass_SM_Deprovision__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Unique --></label>
+        <name>User_Unique__c</name>
+    </fields>
+    <layouts>
+        <layout>Community Member Layout</layout>
+        <layoutType>CommunityMemberLayout</layoutType>
+        <sections>
+            <label><!-- Basic Information --></label>
+            <section>Basic Information</section>
+        </sections>
+        <sections>
+            <label><!-- Chatter Settings --></label>
+            <section>Chatter Settings</section>
+        </sections>
+        <sections>
+            <label><!-- Language And Locale Settings --></label>
+            <section>Language And Locale Settings</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>User Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deactivate User Process &amp; Chatter Group QA Process --></label>
+            <section>Deactivate User Process &amp; Chatter Group QA Process</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Rep --></label>
+            <section>Lead Rep</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

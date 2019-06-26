@@ -1,0 +1,125 @@
+<!-- 
+*===================================================================================================
+* Date         : 05/17/2018
+* Developer    : Phanishankar P
+* Purpose      : This VF pagewill be added to User Page in Lightning to view his active workplan tasks
+*===================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date          Developer     Tag   Description
+*===================================================================================================
+* 05/17/2018 | Phanishankar P |     | Initial Creation
+* 
+*===================================================================================================-->
+<apex:page Controller="AIA_View_WorkPlanTaskCtrller" sidebar="false" lightningStylesheets="true" docType="html-5.0" showHeader="false" >
+<apex:slds />
+    <apex:stylesheet value="{!URLFOR($Resource.AIAToastMessage, '/styles/salesforce-lightning-design-system.min.css')}"/>
+    <c:AIA_Account_Team_Roles_Component_CSS />
+    <apex:form id="TheForm" style="margin-top:-20px;">
+
+      <!-- ************************* -->
+      <!-- search results table      -->
+      <apex:pageBlock id="TablePanel">
+         <apex:outputPanel rendered="{!showallTsk}"><!--rendered="{!showallTsk}"-->
+             <div style="background: rgba(194, 199, 196, 0.19);padding: 10px;">
+              <span class="slds-icon_container slds-icon-standard-announcement"> 
+                  <svg aria-hidden="true" class="slds-icon"
+                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                  </svg>   
+                  <span class="slds-assistive-text">Announcement</span>
+              </span>                 
+              <span style="font-size: 18px;font-weight: bold;"> My Workplan Assignments</span>
+          </div>    
+             <apex:commandlink action="{!URLFOR($Action.Workplan_Task__c.New)}" target="_blank" style="float:right">
+             	<apex:commandButton value="New" />
+             </apex:commandlink>
+          </apex:outputPanel>
+         <div style="clear: both;"></div>
+
+        <div >
+            <div style="float:left;padding-top: 13px;" >
+               {!totalTaskCount} Workplans  |  Sorted by {!sortFieldLabel}
+            </div>            
+            
+          </div>      
+               <apex:pageBlockTable value="{!userTasks}" var="task" headerClass="headHeight" styleClass="slds-table slds-table_bordered slds-table_cell-buffer" style="width:100%">                                  
+                  <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="Name" assignTo="{!SortField}" />
+                           <apex:outputText value="Task ID {!IF(SortField=='Name',IF(SortDirection='asc','▲','▼'),'')}" style="Color:rgb(0, 112, 210)" />
+                        </apex:commandLink>
+                     </apex:facet>
+                      <span style="color:rgb(0, 112, 210)">
+                       <apex:outputLink value="/{!task.Id}" target="_self">{!task.Name}</apex:outputlink>
+                          </span>
+                  </apex:column>
+                   <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="Description__c" assignTo="{!SortField}" />
+                           <apex:outputText value="Task Description {!IF(SortField=='Description__c',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                       <span style="color:rgb(0, 112, 210)">
+                     <apex:outputField value="{!task.Description__c }" />
+                       </span>
+                  </apex:column> 
+                  <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="Opportunity__r.Name" assignTo="{!SortField}" />
+                           <apex:outputText value="Opportunity {!IF(SortField=='Opportunity__r.Name',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                      <span style="color:rgb(0, 112, 210)">
+                          <apex:outputLink value="/{!task.Opportunity__c}" target="_self">{!task.Opportunity__r.Name}</apex:outputlink>
+                      </span>
+                  </apex:column>
+                   <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="Status__c" assignTo="{!SortField}" />
+                           <apex:outputText value="Status {!IF(SortField=='Status__c',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                     <apex:outputtext value="{!task.Status__c}" />
+                  </apex:column>
+                   <apex:column >
+                     <apex:facet name="header">
+                        <apex:commandLink action="{!SortToggle}" rerender="TablePanel" status="TableUpdateStatus">
+                           <apex:param name="SortField" value="SLA_Indicator__c" assignTo="{!SortField}" />
+                           <apex:outputText value="Due Date {!IF(SortField=='SLA_Indicator__c',IF(SortDirection='asc','▲','▼'),'')}" />
+                        </apex:commandLink>
+                     </apex:facet>
+                     <apex:outputField value="{!task.SLA_Indicator__c}" />
+                  </apex:column>                   
+            </apex:pageBlockTable>
+          <br/>
+          
+            <!--</apex:facet>-->
+                  <div align="center">
+             <apex:pageBlock >
+                <div style="padding-bottom:18px;">
+                    <apex:commandLink action="{!viewAll}" value="View All" target="_blank" rendered="{!!showallTsk}"/> <!-- rendered="{!!showallTsk}" -->
+                </div>
+            </apex:pageBlock>
+            
+            <apex:pageBlock >
+            <span class="page-buttons" style="float: left; margin-bottom: 5px;"> 
+                
+                <apex:commandButton value="First" rerender="TablePanel" action="{!previousFirstTask}" disabled="{!prev}"  rendered="{!showallTsk}" /> 
+                <apex:commandButton value="Previous" rerender="TablePanel" action="{!previousTask}" disabled="{!prev}" rendered="{!showallTsk}" /> 
+                <apex:commandButton value="Next" rerender="TablePanel" action="{!nextTask}" disabled="{!nxt}" rendered="{!showallTsk}" />
+                <apex:commandButton value="Last" rerender="TablePanel" action="{!nextLastTask}" disabled="{!nxt}" rendered="{!showallTsk}" />
+            </span >
+                </apex:pageBlock>
+         </div>
+        
+      </apex:pageBlock>
+
+        
+   </apex:form>
+
+</apex:page>

@@ -1,0 +1,13 @@
+<messaging:emailTemplate subject="Approval Required on GSRF for Account {!relatedTo.Group_Structure_Request_Form__r.Account_Legal_Name__c} - Effective Date {!relatedTo.Group_Structure_Request_Form__r.Effective_date_format__c}" recipientType="User" relatedToType="GSM_Approval_Response__c">
+<messaging:htmlEmailBody >
+The Group Structure Request From {!relatedTo.Group_Structure_Request_Form__r.name} for Account {!relatedTo.Group_Structure_Request_Form__r.Account_Legal_Name__c},Effective Date {!relatedTo.Group_Structure_Request_Form__r.Effective_date_format__c} has been submitted and requires your approval.<br></br>
+Please review the GSRF, click here:
+<apex:outputlink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedTo.Group_Structure_Request_Form__r.Id}">{!relatedTo.Group_Structure_Request_Form__r.Name}</apex:outputlink>
+<br></br>
+Please Accept/Reject GSRF here:
+<apex:outputlink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedTo.Id}">{!relatedTo.Name}</apex:outputlink>
+<br></br><br></br>
+Thanks,<br></br>
+AIA Automation
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

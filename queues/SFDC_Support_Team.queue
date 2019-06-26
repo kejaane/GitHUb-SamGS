@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>sfdcteam@carefirst.com</email>
+    <name>SFDC Support Team</name>
+    <queueMembers>
+        <users>
+            <user>alex.friedman@carefirst.com</user>
+            <user>lynn.whye@carefirst.com</user>
+            <user>thomas.barrett@carefirst.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

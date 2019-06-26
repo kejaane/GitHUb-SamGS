@@ -1,0 +1,99 @@
+<!--=================================================================================================
+* Date         : 05/21/2018
+* Developer    : Arshia Gulati
+* Purpose      : This component has custom sytling for Reassign Task screen
+*                           
+*
+*==================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date        Developer          Tag     Description
+*==================================================================================================
+* 05/21/2018| Arshia Gulati    |     | Initial Version. US 466,366 and 1691                                     
+*
+*==================================================================================================
+*/
+-->
+<apex:component >
+    <style>
+      table.grayTab tbody tr td {
+      padding: 0 0 0 10px;
+      }
+      select {
+      border: none;
+      }
+      .ui-accordion-header{
+      padding-left:25px !important;
+      }
+      .form-control {
+      border: none;
+      box-shadow: none;
+      border-radius: none;
+      box-shadow: none;
+      }
+      .middle {
+      vertical-align: middle;
+      }
+      .gray {
+      color: #9aa0a0;
+      }
+      .width5 {
+      width: 40%;
+      }
+      .width2 {
+      width: 10%;
+      }
+      input[type=text].input {
+      border: none;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      }
+      #loading-img {
+      background: url(/img/loading32.gif) center center no-repeat;
+      height: 100%;
+      z-index: 100;
+      }
+      .overlay {
+      background: #e9e9e9;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.7;               
+      }
+      
+      .dateFormat{
+       visibility:hidden;
+     }
+       .myFormStyle{
+       background-color: #c1c1c19c;
+            background-image:url("img-Path") ;
+       padding-left:20%; padding-right:20%; padding-bottom:10%;padding-top: 2%  !important;
+       }
+        <!-- This is used for table formating --->
+        .headHeight {
+            height: 38px;
+            border-top: 1px solid rgba(0, 112, 210, 1.0) !important;
+            border-bottom: 1px solid rgba(0, 112, 210, 1.0) !important;
+            color: rgba(0, 112, 210, 1.0) !important;
+        }
+        
+        <!-- This is used to change the background of the Page Block Section --> 
+        body .bPageBlock .pbBody .color .pbSubheader {background-color: #FFFFFF; font-size: 12px; border:0px; }
+        .colStyle1 {border-bottom: 1px solid #000;}
+        
+        .bPageBlock {
+            margin-bottom: 0rem !important;
+            border: none !important;
+            border-radius: inherit;
+            border-top: 0px;
+        }
+        body .bPageBlock.apexDefaultPageBlock, body .bPageBlock.bDetailBlock, body .bPageBlock.bEditBlock, .slds-scope .bPageBlock.apexDefaultPageBlock, .slds-scope .bPageBlock.bDetailBlock, .slds-scope .bPageBlock.bEditBlock {
+            padding-bottom: 0px;
+        }
+        
+    }   
+    </style>
+</apex:component>

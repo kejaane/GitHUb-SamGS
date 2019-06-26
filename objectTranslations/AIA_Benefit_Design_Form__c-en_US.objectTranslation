@@ -1,0 +1,3616 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ADR Drawloop --></label>
+        <name>ADR_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- AE Name --></label>
+        <name>AE_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- AE Name --></label>
+        <name>AE_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- AM Name --></label>
+        <name>AM_Name_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- AM Name --></label>
+        <name>AM_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- AM Phone Drawloop --></label>
+        <name>AM_Phone_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARC Approval Date --></label>
+        <name>ARC_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acc Mngr Email Drawloop --></label>
+        <name>Acc_Mngr_Email_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acc Service Rep Drwloop --></label>
+        <name>Acc_Service_Rep_Drwloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Billing Address --></label>
+        <name>Account_Billing_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account EIN Drawloop --></label>
+        <name>Account_EIN_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Effective Date --></label>
+        <name>Account_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- External review process for Self Insured non-grandfathered accounts only --></help>
+        <label><!-- Account External Review Vendor Address --></label>
+        <name>Account_External_Review_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- External review process for Self Insured non-grandfathered accounts only --></help>
+        <label><!-- Account External Review Vendor Name --></label>
+        <name>Account_External_Review_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Product Effective Date --></label>
+        <name>Account_Product_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account SIC Drawloop --></label>
+        <name>Account_SIC_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Shipping Address --></label>
+        <name>Account_Shipping_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Active Employees Description --></label>
+        <name>Active_Other_Employees_Desctiption__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Active Employees --></label>
+        <name>Active_Other_Employees__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Actives --></label>
+        <name>Actives__c</name>
+    </fields>
+    <fields>
+        <help><!-- CDH Accounts Only --></help>
+        <label><!-- CDH Fund Type --></label>
+        <name>Add_Vendor__c</name>
+        <picklistValues>
+            <masterLabel>BlueFund</masterLabel>
+            <translation><!-- BlueFund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueFund/Compatible</masterLabel>
+            <translation><!-- BlueFund/Compatible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compatible</masterLabel>
+            <translation><!-- Compatible --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Additional / Non Standard --></label>
+        <name>Additional_Non_Standard_RTF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Dependent Definition --></label>
+        <name>Additionall_Dependent_Definition__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Comments --></label>
+        <name>All_Child_Dependents_Comments_4a__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Comments --></label>
+        <name>All_Child_Dependents_Comments_4b__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Comments --></label>
+        <name>All_Child_Dependents_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Limiting Age --></label>
+        <name>All_Child_Dependents_Limiting_Age_4b__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Limiting Age --></label>
+        <name>All_Child_Dependents_Limiting_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Removal Method --></label>
+        <name>All_Child_Dependents_Removal_Method_4b__c</name>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Birthday</masterLabel>
+            <translation><!-- On Birthday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Removal Method --></label>
+        <name>All_Child_Dependents_Removal_Method__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Alpha Prefix --></label>
+        <name>Alpha_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer C2b --></label>
+        <name>AnswerC2b__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer C2a --></label>
+        <name>Answer_2a__c</name>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opposite Sex</masterLabel>
+            <translation><!-- Opposite Sex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same Sex</masterLabel>
+            <translation><!-- Same Sex --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer 6 --></label>
+        <name>Answer_6p__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer B --></label>
+        <name>Answer_B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer C1 --></label>
+        <name>Answer_C1__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer C3 --></label>
+        <name>Answer_C3__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer C4 --></label>
+        <name>Answer_C4__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer C5b --></label>
+        <name>Answer_C5b__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer C6 --></label>
+        <name>Answer_C6__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter a number from 3-36 --></help>
+        <label><!-- Answer C7a --></label>
+        <name>Answer_C7a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer C7b --></label>
+        <name>Answer_C7b__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D1 --></label>
+        <name>Answer_D1__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D2 --></label>
+        <name>Answer_D2__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D3 --></label>
+        <name>Answer_D3__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D4 --></label>
+        <name>Answer_D4__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D5 --></label>
+        <name>Answer_D5__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D6 --></label>
+        <name>Answer_D6__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D7 --></label>
+        <name>Answer_D7__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D8 --></label>
+        <name>Answer_D8__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer D9 --></label>
+        <name>Answer_D9__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer E -Comments --></label>
+        <name>Answer_E_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer E --></label>
+        <name>Answer_E__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Answer F --></label>
+        <name>Answer_F__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- (MD/VA-M only) – effective 1/2/2015 – Magellan handles --></help>
+        <label><!-- Applied Behavioral Analysis --></label>
+        <name>Applied_Behavioral_Analysis__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Artificial Insemination --></label>
+        <name>Artificial_Insemination_IVF__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- For Smart Selection Products Only --></help>
+        <label><!-- Attended Sleep Studies --></label>
+        <name>Attended_Sleep_Studies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BC - Plan Codes --></label>
+        <name>BC_Plan_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRCA Effective Date --></label>
+        <name>BRCA_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Control Plan Drawloop --></label>
+        <name>BRF_Control_Plan_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Drawloop --></label>
+        <name>BRF_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Number Drawloop --></label>
+        <name>BRF_Number_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- BS - Plan Codes --></label>
+        <name>BS_Plan_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design Product --></label>
+        <name>Benefit_Design_Product__c</name>
+        <relationshipLabel><!-- Benefit Design Form --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design --></label>
+        <name>Benefit_Design__c</name>
+        <relationshipLabel><!-- Benefit Design Form --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Selection --></label>
+        <name>Benefit_Selection__c</name>
+        <picklistValues>
+            <masterLabel>Emergency Contraception Exclusion</masterLabel>
+            <translation><!-- Emergency Contraception Exclusion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Exclusion</masterLabel>
+            <translation><!-- Full Exclusion --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- B --></label>
+        <name>Bq__c</name>
+    </fields>
+    <fields>
+        <label><!-- C4 --></label>
+        <name>C4q__c</name>
+    </fields>
+    <fields>
+        <label><!-- C5a --></label>
+        <name>C5aq__c</name>
+    </fields>
+    <fields>
+        <label><!-- C5b --></label>
+        <name>C5bq__c</name>
+    </fields>
+    <fields>
+        <label><!-- C6 --></label>
+        <name>C6q__c</name>
+    </fields>
+    <fields>
+        <label><!-- C7a --></label>
+        <name>C7aq__c</name>
+    </fields>
+    <fields>
+        <label><!-- C7b --></label>
+        <name>C7bq__c</name>
+    </fields>
+    <fields>
+        <label><!-- COB Pay and Pursue --></label>
+        <name>COB_Pay_and_Pursue__c</name>
+    </fields>
+    <fields>
+        <label><!-- COB Type Comments --></label>
+        <name>COB_Type_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- COB Type Pay and Pursue --></label>
+        <name>COB_Type_Pay_and_Pursue__c</name>
+    </fields>
+    <fields>
+        <help><!-- Note 1: COB – Regular is used as the standard for DC accounts. Any selection other than COB-Regular for a DC control group requires non-standard approval through the ARC approval process 
+Note 2: If COB type equals Modified Aggregate, Medical Product C --></help>
+        <label><!-- COB Type --></label>
+        <name>COB_Type__c</name>
+        <picklistValues>
+            <masterLabel>Aggregate</masterLabel>
+            <translation><!-- Aggregate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carve Out</masterLabel>
+            <translation><!-- Carve Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modified Aggregate</masterLabel>
+            <translation><!-- Modified Aggregate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Duplication</masterLabel>
+            <translation><!-- Non-Duplication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regular</masterLabel>
+            <translation><!-- Regular --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- External review process for Self Insured non-grandfathered accounts only --></help>
+        <label><!-- Carefirst External Review --></label>
+        <name>Carefirst_External_Review__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Dependent Comments --></label>
+        <name>Child_Dependent_Commnets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Dependent Mandates1 --></label>
+        <name>Child_Dependent_Mandates1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select either Maryland, DC/VA, or Custom. --></help>
+        <label><!-- Child Dependent Mandates --></label>
+        <name>Child_Dependent_Mandates__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC/VA</masterLabel>
+            <translation><!-- DC/VA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Dependents Comments --></label>
+        <name>Child_Dependents_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Limiting age is 26 for Fully-insured accounts. --></help>
+        <label><!-- All Child Dependents Limiting Age --></label>
+        <name>Child_Dependents_Limit_Age_4a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Dependents Limit Age --></label>
+        <name>Child_Dependents_Limit_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Child Dependents Removal Method --></label>
+        <name>Child_Dependents_Removal_Method_4a__c</name>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Birthday</masterLabel>
+            <translation><!-- On Birthday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Dependents Removal --></label>
+        <name>Child_Dependents_Removal__c</name>
+        <picklistValues>
+            <masterLabel>Birthdate</masterLabel>
+            <translation><!-- Birthdate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>When Eligibility Ceases</masterLabel>
+            <translation><!-- When Eligibility Ceases --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Dependents --></label>
+        <name>Child_Dependents__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Dependents of Domestic Partner --></label>
+        <name>Child_Dependents_of_Domestic_Partner__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Dpdt of Domestic Partner Comms --></label>
+        <name>Child_Dpdt_of_Domestic_Partner_Comms__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clinical Trials --></label>
+        <name>Clinical_Trials__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Continuation Comments --></label>
+        <name>Continuation_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- DC/VA/MD not COBRA,  Core to fully-insured products --></help>
+        <label><!-- Continuation --></label>
+        <name>Continuation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract/Benefit Guide Comments --></label>
+        <name>Contract_Benefit_Guide_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract/Benefit Guide --></label>
+        <name>Contract_Benefit_Guide__c</name>
+        <picklistValues>
+            <masterLabel>Control Plan</masterLabel>
+            <translation><!-- Control Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract CBA Expiration Date --></label>
+        <name>Contract_CBA_Collective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Control Plan # --></label>
+        <name>Control_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <help><!-- Self Insured only.  Must complete a Health &amp; Wellness Request form (description of services must be included in Additional Nonstandard section below) --></help>
+        <label><!-- Customized Wellness Services --></label>
+        <name>Customized_Wellness_Services__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Joint mortgage or lease on place of residence; --></help>
+        <label><!-- D1 --></label>
+        <name>D1q__c</name>
+    </fields>
+    <fields>
+        <label><!-- D2 --></label>
+        <name>D2q__c</name>
+    </fields>
+    <fields>
+        <label><!-- D3 --></label>
+        <name>D3__c</name>
+    </fields>
+    <fields>
+        <label><!-- D4 --></label>
+        <name>D4q__c</name>
+    </fields>
+    <fields>
+        <label><!-- D5 --></label>
+        <name>D5q__c</name>
+    </fields>
+    <fields>
+        <label><!-- D6 --></label>
+        <name>D6q__c</name>
+    </fields>
+    <fields>
+        <label><!-- D7 --></label>
+        <name>D7q__c</name>
+    </fields>
+    <fields>
+        <label><!-- D8 --></label>
+        <name>D8q__c</name>
+    </fields>
+    <fields>
+        <label><!-- D9 --></label>
+        <name>D9q__c</name>
+    </fields>
+    <fields>
+        <label><!-- DM/Wellness Help Text --></label>
+        <name>DM_Wellness_Help_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- D, Finacially Interdeppendent --></label>
+        <name>D_Finacially_Interdeppendent__c</name>
+        <picklistValues>
+            <masterLabel>A joint will, or reciprocal wills in which each partner designates the other as executor or primary beneficiary</masterLabel>
+            <translation><!-- A joint will, or reciprocal wills in which each partner designates the other as executor or primary beneficiary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agreement establishing joint bank or credit card account</masterLabel>
+            <translation><!-- Agreement establishing joint bank or credit card account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agreement with a third party lender for joint repayment of indebtedness</masterLabel>
+            <translation><!-- Agreement with a third party lender for joint repayment of indebtedness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Designation of one partner as the other’s beneficiary with respect to life insurance or retirement benefits</masterLabel>
+            <translation><!-- Designation of one partner as the other’s beneficiary with respect to life insurance or retirement benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Durable powers of attorney by each partner in favor of the other</masterLabel>
+            <translation><!-- Durable powers of attorney by each partner in favor of the other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health care directives or living wills in which each partner gives the other the authority to make health care decisions or</masterLabel>
+            <translation><!-- Health care directives or living wills in which each partner gives the other the authority to make health care decisions or --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joint mortgage or lease on place of residence</masterLabel>
+            <translation><!-- Joint mortgage or lease on place of residence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joint title on motor vehicle</masterLabel>
+            <translation><!-- Joint title on motor vehicle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other documentation, determined by the Group to be sufficient to establish, under the circumstances of the particular case, that the Subscriber and Domestic Partner are financially interdependent.</masterLabel>
+            <translation><!-- Other documentation, determined by the Group to be sufficient to establish, under the circumstances of the particular case, that the Subscriber and Domestic Partner are financially interdependent. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Member no longer meets eligibility requirements --></help>
+        <label><!-- Date of Termination --></label>
+        <name>Date_of_Termination__c</name>
+        <picklistValues>
+            <masterLabel>Date of Event</masterLabel>
+            <translation><!-- Date of Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of the Month when Eligibility Ceases</masterLabel>
+            <translation><!-- End of the Month when Eligibility Ceases --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dental Products --></label>
+        <name>Dental_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Spouse Eligible Comments Drwlp --></label>
+        <name>Dependent_Spouse_Eligible_Comments_Drwlp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Spouse Eligible Comments --></label>
+        <name>Dependent_Spouse_Eligible_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- If marked yes, include Medicare-eligible spouse due to TEFRA/DEFRA. --></help>
+        <label><!-- Dependent Spouse Eligible --></label>
+        <name>Dependent_Spouse_Eligible__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field hold the disclaim info of Admin output and this should not be on layout --></help>
+        <label><!-- Disclaim Info In Admin Header Drawloop --></label>
+        <name>Disclaim_Info_In_Admin_Header_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the disclaim field which is used for MCP/N-MCP/DPERFOutputs. This field should not be on layout --></help>
+        <label><!-- Disclaim Info In MCP(N/DPERF) Hdr Drawlp --></label>
+        <name>Disclaim_Info_In_MCP_N_DPERF_Hdr_Drawlp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Domestic Partner Comments --></label>
+        <name>Domestic_Partner_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Domestic Partner Comments --></label>
+        <name>Domestic_Partner_Commnets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Domestic_Partner_Section_D_HeaderComment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Domestic Partner --></label>
+        <name>Domestic_Partner__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opposite Sex Partner</masterLabel>
+            <translation><!-- Opposite Sex Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same &amp; Opposite Sex</masterLabel>
+            <translation><!-- Same &amp; Opposite Sex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same &amp; Opposite Sex Partner</masterLabel>
+            <translation><!-- Same &amp; Opposite Sex Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same Sex</masterLabel>
+            <translation><!-- Same Sex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same Sex Partner</masterLabel>
+            <translation><!-- Same Sex Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- A. Domestic Partnership includes --></label>
+        <name>Domestic_Partnership_includes__c</name>
+        <picklistValues>
+            <masterLabel>Same and opposite-sex</masterLabel>
+            <translation><!-- Same and opposite-sex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same-sex only</masterLabel>
+            <translation><!-- Same-sex only --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Drawloop Product --></label>
+        <name>Drawloop_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug Products --></label>
+        <name>Drug_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- ERISA applies to virtually all private sector employee benefit plans. --></help>
+        <label><!-- ERISA Status --></label>
+        <name>ERISA_Status__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Early Intervention Services (VA-M only) --></help>
+        <label><!-- Early Intervention Services --></label>
+        <name>Early_Intervention_Services__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Effective Date of New Hire Coverage --></label>
+        <name>Effective_Date_New_Hire_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>1st of Month after CareFirst Application</masterLabel>
+            <translation><!-- 1st of Month after CareFirst Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1st of Month after Hire</masterLabel>
+            <translation><!-- 1st of Month after Hire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1st or 15th after CareFirst Application</masterLabel>
+            <translation><!-- 1st or 15th after CareFirst Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Date of Hire/Employment</masterLabel>
+            <translation><!-- Date of Hire/Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (Specify)</masterLabel>
+            <translation><!-- Other (Specify) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The 1st of the month following acceptance of the application by CareFirst</masterLabel>
+            <translation><!-- The 1st of the month following acceptance of the application by CareFirst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The 1st of the month following the date of hire or employment</masterLabel>
+            <translation><!-- The 1st of the month following the date of hire or employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The 1st or 15th, whichever occurs first of the month following acceptance of the application by CareFirst</masterLabel>
+            <translation><!-- The 1st or 15th, whichever occurs first of the month following acceptance of the application by CareFirst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The date of hire or employment</masterLabel>
+            <translation><!-- The date of hire or employment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Effective Date of New Hire Other --></label>
+        <name>Effective_Date_New_Hire_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date of Change Drawloop --></label>
+        <name>Effective_Date_of_Change_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date of Change --></label>
+        <name>Effective_Date_of_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Type Drawloop --></label>
+        <name>Enrollment_Type_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity --></label>
+        <name>Entity__c</name>
+        <picklistValues>
+            <masterLabel>CFBC</masterLabel>
+            <translation><!-- CFBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFBC and CFMI</masterLabel>
+            <translation><!-- CFBC and CFMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFBC and GHMSI</masterLabel>
+            <translation><!-- CFBC and GHMSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFMI</masterLabel>
+            <translation><!-- CFMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GHMSI</masterLabel>
+            <translation><!-- GHMSI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- E --></label>
+        <name>Eq__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Review Processing Comments --></label>
+        <name>External_Review_Processing_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Review Processing --></label>
+        <name>External_Review_Processing__c</name>
+        <picklistValues>
+            <masterLabel>Account External Review (No IRO verbiage/fees in ASA)</masterLabel>
+            <translation><!-- Account External Review (No IRO verbiage/fees in ASA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CareFirst External Review (IRO verbiage/fees in ASA)</masterLabel>
+            <translation><!-- CareFirst External Review (IRO verbiage/fees in ASA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State External Review (No IRO verbiage/fees in ASA)</masterLabel>
+            <translation><!-- State External Review (No IRO verbiage/fees in ASA) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fall Prevention Effective Date --></label>
+        <name>Fall_Prevention_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Arrangement --></label>
+        <name>Financial_Arrangement__c</name>
+        <picklistValues>
+            <masterLabel>Fully-Insured</masterLabel>
+            <translation><!-- Fully-Insured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Insured</masterLabel>
+            <translation><!-- Self-Insured --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FirstHelp Comments --></label>
+        <name>FirstHelp_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- FirstHelp Number Comments --></label>
+        <name>FirstHelp_Number_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- FirstHelp Number on ID Card --></label>
+        <name>FirstHelp_Number_on_ID_Card__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FirstHelp --></label>
+        <name>FirstHelp__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Final Renewal Date --></label>
+        <name>First_Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flexlink Claims Processing --></label>
+        <name>Flexlink_Claims_Processing_FL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flexlink Claims Processing --></label>
+        <name>Flexlink_Claims_Processing__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The form type name --></help>
+        <label><!-- Form Type --></label>
+        <name>Form_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- F --></label>
+        <name>Fq__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full-time Students Comments --></label>
+        <name>Full_time_Students_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full-time Students Limiting Age --></label>
+        <name>Full_time_Students_Limiting_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full-time Students Removal Method --></label>
+        <name>Full_time_Students_Removal_Method__c</name>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Birthday</masterLabel>
+            <translation><!-- On Birthday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Funding Arrangement Drawloop --></label>
+        <name>Funding_Arrangement_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the funding arrangement for the plans to which this Managed Care form applies. --></help>
+        <label><!-- Funding Arrangement --></label>
+        <name>Funding_Arrangement__c</name>
+        <picklistValues>
+            <masterLabel>ASO</masterLabel>
+            <translation><!-- ASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk</masterLabel>
+            <translation><!-- Risk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- General Anesthesia for Dental care – (MD/VA-M, DC-C) --></help>
+        <label><!-- General Anesthesia for Dental care --></label>
+        <name>General_Anesthesia_for_Dental_care__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grandchildren Comments --></label>
+        <name>Grandchildren_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grandchildren – Court Ordered Comments --></label>
+        <name>Grandchildren_Court_Ordered_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grandchildren – Court Ordered Custody Re --></label>
+        <name>Grandchildren_Court_Ordered_Custody_Re__c</name>
+    </fields>
+    <fields>
+        <help><!-- Grandchildren – Court Ordered Custody Requirement --></help>
+        <label><!-- Grandchildren – Court Ordered --></label>
+        <name>Grandchildren_Court_Ordered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grandchildren Waiver Comments --></label>
+        <name>Grandchildren_Waiver_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Includes waiver of court ordered custody requirement for grandchildren. --></help>
+        <label><!-- Grandchildren Waiver --></label>
+        <name>Grandchildren_Waiver__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Court Ordered Custody Requirement --></help>
+        <label><!-- Grandchildren --></label>
+        <name>Grandchildren__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Separate with commas and a space --></help>
+        <label><!-- Group Numbers --></label>
+        <name>Group_Numbers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Habilitative Services for Children --></label>
+        <name>Habilitative_Services_for_Children__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Header Information Drawloop --></label>
+        <name>Header_Information_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Help Text --></label>
+        <name>Help_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Home Health Care --></label>
+        <name>Home_Health_Care__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Inpatient Hospice is treated as Inpatient Hospital --></help>
+        <label><!-- Hospice Care --></label>
+        <name>Hospice_Care__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Full-time Minimum Hours per Work Week --></label>
+        <name>Hourly_Full_Time_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hourly Full-time --></label>
+        <name>Hourly_Full_Time__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Part-time Minimum Hours per Work Week --></label>
+        <name>Hourly_Part_Time_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hourly Part-time --></label>
+        <name>Hourly_Part_Time__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter a number from 3-36 --></help>
+        <label><!-- Answer C5a --></label>
+        <name>How_many_months_3_36_have_the_Subscrib__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicate Number to use --></help>
+        <label><!-- ID Card Number --></label>
+        <name>ID_Card_Number__c</name>
+        <picklistValues>
+            <masterLabel>Assigned Series</masterLabel>
+            <translation><!-- Assigned Series --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Generate</masterLabel>
+            <translation><!-- Auto Generate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ID Cards Sent to Section --></label>
+        <name>ID_Cards_Sent_to_Section__c</name>
+    </fields>
+    <fields>
+        <label><!-- IVF --></label>
+        <name>IVF__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Identity Protection From BRF Drawloop --></label>
+        <name>Identity_Protection_From_BRF_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identity Protection --></label>
+        <name>Identity_Protection__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Cards Sent To: Initial Enrollment --></label>
+        <name>Initial_Enrollment__c</name>
+        <picklistValues>
+            <masterLabel>Account HQ</masterLabel>
+            <translation><!-- Account HQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Control Plan</masterLabel>
+            <translation><!-- Control Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Install</masterLabel>
+            <translation><!-- Local Install --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subscribers Home Address</masterLabel>
+            <translation><!-- Subscribers Home Address --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Self-Insured only may select No and must complete a Health &amp; Wellness Request Form --></help>
+        <label><!-- Integrated DM/Wellness --></label>
+        <name>Integrated_DM_Wellness__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Intimate Partner Violent Screening Effective Date --></help>
+        <label><!-- Intimate Effective Date --></label>
+        <name>Intimate_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest AttachmentId --></label>
+        <name>Latest_AttachmentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Enrollment Date --></label>
+        <name>Latest_Enrollment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity Drawloop From Admin --></label>
+        <name>Legal_Entity_Drawloop_From_Admin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>Legal_Entity__c</name>
+        <picklistValues>
+            <masterLabel>CFBC</masterLabel>
+            <translation><!-- CFBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFBC and CFMI</masterLabel>
+            <translation><!-- CFBC and CFMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFBC and GHMSI</masterLabel>
+            <translation><!-- CFBC and GHMSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFMI</masterLabel>
+            <translation><!-- CFMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GHMSI</masterLabel>
+            <translation><!-- GHMSI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Local  K Group Numbers --></label>
+        <name>Local_K_Group_Numbers__c</name>
+    </fields>
+    <fields>
+        <label><!-- MCP Checkbox2 --></label>
+        <name>MCP_Checkbox2__c</name>
+    </fields>
+    <fields>
+        <label><!-- MCP Checkbox3 --></label>
+        <name>MCP_Checkbox3__c</name>
+    </fields>
+    <fields>
+        <label><!-- MCP Checkbox --></label>
+        <name>MCP_Checkbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Vendor Name --></label>
+        <name>MCP_Other_Vendor_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Vendor Phone --></label>
+        <name>MCP_Other_Vendor_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- MD Mic --></label>
+        <name>MD_Mic__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Additional and/or Nonstandard Managed Care Provisions --></help>
+        <label><!-- Comments --></label>
+        <name>Managed_Care_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Segment Classification Comments --></label>
+        <name>Market_Segment_Classification_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Segment Classification --></label>
+        <name>Market_Segment_Classification__c</name>
+        <picklistValues>
+            <masterLabel>Local</masterLabel>
+            <translation><!-- Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Med-eligible Child Dpdt of DomPart Comms --></label>
+        <name>Med_eligible_Child_Dpdt_of_DomPart_Comms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medicare COB Type --></label>
+        <name>Medicare_COB_Type__c</name>
+        <picklistValues>
+            <masterLabel>Aggregate</masterLabel>
+            <translation><!-- Aggregate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carve Out</masterLabel>
+            <translation><!-- Carve Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modified Aggregate</masterLabel>
+            <translation><!-- Modified Aggregate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Applicable</masterLabel>
+            <translation><!-- Non-Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Duplication</masterLabel>
+            <translation><!-- Non-Duplication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regular</masterLabel>
+            <translation><!-- Regular --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medicare COB Pay and Pursue --></label>
+        <name>Medicare_COB_pay_and_Pursue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medicare Part B Carve Out Comments Drwlp --></label>
+        <name>Medicare_Part_B_Carve_Out_Comments_Drwlp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medicare Part B Carve Out Comments --></label>
+        <name>Medicare_Part_B_Carve_Out_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Carve out and reject the portion Medicare would have paid for Medicare eligible beneficiaries --></help>
+        <label><!-- Medicare Part B Carve Out --></label>
+        <name>Medicare_Part_B_Carve_Out__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- MSP is the number of employees that the account has --></help>
+        <label><!-- Medicare Secondary Payer (# of EEs) --></label>
+        <name>Medicare_Secondary_Payer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medicare-eligible Child Dependents of DP --></label>
+        <name>Medicare_eligible_Child_Dependents_of_DP__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medicare-eligible Child Dependents of Do --></label>
+        <name>Medicare_eligible_Child_Dependents_of_Do__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medicare-eligible Domestic Partner Comms --></label>
+        <name>Medicare_eligible_Domestic_Partner_Comms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medicare-eligible Domestic Partner --></label>
+        <name>Medicare_eligible_Domestic_Partner__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opposite Sex</masterLabel>
+            <translation><!-- Opposite Sex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same &amp; Opposite Sex</masterLabel>
+            <translation><!-- Same &amp; Opposite Sex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same Sex</masterLabel>
+            <translation><!-- Same Sex --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medicare-eligible Retiree --></label>
+        <name>Medicare_eligible_Retiree__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medicare-eligible retiree Comms --></label>
+        <name>Medicare_eligible_retiree_Comms__c</name>
+    </fields>
+    <fields>
+        <help><!-- Federal Mandate - Applies to both fully-insured and self-insured accounts that provide a limiting age for student dependents that is greater than age 26. --></help>
+        <label><!-- Michelle&apos;s Law --></label>
+        <name>Michelle_s_Law_4a__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Michelle’s Law Comments --></label>
+        <name>Michelle_s_Law_Comments1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Michelle’s Law Comments --></label>
+        <name>Michelle_s_Law_Comments_New__c</name>
+    </fields>
+    <fields>
+        <label><!-- Michelle&apos;s Law Comments --></label>
+        <name>Michelle_s_Law_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Michelle’s Law – Federal Mandate --></label>
+        <name>Michelle_s_Law_Federal_Mandate__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Child Dependent Mandates is DC/VA then Michelle&apos;s Law Limit Age will be defaulted to &quot;26&quot; if no value entered. --></help>
+        <label><!-- Michelle&apos;s Law Limit Age --></label>
+        <name>Michelle_s_Law_Limit_Age__c</name>
+    </fields>
+    <fields>
+        <help><!-- Federal Mandate --></help>
+        <label><!-- Michelle’s Law --></label>
+        <name>Michelle_s_Law_New__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Michelle&apos;s Law Removal --></label>
+        <name>Michelle_s_Law_Removal__c</name>
+        <picklistValues>
+            <masterLabel>Birthdate</masterLabel>
+            <translation><!-- Birthdate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applies to fully-insured accounts that provide Dependent coverage.  Self-insured accounts may select --></help>
+        <label><!-- Michelle&apos;s Law Waiver --></label>
+        <name>Michelle_s_Law_Waiver_4a__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Waiver of court ordered custody requirement for grandchildren --></help>
+        <label><!-- Michelle&apos;s Law Waiver --></label>
+        <name>Michelle_s_Law_Waiver__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Federal Mandate --></help>
+        <label><!-- Michelle&apos;s Law --></label>
+        <name>Michelle_s_Law__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NASCO Original Effective Date --></label>
+        <name>NASCO_Original_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Within 30 days - Applies to BlueChoice fully-insured accounts    
+Within 60 days - Applies to CFMI/GHMSI fully-insured accounts --></help>
+        <label><!-- New Hire Enrollment --></label>
+        <name>New_Hire_Enrollment__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Within 30 days</masterLabel>
+            <translation><!-- Within 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Within 60 Days</masterLabel>
+            <translation><!-- Within 60 Days --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- National Account is an account with locations (warehouse, sales office, etc.) in more than one Licensee’s service area. If an account has employees, retirees, or telecommuter’s located outside of the Licensee’s service are, however does not have an office --></help>
+        <label><!-- Nonprofit --></label>
+        <name>Nonprofit__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- New Business Only --></help>
+        <label><!-- Number Of Eligibles --></label>
+        <name>Number_Of_Eligibles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Eligible Drawloop --></label>
+        <name>Number_of_Eligible_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- Available for CFMI non-BluePreferred fully-insured accounts or self-insured accounts selecting Full Managed Care program --></help>
+        <label><!-- OP Private Duty Nursing --></label>
+        <name>OP_Private_Duty_Nursing__c</name>
+        <picklistValues>
+            <masterLabel>20% penalty</masterLabel>
+            <translation><!-- 20% penalty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No member penalty</masterLabel>
+            <translation><!-- No member penalty --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Oppose Contraceptive Service --></label>
+        <name>Oppose_Contracteptive_Service__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Original Effective Date --></label>
+        <name>Original_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Hire Enrollment Other --></label>
+        <name>Other_New_Hire_Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Party Liability / Financing --></label>
+        <name>Other_Party_Liability_Financing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Text and Comments --></label>
+        <name>Other_Text_and_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- CDH Vendor Name --></label>
+        <name>Other_Vendor_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Others Eligible for Coverage --></label>
+        <name>Others_Eligible_for_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCMH / TCCI Program Help Text --></label>
+        <name>PCMH_TCCI_Program_Help_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- PPACA Selected --></label>
+        <name>PPACA_Selected__c</name>
+    </fields>
+    <fields>
+        <label><!-- PT Students w/ Disabilities Comments --></label>
+        <name>P_T_Students_with_Disabilities_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- P/T Students with Disabilities Limit Age --></label>
+        <name>P_T_Students_with_Disabilities_Limit_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- P/T Students with Disabilities Removal --></label>
+        <name>P_T_Students_with_Disabilities_Removal__c</name>
+        <picklistValues>
+            <masterLabel>Birthdate</masterLabel>
+            <translation><!-- Birthdate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Par Plan Name --></label>
+        <name>Par_Plan_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- PT Students w/ Disability Comments --></label>
+        <name>Part_time_Students_w_Disability_Comment__c</name>
+    </fields>
+    <fields>
+        <help><!-- Part-time Students with Disability Limiting Age --></help>
+        <label><!-- PT Students w/ Disability Limiting Age --></label>
+        <name>Part_time_Students_w_Disability_Limitin__c</name>
+    </fields>
+    <fields>
+        <help><!-- Part Time Students with Disability Removal Method --></help>
+        <label><!-- PT Students w/ Disability Removal Method --></label>
+        <name>Part_time_Students_w_Disability_Reml_Me__c</name>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Birthday</masterLabel>
+            <translation><!-- On Birthday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Part Time Students with Disabilities --></help>
+        <label><!-- PT Students w/ Disabilities --></label>
+        <name>Part_time_Students_with_Disabilities_4a__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Part Time Students With Disabilities Comments --></help>
+        <label><!-- PT Students w/ Disabilities Comments --></label>
+        <name>Part_time_Students_with_Disabilities_Com__c</name>
+    </fields>
+    <fields>
+        <help><!-- Self-Insured only may select No --></help>
+        <label><!-- Patient-Centered Medical Home --></label>
+        <name>Patient_Centered_Medical_Home__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pay and Pursue Drawloop --></label>
+        <name>Pay_and_Pursue_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Required --></label>
+        <name>Payment_Required__c</name>
+        <picklistValues>
+            <masterLabel>Non-Risk Percent of Allowed Benefit</masterLabel>
+            <translation><!-- Non-Risk Percent of Allowed Benefit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk 100% of Allowed Benefit</masterLabel>
+            <translation><!-- Risk 100% of Allowed Benefit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Performace Guarantee --></label>
+        <name>Performace_Guarantee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Guarantee Drawloop --></label>
+        <name>Performance_Guarantee_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- Does account have  Performance Agreement/Guarantee? --></help>
+        <label><!-- Performance Guarantee --></label>
+        <name>Performance_Guarantee__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Plan Year Effective Date --></label>
+        <name>Plan_Year_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- C2a --></label>
+        <name>Q2a__c</name>
+    </fields>
+    <fields>
+        <label><!-- C1 --></label>
+        <name>QC1__c</name>
+    </fields>
+    <fields>
+        <label><!-- C2b --></label>
+        <name>QC2b__c</name>
+    </fields>
+    <fields>
+        <label><!-- C3 --></label>
+        <name>QC3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type --></label>
+        <name>Record_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Group official self-certified on company letterhead the group is a church, or a church’s integrated auxiliary(ies), or a convention or association of churches. --></help>
+        <label><!-- Religions Exemption Prerequisites --></label>
+        <name>Religions_Exemption_Prerequisites__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Group holds itself out as a religious organization --></help>
+        <label><!-- Religious Organization --></label>
+        <name>Religious_Organization__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Renewal Anniversary Month --></label>
+        <name>Renewal_Anniversary_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Effective Date --></label>
+        <name>Renewal_Effective_Date1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Effective Date Drawloop --></label>
+        <name>Renewal_Effective_Date_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Effective Date Drawloop --></label>
+        <name>Renewal_Effective_Date_Drawloop_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Effective Date --></label>
+        <name>Renewal_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retirees (Fully-Insured) Comments --></label>
+        <name>Retirees_Eligible_Fully_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- For Fully-Insured Accounts, are Retirees Covered? --></help>
+        <label><!-- Retirees (Fully-Insured) --></label>
+        <name>Retirees_Eligible_Fully__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Retirees (Self-Insured) Comments --></label>
+        <name>Retirees_Eligible_Self_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- For Self-Insured Accounts, are Retirees Covered?  If so, define the type of retiree that is covered? --></help>
+        <label><!-- Retirees (Self-Insured) --></label>
+        <name>Retirees_Eligible_Self__c</name>
+        <picklistValues>
+            <masterLabel>All Retirees</masterLabel>
+            <translation><!-- All Retirees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other – See Comments</masterLabel>
+            <translation><!-- Other – See Comments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Over 65</masterLabel>
+            <translation><!-- Over 65 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under 65</masterLabel>
+            <translation><!-- Under 65 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Status of Future Retirees Age 65 and Over --></help>
+        <label><!-- Retirees Age 65+ --></label>
+        <name>Retires_Age_65__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remain in Active Product</masterLabel>
+            <translation><!-- Remain in Active Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer to Separate Product</masterLabel>
+            <translation><!-- Transfer to Separate Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Status of Future Retirees, no medicare --></help>
+        <label><!-- Retirees Under Age 65 (No Medicare) --></label>
+        <name>Retires_Under_Age_65__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remain in Active Product</masterLabel>
+            <translation><!-- Remain in Active Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer to Separate Product</masterLabel>
+            <translation><!-- Transfer to Separate Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Retroactive Termination Other --></label>
+        <name>Retroactive_Termination_Other__c</name>
+    </fields>
+    <fields>
+        <help><!-- 60 days or Other - Self Insured only --></help>
+        <label><!-- Retroactive Termination --></label>
+        <name>Retroactive_Termination__c</name>
+        <picklistValues>
+            <masterLabel>30 days</masterLabel>
+            <translation><!-- 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 days</masterLabel>
+            <translation><!-- 60 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Revision Number --></label>
+        <name>Revision_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full-time Minimum Hours per Work Week --></label>
+        <name>Salaried_Full_Time_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salaried Full-time --></label>
+        <name>Salaried_Full_Time__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Part-time Minimum Hours per Work Week --></label>
+        <name>Salaried_Part_Time_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salaried Part-time --></label>
+        <name>Salaried_Part_Time__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Same Gender Legal Marriage (ASO Only) --></label>
+        <name>Same_Gender_Legal_Marriage_ASO__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Same Gender Legal Marriage Comments --></label>
+        <name>Same_Gender_Legal_Marriage_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Same Gender Marriage Eligible Comments --></label>
+        <name>Same_Gender_Marriage_Eligible_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- If marked yes, includes Medicare-eligible spouse due to TEFRA/DEFRA  (self-insured only) --></help>
+        <label><!-- Same Gender Marriage Eligible --></label>
+        <name>Same_Gender_Marriage_Eligible__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Group has provided CareFirst self-certification stating it satisfies all religious accommodation criteria. --></help>
+        <label><!-- Self Cert for Religious Accommodation --></label>
+        <name>Self_Cert_for_Religious_Accommodation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Service Rep Email Drawloop --></label>
+        <name>Service_Rep_Email_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Rep Name Drawloop1 --></label>
+        <name>Service_Rep_Name_Drawloop1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Rep Phone Drawloop --></label>
+        <name>Service_Rep_Phone_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Servicing Arrangement --></label>
+        <name>Servicing_Arrangement__c</name>
+        <picklistValues>
+            <masterLabel>Full</masterLabel>
+            <translation><!-- Full --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimum</masterLabel>
+            <translation><!-- Minimum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial</masterLabel>
+            <translation><!-- Partial --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Self-Insured only may select No and must complete a Health &amp; Wellness Request Form --></help>
+        <label><!-- Stand Alone Disease Management --></label>
+        <name>Stand_Alone_Disease_Management__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Self Insured only.   Must complete a Health &amp; Wellness Request Form): mandatory for Self insured --></help>
+        <label><!-- Stand Alone Wellness --></label>
+        <name>Stand_Alone_Wellness__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Standard Medicare Complementary (ASO) --></label>
+        <name>Standard_Medicare_Complementary__c</name>
+        <picklistValues>
+            <masterLabel>12 Months (DC/VA)</masterLabel>
+            <translation><!-- 12 Months (DC/VA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12 Months (MD)</masterLabel>
+            <translation><!-- 12 Months (MD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15 Months (DC/VA)</masterLabel>
+            <translation><!-- 15 Months (DC/VA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15 Months (MD)</masterLabel>
+            <translation><!-- 15 Months (MD) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- External review process for Self Insured non-grandfathered accounts only --></help>
+        <label><!-- State External Review --></label>
+        <name>State_External_Review__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address --></label>
+        <name>Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Student Comments --></label>
+        <name>Student_Comments_4a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Student Comments --></label>
+        <name>Student_Comments_4b__c</name>
+    </fields>
+    <fields>
+        <label><!-- Students Comments --></label>
+        <name>Students_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Complete a Limiting Age for student Dependents only if the Limiting Age for student Dependents exceeds age 26. --></help>
+        <label><!-- Students Limit Age --></label>
+        <name>Students_Limit_Age_4a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Students Limit Age --></label>
+        <name>Students_Limit_Age_4b__c</name>
+    </fields>
+    <fields>
+        <label><!-- Students Limit Age --></label>
+        <name>Students_Limit_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Students Removal Method --></label>
+        <name>Students_Removal_Method_4a__c</name>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Birthday</masterLabel>
+            <translation><!-- On Birthday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Students Removal Method --></label>
+        <name>Students_Removal_Method_4b__c</name>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Birthday</masterLabel>
+            <translation><!-- On Birthday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Students Removal --></label>
+        <name>Students_Removal__c</name>
+        <picklistValues>
+            <masterLabel>Birthdate</masterLabel>
+            <translation><!-- Birthdate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subrogation Comments --></label>
+        <name>Subrogation_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subrogation Pay and Pursue --></label>
+        <name>Subrogation_Pay_and_Pursue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subrogation --></label>
+        <name>Subrogation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pay</masterLabel>
+            <translation><!-- Pay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pursue</masterLabel>
+            <translation><!-- Pursue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ID Cards Sent To: Subsequent Enrollment --></label>
+        <name>Subsequent_Enrollment__c</name>
+        <picklistValues>
+            <masterLabel>Account HQ</masterLabel>
+            <translation><!-- Account HQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Control Plan</masterLabel>
+            <translation><!-- Control Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Install</masterLabel>
+            <translation><!-- Local Install --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subscribers Home Address</masterLabel>
+            <translation><!-- Subscribers Home Address --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Students w/ Disabilities Comments --></label>
+        <name>SwD_Comments_4b__c</name>
+    </fields>
+    <fields>
+        <help><!-- Students with Disabilities:  Michelle’s Law – Federal Mandate. --></help>
+        <label><!-- Students W/ Disabilities Limiting Age --></label>
+        <name>SwD_Limiting_Age_4b__c</name>
+    </fields>
+    <fields>
+        <label><!-- Students W/ Disabilities Removal Method --></label>
+        <name>SwD_Removal_Method_4b__c</name>
+        <picklistValues>
+            <masterLabel>End of Calendar Month</masterLabel>
+            <translation><!-- End of Calendar Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Calendar Year</masterLabel>
+            <translation><!-- End of Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Birthday</masterLabel>
+            <translation><!-- On Birthday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TCCI Cost Share Waiver Help Text --></label>
+        <name>TCCI_Cost_Share_Waiver_Help_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Self-Insured only may select No --></help>
+        <label><!-- TCCI Cost Share Waiver --></label>
+        <name>TCCI_Cost_Share_Waiver__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Termination Comments --></label>
+        <name>Termination_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Traditional (ASO) --></label>
+        <name>Traditional_ASO__c</name>
+        <picklistValues>
+            <masterLabel>12 Months (DC/VA)</masterLabel>
+            <translation><!-- 12 Months (DC/VA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12 Months (MD)</masterLabel>
+            <translation><!-- 12 Months (MD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15 Months (DC/VA)</masterLabel>
+            <translation><!-- 15 Months (DC/VA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15 Months (MD)</masterLabel>
+            <translation><!-- 15 Months (MD) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Union/Collective Bargaining Agreement --></label>
+        <name>Union_Collective_Bargaining_Agreement__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Union Name --></label>
+        <name>Union_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Unmarried Dependent Children on Family Contract Type --></help>
+        <label><!-- Unmarried Dep Child on Family Cont Type --></label>
+        <name>Unmarried_Dep_Child_on_Family_Cont_Type__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC/VA</masterLabel>
+            <translation><!-- DC/VA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CDH Type --></label>
+        <name>Vendor_CDH_Type__c</name>
+        <picklistValues>
+            <masterLabel>FSA</masterLabel>
+            <translation><!-- FSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HRA</masterLabel>
+            <translation><!-- HRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HRA and FSA</masterLabel>
+            <translation><!-- HRA and FSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSA</masterLabel>
+            <translation><!-- HSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSA and FSA</masterLabel>
+            <translation><!-- HSA and FSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSA and HRA</masterLabel>
+            <translation><!-- HSA and HRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSA, HRA andFSA</masterLabel>
+            <translation><!-- HSA, HRA andFSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vendor Name Drawloop --></label>
+        <name>Vendor_Name_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Name --></label>
+        <name>Vendor_Name__c</name>
+        <picklistValues>
+            <masterLabel>Care Management &amp; Magellan Mental Health/Substance Abuse (for BluePreferred, IP only Level II, Level III, CFMI products with Magellan, BlueChoice or HealthyBlue products)</masterLabel>
+            <translation><!-- Care Management &amp; Magellan Mental Health/Substance Abuse (for BluePreferred, IP only Level II, Level III, CFMI products with Magellan, BlueChoice or HealthyBlue products) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Care Management – Includes IP Mental Health/substance Abuse Precertification via Magellan.  For CFMI products with no Magellan contract</masterLabel>
+            <translation><!-- Care Management – Includes IP Mental Health/substance Abuse Precertification via Magellan.  For CFMI products with no Magellan contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vendor Phone Drawloop --></label>
+        <name>Vendor_Phone_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Phone --></label>
+        <name>Vendor_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vision Products --></label>
+        <name>Vision_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Worker Assignment Comments --></label>
+        <name>Worker_Assignment_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workers Compensation Pay and Pursue --></label>
+        <name>Workers_Compensation_Pay_and_Pursue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workers Compensation --></label>
+        <name>Workers_Compensation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pay</masterLabel>
+            <translation><!-- Pay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pursue</masterLabel>
+            <translation><!-- Pursue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 5 Digit Account Number --></label>
+        <name>X5_Digit_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- atest --></label>
+        <name>atest__c</name>
+    </fields>
+    <fields>
+        <label><!-- my testing field --></label>
+        <name>my_testing_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- % of Allowed for Global Procedures --></label>
+        <name>of_Allowed_for_Global_Procedures__c</name>
+        <picklistValues>
+            <masterLabel>100% of Allowed Benefit</masterLabel>
+            <translation><!-- 100% of Allowed Benefit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26% of allowed benefit</masterLabel>
+            <translation><!-- 26% of allowed benefit --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Benefit Design Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Benefit Design Form</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <fieldSets>
+        <label><!-- Include on Adjustment Summary --></label>
+        <name>Include_on_Adjustment_Summary</name>
+    </fieldSets>
+    <layouts>
+        <layout>Admin Layout</layout>
+        <sections>
+            <label><!-- Additional Comments --></label>
+            <section>Additional Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Administrative Instructions and Provisions --></label>
+            <section>Administrative Instructions and Provisions</section>
+        </sections>
+        <sections>
+            <label><!-- Benefit Design Form Detail --></label>
+            <section>Benefit Design Form Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Child Dependent Mandates Section --></label>
+            <section>Child Dependent Mandates Section</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Unmarried Dependent Children on Family Contract --></label>
+            <section>Custom Unmarried Dependent Children on Family Contract</section>
+        </sections>
+        <sections>
+            <label><!-- DC/VA Unmarried Dependent Children on Family Contract --></label>
+            <section>DC/VA Unmarried Dependent Children on Family Contract</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Child Dependents --></label>
+            <section>Eligibility Section - Child Dependents</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Child Dependents of Domestic Partner --></label>
+            <section>Eligibility Section - Child Dependents of Domestic Partner</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Dependent Spouse --></label>
+            <section>Eligibility Section - Dependent Spouse</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Domestic Partner --></label>
+            <section>Eligibility Section - Domestic Partner</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Hourly --></label>
+            <section>Eligibility Section - Hourly</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Medicare-eligible Child Dependents of Domestic Partner --></label>
+            <section>Eligibility Section - Medicare-eligible Child Dependents of Domestic Partner</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Medicare-eligible Domestic Partner --></label>
+            <section>Eligibility Section - Medicare-eligible Domestic Partner</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Medicare-eligible Retiree --></label>
+            <section>Eligibility Section - Medicare-eligible Retiree</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Other Employees --></label>
+            <section>Eligibility Section - Other Employees</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Retirees Eligible --></label>
+            <section>Eligibility Section - Retirees Eligible</section>
+        </sections>
+        <sections>
+            <label><!-- Eligibility Section - Salaried --></label>
+            <section>Eligibility Section - Salaried</section>
+        </sections>
+        <sections>
+            <label><!-- External Review Process --></label>
+            <section>External Review Process</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- FirstHelp Options --></label>
+            <section>FirstHelp Options</section>
+        </sections>
+        <sections>
+            <label><!-- General Provisions --></label>
+            <section>General Provisions</section>
+        </sections>
+        <sections>
+            <label><!-- Group Profile --></label>
+            <section>Group Profile</section>
+        </sections>
+        <sections>
+            <label><!-- MD Unmarried Dependent Children on Family Contract --></label>
+            <section>MD Unmarried Dependent Children on Family Contract</section>
+        </sections>
+        <sections>
+            <label><!-- Medicare eligible members --></label>
+            <section>Medicare eligible members</section>
+        </sections>
+        <sections>
+            <label><!-- Membership Changes and Special Enrollment --></label>
+            <section>Membership Changes and Special Enrollment</section>
+        </sections>
+        <sections>
+            <label><!-- NASCO Flexlink Claims Processing --></label>
+            <section>NASCO Flexlink Claims Processing</section>
+        </sections>
+        <sections>
+            <label><!-- New Hire Enrollement Requirement --></label>
+            <section>New Hire Enrollement Requirement</section>
+        </sections>
+        <sections>
+            <label><!-- Other Party Liability / Financing --></label>
+            <section>Other Party Liability / Financing</section>
+        </sections>
+        <sections>
+            <label><!-- Retroactive Termination --></label>
+            <section>Retroactive Termination</section>
+        </sections>
+        <sections>
+            <label><!-- Same Gender Legal Marriage --></label>
+            <section>Same Gender Legal Marriage</section>
+        </sections>
+        <sections>
+            <label><!-- Status of Future Retirees and Actives Age 65 and Over --></label>
+            <section>Status of Future Retirees and Actives Age 65 and Over</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Benefit Design Form Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Global Maternity Services --></label>
+            <section>Global Maternity Services</section>
+        </sections>
+        <sections>
+            <label><!-- Religious Accommodations --></label>
+            <section>Religious Accommodations</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Domestic Partner Form</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Section A --></label>
+            <section>Section A</section>
+        </sections>
+        <sections>
+            <label><!-- Section B --></label>
+            <section>Section B</section>
+        </sections>
+        <sections>
+            <label><!-- Section C --></label>
+            <section>Section C</section>
+        </sections>
+        <sections>
+            <label><!-- Section D --></label>
+            <section>Section D</section>
+        </sections>
+        <sections>
+            <label><!-- Section E --></label>
+            <section>Section E</section>
+        </sections>
+        <sections>
+            <label><!-- Section F --></label>
+            <section>Section F</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MCP - Full Managed Care</layout>
+        <sections>
+            <label><!-- Additional and/or Non-standard Managed Care Provisions --></label>
+            <section>Additional and/or Non-standard Managed Care Provisions</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DM/Wellness --></label>
+            <section>DM/Wellness</section>
+        </sections>
+        <sections>
+            <label><!-- Header Information --></label>
+            <section>Header Information</section>
+        </sections>
+        <sections>
+            <label><!-- Outpatient Authorization Program --></label>
+            <section>Outpatient Authorization Program</section>
+        </sections>
+        <sections>
+            <label><!-- PCMH / TCCI Program --></label>
+            <section>PCMH / TCCI Program</section>
+        </sections>
+        <sections>
+            <label><!-- TCCI Cost Share Waiver --></label>
+            <section>TCCI Cost Share Waiver</section>
+        </sections>
+        <sections>
+            <label><!-- Vendor Information Section --></label>
+            <section>Vendor Information Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MCP - Non Standard</layout>
+        <sections>
+            <label><!-- Additional and/or Non-standard Managed Care Provisions --></label>
+            <section>Additional and/or Non-standard Managed Care Provisions</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DM/Wellness --></label>
+            <section>DM/Wellness</section>
+        </sections>
+        <sections>
+            <label><!-- Header Information --></label>
+            <section>Header Information</section>
+        </sections>
+        <sections>
+            <label><!-- Outpatient Authorization Program --></label>
+            <section>Outpatient Authorization Program</section>
+        </sections>
+        <sections>
+            <label><!-- PCMH / TCCI Program --></label>
+            <section>PCMH / TCCI Program</section>
+        </sections>
+        <sections>
+            <label><!-- TCCI Cost Share Waiver --></label>
+            <section>TCCI Cost Share Waiver</section>
+        </sections>
+        <sections>
+            <label><!-- Vendor Information Section --></label>
+            <section>Vendor Information Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Managed Care Program Form</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DM/Wellness --></label>
+            <section>DM/Wellness</section>
+        </sections>
+        <sections>
+            <label><!-- Header Information --></label>
+            <section>Header Information</section>
+        </sections>
+        <sections>
+            <label><!-- Outpatient Authorization Program --></label>
+            <section>Outpatient Authorization Program</section>
+        </sections>
+        <sections>
+            <label><!-- PCMH / TCCI Program --></label>
+            <section>PCMH / TCCI Program</section>
+        </sections>
+        <sections>
+            <label><!-- TCCI Cost Share Waiver --></label>
+            <section>TCCI Cost Share Waiver</section>
+        </sections>
+        <sections>
+            <label><!-- Vendor Information Section --></label>
+            <section>Vendor Information Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PPACA Form Layout</layout>
+        <sections>
+            <label><!-- Benefit Selection --></label>
+            <section>Benefit Selection</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Global Maternity Services --></label>
+            <section>Global Maternity Services</section>
+        </sections>
+        <sections>
+            <label><!-- PPACA Mandate --></label>
+            <section>PPACA Mandate</section>
+        </sections>
+        <sections>
+            <label><!-- Religious Accommodations --></label>
+            <section>Religious Accommodations</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Admin --></label>
+        <name>Admin</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Domestic Partner - Self Insured Only --></label>
+        <name>Domestic_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Managed Care Program (MCP) - Full Managed Care --></description>
+        <label><!-- MCP - Full Managed Care --></label>
+        <name>MCP_Full_Managed_Care</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Managed Care Program (MCP) - Non Standard --></description>
+        <label><!-- MCP - Non Standard --></label>
+        <name>MCP_Non_Standard</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Managed Care Programs --></label>
+        <name>Managed_Care_Programs</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Exemption is available to Non-grandfathered groups that satisfy exemption --></errorMessage>
+        <name>EBDF001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Outpatient Authorization Program options must be yes if the funding arrangement selected is fully insured. --></errorMessage>
+        <name>EBDF002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Outpatient Authorization Program options must be yes if the funding arrangement selected is fully insured. --></errorMessage>
+        <name>EBDF003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Outpatient Authorization Program options must be yes if the funding arrangement selected is fully insured. --></errorMessage>
+        <name>EBDF004</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF005: If Jurisdiction is Maryland only then Michelle&apos;s Law,Part-time Students with Disabilities,Michelle&apos;s Law Waiver,Child Dependents Limit Age,Students Limit Age,Child Dependents Removal Method ,Students Removal Method can have values. --></errorMessage>
+        <name>EBDF005</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF006: All Child Dependents Limiting Age,All Child Dependents Removal Method,Students Limit Age
+Students Removal Method,SwD Limiting Age,SwD Removal Method can entered only when Child Dependent Mandates is DC/VA --></errorMessage>
+        <name>EBDF006</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF007: You can edit  Religious Exemption Prerequisites or Religious Accommodation section only if it is Grandfathered in BRF. --></errorMessage>
+        <name>EBDF007</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF008:If domestic partner = No, then you cannot edit  Child dependents of domestic partner , Medical eligible retiree, Medicare eligible domestic partner, Medicare eligible child dependents of DP --></errorMessage>
+        <name>EBDF008</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF009 : If Funding Arrangements is &apos;Fully Insured&apos; then user cannot select Integrated DM Wellness as &apos;NO&apos; --></errorMessage>
+        <name>EBDF009</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF010: If Vendor Name is Other then Other Vendor Name  should be specified. --></errorMessage>
+        <name>EBDF010</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0100 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;All Child Dependents Limiting Age&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF0100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0011: All Child Dependents Limiting Age,All Child Dependents Removal Method,Students Limit Age
+Students Removal Method,SwD Limiting Age,SwD Removal Method can entered only when Child Dependent Mandates is DC/VA --></errorMessage>
+        <name>EBDF011</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF012: Michelle&apos;s Law,Part-time Students with Disabilities,Michelle&apos;s Law Waiver,Child Dependents Limit Age,Students Limit Age,Child Dependents Removal Method ,Students Removal Method can entered only when Child Dependent Mandates is CEDE --></errorMessage>
+        <name>EBDF012</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF013 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF013</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF014 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF014</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF015 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF015</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF016 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF016</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF017 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF017</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF018 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF018</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF019 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF019</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF020 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF020</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF021 : Only the value Yes can be selected in this field --></errorMessage>
+        <name>EBDF021</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF022 : Answer C7a should be between 3 and 36 --></errorMessage>
+        <name>EBDF022</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF023 : Answer C5a should be between 3 and 36 --></errorMessage>
+        <name>EBDF023</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF024 : User should enter Number of Eligibles for New Business --></errorMessage>
+        <name>EBDF024</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF025 : If Union/Collective Bargaining Agreement is &apos;Yes&apos; than Union Name field cannot be blank --></errorMessage>
+        <name>EBDF025</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF026 : If CDH  Fund Type is &apos;BlueFund&apos; OR &apos;Compatible&apos; then CDH Type cannot be blank --></errorMessage>
+        <name>EBDF026</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF027 : If CDH Fund Type is &apos;Compatible&apos; then CDH Vendor Name cannot be blank --></errorMessage>
+        <name>EBDF027</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF028 : If Salaried Full-Time is &apos;Yes&apos; then Full-Time Minimum Hours per Work Week cannot be blank --></errorMessage>
+        <name>EBDF028</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF029 : If Salaried Part-Time is &apos;Yes&apos; then Part-Time Minimum Hours per Work Week cannot be blank --></errorMessage>
+        <name>EBDF029</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF030 : If Hourly Full-Time is &apos;Yes&apos; then Full-Time Minimum Hours per Work Week cannot be blank --></errorMessage>
+        <name>EBDF030</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF031 : If Hourly Part-Time is &apos;Yes&apos; then Part-Time Minimum Hours per Work Week cannot be blank --></errorMessage>
+        <name>EBDF031</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF033 : If Funding Arrangement is &apos;Risk&apos; on Sold BRF then Retirees (Fully-Insured) cannot be &apos;N/A&apos; --></errorMessage>
+        <name>EBDF033</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF034 : If Funding Arrangement is &apos;Both&apos; on Sold BRF then Retirees (Fully-Insured) cannot be blank --></errorMessage>
+        <name>EBDF034</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF035 : If Retirees (Self-Insured) = &apos;Other – See Comments&apos; then the Retirees (Self-Insured) Comments cannot be blank --></errorMessage>
+        <name>EBDF035</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF036 : If Funding Arrangement is &apos;Other&apos; or &apos;ASO&apos; on Sold BRF then Same Gender Legal Marriage (ASO) cannot be blank --></errorMessage>
+        <name>EBDF036</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF037 :If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then the fields in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF037</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF038 : If the Account’s jurisdiction = MD, then the Michelle’s Law field cannot be blank --></errorMessage>
+        <name>EBDF038</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF039 If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos; then the fields in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF039</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF040 : If funding arrangement = Risk, then Students w/ Disabilities Limiting Age cannot be less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF040</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF041 : If ‘Other’ is selected for New Hire Enrollment field, then New Hire Enrollment Other field cannot be blank --></errorMessage>
+        <name>EBDF041</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF042 : If ‘Other (Specify)’ is selected for Effective Date of New Hire Coverage field, then Effective Date New Hire Other  field cannot be blank --></errorMessage>
+        <name>EBDF042</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF043 : If Jurisdiction is &apos;MD/DC&apos; then subrogation field cannot be blank --></errorMessage>
+        <name>EBDF043</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF045 : If Jurisdiction is &apos;DC/VA&apos; then COB Type can have following value &apos;Regular&apos; --></errorMessage>
+        <name>EBDF045</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF047 : If Jurisdiction is &apos;DC/VA&apos; then Medicare COB Type should have following values &apos;Regular&apos; and &apos;Not-Applicable&apos; --></errorMessage>
+        <name>EBDF047</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF048 : If Retroactive Termination field value is &apos;Other&apos; then Retroactive Termination Other field cannot be blank --></errorMessage>
+        <name>EBDF048</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF049 : If External Review Processing field has &apos;Account External Review (No IRO verbiage/fees in ASA)&apos; then Account External Review Vendor Address cannot be blank --></errorMessage>
+        <name>EBDF049</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF050 : If External Review Processing field has &apos;Account External Review (No IRO verbiage/fees in ASA) &apos; then Account External Review Vendor Name cannot be blank --></errorMessage>
+        <name>EBDF050</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF051 : If Jurisdiction is &apos;DC&apos;, Funding Arrangements is &apos;ASO&apos; and for Non-Grandfathered account user cannot select &apos;State External Review (No IRO verbiage/fees in ASA)&apos; --></errorMessage>
+        <name>EBDF051</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF052 :If Other Active Employees is &apos;Yes&apos; then Other Active Employees Description cannot be blank --></errorMessage>
+        <name>EBDF052</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF053 : If Salaried Full-Time is &apos;No&apos; then Full-Time Minimum Hours per Work Week cannot have value --></errorMessage>
+        <name>EBDF053</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF054 : If Salaried Part-Time is &apos;No&apos; then Part-Time Minimum Hours per Work Week cannot have value --></errorMessage>
+        <name>EBDF054</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF055 : If Hourly Full-Time is &apos;No&apos; then Full-Time Minimum Hours per Work Week cannot have value --></errorMessage>
+        <name>EBDF055</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF056 : If Hourly Part-Time is &apos;No&apos; then Part-Time Minimum Hours per Work Week cannot have value --></errorMessage>
+        <name>EBDF056</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF057 : If Contract/Benefit Guide = &apos;Other&apos; then Contract/Benefit Guide Comments cannot be blank --></errorMessage>
+        <name>EBDF057</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF058 : If Funding Arrangement is &apos;ASO&apos; or &apos;Other&apos; on Sold BRF then Retirees (Fully-Insured) cannot have value. Please select &apos;N/A&apos; --></errorMessage>
+        <name>EBDF058</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF059 : If Funding Arrangement is &apos;ASO&apos; or &apos;Other&apos; on Sold BRF then Retirees (Self-Insured) cannot be &apos;N/A&apos; --></errorMessage>
+        <name>EBDF059</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF060 :If Other Active Employees is &apos;No&apos; then Other Active Employees Description cannot have value --></errorMessage>
+        <name>EBDF060</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF061 : If Funding Arrangement is &apos;Risk&apos; on Sold BRF then Same Gender Legal Marriage (ASO) cannot have Value --></errorMessage>
+        <name>EBDF061</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF062 : First Help value once populated cannot be changed --></errorMessage>
+        <name>EBDF062</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF064 : If Jurisdiction is &apos;MD&apos; ,Child dependent is &apos;Yes&apos; and Funding Arrangements is &apos;Risk/Both&apos; then Grandchildren Waiver should be &apos;Yes&apos; --></errorMessage>
+        <name>EBDF064</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF065 : If Jurisdiction is &apos;VA&apos; and funding arrangement is &apos;Risk&apos; (OR) if Jurisdiction is &apos;VA&apos;, funding arrangement are &apos;ASO/Both&apos; and ERISA is &apos;No&apos; then subrogation field should be only &apos;No&apos; --></errorMessage>
+        <name>EBDF065</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF066 : If Union/Collective Bargaining Agreement is &apos;No&apos; than Union Name field cannot have value --></errorMessage>
+        <name>EBDF066</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF067 : If Funding Arrangement is &apos;Risk&apos; on Sold BRF then Retirees (Self-Insured) cannot have value. Please select &apos;N/A&apos; --></errorMessage>
+        <name>EBDF067</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF068 : If Funding Arrangement is &apos;Both&apos; on Sold BRF then Retirees (Self-Insured) cannot be &apos;N/A&apos; --></errorMessage>
+        <name>EBDF068</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF069 : If the sold BRF contains BlueFund CDH plans, CDH Fund Type should be only &apos;BlueFund&apos; --></errorMessage>
+        <name>EBDF069</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF070 : If the sold BRF contains Compatible CDH plans, CDH Fund Type should be only &apos;Compatible&apos; --></errorMessage>
+        <name>EBDF070</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF071 : If the sold BRF contains both BlueFund and Compatible CDH plans, CDH Fund Type can be only &apos;BlueFund/Compatible&apos; --></errorMessage>
+        <name>EBDF071</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF072 : If FirstHelp for Sold BRF is &apos;Yes&apos; then FirstHelp on BDF should be only &apos;Yes&apos;. You cannot change the populated value --></errorMessage>
+        <name>EBDF072</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF073 : If FirstHelp for Sold BRF is &apos;No&apos; then FirstHelp on BDF should be only &apos;No&apos;. --></errorMessage>
+        <name>EBDF073</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF074 : If funding arrangement is Risk, then Continuation field under General Provision section should be only &apos;Yes&apos; --></errorMessage>
+        <name>EBDF074</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF075: If Vendor Name is Other then Other Vendor  Phone should be specified. --></errorMessage>
+        <name>EBDF075</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF076: If Funding Arrangement is ASO then Unmarried Dep Child on Family Cont Type cannot be blank. --></errorMessage>
+        <name>EBDF076</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF077: If Funding Arrangement is ASO then Child Dependent Mandate field cannot be blank . --></errorMessage>
+        <name>EBDF077</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF078: If Funding Arrangement is &apos;Risk&apos; then Child Dependent Mandate field cannot have the Value &apos;Custom&apos; --></errorMessage>
+        <name>EBDF078</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF079 : All Child Dependents Limiting Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF079</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF080 : All Child Dependents Limiting Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF080</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF081 : All Child Dependents Limiting Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF081</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF082 : Full Time Student Limiting Age Limiting Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF082</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF083 : PT Students w/ Disability Limiting Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF083</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF084 : Students W/ Disabilities Limiting Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF084</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF084 : PT Students w/ Disability Limiting Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF085</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF087 :  If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos; or &apos;CEDE&apos; then &apos;Student Comments&apos; in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF087</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF088 :  If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos; or &apos;CEDE&apos; then &apos;Students Removal Method&apos; in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF088</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF089 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA or &apos;CEDE&apos; then &apos;Students W/ Disabilities Removal Method&apos; in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF089</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF090 :  If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;Michelle&apos;s Law&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF090</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF091 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;Grandchildren Waiver&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF091</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF092 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;PT Students w/ Disabilities&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF092</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF093 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;All Child Dependents Removal Method&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF093</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF094 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;Students Removal Method&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF094</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF095 :  If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos; then &apos;All Child Dependents Removal Method&apos; in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF095</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF096 : If Domestic Partner is &apos;No&apos; then Child Dependents of Domestic Partner should be only &apos;No&apos;. --></errorMessage>
+        <name>EBDF096</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF097 : If Domestic Partner is &apos;No&apos; then Medicare-eligible Retiree should be only &apos;No&apos;. --></errorMessage>
+        <name>EBDF097</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF098 : If Domestic Partner is &apos;No&apos; then Medicare-eligible Domestic Partner should be only &apos;No&apos;. --></errorMessage>
+        <name>EBDF098</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF099 : If Domestic Partner is &apos;No&apos; then Medicare-eligible Child Dependents of DP should be only &apos;No&apos;. --></errorMessage>
+        <name>EBDF099</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF100 : Form cannot be saved since associated Benefit Design record is Approved --></errorMessage>
+        <name>EBDF100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF101 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;Students Limit Age&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF101</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0102 : Students Limit Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF102</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0103 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;PT Students w/ Disabilities&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF103</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0104 :  If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos;  or &apos;CEDE&apos; then &apos;All Child Dependents Limiting Age&apos; in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF104</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF105 : If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos;  or &apos;CEDE&apos; then &apos;Students Limiting Age&apos; in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF105</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF106 :  If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos; or &apos;CEDE&apos; then &apos;Students W/ Disabilities Limiting Age&apos; in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>EBDF106</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0107 : Students Limit Age cannot have age less than &apos;26&apos;. --></errorMessage>
+        <name>EBDF107</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF108 : If funding arrangement is &apos;Risk&apos; then &apos;Home Health Care&apos; cannot be &apos;No&apos; --></errorMessage>
+        <name>EBDF108</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF109 : If funding arrangement is &apos;Risk&apos; then &apos;Hospice Care&apos; cannot be &apos;No&apos; --></errorMessage>
+        <name>EBDF109</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF110 : If funding arrangement is &apos;Risk&apos; then &apos;Artificial Insemination And IVF&apos; cannot be &apos;No&apos; --></errorMessage>
+        <name>EBDF110</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF112 : If funding arrangement is &apos;Risk&apos; then &apos;Clinical Trials&apos; cannot be &apos;No&apos; --></errorMessage>
+        <name>EBDF112</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF113 : If funding arrangement is &apos;Risk&apos; then &apos;Habilitative Services for Children&apos; cannot be &apos;No&apos; --></errorMessage>
+        <name>EBDF113</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF114 : If Funding Arrangements is &apos;ASO&apos;, then if the user selects &apos;Habilitative Services for Children&apos; as &apos;Yes&apos;, then &apos;Early Intervention Services&apos; needs to be &apos;No&apos; --></errorMessage>
+        <name>EBDF114</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF115 : If Funding Arrangements is &apos;ASO&apos;, then if the user selects &apos;Habilitative Services for Children&apos; as &apos;No&apos;, then &apos;Early Intervention Services&apos; needs to be &apos;Yes&apos; --></errorMessage>
+        <name>EBDF115</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF116 :If Funding Arrangements is &apos;Risk&apos;, then if the user cannot selects a value for  &apos;Unmarried Dependent Children On Family Contract Type&apos; Field --></errorMessage>
+        <name>EBDF116</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF117 : If the Funding Arrangement on BRF is &apos;Both&apos; only then user should select this field --></errorMessage>
+        <name>EBDF117</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF121 :If Child Dependent Mandates is &apos;Maryland&apos; then &apos;Unmarried Dep Child on Family Cont Type&apos; should be only &apos;MD&apos; --></errorMessage>
+        <name>EBDF121</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF122 : If Child Dependent Mandates is &apos;DC/VA&apos; then &apos;Unmarried Dep Child on Family Cont Type&apos; should be only &apos;DC/VA&apos; --></errorMessage>
+        <name>EBDF122</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF123 : If Child Dependent Mandates is &apos;Custom&apos; then &apos;Unmarried Dep Child on Family Cont Type&apos; should be only &apos;Custom&apos; --></errorMessage>
+        <name>EBDF123</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF125 :If First Help is &apos;Yes&apos; then First Help Number on Id Card Should be only &apos;Yes&apos; --></errorMessage>
+        <name>EBDF125</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF126 :If First Help is &apos;No&apos; then First Help Number on Id Card Should be only &apos;No&apos; --></errorMessage>
+        <name>EBDF126</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF127 :  If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then &apos;Michelle&apos;s Law&apos; in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot have value &apos;No&apos; --></errorMessage>
+        <name>EBDF127</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF128 : If Students Limit Age is greater than 26, then the Part-time Students with Disabilities field should be &apos;Yes&apos; value for funding arrangement &apos;Risk&apos; or &apos;Both&apos; --></errorMessage>
+        <name>EBDF128</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0011: All Child Dependents Limiting Age,All Child Dependents Removal Method,Students Limit Age
+Students Removal Method,SwD Limiting Age,SwD Removal Method can entered only when Child Dependent Mandates is DC/VA --></errorMessage>
+        <name>ZZZEBDF011</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF044 : If Jurisdiction is &apos;MD&apos; then COB Type should have following values &apos;Aggregate, Modified Aggregate, Regular, Non-Duplication, Carve Out and Not-Applicable&apos; --></errorMessage>
+        <name>ZZZEBDF044</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF046 : If Jurisdiction is &apos;MD&apos; then Medicare COB Type should have following values &apos;Aggregate, Modified Aggregate, Regular, Non-Duplication, Carve Out and Non-Applicable&apos; --></errorMessage>
+        <name>ZZZEBDF046</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF0011: All Child Dependents Limiting Age,All Child Dependents Removal Method,Students Limit Age
+Students Removal Method,SwD Limiting Age,SwD Removal Method can entered only when Child Dependent Mandates is DC/VA --></errorMessage>
+        <name>ZZZZEBDF011</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF027 : If CDH Fund Type is &apos;Compatible&apos; then CDH Vendor Name cannot be blank --></errorMessage>
+        <name>ZZZZEBDF027_Business_told_not_req</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF037 :If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;MD&apos; then the fields in the following section &apos;MD Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>ZZZZEBDF037</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF039 If Funding Arrangement is &apos;Both&apos; or &apos;Risk&apos; and Jurisdiction &apos;DC&apos; or &apos;VA&apos; then the fields in the following section &apos;DC/VA Unmarried Dependent Children on Family Contract&apos; cannot be blank. --></errorMessage>
+        <name>ZZZZEBDF039</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF044 : If Jurisdiction is &apos;MD&apos; then COB Type should have following values &apos;Aggregate, Modified Aggregate, Regular, Non-Duplication, Carve Out and Not-Applicable&apos; --></errorMessage>
+        <name>ZZZZEBDF044</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBDF046 : If Jurisdiction is &apos;MD&apos; then Medicare COB Type should have following values &apos;Aggregate, Modified Aggregate, Regular, Non-Duplication, Carve Out and Non-Applicable&apos; --></errorMessage>
+        <name>ZZZZEBDF046</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Edit_New --></label>
+        <name>Edit_New</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Export_Non_Standard_MCP --></label>
+        <name>Export_Non_Standard_MCP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Benefit_Design_Form_BD --></label>
+        <name>New_Benefit_Design_Form_BD</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Benefit_Design_Form_BDP --></label>
+        <name>New_Benefit_Design_Form_BDP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDP --></label>
+        <name>Run_DDP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDP_Admin --></label>
+        <name>Run_DDP_Admin</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDP_DPERF --></label>
+        <name>Run_DDP_DPERF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDP_MCP --></label>
+        <name>Run_DDP_MCP</name>
+    </webLinks>
+</CustomObjectTranslation>

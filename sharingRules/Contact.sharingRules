@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Community_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This sharing rule will help the community users to update the contact records in the Community User Contact record page</description>
+        <label>Community Users</label>
+        <sharedTo>
+            <allCustomerPortalUsers></allCustomerPortalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Community User Contact</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X2_50_Record_Type_Based_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This Sharing Rule allows users of role 2-50 to have read/write sharing on all 2-50 record type contacts</description>
+        <label>2-50 Record Type Based Sharing</label>
+        <sharedTo>
+            <role>X2_50_Role</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>2-50</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X2_50_Record_Type_Based_Sharing_with_2_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This sharing rule allows member in 2+ User group to have read/write access to all contact records that are of the record type 2-50</description>
+        <label>2-50 Record Type Based Sharing with 2+ Group</label>
+        <sharedTo>
+            <group>X2_User_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>2-50</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

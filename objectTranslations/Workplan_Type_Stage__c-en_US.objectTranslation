@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- All Assignments Must Be Completed before another stage can be started (set to in progress) --></help>
+        <label><!-- All Assignments Must Be Completed --></label>
+        <name>All_Assignments_Must_Be_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Order --></label>
+        <name>Display_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Assignments --></label>
+        <name>Number_of_Assignments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Sub-Processes --></label>
+        <name>Number_of_Sub_processes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Workplan Stage Name --></label>
+        <name>Parent_Workplan_Stage_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Workplan Type Stage --></label>
+        <name>Parent_Workplan_Type_Stage__c</name>
+        <relationshipLabel><!-- Workplan Type Stage --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The sequence number should be incremented in multiples of 10. --></help>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage Category --></label>
+        <name>Stage_Category__c</name>
+        <picklistValues>
+            <masterLabel>Account &amp; Member Tools</masterLabel>
+            <translation><!-- Account &amp; Member Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Coding, Loading &amp; Testing</masterLabel>
+            <translation><!-- Benefit Coding, Loading &amp; Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design &amp; Creation of NAEGS</masterLabel>
+            <translation><!-- Benefit Design &amp; Creation of NAEGS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing (Monthly) Invoices</masterLabel>
+            <translation><!-- Billing (Monthly) Invoices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment &amp; ID Card Generation</masterLabel>
+            <translation><!-- Enrollment &amp; ID Card Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure &amp; Admin Setup</masterLabel>
+            <translation><!-- Group Structure &amp; Admin Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Enrollment, Materials &amp; Support</masterLabel>
+            <translation><!-- Open Enrollment, Materials &amp; Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Sales Document Generation</masterLabel>
+            <translation><!-- Post Sales Document Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sales</masterLabel>
+            <translation><!-- Pre-Sales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- When a new stage is added, it should match one of the picklist values for the opportunity --></help>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>ARC Approval</masterLabel>
+            <translation><!-- ARC Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASA</masterLabel>
+            <translation><!-- ASA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accm Cnt Svcs</masterLabel>
+            <translation><!-- Accm Cnt Svcs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Kick-off Meeting</masterLabel>
+            <translation><!-- Account Kick-off Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAA</masterLabel>
+            <translation><!-- BAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BR Wellness</masterLabel>
+            <translation><!-- BR Wellness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Doc</masterLabel>
+            <translation><!-- Benefit Design Doc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request</masterLabel>
+            <translation><!-- Benefit Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Setup</masterLabel>
+            <translation><!-- Benefit Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CYC</masterLabel>
+            <translation><!-- CYC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CYC BF App</masterLabel>
+            <translation><!-- CYC BF App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carve-out RX</masterLabel>
+            <translation><!-- Carve-out RX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmation of Sales/Group Paperwork</masterLabel>
+            <translation><!-- Confirmation of Sales/Group Paperwork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Benefit Contract</masterLabel>
+            <translation><!-- Create Benefit Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create MM</masterLabel>
+            <translation><!-- Create MM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Microsite</masterLabel>
+            <translation><!-- Create Microsite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dead</masterLabel>
+            <translation><!-- Dead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EDC</masterLabel>
+            <translation><!-- EDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employer Portal</masterLabel>
+            <translation><!-- Employer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generate Monthly Invoices</masterLabel>
+            <translation><!-- Generate Monthly Invoices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generate Post Sale SBCs</masterLabel>
+            <translation><!-- Generate Post Sale SBCs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure</masterLabel>
+            <translation><!-- Group Structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID Cards</masterLabel>
+            <translation><!-- ID Cards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Plan</masterLabel>
+            <translation><!-- Implementation Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mental Health Parity</masterLabel>
+            <translation><!-- Mental Health Parity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyAccount</masterLabel>
+            <translation><!-- MyAccount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PP CFL</masterLabel>
+            <translation><!-- PP CFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perf Guarantee</masterLabel>
+            <translation><!-- Perf Guarantee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Exchange</masterLabel>
+            <translation><!-- Private Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Process Enrollment</masterLabel>
+            <translation><!-- Process Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Delivered</masterLabel>
+            <translation><!-- Quote Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP</masterLabel>
+            <translation><!-- RFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Searchlight HealthCheck</masterLabel>
+            <translation><!-- Searchlight HealthCheck --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup CVS</masterLabel>
+            <translation><!-- Setup CVS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Davis</masterLabel>
+            <translation><!-- Setup Davis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Facets Dental</masterLabel>
+            <translation><!-- Setup Facets Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Magellan</masterLabel>
+            <translation><!-- Setup Magellan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriting</masterLabel>
+            <translation><!-- Underwriting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type Name --></label>
+        <name>Workplan_Type_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type --></label>
+        <name>Workplan_Type__c</name>
+        <relationshipLabel><!-- Workplan Type Stage --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Workplan Type Stage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Workplan Type Stage</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Workplan Type Stage Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Workplan Type Sub-Stage Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Process --></label>
+        <name>Process</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sub-Process --></label>
+        <name>Sub_Process</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- ETWS001: Stage Category must be the same as the parent Workplan Type Stage Category --></errorMessage>
+        <name>EWTS001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Stage category for the sub-process must be the same as the stage category for the parent workplan type stage --></errorMessage>
+        <name>EWTS002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not add new workplan type stages  for an active workplan type. --></errorMessage>
+        <name>EWTS003</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_WorkPlan_Type_Stage --></label>
+        <name>New_WorkPlan_Type_Stage</name>
+    </webLinks>
+</CustomObjectTranslation>

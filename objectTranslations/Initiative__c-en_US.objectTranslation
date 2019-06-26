@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Account Name is auto populated based on the associated opportunity if the opportunity field is filled in --></help>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+        <relationshipLabel><!-- Initiatives --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Owner --></label>
+        <name>Account_Owner__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please be aware of the new user access, to whom you are assigning. Once it is assigned to new user you no longer will be able to edit the initiative --></help>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Initiatives --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Initiatives --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initiative Status --></label>
+        <name>Initiative_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initiative Type --></label>
+        <name>Initiative_Type__c</name>
+        <picklistValues>
+            <masterLabel>Cross-Selling</masterLabel>
+            <translation><!-- Cross-Selling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration</masterLabel>
+            <translation><!-- Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partnership</masterLabel>
+            <translation><!-- Partnership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Survey</masterLabel>
+            <translation><!-- Survey --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Name --></label>
+        <name>Opportunity_Name__c</name>
+        <relationshipLabel><!-- Initiatives --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Step To Step Process State --></label>
+        <name>Step_To_Step_Process_State__c</name>
+        <picklistValues>
+            <masterLabel>Build Everything Together</masterLabel>
+            <translation><!-- Build Everything Together --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Curiosity</masterLabel>
+            <translation><!-- Create Curiosity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gain Approval</masterLabel>
+            <translation><!-- Gain Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Land &amp; Expand</masterLabel>
+            <translation><!-- Land &amp; Expand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Listen &amp; Learn</masterLabel>
+            <translation><!-- Listen &amp; Learn --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Initiative</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Initiatives</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Initiative Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Initiative Process --></label>
+            <section>Initiative Process</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

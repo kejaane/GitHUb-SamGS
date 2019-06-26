@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.GeneralProducer__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.GeneralProducer__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>&quot;Insurance Marketing Center, Inc.&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Market_Segment_New__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>51-199</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Insurance Marketing Center, Inc.</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2016-07-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-07-01</startDate>
+    </timeFrameFilter>
+</Report>

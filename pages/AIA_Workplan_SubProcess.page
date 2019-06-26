@@ -1,0 +1,23 @@
+<!--
+ *                                 Update History
+ *                                 ---------------
+ * Date        Developer    Tag         Description
+ *==========================================================================================
+ * 01/26/2018| Raviteja   | T01 | Added SLDS classes to all components/tags
+ * 09/25/2018| Gayathri	  | T02 | Commented WP task related functionalities as per US 209
+ *==========================================================================================
+ -->
+<apex:page standardController="Workplan_Stage__c" extensions="AIA_WP_SubProcess_Controller" lightningStylesheets="true"><!--  action="{!onPageLoad}"-->  
+   <!--T02 - Start
+    <!-- T01 -- Start ->
+    <apex:slds rendered="{! IF($User.UITheme=='Theme3',false,true)}" />
+    <!-- T01 -- End ->
+    
+    <apex:pageBlock title="Workplan Sub Process">
+    	<apex:form >
+    		<apex:commandlink action="/{!$currentPage.Parameters.Id}" target="_self" value="Back"/>
+    	</apex:form>
+    </apex:pageBlock>
+ <apex:pageMessages />   
+ T02 -- End -->   
+</apex:page>

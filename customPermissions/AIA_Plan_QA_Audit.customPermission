@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Custom Permission is used to make all input fields read only on the Get Benefits VF page so AIA QA can audit and QA Complete the related Plan.</description>
+    <label>AIA Plan QA Audit</label>
+</CustomPermission>

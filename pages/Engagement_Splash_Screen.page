@@ -1,0 +1,65 @@
+<apex:page showHeader="false"  sidebar="false" title="Enagement Splash Screen">   
+    <STYLE TYPE="text/css">
+        TD{font-size: 12pt;}
+    </STYLE>
+  
+    <table border="0" CELLPADDING="2" CELLSPACING="2">
+        <tr>
+            <td><apex:image id="Engagements" value="{!$Resource.Engagements}" width="60" height="60"/><font size="6" color="darkblue">Welcome to Engagements</font></td>
+        </tr>
+        <tr>
+            <td>
+                <p>    
+                    <font size="4">    
+                        Use the Engagements tab to create or manage existing Distribution Partner Strategy <u>Events</u> such as:
+                    </font>
+                </p>  
+                <p>
+                    <table border="1" CELLPADDING="2" CELLSPACING="2">
+                        <tr>
+                            <td><b>House Meeting</b></td>
+                            <td>A meeting between CareFirst and its Parnter</td>                            
+                        </tr>
+                        <tr>
+                            <td><b>Internal Team Meeting</b></td>                        
+                            <td>Meeting between CareFirst employees</td>                            
+                        </tr>
+                        <tr>
+                            <td><b>Training Session</b></td>
+                            <td>Training session between CareFirst and the Partner</td>                                                    
+                        </tr>
+                    </table>
+                </p>                
+            </td>         
+        </tr>
+        <tr>
+            <td>
+                <p><font size="4">Distribution Partner Strategy (DPS):</font></p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Developed to facilitate high level service to our Distribution Partners (Brokes/Consultants) to track:
+                    <ul>
+                        <li>Coordinate meetings with internal colleagues</li>
+                        <li>Coordinate meetings with Partners</li> 
+                        <li>Track meetings with Partners on Topics such as Products, Programs, and Trainings</li>
+                        <li>Capture attendees on internal team meetings and meetings with Partners</li>
+                    </ul>   
+                </p>         
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <h3>Additional Information:</h3><br/>
+                    <a href="https://share.carefirst.com/marketing/Sales/srg/test33/salesforce.com%20Home%20Page.aspx">Salesforce Resource Guide</a><br/>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br/><br/><br/>
+                <font color="blue" size="2">Note: CareFirst intranet links are only accessible while browsing from the CareFirst network, including Citrix.</font>                
+            </td>
+        </tr>
+    </table>
+</apex:page>

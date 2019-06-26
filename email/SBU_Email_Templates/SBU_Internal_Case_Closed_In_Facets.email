@@ -1,0 +1,38 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Dear {!Case.OwnerFirstName} ,</p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="p1"><font face="arial"><span style="font-size: 12pt;">Case#{!Case.CaseNumber}&nbsp;has been closed in Facets, with Facets Case ID # &nbsp;</span>{!Case.Facets_case_ID__c}</font></p><p class="p1"><br></p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+</p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Please review the case.</p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Detail Case Link : {!Case.Link}</p><p class="p2" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Thank You,</p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">SFDC Team</p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

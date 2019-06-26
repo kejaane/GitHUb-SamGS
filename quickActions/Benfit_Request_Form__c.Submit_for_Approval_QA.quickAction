@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Button to submit BRF for Sales Mgmt Approval/ARC Approval &amp; UW Approval</description>
+    <height>250</height>
+    <label>Submit for Approval</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>AIA_Arc_Approval_Submit</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

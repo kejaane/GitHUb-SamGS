@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Connector_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is the name of the connector who is contact in CF Account(CF BCBS) Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User can view only the contacts from CF BCBS Account</inlineHelpText>
+        <label>Connector Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Account.Name</field>
+                <operation>equals</operation>
+                <value>CareFirst BlueCross BlueShield</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>CFConnector (ConnectorName)</relationshipLabel>
+        <relationshipName>CFConnector2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Connector_Role__c</fullName>
+        <description>This gives the information about the role played by the connector</description>
+        <externalId>false</externalId>
+        <label>Connector Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Executive</fullName>
+                    <default>false</default>
+                    <label>Executive</label>
+                </value>
+                <value>
+                    <fullName>Manager/Director</fullName>
+                    <default>false</default>
+                    <label>Manager/Director</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Intermediary_CompanyType__c</fullName>
+        <description>This gives the information about the type of Intermediary Company</description>
+        <externalId>false</externalId>
+        <label>Intermediary Company Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Audit, tax &amp; consulting firm</fullName>
+                    <default>false</default>
+                    <label>Audit, tax &amp; consulting firm</label>
+                </value>
+                <value>
+                    <fullName>Broker</fullName>
+                    <default>false</default>
+                    <label>Broker</label>
+                </value>
+                <value>
+                    <fullName>Chambers of commerce</fullName>
+                    <default>false</default>
+                    <label>Chambers of commerce</label>
+                </value>
+                <value>
+                    <fullName>Charitable organization</fullName>
+                    <default>false</default>
+                    <label>Charitable organization</label>
+                </value>
+                <value>
+                    <fullName>Community organization</fullName>
+                    <default>false</default>
+                    <label>Community organization</label>
+                </value>
+                <value>
+                    <fullName>Community outreach</fullName>
+                    <default>false</default>
+                    <label>Community outreach</label>
+                </value>
+                <value>
+                    <fullName>Consulting house</fullName>
+                    <default>false</default>
+                    <label>Consulting house</label>
+                </value>
+                <value>
+                    <fullName>Economic development</fullName>
+                    <default>false</default>
+                    <label>Economic development</label>
+                </value>
+                <value>
+                    <fullName>Engineering firm</fullName>
+                    <default>false</default>
+                    <label>Engineering firm</label>
+                </value>
+                <value>
+                    <fullName>FSP/GP</fullName>
+                    <default>false</default>
+                    <label>FSP/GP</label>
+                </value>
+                <value>
+                    <fullName>Government</fullName>
+                    <default>false</default>
+                    <label>Government</label>
+                </value>
+                <value>
+                    <fullName>Investment management firm</fullName>
+                    <default>false</default>
+                    <label>Investment management firm</label>
+                </value>
+                <value>
+                    <fullName>IT professionals</fullName>
+                    <default>false</default>
+                    <label>IT professionals</label>
+                </value>
+                <value>
+                    <fullName>Law firm</fullName>
+                    <default>false</default>
+                    <label>Law firm</label>
+                </value>
+                <value>
+                    <fullName>Lobbyists</fullName>
+                    <default>false</default>
+                    <label>Lobbyists</label>
+                </value>
+                <value>
+                    <fullName>Office technology firm</fullName>
+                    <default>false</default>
+                    <label>Office technology firm</label>
+                </value>
+                <value>
+                    <fullName>Philanthropic</fullName>
+                    <default>false</default>
+                    <label>Philanthropic</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Intermediary_Company__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Intermediary Company</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Intermediay_CompanyContact__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Intermediay Company Contact</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_del__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This allows the users to select the Opportunity for the particular Target Account he is related with and mainly used for reporting purpose</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>Opportunity.Account.Id</field>
+                <operation>equals</operation>
+                <valueField>$Source.Target_Company__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Opportunity.Effective_Date__c</field>
+                <operation>greaterThan</operation>
+                <value>1/1/2014</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>CFConnector</relationshipLabel>
+        <relationshipName>CFConnector_del</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Target_Account_Type__c</fullName>
+        <description>This field will help to know type of the company and it get the value populated from the Account Object</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Target_Company__r.Type )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Target Account Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Target_Company_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This allows the connector to select the Contact for the particular Target Company whom he is associated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User Can View Contacts of selected Target Company only</inlineHelpText>
+        <label>Target Company Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Account.Id</field>
+                <operation>equals</operation>
+                <valueField>$Source.Target_Company__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>CFConnector</relationshipLabel>
+        <relationshipName>CFConnector</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Target_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This allows the Connector to select the Target Company he is associated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User can view only 51+ Accounts</inlineHelpText>
+        <label>Target Company</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordType.DeveloperName</field>
+                <operation>contains</operation>
+                <value>51</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>CFConnector</relationshipLabel>
+        <relationshipName>CFConnector</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Top_Account__c</fullName>
+        <description>This field value is populated from the Account Object  for the particular Record</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Target_Company__r.Top_Account__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Top Account</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>CFConnector</label>
+    <nameField>
+        <displayFormat>CFC-{00000}</displayFormat>
+        <label>Connector Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>CFConnector</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Connector_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Target_Company__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Target_Company_Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Connector_Role__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opportunity_del__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Connector_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Target_Company__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Target_Company_Contact__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Target_Company__c</columns>
+        <columns>Target_Company_Contact__c</columns>
+        <columns>Connector_Role__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

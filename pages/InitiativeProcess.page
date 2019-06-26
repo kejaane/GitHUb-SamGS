@@ -1,0 +1,3 @@
+<apex:page standardController="Initiative__c" extensions="InitiativeProcessCtrl">
+    <c:InitiativeProComponent labels="{!ProcessLst}" shortlabels="{!ProcessLstOrdr}" selected="{!Initiative__c.Step_To_Step_Process_State__c}" />
+</apex:page>

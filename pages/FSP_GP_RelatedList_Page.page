@@ -1,0 +1,243 @@
+<!-- =========================================================================================
+ * Date         : 09/01/2016
+ * Developer    : Ahilesh Radhakrishnan
+ * Purpose      : This is the VF page for the creation page for FSP/GPs(custom records).
+ *                
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer        Tag         Description
+ *===========+===============+=======+========================================================
+   01/18/2018|Rajesh Nagandla| T01   | Added SLDS to page,included SLDS styles to all components.
+   08/30/2018|Naga Kandukoori| T02   | Changed "Primary" label to " Producer of Record" 
+ *=========================================================================================
+ 
+ -->
+
+<apex:page standardcontroller="FSP_GP__c" extensions="FSP_GP_RelatedList_Class" tabstyle="opportunity" lightningStylesheets="true">
+
+<!--T01 - start -->
+    <apex:slds rendered="{! !isClassic}"/>
+  <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <!--T01 - End -->
+<!-- This is used for marking the current primary record in the radio button when the page loads-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+                $j = jQuery.noConflict();
+                $j(document).ready(function(){
+                    //adding class for dependent select 
+                   $j('.dependentselect').each( function() {
+                       $j(this).children(':first').children(':first').addClass('slds-select');
+                       //alert($j(this).children(':first').addClass('slds-select'));
+                       });
+
+                          switch("{!currentPrimary}"){
+                           case "100":
+                            $j("#100").attr('checked', 'true');
+                            break;
+                            
+                           case "1":
+                            $j("#1").attr('checked', 'true');
+                            break;
+
+                           case "2":
+                            $j("#2").attr('checked', 'true');
+                            break;
+                           
+                           case "3":
+                            $j("#3").attr('checked', 'true');
+                            break;
+
+                           case "4":
+                            $j("#4").attr('checked', 'true');
+                            break;
+                           
+                           case "5":
+                            $j("#5").attr('checked', 'true');
+                            break;
+                }
+              });
+</script>
+<!-- Hidden input to capture the selected primary radio button -->
+<script>
+function changeValue(input, textid) {
+    document.getElementById(textid).value = input.value;
+}   
+</script>
+<style>
+   {! if(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 45px !important;}','')}
+   {! if(! isClassic,'select{-webkit-appearance: none;background-color: #fff;color: #16325c;border: 1px solid #d8dde6;border-radius: .25rem;width: 100%;transition: border .1s linear,background-color .1s linear;height: calc(1.875rem + (1px * 2));}','')}
+   
+</style>
+ 
+  <!-- To help in removing the focus from the date fields when page loads -->
+  <script>function setFocusOnLoad() {}</script>
+  
+  <apex:form id="myForm" styleClass="slds-scope">
+    <!--  <apex:actionFunction name="submitBrfForArchApproval" action="{!lisaveFSPGP}" rerender="myForm"/>-->
+    <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}"/><br/><br/><br/>
+        <apex:commandButton value="Ok" action="{!returnToOpp}"/>
+      </div>  
+    </apex:outputPanel>
+
+    <apex:outputText value="{!FSP_GP__c.Opportunity__c}" rendered="false"/>
+        
+        <!-- To display the Pageblock title-->
+        <div class="bPageTitle">
+            <div class="ptBody">
+                <img src="/s.gif" alt="Opportunity" class="pageTitleIcon" title="Opportunity"/>
+                <h1 class="pageType">FSP/GP
+                    <span  class="titleSeparatingColon">:</span>
+                </h1>
+                <h2 class="pageDescription"> {!oppName}</h2>
+            </div>
+        </div>
+        
+        <apex:pageBlock >
+           <!-- Save and Cancel Buttons -->     
+           <apex:pageBlockButtons >
+                <!--<apex:commandbutton rendered="{! !isClassic}" value="Save" onclick="submitBrfForArchApproval();return false;" styleClass="slds-button slds-button_neutral"/>  -->            
+                <apex:commandbutton value="Save" action="{!saveFSPGP}" styleClass="slds-button slds-button_neutral"/>              
+                
+                <!--<apex:commandbutton value="Save" action="{!saveFSPGP}"  styleClass="slds-button slds-button_neutral"/>-->
+                <apex:commandbutton value="Cancel" action="{!cancelFSPGP}" styleClass="slds-button slds-button_neutral"/>
+           </apex:pageBlockButtons>
+           
+           <table  border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="pbTitle">
+                        <h2 class="mainTitle">FSP/GP Edit</h2>
+                    </td>
+                </tr>
+                </table>
+                <br/>
+                
+                <apex:pageMessages ></apex:pageMessages>
+                
+                <!-- Table for input rows-->
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer" style="{! if(isClassic,'width:80%;border-spacing: 10px;','')}">
+                  <tr class="slds-text-title_caps">
+                    <th>Producer of Record</th>  <!-- T02---->
+                    <th>FSP/GP</th>
+                    <th>Partner</th>
+                    <th>Effective Date</th>
+                    <th>End Date</th>
+                  </tr>
+                  
+                  <!--<apex:repeat value="{!wraplistFSPGP}" var="var" rendered="{!if((oppStage == 'Proposal'),true,false)}">-->
+                  <apex:repeat value="{!wraplistFSPGP}" var="var" rendered="{!if((oppStage == 'Proposal' || oppStage == 'RFP' || oppStage == 'Benefit Request' || oppStage == 'Underwriting' || oppStage == 'Quote Delivered' || oppStage == 'ARC Approval'),true,false)}">
+                  <tr>
+                      <td>
+                          <input type="radio" class='slds-radio' name="chosen" id="{!var.index}" VALUE="{!var.index}" onclick="changeValue(this,'{!$Component.RadioButtonValue}');"/>     
+                      </td>
+                      <td>
+                          <div class="slds-form-element__control">
+                              <div class="slds-select_container">
+                                  <apex:inputfield value="{!var.FSPGPInst.FSP_GP__c}" styleclass="slds-select"/>
+                              </div>
+                          </div>
+                      </td>
+                      <!--<td>
+                          <div class="slds-form-element__control">
+                              <div class="slds-select_container">
+                                  <apex:inputfield value="{!var.FSPGPInst.FSP_GP__c}" styleclass="slds-select"/>
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <div class="slds-form-element__control">
+                              <div class="slds-select_container">
+                                  <apex:inputfield value="{!var.FSPGPInst.Partner__c}" styleclass="slds-select"/>
+                              </div>
+                          </div>
+                      </td>-->
+                      <td >
+                          <div class="slds-form-element__control">
+                              <div class="slds-select_container dependentselect">
+                                  <apex:inputfield value="{!var.FSPGPInst.Partner__c}" />
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <apex:outputfield value="{!var.FSPGPInst.Effective_Date__c}"/>
+                      </td>
+                      <td>
+                          <apex:outputfield value="{!var.FSPGPInst.End_Date__c}"/>
+                      <div class="errorMsg" style="{!if(var.errorMsg != null ,'display:block','display:none')}">
+                              <apex:outputText value="{!var.errorMsg}" rendered="{!if(var.errorMsg != null,true,false)}"/>
+                          </div>
+                      </td>
+                  </tr>
+              </apex:repeat>
+              
+                  <!-- iterate the wrapper class list to display the current contact roles as output rows-->
+              <apex:repeat value="{!wrapOutputListFSPGP}" var="var" rendered="{!if(oppStage == 'Sold',true,false)}">
+                  <tr>
+                      <td>
+                          <!--<apex:outputfield value="{!var.FSPGPInst.Primary__c}" rendered="{!var.FSPGPInst.Primary__c}"/>-->
+                          <apex:inputCheckbox value="{!var.isPrimary}" disabled="true" rendered="{!var.isPrimary}"/>
+                      </td>
+                      <td>
+                          <apex:outputfield value="{!var.FSPGPInst.FSP_GP__c}" />
+                      </td>
+                      <td>
+                          <apex:outputfield value="{!var.FSPGPInst.Partner__c}" />
+                      </td>
+                      <td>
+                          <apex:outputfield value="{!var.FSPGPInst.Effective_Date__c}"/>
+                      </td>
+                      <td>
+                          <apex:outputfield value="{!var.FSPGPInst.End_Date__c}"/>
+                      <div class="errorMsg" style="{!if(var.errorMsg != null ,'display:block','display:none')}">
+                              <b><apex:outputText value="{!var.errorMsg}" rendered="{!if(var.errorMsg != null,true,false)}"/></b>
+                          </div>
+                      </td>
+                  </tr>
+              </apex:repeat>
+              
+               <!-- iterate the wrapper class list to display the contact roles as input rows-->
+              <apex:repeat value="{!wrapInputListFSPGP}" var="var" rendered="{!if(oppStage == 'Sold',true,false)}">
+              <tr>
+                  <td></td>
+                  <td>
+                      <div class="slds-form-element__control">
+                          <div class="slds-select_container">
+                              <apex:inputfield value="{!var.FSPGPInst.FSP_GP__c}" styleclass="slds-select"/>
+                          </div>
+                      </div>
+                  </td>
+                  <td>
+                      <div class="slds-form-element__control">
+                          <div class="slds-select_container dependentselect">
+                              <apex:inputfield value="{!var.FSPGPInst.Partner__c}" />
+                          </div>
+                      </div>
+                 </td>
+                  <td>
+                      <apex:inputfield value="{!var.FSPGPInst.Effective_Date__c}" rendered="{!var.isEnable}"/>
+                      <apex:outputfield value="{!var.FSPGPInst.Effective_Date__c}" rendered="{!!var.isEnable}" />
+                  </td>
+                  <td>
+                      <apex:inputfield value="{!var.FSPGPInst.End_Date__c}" rendered="{!var.isEnable}"/>
+                      <apex:outputfield value="{!var.FSPGPInst.End_Date__c}" rendered="{!!var.isEnable}"/>                  
+                      <div class="errorMsg" style="{!if(var.errorMsg != null ,'display:block','display:none')}">
+                          <apex:outputText value="{!var.errorMsg}" rendered="{!if(var.errorMsg != null,true,false)}"/>
+                      </div>
+                  </td>
+              </tr>
+              </apex:repeat>
+                  
+            </table>
+            
+            <!-- Hidden input to capture the selected primary radio button -->
+            <apex:inputHidden value="{!selectedCR}" id="RadioButtonValue" />
+            
+        </apex:pageBlock>
+    </apex:form>
+   
+</apex:page>
+<!-- End of Page -->

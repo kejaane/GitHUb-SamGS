@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account_Name1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status_Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Approval Status Comments</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Approved_by_Legal__c</fullName>
+        <externalId>false</externalId>
+        <label>Approved by Legal?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approver_Notified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This will indicate whether email has been sent to Mast when ID card has been submitted for approval</description>
+        <externalId>false</externalId>
+        <label>Approver Notified</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Are_there_any_special_requests__c</fullName>
+        <externalId>false</externalId>
+        <label>Are there any special requests?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BRF_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BRF Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_vendors__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of vendors</label>
+        <summaryForeignKey>AIA_Vendor__c.ID_Card__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_submission_form__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Date of submission form</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Effective_Date1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Benefit_Effective_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Effective_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FlexLink__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(text(Implementation__r.Benefit_Request_Form__r.FlexLink_Picklist__c) == 'Yes', True, False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FlexLink</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ID_Card_Vendor__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>ID Card Vendor</label>
+        <length>230</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>ID Cards</relationshipLabel>
+        <relationshipName>ID_Cards</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_CareFirst_Producing_ID_Card__c</fullName>
+        <externalId>false</externalId>
+        <label>Is CareFirst Producing ID Card</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_there_a_performance_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Is there a performance Agreement?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_there_an_unique_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Is there an unique number?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MAST_Tech_Approver_Id__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>To hold Approver User Id</description>
+        <externalId>false</externalId>
+        <label>MAST Tech Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ID_Cards</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mast_Tech_Approver__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Mast Tech - Approver</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mast_Tech_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mast Tech User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ID_Cards1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Member_Level_Products_Comments1__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Member Level Products Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Member_Level__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>All ID Cards with PCP's are Member Level.  If Non-Parallel with non-PCP benefits, ID Cards cannot be done at Member Level.  If Non-Parallel with PCP benefits, the non-PCP products will be at Contract level.</inlineHelpText>
+        <label>Member Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Member_level_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Member level Products</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Member_level_products_comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Member level products comments</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Miscellaneous_ID_Card_Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Miscellaneous / ID Card Comments</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Special_Request__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Special Request</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Special_Request_to_show_PCP_as_Not_Req__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Special Request to show PCP as Not Required?</inlineHelpText>
+        <label>Special Request to show PCP as Not Req</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Special_Request_to_show_PCP_as_Not_Requi__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Special Request to show PCP as Not Required?</inlineHelpText>
+        <label>Special Request to show PCP as Not Req</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Special_Requests__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Special Requests?</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Special_Stuffer_Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Stuffer Request?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>In Review</fullName>
+                    <default>false</default>
+                    <label>In Review</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Will_ID_Card_Require_a_Logo__c</fullName>
+        <externalId>false</externalId>
+        <label>Will ID Card Require a Logo?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Will_a_Non_CareFirst_Vendor_Logo_be_Need__c</fullName>
+        <externalId>false</externalId>
+        <label>Will a Non-CareFirst Vendor Logo be Need</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>products_selected_count__c</fullName>
+        <externalId>false</externalId>
+        <label>products selected count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sent_to_approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>sent to approval?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>ID Card</label>
+    <nameField>
+        <displayFormat>ID-{00000}</displayFormat>
+        <label>ID Card Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>ID Cards</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <recordTypes>
+        <fullName>ID_Card</fullName>
+        <active>true</active>
+        <label>ID Card</label>
+        <picklistValues>
+            <picklist>Approved_by_Legal__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Are_there_any_special_requests__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Is_CareFirst_Producing_ID_Card__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Is_there_a_performance_Agreement__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Is_there_an_unique_number__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Level__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_level_Products__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Special_Request_to_show_PCP_as_Not_Req__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Special_Request_to_show_PCP_as_Not_Requi__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Special_Stuffer_Request__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Will_ID_Card_Require_a_Logo__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Will_a_Non_CareFirst_Vendor_Logo_be_Need__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>EID01</fullName>
+        <active>true</active>
+        <description>Approved by Legal to be filled out only when "Will a Non-CareFirst Vendor Logo be Needed?" is Yes</description>
+        <errorConditionFormula>AND((ISPICKVAL(Will_a_Non_CareFirst_Vendor_Logo_be_Need__c, "Yes")),ISBLANK(Text( Approved_by_Legal__c)))</errorConditionFormula>
+        <errorDisplayField>Approved_by_Legal__c</errorDisplayField>
+        <errorMessage>EID01: Please provide a value since this ID Card requires a Non-CareFirst vendor logo</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID02</fullName>
+        <active>false</active>
+        <description>At least one record needs to be added to Vendor related list before it can be sent for Approval</description>
+        <errorConditionFormula>AND(ISPICKVAL(Will_a_Non_CareFirst_Vendor_Logo_be_Need__c, "Yes"), ISCHANGED(Status__c), Count_of_vendors__c &lt;1)</errorConditionFormula>
+        <errorMessage>At least one record needs to be added to Vendor related list before it can be sent for Approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID03</fullName>
+        <active>true</active>
+        <description>Phone Number field to be populated when "Is there an unique number ?" is Yes</description>
+        <errorConditionFormula>AND(ISPICKVAL( Is_there_an_unique_number__c , "Yes"),ISBLANK(Phone_Number__c))</errorConditionFormula>
+        <errorDisplayField>Phone_Number__c</errorDisplayField>
+        <errorMessage>EID03: Please provide a value since this there is a unique number</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID04</fullName>
+        <active>true</active>
+        <description>Fill out only when "Are there any special requests ?" is Yes</description>
+        <errorConditionFormula>AND( ISPICKVAL( Are_there_any_special_requests__c ,"Yes"), ISBLANK( Special_Requests__c ) )</errorConditionFormula>
+        <errorDisplayField>Special_Requests__c</errorDisplayField>
+        <errorMessage>EID04: Please provide a value since there are special requests for this ID Card</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID05</fullName>
+        <active>false</active>
+        <description>Fill out only when "Is CareFirst Producing ID Card" field is selected as No</description>
+        <errorConditionFormula>OR(AND(ISPICKVAL(Is_CareFirst_Producing_ID_Card__c , "Yes"), NOT(ISBLANK( ID_Card_Vendor__c ))),AND(ISPICKVAL(Is_CareFirst_Producing_ID_Card__c , "No"), (ISBLANK( ID_Card_Vendor__c ))))</errorConditionFormula>
+        <errorDisplayField>ID_Card_Vendor__c</errorDisplayField>
+        <errorMessage>Fill out when "Is CareFirst Producing ID Card" field is selected as No</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID06</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(sent_to_approval__c = TRUE, OR(Count_of_vendors__c = 0, ISBLANK(Count_of_vendors__c ) ), ISPICKVAL( Is_CareFirst_Producing_ID_Card__c ,"No"))</errorConditionFormula>
+        <errorMessage>Please add vendors in the related list</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID07</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(sent_to_approval__c = TRUE,OR( ISBLANK(products_selected_count__c),products_selected_count__c=0 ))</errorConditionFormula>
+        <errorDisplayField>Member_level_Products__c</errorDisplayField>
+        <errorMessage>Please select atleast one product</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID08</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL( PRIORVALUE( Status__c ) , "In Review") , ( ISPICKVAL( Status__c , "In Progress") ) )</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>In Progress is not allowed when status is in Review</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID09</fullName>
+        <active>false</active>
+        <description>Fill out only when "Are there any special requests ?" is Yes</description>
+        <errorConditionFormula>AND( ISPICKVAL( Are_there_any_special_requests__c ,"Yes"),( ISBLANK( Special_Requests__c ) ) )</errorConditionFormula>
+        <errorDisplayField>Special_Requests__c</errorDisplayField>
+        <errorMessage>EID09: Special Requests should be filled when "Are there any special requests ?" is Yes</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID10</fullName>
+        <active>true</active>
+        <description>Approved by Legal to be filled out only when "Will a Non-CareFirst Vendor Logo be Needed?" is Yes</description>
+        <errorConditionFormula>AND( ISPICKVAL(Will_a_Non_CareFirst_Vendor_Logo_be_Need__c, "No"),!ISBLANK(Text( Approved_by_Legal__c)))</errorConditionFormula>
+        <errorDisplayField>Approved_by_Legal__c</errorDisplayField>
+        <errorMessage>EID10: To be filled out  when "Will a Non-CareFirst Vendor Logo be Needed?" is Yes</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID11</fullName>
+        <active>true</active>
+        <description>approver cannot select other than approved or rejected in status field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; NOT((ISPICKVAL( Status__c  , 'Approved') || ISPICKVAL( Status__c , 'Rejected'))) &amp;&amp; OwnerId  != $User.Id</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>EID11: Approver cannot select other than approved or rejected in status field</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID12</fullName>
+        <active>true</active>
+        <description>User cannot set status to Approved/Rejected</description>
+        <errorConditionFormula>/*AND(OwnerId = $User.Id,  (ISPICKVAL( Status__c , "Approved")|| ISPICKVAL( Status__c , "Rejected")|| ISPICKVAL( Status__c , "In Review")))*/
+
+AND(OwnerId = $User.Id,  (ISPICKVAL( Status__c , "Approved")|| ISPICKVAL( Status__c , "Rejected")|| ISPICKVAL( Status__c , "In Review")), ISCHANGED(Status__c) )</errorConditionFormula>
+        <errorMessage>EID: User can only set status to "In Progress"</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID13</fullName>
+        <active>true</active>
+        <description>Approver cannot set the status to In Progress</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND(OwnerId != $User.Id, NOT(ISPICKVAL( Status__c , "Approved")||ISPICKVAL( Status__c , "Rejected") ))</errorConditionFormula>
+        <errorMessage>EID13: Approver can set status only to either Approved or Rejected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID14</fullName>
+        <active>true</active>
+        <description>When status is Approved or Rejected or In-Review, it cannot be submitted again</description>
+        <errorConditionFormula>/*AND(OR(TEXT(Status__c)='In Review',TEXT(Status__c)='Approved',TEXT(Status__c)='Rejected'), sent_to_approval__c =true )*/
+AND(OR(ISPICKVAL(PRIORVALUE(Status__c),'Approved'),ISPICKVAL(PRIORVALUE(Status__c),'Rejected')), sent_to_approval__c =true)</errorConditionFormula>
+        <errorMessage>EID14: When status is Approved or Rejected or In-Review, it cannot be submitted again</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EID15</fullName>
+        <active>true</active>
+        <description>When Status is Rejected, Comments needs to be added</description>
+        <errorConditionFormula>AND(Text(Status__c) ='Rejected', ISBLANK(Approval_Status_Comments__c))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Comments__c</errorDisplayField>
+        <errorMessage>EID15:When Status is Rejected, Comments needs to be added</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Member_Level_Product</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Member Level Product</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if('{!ID_Card__c.Member_level_Products__c}' == 'Yes'){
+  var brfId ='{!ID_Card__c.BRF_Id__c}';
+  window.open('/apex/BRFMemberLevelProducts?brfId='+brfId );
+}else{
+  alert('Member level Products should be Yes');
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_for_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Submit for Approval</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/flow/update_IDcard_field?ViD1={!ID_Card__c.Id}&amp;retURL={!ID_Card__c.Id}</url>
+    </webLinks>
+</CustomObject>

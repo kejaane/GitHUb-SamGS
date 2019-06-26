@@ -1,0 +1,133 @@
+<!-- 
+*============================================================================================
+* Date         : 04/30/2018
+* Developer    : satya Tirumalasetti
+* Purpose      : This page is called when a Reassign workplan task button is clicked on Workplan  
+*                Task List view. This is for reassigning task to a different user and done as a
+*                part of US366
+*============================================================================================
+*                                 Update History
+*                                 ---------------
+* Date          Developer                Tag       Description
+*============================================================================================
+* 04/30/2018  | satya Tirumalasetti   |      |   Intial Development. 
+*============================================================================================
+-->
+
+
+<apex:page standardController="Workplan_Task__c" recordSetVar="Workplan_Task__c" extensions="AIA_TaskReassign_controller" id="mainPG"  
+           sidebar="false" lightningStylesheets="true" docType="html-5.0" showHeader="false">
+    <apex:slds />
+    <apex:includeScript value="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <c:AIA_Account_Team_Roles_Component /> <!-- This component has all the CSS styling for the VF page -->
+
+   
+    <apex:form id="fm" enctype="multipart/form-data" styleClass="pageBlockStyle" >
+        <!-- Display panel if user selects any workplan tasks on the listview page -->
+        <apex:outputPanel id="pnl1" rendered="{!IsIdsSlected}" >    
+         <apex:pageBlock id="pgb" mode="maindetail" >
+             <div class="slds-form-element" style="align:center">
+                <apex:outputLabel value="Re-Assign Team Member" style="display: block;text-align: center;color:#484848; font-size:20px; font-weight:100; padding:bottom:2200px; padding-left:50px;"/>
+              </div>
+                
+                <!-- Display Error message if user doesn't select New member on any of the Record -->
+                <apex:outputPanel id="pnlerror" rendered="{!IsError}" >
+                 <apex:pageMessage summary="Error: Please select the New Team Member for all the records" severity="Error" strength="3" />
+                </apex:outputpanel>
+                
+                <!-- If user selects workplan tasks from listview,display the records -->
+                <apex:repeat value="{!lstTaskWrapper}" var="Task" id="table" >
+                    <hr style="color:#484848; margin-bottom:10px; margin-top:14px;"/>
+                    <apex:pageBlockSection columns="2">
+                        <apex:outputLabel style="Padding-bottom:0px;" value="Current Team Member"></apex:outputLabel>
+                        <apex:outputLabel value=""></apex:outputLabel>
+                        <apex:outputText style="font:15px; Padding-top:0px;">{!Task.CurrentOwnerName}</apex:outputText>
+                         <apex:outputLabel value=""></apex:outputLabel> 
+                         <br/> <apex:outputLabel value="" />
+                        <apex:outputLabel style="Padding-bottom:0px;" value="Task"></apex:outputLabel>
+                        <apex:outputLabel style="Padding-bottom:0px;" value="Description"></apex:outputLabel>
+                        <apex:outputText style="font:15px; Padding-top:0px;">{!Task.TaskName}</apex:outputText>                    
+                        <apex:outputText style="font:15px; Padding-top:0px;">{!Task.TaskDesc}</apex:outputText>  
+                           
+                        <apex:outputLabel style="Padding-bottom:0px;" value="New Team Member"></apex:outputLabel>
+                        <apex:outputLabel style="Padding-bottom:0px;" value="Team Role"></apex:outputLabel>
+                            <apex:selectList size="1" value="{!Task.SelectedTeamMember}" onchange="removePart2ofSelectedValue(this)" style="width:Auto;font-family: monospace,SalesforceSans-Regular,Arial,sans-serif !important;" styleClass="spaceBetweenlabels">
+                                <apex:selectOptions value="{!Task.TeamRoles}"></apex:selectOptions>                        
+                            </apex:selectList>  
+                        <apex:outputText style="font:15px; Padding-top:0px;">{!Task.TaskRole }</apex:outputText> 
+                    </apex:pageBlockSection>
+                </apex:repeat>
+                <apex:pageBlockButtons location="bottom" style="padding-top: 15px;margin-bottom:1rem;
+                        padding-bottom: 16px;background:rgb(242, 242, 242, 1);" id="footerID"> 
+                    <apex:commandButton value="Cancel" action="{!CancelWorkPlanTask}"  />
+                    <apex:commandButton value="Re-assign" action="{!SaveWorkPlanTask}"  style="background:rgba(0, 112, 210, 1.0); color:white;" />
+                    
+                </apex:pageBlockButtons>
+       </apex:pageBlock>   
+       </apex:outputpanel>
+       
+       <!-- Display Error message if user doesn't select any workplan tasks on the listview page -->
+        <apex:outputPanel id="pnl2" rendered="{!!IsIdsSlected}"> 
+            <div align="center">
+                <apex:outputText style="font-weight: normal;" value="No Ids Selected"/> <br/><br/> 
+                <apex:commandButton value="Ok" action="{!CancelWorkPlanTask}" styleClass="padding-left:15px;"/>
+              </div> 
+        </apex:outputpanel>
+       
+    </apex:form>
+    <!-- Script to have space between the Name of user and number of tasks in Dropdown list of New Team Member Field-->
+     <script>
+    var $ = jQuery.noConflict();
+    $(document).ready(function() {
+        sampleMethod();
+        
+    });
+    function sampleMethod() {
+        var spacesToAdd = 5;
+        var biggestLength = 0;
+debugger
+        $(".spaceBetweenlabels option").each(function(){
+            var parts = $(this).text().split('#');
+            var len = parts[0].length;
+            //var len = $(this).text().length;
+        if(len > biggestLength){
+        biggestLength = len;
+        }
+        });
+        console.log('biggestLength**'+biggestLength);
+        var padLength = biggestLength + spacesToAdd;
+        var count = 0;
+        $(".spaceBetweenlabels option").each(function(){
+        var parts = $(this).text().split('#');
+            //console.log('parts**'+parts);
+        var strLength = parts[0].length;
+            //console.log('strLength**'+strLength);
+            //console.log('padLength**'+padLength);
+        
+        if(count == 0)
+        {
+            $(this).text(parts[0]).text;
+        }
+        else
+        {
+            for(var x=0; x<(padLength-strLength); x++){
+            parts[0] = parts[0]+' '; 
+            }
+            var part2 = '';
+            if (typeof parts[1] !== "undefined") {
+                part2 = parts[1];
+            }
+            $(this).text(parts[0].replace(/ /g, '\u00a0')+part2).text;
+        }
+        count ++;
+        });
+    }
+    function removePart2ofSelectedValue(obj)
+    {
+        debugger;
+        var parts = obj.value.split('\u00a0');
+    }
+    </script>
+  
+</apex:page>

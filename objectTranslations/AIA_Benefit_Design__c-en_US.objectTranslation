@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AE Drawloop --></label>
+        <name>AE_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- Final NAEGS Adjustment Summary Revision Number
+Value entered in the related Account record. --></help>
+        <label><!-- Final NAEGS Adjustment Summary Rev Num --></label>
+        <name>AIAFinal_NAEGS_Adjustment_Sumary_Rev_Num__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - Benefact Coder --></label>
+        <name>AIA_Approval_Status_Benefact_Coder__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - Benefit Coder --></label>
+        <name>AIA_Approval_Status_Benefit_Coder__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - Benefit Tester --></label>
+        <name>AIA_Approval_Status_Benefit_Tester__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - Contract Tech --></label>
+        <name>AIA_Approval_Status_Contract_Tech__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - NASCO Benefit Coder --></label>
+        <name>AIA_Approval_Status_NASCO_Benefit_Coder__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status -  Pharmacy Management --></label>
+        <name>AIA_Approval_Status_Pharmacy_Management__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AIA Approval Status --></label>
+        <name>AIA_Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approver - Benefact Coder --></label>
+        <name>AIA_Approver_Benefact_Coder__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - Benefact Coder) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Benefit Coder --></label>
+        <name>AIA_Approver_Benefit_Coder__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - Benefit Coder) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Benefit Tester --></label>
+        <name>AIA_Approver_Benefit_Tester__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - Benefit Tester) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The Approver adds Reject Comments for the BD here --></help>
+        <label><!-- Approver Comments --></label>
+        <name>AIA_Approver_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approver - MAST Tech --></label>
+        <name>AIA_Approver_MAST_Tech__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - MAST Tech) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver Notes --></label>
+        <name>AIA_Approver_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approver - Pharmacy Management --></label>
+        <name>AIA_Approver_Pharmacy_Management__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - Pharmacy Management) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approvers Notified --></label>
+        <name>AIA_Approvers_Notified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Coder Approval Start Date --></label>
+        <name>AIA_Benefit_Coder_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Coder Response Date --></label>
+        <name>AIA_Benefit_Coder_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Coder Response (Days) --></label>
+        <name>AIA_Benefit_Coder_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Tester Approval Start Date --></label>
+        <name>AIA_Benefit_Tester_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Tester Response Date --></label>
+        <name>AIA_Benefit_Tester_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Tester Response (Days) --></label>
+        <name>AIA_Benefit_Tester_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- AM Drawloop --></label>
+        <name>AM_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Benefit Design --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Admin Legal Entity Drawloop --></label>
+        <name>Admin_Legal_Entity_Drawloop__c</name>
+        <picklistValues>
+            <masterLabel>CFBC</masterLabel>
+            <translation><!-- CFBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFBC and CFMI</masterLabel>
+            <translation><!-- CFBC and CFMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFBC and GHMSI</masterLabel>
+            <translation><!-- CFBC and GHMSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFMI</masterLabel>
+            <translation><!-- CFMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GHMSI</masterLabel>
+            <translation><!-- GHMSI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ancillary Tech Approval Start Date --></label>
+        <name>Ancillary_Tech_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ancillary Tech Response Date --></label>
+        <name>Ancillary_Tech_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ancillary Tech Response (Days) --></label>
+        <name>Ancillary_Tech_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Initial Submission Date --></label>
+        <name>Approval_Initial_Submission_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - Ancillary Tech --></label>
+        <name>Approval_Status_Analyst__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - MAST Tech --></label>
+        <name>Approval_Status_MAST_Tech__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - Pharmacy Operations --></label>
+        <name>Approval_Status_Pharmacy_Operations__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status - Vision Analyst --></label>
+        <name>Approval_Status_Vision_Analyst__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initiating Benefit Design Restart</masterLabel>
+            <translation><!-- Initiating Benefit Design Restart --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting for Benefit Design Approval Team Approval</masterLabel>
+            <translation><!-- Waiting for Benefit Design Approval Team Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting for Benefit Design Meeting Approval</masterLabel>
+            <translation><!-- Waiting for Benefit Design Meeting Approval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approver - Ancillary Tech --></label>
+        <name>Approver_Ancillary_Analyst__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - Ancillary Tech) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - NASCO Benefit Coder --></label>
+        <name>Approver_Benefit_Coder__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - NASCO Benefit Coder) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Contract Tech --></label>
+        <name>Approver_Contract_Tech__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - Contract Tech) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver -Pharmacy Operations --></label>
+        <name>Approver_Pharmacy_Operations__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver -Pharmacy Operations) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - QA Auditor --></label>
+        <name>Approver_QA_Auditor__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver - QA Auditor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver-Vision Analyst --></label>
+        <name>Approver_Vision_Analyst__c</name>
+        <relationshipLabel><!-- Benefit Design (Approver-Vision Analyst) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- BD Approval Date --></label>
+        <name>BD_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Name --></label>
+        <name>BRF_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Request Type --></label>
+        <name>BRF_Request_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefact Coder Approval Start Date --></label>
+        <name>Benefact_Coder_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefact Coder Response Date --></label>
+        <name>Benefact_Coder_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefact Coder Response (Days) --></label>
+        <name>Benefact_Coder_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Request Form --></label>
+        <name>Benefit_Request_Form__c</name>
+        <relationshipLabel><!-- Benefit Design --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Selection --></label>
+        <name>Benefit_Selection__c</name>
+        <picklistValues>
+            <masterLabel>Emergency Contraception Exclusion</masterLabel>
+            <translation><!-- Emergency Contraception Exclusion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Exclusion</masterLabel>
+            <translation><!-- Full Exclusion --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BlueFund Checkbox --></label>
+        <name>BlueFund_Checkbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- Both Checker --></label>
+        <name>Both_Checker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compatible Checker --></label>
+        <name>Compatible_Checker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Tech Approval Start Date --></label>
+        <name>Contract_Tech_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Tech Response Date --></label>
+        <name>Contract_Tech_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Tech Response (Days) --></label>
+        <name>Contract_Tech_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of BD Drug Products --></label>
+        <name>Count_of_BD_Drug_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Benefit Design Product --></label>
+        <name>Count_of_Benefit_Design_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days to Approve BD --></label>
+        <name>Days_to_Approve_BDF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days to Approve BD --></label>
+        <name>Days_to_Approve_BD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop 5 digit account number --></label>
+        <name>Drawloop_5_digit_account_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop ADR Name --></label>
+        <name>Drawloop_ADR_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop ARC Approval Date --></label>
+        <name>Drawloop_ARC_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop Benefit Effective Date --></label>
+        <name>Drawloop_Benefit_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop Control Panel --></label>
+        <name>Drawloop_Control_Panel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop Effective date of change --></label>
+        <name>Drawloop_Effective_date_of_change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop Original effective date --></label>
+        <name>Drawloop_Original_effective_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop Renewal date --></label>
+        <name>Drawloop_Renewal_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop account Name --></label>
+        <name>Drawloop_account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drawloop sub group account --></label>
+        <name>Drawloop_sub_group_account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facets Group ID --></label>
+        <name>Facets_Group_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- FirstHelp Checker --></label>
+        <name>FirstHelp_Checker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Arrangement --></label>
+        <name>Funding_Arrangement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headquarters Address --></label>
+        <name>Headquarters_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identity Protection --></label>
+        <name>Identity_Protection__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation__c</name>
+        <relationshipLabel><!-- Benefit Design --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>Last_Modified_Date_only__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAST Tech Approval Start Date --></label>
+        <name>MAST_Tech_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAST Tech Response Date --></label>
+        <name>MAST_Tech_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAST Tech Response (Days) --></label>
+        <name>MAST_Tech_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mail Account Dedicated Rep --></label>
+        <name>Mail_Account_Dedicated_Rep__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Account Dedicated Rep) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Account Manager --></label>
+        <name>Mail_Account_Manager__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Account Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Ancillary Analyst --></label>
+        <name>Mail_Ancillary_Analyst__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Ancillary Analyst) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Benefit Admin Account Setup --></label>
+        <name>Mail_Benefit_Admin_Account_Setup__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Benefit Admin Account Setup) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Benefit Admin Workflow Mgmt --></label>
+        <name>Mail_Benefit_Admin_Workflow_Mgmt__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Benefit Admin Workflow Mgmt) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Benefit NASCO Tester --></label>
+        <name>Mail_Benefit_NASCO_Tester__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Benefit NASCO Tester) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Implementation PM --></label>
+        <name>Mail_Implementation_PM__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Implementation PM) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Production ID Card --></label>
+        <name>Mail_Production_ID_Card__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Production ID Card) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Settlements Analyst --></label>
+        <name>Mail_Settlements_Analyst__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Settlements Analyst) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mail Underwriter --></label>
+        <name>Mail_Underwriter__c</name>
+        <relationshipLabel><!-- Benefit Design (Mail Underwriter) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- NASCO Acct. # --></label>
+        <name>NASCO_Acct__c</name>
+    </fields>
+    <fields>
+        <label><!-- NASCO Benefit Coder Approval Start Date --></label>
+        <name>NASCO_Benefit_Coder_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- NASCO Benefit Coder Response Date --></label>
+        <name>NASCO_Benefit_Coder_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- NASCO Benefit Coder Response (Days) --></label>
+        <name>NASCO_Benefit_Coder_Response_Days__c</name>
+    </fields>
+    <fields>
+        <help><!-- Helpt text: The Group organized and operates as a nonprofit entity. --></help>
+        <label><!-- Nonprofit --></label>
+        <name>Nonprofit__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Contract End Date --></label>
+        <name>Opportunity_Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Effective Date --></label>
+        <name>Opportunity_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Name --></label>
+        <name>Opportunity_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Group opposes providing coverage for some or all of the contraceptive services required to be covered under section 2713 of the PHS Act and the companion provisions of ERISA and the Code on account of religious objections. The Group organized and oper --></help>
+        <label><!-- Oppose Contraceptive Service --></label>
+        <name>Oppose_Contracteptive_Service__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Parent Account --></label>
+        <name>Parent_Account__c</name>
+        <relationshipLabel><!-- Benefit Design (Sub Group Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pharmacy Management Approval Start Date --></label>
+        <name>Pharmacy_Management_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pharmacy Management Response Date --></label>
+        <name>Pharmacy_Management_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pharmacy Management Response (Days) --></label>
+        <name>Pharmacy_Management_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pharmacy Operations Approval Start Date --></label>
+        <name>Pharmacy_Operations_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pharmacy Operations Response Date --></label>
+        <name>Pharmacy_Operations_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pharmacy Operations Response (Days) --></label>
+        <name>Pharmacy_Operations_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- QA Auditor Approval Start Date --></label>
+        <name>QA_Auditor_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- QA Auditor Final Notification --></label>
+        <name>QA_Auditor_Final_Notification__c</name>
+    </fields>
+    <fields>
+        <label><!-- QA Auditor Initial Notification --></label>
+        <name>QA_Auditor_Initial_Notification__c</name>
+    </fields>
+    <fields>
+        <label><!-- QA Auditor --></label>
+        <name>QA_Auditor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related BRF --></label>
+        <name>Related_BRF__c</name>
+        <relationshipLabel><!-- Benefit Design (Related BRF) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The Group official self-certified on company letterhead the group is a church, or a church’s integrated auxiliary(ies), or a convention or association of churches. --></help>
+        <label><!-- Religions Exemption Prerequisites --></label>
+        <name>Religions_Exemption_Prerequisites__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Religious Accommodations Comments --></label>
+        <name>Religious_Accommodations_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Group holds itself out as a religious organization --></help>
+        <label><!-- Religious Organization --></label>
+        <name>Religious_Organization__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Renewal Effective Date Drawloop Checker --></label>
+        <name>Renewal_Effective_Date_Drawloop_Checker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Effective Date Drawloop --></label>
+        <name>Renewal_Effective_Date_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revision No. Drawloop --></label>
+        <name>Revision_No_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revision Number Technical --></label>
+        <name>Revision_Number_Technical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revision Number --></label>
+        <name>Revision_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Group has provided CareFirst self-certification stating it satisfies all religious accommodation criteria --></help>
+        <label><!-- Self Cert for Religious Accommodation --></label>
+        <name>Self_Cert_for_Religious_Accommodation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source BD --></label>
+        <name>Source_BD__c</name>
+        <relationshipLabel><!-- Benefit Design --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub Group Account --></label>
+        <name>Sub_Group_Account__c</name>
+        <relationshipLabel><!-- Benefit Design (Sub Group Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- System --></label>
+        <name>System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vision Analyst Approval Start Date --></label>
+        <name>Vision_Analyst_Approval_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vision Analyst Response Date --></label>
+        <name>Vision_Analyst_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vision Analyst Response (Days) --></label>
+        <name>Vision_Analyst_Response_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- account legal name drawloop --></label>
+        <name>account_legal_name_drawloop__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Benefit Design</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Benefit Design</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <fieldSets>
+        <label><!-- Include on Adjustment Summary --></label>
+        <name>Include_on_Adjustment_Summary</name>
+    </fieldSets>
+    <layouts>
+        <layout>BD Layout - Chatter</layout>
+        <sections>
+            <label><!-- Approvers --></label>
+            <section>Approvers</section>
+        </sections>
+        <sections>
+            <label><!-- Benefit Selection --></label>
+            <section>Benefit Selection</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PPACA Mandate --></label>
+            <section>PPACA Mandate</section>
+        </sections>
+        <sections>
+            <label><!-- Religious Accommodations --></label>
+            <section>Religious Accommodations</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Benefit Design Layout</layout>
+        <sections>
+            <label><!-- Approvers --></label>
+            <section>Approvers</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update Benefit Design --></label>
+        <name>AIA_BenefitDesign_View</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- EBD001:You can edit Religious Exemption Prerequisites or Religious Accommodation section only if it is Non-Grandfathered in BRF. --></errorMessage>
+        <name>EBD001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD002: Exemption is available to Non-grandfathered groups that satisfy exemption --></errorMessage>
+        <name>EBD002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD005:  Exemption is available to Non-grandfathered groups that satisfy exemption --></errorMessage>
+        <name>EBD005</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD006: Accommodation options are available to Non-grandfathered groups that satisfy all Accommodation requirements --></errorMessage>
+        <name>EBD006</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD007: Approval Status - NASCO Benefit Coder should be only N/A if Approver - NASCO Benefact Coder is blank --></errorMessage>
+        <name>EBD007</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD008: Approval Status - Ancillary Tech should be only N/A if Approver - Ancillary Tech is blank --></errorMessage>
+        <name>EBD008</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD009: Approval Status - Contract Tech should be only N/A Approver - Contract Tech is blank --></errorMessage>
+        <name>EBD009</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD010: Approval Status - Benefact Coder should be only N/A if Approver - Benefact Coder is blank --></errorMessage>
+        <name>EBD010</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD011: Approval Status - MAST Tech should be only N/A Approver - MAST Tech is blank --></errorMessage>
+        <name>EBD011</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD012: Approval Status - Ancillary Analyst Tech  should not be  N/A if Approver - Ancillary Analyst is not blank --></errorMessage>
+        <name>EBD012</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD013 Approval Status - Contract Tech  should not be  N/A if Approver - Contract Tech is not blank --></errorMessage>
+        <name>EBD013</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD014: Approval Status - NASCO Benefit Coder  should not be  N/A if Approver - NASCO Benefit Coder is not blank --></errorMessage>
+        <name>EBD014</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD015: Approval Status - Benefact Coder  should not be  N/A if Approver - Benefact Coder is not blank --></errorMessage>
+        <name>EBD015</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD016: Approval Status - MAST Tech  should not be  N/A if Approver - MAST Tech is not blank --></errorMessage>
+        <name>EBD016</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD017: User can change status only from &apos;Rejected&apos; to &apos;In Progress&apos; --></errorMessage>
+        <name>EBD017</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD018: Only QA Auditor can change status  to Approved or Rejected --></errorMessage>
+        <name>EBD018</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EDB019: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD019</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EDB020: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD020</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBd021: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD021</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD022: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD022</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD023: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD023</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD024: Approval Status - Benefit Tester should be only N/A if Approver - Benefit Tester is blank --></errorMessage>
+        <name>EBD024</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD025: Approval Status - Benefit Tester should not be N/A if Approver - Benefit Tester is not blank --></errorMessage>
+        <name>EBD025</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD026: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD026</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD027: Approval Status - Pharmacy Operations should be only N/A if Approver - Pharmacy Operations is blank --></errorMessage>
+        <name>EBD027</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD028: Approval Status - Pharmacy Operations  should not be  N/A if Approver -Pharmacy Operations is not blank --></errorMessage>
+        <name>EBD028</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD029: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD029</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD030: Approval Status - Vision Analyst should be only N/A if Approver-Vision Analyst is blank --></errorMessage>
+        <name>EBD030</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD031: Approval Status - Vision Analyst  should not be  N/A if Approver-Vision Analyst is not blank --></errorMessage>
+        <name>EBD031</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD032: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD032</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD033: Approval Status - Benefit Coder should be only N/A if Approver-Benefit Coder is blank --></errorMessage>
+        <name>EBD033</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD035: Approval Status - Benefit Coder  should not be  N/A if Approver-Benefit Coder is not blank --></errorMessage>
+        <name>EBD035</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBD037: You cannot change this field since you are not the authorized person --></errorMessage>
+        <name>EBD037</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- ADJ_Summary_Rajesh_POC --></label>
+        <name>ADJ_Summary_Rajesh_POC</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- AIA_Send_for_Approval --></label>
+        <name>AIA_Send_for_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Adjustment_Summary_BD --></label>
+        <name>Adjustment_Summary_BD</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- BD_Clone_With_Products --></label>
+        <name>BD_Clone_With_Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Export_Adjustment_Summary --></label>
+        <name>Export_Adjustment_Summary</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Benefit_Design --></label>
+        <name>New_Benefit_Design</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Zip --></label>
+        <name>Zip</name>
+    </webLinks>
+</CustomObjectTranslation>

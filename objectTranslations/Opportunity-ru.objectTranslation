@@ -1,0 +1,4247 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ADR --></label>
+        <name>ADR__c</name>
+    </fields>
+    <fields>
+        <label><!-- AE Id --></label>
+        <name>AE_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- AE Name --></label>
+        <name>AE_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG Id --></label>
+        <name>AG_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG Name --></label>
+        <name>AG_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- AIA From OppLineitem --></label>
+        <name>AIAFromOpplineItem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>AIA_Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- AIA Approval Status --></label>
+        <name>AIA_Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of marked as Dead --></label>
+        <name>AIA_Date_of_marked_as_Dead__c</name>
+    </fields>
+    <fields>
+        <label><!-- AIA_Email_RFP --></label>
+        <name>AIA_Email_RFP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Rep Name --></label>
+        <name>AIA_Lead_Rep_Name__c</name>
+        <relationshipLabel><!-- Opportunities (Lead Rep Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- AM Id --></label>
+        <name>AM_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- AM Name --></label>
+        <name>AM_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mark this Opportunity as Dead? --></label>
+        <name>AMark_this_Opportunity_as_Dead__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AVP --></label>
+        <name>AVP__c</name>
+        <picklistValues>
+            <masterLabel>Barbara Russo</masterLabel>
+            <translation><!-- Barbara Russo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carl Repetti</masterLabel>
+            <translation><!-- Carl Repetti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joe Pedone</masterLabel>
+            <translation><!-- Joe Pedone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mike Casarella</masterLabel>
+            <translation><!-- Mike Casarella --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pam Sloan</masterLabel>
+            <translation><!-- Pam Sloan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shekar Subramaniam</masterLabel>
+            <translation><!-- Shekar Subramaniam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wanda Oneferu-bey</masterLabel>
+            <translation><!-- Wanda Oneferu-bey --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account ID18 --></label>
+        <name>AccountID18__c</name>
+    </fields>
+    <fields>
+        <label><!-- Control Plan --></label>
+        <name>Account_Control_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Account_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account in Jeopardy --></label>
+        <name>Account_in_Jeopardy__c</name>
+        <picklistValues>
+            <masterLabel>Account New To Jeopardy</masterLabel>
+            <translation><!-- Account New To Jeopardy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Remains Jeopardy</masterLabel>
+            <translation><!-- Account Remains Jeopardy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Removed From Jeopardy</masterLabel>
+            <translation><!-- Account Removed From Jeopardy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Actual Increase from Management Report --></help>
+        <label><!-- Actual Increase % --></label>
+        <name>Actual_Increase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Admin Offered --></label>
+        <name>Admin_Offered__c</name>
+        <picklistValues>
+            <masterLabel>CF ASO</masterLabel>
+            <translation><!-- CF ASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFA</masterLabel>
+            <translation><!-- CFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS</masterLabel>
+            <translation><!-- NCAS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Admin Sold --></label>
+        <name>Admin_Sold__c</name>
+        <picklistValues>
+            <masterLabel>CF ASO</masterLabel>
+            <translation><!-- CF ASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFA</masterLabel>
+            <translation><!-- CFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS</masterLabel>
+            <translation><!-- NCAS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Agg Spec Ded Offered 1 --></label>
+        <name>Agg_Spec_Ded_Offered_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agg Spec Ded Offered 2 --></label>
+        <name>Agg_Spec_Ded_Offered_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agg Spec Ded Offered 3 --></label>
+        <name>Agg_Spec_Ded_Offered_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agg Spec Ded Offered 4 --></label>
+        <name>Agg_Spec_Ded_Offered_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agg Spec Ded Sold --></label>
+        <name>Agg_Spec_Ded_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Associate VP --></label>
+        <name>Associate_VP__c</name>
+        <picklistValues>
+            <masterLabel>Carl Repetti</masterLabel>
+            <translation><!-- Carl Repetti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joe Pedone</masterLabel>
+            <translation><!-- Joe Pedone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mike Casarella</masterLabel>
+            <translation><!-- Mike Casarella --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pam Sloan</masterLabel>
+            <translation><!-- Pam Sloan --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BE Prospect ID --></label>
+        <name>BE_Prospect_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Blend Increase from Management Report --></help>
+        <label><!-- Blend Increase % --></label>
+        <name>Blend_Increase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker/Consultant Name --></label>
+        <name>Broker_Consultant_Name__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Type --></label>
+        <name>Business_Type__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- OBSOLETE: This field is superseded by a new fields: SBU, Market Segment, Division and Business Type as a unit. --></help>
+        <label><!-- Business --></label>
+        <name>Business__c</name>
+        <picklistValues>
+            <masterLabel>1-50</masterLabel>
+            <translation><!-- 1-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51-199 Renewal Sales</masterLabel>
+            <translation><!-- 51-199 Renewal Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFA Renewal Sales</masterLabel>
+            <translation><!-- CFA Renewal Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEP</masterLabel>
+            <translation><!-- FEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ind Govt Programs</masterLabel>
+            <translation><!-- Ind Govt Programs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor New Business Sales</masterLabel>
+            <translation><!-- Labor New Business Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor Renewal Sales</masterLabel>
+            <translation><!-- Labor Renewal Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Renewal Sales</masterLabel>
+            <translation><!-- Local Renewal Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS Renewal Sales</masterLabel>
+            <translation><!-- NCAS Renewal Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Renewal Sales</masterLabel>
+            <translation><!-- National Renewal Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business Sales</masterLabel>
+            <translation><!-- New Business Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional Renewal Sales</masterLabel>
+            <translation><!-- Regional Renewal Sales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Provide % figures as provided by UW --></help>
+        <label><!-- CF% Over Currrent --></label>
+        <name>CF_Over_Currrent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provide % figures as provided by UW --></help>
+        <label><!-- CF% Over Renewal --></label>
+        <name>CF_Over_Renewal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Fully Insured Groups = Carefirst Annual Premiums 
+ASO/ Self Insured Groups = Fixed fees(Admin, SL and other fees) + expected claims --></help>
+        <label><!-- CareFirst&apos;s Annual Premium --></label>
+        <name>Carefirsts_Annual_Premium__c</name>
+    </fields>
+    <fields>
+        <help><!-- Request Changes to the Renewal Delivery Date to Sales from the Underwriter here. --></help>
+        <label><!-- Change Renewal Delivery Date to Sales --></label>
+        <name>Change_Renewal_Delivery_Date_to_Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- CloseProspect --></label>
+        <name>CloseProspect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed Ratio --></label>
+        <name>Closed_Ratio__c</name>
+    </fields>
+    <fields>
+        <help><!-- This look-up will be based off of the Lead Rep Name on the user record to be displayed on the Opportunity object. --></help>
+        <label><!-- Compensation Owner --></label>
+        <name>Compensation_Owner__c</name>
+        <relationshipLabel><!-- Opportunities (Compensation Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Competitor Name --></label>
+        <name>Competitor__c</name>
+        <picklistValues>
+            <masterLabel>1ST EQUICOR</masterLabel>
+            <translation><!-- 1ST EQUICOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1ST HEALTH</masterLabel>
+            <translation><!-- 1ST HEALTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADMINISTRATOR</masterLabel>
+            <translation><!-- ADMINISTRATOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADVANCE PCS</masterLabel>
+            <translation><!-- ADVANCE PCS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AETNA</masterLabel>
+            <translation><!-- AETNA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AETNA GLOBAL</masterLabel>
+            <translation><!-- AETNA GLOBAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AIG LIFE</masterLabel>
+            <translation><!-- AIG LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALL AMERICA</masterLabel>
+            <translation><!-- ALL AMERICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALLIANZ</masterLabel>
+            <translation><!-- ALLIANZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALPHA DATA</masterLabel>
+            <translation><!-- ALPHA DATA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMER BANKERS</masterLabel>
+            <translation><!-- AMER BANKERS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMER CAPITAL</masterLabel>
+            <translation><!-- AMER CAPITAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMER LIFE</masterLabel>
+            <translation><!-- AMER LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMERIHEALTH</masterLabel>
+            <translation><!-- AMERIHEALTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMERITAS</masterLabel>
+            <translation><!-- AMERITAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANCHOR BENEFITS</masterLabel>
+            <translation><!-- ANCHOR BENEFITS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANTHEM</masterLabel>
+            <translation><!-- ANTHEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANTHM BEN ADM</masterLabel>
+            <translation><!-- ANTHM BEN ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BALTO LIFE</masterLabel>
+            <translation><!-- BALTO LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANKERS LIFE</masterLabel>
+            <translation><!-- BANKERS LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BC INDEPEN</masterLabel>
+            <translation><!-- BC INDEPEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BC NC</masterLabel>
+            <translation><!-- BC NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BC SC</masterLabel>
+            <translation><!-- BC SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCBS TRIGON</masterLabel>
+            <translation><!-- BCBS TRIGON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCBS WEST PA</masterLabel>
+            <translation><!-- BCBS WEST PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCBSND</masterLabel>
+            <translation><!-- BCBSND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCBSNJ</masterLabel>
+            <translation><!-- BCBSNJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCBSRI</masterLabel>
+            <translation><!-- BCBSRI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BEN PLAN SRV</masterLabel>
+            <translation><!-- BEN PLAN SRV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BROK CONCEPT</masterLabel>
+            <translation><!-- BROK CONCEPT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANADA LIFE</masterLabel>
+            <translation><!-- CANADA LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAPITAL BLUECROSS</masterLabel>
+            <translation><!-- CAPITAL BLUECROSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAREFIRST</masterLabel>
+            <translation><!-- CAREFIRST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFA</masterLabel>
+            <translation><!-- CFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFS</masterLabel>
+            <translation><!-- CFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHOICE CARE</masterLabel>
+            <translation><!-- CHOICE CARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHP</masterLabel>
+            <translation><!-- CHP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CIGNA</masterLabel>
+            <translation><!-- CIGNA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CIGNA DENTAL</masterLabel>
+            <translation><!-- CIGNA DENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CMP</masterLabel>
+            <translation><!-- CMP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CMPNION LIFE</masterLabel>
+            <translation><!-- CMPNION LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CMRCIAL LIFE</masterLabel>
+            <translation><!-- CMRCIAL LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COLONIAL</masterLabel>
+            <translation><!-- COLONIAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COMBINED INS</masterLabel>
+            <translation><!-- COMBINED INS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONFED LIFE</masterLabel>
+            <translation><!-- CONFED LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONN GENERAL</masterLabel>
+            <translation><!-- CONN GENERAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONSUMR DNTL</masterLabel>
+            <translation><!-- CONSUMR DNTL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONTINENTAL</masterLabel>
+            <translation><!-- CONTINENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORE SOURCE</masterLabel>
+            <translation><!-- CORE SOURCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORP BEN</masterLabel>
+            <translation><!-- CORP BEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COVENTRY</masterLabel>
+            <translation><!-- COVENTRY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CUNA MUTUAL</masterLabel>
+            <translation><!-- CUNA MUTUAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DELTA DENTAL</masterLabel>
+            <translation><!-- DELTA DENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DENTAL INSUR</masterLabel>
+            <translation><!-- DENTAL INSUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DESTINY</masterLabel>
+            <translation><!-- DESTINY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHP</masterLabel>
+            <translation><!-- DHP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DNTL BEN PRV</masterLabel>
+            <translation><!-- DNTL BEN PRV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EASTERN RISK</masterLabel>
+            <translation><!-- EASTERN RISK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECKARD</masterLabel>
+            <translation><!-- ECKARD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMP BEN</masterLabel>
+            <translation><!-- EMP BEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMP REINSUR</masterLabel>
+            <translation><!-- EMP REINSUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EXCESS HLTH</masterLabel>
+            <translation><!-- EXCESS HLTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EXPRESS SCRIPTS</masterLabel>
+            <translation><!-- EXPRESS SCRIPTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIDELITY INS</masterLabel>
+            <translation><!-- FIDELITY INS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIDELITY SEC</masterLabel>
+            <translation><!-- FIDELITY SEC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FORTIS BENEF</masterLabel>
+            <translation><!-- FORTIS BENEF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FREEDOM PLANS</masterLabel>
+            <translation><!-- FREEDOM PLANS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FT DEARBORN</masterLabel>
+            <translation><!-- FT DEARBORN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FUTURE HLTH</masterLabel>
+            <translation><!-- FUTURE HLTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GARDIAN DNTL</masterLabel>
+            <translation><!-- GARDIAN DNTL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEN AMER LIF</masterLabel>
+            <translation><!-- GEN AMER LIF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GENCARE</masterLabel>
+            <translation><!-- GENCARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GERBER LIFE</masterLabel>
+            <translation><!-- GERBER LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GETTYSBRG</masterLabel>
+            <translation><!-- GETTYSBRG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GREENSPRING</masterLabel>
+            <translation><!-- GREENSPRING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRP AMERICA</masterLabel>
+            <translation><!-- GRP AMERICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRP BENEFIT</masterLabel>
+            <translation><!-- GRP BENEFIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRP HEALTH ADM</masterLabel>
+            <translation><!-- GRP HEALTH ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRP LTD CNA</masterLabel>
+            <translation><!-- GRP LTD CNA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRT WST LIFE</masterLabel>
+            <translation><!-- GRT WST LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GTE</masterLabel>
+            <translation><!-- GTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUARDIAN</masterLabel>
+            <translation><!-- GUARDIAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HARLEYSVILLE</masterLabel>
+            <translation><!-- HARLEYSVILLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HARTFORD</masterLabel>
+            <translation><!-- HARTFORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HMO</masterLabel>
+            <translation><!-- HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOME INSUR</masterLabel>
+            <translation><!-- HOME INSUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOME LIFE</masterLabel>
+            <translation><!-- HOME LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUMANA</masterLabel>
+            <translation><!-- HUMANA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAA</masterLabel>
+            <translation><!-- IAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INDSCHLINSUR</masterLabel>
+            <translation><!-- INDSCHLINSUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INNOVATION HEALTH</masterLabel>
+            <translation><!-- INNOVATION HEALTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INSPERITY</masterLabel>
+            <translation><!-- INSPERITY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INSURCONAMER</masterLabel>
+            <translation><!-- INSURCONAMER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTEGRA</masterLabel>
+            <translation><!-- INTEGRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JEFFPILOTINS</masterLabel>
+            <translation><!-- JEFFPILOTINS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JHMLIC</masterLabel>
+            <translation><!-- JHMLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JOHN ALDEN</masterLabel>
+            <translation><!-- JOHN ALDEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JOHN HANCOCK</masterLabel>
+            <translation><!-- JOHN HANCOCK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KAISER PERM</masterLabel>
+            <translation><!-- KAISER PERM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KANAWHA</masterLabel>
+            <translation><!-- KANAWHA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KLAIS&amp;CO</masterLabel>
+            <translation><!-- KLAIS&amp;CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAFAYETTELIF</masterLabel>
+            <translation><!-- LAFAYETTELIF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAMA LIFE</masterLabel>
+            <translation><!-- LAMA LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIBERTY LIFE</masterLabel>
+            <translation><!-- LIBERTY LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIFE AD &amp; D</masterLabel>
+            <translation><!-- LIFE AD &amp; D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIFEINSURCO</masterLabel>
+            <translation><!-- LIFEINSURCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOOMIS</masterLabel>
+            <translation><!-- LOOMIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LUMENOUS</masterLabel>
+            <translation><!-- LUMENOUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAMSI INSUR</masterLabel>
+            <translation><!-- MAMSI INSUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MANU LIFE</masterLabel>
+            <translation><!-- MANU LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MASS MUTUAL</masterLabel>
+            <translation><!-- MASS MUTUAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD AUTO SERV</masterLabel>
+            <translation><!-- MD AUTO SERV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD IPA</masterLabel>
+            <translation><!-- MD IPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MED CLMS MGT</masterLabel>
+            <translation><!-- MED CLMS MGT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MED INSUR CO</masterLabel>
+            <translation><!-- MED INSUR CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MED LIFE</masterLabel>
+            <translation><!-- MED LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MED STOP</masterLabel>
+            <translation><!-- MED STOP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEDCO</masterLabel>
+            <translation><!-- MEDCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEDCOST BEN</masterLabel>
+            <translation><!-- MEDCOST BEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MET LIFE</masterLabel>
+            <translation><!-- MET LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MID ATL VISN</masterLabel>
+            <translation><!-- MID ATL VISN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MLH MAMS</masterLabel>
+            <translation><!-- MLH MAMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MW POMFREY</masterLabel>
+            <translation><!-- MW POMFREY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N AMER PLAN</masterLabel>
+            <translation><!-- N AMER PLAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NATIONWIDE</masterLabel>
+            <translation><!-- NATIONWIDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NATL BEN ADM</masterLabel>
+            <translation><!-- NATL BEN ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEWENGLAND</masterLabel>
+            <translation><!-- NEWENGLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO AMER LIFE</masterLabel>
+            <translation><!-- NO AMER LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO PREVIOUS CARRIER</masterLabel>
+            <translation><!-- NO PREVIOUS CARRIER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NONE</masterLabel>
+            <translation><!-- NONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NORTHWESTERN</masterLabel>
+            <translation><!-- NORTHWESTERN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY LIFE</masterLabel>
+            <translation><!-- NY LIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONE NET</masterLabel>
+            <translation><!-- ONE NET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPTIMUM</masterLabel>
+            <translation><!-- OPTIMUM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORCHESTRATE HR</masterLabel>
+            <translation><!-- ORCHESTRATE HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PANAMERICAN</masterLabel>
+            <translation><!-- PANAMERICAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PANAMLIFE</masterLabel>
+            <translation><!-- PANAMLIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAULREVERE</masterLabel>
+            <translation><!-- PAULREVERE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PENSACOLA</masterLabel>
+            <translation><!-- PENSACOLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PERFORMAX</masterLabel>
+            <translation><!-- PERFORMAX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHARMACARE</masterLabel>
+            <translation><!-- PHARMACARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHILAMERLIFE</masterLabel>
+            <translation><!-- PHILAMERLIFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHN HMO</masterLabel>
+            <translation><!-- PHN HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHOENIX</masterLabel>
+            <translation><!-- PHOENIX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIONEER MGT</masterLabel>
+            <translation><!-- PIONEER MGT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLANNED ADM</masterLabel>
+            <translation><!-- PLANNED ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PREF HLTH</masterLabel>
+            <translation><!-- PREF HLTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRINCIPAL</masterLabel>
+            <translation><!-- PRINCIPAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PROVIDENT</masterLabel>
+            <translation><!-- PROVIDENT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRUDENTIAL</masterLabel>
+            <translation><!-- PRUDENTIAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RELIANCE</masterLabel>
+            <translation><!-- RELIANCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RXSOL</masterLabel>
+            <translation><!-- RXSOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S CENTRAL</masterLabel>
+            <translation><!-- S CENTRAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEABOARD</masterLabel>
+            <translation><!-- SEABOARD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SECURITY MUT</masterLabel>
+            <translation><!-- SECURITY MUT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SELF FUNDED</masterLabel>
+            <translation><!-- SELF FUNDED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SHENANDOAH</masterLabel>
+            <translation><!-- SHENANDOAH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SHPPARDPRATT</masterLabel>
+            <translation><!-- SHPPARDPRATT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STARMARK</masterLabel>
+            <translation><!-- STARMARK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STATE MUTUAL</masterLabel>
+            <translation><!-- STATE MUTUAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STDINSURCO</masterLabel>
+            <translation><!-- STDINSURCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUNLIFE CAN</masterLabel>
+            <translation><!-- SUNLIFE CAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TEACHERS INS</masterLabel>
+            <translation><!-- TEACHERS INS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TERMLIFEAD&amp;D</masterLabel>
+            <translation><!-- TERMLIFEAD&amp;D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TIAA CREF</masterLabel>
+            <translation><!-- TIAA CREF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRANS OCCID</masterLabel>
+            <translation><!-- TRANS OCCID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRANSGENERAL</masterLabel>
+            <translation><!-- TRANSGENERAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRAVELERS</masterLabel>
+            <translation><!-- TRAVELERS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TUCKER ADM</masterLabel>
+            <translation><!-- TUCKER ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNICARE</masterLabel>
+            <translation><!-- UNICARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNIONCENTRAL</masterLabel>
+            <translation><!-- UNIONCENTRAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITD WI LIF</masterLabel>
+            <translation><!-- UNITD WI LIF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITED INS</masterLabel>
+            <translation><!-- UNITED INS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITEDOMAHA</masterLabel>
+            <translation><!-- UNITEDOMAHA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNKNOWN</masterLabel>
+            <translation><!-- UNKNOWN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNUM</masterLabel>
+            <translation><!-- UNUM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US BENEFITS</masterLabel>
+            <translation><!-- US BENEFITS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US LIFE NY</masterLabel>
+            <translation><!-- US LIFE NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USACORPCARE</masterLabel>
+            <translation><!-- USACORPCARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United HealthCare</masterLabel>
+            <translation><!-- United HealthCare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VALUE HLTH</masterLabel>
+            <translation><!-- VALUE HLTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISION SERV</masterLabel>
+            <translation><!-- VISION SERV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VariousHMO</masterLabel>
+            <translation><!-- VariousHMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA NATL INS</masterLabel>
+            <translation><!-- WA NATL INS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WOHLERS&amp;CO</masterLabel>
+            <translation><!-- WOHLERS&amp;CO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitor&apos;s Annual Premium --></label>
+        <name>Competitors_Annual_Premium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Concat Business Type-UW --></label>
+        <name>Concat_Business_Type_UW__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract End Date --></label>
+        <name>Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Competitor --></label>
+        <name>DB_Competitor__c</name>
+        <picklistValues>
+            <masterLabel>Competitor A</masterLabel>
+            <translation><!-- Competitor A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor B</masterLabel>
+            <translation><!-- Competitor B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor C</masterLabel>
+            <translation><!-- Competitor C --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Description --></label>
+        <name>Data_Quality_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Score --></label>
+        <name>Data_Quality_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deadline Date --></label>
+        <name>Deadline_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MD/DC Declined Reason --></label>
+        <name>Declined_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Bankruptcy</masterLabel>
+            <translation><!-- Bankruptcy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claims Experience Not Available</masterLabel>
+            <translation><!-- Claims Experience Not Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does Not Meet 50% Employer Contribution</masterLabel>
+            <translation><!-- Does Not Meet 50% Employer Contribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does Not Meet 75% Participation</masterLabel>
+            <translation><!-- Does Not Meet 75% Participation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Former CareFirst Group</masterLabel>
+            <translation><!-- Former CareFirst Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Demographic Factor</masterLabel>
+            <translation><!-- High Demographic Factor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Loss Ratio</masterLabel>
+            <translation><!-- High Loss Ratio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More than 10% Health Risk Load</masterLabel>
+            <translation><!-- More than 10% Health Risk Load --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never Received Requested Information</masterLabel>
+            <translation><!-- Never Received Requested Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Competitive</masterLabel>
+            <translation><!-- Not Competitive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not In Service Area</masterLabel>
+            <translation><!-- Not In Service Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Licensed to Sell In Area</masterLabel>
+            <translation><!-- Not Licensed to Sell In Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Experience</masterLabel>
+            <translation><!-- Poor Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Risk</masterLabel>
+            <translation><!-- Poor Risk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Substandard Population</masterLabel>
+            <translation><!-- Substandard Population --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Three Carriers In 5 Years</masterLabel>
+            <translation><!-- Three Carriers In 5 Years --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Delivered Increase from Management Report --></help>
+        <label><!-- Delivered Increase % --></label>
+        <name>Delivered_Increase__c</name>
+    </fields>
+    <fields>
+        <help><!-- Demo Increase from Management Report --></help>
+        <label><!-- Demo Increase % --></label>
+        <name>Demo_Increase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental Account in Jeopardy --></label>
+        <name>Dental_Account_in_Jeopardy__c</name>
+        <picklistValues>
+            <masterLabel>Account New To Jeopardy</masterLabel>
+            <translation><!-- Account New To Jeopardy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Remains Jeopardy</masterLabel>
+            <translation><!-- Account Remains Jeopardy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Removed From Jeopardy</masterLabel>
+            <translation><!-- Account Removed From Jeopardy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dental Competitor Name --></label>
+        <name>Dental_Competitor_Name__c</name>
+        <picklistValues>
+            <masterLabel>Aetna</masterLabel>
+            <translation><!-- Aetna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ameritas</masterLabel>
+            <translation><!-- Ameritas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CIGNA Dental</masterLabel>
+            <translation><!-- CIGNA Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delta Dental</masterLabel>
+            <translation><!-- Delta Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental Insur</masterLabel>
+            <translation><!-- Dental Insur --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentaquest</masterLabel>
+            <translation><!-- Dentaquest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dominion</masterLabel>
+            <translation><!-- Dominion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian</masterLabel>
+            <translation><!-- Guardian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humana</masterLabel>
+            <translation><!-- Humana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MetLife</masterLabel>
+            <translation><!-- MetLife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UHC</masterLabel>
+            <translation><!-- UHC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Concordia</masterLabel>
+            <translation><!-- United Concordia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Why is Dental in Jeopardy? --></help>
+        <label><!-- Dental Jeopardy Issues --></label>
+        <name>Dental_Jeopardy_Issues__c</name>
+    </fields>
+    <fields>
+        <help><!-- Direct Broker Plus/CF Hub is an agency that processes enrollment changes, proposal generation, new group quoting and new group installation on CF Hub.  These agencies are also able to view group billing documentation and address billing inquiries. --></help>
+        <label><!-- Direct Plus Broker / CF Hub --></label>
+        <name>Direct_Plus_Broker_CF_Hub__c</name>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>51-199 New Business</masterLabel>
+            <translation><!-- 51-199 New Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51-199 Renewals</masterLabel>
+            <translation><!-- 51-199 Renewals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CFA</masterLabel>
+            <translation><!-- CFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Business</masterLabel>
+            <translation><!-- Commercial Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEHBP Account Management</masterLabel>
+            <translation><!-- FEHBP Account Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare/Education/Par</masterLabel>
+            <translation><!-- Healthcare/Education/Par --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor Affairs</masterLabel>
+            <translation><!-- Labor Affairs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS</masterLabel>
+            <translation><!-- NCAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State &amp; Municipalities</masterLabel>
+            <translation><!-- State &amp; Municipalities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic Accounts 1000+</masterLabel>
+            <translation><!-- Strategic Accounts 1000+ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dollar Variance --></label>
+        <name>Dollar_Variance__c</name>
+    </fields>
+    <fields>
+        <label><!-- EIN --></label>
+        <name>EIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment --></label>
+        <name>Enrollment__c</name>
+        <picklistValues>
+            <masterLabel>AON Exchange</masterLabel>
+            <translation><!-- AON Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CF Private Exchange</masterLabel>
+            <translation><!-- CF Private Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CareFirst Connect</masterLabel>
+            <translation><!-- CareFirst Connect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DBE/Admin</masterLabel>
+            <translation><!-- DBE/Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Auto</masterLabel>
+            <translation><!-- Direct Auto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Plus/CF Hub</masterLabel>
+            <translation><!-- Direct Plus/CF Hub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other/CF Hub</masterLabel>
+            <translation><!-- Other/CF Hub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paper</masterLabel>
+            <translation><!-- Paper --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Est. Actual Contracts --></label>
+        <name>Est_Actual_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimate Complete (%) --></label>
+        <name>Estimate_Complete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Contract counts exclude ancillaries --></help>
+        <label><!-- Estimated Actual Contracts --></label>
+        <name>Estimated_Actual_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Actuals --></label>
+        <name>Estimated_Actuals__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Key --></label>
+        <name>External_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP/GP NPN --></label>
+        <name>FSP_GP_NPN__c</name>
+    </fields>
+    <fields>
+        <help><!-- A group may have multiple Facets group numbers. --></help>
+        <label><!-- Facets Group ID --></label>
+        <name>Facets_Grp_Num__c</name>
+    </fields>
+    <fields>
+        <help><!-- Final increase, including concessions --></help>
+        <label><!-- Final Rate Increase % --></label>
+        <name>Final_Rate_Increase__c</name>
+    </fields>
+    <fields>
+        <help><!-- UW Rec Floor % from Management Report --></help>
+        <label><!-- Floor % --></label>
+        <name>Floor__c</name>
+    </fields>
+    <fields>
+        <help><!-- FSP is an agency that bills prem. &amp; remits pd prem. to CF on behalf of grps or members. FSP serves as the prim. contact for compensation &amp; communication on behalf of multi contracted brokers/agencies. FSP is pd fees for services &amp; commissions for brokers --></help>
+        <label><!-- FullServiceProducer --></label>
+        <name>FullServiceProducer__c</name>
+        <picklistValues>
+            <masterLabel>Benefit Design Group, LLC</masterLabel>
+            <translation><!-- Benefit Design Group, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BenefitMall</masterLabel>
+            <translation><!-- BenefitMall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crawford Advisors, LLC</masterLabel>
+            <translation><!-- Crawford Advisors, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct</masterLabel>
+            <translation><!-- Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Benefit Services</masterLabel>
+            <translation><!-- Group Benefit Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hamilton Insurance Agency</masterLabel>
+            <translation><!-- Hamilton Insurance Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kelly &amp; Associates Insurance Group</masterLabel>
+            <translation><!-- Kelly &amp; Associates Insurance Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS</masterLabel>
+            <translation><!-- NCAS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Overall Gain/Loss from Management Report --></help>
+        <label><!-- Gain/Loss $ --></label>
+        <name>Gain_Loss__c</name>
+    </fields>
+    <fields>
+        <help><!-- A GP is an agency that acts as the prim.contact and recipient of compensation and comm. on behalf of mult. brokers and/or agencies that are contracted. GPs are pd fees for their admin. services and commissions for sales made by the brokers they administer --></help>
+        <label><!-- GeneralProducer --></label>
+        <name>GeneralProducer__c</name>
+        <picklistValues>
+            <masterLabel>Benefit Design Group, LLC</masterLabel>
+            <translation><!-- Benefit Design Group, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BenefitMall</masterLabel>
+            <translation><!-- BenefitMall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBIZ</masterLabel>
+            <translation><!-- CBIZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crawford Advisors, LLC</masterLabel>
+            <translation><!-- Crawford Advisors, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct</masterLabel>
+            <translation><!-- Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Benefits Corporation of America</masterLabel>
+            <translation><!-- Employee Benefits Corporation of America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Benefit Services</masterLabel>
+            <translation><!-- Group Benefit Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hamilton Insurance Agency</masterLabel>
+            <translation><!-- Hamilton Insurance Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Marketing Center, Inc.</masterLabel>
+            <translation><!-- Insurance Marketing Center, Inc. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kelly &amp; Associates Insurance Group</masterLabel>
+            <translation><!-- Kelly &amp; Associates Insurance Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS</masterLabel>
+            <translation><!-- NCAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Potomac Basin Group Assoc., Inc.</masterLabel>
+            <translation><!-- Potomac Basin Group Assoc., Inc. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HB_Offered --></label>
+        <name>HB_Offered__c</name>
+    </fields>
+    <fields>
+        <label><!-- HB_Sold --></label>
+        <name>HB_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headquarters Address --></label>
+        <name>Headquarters_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- Track the Incumbent/Successor for both Medical and Dental on all opportunities marked Sold or Dead. For Sold opportunities, Incumbent refers to &apos;who had business prior&apos;. For Dead opportunities, Successor refers to &apos;who did Carefirst lose to&apos; --></help>
+        <label><!-- Incumbent / Successor --></label>
+        <name>Incumbent_Successor__c</name>
+        <picklistValues>
+            <masterLabel>ACO</masterLabel>
+            <translation><!-- ACO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aetna</masterLabel>
+            <translation><!-- Aetna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ameritas</masterLabel>
+            <translation><!-- Ameritas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CareFirst</masterLabel>
+            <translation><!-- CareFirst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cigna</masterLabel>
+            <translation><!-- Cigna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delta</masterLabel>
+            <translation><!-- Delta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentaquest</masterLabel>
+            <translation><!-- Dentaquest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dominion</masterLabel>
+            <translation><!-- Dominion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EverGreen</masterLabel>
+            <translation><!-- EverGreen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian</masterLabel>
+            <translation><!-- Guardian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humana</masterLabel>
+            <translation><!-- Humana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kaiser</masterLabel>
+            <translation><!-- Kaiser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metlife</masterLabel>
+            <translation><!-- Metlife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None (Out of Business)</masterLabel>
+            <translation><!-- None (Out of Business) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA: Allegiance (Cigna)</masterLabel>
+            <translation><!-- TPA: Allegiance (Cigna) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA: Code Structure</masterLabel>
+            <translation><!-- TPA: Code Structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA: GBS</masterLabel>
+            <translation><!-- TPA: GBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA: Loomis</masterLabel>
+            <translation><!-- TPA: Loomis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA: Meritain Health (Aetna)</masterLabel>
+            <translation><!-- TPA: Meritain Health (Aetna) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA: UMR (UHC)</masterLabel>
+            <translation><!-- TPA: UMR (UHC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UHC</masterLabel>
+            <translation><!-- UHC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United</masterLabel>
+            <translation><!-- United --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Concordia</masterLabel>
+            <translation><!-- United Concordia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Why is this Opportunity in Jeopardy? --></help>
+        <label><!-- Jeopardy Issues --></label>
+        <name>Jeopardy_Issues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By User --></label>
+        <name>Last_Modified_By_User__c</name>
+    </fields>
+    <fields>
+        <help><!-- This look-up will be based off of the Lead Rep Name on the user record to be displayed on the Opportunity object. --></help>
+        <label><!-- Lead Rep Name --></label>
+        <name>Lead_Rep_Name_User__c</name>
+        <relationshipLabel><!-- Opportunities (Lead Rep Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead Rep Name(s) --></label>
+        <name>Lead_Rep_Name__c</name>
+        <picklistValues>
+            <masterLabel>Adrienne Robinson</masterLabel>
+            <translation><!-- Adrienne Robinson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Allen Maier</masterLabel>
+            <translation><!-- Allen Maier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amie Grabarek</masterLabel>
+            <translation><!-- Amie Grabarek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ann Pederson</masterLabel>
+            <translation><!-- Ann Pederson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anne Savoca</masterLabel>
+            <translation><!-- Anne Savoca --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barb Patton</masterLabel>
+            <translation><!-- Barb Patton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barbara Gerber</masterLabel>
+            <translation><!-- Barbara Gerber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barbara Jordan</masterLabel>
+            <translation><!-- Barbara Jordan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barry Walton</masterLabel>
+            <translation><!-- Barry Walton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brad Warren</masterLabel>
+            <translation><!-- Brad Warren --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brian Gunning</masterLabel>
+            <translation><!-- Brian Gunning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carolyn Drumgoole</masterLabel>
+            <translation><!-- Carolyn Drumgoole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carolyn Rand</masterLabel>
+            <translation><!-- Carolyn Rand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charlene Rutkowski</masterLabel>
+            <translation><!-- Charlene Rutkowski --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charlie Albert</masterLabel>
+            <translation><!-- Charlie Albert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christopher Stolze</masterLabel>
+            <translation><!-- Christopher Stolze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chuck Housman</masterLabel>
+            <translation><!-- Chuck Housman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cindy Horn</masterLabel>
+            <translation><!-- Cindy Horn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIane Freeland</masterLabel>
+            <translation><!-- DIane Freeland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dave Tartaglia</masterLabel>
+            <translation><!-- Dave Tartaglia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dave Thomas</masterLabel>
+            <translation><!-- Dave Thomas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denise Dunn</masterLabel>
+            <translation><!-- Denise Dunn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denise Mosco</masterLabel>
+            <translation><!-- Denise Mosco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Donna Arbogast</masterLabel>
+            <translation><!-- Donna Arbogast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Donna Hase</masterLabel>
+            <translation><!-- Donna Hase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doreen Murphy</masterLabel>
+            <translation><!-- Doreen Murphy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evelyn Bradshaw</masterLabel>
+            <translation><!-- Evelyn Bradshaw --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gail Deorio</masterLabel>
+            <translation><!-- Gail Deorio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia Greenwell</masterLabel>
+            <translation><!-- Georgia Greenwell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ginger Krempa</masterLabel>
+            <translation><!-- Ginger Krempa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greg Maupin</masterLabel>
+            <translation><!-- Greg Maupin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Harry Fox</masterLabel>
+            <translation><!-- Harry Fox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jeff Wise</masterLabel>
+            <translation><!-- Jeff Wise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jody Tedder</masterLabel>
+            <translation><!-- Jody Tedder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joe Drusano</masterLabel>
+            <translation><!-- Joe Drusano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>June Swears</masterLabel>
+            <translation><!-- June Swears --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kathleen Wynkoop</masterLabel>
+            <translation><!-- Kathleen Wynkoop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kirsten Prucha</masterLabel>
+            <translation><!-- Kirsten Prucha --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lisa Henton</masterLabel>
+            <translation><!-- Lisa Henton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lisa Miller</masterLabel>
+            <translation><!-- Lisa Miller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lisa Quigg</masterLabel>
+            <translation><!-- Lisa Quigg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lynna Heinze</masterLabel>
+            <translation><!-- Lynna Heinze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Major Lewis</masterLabel>
+            <translation><!-- Major Lewis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mallory Kusterer</masterLabel>
+            <translation><!-- Mallory Kusterer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marlin Ford</masterLabel>
+            <translation><!-- Marlin Ford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mary Davenport</masterLabel>
+            <translation><!-- Mary Davenport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mary Penczek</masterLabel>
+            <translation><!-- Mary Penczek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mathis Lyles Muriel</masterLabel>
+            <translation><!-- Mathis Lyles Muriel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Matt Gondek</masterLabel>
+            <translation><!-- Matt Gondek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michael Jayner</masterLabel>
+            <translation><!-- Michael Jayner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michael Tilghman</masterLabel>
+            <translation><!-- Michael Tilghman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michele Wilde</masterLabel>
+            <translation><!-- Michele Wilde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michelle Finney</masterLabel>
+            <translation><!-- Michelle Finney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mona Hebron</masterLabel>
+            <translation><!-- Mona Hebron --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paul Chopper</masterLabel>
+            <translation><!-- Paul Chopper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polly Victor</masterLabel>
+            <translation><!-- Polly Victor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Robert Lambeth</masterLabel>
+            <translation><!-- Robert Lambeth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Romil Aparentado</masterLabel>
+            <translation><!-- Romil Aparentado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ruby Cosby</masterLabel>
+            <translation><!-- Ruby Cosby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sheila Fredenrich</masterLabel>
+            <translation><!-- Sheila Fredenrich --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stephanie Armstrong-Brown</masterLabel>
+            <translation><!-- Stephanie Armstrong-Brown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Steve Krasnoff</masterLabel>
+            <translation><!-- Steve Krasnoff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sue Hitch</masterLabel>
+            <translation><!-- Sue Hitch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sue Russell</masterLabel>
+            <translation><!-- Sue Russell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tammy Thacker</masterLabel>
+            <translation><!-- Tammy Thacker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thomas Munns</masterLabel>
+            <translation><!-- Thomas Munns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tricia Lehmann</masterLabel>
+            <translation><!-- Tricia Lehmann --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Rep Number Drawloop --></label>
+        <name>Lead_Rep_Number_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Lead Rep Number populates from the Lead Rep Name --></help>
+        <label><!-- Lead Rep Number --></label>
+        <name>Lead_Rep_Number_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Rep #(s) --></label>
+        <name>Lead_Rep_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Rep Phone Drawloop --></label>
+        <name>Lead_Rep_Phone_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Rep# --></label>
+        <name>Lead_Rep__c</name>
+        <picklistValues>
+            <masterLabel>0007</masterLabel>
+            <translation><!-- 0007 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0111</masterLabel>
+            <translation><!-- 0111 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0151</masterLabel>
+            <translation><!-- 0151 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0184</masterLabel>
+            <translation><!-- 0184 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0189</masterLabel>
+            <translation><!-- 0189 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0341</masterLabel>
+            <translation><!-- 0341 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0355</masterLabel>
+            <translation><!-- 0355 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0858</masterLabel>
+            <translation><!-- 0858 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1002</masterLabel>
+            <translation><!-- 1002 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1033</masterLabel>
+            <translation><!-- 1033 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1099</masterLabel>
+            <translation><!-- 1099 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1296</masterLabel>
+            <translation><!-- 1296 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1334</masterLabel>
+            <translation><!-- 1334 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1371</masterLabel>
+            <translation><!-- 1371 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1680</masterLabel>
+            <translation><!-- 1680 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1855</masterLabel>
+            <translation><!-- 1855 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1870</masterLabel>
+            <translation><!-- 1870 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2001</masterLabel>
+            <translation><!-- 2001 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015</masterLabel>
+            <translation><!-- 2015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2031</masterLabel>
+            <translation><!-- 2031 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2037</masterLabel>
+            <translation><!-- 2037 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2058</masterLabel>
+            <translation><!-- 2058 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2185</masterLabel>
+            <translation><!-- 2185 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2535</masterLabel>
+            <translation><!-- 2535 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3025</masterLabel>
+            <translation><!-- 3025 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3029</masterLabel>
+            <translation><!-- 3029 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3186</masterLabel>
+            <translation><!-- 3186 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3679</masterLabel>
+            <translation><!-- 3679 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3829</masterLabel>
+            <translation><!-- 3829 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3830</masterLabel>
+            <translation><!-- 3830 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4194</masterLabel>
+            <translation><!-- 4194 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4201</masterLabel>
+            <translation><!-- 4201 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4440</masterLabel>
+            <translation><!-- 4440 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4455</masterLabel>
+            <translation><!-- 4455 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4601</masterLabel>
+            <translation><!-- 4601 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4893</masterLabel>
+            <translation><!-- 4893 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5210</masterLabel>
+            <translation><!-- 5210 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5260</masterLabel>
+            <translation><!-- 5260 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5369</masterLabel>
+            <translation><!-- 5369 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5471</masterLabel>
+            <translation><!-- 5471 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5706</masterLabel>
+            <translation><!-- 5706 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5744</masterLabel>
+            <translation><!-- 5744 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5772</masterLabel>
+            <translation><!-- 5772 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6597</masterLabel>
+            <translation><!-- 6597 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6620</masterLabel>
+            <translation><!-- 6620 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6960</masterLabel>
+            <translation><!-- 6960 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7391</masterLabel>
+            <translation><!-- 7391 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7413</masterLabel>
+            <translation><!-- 7413 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8175</masterLabel>
+            <translation><!-- 8175 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8289</masterLabel>
+            <translation><!-- 8289 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8633</masterLabel>
+            <translation><!-- 8633 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8853</masterLabel>
+            <translation><!-- 8853 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9070</masterLabel>
+            <translation><!-- 9070 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9115</masterLabel>
+            <translation><!-- 9115 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9119</masterLabel>
+            <translation><!-- 9119 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9226</masterLabel>
+            <translation><!-- 9226 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9339</masterLabel>
+            <translation><!-- 9339 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9393</masterLabel>
+            <translation><!-- 9393 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9431</masterLabel>
+            <translation><!-- 9431 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9553</masterLabel>
+            <translation><!-- 9553 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9560</masterLabel>
+            <translation><!-- 9560 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legal Account Name Verified --></label>
+        <name>Legal_Account_Name_Verified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>Legal_Entity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Loss Ratio Yr1 from Management Report --></help>
+        <label><!-- Loss Ratio- -  Year 1 --></label>
+        <name>Loss_Ratio_Year_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Loss Ratio Yr2 from Management Report --></help>
+        <label><!-- Loss Ratio- -  Year 2 --></label>
+        <name>Loss_Ratio_Year_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Loss Ratio Yr3 from Management Report --></help>
+        <label><!-- Loss Ratio- -  Year 3 --></label>
+        <name>Loss_Ratio_Year_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the Luminex Account number --></help>
+        <label><!-- LuminX Group ID --></label>
+        <name>Luminex__c</name>
+    </fields>
+    <fields>
+        <label><!-- MD/DC Underwriter Comments --></label>
+        <name>MD_DC_DE_Underwriter_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Segment --></label>
+        <name>Market_Segment_New__c</name>
+        <picklistValues>
+            <masterLabel>1000+</masterLabel>
+            <translation><!-- 1000+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-50</masterLabel>
+            <translation><!-- 2-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>200-999</masterLabel>
+            <translation><!-- 200-999 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51-199</masterLabel>
+            <translation><!-- 51-199 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- OBSOLETE: This field is superseded by a new field called Market Segment. --></help>
+        <label><!-- Market Segment (Obsolete) --></label>
+        <name>Market_Segment__c</name>
+        <picklistValues>
+            <masterLabel>1-50</masterLabel>
+            <translation><!-- 1-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>200+</masterLabel>
+            <translation><!-- 200+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51-199</masterLabel>
+            <translation><!-- 51-199 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Missing Partner --></label>
+        <name>MissingPartner__c</name>
+    </fields>
+    <fields>
+        <help><!-- Must be 5 digits and may contain no more than 4 Account numbers --></help>
+        <label><!-- NASCO Acct. # --></label>
+        <name>NASCO_Acct_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- NCAS Declined Reason --></label>
+        <name>NCAS_Declined_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Bankruptcy</masterLabel>
+            <translation><!-- Bankruptcy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claims Experience Not Available</masterLabel>
+            <translation><!-- Claims Experience Not Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does Not Meet 50% Employer Contribution</masterLabel>
+            <translation><!-- Does Not Meet 50% Employer Contribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does Not Meet 75% Participation</masterLabel>
+            <translation><!-- Does Not Meet 75% Participation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Former CareFirst Group</masterLabel>
+            <translation><!-- Former CareFirst Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Demographic Factor</masterLabel>
+            <translation><!-- High Demographic Factor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Loss Ratio</masterLabel>
+            <translation><!-- High Loss Ratio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More than 10% Health Risk Load</masterLabel>
+            <translation><!-- More than 10% Health Risk Load --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never Received Requested Information</masterLabel>
+            <translation><!-- Never Received Requested Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Competitive</masterLabel>
+            <translation><!-- Not Competitive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not In Service Area</masterLabel>
+            <translation><!-- Not In Service Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Licensed to Sell In Area</masterLabel>
+            <translation><!-- Not Licensed to Sell In Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Experience</masterLabel>
+            <translation><!-- Poor Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Risk</masterLabel>
+            <translation><!-- Poor Risk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Substandard Population</masterLabel>
+            <translation><!-- Substandard Population --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Three Carriers In 5 Years</masterLabel>
+            <translation><!-- Three Carriers In 5 Years --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NCAS Underwriter Comments --></label>
+        <name>NCAS_Underwriter_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- NCAS Underwriter --></label>
+        <name>NCAS_Underwriter__c</name>
+        <picklistValues>
+            <masterLabel>Brandi Wiggins</masterLabel>
+            <translation><!-- Brandi Wiggins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bruno</masterLabel>
+            <translation><!-- Bruno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dean</masterLabel>
+            <translation><!-- Dean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>James</masterLabel>
+            <translation><!-- James --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monika Chandra</masterLabel>
+            <translation><!-- Monika Chandra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sara Young</masterLabel>
+            <translation><!-- Sara Young --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TBD</masterLabel>
+            <translation><!-- TBD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unterborn</masterLabel>
+            <translation><!-- Unterborn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Young</masterLabel>
+            <translation><!-- Young --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NCAS Underwriting Completed --></label>
+        <name>NCAS_Underwriting_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- NCAS Underwriting Status --></label>
+        <name>NCAS_Underwriting_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined to Quote</masterLabel>
+            <translation><!-- Declined to Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Must contain all digits and a length of 5 --></help>
+        <label><!-- National Alliance ID --></label>
+        <name>National_Alliance_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the Network Leasing Account Number --></help>
+        <label><!-- Net. Lease Group ID --></label>
+        <name>Net_Lease_Group_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Cycle Term Date --></label>
+        <name>Off_Cycle_Term_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Sold Carrier --></label>
+        <name>Other_Sold_Carrier__c</name>
+    </fields>
+    <fields>
+        <help><!-- Overall GL as Percent of Revenue from Management Report --></help>
+        <label><!-- Overall Loss as a % of Revenue --></label>
+        <name>Overall_Loss_as_a_of_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percentage Variance --></label>
+        <name>Percentage_Variance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Year Effective Date --></label>
+        <name>Plan_Year_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Claims Over Pooling from Management Report --></help>
+        <label><!-- Pooled Amount $ --></label>
+        <name>Pooled_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Contracts --></label>
+        <name>Potential_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Contracts --></label>
+        <name>Potential_Contracts_new__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential RFP Receipt Date --></label>
+        <name>Potential_RFP_Receipt_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact Role --></label>
+        <name>Primary_Contact_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary FSP GP --></label>
+        <name>Primary_FSP_GP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Partner --></label>
+        <name>Primary_Partner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Probability(%) --></label>
+        <name>Probability_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Products Marked Sold --></label>
+        <name>Products_Marked_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Products Offered Historical --></label>
+        <name>Products_Offered__c</name>
+        <picklistValues>
+            <masterLabel>BlueChoice Advantage</masterLabel>
+            <translation><!-- BlueChoice Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDH</masterLabel>
+            <translation><!-- CDH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COMP</masterLabel>
+            <translation><!-- COMP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug</masterLabel>
+            <translation><!-- Drug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPO</masterLabel>
+            <translation><!-- EPO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEP</masterLabel>
+            <translation><!-- FEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HMO</masterLabel>
+            <translation><!-- HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue</masterLabel>
+            <translation><!-- HealthyBlue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life/ADD/STD</masterLabel>
+            <translation><!-- Life/ADD/STD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicare Advantage</masterLabel>
+            <translation><!-- Medicare Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POE</masterLabel>
+            <translation><!-- POE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POS</masterLabel>
+            <translation><!-- POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPO</masterLabel>
+            <translation><!-- PPO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Group 65+</masterLabel>
+            <translation><!-- Standard Group 65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA</masterLabel>
+            <translation><!-- TPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRAD</masterLabel>
+            <translation><!-- TRAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Products Sold Historical --></label>
+        <name>Products_Sold__c</name>
+        <picklistValues>
+            <masterLabel>BlueChoice Advantage</masterLabel>
+            <translation><!-- BlueChoice Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDH</masterLabel>
+            <translation><!-- CDH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COMP</masterLabel>
+            <translation><!-- COMP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug</masterLabel>
+            <translation><!-- Drug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPO</masterLabel>
+            <translation><!-- EPO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEP</masterLabel>
+            <translation><!-- FEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HMO</masterLabel>
+            <translation><!-- HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HealthyBlue</masterLabel>
+            <translation><!-- HealthyBlue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life/ADD/STD</masterLabel>
+            <translation><!-- Life/ADD/STD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicare Advantage</masterLabel>
+            <translation><!-- Medicare Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POE</masterLabel>
+            <translation><!-- POE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POS</masterLabel>
+            <translation><!-- POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPO</masterLabel>
+            <translation><!-- PPO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Group 65+</masterLabel>
+            <translation><!-- Standard Group 65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA</masterLabel>
+            <translation><!-- TPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRAD</masterLabel>
+            <translation><!-- TRAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Proposal Sent --></label>
+        <name>Proposal_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProspectingCloseDate --></label>
+        <name>ProspectingCloseDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is populated with date automatically when the stage is Prospecting --></help>
+        <label><!-- ProspectingDate --></label>
+        <name>ProspectingDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field populates number of days opportunity is in prospecting stage before closing --></help>
+        <label><!-- ProspectingDays --></label>
+        <name>ProspectingDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Actual Receipt Date --></label>
+        <name>RFP_Actual_Receipt_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Comment --></label>
+        <name>RFP_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Due Date --></label>
+        <name>RFP_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Expected Receipt Date --></label>
+        <name>RFP_Expected_Receipt_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Requested --></label>
+        <name>RFP_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Strategy --></label>
+        <name>RFP_Strategy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Radar --></label>
+        <name>Radar__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Renewal Cover Letter --></help>
+        <label><!-- Rating Type --></label>
+        <name>Rating_Type__c</name>
+        <picklistValues>
+            <masterLabel>100% Experience</masterLabel>
+            <translation><!-- 100% Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50/50</masterLabel>
+            <translation><!-- 50/50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demo Only</masterLabel>
+            <translation><!-- Demo Only --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Recd Quote Request --></label>
+        <name>Recd_Quote_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recd by NCAS Underwriting --></label>
+        <name>Recd_by_NCAS_Underwriting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Received by MD/DC Underwriting --></label>
+        <name>Received_by_Underwriting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recent_Sold_Flag --></label>
+        <name>Recent_Sold_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reinstatement Date --></label>
+        <name>Reinstatement_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Products Offered Quantity --></label>
+        <name>Related_Products_Offered_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Products Offered --></label>
+        <name>Related_Products_Offered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Products Sold Quantity --></label>
+        <name>Related_Products_Sold_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Products Sold --></label>
+        <name>Related_Products_Sold__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provide renewal / new business proposal release date --></help>
+        <label><!-- Release Date --></label>
+        <name>Release_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Anniversary Date --></label>
+        <name>Renewal_Anniversary_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Delivery Date to Sales --></label>
+        <name>Renewal_Delivery_Date_to_Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request NPN --></label>
+        <name>Request_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risk/Non-Risk --></label>
+        <name>Risk_Non_Risk__c</name>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Risk</masterLabel>
+            <translation><!-- Non-Risk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk</masterLabel>
+            <translation><!-- Risk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SBU --></label>
+        <name>SBU__c</name>
+        <picklistValues>
+            <masterLabel>FEHBP</masterLabel>
+            <translation><!-- FEHBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large</masterLabel>
+            <translation><!-- Large --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small/Medium</masterLabel>
+            <translation><!-- Small/Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA</masterLabel>
+            <translation><!-- TPA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SB Id --></label>
+        <name>SB_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SB Name --></label>
+        <name>SB_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- SL Analyst --></label>
+        <name>SL_Analyst__c</name>
+        <picklistValues>
+            <masterLabel>Madelyn Murtha</masterLabel>
+            <translation><!-- Madelyn Murtha --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rich Chaney</masterLabel>
+            <translation><!-- Rich Chaney --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SL Comments --></label>
+        <name>SL_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- As a result of moving to competitor, if unknown enter Unknown --></help>
+        <label><!-- Savings % --></label>
+        <name>Savings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sent To Market --></label>
+        <name>Sent_To_Market__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sent to NCAS/CFA Underwriting --></label>
+        <name>Sent_to_NCAS_Underwriting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sent to MD/DC Underwriting --></label>
+        <name>Sent_to_Underwriting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Rep Name Phone  Drawloop --></label>
+        <name>Service_Rep_Name_Phone_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Rep(s) --></label>
+        <name>Service_Rep__c</name>
+        <picklistValues>
+            <masterLabel>Barbara Gerber</masterLabel>
+            <translation><!-- Barbara Gerber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bernice Morris</masterLabel>
+            <translation><!-- Bernice Morris --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bonita Bell</masterLabel>
+            <translation><!-- Bonita Bell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Casey McCoy</masterLabel>
+            <translation><!-- Casey McCoy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Casteel Johnson</masterLabel>
+            <translation><!-- Casteel Johnson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheryl Coles</masterLabel>
+            <translation><!-- Cheryl Coles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christopher Taylor</masterLabel>
+            <translation><!-- Christopher Taylor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crystal Dove</masterLabel>
+            <translation><!-- Crystal Dove --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Danielle Isabelle</masterLabel>
+            <translation><!-- Danielle Isabelle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denise Mosco</masterLabel>
+            <translation><!-- Denise Mosco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dina Fiorito</masterLabel>
+            <translation><!-- Dina Fiorito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Donna Hase</masterLabel>
+            <translation><!-- Donna Hase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dorothy McGill</masterLabel>
+            <translation><!-- Dorothy McGill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elizabeth Fuhrman</masterLabel>
+            <translation><!-- Elizabeth Fuhrman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faye Flora</masterLabel>
+            <translation><!-- Faye Flora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia Greenwell</masterLabel>
+            <translation><!-- Georgia Greenwell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gordon Kay</masterLabel>
+            <translation><!-- Gordon Kay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heather Seilonen</masterLabel>
+            <translation><!-- Heather Seilonen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jennifer Fowler</masterLabel>
+            <translation><!-- Jennifer Fowler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joan Barbour</masterLabel>
+            <translation><!-- Joan Barbour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jordan Anderson</masterLabel>
+            <translation><!-- Jordan Anderson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jose Cabrera</masterLabel>
+            <translation><!-- Jose Cabrera --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Karen Gambrell</masterLabel>
+            <translation><!-- Karen Gambrell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kathryn Devaney</masterLabel>
+            <translation><!-- Kathryn Devaney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keith Berke</masterLabel>
+            <translation><!-- Keith Berke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kelly Ebner</masterLabel>
+            <translation><!-- Kelly Ebner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ketonya Cheatham</masterLabel>
+            <translation><!-- Ketonya Cheatham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kevin Hauer</masterLabel>
+            <translation><!-- Kevin Hauer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LaGretta Lyons</masterLabel>
+            <translation><!-- LaGretta Lyons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lauren Brueckman</masterLabel>
+            <translation><!-- Lauren Brueckman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linda D. Thompson</masterLabel>
+            <translation><!-- Linda D. Thompson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linda Pierce</masterLabel>
+            <translation><!-- Linda Pierce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lindsay Caldwell</masterLabel>
+            <translation><!-- Lindsay Caldwell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lisa Cress</masterLabel>
+            <translation><!-- Lisa Cress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lisa O’Boyle</masterLabel>
+            <translation><!-- Lisa O’Boyle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lisa Quigg</masterLabel>
+            <translation><!-- Lisa Quigg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lynn Dods-Liming</masterLabel>
+            <translation><!-- Lynn Dods-Liming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Makeda Hailegeberel</masterLabel>
+            <translation><!-- Makeda Hailegeberel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marlene Reid</masterLabel>
+            <translation><!-- Marlene Reid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marlies Fisher</masterLabel>
+            <translation><!-- Marlies Fisher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mary Bahr</masterLabel>
+            <translation><!-- Mary Bahr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michelle Finney</masterLabel>
+            <translation><!-- Michelle Finney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michelle Santos</masterLabel>
+            <translation><!-- Michelle Santos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michelle Weiss</masterLabel>
+            <translation><!-- Michelle Weiss --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Molly McAllen</masterLabel>
+            <translation><!-- Molly McAllen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nanci Sebeniecher</masterLabel>
+            <translation><!-- Nanci Sebeniecher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Patricia Washington</masterLabel>
+            <translation><!-- Patricia Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Patrick Fabrizio</masterLabel>
+            <translation><!-- Patrick Fabrizio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paulette Freeman</masterLabel>
+            <translation><!-- Paulette Freeman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phillip Dorroh</masterLabel>
+            <translation><!-- Phillip Dorroh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phyllis Fantazier</masterLabel>
+            <translation><!-- Phyllis Fantazier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Robert Hooker</masterLabel>
+            <translation><!-- Robert Hooker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sara Bouchat</masterLabel>
+            <translation><!-- Sara Bouchat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Serita Brown</masterLabel>
+            <translation><!-- Serita Brown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shaopei Zhang</masterLabel>
+            <translation><!-- Shaopei Zhang --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sharon Johnson</masterLabel>
+            <translation><!-- Sharon Johnson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shawnise Smith</masterLabel>
+            <translation><!-- Shawnise Smith --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sheray Austin</masterLabel>
+            <translation><!-- Sheray Austin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sherry Schuyler</masterLabel>
+            <translation><!-- Sherry Schuyler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sonya Hinds</masterLabel>
+            <translation><!-- Sonya Hinds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sonya O'Neal</masterLabel>
+            <translation><!-- Sonya O&apos;Neal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Susan Sachs</masterLabel>
+            <translation><!-- Susan Sachs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terri Dixon</masterLabel>
+            <translation><!-- Terri Dixon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timothy Pollock</masterLabel>
+            <translation><!-- Timothy Pollock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Torrell Jones</masterLabel>
+            <translation><!-- Torrell Jones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tracie Heavirland</masterLabel>
+            <translation><!-- Tracie Heavirland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tracy Bradlee</masterLabel>
+            <translation><!-- Tracy Bradlee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vanessa Potts</masterLabel>
+            <translation><!-- Vanessa Potts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veronica Williams</masterLabel>
+            <translation><!-- Veronica Williams --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vurneda Godfrey</masterLabel>
+            <translation><!-- Vurneda Godfrey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warren Walls</masterLabel>
+            <translation><!-- Warren Walls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wendelin Cusick</masterLabel>
+            <translation><!-- Wendelin Cusick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ysbell Congdon</masterLabel>
+            <translation><!-- Ysbell Congdon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zalima Johnson</masterLabel>
+            <translation><!-- Zalima Johnson --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Service Rep(s) --></label>
+        <name>Service_Rep_s__c</name>
+        <relationshipLabel><!-- Opportunities (Service Rep(s)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sold By Carrier --></label>
+        <name>Sold_By_Carrier__c</name>
+        <picklistValues>
+            <masterLabel>CareFirst</masterLabel>
+            <translation><!-- CareFirst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HM</masterLabel>
+            <translation><!-- HM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IOARE</masterLabel>
+            <translation><!-- IOARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAS</masterLabel>
+            <translation><!-- RAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunlife</masterLabel>
+            <translation><!-- Sunlife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swiss Re Corporate Solutions</masterLabel>
+            <translation><!-- Swiss Re Corporate Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Symetra</masterLabel>
+            <translation><!-- Symetra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tokio Marine HCC</masterLabel>
+            <translation><!-- Tokio Marine HCC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sold Date --></label>
+        <name>Sold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spec Ded Offered 1 --></label>
+        <name>Spec_Ded_Offered_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spec Ded Offered 2 --></label>
+        <name>Spec_Ded_Offered_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spec Ded Offered 3 --></label>
+        <name>Spec_Ded_Offered_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spec Ded Offered 4 --></label>
+        <name>Spec_Ded_Offered_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spec Ded Sold --></label>
+        <name>Spec_Ded_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage Status --></label>
+        <name>Stage_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strengths --></label>
+        <name>Strengths__c</name>
+    </fields>
+    <fields>
+        <label><!-- Successor Benefit Comparison --></label>
+        <name>Successor_Benefit_Comparison__c</name>
+        <picklistValues>
+            <masterLabel>Comparable</masterLabel>
+            <translation><!-- Comparable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lesser</masterLabel>
+            <translation><!-- Lesser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Richer</masterLabel>
+            <translation><!-- Richer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Will Not Provide</masterLabel>
+            <translation><!-- Will Not Provide --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- System --></label>
+        <name>System__c</name>
+        <picklistValues>
+            <masterLabel>Facets</masterLabel>
+            <translation><!-- Facets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LuminX</masterLabel>
+            <translation><!-- LuminX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASCO</masterLabel>
+            <translation><!-- NASCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Alliance</masterLabel>
+            <translation><!-- National Alliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Lease</masterLabel>
+            <translation><!-- Network Lease --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Termination Date --></label>
+        <name>Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Actual Contracts - Test --></label>
+        <name>Test_Total_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Dental Contracts --></label>
+        <name>Total_Dental_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Drug Contracts --></label>
+        <name>Total_Drug_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Medical Contracts --></label>
+        <name>Total_Medical_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Vision Contracts --></label>
+        <name>Total_Vision_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transitioned --></label>
+        <name>Transitioned__c</name>
+    </fields>
+    <fields>
+        <label><!-- UW Renewal Release Date --></label>
+        <name>UW_Renewal_Release_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- U/W - Sales Management Involved --></label>
+        <name>U_W_Sales_Management_Involved__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- UnderwriterUser --></label>
+        <name>UnderwriterUser__c</name>
+        <relationshipLabel><!-- Opportunities (UnderwriterUser) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- MD/DC Underwriter --></label>
+        <name>Underwriter__c</name>
+        <picklistValues>
+            <masterLabel>Amanda Nichols</masterLabel>
+            <translation><!-- Amanda Nichols --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aviva Bezrodny</masterLabel>
+            <translation><!-- Aviva Bezrodny --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bethany Smith</masterLabel>
+            <translation><!-- Bethany Smith --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brandi Wiggins</masterLabel>
+            <translation><!-- Brandi Wiggins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brian Williams</masterLabel>
+            <translation><!-- Brian Williams --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Codey Sellers</masterLabel>
+            <translation><!-- Codey Sellers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dana Pospisil</masterLabel>
+            <translation><!-- Dana Pospisil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diane Lentz</masterLabel>
+            <translation><!-- Diane Lentz --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Douglas Stone</masterLabel>
+            <translation><!-- Douglas Stone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ed Haley</masterLabel>
+            <translation><!-- Ed Haley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eric Ho</masterLabel>
+            <translation><!-- Eric Ho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eunice Addo</masterLabel>
+            <translation><!-- Eunice Addo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Felicity Prince</masterLabel>
+            <translation><!-- Felicity Prince --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joy Routson</masterLabel>
+            <translation><!-- Joy Routson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joyce Mann</masterLabel>
+            <translation><!-- Joyce Mann --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kafil Patwary</masterLabel>
+            <translation><!-- Kafil Patwary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kathy Wolf</masterLabel>
+            <translation><!-- Kathy Wolf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kevin Groves</masterLabel>
+            <translation><!-- Kevin Groves --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lauren Richardson</masterLabel>
+            <translation><!-- Lauren Richardson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leo Coley</masterLabel>
+            <translation><!-- Leo Coley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manigeh Hauff</masterLabel>
+            <translation><!-- Manigeh Hauff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mary Beth Breeden</masterLabel>
+            <translation><!-- Mary Beth Breeden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mary Gemmill</masterLabel>
+            <translation><!-- Mary Gemmill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Murriel McManus</masterLabel>
+            <translation><!-- Murriel McManus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shade Dada</masterLabel>
+            <translation><!-- Shade Dada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shahrose Noman</masterLabel>
+            <translation><!-- Shahrose Noman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shirley Solloway</masterLabel>
+            <translation><!-- Shirley Solloway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toyin George</masterLabel>
+            <translation><!-- Toyin George --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tyler Steckbeck</masterLabel>
+            <translation><!-- Tyler Steckbeck --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>William Thornhill</masterLabel>
+            <translation><!-- William Thornhill --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MD/DC Underwriting Completed --></label>
+        <name>Underwriting_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwriting Entity --></label>
+        <name>Underwriting_Entity__c</name>
+        <picklistValues>
+            <masterLabel>CFA</masterLabel>
+            <translation><!-- CFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCAS</masterLabel>
+            <translation><!-- NCAS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MD/DC Underwriting Status --></label>
+        <name>Underwriting_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DeclinedToQuote</masterLabel>
+            <translation><!-- DeclinedToQuote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Weaknesses --></label>
+        <name>Weaknesses__c</name>
+    </fields>
+    <fields>
+        <help><!-- User can select multiple Won/Loss Reasons --></help>
+        <label><!-- Won/Lost Reason --></label>
+        <name>Won_Lost_Reason__c</name>
+        <picklistValues>
+            <masterLabel>ASO Capabilities</masterLabel>
+            <translation><!-- ASO Capabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Name/EIN Name</masterLabel>
+            <translation><!-- Account Name/EIN Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Acquisition</masterLabel>
+            <translation><!-- Acquisition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CareFirst PCMH/TCCI Model</masterLabel>
+            <translation><!-- CareFirst PCMH/TCCI Model --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ceded</masterLabel>
+            <translation><!-- Ceded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decline by Sales</masterLabel>
+            <translation><!-- Decline by Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defined Contribution: Private Exchange</masterLabel>
+            <translation><!-- Defined Contribution: Private Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defined Contribution: Pub Exchange/Indi</masterLabel>
+            <translation><!-- Defined Contribution: Pub Exchange/Indi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employer Discontinued Offering Coverage</masterLabel>
+            <translation><!-- Employer Discontinued Offering Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HQ Moved Out of CareFirst Service Area</masterLabel>
+            <translation><!-- HQ Moved Out of CareFirst Service Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HQ Moved into CareFirst Service Area</masterLabel>
+            <translation><!-- HQ Moved into CareFirst Service Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Check</masterLabel>
+            <translation><!-- Market Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Management</masterLabel>
+            <translation><!-- Medical Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Access</masterLabel>
+            <translation><!-- Network Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Tools/Cost Transparency Tools</masterLabel>
+            <translation><!-- Online Tools/Cost Transparency Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opr Service  Billing, Enroll, Claim</masterLabel>
+            <translation><!-- Opr Service  Billing, Enroll, Claim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of Business</masterLabel>
+            <translation><!-- Out of Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Political</masterLabel>
+            <translation><!-- Political --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price (Rate/ Discounts)</masterLabel>
+            <translation><!-- Price (Rate/ Discounts) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product(s)</masterLabel>
+            <translation><!-- Product(s) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting Capabilities</masterLabel>
+            <translation><!-- Reporting Capabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Account Management</masterLabel>
+            <translation><!-- Sales Account Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Term for Non-Payment</masterLabel>
+            <translation><!-- Term for Non-Payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wellness Features</masterLabel>
+            <translation><!-- Wellness Features --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Went to a competitor’s ASO</masterLabel>
+            <translation><!-- Went to a competitor’s ASO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type --></label>
+        <name>Workplan_Type__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Check this box to indicate segmentation of 100 to 299 Large Group --></help>
+        <label><!-- 100 - 299 Large Group --></label>
+        <name>X100_199_Large_Group__c</name>
+    </fields>
+    <fields>
+        <help><!-- Health Contracts from Management Report --></help>
+        <label><!-- # of Contracts --></label>
+        <name>number_of_Contracts__c</name>
+    </fields>
+    <fields>
+        <help><!-- Health Mmos from Management Report --></help>
+        <label><!-- # of Member Months --></label>
+        <name>number_of_Member_Months__c</name>
+    </fields>
+    <layouts>
+        <layout>2-50 Opportunity Layout</layout>
+        <sections>
+            <label><!-- Lead Rep Information --></label>
+            <section>Lead Rep Information</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy System Information --></label>
+            <section>Legacy System Information</section>
+        </sections>
+        <sections>
+            <label><!-- MD/DC Underwriting --></label>
+            <section>MD/DC Underwriting</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>200+ Opportunity Layout</layout>
+        <sections>
+            <label><!-- Competitor --></label>
+            <section>Competitor</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Contract Totals --></label>
+            <section>Enrollment Contract Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Expected RFP Activity --></label>
+            <section>Expected RFP Activity</section>
+        </sections>
+        <sections>
+            <label><!-- Jeopardy Information --></label>
+            <section>Jeopardy Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Rep Information --></label>
+            <section>Lead Rep Information</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy System Information --></label>
+            <section>Legacy System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Legal Account Name --></label>
+            <section>Legal Account Name</section>
+        </sections>
+        <sections>
+            <label><!-- MD/DC Underwriting --></label>
+            <section>MD/DC Underwriting</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Offered --></label>
+            <section>Product(s) Offered</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Sold --></label>
+            <section>Product(s) Sold</section>
+        </sections>
+        <sections>
+            <label><!-- Stop Loss --></label>
+            <section>Stop Loss</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>51+ Opportunity Layout</layout>
+        <sections>
+            <label><!-- Competitor --></label>
+            <section>Competitor</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Contract Totals --></label>
+            <section>Enrollment Contract Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Expected RFP Activity --></label>
+            <section>Expected RFP Activity</section>
+        </sections>
+        <sections>
+            <label><!-- Jeopardy Information --></label>
+            <section>Jeopardy Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Rep Information --></label>
+            <section>Lead Rep Information</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy System Information --></label>
+            <section>Legacy System Information</section>
+        </sections>
+        <sections>
+            <label><!-- MD/DC Underwriting --></label>
+            <section>MD/DC Underwriting</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Offered --></label>
+            <section>Product(s) Offered</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Sold --></label>
+            <section>Product(s) Sold</section>
+        </sections>
+        <sections>
+            <label><!-- Stop Loss --></label>
+            <section>Stop Loss</section>
+        </sections>
+        <sections>
+            <label><!-- Termination Tracking --></label>
+            <section>Termination Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Competitor --></label>
+            <section>Competitor</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Contract Totals --></label>
+            <section>Enrollment Contract Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Expected RFP Activity --></label>
+            <section>Expected RFP Activity</section>
+        </sections>
+        <sections>
+            <label><!-- Jeopardy Information --></label>
+            <section>Jeopardy Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Rep Information --></label>
+            <section>Lead Rep Information</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy System Information --></label>
+            <section>Legacy System Information</section>
+        </sections>
+        <sections>
+            <label><!-- MD/DC Underwriting --></label>
+            <section>MD/DC Underwriting</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Offered --></label>
+            <section>Product(s) Offered</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Sold --></label>
+            <section>Product(s) Sold</section>
+        </sections>
+        <sections>
+            <label><!-- Stop Loss --></label>
+            <section>Stop Loss</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Prospecting</layout>
+        <sections>
+            <label><!-- Competitor --></label>
+            <section>Competitor</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy System Information --></label>
+            <section>Legacy System Information</section>
+        </sections>
+        <sections>
+            <label><!-- MD/DC Underwriting --></label>
+            <section>MD/DC Underwriting</section>
+        </sections>
+        <sections>
+            <label><!-- Potential RFP Activity --></label>
+            <section>Potential RFP Activity</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Offered --></label>
+            <section>Product(s) Offered</section>
+        </sections>
+        <sections>
+            <label><!-- Product(s) Sold --></label>
+            <section>Product(s) Sold</section>
+        </sections>
+        <sections>
+            <label><!-- Propsecting Details --></label>
+            <section>Propsecting Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Stop Loss Opportunity Layout</layout>
+        <sections>
+            <label><!-- Competitor --></label>
+            <section>Competitor</section>
+        </sections>
+        <sections>
+            <label><!-- Competitors --></label>
+            <section>Competitors</section>
+        </sections>
+        <sections>
+            <label><!-- Obsolete Fields --></label>
+            <section>Obsolete Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- RFP --></label>
+            <section>RFP</section>
+        </sections>
+        <sections>
+            <label><!-- SL Comments --></label>
+            <section>SL Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Stop Loss --></label>
+            <section>Stop Loss</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update Opportunity --></label>
+        <name>AIA_Opportunity_View</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create NCR Case --></label>
+        <name>Create_NCR_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Refresh Survey Contacts --></label>
+        <name>Refresh_Survey_Contacts_Lightning</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Opportunity --></label>
+        <name>Update_Opportunity</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- 200+ Opportunity Record Type --></description>
+        <label><!-- 200+ --></label>
+        <name>AIA_200</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Prospecting Opportunity Record Type --></description>
+        <label><!-- Prospecting --></label>
+        <name>Prospecting</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- 2-50 Opportunity Record Type --></description>
+        <label><!-- 2-50 --></label>
+        <name>X2_50</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- 51+ Opportunity Record Type --></description>
+        <label><!-- 51+ --></label>
+        <name>X51</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- 001: When System = National Alliance, Please enter the National Alliance ID. --></errorMessage>
+        <name>E001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 002: When National Alliance ID is filled in, Please add National Alliance to the System. --></errorMessage>
+        <name>E002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 003: The Description must start with a date in the format of &apos;mm/dd/yyyy&apos; --></errorMessage>
+        <name>E003_Description</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 004: Choose an item that was selected in the Admin Offered multi-picklist --></errorMessage>
+        <name>E004_Admin_Sold</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 005: A Specific Deductable Offered must equal the Specific Deductable Sold --></errorMessage>
+        <name>E005_Spec_Deduct_Sold</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 006: A Aggregate Specific Deductable Offered must equal the Aggregate Specific Deductable Sold --></errorMessage>
+        <name>E006_Aggr_Spec_Deduct_Sold</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 007: Close Date cannot be changed --></errorMessage>
+        <name>E007_Read_Only_Closed_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 008: Opportunity Name cannot be changed --></errorMessage>
+        <name>E008_Read_Only_Opp_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 009: Stage cannot be changed --></errorMessage>
+        <name>E009_Read_Only_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 010: Please type a value in the Other Sold Carrier field --></errorMessage>
+        <name>E010_Other_Sold_Carrier1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 011: Select &apos;Other&apos; when a value is in the Other Sold Carrier field --></errorMessage>
+        <name>E011_Other_Sold_Carrier2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 012: A date must be entered when RFP Requested is checked --></errorMessage>
+        <name>E012_RFP_Requested</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 013: Must be checked if RFP Expected Receipt Date is entered --></errorMessage>
+        <name>E013_RFP_Expected_Receipt_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 014: A date must be entered when RFP Actual Receipt Date is entered --></errorMessage>
+        <name>E014_RFP_Actual_Receipt_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 015: A date must be entered when RFP Due Date is entered --></errorMessage>
+        <name>E015_RFP_Due_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 016: RFP Comments must start with a date in the format of &apos;mm/dd/yyyy&apos; --></errorMessage>
+        <name>E016_RFP_Comments</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 017: RFP Strategy must start with a date in the format of &apos;mm/dd/yyyy&apos; --></errorMessage>
+        <name>E017_RFP_Strategy</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 018: Stage should be ‘Sold’ only when there is at least one Product linked to that Opportunity with ‘Product Sold’ checked. --></errorMessage>
+        <name>E018</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 019: Stage should be ‘Dead’ only when there is no related Product  with ‘Product Sold’ checked. --></errorMessage>
+        <name>E019</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 020: Stage should be &apos;Dead&apos; when the Off Cycle Term Date is entered. --></errorMessage>
+        <name>E020_Off_Cycle_Term</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 021: Off Cycle Term Date must be less than Effective Date --></errorMessage>
+        <name>E021_Off_Cycle_Term2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 022: If the Stage is &apos;Dead&apos; or &apos;Sold&apos; the Stage cannot be changed. Contact your SFDC Administrator for assistance. --></errorMessage>
+        <name>E022_Prevent_Stage_From_Changing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 023: The Close Date must be less than the Effective Date --></errorMessage>
+        <name>E023_Close_Date_Less_Effective_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 024: Please enter a Won/Lost Reason. --></errorMessage>
+        <name>E024_Won_Lost_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 025: Potential Contracts must be greater than zero. --></errorMessage>
+        <name>E025_Potential_Contracts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 026: Please select a Full Service Producer or General Producer but not both --></errorMessage>
+        <name>E026_FSP_OR_GP_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 027: Jeopardy Issue can only be blank when Account in Jeopardy is &apos;No&apos; --></errorMessage>
+        <name>E027</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 028: Jeopardy Issue must start with a date in the format of &apos;mm/dd/yyyy&apos; --></errorMessage>
+        <name>E028</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 029: When the Business is &apos;New Business Sales&apos; Account in Jeopardy must be &apos;No&apos; --></errorMessage>
+        <name>E029</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 030: Make sure the NASCO number(s) are 5 numeric digits and separated by commas with no spaces (i.e.: xxxxx,xxxxx,xxxxx,xxxxx). --></errorMessage>
+        <name>E030</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 031: Make sure the Facets number(s) are 4 digit and separated by commas with no spaces (i.e.: xxxx,xxxx,xxxx) --></errorMessage>
+        <name>E031</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 032: When SBU = &apos;Small/Medium&apos; and Market Segment = &apos;51-199&apos; Division must be &apos;51-199 New Business&apos; or &apos;51-199 Renewals&apos;. --></errorMessage>
+        <name>E032</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 033: When SBU = &apos;Large&apos; and Market Segment = &apos;200-999&apos; Division must be &apos;Commercial Business&apos; or &apos;Healthcare/Education/Par&apos; or &apos;Labor Affairs&apos; or &apos;State &amp; Municipalities&apos;. --></errorMessage>
+        <name>E033</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 034: When SBU = &apos;Large&apos; and Market Segment = &apos;200-999&apos;  or 1000+, Division must be &apos;Commercial Business&apos; or &apos;Healthcare/Education/Par&apos; or &apos;Labor Affairs&apos; or &apos;State &amp; Municipalities&apos;. --></errorMessage>
+        <name>E034</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 035: Make sure the National Alliance Id is numeric and a length of 5.  Multiple numbers must be separated by a comma with no space (i.e.: xxxxx,xxxxx,xxxxx). --></errorMessage>
+        <name>E035</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 038: When SBU = &apos;FEHBP&apos; Division must be &apos;FEHBP Account Management&apos; --></errorMessage>
+        <name>E038</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 039: When Division = &apos;Healthcare/Education/Par&apos; and Business Type = &apos;Renewal&apos; Underwriting Entity must be &apos;MD&apos; or &apos;DC&apos; --></errorMessage>
+        <name>E039</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 041: When Market Segment = &apos;51-199&apos; and Division = &apos;Labor Affairs&apos; SBU must be &apos;Large&apos; --></errorMessage>
+        <name>E041</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 042: When SBU = &apos;Large&apos; and Market Segment = &apos;51-199&apos; Division must be &apos;Labor Affairs&apos;. --></errorMessage>
+        <name>E042</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 043: When SBU = &apos;TPA&apos; and Market Segment = &apos;2-50 Underwriting Entity must be &apos;CFA&apos; or &apos;NCAS&apos;. --></errorMessage>
+        <name>E043</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 044: When SBU = &apos;TPA&apos; Division must be &apos;CFA&apos; or &apos;NCAS&apos; --></errorMessage>
+        <name>E044</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 045: When SBU = &apos;Small/Medium&apos; and Market Segment = &apos;2-50&apos; Division must be &apos;51-199 Renewals&apos;. --></errorMessage>
+        <name>E045</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 046: When SBU = &apos;Small/Medium&apos; and Market Segment = &apos;2-50&apos; and Division = &apos;51-199 Renewals&apos; Underwriting Entity must be &apos;MD&apos; or &apos;DC&apos; --></errorMessage>
+        <name>E046</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 047: When SBU = &apos;Small/Medium&apos; and Market Segment = &apos;51-199&apos; and Division = &apos;51-199 Renewals&apos; Underwriting Entity must be &apos;MD&apos; or &apos;DC&apos; --></errorMessage>
+        <name>E047</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 048: When System = NASCO, Please enter the NASCO Acct. #. --></errorMessage>
+        <name>E048</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 049: When System = Facets, Please enter the Facets Group ID. --></errorMessage>
+        <name>E049</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 050: When System = LuminX, Please enter the LuminX Group ID. --></errorMessage>
+        <name>E050</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 051: When LuminX Group ID is filled in, Please add LuminX to the System. --></errorMessage>
+        <name>E051</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 052: When Facets Group ID is filled in, Please add Facets to the System. --></errorMessage>
+        <name>E052</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 053: When NASCO Acct. # is filled in, Please add NASCO to the System. --></errorMessage>
+        <name>E053</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 054: Care and Flexx are no longer valid Systems. --></errorMessage>
+        <name>E054</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 055: Net. Lease Group ID must be in the format of NWLnnnn --></errorMessage>
+        <name>E055</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 056: When Net. Lease Group ID is filled in, Please add Network Lease to the System. --></errorMessage>
+        <name>E056</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 057: If Type is Network Leasing Local System should contain Network Lease and if System contains Network Lease, Type should be Network Leasing Local. --></errorMessage>
+        <name>E057</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 058: Contract End Date must be greater than the Effective Date --></errorMessage>
+        <name>E058</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 059: The Effective Date must be the first of the month.  Contact your SFDC Administrator for assistance if you have an exception to this rule. --></errorMessage>
+        <name>E059</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 060: Contract End Date must be the last day of a month.  Contact your SFDC Administrator for assistance if you have an exception to this rule. --></errorMessage>
+        <name>E060</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 061: When the Business Type is &apos;New&apos;,  Dental Account in Jeopardy must be &apos;No&apos; --></errorMessage>
+        <name>E061</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 062: Dental Jeopardy Issue can only be blank when Dental Account in Jeopardy is &apos;No&apos; --></errorMessage>
+        <name>E062</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 063: Dental Jeopardy Issue must start with a date in the format of &apos;mm/dd/yyyy&apos; --></errorMessage>
+        <name>E063</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 064: Please select an incumbent or successor when stage = sold/dead --></errorMessage>
+        <name>E064</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- E065:You are not authorized to create 51+ record type opportunity for 2-50 Record type account --></errorMessage>
+        <name>E065</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EO66:  You are not authorized to change 2-50 record. Please contact your System Administrator. --></errorMessage>
+        <name>E066</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 067: Stage can only be Prospecting when the “Business Type” is New. --></errorMessage>
+        <name>E067</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- E068 : Stage cannot be Prospecting for 51+ and 200+ recordtypes --></errorMessage>
+        <name>E068</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- E069 : Record Type can only be changed from &apos;51+&apos; to &apos;200+&apos; when SBU = &apos;Large&apos; , Stage = &apos;Proposal&apos; and Effective Date not more than 370 days ago. --></errorMessage>
+        <name>E069</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- E071:Before the Opportunity can be updated, Please cancel this action and go to the FSP/GP related list and create FSP or GP record --></errorMessage>
+        <name>E071</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- E072: All Termination Tracking section fields are required when Opportunities of Division: 51-199 renewal and SBU: Small/Medium are closed as Dead --></errorMessage>
+        <name>E072</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 073: Please add ‘Sales Broker’ as ‘Broker Agent of Record’ role and complete ‘Primary’ checkbox under ‘Contact Roles’ related list to update this opportunity as ‘Sold’. --></errorMessage>
+        <name>E073</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 074: Please add a ‘Partner’ and complete ‘Selling Agency’ checkbox under ‘Partner’ related list to update this opportunity as ‘Sold’. --></errorMessage>
+        <name>E074</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 075: Please add a ‘FSP or GP’ and complete ‘Producer of Record’ under ‘FSP/GP’ related list to update this opportunity as ‘Sold’. --></errorMessage>
+        <name>E075</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- E076: Please confirm that you want to make the opportunity as Dead by selecting &apos;Yes&apos; in &apos;Mark this Opportunity as Dead?&apos; field --></errorMessage>
+        <name>E076</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EOPP070:Cannot Verify Account Legal Name --></errorMessage>
+        <name>EOPP070</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 001: You must enter a value if the Stage is &apos;SOLD&apos; or blank if the Stage is not &apos;SOLD&apos; --></errorMessage>
+        <name>ZZ_E001_Products_Sold_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 002: If Stage = &quot;DEAD or PROPOSAL&quot; then Estimated Actual Contracts must be zero.
+If Stage =  &quot;SOLD&quot; then Estimated Actual Contracts must be &gt; zero! --></errorMessage>
+        <name>ZZ_E002_Stage_Sold_Require_Est_Act_Contr</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 018: Stage should be ‘Sold’ only when there is at least one Product linked to that Opportunity with ‘Product Sold’ checked. --></errorMessage>
+        <name>ZZ_E018_Opportunity_Stage_Sold</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 019: Stage should be ‘Dead’ only when there is no related Product  with ‘Product Sold’ checked. --></errorMessage>
+        <name>ZZ_E019_Opportunity_Stage_Dead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 035: When SBU = &apos;TPA&apos; and Market Segment = &apos;51-199&apos; Division must be &apos;CFA&apos; or &apos;NCAS&apos;. --></errorMessage>
+        <name>ZZ_E035</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 036: When SBU = &apos;TPA&apos; and Market Segment = &apos;200-999&apos; Division must be &apos;CFA&apos; or &apos;NCAS&apos;. --></errorMessage>
+        <name>ZZ_E036</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 037: When SBU = &apos;TPA&apos; and Market Segment = &apos;1000+&apos; Division must be &apos;CFA&apos; or &apos;NCAS&apos;. --></errorMessage>
+        <name>ZZ_E037</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 040: When Division = &apos;Labor Affairs&apos; and Business Type = &apos;Renewal&apos; Underwriting Entity must be &apos;MD&apos; or &apos;DC&apos; --></errorMessage>
+        <name>ZZ_E040</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 067: When SBU = &apos;Small/Medium&apos; and Market Segment = &apos;101-199 New Mid-Market&apos; or &apos;Hybrid LG GF &amp; SG ACA&apos;  or &apos;51-100 ACA&apos; Underwriting Entity must be &apos;DC&apos; or &apos;MD&apos; and Division can not be labor Affairs --></errorMessage>
+        <name>zzzE067</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 068: When SBU = &apos;Large&apos; and Market Segment = &apos;51-100 ACA&apos; or &apos;101-199 New Mid-Market&apos; or &apos;Hybrid LG GF &amp; SG ACA&apos;  Division must be &apos;Labor Affairs&apos;. --></errorMessage>
+        <name>zzzE068</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 069: When SBU = &apos;Small/Medium&apos; and Market Segment = &apos;Hybrid LG GF &amp; SG ACA&apos;  and Division Entity must be 51-199 Renewals --></errorMessage>
+        <name>zzzE069</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- BlueGLE --></label>
+        <name>BlueGLE</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Clone_with_Products --></label>
+        <name>Clone_with_Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Clone_without_Products --></label>
+        <name>Clone_without_Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NASCO_Account_Documents --></label>
+        <name>NASCO_Account_Documents</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Refresh_Survey_Contacts --></label>
+        <name>Refresh_Survey_Contacts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_to_BE --></label>
+        <name>Submit_to_BE</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Renewal_Dead</name>
+        <subject><!-- Opportunity Marked as Dead --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

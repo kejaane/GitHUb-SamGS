@@ -1,0 +1,514 @@
+<!--
+/* =========================================================================================
+ * Date         : 08/01/2016
+ * Developer    : Laveen Kattela
+ * Purpose      : This VF Page refers to the Community My case list  page "Body section".This  page will be displayed when a Community user Click on my case tab on the home page.
+ *                It has  My cases And Agency Cases Tab  
+ *                1. "MY CASES"  - Which only visiable's to Broker Agent & Asiistant    -  Filters logic in place, you can filter the cases based on input value on the particular field  
+ *                2. "AGENCY CASES" - (visiable to  Assistant)  - Filters logic in place
+ *                3.  Eight fields are displayed for the quick view on the page
+ *                   
+ *=========================================================================================
+ * Update History
+ *  ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 08/01/16   |  Laveen Kattela    | Initial Version                                          
+ *===========+============+================================================================
+ */
+ -->
+<apex:page standardStylesheets="false" sidebar="false"  showHeader="false" applyBodyTag="false" applyHtmlTag="false"   docType="html-5.0" controller="SBU_MyCasesPageController" id="pg">
+<html lang="en" class="oxh">
+
+    <style>
+    .pagination ul>.active>a{cursor:none;}
+    .pagination ul>.active>a, 
+    .pagination ul>.active>span {
+        color: #999999;
+        cursor: default;
+    }
+    .pagination ul>li>a:hover, .pagination ul>.active>a, .pagination ul>.active>span {
+    background-color: #f5f5f5;
+}.pagination ul>li>a, .pagination ul>li>span {
+    float: left;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+    .pagination{
+        width: 42%;
+        margin: 20px auto;
+        display: inherit;
+    }
+    .pagination ul li {
+        background:none !important;
+        display:inline-block;
+        padding:0 !important;
+        border-radius: 5px;
+        margin: 0 2px;
+        
+        border: 1px solid #dadada;
+    }
+    .pagination ul li a{padding: 10px 15px !important; cursor:pointer;}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script>   
+         
+        var demoApp = angular.module('demoApp', []);
+        
+          demoApp.controller('DemoCtrl', function ($scope) {
+            $scope.csummary ;
+            $scope.recordsToDisplay ;
+            $scope.myCasesRecords;
+            $scope.allAgenciesRecords;
+            $scope.contacts;
+            $scope.Title;
+            $scope.filteredList= [];
+            $scope.tab = 1;
+            $scope.filteredItems = [];
+            $scope.itemsPerPage = 20;
+            $scope.pagedItems ;
+            $scope.currentPage = 0;
+        
+            $scope.setTab = function(newTab){
+              $scope.tab = newTab;
+            };
+        
+            $scope.isSet = function(tabNum){
+              return $scope.tab === tabNum;
+            };
+            
+            
+            //$scope.contacts = {!contacts}
+            $scope.names = [ "All","Open","In-Progress", "Closed"];
+            $scope.selectedName = 'All';   
+
+              // calculate page in place
+            $scope.groupToPages = function () {
+               // alert('groupToPages');
+                $scope.pagedItems = [];
+                console.log('****************'+$scope.filteredList.length);
+                for (var i = 0; i < $scope.filteredList.length; i++) {
+                    if (i % $scope.itemsPerPage === 0) {
+                        $scope.pagedItems[Math.floor(i / $scope.itemsPerPage)] = [ $scope.filteredList[i] ];
+                    } else {
+                        $scope.pagedItems[Math.floor(i / $scope.itemsPerPage)].push($scope.filteredList[i]);
+                    }
+                }
+                $scope.safeApply();
+                console.log('****************',$scope.pagedItems);
+            };
+            
+           // making the call to the controller remore action method           
+            $scope.CaseSummary= function() {
+                Visualforce.remoting.Manager.invokeAction(
+                 '{!$RemoteAction.SBU_MyCasesPageController.getCaseSummary}', 
+                 function(result, event) {
+                   $scope.csummary= result; 
+                   $scope.Title = 'My Cases';
+                   $scope.recordsToDisplay = $scope.csummary.mycaseList;
+                   $scope.filteredList = $scope.recordsToDisplay;
+                   //$scope.safeApply();
+                  /* console.log($scope.csummary.mycaseList.length);
+                   console.log($scope.csummary.mycaseList);
+                   console.log($scope.csummary.AgencyCasesList.length);
+                   console.log($scope.csummary.AgencyCasesList); */
+
+                   $scope.groupToPages();
+                   $scope.safeApply();
+                 });
+                //console.log($scope.csummary); 
+                //console.log(csummary.myCases); 
+
+                console.log('****'+$scope.filteredList.length);
+                
+                
+            };
+            $scope.CaseSummary();
+            
+           
+            
+            $scope.range = function (start, end) {
+               // alert('range');
+                var ret = [];
+                if (!end) {
+                    end = start;
+                    start = 0;
+                }
+                for (var i = start; i < end; i++) {
+                    ret.push(i);
+                }
+                return ret;
+            };
+
+            $scope.prevPage = function () {
+                if ($scope.currentPage > 0) {
+                    $scope.currentPage--;
+                }
+            };
+
+            $scope.nextPage = function () {
+                if ($scope.currentPage < $scope.pagedItems.length - 1) {
+                    $scope.currentPage++;
+                }
+            };
+
+            $scope.setPage = function () {
+                $scope.currentPage = this.n;
+            };
+
+            
+            //console.log($scope.recordsToDisplay );
+            // logic for changing the tab from My cases to all agency and vice versa
+            $scope.TabChange = function(svar) {
+                debugger;
+                if(svar == 'MyCases')
+                {
+                    
+                    $scope.recordsToDisplay = $scope.csummary.mycaseList;
+                    $scope.filteredList = $scope.recordsToDisplay;
+                    $scope.Title = 'My Cases';
+                    $scope.groupToPages();
+                }   
+                if(svar == 'AllAgencies')
+                {
+                  
+                    $scope.recordsToDisplay = $scope.csummary.AgencyCasesList; 
+                    $scope.filteredList = $scope.recordsToDisplay;
+                    $scope.Title = 'Agency Cases';
+                    $scope.groupToPages();
+                }
+            }
+            
+            // search on text for each of the search box section
+            $scope.search = function()
+            {  
+                $scope.filteredList = _.filter($scope.recordsToDisplay ,
+                         function(items){  
+                             return searchUtil(items,$scope.CN); 
+                         });
+                
+                if($scope.CN == '')
+                {
+                    $scope.filteredList = $scope.recordsToDisplay ;
+                }
+                $scope.groupToPages();
+                $scope.currentPage = 0;
+            }
+            
+                $scope.search1 = function()
+                { 
+                                      
+                    $scope.filteredList = _.filter($scope.recordsToDisplay ,
+                             function(item){  
+                                 return searchUtil1(item,$scope.SUB); 
+                             });
+                    
+                    if($scope.SUB == '')
+                    {
+                        $scope.filteredList = $scope.recordsToDisplay ;
+                    }
+                    $scope.groupToPages();
+                    $scope.currentPage = 0;
+                } 
+                $scope.search2 = function()
+                { 
+                                      
+                    $scope.filteredList = _.filter($scope.recordsToDisplay ,
+                             function(item){  
+                                 return searchUtil2(item,$scope.ORG); 
+                             });
+                    
+                    if($scope.ORG == '')
+                    {
+                        $scope.filteredList = $scope.recordsToDisplay ;
+                    }
+                    $scope.groupToPages();
+                    $scope.currentPage = 0;
+                } 
+                $scope.search3 = function()
+                { 
+                                      
+                    $scope.filteredList = _.filter($scope.recordsToDisplay ,
+                             function(item){  
+                                 return searchUtil3(item,$scope.GNI); 
+                             });
+                    
+                    if($scope.GNI == '')
+                    {
+                        $scope.filteredList = $scope.recordsToDisplay ;
+                    }
+                    $scope.groupToPages();
+                    $scope.currentPage = 0;
+                } 
+                $scope.search4 = function()
+                { 
+                                      
+                    $scope.filteredList = _.filter($scope.recordsToDisplay ,
+                             function(item){  
+                                 return searchUtil4(item,$scope.SID); 
+                             });
+                    if($scope.SID == '')
+                    {
+                        $scope.filteredList = $scope.recordsToDisplay ;
+                    }
+
+                    $scope.groupToPages();
+                    $scope.currentPage = 0;
+                }
+                $scope.STChange = function()
+                { 
+                     $scope.filteredList = _.filter($scope.recordsToDisplay ,
+                             function(item){  
+                                 return searchUtilST(item,$scope.ST); 
+                             });
+                     if($scope.ST == 'All')
+                    {
+                        $scope.filteredList = $scope.recordsToDisplay ;
+                    }
+
+                    $scope.groupToPages();
+                    $scope.currentPage = 0;
+                }
+            
+                      
+            $scope.safeApply = function(fn) {
+                var phase = this.$root.$$phase;
+                if(phase == '$apply' || phase == '$digest') {
+                    if(fn && (typeof(fn) === 'function')) {
+                      fn();
+                    }
+                } 
+                else {
+                    this.$apply(fn);
+                }
+
+            };  
+
+            
+        });
+       // this search will work when you erase the text from the search box. 
+        function searchUtil(item,toSearch)
+        {            
+            return ( item.CaseNumber.toLowerCase().indexOf(toSearch.toLowerCase()) > -1 ) ? true : false ;
+        }
+        function searchUtil1(item,toSearch)
+        {            
+           var flag = false;               
+           if(item.Subject != null)
+           {
+             flag = ( item.Subject.toLowerCase().indexOf(toSearch.toLowerCase()) > -1 ) ? true : false ;
+           }
+            return flag;
+        }
+        function searchUtil2(item,toSearch)
+        {            
+           var flag = false;               
+           if(item.Origin != null)
+           {
+             flag = ( item.Origin.toLowerCase().indexOf(toSearch.toLowerCase()) > -1 ) ? true : false ;
+           }
+            return flag;
+        }
+        function searchUtil3(item,toSearch)
+        {            
+               var flag = false;               
+               if(item.GroupNameID != null)
+               {
+                 flag = ( item.GroupNameID.toLowerCase().indexOf(toSearch.toLowerCase()) > -1 ) ? true : false ;
+               }
+                return flag;
+        }
+        function searchUtil4(item,toSearch)
+        {            
+               var flag = false;               
+               if(item.SubscriberID != null)
+               {
+                 flag = ( item.SubscriberID == toSearch ) ? true : false ;
+               }
+                return flag;
+        }
+        function searchUtilST(item,toSearch)
+        {            
+               var flag = false;               
+               if(item.Status != null)
+               {
+                 flag = ( item.Status == toSearch ) ? true : false ;
+               }
+                return flag;
+        }
+
+    </script>
+    
+    <body lang="EN-US" ng-app="demoApp">
+        
+         <apex:composition template="Communities_HeaderMeta"></apex:composition>
+         
+         
+        <!-- main container for all dynamic feature content-->
+        <div class="cf-main-container" ng-controller="DemoCtrl">
+            <c:Communities_Header /> 
+            <div class="body-container row clearfix">   
+
+           
+        <!-- error ends here  information section before login message  -->
+            <!-- Tab Strcuter Begin-->
+            <apex:outputPanel rendered="{!IF(LEN($CurrentPage.parameters.cn)>0, true,false)}">
+            <div class="col-md-12 col-sm-12 col-xs-12" >
+            
+            <p class="alert-success" style="margin-top:0px !important; padding-bottom:10px !important;">Comment added to Case {!$CurrentPage.parameters.cn} successfully.</p>
+            </div>      
+            </apex:outputPanel>     
+            <apex:outputPanel rendered="{!IF(LEN($CurrentPage.parameters.casenumber)>0, true,false)}">     
+            <div class="col-md-12 col-sm-12 col-xs-12" >        
+                    
+            <p class="alert-success" style="margin-top:0px !important; padding-bottom:10px !important;">A new Case {!$CurrentPage.parameters.casenumber} has been created..</p>
+            </div>
+            </apex:outputPanel>
+                        <div class=" col-md-12 col-sm-12 col-xs-12 m-top-40">
+                         <div >
+                            <ul class="nav nav-tabs" style="background:none">
+                            <li ng-class="{ active: isSet(1) }" style="background:none" >
+                                <a href='' ng-click="setTab(1);TabChange('MyCases');" style="background-color:#003366;color:white;padding:8px 10px 10px 10px !important;"  >My Cases</a>
+                            </li>
+                            <li ng-class="{ active: isSet(2) }" style="background:none" ng-show="csummary.isShowAgencyCasses" >
+                                <a href='' ng-click="setTab(2);TabChange('AllAgencies');" style="background-color:#003366;color:white;padding:8px 10px 10px 10px !important;" >Agency Cases</a>
+                            </li>       
+                            </ul>
+                        </div>  
+                        <div >
+                        <div >
+                        <div ng-show="isSet(1)">  
+                        <div class="panelContentBorder clearfix">
+                            <div style="padding:0px 3px " > <h3 style="padding:0px 10px" >{{Title}} ({{recordsToDisplay.length}})</h3> <hr/>   </div>                     
+                            <div class=" col-md-3 col-sm-3 col-xs-12  pull-right m-top-10">  <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_NewCasepage" class="btn btn-primary btn-lg btn-block" >Create a New Case</a>   </div>
+                            <div class="clearfix"></div>                          
+                            <div class="row">
+                              <div class="col-md-12 col-sm-12 col-xs-12">
+                                      <article  class="active" id="myCases">  
+                                        <table width="100%" class="table grayTab m-top-10" style="margin-bottom:0px;table-layout:fixed!important;">
+                                            <thead class="hidden-xs">
+                                                 <tr>
+                                                   <th>Case Number</th>
+                                                   <th>Subject</th>
+                                                   <th>Origin</th>
+                                                   <th>Group Id</th>
+                                                   <th>Subscriber Id</th>
+                                                   <th>Status</th>
+                                                  <th>Created On</th>
+                                                  <th>Closed On</th>                                                      
+                                                 </tr>
+                                                <tr id="filter">          
+                                                   <td><input  ng-change="search()"  type="text" ng-model="CN"  style="width:100px"/></td>
+                                                   <td><input  ng-change="search1()" class="js-filter  form-control"  type="text" ng-model="SUB"  style="width:100px"/></td>
+                                                   <td><input ng-change="search2()" class="js-filter  form-control"  type="text" ng-model="ORG"  style="width:100px"/></td>
+                                                   <td><input ng-change="search3()" class="js-filter  form-control"  type="text" ng-model="GNI"  style="width:100px"/></td>
+                                                   <td><input ng-change="search4()"  class="js-filter  form-control"  type="text" ng-model="SID"  style="width:100px"/></td>
+                                                   <td><select class="small  js-filter" ng-model="ST" ng-options="x for x in names" ng-change="STChange()" ></select></td>
+                                                   <td></td>
+                                                 </tr>
+                                            </thead>
+                                              <tr ng-repeat="case in pagedItems[currentPage] | orderBy : '-Createdon'">   
+                                               <td> <span class="visible-xs pull-left"> Case Number</span><a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_CaseDetailPage?id={{case.cid}}"> {{case.CaseNumber}} </a></td>
+                                               <td style="word-wrap:break-word;"> <span class="visible-xs pull-left"> Subject</span> <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_CaseDetailPage?id={{case.cid}}"> {{case.Subject}} </a> </td>
+                                               <td>{{case.Origin}}</td>
+                                               <td>{{case.GroupNameID}}</td>
+                                               <td>{{case.SubscriberID}}</td>
+                                               <td>{{case.Status }}</td>
+                                               <td>{{case.Createdon | date :"MM/dd/yyyy hh:mm a"}}</td>
+                                               <td>{{case.Closedon  | date :"MM/dd/yyyy hh:mm a"}}</td> 
+                                             </tr>
+                                        </table>
+                                        </article>
+                                        
+                                </div>                                                    
+                            </div>                     
+                        </div>
+                                        <div class="pagination pull-center">
+                                            <ul>
+                                                <li ng-class="{disabled: currentPage == 0}">
+                                                    <a  ng-click="prevPage()">« Prev</a>
+                                                </li>
+                                                <li ng-repeat="n in range(pagedItems.length)"
+                                                    ng-class="{active: n == currentPage}"
+                                                ng-click="setPage()">
+                                                    <a   ng-bind="n + 1">1</a>
+                                                </li>
+                                                <li ng-class="{disabled: currentPage == pagedItems.length - 1}">
+                                                    <a  ng-click="nextPage()">Next »</a>
+                                                </li>
+                                            </ul>
+                                        </div>       
+                     </div>
+                    <div ng-show="isSet(2)">
+                            <div class="panelContentBorder clearfix">
+                            <div style="padding:0px 3px " > <h3 style="padding:0px 10px" >{{Title}} ({{recordsToDisplay.length}})</h3> <hr/>   </div>                            
+                            <div class=" col-md-3 col-sm-3 col-xs-12  pull-right m-top-10">  <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_NewCasepage" class="btn btn-primary btn-lg btn-block" >Create a New Case</a>   </div>
+                            <div class="clearfix"></div>                          
+                            <div class="row">
+                              <div class="col-md-12 col-sm-12 col-xs-12">
+                                      <article  class="active" id="myCases">  
+                                        <table width="100%" class="table grayTab m-top-10" style="margin-bottom:0px;table-layout:fixed!important;">
+                                            <thead class="hidden-xs">
+                                                 <tr>
+                                                   <th>Case Number</th>
+                                                   <th>Subject</th>
+                                                   <th>Origin</th>
+                                                   <th>Group Id</th>
+                                                   <th>Subscriber Id</th>
+                                                   <th>Status</th>                                                   
+                                                   <th>Created On</th> 
+                                                   <th>Closed On</th>                                                     
+                                                 </tr>
+                                                <tr id="filter">          
+                                                   <td><input  ng-change="search()"  type="text" ng-model="CN"  style="width:100px"/></td>
+                                                   <td><input  ng-change="search1()" class="js-filter  form-control"  type="text" ng-model="SUB"  style="width:100px"/></td>
+                                                   <td><input ng-change="search2()" class="js-filter  form-control"  type="text" ng-model="ORG"  style="width:100px"/></td>
+                                                   <td><input ng-change="search3()" class="js-filter  form-control"  type="text" ng-model="GNI"  style="width:100px"/></td>
+                                                   <td><input ng-change="search4()"  class="js-filter  form-control"  type="text" ng-model="SID"  style="width:100px"/></td>
+                                                   <td><select class="small  js-filter" ng-model="ST" ng-options="x for x in names" ng-change="STChange()" ></select></td>
+                                                   <td></td>
+                                                 </tr>
+                                            </thead>
+                                              <tr ng-repeat="case in pagedItems[currentPage] | orderBy : '-Createdon'">   
+                                               <td> <span class="visible-xs pull-left"> Case Number</span><a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_CaseDetailPage?id={{case.cid}}"> {{case.CaseNumber}} </a></td>
+                                               <td style="word-wrap:break-word;"> <span class="visible-xs pull-left"> Subject</span> <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_CaseDetailPage?id={{case.cid}}"> {{case.Subject}} </a> </td>
+                                               <td>{{case.Origin}}</td>
+                                               <td>{{case.GroupNameID}}</td>
+                                               <td>{{case.SubscriberID}}</td>
+                                               <td>{{case.Status }}</td>
+                                               <td>{{case.Createdon | date :"MM/dd/yyyy hh:mm a"}}</td>
+                                               <td>{{case.Closedon  | date :"MM/dd/yyyy hh:mm a"}}</td> 
+                                             </tr>
+                                        </table>
+                                        </article>
+                                        <div class="pagination pull-center">
+                                            <ul>
+                                                <li ng-class="{disabled: currentPage == 0}">
+                                                    <a  ng-click="prevPage()">« Prev</a>
+                                                </li>
+                                                <li ng-repeat="n in range(pagedItems.length)"
+                                                    ng-class="{active: n == currentPage}"
+                                                ng-click="setPage()">
+                                                    <a   ng-bind="n + 1">1</a>
+                                                </li>
+                                                <li ng-class="{disabled: currentPage == pagedItems.length - 1}">
+                                                    <a  ng-click="nextPage()">Next »</a>
+                                                </li>
+                                            </ul>
+                                        </div>                     
+                                        
+                                </div>                                                    
+                            </div>                     
+                        </div>
+                    </div>       
+                    </div>
+                    </div>                  
+                </div>
+           </div><!-- Body Container Ends Here -->
+        </div><!-- Main Controller Ends Here##-->
+        <c:Communities_Footer /> 
+    </body>
+</html>
+</apex:page>

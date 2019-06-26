@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_15377260</developerName>
+        <masterLabel>Document Support</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>AIA_Document__c.Document_Type__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Administrative Service Agreement</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Administrative Services Agreement (ASA)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>BlueFund</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Billing Information Form</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>BlueRewards Wellness</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Business Associate Agreement (BAA)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Business Associate Confirmation (BAC)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Letters</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Census Information</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cede Document</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Custom Funding Letter</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Custom BAA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marked Up Benefit Summary</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Group Contract Application</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Performance Guarantee Agreements</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Unsigned Quote</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Underwriting (Request For Quote)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Signed Quote</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Standard Benefit Summary</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Acount Cancellation Termination and Transfer Request Form</sourceValue>
+            </sourceValues>
+            <value>AEs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Benefit Design Document</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CVS Sales Support Request Form</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Group Structure Request Form</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marketing Materials</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Summary Of Benefits &amp; Coverage (SBCs)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Post Sale SBC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Open Enrollment Presentations</sourceValue>
+            </sourceValues>
+            <value>AMs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Account Implementation Workplan (Internal)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Account Impmentation Milestone Workplan (External)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Account Kick-off</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AIA Account Issue Documentation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Microsite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Par Plan</sourceValue>
+            </sourceValues>
+            <value>IM</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Group Structure Document</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Group Structure with BGI</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mock ID Card</sourceValue>
+            </sourceValues>
+            <value>MAST</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Benefits Contracts</sourceValue>
+            </sourceValues>
+            <value>Contracts</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>GRID (UW)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rate EDC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Quote</sourceValue>
+            </sourceValues>
+            <value>UW</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Benefit EDC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Enrollment Data Card (EDC)</sourceValue>
+            </sourceValues>
+            <value>Coding</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>CAG (Carrier Account Group)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dental</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FACETS Classes Notes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FACETS Sub Group Notes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other Ancillary (LTD, STD, Etc)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PNF (Plan Notification Form)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vision</sourceValue>
+            </sourceValues>
+            <value>Ancillary</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Production Id Card</sourceValue>
+            </sourceValues>
+            <value>Prods</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>PRF Assignment</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PRF Workplan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Proposal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PRF Documentation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>RFP Responses</sourceValue>
+            </sourceValues>
+            <value>Proposal</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CUST_CREATED_DATE</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_15377260</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Document__c.Document_Type__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Document__c.Approval_Status__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Document__c.Document_Name__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Document__c.FileNet_URL__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_15377260</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>AIA Documents Created</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AIA_Document__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2017-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-10-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>ADR_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Opportunity__r.ADR__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ADR Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AE_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Opportunity__r.Lead_Rep_Name_User__r.FirstName +''+ Implementation__r.Benefit_Request_Form__r.Opportunity__r.Lead_Rep_Name_User__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AE Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>US:750 
+To check the record is submitted for approval.</description>
+        <externalId>false</externalId>
+        <label>AIA Approval Status</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AM_Name_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Implementation__r.Opportunity__r.Service_Rep__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AM Name Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ARC_Approval_Date_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.ARC_Approval_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ARC Approval Date Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Accomodation__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Implementation__r.Benefit_Request_Form__r.Accommodation__c)</formula>
+        <label>Accommodation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Alias__c</fullName>
+        <externalId>false</externalId>
+        <formula>MID(if(LEN(Implementation__r.Account__r.Account_Alias_1__c)&gt;0, Implementation__r.Account__r.Account_Alias_1__c&amp; ", " , "" ) &amp;
+if(LEN(Implementation__r.Account__r.Account_Alias_2__c)&gt;0, Implementation__r.Account__r.Account_Alias_2__c&amp; ", " , "" )&amp;
+if(LEN(Implementation__r.Account__r.Account_Alias_3__c)&gt;0, Implementation__r.Account__r.Account_Alias_3__c&amp; ", " , "" ),
+ 0, LEN(if(LEN(Implementation__r.Account__r.Account_Alias_1__c)&gt;0, Implementation__r.Account__r.Account_Alias_1__c&amp; ", " , "" ) &amp;
+if(LEN(Implementation__r.Account__r.Account_Alias_2__c)&gt;0, Implementation__r.Account__r.Account_Alias_2__c&amp; ", " , "" )&amp;
+if(LEN(Implementation__r.Account__r.Account_Alias_3__c)&gt;0, Implementation__r.Account__r.Account_Alias_3__c&amp; ", " , "" ))-2)</formula>
+        <label>Account Alias</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Legal_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.Account_Legal_Name__c</formula>
+        <label>Account Legal Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Opportunity__r.AM_Name__c</formula>
+        <label>Account Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Requesting_SearchLight_Reports__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Account Requesting SearchLight Reports?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Any additional comments that may be helpful in completing the group structure</inlineHelpText>
+        <label>Additional Comments</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Alpha_Prefix_is_missing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>US 63 - shows if the Alpha Prefix is missing in relaed Groups</description>
+        <externalId>false</externalId>
+        <label>Alpha Prefixes Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Alternate_Networks_Requested__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Alternate_Networks_Requested__c</formula>
+        <label>Alternate Networks Requested?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attachment_With_Supporting_Detail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Attachment With Supporting Detail?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BCBS_Plan__c</fullName>
+        <description>Required if "Alternate Networks Requested?" = "Yes" and Request is either New, Off-Cycle or Renewal</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>BCBS Plan</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BRF_Funding_Arrangement__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Implementation__r.Benefit_Request_Form__r.Funding_Arrangements__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BRF Funding Arrangement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BRF_Religious_Exemption__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Implementation__r.Benefit_Request_Form__r.Exemption__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BRF Religious Exemption</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BRF_Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Implementation__r.Benefit_Request_Form__r.Request_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BRF Request Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Base_Group_Impact_Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Base Group Impact Comments</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Base_Group_Impact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Does Group Structure have new group impacts?</inlineHelpText>
+        <label>Base Group Impact</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.BillingCity</formula>
+        <label>City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Contract_Count__c</formula>
+        <label>Contract Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Control_Plan__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Implementation__r.Benefit_Request_Form__r.Control_Plan__c ,"580"),"DC-580",If ( ispickval( Implementation__r.Benefit_Request_Form__r.Control_Plan__c ,"690"),"MD-690",NULL))</formula>
+        <label>Control Plan</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dental_of_Plans__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Dental # of Plans</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department_Notes__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Is a further breakdown needed at the Department Level. If yes indicate the need</inlineHelpText>
+        <label>Department Notes</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Department_Number_Notes__c</fullName>
+        <description>US 238,239</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Claims &amp; Billing Requirements</inlineHelpText>
+        <label>Department Number Notes</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Diversified_Benefits__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>US 810,As a Sales user, I want to have the Group Structure Request Form adjusted, so that the system can capture the information required on the Group Structure Request Form more accurately.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Only Sales can update Diversified Benefits</inlineHelpText>
+        <label>Diversified Benefits</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Drug_of_Plans__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Drug # of Plans</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EGWP__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(text(Implementation__r.Benefit_Request_Form__r.EGWP_Picklist__c) == 'Yes', True, False)</formula>
+        <label>EGWP</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ERISA_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ERISA Status</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Benefit_Effective_Date__c</formula>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Effective_date_format__c</fullName>
+        <externalId>false</externalId>
+        <formula>LPAD(TEXT(MONTH(Effective_Date__c)), 2, '0')+"/" +LPAD(TEXT(DAY(Effective_Date__c)), 2, '0')+"/" 
++ MID(TEXT(YEAR(Effective_Date__c)), 3, 4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Effective date format</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Option_Other__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Other_Enrollment_Option__c</formula>
+        <inlineHelpText>Required if "Other" is selected for "Enrollment Option"</inlineHelpText>
+        <label>Enrollment Option - Other</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Option__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Implementation__r.Benefit_Request_Form__r.Enrollment_Option__c)</formula>
+        <label>Enrollment Option</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Implementation__r.Benefit_Request_Form__r.Enrollment_Type__c)</formula>
+        <label>Enrollment Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Enrollment_Vendor__c</formula>
+        <inlineHelpText>Required if "eExchange" is selected for "Enrollment Option"</inlineHelpText>
+        <label>Enrollment Vendor</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FACETs_Classes_Notes__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Is a further breakdown needed at the FACETs Classes Level. If yes indicate the need</inlineHelpText>
+        <label>FACETs Classes Notes</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FACETs_Subgroup_Notes__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Billing Requirements</inlineHelpText>
+        <label>FACETs Subgroup Notes</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FlexLink__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(text(Implementation__r.Benefit_Request_Form__r.FlexLink_Picklist__c) == 'Yes', True, False)</formula>
+        <label>FlexLink</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Flexlink_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Required if account is Flexlink</inlineHelpText>
+        <label>Flexlink Coverage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes - Covering Dependents of Medicare</fullName>
+                    <default>false</default>
+                    <label>Yes - Covering Dependents of Medicare</label>
+                </value>
+                <value>
+                    <fullName>Yes - Covering Medicare Retirees</fullName>
+                    <default>false</default>
+                    <label>Yes - Covering Medicare Retirees</label>
+                </value>
+                <value>
+                    <fullName>No - Covering Dependents of Medicare</fullName>
+                    <default>false</default>
+                    <label>No - Covering Dependents of Medicare</label>
+                </value>
+                <value>
+                    <fullName>No - Covering Medicare Retirees</fullName>
+                    <default>false</default>
+                    <label>No - Covering Medicare Retirees</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Group_Medical_Billing_Request_Breakdow__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Billing Requirements</inlineHelpText>
+        <label>Group/Medical-Billing Request Breakdown</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Group_Numbers_Drawloop__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Group Numbers Drawloop</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Group_Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.Phone</formula>
+        <label>Group Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group_Structure_Effcetive_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Group Structure Effective Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Group Structure Request Forms</relationshipLabel>
+        <relationshipName>Group_Structure_Request_Forms</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_it_a_National_Account_With_Par_Plans__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is it a National Account With Par Plans?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Jurisdiction_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Implementation__r.Benefit_Request_Form__r.Jurisdiction__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jurisdiction Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level_of_Participation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Required if "Par Plan" is not MD or DC</inlineHelpText>
+        <label>Level of Participation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full Service</fullName>
+                    <default>false</default>
+                    <label>Full Service</label>
+                </value>
+                <value>
+                    <fullName>Partial Service</fullName>
+                    <default>false</default>
+                    <label>Partial Service</label>
+                </value>
+                <value>
+                    <fullName>Minimum Service</fullName>
+                    <default>false</default>
+                    <label>Minimum Service</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Medical_of_Plans__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Medical # of Plans</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MembersEdge_Account_Name__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MembersEdge Account Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NASCO_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.NASCO_Account_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NASCO Account Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>National_or_Local__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Implementation__r.Account__r.National_or_Local__c )</formula>
+        <label>National or Local</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Enrollment_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Open_Enrollment_End_Date__c</formula>
+        <label>Open Enrollment End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Open_Enrollment_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Open_Enrollment_Start_Date__c</formula>
+        <label>Open Enrollment Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Original_Effective_Date_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.NASCO_Original_Effective_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Original Effective Date Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PPO_Overlay__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Non-Standard and available to ASO accounts only; Applies only to BC Adv or HB Adv products when they want to pay PPO providers as well as BlueChoice</inlineHelpText>
+        <label>PPO Overlay</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Par_Plan__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Plan Code 690 to be used for Alt Net and or FlexLink
+Plan Code 580 to be used for Alt Net</inlineHelpText>
+        <label>Par Plan</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>580-DC zipcode range&amp;690 for all others</fullName>
+                    <default>false</default>
+                    <label>580-DC zipcode range&amp;690 for all others</label>
+                </value>
+                <value>
+                    <fullName>690-MD zipcode range&amp;580 for all others</fullName>
+                    <default>false</default>
+                    <label>690-MD zipcode range&amp;580 for all others</label>
+                </value>
+                <value>
+                    <fullName>Plan code 580 for DC</fullName>
+                    <default>false</default>
+                    <label>Plan code 580 for DC</label>
+                </value>
+                <value>
+                    <fullName>Plan code 690 for MD</fullName>
+                    <default>false</default>
+                    <label>Plan code 690 for MD</label>
+                </value>
+                <value>
+                    <fullName>Plan code 700 for MA</fullName>
+                    <default>false</default>
+                    <label>Plan code 700 for MA</label>
+                </value>
+                <value>
+                    <fullName>Plan code 710 for MI</fullName>
+                    <default>false</default>
+                    <label>Plan code 710 for MI</label>
+                </value>
+                <value>
+                    <fullName>Plan code 780 for NJ</fullName>
+                    <default>false</default>
+                    <label>Plan code 780 for NJ</label>
+                </value>
+                <value>
+                    <fullName>Plan code 580</fullName>
+                    <default>false</default>
+                    <label>Plan code 580</label>
+                </value>
+                <value>
+                    <fullName>Plan code 690</fullName>
+                    <default>false</default>
+                    <label>Plan code 690</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Performance_Guarantee__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+AND(
+NOT(ISBLANK(Implementation__r.Account__r.Performance_Guarantee_Start_Date__c  ) ),
+ ISBLANK(Implementation__r.Account__r.Performance_Guarantee_End_Date__c )
+)
+,true,
+IF(AND(
+NOT(ISBLANK(Implementation__r.Account__r.Performance_Guarantee_End_Date__c ) ),
+  DATEVALUE(CreatedDate) &lt;=Implementation__r.Account__r.Performance_Guarantee_End_Date__c
+),true,
+IF(AND(
+NOT(ISBLANK(Implementation__r.Account__r.Performance_Guarantee_End_Date__c ) ),
+  DATEVALUE(CreatedDate) &gt;Implementation__r.Account__r.Performance_Guarantee_End_Date__c
+),false,null
+) 
+) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Performance Guarantee?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Processing_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Processing Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Complex</fullName>
+                    <default>false</default>
+                    <label>Complex</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Reject_Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Reject Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Rejected_comments_by_Account__c</fullName>
+        <description>US 117 Reject comments under GSRF when rejected by account</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Rejected Comments By Account</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Renewal_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Request_Type__c='Prospect/New' , null, Implementation__r.Account__r.Final_Renewal_Date__c)</formula>
+        <label>Renewal Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Implementation__r.Business_Type__c)</formula>
+        <label>Request Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revision_Number_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>"SF-" + Text(Implementation__r.Benefit_Request_Form__r.Revision_Number__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revision Number Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SearchLight_Reports_Requested__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>If Yes indicate report breakdown.</inlineHelpText>
+        <label>SearchLight Reports Requested</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.BillingState</formula>
+        <label>State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft - New</fullName>
+                    <default>true</default>
+                    <label>Draft - New</label>
+                </value>
+                <value>
+                    <fullName>Assigned to MAST</fullName>
+                    <default>false</default>
+                    <label>Assigned to MAST</label>
+                </value>
+                <value>
+                    <fullName>Approved by Internal Team</fullName>
+                    <default>false</default>
+                    <label>Approved by Internal Team</label>
+                </value>
+                <value>
+                    <fullName>Rejected by Internal Team</fullName>
+                    <default>false</default>
+                    <label>Rejected by Internal Team</label>
+                </value>
+                <value>
+                    <fullName>Draft - Incomplete</fullName>
+                    <default>false</default>
+                    <label>Draft - Incomplete</label>
+                </value>
+                <value>
+                    <fullName>Approved by Account</fullName>
+                    <default>false</default>
+                    <label>Approved by Account</label>
+                </value>
+                <value>
+                    <fullName>Rejected by Account</fullName>
+                    <default>false</default>
+                    <label>Rejected by Account</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Internal Approval</fullName>
+                    <default>false</default>
+                    <label>Awaiting Internal Approval</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.BillingStreet</formula>
+        <label>Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SubGroup_Account_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Benefit_Request_Form__r.Sub_Group_Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SubGroup Account Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vision_of_Plans__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Vision # of Plans</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.BillingPostalCode</formula>
+        <label>Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ignore_gsa_validations__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To ignore gsm approval response validation from the class</description>
+        <externalId>false</externalId>
+        <label>ignore_gsa_validations</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Group Structure Request Form</label>
+    <nameField>
+        <displayFormat>GSRF-{000000}</displayFormat>
+        <label>Group Structure Request Form Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Group Structure Request Forms</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <recordTypes>
+        <fullName>AIA_200_GSRF_Record_Type</fullName>
+        <active>true</active>
+        <label>AIA 200+ GSRF</label>
+        <picklistValues>
+            <picklist>Flexlink_Coverage__c</picklist>
+            <values>
+                <fullName>No - Covering Dependents of Medicare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No - Covering Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes - Covering Dependents of Medicare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes - Covering Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Level_of_Participation__c</picklist>
+            <values>
+                <fullName>Full Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minimum Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Service</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Par_Plan__c</picklist>
+            <values>
+                <fullName>580-DC zipcode range%26690 for all others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>690-MD zipcode range%26580 for all others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 580</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 580 for DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 690</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 690 for MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 700 for MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 710 for MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 780 for NJ</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Type__c</picklist>
+            <values>
+                <fullName>Complex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved by Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved by Internal Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assigned to MAST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Internal Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft - Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft - New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected by Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected by Internal Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>AIA_RUL_GSRF</fullName>
+        <active>true</active>
+        <label>AIA RUL GSRF</label>
+        <picklistValues>
+            <picklist>Flexlink_Coverage__c</picklist>
+            <values>
+                <fullName>No - Covering Dependents of Medicare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No - Covering Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes - Covering Dependents of Medicare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes - Covering Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Level_of_Participation__c</picklist>
+            <values>
+                <fullName>Full Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minimum Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Service</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Par_Plan__c</picklist>
+            <values>
+                <fullName>580-DC zipcode range%26690 for all others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>690-MD zipcode range%26580 for all others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 580</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 580 for DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 690</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 690 for MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 700 for MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 710 for MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan code 780 for NJ</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Type__c</picklist>
+            <values>
+                <fullName>Complex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved by Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved by Internal Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assigned to MAST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Internal Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft - Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft - New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected by Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected by Internal Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>GSRF001_Flexlink_Coverage_Required</fullName>
+        <active>true</active>
+        <description>Required if "Flexlink?" = "Yes" on the Benefit Request Form</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND(
+text(Implementation__r.Benefit_Request_Form__r.FlexLink_Picklist__c) = 'Yes',
+ISBLANK(TEXT(Flexlink_Coverage__c))
+)</errorConditionFormula>
+        <errorMessage>Please enter the Flexlink Coverage as FlexLink is True in Benefit Request Form</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF002_BCBS_Plan</fullName>
+        <active>true</active>
+        <description>Required if "Alternate Networks Requested?" = "Yes" and Request is either New, Off-Cycle or Renewal</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; IF( 
+AND( 
+(Implementation__r.Benefit_Request_Form__r.Alternate_Networks_Requested__c  = true &amp;&amp; (TEXT(Implementation__r.Benefit_Request_Form__r.Request_Type__c) = "Prospect/New"||TEXT(Implementation__r.Benefit_Request_Form__r.Request_Type__c) = "Renewal"||TEXT(Implementation__r.Benefit_Request_Form__r.Request_Type__c) = "Off-Cycle")), 
+LEN( BCBS_Plan__c ) = 0), True, False)</errorConditionFormula>
+        <errorDisplayField>BCBS_Plan__c</errorDisplayField>
+        <errorMessage>Please enter the BCBS Plan</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF003_Level_of_Participation</fullName>
+        <active>true</active>
+        <description>Required if "Par Plan" is not MD or DC</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; IF( AND( 
+( INCLUDES(Par_Plan__c,"Plan code 700 for MA")||
+INCLUDES(Par_Plan__c ,"Plan code 710 for MI")||
+INCLUDES(Par_Plan__c ,"Plan code 780 for NJ") || INCLUDES(Par_Plan__c ,"Plan code 580" )|| 
+INCLUDES(Par_Plan__c,"Plan code 690")), 
+ISBLANK(TEXT(Level_of_Participation__c))), True, False)</errorConditionFormula>
+        <errorDisplayField>Level_of_Participation__c</errorDisplayField>
+        <errorMessage>Please enter Level of Participation</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF004_SearchLight_Reports_Requested</fullName>
+        <active>true</active>
+        <description>Required if account is requesting SearchLight reports</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; IF(
+AND(
+Account_Requesting_SearchLight_Reports__c  = True, 
+LEN(SearchLight_Reports_Requested__c ) = 0), True, False)</errorConditionFormula>
+        <errorDisplayField>SearchLight_Reports_Requested__c</errorDisplayField>
+        <errorMessage>Account Requesting SearchLight Report is Yes, then SearchLight Reports Requested is required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF005_Status_to_Mast_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; IF( AND(ISPICKVAL( Status__c , "Assigned to MAST"),Attachment_With_Supporting_Detail__c = False) , true, false)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>GSRF will not allow to move to assign to MAST if check box indicates NO attachments appears.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF006_Processing_Decision</fullName>
+        <active>false</active>
+        <description>ensure field is populated before GSRF status is Set to "Processing Decision - Complete"</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND( ISBLANK(TEXT(Processing_Type__c)) ,ISPICKVAL( Status__c , 'Process Decision - Complete'))</errorConditionFormula>
+        <errorMessage>Group Structure Complexity should not be blank when status is Process Decision - Complete</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF007_Flexlink_Coverage_Not_Required</fullName>
+        <active>true</active>
+        <description>us 234</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND(
+ FlexLink__c  = false,
+Not(ISBLANK(TEXT(Flexlink_Coverage__c)))
+)</errorConditionFormula>
+        <errorDisplayField>Flexlink_Coverage__c</errorDisplayField>
+        <errorMessage>If the Account is not FlexLink, then FlexLink Coverage must be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF008_BCBS_Plan</fullName>
+        <active>true</active>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND(Alternate_Networks_Requested__c =false,NOT(ISBLANK(BCBS_Plan__c)))</errorConditionFormula>
+        <errorDisplayField>BCBS_Plan__c</errorDisplayField>
+        <errorMessage>If there are no Alternate Networks Requested, then BCBS Plan must be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF009_SearchLight_Reports_NotRequested</fullName>
+        <active>false</active>
+        <description>Required if account is requesting SearchLight reports</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; IF(
+AND(
+Account_Requesting_SearchLight_Reports__c  = False, 
+LEN(SearchLight_Reports_Requested__c )!= 0), True, False)</errorConditionFormula>
+        <errorDisplayField>Account_Requesting_SearchLight_Reports__c</errorDisplayField>
+        <errorMessage>If the Account is not requesting SearchLight Reports, then SearchLight Reports Requested must be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF010_Implementation_Missing</fullName>
+        <active>true</active>
+        <description>If Implementation is missing on the GSRF</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;  IF( Implementation__c = null, true, false)</errorConditionFormula>
+        <errorDisplayField>Implementation__c</errorDisplayField>
+        <errorMessage>Group Structure Request Form must be associated to an Implementation</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GSRF011_Flexlink_Coverage_Required</fullName>
+        <active>true</active>
+        <description>Owner field readonly</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; 
+ISCHANGED( OwnerId )</errorConditionFormula>
+        <errorMessage>GSRF011 Owner field is Readonly.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Approved_By_Account</fullName>
+        <availability>online</availability>
+        <description>US 106 Change the status to Approved By Account</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Approved By Account</masterLabel>
+        <openType>noSidebar</openType>
+        <page>AIA_GSM_ApprovedByAccount</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Assign_to_MAST</fullName>
+        <availability>online</availability>
+        <description>AIA Custom button to update the status to Assigned to Mast</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Assign to MAST</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_GSRF_AssignToMastVF</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Assign_to_Owner</fullName>
+        <availability>online</availability>
+        <description>US-79 As a MAST tech, I need to have the ability to return GSRF to the Account Manager/Implemetation/Project manager(creator of the Request form) when information is incomplete or clarification need.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Reassign to Account Manager</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_GSRF_AssigntoOwner</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Export_Group_Structure</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Export Group Structure</masterLabel>
+        <openType>replace</openType>
+        <page>AIA_GSRF_AccRoleVF</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Group_Structure_Request_Form</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Group Structure Request Form</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/AIA_Group_structure_validation?Impid={!AIA_Implementation__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Rejected_By_Account</fullName>
+        <availability>online</availability>
+        <description>US 117 Change the status to Rejected By Account</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Rejected By Account</masterLabel>
+        <openType>replace</openType>
+        <page>AIA_GSM_RejectedByAccount</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_For_Approval</fullName>
+        <availability>online</availability>
+        <description>Button for initiating internal approval process</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Submit For Approval</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_GSM_SubmitforApproval</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

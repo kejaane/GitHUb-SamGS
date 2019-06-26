@@ -1,0 +1,160 @@
+<!--===================================================================================================================
+* Date       : 9/18/2017
+* Developer  : Raviteja vadapalli
+* Purpose    : Vf page for add multiple Group at the same time and add /remove the particualr data/line item.
+*                                 Update History
+*                                 ---------------
+* Date       |     Developer        | Tag |   Description
+*============+======================+=====+====================================================================================
+* 02/01/2018| 		Raviteja   		| T01 | Added SLDS classes to all components/tags
+* 02/22/2018|       Raviteja/
+                    Debkanti        | T02 | Added Javascript to fetch the input no of rows and modified the add more row section
+*                                            and chenge the "Ok" button functionality.
+*============+======================+=====+====================================================================================
+-->
+<apex:page id="page" standardController="AIA_Group__c" extensions="AIA_GSM_MultipleGroupAdd" sidebar="false" lightningStylesheets="true" >
+    <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <!-- T01 -- End -->
+
+     <apex:pageMessages id="mesbox"></apex:pageMessages>
+    <apex:outputPanel id="errorMsg"  >
+        <apex:outputPanel rendered="{!errorShow}" styleClass="errorM3">
+            
+            <div class="message errorM4" role="alert">
+                <img alt="ERROR" class="msgIcon" src="/s.gif" title="ERROR"/>
+                <b style="color:#c00;">Error:</b>&nbsp;{!errormsg} </div>
+        </apex:outputPanel>
+     </apex:outputPanel>
+    <head>
+       
+        <style>
+            .message.errorM3{
+            display:none;
+            }
+            .size:not(.multi){
+            width:120px;
+            }
+            
+            .headerRow{
+            overflow-x: auto;
+            }
+            .container {
+            min-width: 100%;
+            }​
+            select[multiple], select[size] {
+            font-size: 12px;
+            }
+            th[id*='gsrfhide'], td[id*='gsrfhide'],.dateFormat{
+            display:none;
+            }
+    <!-- T01 -- Start -->
+    		{! IF(!IsClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 350px !important;}','')}        
+			{! IF(!IsClassic,'input,select,textarea{min-width:0rem !important;}','')}
+    <!-- T01 -- End -->
+        </style>
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+        
+        <apex:includeScript value="{!$Resource.AIA_GSM_LineItems}"/>
+         <script>
+            function checkdup(grp){
+                j$( ".grpname" ).each(function() {
+                    if(j$(this).val()==grp && grp!='' ){
+                           j$(this).parent().next().show();
+                     }
+                    
+                 });
+            }
+       <!-- T02 -- Start -->
+        j$(document).on('keyup','.inp',function(){
+        	 var size=j$('.inp').val();
+             j$('.donebtn').attr('onclick','passparams('+size+');return false;');
+        });
+        <!-- T02 -- End -->
+        </script>
+    </head>
+   
+    <apex:form id="modal">
+    <!-- T01 -- Start -->
+    <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}"/><br/><br/><br/>
+        <!--apex:commandButton value="Ok" action="{!cancel}"/-->
+        <!-- T02 -- Start -->
+        <apex:commandButton value="Ok" action="{!refresh}"/>
+        <!-- T02 -- End -->
+      </div>  
+    </apex:outputPanel>
+<!--T01    - End -->
+    </apex:form>
+    <apex:form style="margin-left:15px" id="form">
+		<!-- T02 -- Start -->
+      <!--Passing parameters to size in controller where onclick is prepared by JS -->
+	  <apex:actionFunction name="passparams" action="{!multipleRows}"  reRender="table" immediate="true">
+            <apex:param name="p1" assignTo="{!multipleRowsize}" value=""  />
+     </apex:actionFunction> 
+     Add&nbsp;<apex:inputText value="{!multipleRowsize}" styleClass="inp"/> more rows&nbsp;
+     <apex:commandbutton value="Done" onclick="" styleclass="donebtn" />
+    <!-- T02 -- End -->
+        <div class="container">
+            <div class="table-responsive">
+                <apex:pageBlock title="Groups Multiple Entry" >     
+                    <apex:pageBlockButtons >
+                        <apex:commandButton value="Save" action="{!save}" oncomplete="loadtexts();checkerror();checkdup('{!grpName}');" reRender="table,modal,mesbox,errorMsg" />
+                        <apex:commandButton value="Cancel" action="{!cancel}" />
+                        
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockTable value="{!grps}" var="a" id="table">
+                        <apex:variable value="{!0}" var="Cnt"/>
+                        
+                        <apex:column headervalue="Action">
+                            <apex:commandlink value="X" oncomplete="loadtexts();"  action="{!removeRowFromList}" immediate="true" rerender="table,error" style="color:red;size:2px">
+                                <!-- Pass the row number to the controller so that we know which row to remove -->
+                                <apex:param name="index" value="{!Cnt}" assignTo="{!rowToRemove}"/>
+                            </apex:commandlink> 
+                            <apex:variable var="Cnt" value="{!Cnt+1}"/>              
+                        </apex:column> 
+                        <apex:column headerValue="Group Number" >
+                            <apex:inputField value="{!a.Name}"  required="true"   styleClass="size grpname"/>
+                            <label class='duplicate' style='display:none;color:#d74c3b'>duplicate</label>
+                        </apex:column> 
+                        <apex:column headerValue="Effective Date">
+                            <apex:inputField value="{!a.Effective_new_Date__c}"  styleClass="dates"   />
+                        </apex:column>
+                        <apex:column headerValue="Termination Date">
+                            <apex:inputField value="{!a.TERM_Date__c}"  styleClass="size"  />
+                        </apex:column>
+                        <apex:column headerValue="Employee Status">
+                            <apex:inputField value="{!a.Employee_Status__c}"  styleClass="slds-input size"/>
+                        </apex:column>
+                        <apex:column headerValue="Group Structure Request Form"  id="gsrfhide">
+                            <apex:inputField value="{!a.Group_Structure_Request_Form__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Group Notes">
+                            <apex:inputField value="{!a.Group_Notes2__c}" styleClass="size"/>
+                        </apex:column>
+                        <apex:column headerValue="Product">
+                            <apex:inputField value="{!a.Group_Structure_Request_Form_Product__c}"  styleClass="size"/>
+                        </apex:column>
+                        <apex:column headerValue="Plan & Code">
+                            <apex:inputField value="{!a.Plan_Code__c}"  styleClass="slds-input size"/>
+                        </apex:column>
+                        <!-- <apex:column headerValue="Alpha Prefix">
+<apex:inputField value="{!a.Alpha_Prefix__c}"/>
+</apex:column>-->
+                    </apex:pageBlockTable> 
+                    <apex:pageblockButtons location="bottom">
+                        <div style="text-align:Middle;margin-right:30px;font-weight:bold;">
+                            <apex:commandLink value="Add New Row" action="{!addRow}" rerender="table" immediate="true" oncomplete="loadtexts();" />
+                            &nbsp;|&nbsp;&nbsp;
+                            <apex:commandLink value="Remove Last Row" action="{!removeRow}" rerender="table" immediate="true" oncomplete="loadtexts();" />                
+                        </div>
+                    </apex:pageblockButtons>  
+                </apex:pageBlock>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

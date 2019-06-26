@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Coverage Levels --></label>
+        <name>Coverage_Levels__c</name>
+        <picklistValues>
+            <masterLabel>Limited</masterLabel>
+            <translation><!-- Limited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Drug Value Drawloop --></label>
+        <name>Drug_Value_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug --></label>
+        <name>Drug__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_new_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Status --></label>
+        <name>Employee_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cobra</masterLabel>
+            <translation><!-- Cobra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retiree</masterLabel>
+            <translation><!-- Retiree --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Group_Structure_Request_Form_Product__c</name>
+        <relationshipLabel><!-- Packages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Group Structure Request Form --></label>
+        <name>Group_Structure_Request_Form__c</name>
+        <relationshipLabel><!-- Packages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Limited Coverage --></label>
+        <name>Limited_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>DOMESTIC PARTNER – 2 PARTY (DP2)</masterLabel>
+            <translation><!-- DOMESTIC PARTNER – 2 PARTY (DP2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F)</masterLabel>
+            <translation><!-- DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOMESTIC PARTNER – FAMILY (DPF)</masterLabel>
+            <translation><!-- DOMESTIC PARTNER – FAMILY (DPF) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FAMILY (FAM)</masterLabel>
+            <translation><!-- FAMILY (FAM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INDIVIDUAL (IND)</masterLabel>
+            <translation><!-- INDIVIDUAL (IND) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARENT/CHILD (P/C)</masterLabel>
+            <translation><!-- PARENT/CHILD (P/C) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARENT/CHILDREN (PCN)</masterLabel>
+            <translation><!-- PARENT/CHILDREN (PCN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAME GENDER MARRIED – 2 PARTY (SG2)</masterLabel>
+            <translation><!-- SAME GENDER MARRIED – 2 PARTY (SG2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F)</masterLabel>
+            <translation><!-- SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAME GENDER MARRIED – FAMILY (SGF)</masterLabel>
+            <translation><!-- SAME GENDER MARRIED – FAMILY (SGF) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUBSCRIBER/SPOUSE (S/S)</masterLabel>
+            <translation><!-- SUBSCRIBER/SPOUSE (S/S) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medical Benefit --></label>
+        <name>Medical_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Code Notes Other --></label>
+        <name>Package_Code_Notes_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Code Notes --></label>
+        <name>Package_Code_Notes_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>ACTIVE ESRD MEDICARE PRIMARY</masterLabel>
+            <translation><!-- ACTIVE ESRD MEDICARE PRIMARY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COBRA MEDICARE PRIMARY</masterLabel>
+            <translation><!-- COBRA MEDICARE PRIMARY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standard Coverage --></label>
+        <name>Standard_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Date --></label>
+        <name>TERM_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vision --></label>
+        <name>Vision__c</name>
+        <picklistValues>
+            <masterLabel>BLUEVISION (CORE)</masterLabel>
+            <translation><!-- BLUEVISION (CORE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLUEVISION PLUS</masterLabel>
+            <translation><!-- BLUEVISION PLUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLUEVISION PLUS (MEDIGAP)</masterLabel>
+            <translation><!-- BLUEVISION PLUS (MEDIGAP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SELECT (not Davis)</masterLabel>
+            <translation><!-- SELECT (not Davis) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SELECT/BLUE PLUS</masterLabel>
+            <translation><!-- SELECT/BLUE PLUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SELECT/CORE</masterLabel>
+            <translation><!-- SELECT/CORE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SELECT/VOLUNTARY</masterLabel>
+            <translation><!-- SELECT/VOLUNTARY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY BLUE VISION PLUS</masterLabel>
+            <translation><!-- VOLUNTARY BLUE VISION PLUS --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Package</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Packages</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Package Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Please enter Package Code Notes Other value --></errorMessage>
+        <name>P001_Package_Code_Notes_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If VIsion Product lookup is blank, then Vision other field is mandatory --></errorMessage>
+        <name>P002_Vision_other_field</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Termination date not valid for Request Type Prospect/New --></errorMessage>
+        <name>P003_Termination_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- if Coverage Level is limited, Limited Coverage is mandatory. --></errorMessage>
+        <name>P004_LimitedCoverage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide Effective date or should not be grater than Termination date --></errorMessage>
+        <name>P005_Effective_Date</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Package --></label>
+        <name>New_Package</name>
+    </webLinks>
+</CustomObjectTranslation>

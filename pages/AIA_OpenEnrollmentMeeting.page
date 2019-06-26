@@ -1,0 +1,79 @@
+<!-- 
+ *=============================================================================================
+ * Date         : 01/21/2018
+ * Developer    : Rajesh Pennam
+ * Purpose      : This is the VF page for displaying all the Evnents Created
+ *                
+ *=============================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date          Developer       Tag         Description
+ *=============================================================================================
+ * 01/26/2018 | Rajesh Pennam  | T01   | Added SLDS to page and did rerender for Classic and 
+                                         this page will display events created in all object
+ *=============================================================================================
+ -->
+
+<apex:page controller="AIA_OpenEnrollmentMeetingController" docType="html-5.0" title="Open Enrollment Meetings">
+    <apex:slds rendered="{!!isClassic}" /> <!--- T01 --->
+     <apex:form >
+        <apex:pageMessages />
+       
+        <apex:pageBlock id="accts" title="AIA Open Enrollment Meetings" >
+            <apex:actionFunction name="FetchOEM" action="{!getInitialEventSet}" reRender="accts" status="counterStatus"/>
+            <apex:outputLabel value="Open" /> &nbsp;
+            <apex:inputCheckbox value="{!isOpen}" style="margin-right:20px;" onchange="FetchOEM();"/>
+            <apex:outputLabel value="Full" /> &nbsp;
+            <apex:inputCheckbox value="{!isFull}" style="margin-right:20px;" onchange="FetchOEM();"/>
+            <apex:outputLabel value="Completed" /> &nbsp;
+            <apex:inputCheckbox value="{!isCompleted}" style="marginpgBlkId-right:20px;" onchange="FetchOEM();"/>
+            <apex:pageBlockSection columns="1" id="pgBlkId1">
+                 <apex:pageblockTable value="{!events}" var="event" >
+                    
+                                    
+                    
+                    <apex:column headerValue="Meeting Name" rendered="{!!isClassic}">
+                         <a href="{!'/one/one.app#/sObject/'+event.id+'/view'}" target="_blank">{!event.subject}</a>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Meeting Name" rendered="{!isClassic}">
+                         <apex:outputLink value="/{!event.id}" target="_blank">{!event.subject}</apex:outputLink>
+                    </apex:column> 
+                    
+                    
+                    
+                    <apex:column value="{!event.ActivityDate}" headerValue="Meeting Date"/>
+                    <apex:column value="{!event.Name_of_Account__c}" headerValue="Account Name"/>
+                    <apex:column value="{!event.Capacity__c}" headerValue="Capacity"/>
+                    <apex:column value="{!event.Signed_Up__c}" headerValue="Signed Up"/>
+                    <apex:column value="{!event.Meeting_Status__c}" headerValue="Meeting Status"/>
+                 </apex:pageblockTable>
+             </apex:pageBlockSection>
+            <br/>
+            
+           <apex:pageblockButtons location="bottom" id="pgBlkId2">
+                       <apex:selectList size="1" value="{!pageSize}">                       
+                               <!-- <apex:selectOption itemValue="5" itemLabel="5"/>
+                                <apex:selectOption itemValue="50" itemLabel="50"/>
+                                <apex:selectOption itemValue="100" itemLabel="100"/>-->
+                                <apex:selectOptions value="{!PickList}"/>
+
+                                <apex:actionSupport event="onchange" action="{!getInitialEventSet}" rerender="accts"/>
+                       </apex:selectList>
+                
+                 <!--T01-->   <apex:commandButton rendered="{!NOT(pageNumber == 1)}" action="{!previous}" value="Previous"  rerender="accts" styleClass="slds-button slds-button_neutral"></apex:commandButton>           
+                 <!--T01-->   <apex:commandButton rendered="{!AND(NOT(pageNumber == noOfPages),noOfPages != 0)}" action="{!next}" value="Next" rerender="accts" styleClass="slds-button slds-button_neutral"></apex:commandButton> 
+                 <!--T01-->   <apex:commandButton action="{!firstPage}" rendered="{!NOT(noOfPages==0)}" rerender="accts" value="First Page" styleClass="slds-button slds-button_neutral"></apex:commandButton> 
+                 <!--T01-->   <apex:commandButton action="{!lastPage}" rendered="{!NOT(noOfPages==0)}" rerender="accts" value="Last Page" styleClass="slds-button slds-button_neutral"></apex:commandButton>   
+                
+                    <apex:outputText value="{!IF(totalNoOfRecs==0,0,pageNumber)}" style="margin-left:30px;"></apex:outputText> 
+                    <apex:outputText value="Of" label="of" style="margin-left:3px;"></apex:outputText>
+                     <apex:outputText value="{!noOfPages}" style="margin-left:3px;"></apex:outputText>          
+            </apex:pageblockButtons>
+            
+            
+            
+            
+        </apex:pageBlock>
+    </apex:form>          
+</apex:page>

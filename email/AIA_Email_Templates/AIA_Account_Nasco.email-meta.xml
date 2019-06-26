@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Update the Mast tech team abou the Nasco account number</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AIA Account Nasco account number</name>
+    <style>none</style>
+    <subject>{!Account.Account_Legal_Name__c} - Effective Date {!Account.Account_Effective_Date__c} - NASCO Account Number entered</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

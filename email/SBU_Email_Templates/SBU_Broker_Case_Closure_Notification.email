@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<table border="0" cellpadding="5" width="600" cellspacing="5" height="400"><tbody><tr valign="top" height="300"><td teditid="c1r2" aeditid="c1r2" locked="0" style="background-color: rgb(255, 255, 255);"><p class="p1">Dear {!Contact.Name},</p><p class="p2"><br></p><p class="p1">Thank You for your inquiry.&nbsp; Your inquiry number: {!Case.CaseNumber} has been resolved.&nbsp;</p><p class="p1">We appreciate your patience while we reviewed your request.&nbsp;&nbsp;</p><p class="p2"><br></p><p class="p1"><font face="Arial, sans-serif">If you have additional questions please feel free to contact our ‘Customer Service Call Center’ at&nbsp; +1-(888)423-2757&nbsp;&nbsp;</font></p><p class="p2"><br></p><p class="p1"><font face="arial">Subject: &nbsp;{!Case.Subject}</font></p><p class="p1">Please review the Case Closure Reason below:</p><p class="p1">{!Case.Resolution_Reason__c}</p><p class="p2"><br></p><p class="p3"><br></p><p class="p4">Thank you,</p><p class="p4">CareFirst Broker Service Team</p><p class="p1"></p><p class="p5"><span class="s1">+</span>&nbsp;1-(888)-423-2757<span class="s1">&nbsp;</span></p><p class="p5"><span class="s1"><br></span></p><p class="p5"><span class="s1"></span></p><p class="p1">*** This is an automatically generated email, please do not reply ***</p><p class="p5" style="font-size: 12pt;"><span class="s1"><span style="color: rgb(51, 51, 51); line-height: 14.3px; font-family: sf-font-regular, &quot;Helvetica Neue&quot;, Helvetica, Arial;"><font size="1">{!Case.Thread_Id}&nbsp;</font></span></span></p></td></tr><tr valign="top" height="50"></tr></tbody></table>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<p class="p1"><br></p>]]></td>
+</tr>
+</table>

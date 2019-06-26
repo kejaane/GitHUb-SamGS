@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ADR Drawloop --></label>
+        <name>ADR_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- AE Drawloop --></label>
+        <name>AE_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- AIA Approval Status --></label>
+        <name>AIA_Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- AM Name Drawloop --></label>
+        <name>AM_Name_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARC Approval Date Drawloop --></label>
+        <name>ARC_Approval_Date_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accommodation --></label>
+        <name>Accomodation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Alias --></label>
+        <name>Account_Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Manager --></label>
+        <name>Account_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Requesting SearchLight Reports? --></label>
+        <name>Account_Requesting_SearchLight_Reports__c</name>
+    </fields>
+    <fields>
+        <help><!-- Any additional comments that may be helpful in completing the group structure --></help>
+        <label><!-- Additional Comments --></label>
+        <name>Additional_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alpha Prefixes Completed --></label>
+        <name>Alpha_Prefix_is_missing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alternate Networks Requested? --></label>
+        <name>Alternate_Networks_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment With Supporting Detail? --></label>
+        <name>Attachment_With_Supporting_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- BCBS Plan --></label>
+        <name>BCBS_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Funding Arrangement --></label>
+        <name>BRF_Funding_Arrangement__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Religious Exemption --></label>
+        <name>BRF_Religious_Exemption__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Request Type --></label>
+        <name>BRF_Request_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Group Impact Comments --></label>
+        <name>Base_Group_Impact_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Does Group Structure have new group impacts? --></help>
+        <label><!-- Base Group Impact --></label>
+        <name>Base_Group_Impact__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Count --></label>
+        <name>Contract_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Control Plan --></label>
+        <name>Control_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental # of Plans --></label>
+        <name>Dental_of_Plans__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is a further breakdown needed at the Department Level. If yes indicate the need --></help>
+        <label><!-- Department Notes --></label>
+        <name>Department_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Account Claims &amp; Billing Requirements --></help>
+        <label><!-- Department Number Notes --></label>
+        <name>Department_Number_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only Sales can update Diversified Benefits --></help>
+        <label><!-- Diversified Benefits --></label>
+        <name>Diversified_Benefits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug # of Plans --></label>
+        <name>Drug_of_Plans__c</name>
+    </fields>
+    <fields>
+        <label><!-- EGWP --></label>
+        <name>EGWP__c</name>
+    </fields>
+    <fields>
+        <label><!-- ERISA Status --></label>
+        <name>ERISA_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective date format --></label>
+        <name>Effective_date_format__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required if &quot;Other&quot; is selected for &quot;Enrollment Option&quot; --></help>
+        <label><!-- Enrollment Option - Other --></label>
+        <name>Enrollment_Option_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Option --></label>
+        <name>Enrollment_Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Type --></label>
+        <name>Enrollment_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required if &quot;eExchange&quot; is selected for &quot;Enrollment Option&quot; --></help>
+        <label><!-- Enrollment Vendor --></label>
+        <name>Enrollment_Vendor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is a further breakdown needed at the FACETs Classes Level. If yes indicate the need --></help>
+        <label><!-- FACETs Classes Notes --></label>
+        <name>FACETs_Classes_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Account Billing Requirements --></help>
+        <label><!-- FACETs Subgroup Notes --></label>
+        <name>FACETs_Subgroup_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- FlexLink --></label>
+        <name>FlexLink__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required if account is Flexlink --></help>
+        <label><!-- Flexlink Coverage --></label>
+        <name>Flexlink_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>No - Covering Dependents of Medicare</masterLabel>
+            <translation><!-- No - Covering Dependents of Medicare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No - Covering Medicare Retirees</masterLabel>
+            <translation><!-- No - Covering Medicare Retirees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes - Covering Dependents of Medicare</masterLabel>
+            <translation><!-- Yes - Covering Dependents of Medicare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes - Covering Medicare Retirees</masterLabel>
+            <translation><!-- Yes - Covering Medicare Retirees --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Account Billing Requirements --></help>
+        <label><!-- Group/Medical-Billing Request Breakdown --></label>
+        <name>Group_Medical_Billing_Request_Breakdow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Numbers Drawloop --></label>
+        <name>Group_Numbers_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Phone Number --></label>
+        <name>Group_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Structure Effective Date --></label>
+        <name>Group_Structure_Effcetive_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation__c</name>
+        <relationshipLabel><!-- Group Structure Request Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is it a National Account With Par Plans? --></label>
+        <name>Is_it_a_National_Account_With_Par_Plans__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction Drawloop --></label>
+        <name>Jurisdiction_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required if &quot;Par Plan&quot; is not MD or DC --></help>
+        <label><!-- Level of Participation --></label>
+        <name>Level_of_Participation__c</name>
+        <picklistValues>
+            <masterLabel>Full Service</masterLabel>
+            <translation><!-- Full Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimum Service</masterLabel>
+            <translation><!-- Minimum Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Service</masterLabel>
+            <translation><!-- Partial Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medical # of Plans --></label>
+        <name>Medical_of_Plans__c</name>
+    </fields>
+    <fields>
+        <label><!-- MembersEdge Account Name --></label>
+        <name>MembersEdge_Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- NASCO Account Number --></label>
+        <name>NASCO_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- National or Local --></label>
+        <name>National_or_Local__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment End Date --></label>
+        <name>Open_Enrollment_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Start Date --></label>
+        <name>Open_Enrollment_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Effective Date Drawloop --></label>
+        <name>Original_Effective_Date_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- Non-Standard and available to ASO accounts only; Applies only to BC Adv or HB Adv products when they want to pay PPO providers as well as BlueChoice --></help>
+        <label><!-- PPO Overlay --></label>
+        <name>PPO_Overlay__c</name>
+    </fields>
+    <fields>
+        <help><!-- Plan Code 690 to be used for Alt Net and or FlexLink
+Plan Code 580 to be used for Alt Net --></help>
+        <label><!-- Par Plan --></label>
+        <name>Par_Plan__c</name>
+        <picklistValues>
+            <masterLabel>580-DC zipcode range&amp;690 for all others</masterLabel>
+            <translation><!-- 580-DC zipcode range&amp;690 for all others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>690-MD zipcode range&amp;580 for all others</masterLabel>
+            <translation><!-- 690-MD zipcode range&amp;580 for all others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan code 580</masterLabel>
+            <translation><!-- Plan code 580 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan code 580 for DC</masterLabel>
+            <translation><!-- Plan code 580 for DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan code 690</masterLabel>
+            <translation><!-- Plan code 690 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan code 690 for MD</masterLabel>
+            <translation><!-- Plan code 690 for MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan code 700 for MA</masterLabel>
+            <translation><!-- Plan code 700 for MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan code 710 for MI</masterLabel>
+            <translation><!-- Plan code 710 for MI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan code 780 for NJ</masterLabel>
+            <translation><!-- Plan code 780 for NJ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Performance Guarantee? --></label>
+        <name>Performance_Guarantee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processing Type --></label>
+        <name>Processing_Type__c</name>
+        <picklistValues>
+            <masterLabel>Complex</masterLabel>
+            <translation><!-- Complex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reject Comments --></label>
+        <name>Reject_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rejected Comments By Account --></label>
+        <name>Rejected_comments_by_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Date --></label>
+        <name>Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Type --></label>
+        <name>Request_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revision Number Drawloop --></label>
+        <name>Revision_Number_Drawloop__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Yes indicate report breakdown. --></help>
+        <label><!-- SearchLight Reports Requested --></label>
+        <name>SearchLight_Reports_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved by Account</masterLabel>
+            <translation><!-- Approved by Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved by Internal Team</masterLabel>
+            <translation><!-- Approved by Internal Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assigned to MAST</masterLabel>
+            <translation><!-- Assigned to MAST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Internal Approval</masterLabel>
+            <translation><!-- Awaiting Internal Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft - Incomplete</masterLabel>
+            <translation><!-- Draft - Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft - New</masterLabel>
+            <translation><!-- Draft - New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected by Account</masterLabel>
+            <translation><!-- Rejected by Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected by Internal Team</masterLabel>
+            <translation><!-- Rejected by Internal Team --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- SubGroup Account Drawloop --></label>
+        <name>SubGroup_Account_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vision # of Plans --></label>
+        <name>Vision_of_Plans__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- ignore_gsa_validations --></label>
+        <name>ignore_gsa_validations__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Group Structure Request Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Group Structure Request Forms</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>GSRF Layout for 200+ User</layout>
+        <sections>
+            <label><!-- Account Demographics --></label>
+            <section>Account Demographics</section>
+        </sections>
+        <sections>
+            <label><!-- Account Particulars --></label>
+            <section>Account Particulars</section>
+        </sections>
+        <sections>
+            <label><!-- Attachments/Reports Information --></label>
+            <section>Attachments/Reports Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Information --></label>
+            <section>Enrollment Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>GSRF Layout for RUL User</layout>
+        <sections>
+            <label><!-- Account Demographics --></label>
+            <section>Account Demographics</section>
+        </sections>
+        <sections>
+            <label><!-- Account Particulars --></label>
+            <section>Account Particulars</section>
+        </sections>
+        <sections>
+            <label><!-- Attachments/Reports Information --></label>
+            <section>Attachments/Reports Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Information --></label>
+            <section>Enrollment Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Group Structure Request Form Layout</layout>
+        <sections>
+            <label><!-- Account Demographics --></label>
+            <section>Account Demographics</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AIA 200+ GSRF --></label>
+        <name>AIA_200_GSRF_Record_Type</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- AIA RUL GSRF --></label>
+        <name>AIA_RUL_GSRF</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please enter the Flexlink Coverage as FlexLink is True in Benefit Request Form --></errorMessage>
+        <name>GSRF001_Flexlink_Coverage_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the BCBS Plan --></errorMessage>
+        <name>GSRF002_BCBS_Plan</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Level of Participation --></errorMessage>
+        <name>GSRF003_Level_of_Participation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Account Requesting SearchLight Report is Yes, then SearchLight Reports Requested is required --></errorMessage>
+        <name>GSRF004_SearchLight_Reports_Requested</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- GSRF will not allow to move to assign to MAST if check box indicates NO attachments appears. --></errorMessage>
+        <name>GSRF005_Status_to_Mast_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Group Structure Complexity should not be blank when status is Process Decision - Complete --></errorMessage>
+        <name>GSRF006_Processing_Decision</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the Account is not FlexLink, then FlexLink Coverage must be blank --></errorMessage>
+        <name>GSRF007_Flexlink_Coverage_Not_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If there are no Alternate Networks Requested, then BCBS Plan must be blank --></errorMessage>
+        <name>GSRF008_BCBS_Plan</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the Account is not requesting SearchLight Reports, then SearchLight Reports Requested must be blank --></errorMessage>
+        <name>GSRF009_SearchLight_Reports_NotRequested</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Group Structure Request Form must be associated to an Implementation --></errorMessage>
+        <name>GSRF010_Implementation_Missing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- GSRF011 Owner field is Readonly. --></errorMessage>
+        <name>GSRF011_Flexlink_Coverage_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Approved_By_Account --></label>
+        <name>Approved_By_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Assign_to_MAST --></label>
+        <name>Assign_to_MAST</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Assign_to_Owner --></label>
+        <name>Assign_to_Owner</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Export_Group_Structure --></label>
+        <name>Export_Group_Structure</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Group_Structure_Request_Form --></label>
+        <name>New_Group_Structure_Request_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rejected_By_Account --></label>
+        <name>Rejected_By_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_For_Approval --></label>
+        <name>Submit_For_Approval</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$RFP_Dept_Recpt_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Proposal_Request_Forms__r$Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.RFP__r.Proposal_Request_Forms__r$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>PRF__c.TPA_Proposal_Request</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>TPA - Temp for data updates</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opps_with_RFP_and_With_PRF__c</reportType>
+    <roleHierarchyFilter>VicePresidentsandStaff</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Opportunity.RFP__r.Proposal_Request_Forms__r$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

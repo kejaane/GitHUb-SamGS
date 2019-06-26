@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>sfdcteam@carefirst.com</contactEmail>
+    <description>Connected App for Salesforce PCS Integration . This is used for Operation 5 call from PCS to Salesforce. Token returned from this call will be used to call a custom REST webservice built on Salesforce. Custom REST webservice class name: AIA_Op5_PCSCustomP</description>
+    <label>AIA_PCSIntegrator</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/oauth2/callback</callbackUrl>
+        <consumerKey>3MVG9aFryxgomHTZBf2tPqyBm7RuyY_alyXcmYsvcLK_sx.mxiUBAs08oSksfFZa60mu4AfTVPvpJZCfaS.yu</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

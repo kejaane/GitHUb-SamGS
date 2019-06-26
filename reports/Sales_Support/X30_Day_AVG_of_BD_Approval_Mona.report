@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>AIA_Benefit_Design__c.Days_to_Approve_BDF__c:AVG</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Mothly AVG to Approve BD</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>AIA_Benefit_Design__c.Days_to_Approve_BDF__c:AVG</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Approval AVG in Days</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_83124414</developerName>
+        <masterLabel>BD Approval Turnaround</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Days_to_Approve_BDF__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>7</to>
+            </sourceValues>
+            <value>Within 7 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>7</from>
+                <to>14</to>
+            </sourceValues>
+            <value>Between 8-14 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>14</from>
+            </sourceValues>
+            <value>More Than 14 Days</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Benfit_Request_Form__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Account_Manager_Name__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r$Business_Type__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$Days_to_Approve_BDF__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Account_Manager_Name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>marlies fisher,michelle finney,Matthew Fritz,Barbara Gerber,Donna Hase,Nancy Zizis,Sandy Santoni,Renee Luna,Vannessa Potts,cherrice davis</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_83124414</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>BD Approval AVG in Days - Mona</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>BRF_w_Implementation_and_w_BD__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Benfit_Request_Form__c.Implementations__r.Benefit_Design_c__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-01-01</startDate>
+    </timeFrameFilter>
+</Report>

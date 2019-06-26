@@ -1,0 +1,207 @@
+<apex:page StandardController="Enrollment_Summary__c" extensions="enrollmentFilters">
+   <style>
+        .hidden {
+            display: none;
+        }
+</style>
+    
+<script>
+	function removeheaders() {
+             	var x = document.querySelectorAll('th');
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    if(x[i].id.indexOf('monthTable:0') == -1 &&  x[i].id.indexOf('totals') == -1 && x[i].id.indexOf('atomWrap') == -1){
+                           x[i].style.display = 'none';
+                    }                    
+                }
+     
+        }
+
+	 
+    
+</script>
+     
+    <apex:form id="theForm" >
+       <apex:sectionheader title="Enrollment Summary" subtitle="Total Term Ratios for 2-50">
+            <apex:pageBlock title="Filters" id="filterBlock" >
+                <apex:outputLabel value="Report On: " for="reportType"/>
+                <apex:selectList id="reportType" value="{!reportType}" size="1" required="true">
+                    <apex:selectOptions value="{!reportTypeList}"/>
+                </apex:selectList>&nbsp;&nbsp;
+                <apex:outputLabel value="Jurisdiction: " for="jurisdiction"/>
+                <apex:selectList id="jurisdiction" value="{!jurisdiction}" size="1" required="true">
+                    <apex:selectOptions value="{!jurisdictionList}"/>
+                </apex:selectList>&nbsp;&nbsp;
+                <apex:outputLabel value="Start Month: " for="startMonth"/>
+                <apex:selectList id="startMonth" value="{!startMonth}" size="1" required="true" >
+                    <apex:selectOptions value="{!startMonthList}"/>
+                </apex:selectList>&nbsp;&nbsp;
+                <apex:outputLabel value="Start Year: " for="startYear"/>
+                <apex:selectList id="startYear" value="{!startYear}" size="1" required="true" >                
+                    <apex:selectOptions value="{!startYearList}"/>
+                </apex:selectList>&nbsp;&nbsp;
+                <apex:outputLabel value="End Month: " for="endMonth"/>
+                <apex:selectList id="endMonth" value="{!endMonth}" size="1" required="true">
+                    <apex:selectOptions value="{!endMonthList}"/>
+                </apex:selectList>&nbsp;&nbsp;
+                
+                <apex:outputLabel value="    " for="goButton"/>
+                <apex:commandButton action="{!Go}" value="Go" id="goButton" reRender="results,filterBlock" oncomplete="removeheaders()"/>
+            </apex:pageBlock>
+             
+            <apex:pageBlock title="Results" id="results" >
+            <apex:dataTable value="{!years}" var="y" width="100%" id="topTable" >
+            <apex:column ><b>{!y.groupedVal}</b>
+               <apex:dataTable value="{!y.monthWrappers}" var="mw" width="100%" id="monthTable" >
+            <apex:column >
+               <apex:pageblockTable value="{!mw.accs}" var="l" style="text-align:center" headerClass="{!css}" id="monthResults">
+                   <apex:column headerValue="Month" value="{!l.Month_Name__c}" style="text-align:left"  width="5.3%"/>
+                   <apex:column headerValue="Jur." value="{!l.Jurisdiction__c}" style="text-align:left" width="5%"/>
+                   <!--Contracts-->
+                   <apex:column headerValue="Total Active" value="{!l.Total_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="Off-Cycle" value="{!l.Off_Cycle_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="On-Cycle" value="{!l.On_Cycle_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="Total Termed" value="{!l.Total_Termed_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="On-Cycle Termed" value="{!l.On_Cycle_Termed_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="Off-Cycle Termed" value="{!l.Off_Cycle_Termed_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="New" value="{!l.New_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="Net Change" value="{!l.Net_Change_Contracts__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="On-Cycle Terms %" value="{!l.On_Cycle_Termed_Contract_Pct__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="Off-Cycle Terms %" value="{!l.Off_Cycle_Termed_Contract_Pct__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="Total Terms %" value="{!l.Total_Contract_Terms_Pct__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="New Sales %" value="{!l.New_Contract_Sales_Pct__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   <apex:column headerValue="Net Growth %" value="{!l.Net_Contract_Growth_Pct__c}" rendered="{!IF(reportType == 'Groups', false, true)}" width="6.9%"/>
+                   
+                   <!--Groups-->
+                   <apex:column headerValue="Total Active" value="{!l.Total_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="Off-Cycle" value="{!l.Off_Cycle_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="On-Cycle" value="{!l.On_Cycle_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="Total Termed" value="{!l.Total_Termed_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="On-Cycle Termed" value="{!l.On_Cycle_Termed_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="Off-Cycle Termed" value="{!l.Off_Cycle_Termed_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="New" value="{!l.New_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="Net Change" value="{!l.Net_Change_Groups__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="On-Cycle Terms %" value="{!l.On_Cycle_Termed_Groups_Pct__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="Off-Cycle Terms %" value="{!l.Off_Cycle_Termed_Groups_Pct__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="Total Terms %" value="{!l.Total_Group_Terms_Pct__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="New Sales %" value="{!l.New_Group_Sales_Pct__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>
+                   <apex:column headerValue="Net Growth %" value="{!l.Net_Group_Growth_Pct__c}" rendered="{!IF(reportType == 'Groups', true, false)}" width="6.9%"/>                    
+                 
+               </apex:pageblockTable>
+                
+                <apex:pageblockTable id="subtotals" value="{!mw}" headerClass="hidden" var="t" style="text-align:center; background-color:Azure; font-weight:bold" rendered="{!mw.displayTable}">
+                  
+                   <apex:column headerValue="" width="10.3%" style="text-align:left" ><b>{!t.month} Sub Total</b></apex:column>
+                   <apex:column headerValue="Total Active" width="6.9%">
+                   		<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.totalActive}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="Off-Cycle"  width="6.9%">
+                       <apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.totalOffCycle}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="On-Cycle"  width="6.9%">
+                        <apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.totalOnCycle}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="Total Termed"  width="6.9%">
+                        <apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.totalTermed}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="On-Cycle Termed" width="6.9%">
+                        <apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.totalonCycleTermed}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="Off-Cycle Termed"  width="6.9%">
+                    	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.totaloffCycleTermed}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="New" width="6.9%">
+                    	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.totalNew}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="Net Change"  width="6.9%">
+                    	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.total.netChange}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="On-Cycle Terms %" value="{!t.total.totalOnCyclePercent}%" width="6.9%" />
+                   <apex:column headerValue="Off-Cycle Terms %" value="{!t.total.totalOffCyclePercent}%" width="6.9%"/>
+                   <apex:column headerValue="Total Terms %" value="{!t.total.totalTermsPercent}%" width="6.9%"/>
+                   <apex:column headerValue="New Sales %" value="{!t.total.totalNewSalesPercent}%" width="6.9%"/>
+                   <apex:column headerValue="Net Growth %" value="{!t.total.netGrowth}%" width="6.9%"/>                    
+                 
+               </apex:pageblockTable>
+               </apex:column>
+                   </apex:dataTable>
+               <!--Totals-->
+              <apex:pageblockTable value="{!y.totals}" var="t" id="totals" style="text-align:center; background-color:lightgreen; font-weight:bold">
+                  
+                   <apex:column headerValue=""  width="14.1%" ><b>{!y.groupedVal} TOTALS</b></apex:column>
+                    <apex:column headerValue="Avg Total Termed Group Size" value="{!t.avgTotalTermedSize}" width="10%"/>
+                   <apex:column headerValue="On-Cycle"  width="6.9%">
+                        <apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.totalOnCycle}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="Total Termed"  width="6.9%">
+                        <apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.totalTermed}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="On-Cycle Termed" width="6.9%">
+                        <apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.totalonCycleTermed}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="Off-Cycle Termed"  width="6.9%">
+                    	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.totaloffCycleTermed}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="New" width="6.9%">
+                    	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.totalNew}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="Net Change" width="6.9%">
+                    	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!t.netChange}"/>
+						</apex:outputText>
+                    </apex:column>
+                   <apex:column headerValue="On-Cycle Terms %" value="{!t.totalOnCyclePercent}%" width="6.9%" />
+                   <apex:column headerValue="Off-Cycle Terms %" value="{!t.totalOffCyclePercent}%" width="6.9%"/>
+                   <apex:column headerValue="Total Terms %" value="{!t.totalTermsPercent}%" width="6.9%"/>
+                   <apex:column headerValue="New Sales %" value="{!t.totalNewSalesPercent}%" width="6.9%"/>
+                   <apex:column headerValue="Net Growth %" value="{!t.netGrowth}%" width="6.9%"/>                    
+                 
+               </apex:pageblockTable>
+               <apex:pageblockTable value="{!y.atomWrap}" id="atomWrap" var="aw" style="text-align:center; background-color:lightblue; font-weight:bold" rendered="{!y.displayAtomWrap}">
+                  
+                   <apex:column headerValue="" width="24.1%" ><b>ATOMIZATION</b></apex:column>
+                   <apex:column headerValue="" width="41.1%" />
+                  
+                   <apex:column headerValue="On-Cycle Terms %" value="{!aw.totalOnCyclePercent}%"  width="6.9%"/>
+                   <apex:column headerValue="Off-Cycle Terms %" value="{!aw.totalOffCyclePercent}%"  width="6.9%"/>
+                   <apex:column headerValue="Total Terms %" value="{!aw.totalTermsPercent}%"  width="6.9%"/>
+                   <apex:column headerValue="New Sales %" value="{!aw.totalNewSalesPercent}%"  width="6.9%"/>
+                   <apex:column headerValue="Net Growth %" value="{!aw.netGrowth}%"  width="6.9%"/>                   
+                 
+               </apex:pageblockTable>
+               <br/>
+               <br/>
+               </apex:column>
+               </apex:dataTable>
+               
+               <!--totals for each year, % change from one year to the next-->
+            </apex:pageBlock>
+        </apex:sectionheader>
+    </apex:form>
+</apex:page>

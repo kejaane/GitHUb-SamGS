@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>ActivityDate</fullName>
+        <inlineHelpText>Due Date will default to PCMH Presentation date, if  Due Date is left blank.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <encryptionScheme>None</encryptionScheme>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <listViews>
+        <fullName>CompletedTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>equals</operation>
+            <value>TODAY,LAST_N_DAYS:30</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_CompletedTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>DelegatedTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Delegated</filterScope>
+        <label>ENCODED:{!FilterNames.Task_DelegatedTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>OpenTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Open Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>OverdueTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_OverdueTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>RecurringTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_RecurringTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DUE_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY,LAST_N_DAYS:30</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.z_TodaysTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>UnscheduledTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DUE_DATE</field>
+            <operation>equals</operation>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_UnscheduledTasks}</label>
+    </listViews>
+    <recordTypes>
+        <fullName>MIT</fullName>
+        <active>true</active>
+        <description>MIT Layout</description>
+        <label>MIT</label>
+        <picklistValues>
+            <picklist>Business_Type__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Segment__c</picklist>
+            <values>
+                <fullName>2-50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51%2B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Status1__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduling</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PCMH_Decision__c</picklist>
+            <values>
+                <fullName>Appointment Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment to be Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Eligible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending Account Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PCMH_Denial_Reason__c</picklist>
+            <values>
+                <fullName>Cost prohibitive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Did not see value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insufficient PCMH provider access%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No savings guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH program not proven concept%2Fwait and see%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve-In Rx</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve-Out Rx</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined by Underwriting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go Green Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH Presentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RFP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topic_Details__c</picklist>
+            <values>
+                <fullName>Account Management Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BC Advantage CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Preferred CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Prefferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DHMO Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPO %28Other%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPO %28PPO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthy Blue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue 2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue 2%2E0 CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue Triple Option</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue Triple Option CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life%2FADD%2FSTD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MPOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicare Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Persistency Bonuses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Dental %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Dental %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service %28Member%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA - CFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA - NCAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topic__c</picklist>
+            <values>
+                <fullName>Competitor Strategy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emails</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue Resolution Meeting %28Contracts%2C Renewals%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Enrollment Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conversations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal Meetings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topics__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>X2_50</fullName>
+        <active>true</active>
+        <label>2-50</label>
+        <picklistValues>
+            <picklist>Business_Type__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Status1__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduling</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PCMH_Decision__c</picklist>
+            <values>
+                <fullName>Appointment Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment to be Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Eligible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending Account Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PCMH_Denial_Reason__c</picklist>
+            <values>
+                <fullName>Cost prohibitive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Did not see value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insufficient PCMH provider access%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No savings guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH program not proven concept%2Fwait and see%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Account Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Signed Agreement - Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signed Reject - Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topic_Details__c</picklist>
+            <values>
+                <fullName>Account Management Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BC Advantage CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Preferred CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Prefferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DHMO Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPO %28Other%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPO %28PPO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthy Blue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue 2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue 2%2E0 CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue Triple Option</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue Triple Option CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life%2FADD%2FSTD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MPOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicare Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Persistency Bonuses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Dental %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Dental %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service %28Member%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA - CFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA - NCAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topic__c</picklist>
+            <values>
+                <fullName>Competitor Strategy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emails</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hub Recruitment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue Resolution Meeting %28Contracts%2C Renewals%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Enrollment Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conversations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal Meetings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topics__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>X51</fullName>
+        <active>true</active>
+        <label>51+</label>
+        <picklistValues>
+            <picklist>Meeting_Status1__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduling</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PCMH_Decision__c</picklist>
+            <values>
+                <fullName>Appointment Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment to be Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Eligible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending Account Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PCMH_Denial_Reason__c</picklist>
+            <values>
+                <fullName>Cost prohibitive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Did not see value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insufficient PCMH provider access%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No savings guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH program not proven concept%2Fwait and see%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Account Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Signed Agreement - Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signed Reject - Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve-In Rx</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve-Out Rx</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined by Underwriting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go Green Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH Presentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RFP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topic_Details__c</picklist>
+            <values>
+                <fullName>Account Management Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BC Advantage CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Preferred CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Prefferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DHMO Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPO %28Other%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPO %28PPO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthy Blue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue 2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue 2%2E0 CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue Triple Option</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HealthyBlue Triple Option CDH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life%2FADD%2FSTD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MPOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicare Advantage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCMH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Persistency Bonuses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Dental %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Dental %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service %28Member%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA - CFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPA - NCAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional Dental %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision %28Employer Sponsored%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision %28Voluntary%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topic__c</picklist>
+            <values>
+                <fullName>Data Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalist Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Sales Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hub Recruitment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Enrollment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Support and Strategy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Topics__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>E001_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject does not equal 'PCMH Presenation'  the PCMH Effective Date must be blank</description>
+        <errorConditionFormula>IF(Subject &lt;&gt; "PCMH Presentation" &amp;&amp; NOT(ISNULL(PCMH_Effective_Date__c)), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Effective_Date__c</errorDisplayField>
+        <errorMessage>001: When Subject is not “PCMH Presentation” the PCMH Effective Date must be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E002_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject does not equal 'PCMH Presenation' the PCMH Presentation Date must be blank</description>
+        <errorConditionFormula>IF(Subject &lt;&gt; "PCMH Presentation" &amp;&amp; NOT(ISNULL(PCMH_Presentation_Date__c)), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Presentation_Date__c</errorDisplayField>
+        <errorMessage>002: When Subject is not “PCMH Presentation” the PCMH Presentation Date must be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E003_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject does not equal 'PCMH Presenation' PCMH Decision must be 'Not Started'</description>
+        <errorConditionFormula>IF(Subject &lt;&gt; "PCMH Presentation" &amp;&amp; NOT(ISPICKVAL(PCMH_Decision__c, "Not Started")), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Decision__c</errorDisplayField>
+        <errorMessage>003: When Subject is not “PCMH Presentation” the PCMH Decision must be “Not Started”.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E004_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject does not equal 'PCMH Presenation'  PCMH Denial Reason must be blank</description>
+        <errorConditionFormula>IF(Subject &lt;&gt; "PCMH Presentation" &amp;&amp; NOT(ISPICKVAL(PCMH_Denial_Reason__c, "")), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Denial_Reason__c</errorDisplayField>
+        <errorMessage>004: When Subject is not “PCMH Presentation” the PCMH Denial Reason must be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E005_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presenation' and PCMH Decision not equal 'Yes' then PCMH Effective Date must be blank</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; 
+ISPICKVAL(Status, "Completed") &amp;&amp;
+NOT(ISPICKVAL(PCMH_Decision__c, "Yes")) &amp;&amp; 
+NOT(ISNULL(PCMH_Effective_Date__c)), TRUE, 
+IF(Subject = "PCMH Presentation" &amp;&amp; 
+NOT(ISPICKVAL(Status, "Completed")) &amp;&amp; 
+NOT(ISNULL(PCMH_Effective_Date__c)), TRUE, FALSE))</errorConditionFormula>
+        <errorDisplayField>PCMH_Effective_Date__c</errorDisplayField>
+        <errorMessage>005: You can only enter PCMH Effective date if Status is Completed and PCMH Decision is “Yes”</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E006_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presenation' and Status = 'Not Started' then PCMH Decision must be 'Not Started'</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; 
+ISPICKVAL(Status, "Not Started") &amp;&amp;
+NOT(ISPICKVAL(PCMH_Decision__c,"Not Started")), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Decision__c</errorDisplayField>
+        <errorMessage>006: When Status is “Not Started” the PCMH Decision must be "Not Started"</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E007_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presenation' and Status equals 'Not Started' or 'In Progress' then PCMH Denial Reason must be blank</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; 
+(ISPICKVAL(Status, "Not Started") || ISPICKVAL(Status, "In Progress")) &amp;&amp; 
+NOT(ISPICKVAL(PCMH_Denial_Reason__c,"")), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Denial_Reason__c</errorDisplayField>
+        <errorMessage>007: You can only enter PCMH Denial Reason if Status is Completed and PCMH Decision is No.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E008_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presenation' and Status = 'Completed' then PCMH Decision must 'Yes' or 'No' or 'Not Eligible'</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; 
+ISPICKVAL(Status, "Completed") &amp;&amp;
+(NOT(ISPICKVAL(PCMH_Decision__c,"Yes")) &amp;&amp; 
+NOT(ISPICKVAL(PCMH_Decision__c,"No")) &amp;&amp; 
+NOT(ISPICKVAL(PCMH_Decision__c,"Not Eligible"))), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Decision__c</errorDisplayField>
+        <errorMessage>008: You must enter a PCMH Decision of "Yes", "No", or "Not Eligible" if Status is Completed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E009_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presenation' and Status = Completed' and PCMH Decision equals 'Yes' the Effective date is required</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation"  &amp;&amp; ISPICKVAL(Status, "Completed") &amp;&amp; ISPICKVAL(PCMH_Decision__c,"Yes") &amp;&amp; ISNULL(PCMH_Effective_Date__c), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Effective_Date__c</errorDisplayField>
+        <errorMessage>009: You must enter a PCMH Effective date if PCMH Decision is “YES” and Status is Completed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E010_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presenation' and Status = Completed' and PCMH Decision equals 'No', PCMH Denial Reason is required</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; ISPICKVAL(Status, "Completed") &amp;&amp; ISPICKVAL(PCMH_Decision__c,"No") &amp;&amp; ISPICKVAL(PCMH_Denial_Reason__c, ""), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Denial_Reason__c</errorDisplayField>
+        <errorMessage>010: You must enter a PCMH Denial Reason if PCMH Decision is “NO”</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E011_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presentation', 'In Progress', 'Not Started', and 'Completed' are the only valid statuses.</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; 
+    (NOT(ISPICKVAL(Status, "Not Started")) &amp;&amp;    
+      NOT(ISPICKVAL(Status, "In Progress")) &amp;&amp; 
+      NOT(ISPICKVAL(Status, "Completed"))), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>Status</errorDisplayField>
+        <errorMessage>011: When Subject is PCMH Presentation, 'Not Started', 'In Progress' and 'Completed' are the only valid Statuses</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E012_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject is equal to 'PCMH Presentation' the Related To field must be entered.</description>
+        <errorConditionFormula>IF( Subject = "PCMH Presentation" &amp;&amp; LEN(WhatId) = 0, TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>WhatId</errorDisplayField>
+        <errorMessage>012: When Subject is PCMH Presentation, ‘Related to’ must be “Opportunity” and Opportunity name must be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E013_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presenation' and Status = Completed' and PCMH Decision equals 'Yes' and Effective date entered, Effective Date must be greater than Presentation Date if Presentation Date is entered.</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; ISPICKVAL(Status, "Completed") &amp;&amp; ISPICKVAL(PCMH_Decision__c,"Yes") &amp;&amp; NOT(ISNULL(PCMH_Presentation_Date__c)) &amp;&amp; PCMH_Effective_Date__c &lt;= PCMH_Presentation_Date__c, TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Presentation_Date__c</errorDisplayField>
+        <errorMessage>013: When Status is Completed and Decision is “Yes” PCMH Presentation Date must be earlier than the PCMH Effective Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E014_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals 'PCMH Presentation' and Status equals 'Waiting on someone else' then the PCMH Presentation Date must be blank</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; ISPICKVAL(Status, "Not Started") &amp;&amp; NOT(ISNULL(PCMH_Presentation_Date__c)), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Presentation_Date__c</errorDisplayField>
+        <errorMessage>014: When Subject equals 'PCMH Presentation and Status is "Not Started" the PCMH Presentation Date must be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E015_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals PCMH Presenation and Status equals 'Completed' and Decision equals 'Yes' then Presentation Date is required</description>
+        <errorConditionFormula>IF (Subject = 'PCMH Presentation' &amp;&amp; ISPICKVAL(Status, "Completed") &amp;&amp;  
+ ISPICKVAL(PCMH_Decision__c, "Yes") &amp;&amp; ISNULL(PCMH_Presentation_Date__c), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Presentation_Date__c</errorDisplayField>
+        <errorMessage>015: You must enter a PCMH Presentation Date if Status is “Completed” and PCMH Decision is “Yes”.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E016_PCMH</fullName>
+        <active>false</active>
+        <description>When Subject equals PCMH Presenation and Status equals 'In Progress' Decision equal 'Appointment Scheduled' or 'Appointment to be Scheduled or 'Pending Account Decision'</description>
+        <errorConditionFormula>IF(Subject = "PCMH Presentation" &amp;&amp; 
+ISPICKVAL(Status, "In Progress") &amp;&amp;
+(NOT(ISPICKVAL(PCMH_Decision__c,"Pending Account Decision")) &amp;&amp; 
+NOT(ISPICKVAL(PCMH_Decision__c,"Appointment Scheduled")) &amp;&amp; 
+NOT(ISPICKVAL(PCMH_Decision__c,"Appointment to be Scheduled"))), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Decision__c</errorDisplayField>
+        <errorMessage>016: PCMH Decision must be “Pending Account Decision”, “Appointment Scheduled” or “Appointment Scheduled  if Status is “In Progress”.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E017_PCMH</fullName>
+        <active>false</active>
+        <description>You must enter a PCMH Presentation Date if Status is “In Progress” and the PCMH Decision is “Appointment  Scheduled” or “Pending Account Decision”.</description>
+        <errorConditionFormula>IF (Subject = 'PCMH Presentation' &amp;&amp; ISPICKVAL(Status, "In Progress") &amp;&amp;  
+(ISPICKVAL(PCMH_Decision__c, "Pending Account Decision") ||
+ISPICKVAL(PCMH_Decision__c, "Appointment Scheduled")) &amp;&amp; ISNULL(PCMH_Presentation_Date__c), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>PCMH_Presentation_Date__c</errorDisplayField>
+        <errorMessage>017: You must enter a PCMH Presentation Date if Status is “In Progress” and the PCMH Decision is “Appointment  Scheduled” or “Pending Account Decision”.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E018_GrowBig</fullName>
+        <active>true</active>
+        <description>If the Status is completed, User should enter the closed date</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp;(RecordType.DeveloperName= 'MIT' &amp;&amp; TEXT( Status )= 'Completed' &amp;&amp; ISBLANK( Closed_Date__c ))</errorConditionFormula>
+        <errorDisplayField>Closed_Date__c</errorDisplayField>
+        <errorMessage>018: If the Status is completed, User should enter the closed date</errorMessage>
+    </validationRules>
+</CustomObject>

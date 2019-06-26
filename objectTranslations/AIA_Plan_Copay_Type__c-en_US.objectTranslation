@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AliasName --></label>
+        <name>AliasName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allowed Amount --></label>
+        <name>Allowed_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- AnnualMaximumApplies --></label>
+        <name>AnnualMaximumApplies__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approximate Member Payment-w/Discount --></label>
+        <name>Approximate_Member_Payment_w_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Sequence Number --></label>
+        <name>Benefit_Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- CoinsuranceAmount --></label>
+        <name>CoinsuranceAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- CopayAmount --></label>
+        <name>CopayAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Additional Increments --></label>
+        <name>Copay_Additional_Increments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Additional InvalidIncrements --></label>
+        <name>Copay_Additional_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay High --></label>
+        <name>Copay_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Increment --></label>
+        <name>Copay_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Low --></label>
+        <name>Copay_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Sequence Number --></label>
+        <name>Copay_Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- DeductibleApplies --></label>
+        <name>DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DiscountApplies --></label>
+        <name>DiscountApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount Percent --></label>
+        <name>Discount_Amount_Percent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount --></label>
+        <name>Discount_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Applies --></label>
+        <name>Discount_Applies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouper Name --></label>
+        <name>Grouper_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsASOOnly --></label>
+        <name>IsASOOnly__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IsCovered --></label>
+        <name>IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction for BRF --></label>
+        <name>Jurisdiction_for_BRF__c</name>
+    </fields>
+    <fields>
+        <label><!-- MandateIndicator --></label>
+        <name>MandateIndicator__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MandateName --></label>
+        <name>MandateName__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxPayAmount --></label>
+        <name>MaxPayAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- MinPayAmount --></label>
+        <name>MinPayAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- PlanID --></label>
+        <name>PlanID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Benefits --></label>
+        <name>Plan_Benefits__c</name>
+        <relationshipLabel><!-- Plan Copay Type --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ScheduledAmounts --></label>
+        <name>ScheduledAmounts__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Term Date --></label>
+        <name>Term_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- TierType --></label>
+        <name>TierType__c</name>
+        <picklistValues>
+            <masterLabel>Generic</masterLabel>
+            <translation><!-- Generic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred</masterLabel>
+            <translation><!-- Non-Preferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred Specialty</masterLabel>
+            <translation><!-- Non-Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred</masterLabel>
+            <translation><!-- Preferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Specialty</masterLabel>
+            <translation><!-- Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Injectable</masterLabel>
+            <translation><!-- Self-Injectable --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan Copay Type</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plan Copay Type</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Plan Copay Type Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <picklistValues>
+            <masterLabel>Approve</masterLabel>
+            <translation><!-- Approve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirm</masterLabel>
+            <translation><!-- Confirm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create</masterLabel>
+            <translation><!-- Create --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enter Data</masterLabel>
+            <translation><!-- Enter Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Notify</masterLabel>
+            <translation><!-- Notify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Request</masterLabel>
+            <translation><!-- Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send</masterLabel>
+            <translation><!-- Send --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upload</masterLabel>
+            <translation><!-- Upload --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assign To Non-AIA Contact --></label>
+        <name>Assgin_To_Non_AIA_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignee Type --></label>
+        <name>Assignee_Type__c</name>
+        <picklistValues>
+            <masterLabel>Queue</masterLabel>
+            <translation><!-- Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Role</masterLabel>
+            <translation><!-- Role --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation><!-- User --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assignment Description --></label>
+        <name>Assignment_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Workplan Type Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>Default_Owner__c</name>
+        <relationshipLabel><!-- Workplan Type Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Due Date Determined By --></label>
+        <name>Due_Date_Determined_By__c</name>
+        <picklistValues>
+            <masterLabel>Expected Days To Complete</masterLabel>
+            <translation><!-- Expected Days To Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Timeline</masterLabel>
+            <translation><!-- Implementation Timeline --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Expected Days To Complete --></label>
+        <name>Expected_Days_To_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Days --></label>
+        <name>Expected_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Instructions --></label>
+        <name>Instructions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Milestone --></label>
+        <name>Milestone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Id --></label>
+        <name>Queue_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Name --></label>
+        <name>Queue_Name__c</name>
+        <picklistValues>
+            <masterLabel>AIA Admin Queue</masterLabel>
+            <translation><!-- AIA Admin Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Portal Tech Queue</masterLabel>
+            <translation><!-- BeneFact Portal Tech Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Approval</masterLabel>
+            <translation><!-- Benefit Design Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefits Core Team</masterLabel>
+            <translation><!-- Benefits Core Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Queue</masterLabel>
+            <translation><!-- Billing Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker Compliance</masterLabel>
+            <translation><!-- Broker Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker Escalation</masterLabel>
+            <translation><!-- Broker Escalation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker Sales Support</masterLabel>
+            <translation><!-- Broker Sales Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure Approval</masterLabel>
+            <translation><!-- Group Structure Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAST Tech Queue</masterLabel>
+            <translation><!-- MAST Tech Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Platinum Support</masterLabel>
+            <translation><!-- Non Platinum Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations Technical Support Queue</masterLabel>
+            <translation><!-- Operations Technical Support Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum Support</masterLabel>
+            <translation><!-- Platinum Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Production ID Card Queue</masterLabel>
+            <translation><!-- Production ID Card Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project 51 Support</masterLabel>
+            <translation><!-- Project 51 Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quality Audit</masterLabel>
+            <translation><!-- Quality Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP Queue</masterLabel>
+            <translation><!-- RFP Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC Support Team</masterLabel>
+            <translation><!-- SFDC Support Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlement Queue</masterLabel>
+            <translation><!-- Settlement Queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stop Table Tech Queue</masterLabel>
+            <translation><!-- Stop Table Tech Queue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Required --></label>
+        <name>Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+        <picklistValues>
+            <masterLabel>AE BA</masterLabel>
+            <translation><!-- AE BA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Dedicated Rep</masterLabel>
+            <translation><!-- Account Dedicated Rep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Dedicated Rep Back-up</masterLabel>
+            <translation><!-- Account Dedicated Rep Back-up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Executive</masterLabel>
+            <translation><!-- Account Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Manager</masterLabel>
+            <translation><!-- Account Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actuary</masterLabel>
+            <translation><!-- Actuary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Analyst</masterLabel>
+            <translation><!-- Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ancillary</masterLabel>
+            <translation><!-- Ancillary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ancillary Analyst</masterLabel>
+            <translation><!-- Ancillary Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Audit</masterLabel>
+            <translation><!-- Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Audit Manager/Supervisor</masterLabel>
+            <translation><!-- Audit Manager/Supervisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Coder</masterLabel>
+            <translation><!-- BeneFact Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Tester</masterLabel>
+            <translation><!-- BeneFact Tester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Admin Account Set-up</masterLabel>
+            <translation><!-- Benefit Admin Account Set-up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Admin Mgr/Sup</masterLabel>
+            <translation><!-- Benefit Admin Mgr/Sup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Admin Workflow Mgmt</masterLabel>
+            <translation><!-- Benefit Admin Workflow Mgmt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Contract Manager</masterLabel>
+            <translation><!-- Benefit Contract Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Contract Specialist</masterLabel>
+            <translation><!-- Benefit Contract Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit NASCO Tester</masterLabel>
+            <translation><!-- Benefit NASCO Tester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Tech</masterLabel>
+            <translation><!-- Billing Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue Rewards</masterLabel>
+            <translation><!-- Blue Rewards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueExchange Coder</masterLabel>
+            <translation><!-- BlueExchange Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Integration Manager</masterLabel>
+            <translation><!-- Business Integration Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAS</masterLabel>
+            <translation><!-- CAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cede Document Upload</masterLabel>
+            <translation><!-- Cede Document Upload --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claims</masterLabel>
+            <translation><!-- Claims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Coordinator</masterLabel>
+            <translation><!-- Contract Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Supervisor</masterLabel>
+            <translation><!-- Contract Supervisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Tech</masterLabel>
+            <translation><!-- Contract Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Marketing Communication User</masterLabel>
+            <translation><!-- Corporate Marketing Communication User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Marketing Communications</masterLabel>
+            <translation><!-- Corporate Marketing Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Support</masterLabel>
+            <translation><!-- Customer Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment</masterLabel>
+            <translation><!-- Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Tech</masterLabel>
+            <translation><!-- Enrollment Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facets Migration Contact</masterLabel>
+            <translation><!-- Facets Migration Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General User</masterLabel>
+            <translation><!-- General User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Coordinator</masterLabel>
+            <translation><!-- Implementation Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Manager</masterLabel>
+            <translation><!-- Implementation Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation PM</masterLabel>
+            <translation><!-- Implementation PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LG Leadership</masterLabel>
+            <translation><!-- LG Leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAST Tech</masterLabel>
+            <translation><!-- MAST Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Management</masterLabel>
+            <translation><!-- Medical Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Management Staff</masterLabel>
+            <translation><!-- Medical Management Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASCO Account Implementer</masterLabel>
+            <translation><!-- NASCO Account Implementer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASCO Benefit Coder</masterLabel>
+            <translation><!-- NASCO Benefit Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASCO Coder</masterLabel>
+            <translation><!-- NASCO Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASCO Tester</masterLabel>
+            <translation><!-- NASCO Tester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations Tech Suppt</masterLabel>
+            <translation><!-- Operations Tech Suppt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Guarantee Coordinator</masterLabel>
+            <translation><!-- Performance Guarantee Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy Management</masterLabel>
+            <translation><!-- Pharmacy Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy Operations</masterLabel>
+            <translation><!-- Pharmacy Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Privacy Office</masterLabel>
+            <translation><!-- Privacy Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Production ID Card</masterLabel>
+            <translation><!-- Production ID Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Manager</masterLabel>
+            <translation><!-- Proposal Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Specialist</masterLabel>
+            <translation><!-- Proposal Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA Auditor</masterLabel>
+            <translation><!-- QA Auditor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting</masterLabel>
+            <translation><!-- Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBU Project Manager</masterLabel>
+            <translation><!-- SBU Project Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Assistant</masterLabel>
+            <translation><!-- Sales Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Coordinator</masterLabel>
+            <translation><!-- Sales Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Director</masterLabel>
+            <translation><!-- Sales Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Manager</masterLabel>
+            <translation><!-- Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales VP</masterLabel>
+            <translation><!-- Sales VP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlements</masterLabel>
+            <translation><!-- Settlements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlements Analyst</masterLabel>
+            <translation><!-- Settlements Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOS ID Card</masterLabel>
+            <translation><!-- TOS ID Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Director</masterLabel>
+            <translation><!-- UW Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Manager/Supervisor</masterLabel>
+            <translation><!-- UW Manager/Supervisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW VP</masterLabel>
+            <translation><!-- UW VP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriter</masterLabel>
+            <translation><!-- Underwriter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Content Team</masterLabel>
+            <translation><!-- Web Content Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wellness</masterLabel>
+            <translation><!-- Wellness --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Send Chatter --></label>
+        <name>Send_Chatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Notification --></label>
+        <name>Send_Notification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Generated --></label>
+        <name>System_Generated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Code --></label>
+        <name>Task_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Name --></label>
+        <name>Task_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type Stage --></label>
+        <name>Workplan_Type_Stage__c</name>
+        <relationshipLabel><!-- Workplan Type Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type --></label>
+        <name>Workplan_Type__c</name>
+        <relationshipLabel><!-- Workplan Type Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 120 Day Offset --></label>
+        <name>X120_Day_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- 180 Day Offset --></label>
+        <name>X180_Day_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- 60 Day Offset --></label>
+        <name>X60_Day_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- 90 Day Offset --></label>
+        <name>X90_Day_Offset__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Workplan Type Assignment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Workplan Type Assignment</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>AIA Workplan Type Task Layout</layout>
+        <sections>
+            <label><!-- Assignee --></label>
+            <section>Assignee</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Due Dates --></label>
+            <section>Due Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Instructions / Description --></label>
+            <section>Instructions / Description</section>
+        </sections>
+        <sections>
+            <label><!-- Non AIA Contact --></label>
+            <section>Non AIA Contact</section>
+        </sections>
+        <sections>
+            <label><!-- Notification --></label>
+            <section>Notification</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Workplan Assignment --></label>
+        <name>Workplan_Assignment</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- EWTA_001:  Please Enter Value in User --></errorMessage>
+        <name>EWTA_001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWTA_002: Please Enter Value in Queue Name --></errorMessage>
+        <name>EWTA_002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWTA_003 : Please select a Value in Role --></errorMessage>
+        <name>EWTA_003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Value in Contact --></errorMessage>
+        <name>EWTA_004</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not add new workplan type assignments for an active workplan type. --></errorMessage>
+        <name>EWTA_005</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Value in Queue Name --></errorMessage>
+        <name>Queue_Mandatory_Assigneetype_Queue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Value in Role --></errorMessage>
+        <name>Role_Mandatory_Assigneetype_Role</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Value in User --></errorMessage>
+        <name>User_Mandatory_Assigneetype_user</name>
+    </validationRules>
+</CustomObjectTranslation>

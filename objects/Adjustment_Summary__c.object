@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Adjustment_Category__c</fullName>
+        <description>The category of the adjustment. Example: Medical, Dental, Vision etc</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>The category of the adjustment. Example: Medical, Dental, Vision etc</inlineHelpText>
+        <label>Adjustment Category</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Generated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>A flag that indicates this record was auto generated as opposed to user generated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A flag that indicates this record was auto generated as opposed to user generated.</inlineHelpText>
+        <label>Auto Generated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Design__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>A reference to a parent benefit design.  This may be null if the records belong to a benefit request form.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A reference to a parent benefit design.  This may be null if the records belong to a benefit request form.</inlineHelpText>
+        <label>Benefit Design</label>
+        <referenceTo>AIA_Benefit_Design__c</referenceTo>
+        <relationshipLabel>Adjustment Summaries</relationshipLabel>
+        <relationshipName>Adjustment_Summaries</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>A reference to a parent benefit design.  This may be null if the records belong to a benefit design form.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A reference to a parent benefit design.  This may be null if the records belong to a benefit design form.</inlineHelpText>
+        <label>Benefit Request Form</label>
+        <referenceTo>Benfit_Request_Form__c</referenceTo>
+        <relationshipLabel>Adjustment Summaries</relationshipLabel>
+        <relationshipName>Adjustment_Summaries</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Changed_by_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The user that made the change.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The user that made the change.</inlineHelpText>
+        <label>Changed by User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Adjustment_Summaries</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DateTime_of_Change__c</fullName>
+        <description>The date/time of the change.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>The date/time of the change.</inlineHelpText>
+        <label>DateTime of Change</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Field_Affected__c</fullName>
+        <description>The field that was affected.  This may also be used to indicate a New or Deleted item.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>The field that was affected.  This may also be used to indicate a New or Deleted item.</inlineHelpText>
+        <label>Field Affected</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Form_Changed__c</fullName>
+        <description>The name of the item that was changed.  This could be a form, benefit, limitation etc.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>The name of the item that was changed.  This could be a form, benefit, limitation etc.</inlineHelpText>
+        <label>Form Changed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Value__c</fullName>
+        <description>The new value of the field.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>The new value of the field.</inlineHelpText>
+        <label>New Value</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Previous_Value__c</fullName>
+        <description>The previous value of the field.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>The previous value of the field.</inlineHelpText>
+        <label>Previous Value</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RecordType_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Benefit_Request_Form__c)),'BRF','BD')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RecordType Drawloop</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>A list of summarized changes to the associated records.  These records will be generated when a BRF is Sold or a BD is approved.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Adjustment Summary</label>
+    <nameField>
+        <displayFormat>AN-{00000}</displayFormat>
+        <label>Adjustment Summary Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Adjustment Summaries</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

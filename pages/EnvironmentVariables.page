@@ -1,0 +1,48 @@
+<apex:page controller="EnvironmentVariablesController">
+
+	<apex:form >
+
+		<apex:pageMessages escape="false" />
+
+		<apex:pageBlock >
+			<apex:pageBlockSection >
+				<apex:inputField id="Module" value="{!selectedVar.Module__c}"></apex:inputField>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection >
+				<apex:inputField id="VariableName" value="{!selectedVar.Variable_Name__c}"></apex:inputField>
+				<apex:inputField id="VariableValue" value="{!selectedVar.Value__c}"></apex:inputField>
+				<!--<apex:inputField id="Encrypted" value="{!selectedVar.IsEncrypted__c}"></apex:inputField>-->
+			</apex:pageBlockSection>
+
+			<apex:pageBlockButtons location="bottom">
+                <apex:commandButton id="Save" value="Save" action="{!saveVariable}" />
+            </apex:pageBlockButtons>
+		</apex:pageBlock>
+
+		<apex:pageBlock id="environmentVars" rendered="{!NOT environmentVars.Empty}">
+			<apex:pageBlockTable value="{!environmentVars}" var="vars" width="100%">
+				<apex:column headerValue="Action" >
+					<strong>
+				    <apex:commandLink action="{!editVariable}" value="Edit" immediate="true" rendered="{!vars.Module__c == 'Broker Express' && vars.Variable_Name__c != 'TransactionId'}">
+				        <apex:param name="selectedID" value="{!vars.Id}" />
+				    </apex:commandLink> &nbsp;
+				    <apex:commandLink action="{!deleteVariable}" value="Del" immediate="true" rendered="{!vars.Module__c == 'Broker Express' && vars.Variable_Name__c != 'TransactionId'}">
+				        <apex:param name="selectedID" value="{!vars.Id}" />
+				    </apex:commandLink>
+				    </strong>
+				</apex:column>
+				<apex:column headerValue="Module">{!vars.Module__c}</apex:column>
+				<apex:column headerValue="Name">{!vars.Variable_Name__c}</apex:column>
+				<apex:column headerValue="Value" >{!vars.Value__c}</apex:column>
+			</apex:pageBlockTable>	
+		</apex:pageBlock>
+
+		<apex:pageBlock rendered="{!environmentVars.Empty}">
+			<apex:pageBlockSection >
+				<strong>No environment variables have been added</strong>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+
+	</apex:form>
+
+</apex:page>

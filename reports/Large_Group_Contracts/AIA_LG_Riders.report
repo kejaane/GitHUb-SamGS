@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Benfit_Request_Form__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Proposed_Products__r$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Proposed_Products__r.File_Net_Documents__r$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Proposed_Products__r$Rider__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Proposed_Products__r$Rider_Comments__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c.Proposed_Products__r$Rider__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>test for egp account</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>AIA LG Riders</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>BRF_w_PPs_AIA_Docs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Benfit_Request_Form__c.Proposed_Products__r$Rider__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Benfit_Request_Form__c$ARC_Approval_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

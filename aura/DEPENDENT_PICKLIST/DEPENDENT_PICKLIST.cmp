@@ -1,0 +1,53 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" controller="Dependent_Picklist">
+    <ltng:require styles="{!$Resource.SLDS2_2_1  + '/assets/styles/salesforce-lightning-design-system.css'}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--Global attributes--> 
+    <aura:attribute name="objectType" 
+                    type="String" 
+                    access="global" />
+    <aura:attribute name="parentPicklistApiname" 
+                    type="String"
+                    access="global"
+                    />
+    <aura:attribute name="dependentPicklistApiname" 
+                    type="String" 
+                    access="global"/>
+     <aura:attribute name="parentPicklistvalue" 
+                    type="String" 
+                    access="global"/>
+    <aura:attribute name="dependentPicklistvalue" 
+                    type="String" 
+                    access="global"/>
+    <aura:attribute name="isDependentDisable" type="boolean" default="true" description="use for, make disbale depandent field." />
+    <aura:attribute name="depnedentFieldMap" type="map" description="store controller(key)--> dependent(values) picklist value as a map." />
+    
+    
+	 <div class="slds-form-element slds-is-required"  style="margin-right:-100px;">
+         <div class="slds-form-element__control" style="margin-right:-100px;">
+             <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                    >
+                 <span class="required" style="color:red">*</span>
+                 Grandfathered Status
+             </label>
+             <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                 <ui:inputSelect aura:id="conCountry" class="slds-select" change="{!c.onControllerFieldChange}" 
+                                 value="Non-Grandfathered"/>                                    
+             </div>
+         </div>
+    </div>
+    <div class="slds-form-element slds-is-required"  style="margin-right:-100px;">
+        <div class="slds-form-element__control" style="margin-right:-100px;">
+            <label class="slds-form-element__label" style="width:300px; margin-left:25px;" for="select-01"
+                   >
+                <span class="required" style="color:red">*</span>
+                PPACA Status
+            </label>
+            <div class="slds-select_container" style="width:300px; margin-left:25px;" >
+                <ui:inputSelect aura:id="conState"  class="slds-select" 
+                                change="{!c.onDependentFieldChange}" 
+                                value="Yes"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

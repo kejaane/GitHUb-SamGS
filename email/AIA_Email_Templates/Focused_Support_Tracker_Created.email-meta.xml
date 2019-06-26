@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When a Focused Support Tracker is created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Focused Support Tracker Created</name>
+    <style>none</style>
+    <subject>Ticket: {!Focused_Support_Tracker__c.Name} Subject: {!Focused_Support_Tracker__c.Email_Subject__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

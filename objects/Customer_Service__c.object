@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Customer_Services</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Term_Date__c),IMAGE("/servlet/servlet.FileDownload?file=01560000001jIr0", "Start", 20, 20),IF(Term_Date__c &lt; Today (),IMAGE("/servlet/servlet.FileDownload?file=01560000001jIr0", "Start", 20, 20),IMAGE("/servlet/servlet.FileDownload?file=01560000001jIqv", "Start", 20, 20)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If it is Green record is active, if it is Red record is not active</inlineHelpText>
+        <label>Active</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Area__c</fullName>
+        <externalId>false</externalId>
+        <label>Area</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Member Services</fullName>
+                    <default>false</default>
+                    <label>Member Services</label>
+                </value>
+                <value>
+                    <fullName>Provider Services</fullName>
+                    <default>false</default>
+                    <label>Provider Services</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy</fullName>
+                    <default>false</default>
+                    <label>Pharmacy</label>
+                </value>
+                <value>
+                    <fullName>Dental</fullName>
+                    <default>false</default>
+                    <label>Dental</label>
+                </value>
+                <value>
+                    <fullName>Vision</fullName>
+                    <default>false</default>
+                    <label>Vision</label>
+                </value>
+                <value>
+                    <fullName>Life Insurance</fullName>
+                    <default>false</default>
+                    <label>Life Insurance</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Effective_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Other_Area__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Other Area</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Area__c , 
+"Member Services", 1, 
+"Provider Services", 2, 
+"Pharmacy", 3, 
+"Dental", 4, 
+"Vision", 5, 
+"Life Insurance", 6, 
+"Other", 7, 
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sequence</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Hours</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>24/7 - 363 Days</fullName>
+                    <default>false</default>
+                    <label>24/7 - 363 Days</label>
+                </value>
+                <value>
+                    <fullName>24/7 - 365 Days</fullName>
+                    <default>false</default>
+                    <label>24/7 - 365 Days</label>
+                </value>
+                <value>
+                    <fullName>Custom/Other</fullName>
+                    <default>false</default>
+                    <label>Custom/Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Non-PGA</fullName>
+                    <default>false</default>
+                    <label>Non-PGA</label>
+                </value>
+                <value>
+                    <fullName>Performance</fullName>
+                    <default>false</default>
+                    <label>Performance</label>
+                </value>
+                <value>
+                    <fullName>Platinum</fullName>
+                    <default>false</default>
+                    <label>Platinum</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Term_Date_Verification__c</fullName>
+        <description>If term date is blank or term date is less than current date then it is active (US369)</description>
+        <externalId>false</externalId>
+        <formula>/*OR(NOT(ISBLANK(Term_Date__c)), TODAY() &gt; Term_Date__c) 
+if(NOT(ISBLANK(Term_Date__c)),if(TODAY() &lt; Term_Date__c,true,false) , false)*/ 
+
+If(Not(ISBLANK(Term_Date__c)),IF(Term_Date__c &lt; Today(),true,false),false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Term Date Verification</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Term_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Term Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>AIA Customer Service</label>
+    <nameField>
+        <displayFormat>CS-{000}</displayFormat>
+        <label>Customer Service Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Customer Service Numbers</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <validationRules>
+        <fullName>CS001</fullName>
+        <active>true</active>
+        <description>CS001: If service hours is 'Other' then comments field cannot be blank. Please verify the below records</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; ( Text( Service_Hours__c )='Custom/Other' &amp;&amp; ISBLANK( Comments__c ))</errorConditionFormula>
+        <errorDisplayField>Comments__c</errorDisplayField>
+        <errorMessage>CS001: Please enter Comments</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CS002</fullName>
+        <active>true</active>
+        <description>CS002: If Area is 'Other' then Other Area field cannot be blank. Please verify the below records</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; ( Text( Area__c )='Other' &amp;&amp; ISBLANK( Other_Area__c ))</errorConditionFormula>
+        <errorDisplayField>Other_Area__c</errorDisplayField>
+        <errorMessage>CS002: Please enter Value for Other Field below.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CS003</fullName>
+        <active>true</active>
+        <description>CS003: Please enter a valid Phone Number. Please verify the below records</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; AND( 
+NOT(ISBLANK( Phone_Number__c )), 
+LEN(Phone_Number__c) &lt; 10 
+)</errorConditionFormula>
+        <errorDisplayField>Phone_Number__c</errorDisplayField>
+        <errorMessage>CS003: Enter Valid Phone number</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CS004</fullName>
+        <active>true</active>
+        <description>CS004: If Area is not 'Other' then Other Area field cannot have value. Please verify the below records</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; 
+
+IF(Text(Area__c)!='Other',IF(Not(ISBLANK( Other_Area__c )),true,false),false)</errorConditionFormula>
+        <errorDisplayField>Other_Area__c</errorDisplayField>
+        <errorMessage>CS004: You cannot have value in Other Field below</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CS005</fullName>
+        <active>true</active>
+        <description>CS005: Term Date cannot be lesser than Effective Date</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; (IF( Term_Date__c &lt;  Effective_Date__c ,true,false))</errorConditionFormula>
+        <errorDisplayField>Term_Date__c</errorDisplayField>
+        <errorMessage>CS005: Term Date cannot be lesser than Effective Date</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>View_Add_Customer_Service_Details</fullName>
+        <availability>online</availability>
+        <description>This page is used for replacing the standard new button on Customer Service Related List</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>View/Add Customer Service Details</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_CS_Number_Page</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

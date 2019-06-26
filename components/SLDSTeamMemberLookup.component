@@ -1,0 +1,278 @@
+<!-- =========================================================================================
+ * Date         : 01/21/2018
+ * Developer    : Rajesh Pennam
+ * Purpose      : This is the VF Component used in BRF Deep Clone VFPage.
+ *                
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer        Tag         Description
+ *============================================================================================
+   01/18/2018|Rajesh Pennam| T01   | Intial Developement
+ *=========================================================================================
+ 
+ -->
+
+
+
+
+<apex:component controller="SLDSTeamMemberLookupController">
+
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+.slds-lookup__menu{
+    margin-top: 35px !important;
+}
+        </style>
+<script>
+
+//setup before functions
+var typingTimer;                //time interval
+var doneTypingInterval = 500;   //  This variable is used to 500millisec to call the below function "keyPressedOnLookup" will be called immediately which may not load
+
+// Method to fire once user stop writing (Search Scroll)
+ 
+function keyPressedOnLookup(componentId, objectName, fieldNames, fieldsPattern, photo, objectPluralName, userMap,remoteMethod){
+
+    clearTimeout(typingTimer);
+    var selector = '#'+componentId;
+    //QuerySelector is used to get the first element in the document
+    if (document.querySelector(selector+" #lookup").value) {
+        //SetTimeout method is standard JS function which is used to perform the action after 3000ms which gives time to load the page
+        typingTimer = setTimeout(startSearch(componentId, objectName, fieldNames, fieldsPattern, photo, objectPluralName,userMap,remoteMethod), doneTypingInterval);
+    }else{
+        var searchText = document.querySelector(selector+" #lookup");
+        var lstBox = document.querySelector(selector+" #list-box");
+        lstBox.style.display = 'none';
+    }
+}
+
+// This function is used to for search functionality when use enters particular record name
+ 
+function startSearch(componentId, objectName, fieldNames, fieldsPattern, photo, objectPluralName,userMap, remoteMethod) {
+
+    var selector = '#'+componentId;
+    showLoader(componentId); // This is used to processing to show the status
+    var searchText = document.querySelector(selector+" #lookup");
+    Visualforce.remoting.Manager.invokeAction(remoteMethod,
+            objectName, fieldNames, fieldsPattern, photo, searchText.value, userMap,
+        function(result, event){
+            if (event.status) {
+                var lstBox = document.querySelector(selector+" #list-box");
+                lstBox.style.display = 'block';
+                lstBox.style.marginTop  = '35px !important';
+                
+                var recordLst = document.querySelector(selector+" #record-list");
+                recordLst.innerHTML = '';
+                for(var i = 0; i < result.length ; i++){
+                    var record = result[i];
+                    recordLst.appendChild(createRecordLi(componentId,record));
+                }
+                document.querySelector(selector+" #search-text-info").innerHTML = searchText.value + ' in '+objectPluralName+' - '+ result.length + ' results found'; 
+            } else if (event.type === 'exception') {
+                    console.log(event.message);
+                    console.log(event.where);
+            } else {
+                 console.log(event.message);
+            }
+            hideLoader(componentId);
+        }, 
+        {escape: true}
+    );
+}
+
+// This function is used to display the list of record in the search bar
+
+function createRecordLi(componentId,record){
+	var id = record.recordId;
+	console.log('id%%'+id);
+    var displayName = record.displayValue;
+	console.log('displayName%%'+displayName);
+	var photoUrl = record.photoUrl;
+    var li = document.createElement("li");
+    li.setAttribute("class", "slds-lookup__item");
+    li.setAttribute("onclick", "select('"+componentId+"', '"+displayName+"', '"+photoUrl+"', '"+id+"')");
+    var inner = '<a id=s02 role=option>';
+        if(photoUrl){
+            inner += '<img src="'+photoUrl+'" class="slds-icon slds-icon-text-default slds-icon--small"/>';
+        }
+        inner += displayName;
+        inner += '</a>';
+    
+    li.innerHTML = inner;
+    return li;
+}
+
+// This function is used to select record from list displayed
+
+function select(componentId, name,photoUrl,id){
+    var selector = '#'+componentId;
+    showLoader(componentId);
+    //console.log('name**%%'+name);
+    //console.log('selector%%'+selector);
+    document.querySelector(selector+" #selected-name").innerHTML = name;
+    if(photoUrl != 'undefined' && photoUrl != '' && photoUrl != null){
+        document.querySelector(selector+" #select-image").style.display = 'inline';
+        document.querySelector(selector+" #select-image").setAttribute("src", photoUrl);
+    }else{
+        document.querySelector(selector+" #select-image").style.display = 'none';
+    }
+    //console.log('componentId$$%%'+componentId);
+    //console.log('id$$%%'+id);
+    //eval(componentId+"setOwnerId('"+id+"')");
+	testFun(id,name);
+	recordSelected(componentId);
+}
+
+// This function is used for making user to select the record
+
+function recordSelected(componentId){
+
+	console.log('Selected&&&'+componentId);
+	console.log('{!SetValueToField}***'+'{!SetValueToField}');
+    var selector = '#'+componentId;
+    if(document.querySelector(selector+" #selected-record").style.display == 'none'){
+        document.querySelector(selector+" #selected-record").style.display = 'block';
+        document.querySelector(selector+" #input-text").style.display = 'none';
+        document.querySelector(selector+" #lookup").value = '';
+        var lstBox = document.querySelector(selector+" #list-box");
+        lstBox.style.display = 'none';
+    }else{
+        document.querySelector(selector+" #input-text").style.display = 'block';
+        document.querySelector(selector+" #selected-record").style.display = 'none';
+    }
+    hideLoader(componentId);
+}
+
+// This function is used to remove the record selected by user
+
+
+function removeRecord(componentId){
+    //console.log('Check###1'+componentId);
+    var selector = '#'+componentId;
+   // eval(componentId+"setOwnerId(null)");
+   testFun(null,null);
+	recordSelected(componentId);
+}
+
+function showLoader(componentId){
+    //console.log('Check###12');
+    var selector = '#'+componentId;
+    // document.querySelector(selector+" #loader").style.display = 'block';
+}
+
+function hideLoader(componentId){
+    //console.log('Check###13');
+    var selector = '#'+componentId;
+    // document.querySelector(selector+" #loader").style.display = 'none';
+}
+</script>
+   
+   
+   <apex:slds />
+   <div class="slds-scope"> 
+    <!-- attributes -->
+    <!-- Resource name form image-->
+    <apex:attribute name="SLDSResourceName" 
+        description="Attribute in which ame of static resource to be passed"
+            required="true" type="String"/>
+    <!--label for unique identity -->
+    <apex:attribute name="LabelName"
+        description="Attribute to display label along with look up field to distinguish fields"
+            required="true" type="String" assignTo="{!label}"/>
+    <!--Object Api name -->
+    <apex:attribute name="ObjectApiName" 
+        description="Api name of component on which search should happen"
+            required="true" type="String" assignTo="{!objectName}"/>
+       <!--Filed Api name -->
+    <apex:attribute name="DisplayFieldApiNames" 
+        description="Attribute to get fields Api Name whose value needs to be displayed while searching.These are seperated by comma.For example : 'firstname,lastname'" 
+            required="true" type="String"/>
+       <!--Display pattren -->
+     <apex:attribute name="DisplayFieldsPattern" 
+        description="Attribute to get pattern to display value.You can combine two fields with pattern. For example : 'firstname - lastname'" 
+            type="String"/>
+       <!--Photo needed? -->
+    <apex:attribute name="Photo" 
+        description="Attribute that will tell if photo needs to be added to records while searching. For fields to be used, pattern should be 'field->fieldAPiName'. For url, pattern should be 'url->pathofimage'" 
+            type="String"/>
+       <!--Set Selected id values to local variable -->
+    <apex:attribute name="SetValueToField"
+        description="Attribute that will tell where to put selected value"
+            required="true" type="SelectOption[]"/>
+        <!--Set Selected name values to local variable -->
+    <apex:attribute name="SetNameToField"
+        description="Attribute that will tell where to put selected value"
+            required="true" type="SelectOption[]"/>    
+       <!--Map results to show up search results from custom search/logic from main controller -->
+     <apex:attribute name="map" description="aMap" type="map" />            
+     <!--body-->
+        <div id="{!uniqueComponentId}">
+            <div class="slds-spinner_container" style="display:none;" id="loader">
+              <div class="slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+              </div>
+            </div>
+          
+            <apex:actionFunction name="testFun" rerender="random" action="{!testnMethod}">
+				<apex:param name="setId" value="" assignTo="{!SetValueToField}"/>
+				<apex:param name="setName" value="" assignTo="{!SetNameToField}" />
+			</apex:actionFunction>
+             <div class="slds-lookup" data-select="single" data-scope="single" data-typeahead="true">
+            <!--  <div class="slds-container--small">  -->
+
+               <div class="slds-form-element"> 
+                 
+               <!-- <b><label class="slds-form-element__label" for="lookup">{!LabelName}<abbr class="slds-required">*</abbr></label> </b> -->
+                  <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right slds-float_left" >
+                     
+                    <!-- section to display selected record-->
+                    <div class="slds-pill_container slds-show" style="display:none;" id="selected-record">
+                      <a href="javascript:void(0)" class="slds-pill">
+                        <img src=""  class="slds-icon slds-icon-standard-account slds-pill__icon" id="select-image"/>
+                        <span class="slds-pill__label" id="selected-name"></span>
+                        <button type="button" class="slds-button slds-button--icon-bare slds-pill__remove" onclick="removeRecord('{!uniqueComponentId}')">                                  
+                     <apex:image url="{!URLFOR(SLDSResourceName, '/SLDS/assets/icons/utility/close_60.png')}"  styleclass="slds-button__icon"/>
+                          <span class="slds-assistive-text">Remove</span>
+                        </button>
+                      </a>
+                    </div>
+                    
+                    <!-- section to display input field for search-->
+                    <div id="input-text" style="display:block;">
+                        <apex:image url="{!URLFOR(SLDSResourceName, '/SLDS/assets/icons/utility/search_60.png')}"  styleclass="slds-input__icon slds-icon-text-default"/>
+                        
+                        <input id="lookup" class="slds-input" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" 
+                               onkeyup="keyPressedOnLookup('{!uniqueComponentId}','{!ObjectApiName}', '{!DisplayFieldApiNames}', '{!DisplayFieldsPattern}','{!Photo}','{!objectLabelPlural}','{!map}','{!$RemoteAction.SLDSTeamMemberLookupController.search}')"
+                                placeholder="Search {!objectLabelPlural}"  />
+                    </div>
+                  </div>
+                  </div>
+                
+                <!-- section to display searched results-->
+                <div class="slds-lookup__menu" role="listbox" id="list-box" style="display: none;margin-top: 35px important;">
+                  <div class="slds-lookup__item">
+                      <apex:image url="{!URLFOR(SLDSResourceName, '/SLDS/assets/icons/utility/search_60.png')}" styleClass="slds-icon slds-icon-text-default slds-icon--small" width="20px" height="20px"/>
+                      <span id="search-text-info" style="display:inline"></span>
+                  </div>
+                  <ul class="slds-lookup__list" role="presentation" id="record-list">
+                  </ul>
+                </div>
+              </div>
+         </div>
+         </div>
+      <!--   </div> -->
+  
+   <script>
+      window.$j = jQuery.noConflict();
+      $j( document ).ready(function() {
+        
+            if('{!SetValueToField}'!='')
+             select('{!uniqueComponentId}','{!SetNameToField}','','{!SetValueToField}');
+
+        });
+     
+
+    </script>        
+</apex:component>

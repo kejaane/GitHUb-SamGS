@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Lightning action for Refresh Survey Contacts</description>
+    <height>250</height>
+    <label>Refresh Survey Contacts</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>SurveyContacts</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

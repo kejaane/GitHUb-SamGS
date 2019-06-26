@@ -1,0 +1,211 @@
+<!--
+/* =========================================================================================
+ * Date         : 08/01/2016
+ * Developer    : Laveen Kattela
+ * Purpose      : This VF Component referes to the Broker portal Community Header Section for all pages
+ *                1.It Includes Carefirst Logo 2.Name of the Person who logged in to Community 3.Persons Organization Name he is associated to 
+ *                4.Logout  5.Home Tab  6.My cases tab 
+ *=========================================================================================
+ * Update History
+ *  ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 08/01/16   |  Laveen Kattela    | Initial Version                                          
+ *===========+============+================================================================
+ */
+ -->
+<apex:component >
+    <!-- ### HEADER ### -->
+
+        <apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'content/js/bootstrap.min.js')}"/>  
+        <apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'content/js/brokerscript.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.Communities_Resource, 'content/js/brokerscript.js')}"/>
+        <div class="header visible-md visible-lg">
+            <div class="tab-header broker">
+                <form id="search_form">
+                  <!--  <input type="text" id="search" name="search" placeholder="search" />
+                    <input type="image" id="search_button" src="../content/img/button.search.png" alt="" />
+                    <input type="image" id="search_button" src="{!URLFOR($Resource.Communities_Resource, '/content/img/button.search.png')}" alt=""/> -->
+                </form>
+            </div>
+        </div>
+        <div class="navbar cfmegamenu navbar-default "><!-- ### REMOVED navbar-fixed-top ### --> 
+            <!--desktop only items -->
+            <div class="cf-desktop-only-header visible-md visible-lg"> 
+                <div class="logo-header">
+                    <!--<img class="cf-desktop-logo fl" src="../content/img/logo.carefirst.svg" alt="CareFirst Logo" />-->
+                        <img src="{!URLFOR($Resource.Communities_Resource, '/content/img/logo.carefirst.svg')}" alt="CareFirst Logo"/>
+
+                    <ul>
+                        <li class="p5 fwn"><span>{!$User.FirstName}</span>,&nbsp;<span  data-toggle="tooltip"  title="{!$User.LastName} &amp; {!$User.CompanyName}"  class="groupname tip-bottom red-tooltip">{!$User.LastName} &amp; {!$User.CompanyName}</span></li>
+                      
+                <li class="dropdown p0">
+                    <!--<a id="drop-contact" role="button" data-toggle="dropdown" href="#"><img src="{!URLFOR($Resource.Communities_Resource, '/content/img/header-icons-contact.png')}" width="24" height="24" alt="" style="margin-right:5px;"/> </a>-->
+<!-- 
+                            <ul id="contact-options" class="dropdown-menu" role="menu" aria-labelledby="drop-contact">
+                                <li class="dropdown-options"><a role="menuitem" tabindex="-1" href="message_center_composeMail.html"><img src="../content/img/dd-icon-msg.png"> Send Us a Secure Message</a></li>
+                                <li class="dropdown-options"><a role="menuitem" tabindex="-1" href="web_connect.html"><img src="../content/img/dd-icon-hcfcu.png"> Have CareFirst Call You</a></li>
+                                <li class="dropdown-options"><a role="menuitem" tabindex="-1" href="contactus.html"><img src="../content/img/dd-icon-callcf.png"> Call CareFirst</a></li>
+                                   https://broker.carefirst.com/brokers/home.page 
+                            </ul> -->
+
+                        </li>
+
+                        <li class="omega">
+                      <!--     <span class="logout"><a href="{!$Site.Prefix}/secur/logout.jsp">Log Out</a></span>  -->
+                         <span class="logout"><a href="https://broker.carefirst.com/brokers/home.page">Log Out</a></span> 
+                        </li>
+
+                    </ul>
+                    <!--### PRINT AND TEXT SIZER ### -->
+                    <div class="pull-right clear" style="clear:right;">
+                        <ul>
+                          <!--  <li><a href="javascript:window.print();" class="print"></a></li>
+                            <li class="omega text-sizer">
+                                <span class="label">Text Size:</span>
+                                <a href="#" class="text_size smaller">A</a>
+                                <a href="#" class="text_size regular">A</a>
+                                <a href="#" class="text_size larger">A</a>
+                            </li>  -->
+                        </ul>
+
+
+                    </div>
+                    <!-- ### END PRINT TEXT SIZER ### -->
+                    <div class="cf-welcome-div visible-md visible-lg">
+
+                    </div>
+                </div><!-- ### END LOGO HEADER ### -->
+            </div>
+            <!-- this is the navbar -->
+            <nav class="cf-navbar-container">
+                <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" >
+                        <li class="hidden-md hidden-lg navOptionsTop">
+                            <div class="optionsLt">
+                                <div class="leftgroupname" style="color:#414141;">
+
+                                    <span class="b">{!$User.FirstName}</span>,<br/><span  data-toggle="tooltip"  class="groupname ">{!$User.LastName} &amp; {!$User.CompanyName}</span>
+
+                                </div>
+                            </div>
+                            <div class="optionsRt">
+                             <!--  <a href="javascript:void(0);" id="settings-icon"><img src="{!URLFOR($Resource.Communities_Resource, '/content/img/header-icons-cog.png')}" width="34" height="24" alt="Settings" /></a> -->
+                            </div>
+                            <div class="optionsRt">
+                                <div class="icon_top">
+                                    <a href="#">
+                                       <!--  <img src="{!URLFOR($Resource.Communities_Resource, '/content/img/email-header-icon.png')}" width="22" height="22" alt=""/>  -->
+                                        <span class="round_bg yellow">3</span>
+                                    </a>
+                                </div>
+                            </div> 
+                            <div class="clearfix"></div>  
+                        </li>
+                        <li id="settings-options" class="dropdown">
+                            <ul class="dropdown-menu">
+                                <li> 
+                                    <div class="cfmegamenu-content">
+                                        <div class="row">
+                                            <ul class="col-md-12 col-sm-12 col-xs-12">
+                                                <li><a href="#">My Profile <span class="glyphicon blue-link hidden-md hidden-lg"></span></a></li>
+                                                <li><a href="#">Change Password <span class="glyphicon blue-link hidden-md hidden-lg"></span></a></li>
+                                                <li><a href="#">Change Email <span class="glyphicon blue-link hidden-md hidden-lg"></span></a></li>
+                                                <li><a href="#">Electronic Consent <span class="glyphicon blue-link hidden-md hidden-lg"></span></a></li>
+                                                <li><a href="#">Update Address <span class="glyphicon blue-link hidden-md hidden-lg"></span></a></li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>                
+                                    </div>  
+                                </li>
+                            </ul>
+                        </li>  
+                        <li class="dropdown {!IF($CurrentPage.Name == 'Communities_HomePage','selected','')}">
+                            <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_HomePage" data-toggle="dropdown" onclick="location.href = '/{!$Label.BrokerPortalCommunity}/apex/Communities_HomePage'" class="dropdown-toggle hidden-sm hidden-xs" >Home</a>
+                           <div class="mm-arrow" style=" cursor: pointer;" onclick="location.href = '/{!$Label.BrokerPortalCommunity}/apex/Communities_HomePage'"></div>
+                            <a  data-toggle="dropdown" class="dropdown-toggle hidden-md hidden-lg" onclick="location.href = '/{!$Label.BrokerPortalCommunity}/apex/Communities_HomePage'" >Home <b class="glyphicon arwDown arwIe hidden-md hidden-lg"></b>
+                                
+                            </a> 
+                        </li>
+                        <!-- Classic list -->
+                        
+                    
+                        
+                        <li class="dropdown {!IF($CurrentPage.Name == 'SBU_Communities_My_Cases_Page','selected','')}">
+                            <a href="/{!$Label.BrokerPortalCommunity}/apex/SBU_Communities_My_Cases_Page" data-toggle="dropdown" class="dropdown-toggle" onclick="location.href = '/{!$Label.BrokerPortalCommunity}/apex/SBU_Communities_My_Cases_Page'">My Case<b class="glyphicon arwDown arwIe hidden-md hidden-lg"></b></a>
+                            <!--<ul class="dropdown-menu">
+                                <li> 
+                                    
+                                    <div class="cfmegamenu-content">
+                                        <div class="row clearfix">
+                                            <ul class="col-md-12 col-sm-12 col-xs-12 ">
+                                                <li><a href="view-claims.html">TBD </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul> -->
+                            <!-- ### END DROP DOWN MENU ### --> 
+                            <!--### ARROW ### -->
+                            <div class="mm-arrow" onclick="location.href = '/{!$Label.BrokerPortalCommunity}/apex/SBU_Communities_My_Cases_Page'" style=" cursor: pointer;"> <span> </span></div>
+                        </li>
+
+                        <!-- ### New add menu documents starts here  ### --> 
+
+                        <!--  new add menu documents  -->
+                        
+                        <li class="dropdown hidden-md hidden-lg"><a href="/secur/logout.jsp">LOGOUT </a></li>
+                    <!-- ###
+                    <li class="dropdown hidden-md hidden-lg text-center"><a href="#">Switch to Desktop View</a></li>
+                    ### -->
+                </ul>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-back hidden-md hidden-lg" onClick="javascript:history.back()" > <span class="glyphicon glyphicon-chevron-left"></span> </button>
+                <a href="#" class="navbar-brand hidden-md hidden-lg"> <img src="{!URLFOR($Resource.Communities_Resource, '/content/img/logo.carefirst.png')}" alt= "CareFirst Logo" /> </a>
+                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"> <span class="icon-bar colorize-strong-blue"></span><span class="icon-bar colorize-strong-blue"></span><span class="icon-bar colorize-strong-blue"></span> <span class="round_bg yellow">11</span></button>
+            </div>
+        </nav>
+        <!-- navbar ended -->
+    </div>
+    <!-- ### END HEADER ### --> 
+    
+    <!-- ### MEGAMENU APPEND CLASS TO ANOTHER ELEMENT  ### -->
+        <script>
+            $('li.dropdown').hover(
+                function(){ $(this).find('.mm-arrow').addClass('hover') },
+                function(){ $(this).find('.mm-arrow').removeClass('hover') }
+                )
+        </script>
+
+      <!--  <script>
+            $(document).ready(function(e){
+                $(".view_all_content").click(function(e){
+
+                    $(".show_all_content").toggle();
+                })
+                
+                
+                /*More Inf0*/
+                
+                $('.paneleach').on('click','span.glyphicon-round-plus',function(e) {
+                    
+                    $(this).parents('.paneleach').find('.expandingcontent').show();
+                    $(this).addClass('glyphicon-round-minus').removeClass('glyphicon-round-plus');
+                    
+                    
+                });
+                $('.paneleach').on('click','span.glyphicon-round-minus',function(e) {
+                $(this).parents('.paneleach').find('.expandingcontent').hide();
+                    $(this).addClass('glyphicon-round-plus').removeClass('glyphicon-round-minus');
+                });
+                /*$('.paneleach').each(function(e)
+                {
+                    var abc =$(this).find('.paneleachtop .odd').height();
+                    if(abc>$(this).parents('.paneleach').find(
+                });
+                */
+            });
+        </script>  -->
+
+</apex:component>

@@ -1,0 +1,2198 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AIA Approval Status --></label>
+        <name>AIA_Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARC Approval Date --></label>
+        <name>ARC_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARC Approval Initial Submission Date --></label>
+        <name>ARC_Approval_Initial_Submission_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARC Approval Required --></label>
+        <name>ARC_Approval_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARC Approval Skipped --></label>
+        <name>ARC_Approval_Skipped__c</name>
+    </fields>
+    <fields>
+        <label><!-- ARC Approval Status --></label>
+        <name>ARC_Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved by Committee</masterLabel>
+            <translation><!-- Approved by Committee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto-Approved by System</masterLabel>
+            <translation><!-- Auto-Approved by System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Decision</masterLabel>
+            <translation><!-- No Decision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected by Committee</masterLabel>
+            <translation><!-- Rejected by Committee --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ARC Comments --></label>
+        <name>ARC_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- ASO --></label>
+        <name>ASO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Religious Accommodation --></label>
+        <name>Accommodation__c</name>
+        <picklistValues>
+            <masterLabel>Emergency Contraception Accommodation</masterLabel>
+            <translation><!-- Emergency Contraception Accommodation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Accommodation</masterLabel>
+            <translation><!-- Full Accommodation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Alias --></label>
+        <name>Account_Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Executive --></label>
+        <name>Account_Executive_Account_Team__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Account Executive) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Executive Name --></label>
+        <name>Account_Executive_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Executive --></label>
+        <name>Account_Executive__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Account Executive) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Full Address --></label>
+        <name>Account_Full_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Manager --></label>
+        <name>Account_Manager_Account_Team__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Account Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Manager --></label>
+        <name>Account_Manager_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Manager --></label>
+        <name>Account_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Website --></label>
+        <name>Account_Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Benefit Request Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Actual Member Count --></label>
+        <name>Actual_Member_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- AdjustmentRecordCount --></label>
+        <name>AdjustmentRecordCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aggregate Stop Loss Options --></label>
+        <name>Aggregate_Stop_Loss_Options__c</name>
+        <picklistValues>
+            <masterLabel>100%</masterLabel>
+            <translation><!-- 100% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105%</masterLabel>
+            <translation><!-- 105% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>110%</masterLabel>
+            <translation><!-- 110% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>115%</masterLabel>
+            <translation><!-- 115% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>120%</masterLabel>
+            <translation><!-- 120% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>125%</masterLabel>
+            <translation><!-- 125% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>130%</masterLabel>
+            <translation><!-- 130% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>135%</masterLabel>
+            <translation><!-- 135% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>140%</masterLabel>
+            <translation><!-- 140% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150%</masterLabel>
+            <translation><!-- 150% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Claims Funding --></label>
+        <name>Alternate_Funding__c</name>
+        <picklistValues>
+            <masterLabel>Deposit with Monthly Billing</masterLabel>
+            <translation><!-- Deposit with Monthly Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Set Weekly Wire</masterLabel>
+            <translation><!-- Set Weekly Wire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly Wire</masterLabel>
+            <translation><!-- Weekly Wire --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Alternate Networks Requested --></label>
+        <name>Alternate_Networks_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ancillary Analyst --></label>
+        <name>Ancillary_Analyst__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Ancillary Analyst) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- AutorabitExtId__c --></label>
+        <name>AutorabitExtId__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Inactive Date --></label>
+        <name>BRF_Inactive_Date_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Link --></label>
+        <name>BRF_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Opp Link --></label>
+        <name>BRF_Opp_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Owner Full Name --></label>
+        <name>BRF_Owner_Full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF Sold Date field --></label>
+        <name>BRF_Sold_Date_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- BeneFact Coder --></label>
+        <name>BeneFact_Coder__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (BeneFact Coder) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Effective Date --></label>
+        <name>Benefit_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- NASCO Benefit Coder --></label>
+        <name>Benefit_NASCO_Coder__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (NASCO Benefit Coder) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Period --></label>
+        <name>Benefit_Period__c</name>
+        <picklistValues>
+            <masterLabel>Calendar</masterLabel>
+            <translation><!-- Calendar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BlueRewards Drawloop --></label>
+        <name>Blue_Rewards_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Acc Name --></label>
+        <name>Broker_Acc_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Commission --></label>
+        <name>Broker_Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker/Consultant Amount --></label>
+        <name>Broker_Consultant_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker/Consultant Compensation --></label>
+        <name>Broker_Consultant_Compensation__c</name>
+        <picklistValues>
+            <masterLabel>Commission (%)</masterLabel>
+            <translation><!-- Commission (%) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMPM ($)</masterLabel>
+            <translation><!-- PMPM ($) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Broker/Consultant Name --></label>
+        <name>Broker_Consultant_Name__c</name>
+        <relationshipLabel><!-- Benefit Request Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CDH Fund Type PP COUNT --></label>
+        <name>CDH_Fund_Type_PP_COUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carve-Out RX Approval --></label>
+        <name>Carve_Out_RX_Approval__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Approved</masterLabel>
+            <translation><!-- Not Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Dependents Removal Method --></label>
+        <name>Child_Dependents_Removal_Method_4a__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clone count --></label>
+        <name>Clone_count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Management Status Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Name in BAA Output --></label>
+        <name>Company_Name_in_BAA_Output__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Count --></label>
+        <name>Contract_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Non-Standard is selected, please fill in the Number of Months for Contract Period field. --></help>
+        <label><!-- Contract Period --></label>
+        <name>Contract_Period__c</name>
+        <picklistValues>
+            <masterLabel>Non-Standard</masterLabel>
+            <translation><!-- Non-Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard - 12 Months</masterLabel>
+            <translation><!-- Standard - 12 Months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Control Plan --></label>
+        <name>Control_Plan__c</name>
+        <picklistValues>
+            <masterLabel>580</masterLabel>
+            <translation><!-- 580 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>690</masterLabel>
+            <translation><!-- 690 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CorporateMarketingUser --></label>
+        <name>CorporateMarketingUser__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (CorporateMarketingUser) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Count of Dental Proposed Products --></label>
+        <name>Count_Dental_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Drug Proposed Products --></label>
+        <name>Count_Drug_Proposed_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Vision Proposed Products --></label>
+        <name>Count_Vision_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of CDH Products --></label>
+        <name>Count_of_CDH_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of custom dental products --></help>
+        <label><!-- Count of Custom Dental Products --></label>
+        <name>Count_of_Custom_Dental_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of custom drug products this BRF has. --></help>
+        <label><!-- Count of Custom Drug Products --></label>
+        <name>Count_of_Custom_Drug_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Custom Products --></label>
+        <name>Count_of_Custom_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of custom vision products for this BRF. --></help>
+        <label><!-- Count of Custom Vision Products --></label>
+        <name>Count_of_Custom_Vision_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Dug With Non-Parallel --></label>
+        <name>Count_of_Dug_With_Cafeteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Integrated DM Wellness --></label>
+        <name>Count_of_Integrated_DM_Wellness__c</name>
+    </fields>
+    <fields>
+        <help><!-- The count of medical products with CDH Blue Fund --></help>
+        <label><!-- Count of Medical CDH BlueFund --></label>
+        <name>Count_of_Medical_CDH_BlueFund__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of medical products with custom wellness. --></help>
+        <label><!-- Count of Medical Custom Wellness --></label>
+        <name>Count_of_Medical_Custom_Wellness__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of medical products with CDH BlueFund. --></help>
+        <label><!-- Count of Medical FSA BlueFund --></label>
+        <name>Count_of_Medical_FSA_BlueFund__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Medical Proposed Products --></label>
+        <name>Count_of_Medical_Proposed_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of New Dental products --></label>
+        <name>Count_of_New_Dental_products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of New Rx products --></label>
+        <name>Count_of_New_Rx_products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of New Vision Products --></label>
+        <name>Count_of_New_Vision_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of New products --></label>
+        <name>Count_of_New_products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Non Standard Vision Products --></label>
+        <name>Count_of_Non_Standard_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of non standard dental products. --></help>
+        <label><!-- Count of Nonstandard Dental Products --></label>
+        <name>Count_of_Nonstandard_Dental_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of non standard drug products --></help>
+        <label><!-- Count_of_Nonstandard_Drug_Products --></label>
+        <name>Count_of_Nonstandard_Drug_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Proposed Products(Non-Medical) --></label>
+        <name>Count_of_Proposed_Products_Non_Medical1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Proposed Products --></label>
+        <name>Count_of_Proposed_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Risk Medical Products --></label>
+        <name>Count_of_Risk_Medical_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of non standard drug or dental products associated with this BRF. --></help>
+        <label><!-- Count of Risk Non Standard Drug Dental --></label>
+        <name>Count_of_Risk_Non_Standard_Drug_Dental__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of products that are risk and non standard. --></help>
+        <label><!-- Count of Risk Non Standard --></label>
+        <name>Count_of_Risk_Non_Standard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Stand Alone Disease or Wellness --></label>
+        <name>Count_of_Stand_Alone_Disease_or_Wellness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Vision With Non-Parallel --></label>
+        <name>Count_of_Vision_With_Cafeteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Wellness Products --></label>
+        <name>Count_of_Wellness_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Recommendation --></label>
+        <name>Credit_Recommendation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested Credits --></label>
+        <name>Credits__c</name>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation</masterLabel>
+            <translation><!-- Implementation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wellness</masterLabel>
+            <translation><!-- Wellness --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Custom Email --></label>
+        <name>Custom_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Wellness PP --></label>
+        <name>Custom_Wellness_PP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom --></label>
+        <name>Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days to Approve BRF --></label>
+        <name>Days_to_Approve_BRF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deep clone check --></label>
+        <name>Deep_clone_check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disclaim Info In Dental Header Drawloop --></label>
+        <name>Disclaim_Info_In_Drug_Header_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disclaim Info In Medical Header Drawloop --></label>
+        <name>Disclaim_Info_In_Header_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disclaim Info In NonDHMO Header Drawloop --></label>
+        <name>Disclaim_Info_In_NonDHMO_Header_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disclaim Info In Vision Header Drawloop --></label>
+        <name>Disclaim_Info_In_Vision_Header_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- EGWP --></label>
+        <name>EGWP_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EGWP --></label>
+        <name>EGWP__c</name>
+    </fields>
+    <fields>
+        <label><!-- EffectiveDatePCSFormat --></label>
+        <name>EffectiveDatePCSFormat__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Formulary --></label>
+        <name>Email_Formulary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Maintenance Choice --></label>
+        <name>Email_Maintenance_Choice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employer Contribution Amount --></label>
+        <name>Employer_Contribution_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Other is selected, please fill in the details for Other Enrollment Option and Enrollment Vendor. --></help>
+        <label><!-- Enrollment Option --></label>
+        <name>Enrollment_Option__c</name>
+        <picklistValues>
+            <masterLabel>CF Private Exchange</masterLabel>
+            <translation><!-- CF Private Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual - Paper</masterLabel>
+            <translation><!-- Manual - Paper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eConnect Enrollment</masterLabel>
+            <translation><!-- eConnect Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eConnect Marketplace</masterLabel>
+            <translation><!-- eConnect Marketplace --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eExchange</masterLabel>
+            <translation><!-- eExchange --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Type --></label>
+        <name>Enrollment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Non Parallel</masterLabel>
+            <translation><!-- Non Parallel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parallel</masterLabel>
+            <translation><!-- Parallel --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Vendor --></label>
+        <name>Enrollment_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalated to Senior Management --></label>
+        <name>Escalated_to_Senior_Management__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclusive Specialty Provider Network --></label>
+        <name>Exclusive_Specialty_Provider_Network__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No - Requires Approval</masterLabel>
+            <translation><!-- No - Requires Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Religious Exemption --></label>
+        <name>Exemption__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExtraCare Health Care Card --></label>
+        <name>ExtraCare_Health_Care_Card__c</name>
+    </fields>
+    <fields>
+        <label><!-- File Net Doc Id --></label>
+        <name>File_Net_Doc_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- FirstHelp For Sold BRF --></label>
+        <name>FirstHelp_For_Sold_BRF__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Help Checker --></label>
+        <name>First_Help_Checker__c</name>
+    </fields>
+    <fields>
+        <label><!-- FlexLink --></label>
+        <name>FlexLink_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FlexLink --></label>
+        <name>FlexLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formulary --></label>
+        <name>Formulary__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Funding Arrangement --></label>
+        <name>Funding_Arrangements__c</name>
+        <picklistValues>
+            <masterLabel>ASO</masterLabel>
+            <translation><!-- ASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk</masterLabel>
+            <translation><!-- Risk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Generic Step Therapy --></label>
+        <name>Generic_Step_Therapy__c</name>
+        <picklistValues>
+            <masterLabel>Dummy1</masterLabel>
+            <translation><!-- Dummy1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dummy2</masterLabel>
+            <translation><!-- Dummy2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dummy3</masterLabel>
+            <translation><!-- Dummy3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dummy4</masterLabel>
+            <translation><!-- Dummy4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PPACA Status --></label>
+        <name>Grandfathered_PPACA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grandfathered Status --></label>
+        <name>Grandfathered_Status__c</name>
+        <picklistValues>
+            <masterLabel>Grandfathered</masterLabel>
+            <translation><!-- Grandfathered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Grandfathered</masterLabel>
+            <translation><!-- Non-Grandfathered --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Address Information --></label>
+        <name>Headquarters_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headquarters County --></label>
+        <name>Headquarters_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- zzIdentity Protection Mandate --></label>
+        <name>Identity_Protection_Mandate_ASO__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- zzIdentity Protection Mandate --></label>
+        <name>Identity_Protection_Mandate_Risk__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identity Protection --></label>
+        <name>Identity_Protection__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Implementation Manager (Account Team) --></label>
+        <name>Implementation_Manager_Account_Team__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Implementation Manager (Account Team)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Integrated DM/Wellness PP --></label>
+        <name>Integrated_DM_Wellness_PP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>CEDE</masterLabel>
+            <translation><!-- CEDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other - Cede Required</masterLabel>
+            <translation><!-- Other - Cede Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Limitations NonEditable --></label>
+        <name>Limitations_NonEditable__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAST Tech --></label>
+        <name>MAST_Tech__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (MAST Tech) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- MHP Acknowledgement --></label>
+        <name>MHP_Acknowledgement__c</name>
+    </fields>
+    <fields>
+        <label><!-- MHP Test Result --></label>
+        <name>MHP_Test_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maintenance Choice --></label>
+        <name>Maintenance_Choice__c</name>
+        <picklistValues>
+            <masterLabel>Mandatory</masterLabel>
+            <translation><!-- Mandatory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voluntary</masterLabel>
+            <translation><!-- Voluntary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Non-Preferred Stop Loss Carrier --></label>
+        <name>Non_Preferred_Stop_Loss_Carrier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Months for Contract Period --></label>
+        <name>Number_of_Months_for_Contract_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment End Date --></label>
+        <name>Open_Enrollment_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Meeting End Date --></label>
+        <name>Open_Enrollment_Meeting_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Meeting Start Date --></label>
+        <name>Open_Enrollment_Meeting_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Start Date --></label>
+        <name>Open_Enrollment_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Type --></label>
+        <name>Opportunity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Benefit Request Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Enrollment Option --></label>
+        <name>Other_Enrollment_Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Funding Arrangements --></label>
+        <name>Other_Funding_Arrangements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owners Manager --></label>
+        <name>Owners_Manager__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Owners Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PP Blue Rewards --></label>
+        <name>PP_Blue_Rewards__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP CDH Type --></label>
+        <name>PP_CDH_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP CDH --></label>
+        <name>PP_CDH__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP Custom Wellness --></label>
+        <name>PP_Custom_Wellness__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP FSA BlueFund --></label>
+        <name>PP_FSA_BlueFund__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP Integrated - Carved-Out Vendor --></label>
+        <name>PP_Integrated_Carved_Out_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP Integrated DM/Wellness --></label>
+        <name>PP_Integrated_DM_Wellness__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP Rx Integration --></label>
+        <name>PP_Rx_Integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRF --></label>
+        <name>PRF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Guarantee --></label>
+        <name>Performance_Guarantee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposal Request Form --></label>
+        <name>Proposal_Request_Form__c</name>
+        <relationshipLabel><!-- Benefit Request Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RFP Request --></label>
+        <name>RFP_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP --></label>
+        <name>RFP__c</name>
+        <relationshipLabel><!-- Benefit Request Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rebates Withheld by CareFirst --></label>
+        <name>Rebates_Withheld_by_CareFirst__c</name>
+        <picklistValues>
+            <masterLabel>0%</masterLabel>
+            <translation><!-- 0% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100% (Requires Senior Management Approval)</masterLabel>
+            <translation><!-- 100% (Requires Senior Management Approval) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20%</masterLabel>
+            <translation><!-- 20% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50% (Requires Management Approval)</masterLabel>
+            <translation><!-- 50% (Requires Management Approval) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Recent_Sold_Flag --></label>
+        <name>Recent_Sold_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Benefit Request Form1 --></label>
+        <name>Related_Benefit_Request_Form1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Benefit Request Form --></label>
+        <name>Related_Benefit_Request_Form__c</name>
+        <relationshipLabel><!-- Benefit Request Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Next Renewal Date --></label>
+        <name>Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Cede Document --></label>
+        <name>Request_Cede_Document__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Type --></label>
+        <name>Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Off-Cycle - Administrative Change</masterLabel>
+            <translation><!-- Off-Cycle - Administrative Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-Cycle - Administrative and Benefit Change</masterLabel>
+            <translation><!-- Off-Cycle - Administrative and Benefit Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-Cycle - Benefit Change</masterLabel>
+            <translation><!-- Off-Cycle - Benefit Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect/New</masterLabel>
+            <translation><!-- Prospect/New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP</masterLabel>
+            <translation><!-- RFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renew As-is</masterLabel>
+            <translation><!-- Renew As-is --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal - Admin and Benefit Changes</masterLabel>
+            <translation><!-- Renewal - Admin and Benefit Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal - Administrative Changes</masterLabel>
+            <translation><!-- Renewal - Administrative Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal - Benefit Changes</masterLabel>
+            <translation><!-- Renewal - Benefit Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Set-up Change - Admin and Benefit Changes</masterLabel>
+            <translation><!-- Set-up Change - Admin and Benefit Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Set-up Change - Administrative Changes</masterLabel>
+            <translation><!-- Set-up Change - Administrative Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Set-up Change - Benefit Changes</masterLabel>
+            <translation><!-- Set-up Change - Benefit Changes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Revision Number --></label>
+        <name>Revision_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rider Comments --></label>
+        <name>Rider_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rider --></label>
+        <name>Rider__c</name>
+        <picklistValues>
+            <masterLabel>Acupuncture Rider</masterLabel>
+            <translation><!-- Acupuncture Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alzheimer's Disease Benefits Rider</masterLabel>
+            <translation><!-- Alzheimer&apos;s Disease Benefits Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Care of Elderly Individuals Benefits Rider</masterLabel>
+            <translation><!-- Care of Elderly Individuals Benefits Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Domestic Partner Rider</masterLabel>
+            <translation><!-- Domestic Partner Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Planning Benefits Exclusion Rider</masterLabel>
+            <translation><!-- Family Planning Benefits Exclusion Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gonorrhea Screening Rider</masterLabel>
+            <translation><!-- Gonorrhea Screening Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Incentive Program Rider</masterLabel>
+            <translation><!-- Group Incentive Program Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hearing Aid Rider</masterLabel>
+            <translation><!-- Hearing Aid Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infertility Services Coverage Rider</masterLabel>
+            <translation><!-- Infertility Services Coverage Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Morbid Obesity Surgery Benefit Amendment</masterLabel>
+            <translation><!-- Morbid Obesity Surgery Benefit Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prescription Drug Benefits Rider</masterLabel>
+            <translation><!-- Prescription Drug Benefits Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repatriation of Remains Rider</masterLabel>
+            <translation><!-- Repatriation of Remains Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travels Expense for Serious Illness or Injury Rider</masterLabel>
+            <translation><!-- Travels Expense for Serious Illness or Injury Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision Care Rider</masterLabel>
+            <translation><!-- Vision Care Rider --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Risk --></label>
+        <name>Risk__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rx Integration PP --></label>
+        <name>Rx_Integration_PP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rx Network --></label>
+        <name>Rx_Network__c</name>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RX Choice</masterLabel>
+            <translation><!-- RX Choice --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Executive --></label>
+        <name>Sales_Consultant_Account_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Management Approval --></label>
+        <name>Sales_Management_Approval__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Sales Management Approval) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Rep Email --></label>
+        <name>Sales_Rep_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Segment Size --></label>
+        <name>Sales_Segment_Size__c</name>
+        <picklistValues>
+            <masterLabel>Commercial 1,000+</masterLabel>
+            <translation><!-- Commercial 1,000+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial 200-999</masterLabel>
+            <translation><!-- Commercial 200-999 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor</masterLabel>
+            <translation><!-- Labor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Municipal</masterLabel>
+            <translation><!-- Municipal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business</masterLabel>
+            <translation><!-- New Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Management Approval Status --></label>
+        <name>Sales__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Send 1st Email --></label>
+        <name>Send_1st_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send to Actuarial Team --></label>
+        <name>Send_to_Actuarial_Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Senior Management Approved By --></label>
+        <name>Senior_Management_Approved_By__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Senior Management Approved By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Senior Management Comments --></label>
+        <name>Senior_Management_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Benefit Request Form --></label>
+        <name>Source_Benefit_Request_Form__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Source Benefit Request Form) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Specific Stop Loss Options --></label>
+        <name>Specific_Stop_Loss_Options__c</name>
+        <picklistValues>
+            <masterLabel>$1,000,000</masterLabel>
+            <translation><!-- $1,000,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$1,250,000</masterLabel>
+            <translation><!-- $1,250,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$1,500,000</masterLabel>
+            <translation><!-- $1,500,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$100,000</masterLabel>
+            <translation><!-- $100,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$105,000</masterLabel>
+            <translation><!-- $105,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$110,000</masterLabel>
+            <translation><!-- $110,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$115,000</masterLabel>
+            <translation><!-- $115,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$120,000</masterLabel>
+            <translation><!-- $120,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$125,000</masterLabel>
+            <translation><!-- $125,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$130,000</masterLabel>
+            <translation><!-- $130,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$135,000</masterLabel>
+            <translation><!-- $135,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$140,000</masterLabel>
+            <translation><!-- $140,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$145,000</masterLabel>
+            <translation><!-- $145,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$150,000</masterLabel>
+            <translation><!-- $150,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$155,000</masterLabel>
+            <translation><!-- $155,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$160,000</masterLabel>
+            <translation><!-- $160,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$165,000</masterLabel>
+            <translation><!-- $165,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$170,000</masterLabel>
+            <translation><!-- $170,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$175,000</masterLabel>
+            <translation><!-- $175,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$180,000</masterLabel>
+            <translation><!-- $180,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$185,000</masterLabel>
+            <translation><!-- $185,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$190,000</masterLabel>
+            <translation><!-- $190,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$195,000</masterLabel>
+            <translation><!-- $195,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$2,000,000</masterLabel>
+            <translation><!-- $2,000,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$20,000</masterLabel>
+            <translation><!-- $20,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$200,000</masterLabel>
+            <translation><!-- $200,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$205,000</masterLabel>
+            <translation><!-- $205,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$210,000</masterLabel>
+            <translation><!-- $210,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$215,000</masterLabel>
+            <translation><!-- $215,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$22,500</masterLabel>
+            <translation><!-- $22,500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$220,000</masterLabel>
+            <translation><!-- $220,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$225,000</masterLabel>
+            <translation><!-- $225,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$25,000</masterLabel>
+            <translation><!-- $25,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$250,000</masterLabel>
+            <translation><!-- $250,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$275,000</masterLabel>
+            <translation><!-- $275,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$30,000</masterLabel>
+            <translation><!-- $30,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$300,000</masterLabel>
+            <translation><!-- $300,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$350,000</masterLabel>
+            <translation><!-- $350,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$40,000</masterLabel>
+            <translation><!-- $40,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$400,000</masterLabel>
+            <translation><!-- $400,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$45,000</masterLabel>
+            <translation><!-- $45,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$450,000</masterLabel>
+            <translation><!-- $450,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50,000</masterLabel>
+            <translation><!-- $50,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$500,000</masterLabel>
+            <translation><!-- $500,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$55,000</masterLabel>
+            <translation><!-- $55,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$550,000</masterLabel>
+            <translation><!-- $550,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$60,000</masterLabel>
+            <translation><!-- $60,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$600,000</masterLabel>
+            <translation><!-- $600,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$65,000</masterLabel>
+            <translation><!-- $65,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$650,000</masterLabel>
+            <translation><!-- $650,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$70,000</masterLabel>
+            <translation><!-- $70,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$700,000</masterLabel>
+            <translation><!-- $700,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$75,000</masterLabel>
+            <translation><!-- $75,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$750,000</masterLabel>
+            <translation><!-- $750,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$80,000</masterLabel>
+            <translation><!-- $80,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$800,000</masterLabel>
+            <translation><!-- $800,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$85,000</masterLabel>
+            <translation><!-- $85,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$90,000</masterLabel>
+            <translation><!-- $90,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$900,000</masterLabel>
+            <translation><!-- $900,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$95,000</masterLabel>
+            <translation><!-- $95,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Standard Network --></label>
+        <name>Standard_Network__c</name>
+        <picklistValues>
+            <masterLabel>No - Requires Approval</masterLabel>
+            <translation><!-- No - Requires Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State1__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Request Form Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revised Approved</masterLabel>
+            <translation><!-- Revised Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold-Inactive</masterLabel>
+            <translation><!-- Sold-Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stop Loss Contract Period --></label>
+        <name>Stop_Loss_Contract_Period__c</name>
+        <picklistValues>
+            <masterLabel>Extrapolating</masterLabel>
+            <translation><!-- Extrapolating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incurred in 12 Paid in 12</masterLabel>
+            <translation><!-- Incurred in 12 Paid in 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incurred in 12 Paid in 15</masterLabel>
+            <translation><!-- Incurred in 12 Paid in 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incurred in 12 Paid in 18</masterLabel>
+            <translation><!-- Incurred in 12 Paid in 18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incurred in 12 Paid in 24</masterLabel>
+            <translation><!-- Incurred in 12 Paid in 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incurred in 15 Paid in 12</masterLabel>
+            <translation><!-- Incurred in 15 Paid in 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incurred in 18 Paid in 12</masterLabel>
+            <translation><!-- Incurred in 18 Paid in 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incurred in 24 Paid in 12</masterLabel>
+            <translation><!-- Incurred in 24 Paid in 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interpolating</masterLabel>
+            <translation><!-- Interpolating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paid in 12</masterLabel>
+            <translation><!-- Paid in 12 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stop Loss Notification : Email 1 --></label>
+        <name>Stop_Loss_Notification_Email_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stop Loss Notification : Email 2 --></label>
+        <name>Stop_Loss_Notification_Email_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stop Loss --></label>
+        <name>Stop_Loss__c</name>
+        <picklistValues>
+            <masterLabel>CareFirst</masterLabel>
+            <translation><!-- CareFirst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred</masterLabel>
+            <translation><!-- Non-Preferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred - HM</masterLabel>
+            <translation><!-- Preferred - HM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred - Symetra</masterLabel>
+            <translation><!-- Preferred - Symetra --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub Group Account --></label>
+        <lookupFilter>
+            <errorMessage><!-- This window shows only Sub Group accounts related to the Account selected in the Account field --></errorMessage>
+            <informationalMessage><!-- Select Sub Group Account of BRF&apos;s Account --></informationalMessage>
+        </lookupFilter>
+        <name>Sub_Group_Account__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Sub Group Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- For Risk business, I acknowledge that I will submit the sold medical benefits to the Actuarial team for Mental Health Parity testing. --></help>
+        <label><!-- Medical Plan(s) will be MHP Tested --></label>
+        <name>Submit_Medical_Plan_s_for_MHP_Testing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submit to ARC Approval --></label>
+        <name>Submit_to_ARC_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submitted to Underwriting --></label>
+        <name>Submit_to_Underwriting__c</name>
+    </fields>
+    <fields>
+        <help><!-- If a grandfathered account selects 5-tier RX, then the account may lose its grandfathered status. --></help>
+        <label><!-- Tiers --></label>
+        <name>Tiers__c</name>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Underwriter User --></label>
+        <name>Underwriter_User__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Underwriter User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments for Underwriting --></label>
+        <name>Underwriting_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valid Cede Document Uploaded --></label>
+        <name>Valid_Cede_Document_Uploaded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verification Date --></label>
+        <name>Verification_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verified By --></label>
+        <name>Verified_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Who_Marks_Sold --></label>
+        <name>Who_Marks_Sold__c</name>
+        <relationshipLabel><!-- Benefit Request Forms (Who_Marks_Sold) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Zip Code Validation --></label>
+        <name>Zip_Code_Validation__c</name>
+        <picklistValues>
+            <masterLabel>Outside CareFirst Service Area - Denied</masterLabel>
+            <translation><!-- Outside CareFirst Service Area - Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outside CareFirst Service Area - Request Cede</masterLabel>
+            <translation><!-- Outside CareFirst Service Area - Request Cede --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Within the CareFirst service area</masterLabel>
+            <translation><!-- Within the CareFirst service area --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- being cloned --></label>
+        <name>being_cloned__c</name>
+    </fields>
+    <fields>
+        <label><!-- count of vision with platform indicator --></label>
+        <name>count_of_vision_with_platform_indicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- zzzMHP Required --></label>
+        <name>zzzMHP_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- zzzMHP Test Result --></label>
+        <name>zzzMHP_Test_Result__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Benefit Request Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Benefit Request Forms</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <fieldSets>
+        <label><!-- Include on Adjustment Summary --></label>
+        <name>Include_on_Adjustment_Summary</name>
+    </fieldSets>
+    <layouts>
+        <layout>ASO Layout</layout>
+        <sections>
+            <label><!-- ACA and Other Mandates --></label>
+            <section>ACA and Other Mandates</section>
+        </sections>
+        <sections>
+            <label><!-- ARC --></label>
+            <section>ARC</section>
+        </sections>
+        <sections>
+            <label><!-- Account Information --></label>
+            <section>Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Benefit Request Form Detail --></label>
+            <section>Benefit Request Form Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Cede Information --></label>
+            <section>Cede Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Information --></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mental Health Parity --></label>
+            <section>Mental Health Parity</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Management Approval --></label>
+            <section>Sales Management Approval</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Information --></label>
+            <section>Underwriting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Zip Code Verification --></label>
+            <section>Zip Code Verification</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Benefit Request Form Layout</layout>
+        <sections>
+            <label><!-- ARC --></label>
+            <section>ARC</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Information --></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label><!-- Headquaters Address Information --></label>
+            <section>Headquaters Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- MHP --></label>
+            <section>MHP</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Information --></label>
+            <section>Underwriting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Zip Code Verification --></label>
+            <section>Zip Code Verification</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Both Layout</layout>
+        <sections>
+            <label><!-- ACA and Other Mandates --></label>
+            <section>ACA and Other Mandates</section>
+        </sections>
+        <sections>
+            <label><!-- ARC --></label>
+            <section>ARC</section>
+        </sections>
+        <sections>
+            <label><!-- Account Information --></label>
+            <section>Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Benefit Request Form Detail --></label>
+            <section>Benefit Request Form Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Cede Information --></label>
+            <section>Cede Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Information --></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mental Health Parity --></label>
+            <section>Mental Health Parity</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Management Approval --></label>
+            <section>Sales Management Approval</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Information --></label>
+            <section>Underwriting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Zip Code Verification --></label>
+            <section>Zip Code Verification</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Layout</layout>
+        <sections>
+            <label><!-- ACA and Other Mandates --></label>
+            <section>ACA and Other Mandates</section>
+        </sections>
+        <sections>
+            <label><!-- ARC --></label>
+            <section>ARC</section>
+        </sections>
+        <sections>
+            <label><!-- Account Information --></label>
+            <section>Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Benefit Request Form Detail --></label>
+            <section>Benefit Request Form Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Cede Information --></label>
+            <section>Cede Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Information --></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mental Health Parity --></label>
+            <section>Mental Health Parity</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Management Approval --></label>
+            <section>Sales Management Approval</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Information --></label>
+            <section>Underwriting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Zip Code Verification --></label>
+            <section>Zip Code Verification</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Risk Layout</layout>
+        <sections>
+            <label><!-- ACA and Other Mandates --></label>
+            <section>ACA and Other Mandates</section>
+        </sections>
+        <sections>
+            <label><!-- ARC --></label>
+            <section>ARC</section>
+        </sections>
+        <sections>
+            <label><!-- Account Information --></label>
+            <section>Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Benefit Request Form Detail --></label>
+            <section>Benefit Request Form Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Cede Information --></label>
+            <section>Cede Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enrollment Information --></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mental Health Parity --></label>
+            <section>Mental Health Parity</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Management Approval --></label>
+            <section>Sales Management Approval</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Information --></label>
+            <section>Underwriting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Zip Code Verification --></label>
+            <section>Zip Code Verification</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update Benefit Request Form --></label>
+        <name>AIA_BRF_View</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- BRF Sold --></label>
+        <name>BRF_Sold_QA</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Submit for Approval --></label>
+        <name>Submit_for_Approval_QA</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- ASO Layout --></description>
+        <label><!-- ASO --></label>
+        <name>ASO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Both Layout --></description>
+        <label><!-- Both --></label>
+        <name>Both</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Other Layout --></description>
+        <label><!-- Other --></label>
+        <name>Other</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Risk Layout --></description>
+        <label><!-- Risk --></label>
+        <name>Risk</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- EBRF001: If Enrollment Option = &apos;Other&apos; then Other Enrollment Option field cannot be blank --></errorMessage>
+        <name>EBRF001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF002 : If Funding Arrangements = &quot;Other&quot; then Other Funding Arrangements field cannot be blank --></errorMessage>
+        <name>EBRF002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF003 : If Contact Period = &apos;Non-standard&apos; then number of months for contract period  cannot be blank and the value should be less than 36 months --></errorMessage>
+        <name>EBRF003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF004 : For Enrollment Option is &apos;eExchange&apos; then enrollment vendor field cannot be blank --></errorMessage>
+        <name>EBRF004</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF005: If MHP Required is true and MHP Test Result is &apos;Fail&apos; or &apos;Pending&apos; then cannot Submit to Underwriting. --></errorMessage>
+        <name>EBRF005</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF006: Cannot Submit to Underwriting if in BRF:
+1. For ASO/Other BRF, either Off cycle - Administrative and Benefit or Benefit Changes, if Stoploss is not CareFirst (or)
+2. Offcycle changes - Administrative Changes --></errorMessage>
+        <name>EBRF006</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF007:Cannot Verify Account Legal Name --></errorMessage>
+        <name>EBRF007</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF008 : If Religious Exemption is Checked then Religious Accommodation is required. --></errorMessage>
+        <name>EBRF008</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF009: Cannot Send To Actuarial Team if MHP Required is not Yes. --></errorMessage>
+        <name>EBRF009</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF010: You cannot edit BRF fields after it is sent to underwriting --></errorMessage>
+        <name>EBRF010</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF011:  The BRF cannot be modified after it has been submitted for ARC Approval. --></errorMessage>
+        <name>EBRF011</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF012: The Benefit Request Form must be either Auto-Approved or Approved by Committee before it can be submitted to Underwriting --></errorMessage>
+        <name>EBRF012</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF013: If Sales Management Approval Status = &apos;Rejected&apos; then Comments field cannot be blank --></errorMessage>
+        <name>EBRF013</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF015 : Sales Management cannot select Sales Management Approval Status = N/A. --></errorMessage>
+        <name>EBRF015</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF016: You can select Request Type as Off Cyle only when it is deep cloned from an existing BRF. --></errorMessage>
+        <name>EBRF016</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF017: If Funding Arrangement is ASO or Both or Other and Stoploss is CareFirst then requires Submission to Underwriting. --></errorMessage>
+        <name>EBRF017</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF018: Request type can be set to any Set-up Change only if BRF was created by Deep Cloning a Sold BRF and if the new BRF was created earlier than Source BRF&apos;s Benefit Effective Date. --></errorMessage>
+        <name>EBRF018</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF020: The Benefit Request Form cannot be modified after it has been submitted for ARC Approval. --></errorMessage>
+        <name>EBRF020</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF021:  Cannot Submit to Underwriting if in BRF:
+1. For ASO/Other BRF, either Set-up Change - Admin and Benefit Changes or Benefit Changes, if Stoploss is not CareFirst (or)
+2. Set-up Change - Administrative Changes --></errorMessage>
+        <name>EBRF021</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF022: If BRF Jurisdiciton is &apos;Other&apos; then Control Plan is required. --></errorMessage>
+        <name>EBRF022</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF023: If Funding Arrangement is &apos;Risk&apos; and Jurisdiction is DC/VA then Identity Protection can only be Yes and If Jurisdiction is MD then Identity Protection is No. --></errorMessage>
+        <name>EBRF023</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF024: If Grandfathered Status is &apos;Non-Grandfathered&apos; then PPACA status can only be &apos;Yes&apos; --></errorMessage>
+        <name>EBRF024</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF025: If Broker/Consultant Compensation is &apos;Commission (%)&apos; then Broker/Consultant Amount cannot be greater than 100% --></errorMessage>
+        <name>EBRF025</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF026: Required Information are not filled out in the BRF. Please Edit the BRF to see the Required fields. --></errorMessage>
+        <name>EBRF026</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF027 : If &apos;Contract Period = Standard - 12 Months&apos; then number of months for contract period should not be filled --></errorMessage>
+        <name>EBRF027</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBRF028: The BRF cannot be marked sold because the ‘Medical Plans will be MHP Tested&apos; checkbox is not checked. --></errorMessage>
+        <name>EBRF028</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AIA_Clone_With_Product --></label>
+        <name>AIA_Clone_With_Product</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Adjustment_Summary_Report --></label>
+        <name>Adjustment_Summary_Report</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- BRF_Sold --></label>
+        <name>BRF_Sold</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- BRF_Sold_MHP --></label>
+        <name>BRF_Sold_MHP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Clone_BRF_with_products --></label>
+        <name>Clone_BRF_with_products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Products --></label>
+        <name>Get_Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_BRF --></label>
+        <name>New_BRF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_BRF_PRF --></label>
+        <name>New_BRF_PRF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDP --></label>
+        <name>Run_DDP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDP_BRF --></label>
+        <name>Run_DDP_BRF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Actuarial_Team --></label>
+        <name>Send_to_Actuarial_Team</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_For_Approval --></label>
+        <name>Submit_For_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_to_Sales_Management_Approval --></label>
+        <name>Submit_to_Sales_Management_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_to_Underwriting --></label>
+        <name>Submit_to_Underwriting</name>
+    </webLinks>
+</CustomObjectTranslation>

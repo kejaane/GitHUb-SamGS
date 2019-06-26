@@ -1,0 +1,218 @@
+<!--
+/*=========================================================================================
+ * Date         : 07/31/2016
+ * Developer    : Rajesh Pennam
+ * Purpose      : This VF page has the back end code for the communities create case. This VF page
+ *                references the header and footer components and  gives the ability to the user to
+ *                enter his phone number, GroupID, Subscriber ID,Memeber Type, Subject, Description 
+ *                and attach a file of less than 10MB for the case creation
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 07/31/16  |  Rajesh Pennam    | Initial Version                                         
+ *           |        | 
+ *===========+============+================================================================
+ */
+ -->
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" controller="Communities_NewCasePage" id="pg">
+<html lang="en" class="oxh">
+<body lang="EN-US">
+<!-- By convention, for our "own" classes, to differentiate from bootstrap, we will prefix everything w/ cf-.. any class w/o cf- is
+    assumed to be a bootstrap style --> 
+    
+    <apex:composition template="Communities_HeaderMeta"></apex:composition>
+
+    <!-- main container for all dynamic feature content-->
+    <div class="cf-main-container"> 
+        <c:Communities_Header />
+    <div class="body-container row clearfix ">
+        <ol class="breadcrumb form-group">
+            <li><a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_Homepage">Home</a></li>
+            <li class="active">My Cases</li>
+        </ol>
+        <h1> Create a New Case</h1>
+        <!-- error ends here  information section before login message  -->
+            <apex:form id="fm" enctype="multipart/form-data">
+            
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                        <!--ERROR MESSAGE BEGIN -->                      
+                                <apex:messages styleClass="alert-error" style="margin-top: 0px"/>
+                             <!--ERROR MESSAGE END -->
+                        <div class="clearfix form-group "> 
+                               <div class="panelTop">
+                                      <h3>Contact Details</h3>
+                               </div>
+                               <div class=" panelContent" >
+                                        <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Broker Agent">Contact Name:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12">  {!ConDetails.Name}</div>
+                                       </div>
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Broker Email">Contact Email:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> {!ConDetails.Email}  </div>
+                                       </div>
+                                        <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Broker Phone:">Contact Phone: </label><b style="color:red;font-weight:bold;display:inline-block;font-size:20px;">*</b></div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> <apex:inputText value="{!BrokerPhone}" styleClass="col-md-12 col-sm-12 col-xs-12" id="bphn" required="true" html-placeholder="Please enter the phone number" maxlength="10"/><!--<input type="text" name="GroupID" id="GroupID" class="col-md-12 col-sm-12 col-xs-12" value="{!$User.MobilePhone}" placeholder="Max Length of 10 Characters Allowed" maxlenght='10'></input>--></div>
+                                       </div>
+                                       
+                               </div>
+                        </div> 
+                 
+                        <div class="clearfix form-group "> 
+                               <div class="panelTop">
+                                      <h3>Group / Subscriber Information</h3>
+                               </div>
+                               <div class=" panelContent" >                            
+                                        <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Group ID">Group ID:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> 
+                                         <apex:inputText styleClass="col-md-12 col-sm-12 col-xs-12" id="GroupID" value="{!GroupId}" maxlength="4"/>
+                                         <!--<input type="text" name="GroupID" id="GroupID" class="col-md-12 col-sm-12 col-xs-12"  placeholder=""/>--> </div>
+                                       </div>
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label>Subscriber ID:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> 
+                                         <apex:inputText styleClass="col-md-12 col-sm-12 col-xs-12" id="SubscriberID" value="{!SubId}" maxlength="9"/>
+                                             
+                                         <!--<input type="text" name="Subscriber ID"  id="SubscriberID"  class="col-md-12 col-sm-12 col-xs-12"  placeholder="Max Length of 9 Characters Allowed" maxlength='9'/>--> </div>
+                                       </div> 
+                                       <div class="form-group row">
+                                           <div class="col-md-2 col-sm-4 col-xs-12"> <label>Member Type:</label> </div>
+                                           <div class="col-md-4 col-sm-4 col-xs-12 ">
+                                               <apex:selectList styleClass="col-md-12 col-sm-12 col-xs-12" id="mtype" size="1" value="{!MemType}">
+                                                   <apex:selectOption itemLabel="--None--" itemValue=""/>
+                                                   <apex:selectOption itemLabel="Subscriber" itemValue="Subscriber"/>
+                                                   <apex:selectOption itemLabel="Spouse" itemValue="Spouse"/>
+                                                   <apex:selectOption itemLabel="Dependent" itemValue="Dependent"/>
+                                               </apex:selectList> 
+                                           </div>
+                                       </div>
+                               </div>
+                        </div>
+
+                        <div class="clearfix form-group"> 
+                               <div class="panelTop">
+                                      <h3>Case Details</h3>
+                               </div>
+                               <div class=" panelContent" >
+                                       <div class="clearfix form-group">
+                                        <label for="Subject">Subject:</label><b style="color:red;font-weight:bold;display:inline-block;font-size:20px;">*</b>
+                                        <apex:inputText styleClass="col-md-12 col-sm-12 col-xs-12" id="Subject" value="{!Subject}" required="true" html-placeholder="Please enter the subject" /> 
+                                        <!--<input type="text" name="Subject" id="Subject" class="col-md-12 col-sm-12 col-xs-12" placeholder="" ></input>-->
+                                       </div>
+                                       <div class="clearfix form-group">
+                                        <label for="Description"> Description: </label><b style="color:red;font-weight:bold;display:inline-block;font-size:20px;">*</b>
+                                        <apex:inputTextarea styleClass="form-control" rows="5" id="Description" value="{!Description}" required="true" html-placeholder="Please enter the description"/>
+                                        <!--<textarea class="form-control" rows="5" id="Description" ></textarea>-->                                        
+                                        
+                                       </div>
+                                       <div class="clearfix form-group">
+                                        <label for="Description"> Attachment:</label><br/>
+                                        <!--<img src="../content/img/attachment-ico.png" class="m-right-15" alt="attach files" style="top: -15px;    left: 15px;"> <input type="file" title="Choose File" name="file" id="file" class="col-md-4 col-sm-4 col-xs-12 row"  placeholder="" style="background:#fff;"/>-->
+                                        <apex:inputFile value="{!Attach.Body}" fileName="{!Attach.Name}" id="file" styleclass="col-md-4 col-sm-4 col-xs-12 row" style="background:#fff;" fileSize="{!FileSize}" size="5"/>
+                                                                                
+                                        
+                                       </div>
+                               </div>
+                        </div>  
+                     
+                        <div class="clearfix row form-group">
+                                    <div class="col-md-3 col-md-offset-3 col-sm-3  col-sm-offset-3 col-xs-12">
+                                    <apex:commandButton styleClass="btn btn-primary btn-block" action="{!createNewCase}" value="Create Case"/>
+                                      <!--<a href="mycase_created_message.html" class="btn btn-primary btn-block" onclick="CallAction();return false;">Create Case</a>-->
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-12 m-top-xs-10"> <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_Homepage" class="btn btn-default btn-lg btn-block">Cancel</a> </div>
+                        </div>                   
+        
+            </div>
+            
+             </apex:form>
+        <!--- BODY CONTAINER ENDS HERE -->
+         </div>
+     <!-- ### MAIN CONTIANER END HERE ### -->
+     </div>
+<!-- ### DESKTOP / TABLET FOOTER ### -->
+
+<c:Communities_Footer /> 
+
+
+
+
+        <!-- Bootstrap core JavaScript--> 
+        <script src="../content/js/jquery.min.js"></script> 
+        <!-- ### <script src="http://code.jquery.com/jquery-1.11.0.min.js" ></script> ### -->
+        <script src="../vendor-libs/jquery/jquery.dropkick-1.0.0.js"></script> 
+        <script src="../content/js/bootstrap.min.js"></script> 
+
+        <script src="../content/js/swiper.min.js"></script>
+
+        <script src="../content/js/fusioncharts.js"></script>
+        <script src="../content/js/donut_chart_inc.js"></script>
+        <!--    <script src="../content/js/landing-home-ctrl.js"></script> <script src="../content/js/script.js"></script>-->
+        <script src="../content/js/groupdata.js"></script>
+
+
+        <script src="../content/js/brokerscript.js"></script>
+        <script src="../content/js/script.js"></script>
+
+
+        <!-- ### SWAPS SVG TO PNG IF NOT SUPPORTED  ### --> 
+        <script src="../content/js/svgeezy.min.js"></script> 
+        <script>
+            svgeezy.init(false, 'png');
+        </script> 
+        <!-- ### END SWAPS SVG TO PNG IF NOT SUPPORTED  ### --> 
+        <!-- ### MEGAMENU APPEND CLASS TO ANOTHER ELEMENT  ### -->
+        <script>
+            $('li.dropdown').hover(
+                function(){ $(this).find('.mm-arrow').addClass('hover') },
+                function(){ $(this).find('.mm-arrow').removeClass('hover') }
+                )
+        </script>
+
+        <script>
+            $(document).ready(function(e){
+                $(".view_all_content").click(function(e){
+
+                    $(".show_all_content").toggle();
+                })
+                
+                
+                /*More Inf0*/
+                
+                $('.paneleach').on('click','span.glyphicon-round-plus',function(e) {
+                    
+                    $(this).parents('.paneleach').find('.expandingcontent').show();
+                    $(this).addClass('glyphicon-round-minus').removeClass('glyphicon-round-plus');
+                    
+                    
+                });
+                $('.paneleach').on('click','span.glyphicon-round-minus',function(e) {
+                $(this).parents('.paneleach').find('.expandingcontent').hide();
+                    $(this).addClass('glyphicon-round-plus').removeClass('glyphicon-round-minus');
+                });
+                /*$('.paneleach').each(function(e)
+                {
+                    var abc =$(this).find('.paneleachtop .odd').height();
+                    if(abc>$(this).parents('.paneleach').find(
+                });
+                */
+            });
+        </script>
+
+        <!--### CURRENT DATE ### -->
+        <script type="text/javascript">
+
+            var d = new Date();
+            document.getElementById("current-date").innerHTML = (d.getMonth() + 1) + '/' + d.getDate() + '/' +  d.getFullYear();
+            $('.shopAlternatButton').click(function(e){
+                e.stopPropagation();
+            });
+        </script>        
+    </body>
+ 
+    </html>
+</apex:page>

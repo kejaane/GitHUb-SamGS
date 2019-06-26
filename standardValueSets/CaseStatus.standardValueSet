@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Awaiting - CIAM</fullName>
+        <default>false</default>
+        <label>Awaiting - CIAM</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting – CI Project New User Training</fullName>
+        <default>false</default>
+        <label>Awaiting – CI Project New User Training</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting - Customer Review</fullName>
+        <default>false</default>
+        <label>Awaiting - Customer Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting - License Purchase</fullName>
+        <default>false</default>
+        <label>Awaiting - License Purchase</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting - SF_FPRB Meeting</fullName>
+        <default>false</default>
+        <label>Awaiting - SF_FPRB Meeting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting - Team Conversation / Meeting</fullName>
+        <default>false</default>
+        <label>Awaiting - Team Conversation / Meeting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Placed in future sprint</fullName>
+        <default>false</default>
+        <label>Closed - Placed in future sprint</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Resolved</fullName>
+        <default>false</default>
+        <label>Closed - Resolved</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Complete</fullName>
+        <default>false</default>
+        <label>Complete</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Open</fullName>
+        <default>true</default>
+        <label>Open</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In-Queue</fullName>
+        <default>false</default>
+        <label>In-Queue</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Assigned</fullName>
+        <default>false</default>
+        <label>Assigned</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting</fullName>
+        <default>false</default>
+        <label>Awaiting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Routed to Other Department</fullName>
+        <default>false</default>
+        <label>Routed to Other Department</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Routed to Management</fullName>
+        <default>false</default>
+        <label>Routed to Management</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Routed To Facets</fullName>
+        <default>false</default>
+        <label>Routed To Facets</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Assignment</fullName>
+        <default>false</default>
+        <label>Pending Assignment</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>Approved</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

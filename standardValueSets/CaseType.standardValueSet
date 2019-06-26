@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Benefit Coding</fullName>
+        <default>false</default>
+        <label>Benefit Coding</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing/Settlement</fullName>
+        <default>false</default>
+        <label>Billing/Settlement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CareFirst Systems (TOS)</fullName>
+        <default>false</default>
+        <label>CareFirst Systems (TOS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CDH Vendor</fullName>
+        <default>false</default>
+        <label>CDH Vendor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Claims</fullName>
+        <default>false</default>
+        <label>Claims</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contract</fullName>
+        <default>false</default>
+        <label>Contract</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Davis</fullName>
+        <default>false</default>
+        <label>Davis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Enrollment/ID Card</fullName>
+        <default>false</default>
+        <label>Enrollment/ID Card</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Megellan</fullName>
+        <default>false</default>
+        <label>Megellan</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Migration</fullName>
+        <default>false</default>
+        <label>Migration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MyAccount</fullName>
+        <default>false</default>
+        <label>MyAccount</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NASCO Systems</fullName>
+        <default>false</default>
+        <label>NASCO Systems</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Off-Renewal</fullName>
+        <default>false</default>
+        <label>Off-Renewal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PBM Project</fullName>
+        <default>false</default>
+        <label>PBM Project</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pharmacy</fullName>
+        <default>false</default>
+        <label>Pharmacy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Renewal</fullName>
+        <default>false</default>
+        <label>Renewal</label>
+    </standardValue>
+</StandardValueSet>

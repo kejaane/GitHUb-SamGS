@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AIA_Number_of_Completed_tasks__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Number of Completed tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_Number_of_Not_Required_Tasks__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Number of Not Required Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_Sub_Process_End_Date__c</fullName>
+        <description>End date of the sub process</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Sub Process End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Sub_Process_Start_date__c</fullName>
+        <description>Start date of the sub process</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Sub Process Start date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field used to check whether Sub process record is active or not</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Actual_SLA__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual SLA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>All_Tasks_Must_Be_Completed_c__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Boolean check to see if all the Tasks are completed underneath sub Process</description>
+        <externalId>false</externalId>
+        <label>All Tasks Must Be Completed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <description>unique identifier for a record that can be used when importing record, searable &amp; etc.</description>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Sub Process</relationshipLabel>
+        <relationshipName>Sub_Process</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Marked_as_Not_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field gets updated when user marks certain Sub Process as not required</description>
+        <externalId>false</externalId>
+        <label>Marked as Not Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Blocked_Tasks__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Blocked Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_In_Progress_Tasks__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of In Progress Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Not_Started_Tasks__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Not Started Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Tasks_SLA_Broken__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Tasks (SLA Broken)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Tasks__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Used to count the number of Tasks in the parent Sub Process</description>
+        <externalId>false</externalId>
+        <label>Number of Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Sub Processes</relationshipLabel>
+        <relationshipName>Sub_Processes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Process_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(  Process__r.Stage__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Process Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percent_Complete__c</fullName>
+        <description>Shows the percentage completion of sub process. This is percentage of (completed tasks+not required tasks)/total task count. If sub process is marked as not required, then percent complete will be 100.</description>
+        <externalId>false</externalId>
+        <formula>IF(Marked_as_Not_Required__c,1,
+IF(AND(AIA_Number_of_Completed_tasks__c=0,AIA_Number_of_Not_Required_Tasks__c=0,Total_Task_Count__c=0),1,((AIA_Number_of_Completed_tasks__c + AIA_Number_of_Not_Required_Tasks__c)/Total_Task_Count__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Shows the percentage completion of sub process. This is percentage of (completed tasks+not required tasks)/total task count. If sub process is marked as not required, then percent complete will be 100.</inlineHelpText>
+        <label>Percent Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Process__c</fullName>
+        <externalId>false</externalId>
+        <label>Process</label>
+        <referenceTo>Process__c</referenceTo>
+        <relationshipLabel>Sub Process</relationshipLabel>
+        <relationshipName>Sub_Processes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>SLA_Day_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>SLA Day Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Business</fullName>
+                    <default>false</default>
+                    <label>Business</label>
+                </value>
+                <value>
+                    <fullName>Calendar</fullName>
+                    <default>false</default>
+                    <label>Calendar</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sequence_Number__c</fullName>
+        <description>Used to identify the Sequence number of the record for sorting</description>
+        <externalId>false</externalId>
+        <label>Sequence Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <description>Used to identify the Stage of the Sub Process Record</description>
+        <externalId>false</externalId>
+        <label>Sub Process Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Group Structure</fullName>
+                    <default>false</default>
+                    <label>Group Structure</label>
+                </value>
+                <value>
+                    <fullName>Enrollment Data Card</fullName>
+                    <default>false</default>
+                    <label>Enrollment Data Card</label>
+                </value>
+                <value>
+                    <fullName>Benefit Setup</fullName>
+                    <default>false</default>
+                    <label>Benefit Setup</label>
+                </value>
+                <value>
+                    <fullName>Change System Request</fullName>
+                    <default>false</default>
+                    <label>Change System Request</label>
+                </value>
+                <value>
+                    <fullName>Performance Guarantee</fullName>
+                    <default>false</default>
+                    <label>Performance Guarantee</label>
+                </value>
+                <value>
+                    <fullName>Summary of Benefits and Coverage</fullName>
+                    <default>false</default>
+                    <label>Summary of Benefits and Coverage</label>
+                </value>
+                <value>
+                    <fullName>Account Kick-off Meeting</fullName>
+                    <default>false</default>
+                    <label>Account Kick-off Meeting</label>
+                </value>
+                <value>
+                    <fullName>Marketing Materials</fullName>
+                    <default>false</default>
+                    <label>Marketing Materials</label>
+                </value>
+                <value>
+                    <fullName>Blue Rewards and Wellness</fullName>
+                    <default>false</default>
+                    <label>Blue Rewards and Wellness</label>
+                </value>
+                <value>
+                    <fullName>Setup Vision</fullName>
+                    <default>false</default>
+                    <label>Setup Vision</label>
+                </value>
+                <value>
+                    <fullName>Setup Magellan</fullName>
+                    <default>false</default>
+                    <label>Setup Magellan</label>
+                </value>
+                <value>
+                    <fullName>Process Enrollment</fullName>
+                    <default>false</default>
+                    <label>Process Enrollment</label>
+                </value>
+                <value>
+                    <fullName>Par Plan Custom Letters</fullName>
+                    <default>false</default>
+                    <label>Par Plan Custom Letters</label>
+                </value>
+                <value>
+                    <fullName>Accommodation of Contraceptive Services</fullName>
+                    <default>false</default>
+                    <label>Accommodation of Contraceptive Services</label>
+                </value>
+                <value>
+                    <fullName>Benefit Contract</fullName>
+                    <default>false</default>
+                    <label>Benefit Contract</label>
+                </value>
+                <value>
+                    <fullName>Implementation Plan</fullName>
+                    <default>false</default>
+                    <label>Implementation Plan</label>
+                </value>
+                <value>
+                    <fullName>Benefit Design</fullName>
+                    <default>false</default>
+                    <label>Benefit Design</label>
+                </value>
+                <value>
+                    <fullName>CYC</fullName>
+                    <default>false</default>
+                    <label>CYC</label>
+                </value>
+                <value>
+                    <fullName>Setup Pharmacy</fullName>
+                    <default>false</default>
+                    <label>Setup Pharmacy</label>
+                </value>
+                <value>
+                    <fullName>Setup Dental</fullName>
+                    <default>false</default>
+                    <label>Setup Dental</label>
+                </value>
+                <value>
+                    <fullName>Carve-Out Pharmacy</fullName>
+                    <default>false</default>
+                    <label>Carve-Out Pharmacy</label>
+                </value>
+                <value>
+                    <fullName>ID Cards</fullName>
+                    <default>false</default>
+                    <label>ID Cards</label>
+                </value>
+                <value>
+                    <fullName>Administrative Service Agreement</fullName>
+                    <default>false</default>
+                    <label>Administrative Service Agreement</label>
+                </value>
+                <value>
+                    <fullName>Business Associate Agreement and Confirmation (BAA/BAC)</fullName>
+                    <default>false</default>
+                    <label>Business Associate Agreement and Confirmation (BAA/BAC)</label>
+                </value>
+                <value>
+                    <fullName>RFP</fullName>
+                    <default>false</default>
+                    <label>RFP</label>
+                </value>
+                <value>
+                    <fullName>Benefit Request</fullName>
+                    <default>false</default>
+                    <label>Benefit Request</label>
+                </value>
+                <value>
+                    <fullName>ARC Approval</fullName>
+                    <default>false</default>
+                    <label>ARC Approval</label>
+                </value>
+                <value>
+                    <fullName>Underwriting</fullName>
+                    <default>false</default>
+                    <label>Underwriting</label>
+                </value>
+                <value>
+                    <fullName>Quote Delivered</fullName>
+                    <default>false</default>
+                    <label>Quote Delivered</label>
+                </value>
+                <value>
+                    <fullName>Sold</fullName>
+                    <default>false</default>
+                    <label>Sold</label>
+                </value>
+                <value>
+                    <fullName>Dead</fullName>
+                    <default>false</default>
+                    <label>Dead</label>
+                </value>
+                <value>
+                    <fullName>Prospecting</fullName>
+                    <default>false</default>
+                    <label>Prospecting</label>
+                </value>
+                <value>
+                    <fullName>Proposal</fullName>
+                    <default>false</default>
+                    <label>Proposal</label>
+                </value>
+                <value>
+                    <fullName>Create MM</fullName>
+                    <default>false</default>
+                    <label>Create MM</label>
+                </value>
+                <value>
+                    <fullName>BlueFund</fullName>
+                    <default>false</default>
+                    <label>BlueFund</label>
+                </value>
+                <value>
+                    <fullName>ASA</fullName>
+                    <default>false</default>
+                    <label>ASA</label>
+                </value>
+                <value>
+                    <fullName>BAC</fullName>
+                    <default>false</default>
+                    <label>BAC</label>
+                </value>
+                <value>
+                    <fullName>Monthly Invoices</fullName>
+                    <default>false</default>
+                    <label>Monthly Invoices</label>
+                </value>
+                <value>
+                    <fullName>Create Microsite</fullName>
+                    <default>false</default>
+                    <label>Create Microsite</label>
+                </value>
+                <value>
+                    <fullName>MyAccount</fullName>
+                    <default>false</default>
+                    <label>MyAccount</label>
+                </value>
+                <value>
+                    <fullName>Searchlight HealthCheck</fullName>
+                    <default>false</default>
+                    <label>Searchlight HealthCheck</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Used to identify the status of the record</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>true</default>
+                    <label>Not Started</label>
+                </value>
+                <value>
+                    <fullName>In-Progress</fullName>
+                    <default>false</default>
+                    <label>In-Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Not Required</fullName>
+                    <default>false</default>
+                    <label>Not Required</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sub_Process_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sub Process Template</label>
+        <referenceTo>Sub_Process_Type__c</referenceTo>
+        <relationshipLabel>Sub Process</relationshipLabel>
+        <relationshipName>Sub_Processes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Task_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Used to update the count of Task associated to Sub process. Updated by AIA_WorkPlanController.</description>
+        <externalId>false</externalId>
+        <label>Number of Total Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Used_For__c</fullName>
+        <description>Used to identify whether it’s a pre-sales/post-sales active record</description>
+        <externalId>false</externalId>
+        <label>Used For</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pre-Sales</fullName>
+                    <default>false</default>
+                    <label>Pre-Sales</label>
+                </value>
+                <value>
+                    <fullName>Post-Sales</fullName>
+                    <default>false</default>
+                    <label>Post-Sales</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Run time Object used for AIA workplan Stage
+AIA - Custom object used to store the Stage, type &amp; status of Runtime Sub Process. This object is a child object for Run time Process object. 
+This is implemented for JUNE-2018 Release.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Sub Process</label>
+    <nameField>
+        <displayFormat>S-{000000}</displayFormat>
+        <label>Sub Process Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Sub Processes</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Implementation__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>IMP_142052</fullName>
+        <columns>NAME</columns>
+        <columns>Implementation__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Implementation__c</field>
+            <operation>equals</operation>
+            <value>IMP-205021</value>
+        </filters>
+        <label>Close Out Sub processes</label>
+    </listViews>
+    <listViews>
+        <fullName>Implementation_Sub_Process_Closure_View</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>Implementation__c</columns>
+        <columns>Status__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Implementation__c</field>
+            <operation>equals</operation>
+            <value>IMP-192332</value>
+        </filters>
+        <label>1- Implementation Sub Process Closure</label>
+    </listViews>
+    <validationRules>
+        <fullName>SP001</fullName>
+        <active>true</active>
+        <description>User cannot change the status once it is "Completed"</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(ISPICKVAL(PRIORVALUE( Status__c ),"Completed")&amp;&amp; ISCHANGED( Status__c ))</errorConditionFormula>
+        <errorMessage>SP001 : User cannot change the status once it is "Completed"</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SPR001</fullName>
+        <active>true</active>
+        <description>User cannot change the status once it is "Completed"</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(ISPICKVAL(PRIORVALUE( Status__c ),"Completed")&amp;&amp; ISCHANGED( Status__c ))</errorConditionFormula>
+        <errorMessage>SPR001 : User cannot change the status once it is "Completed"</errorMessage>
+    </validationRules>
+</CustomObject>

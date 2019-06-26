@@ -1,0 +1,62 @@
+<!--
+========================================================================================
+//
+// ========================================================================================
+//                                 Update History
+// Date       Developer      	Description
+// ========================================================================================
+// 08/14/2018 Debkanti	|T01|	Added SLDS to make compatable with classic and lightning. 
+// ========================================================================================
+-->
+<apex:page controller="CFCT_MassContactOwnerChange_Controller" Title="Mass Contact Owner Change" tabStyle="Contact" lightningStylesheets="true">
+    <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <style>
+    {! IF(! IsClassic,'body .pbHeader .pbTitle:first-child, body .pbHeader .pbButton:first-child, .slds-vf-scope .pbHeader .pbTitle:first-child, .slds-vf-scope .pbHeader .pbButton:first-child { padding-left: 0; width: 46% !important;}','')} 
+    {! IF(! IsClassic,'.slds-scope .slds-select[size], .slds-scope .slds-select[multiple] {min-height: calc(1.875rem + (1px * 2));height: inherit;width: 40%;}','')} 
+    </style>
+     <!-- T01 -- End -->
+    <apex:pageMessages escape="false" />
+    <apex:form >
+        <apex:pageBlock title="Mass Contact Owner Change">
+            <apex:pageBlockSection columns="1">  
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel value="Current Owner" for="CurrentContactOwner" />
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>                
+                        <apex:selectList value="{!CurrentContactOwner}" id="CurrentContactOwner" size="1" styleClass="slds-select">
+                            <apex:selectOptions value="{!currentContactOwners}"/>             
+                        </apex:selectList>                   
+                    </apex:outputPanel>
+                </apex:pageblockSectionItem>            
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="New Owner" for="NewContactOwner" />
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>                
+                        <apex:selectList value="{!NewContactOwner}" id="NewContactOwner" size="1" styleClass="slds-select">
+                            <apex:selectOptions value="{!newContactOwners}"/>             
+                        </apex:selectList>                   
+                    </apex:outputPanel>                         
+                </apex:pageBlockSectionItem> 
+                <font size="2" color="red"><b>CAUTION:</b></font> <font size="2" color="blue">All contacts that the Current Owner owns will be transfered to the New Owner.  Once the mass update starts it cannot be stopped.</font>                              
+            </apex:pageBlockSection>
+            
+                <apex:pageblockButtons >
+                <apex:commandButton value="Change Owner" action="{!changeOwner}"
+                                    onclick="return confirm('Are you sure you want to perform this mass update?')" styleClass="slds-align_absolute-center"/> 
+                <apex:actionsupport event="onClick" action="{!myResults}" rerender="summary"/>
+            </apex:pageblockButtons> 
+            
+        </apex:pageBlock>
+        <apex:outputpanel >        
+        </apex:outputpanel>
+        <apex:outputpanel id="summary">
+            <apex:pageblock >
+            <apex:outputtext value="{!summaryResults}" escape="false"> 
+            </apex:outputtext>
+            </apex:pageblock>
+        </apex:outputpanel>
+
+    </apex:form>     
+</apex:page>

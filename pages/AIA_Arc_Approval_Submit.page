@@ -1,0 +1,44 @@
+<!-- Author: Bill Dodson        -->
+<!-- Created: April 12, 2017    -->
+<!-- Description:               -->
+<!-- This page will show a modal processing status page while Apex runs   -->
+<!-- to submit a Benefit Request Form (BRF) for Arc Approval.             -->
+<!-- History:                                                             -->
+<!-- April 12, 2017  Bill Dodson, Initial version.                        --> 
+<!--                                                                      -->
+<apex:page standardController="Benfit_Request_Form__c" extensions="AIA_BRFSubmitArcApprovalCtrlExtension"  
+           lightningStylesheets="true" >
+
+  <apex:include pageName="BusyIndicator"/> 
+ <!-- <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/> -->
+ <apex:stylesheet value="{!URLFOR($Resource.SLDS_VF, '/SLDS/assets/styles/salesforce-lightning-design-system-vf.css')}" />
+   
+       <apex:slds /> 
+  <script> 
+    // Show the busy model image when page is first loaded.
+    window.onload = function()
+    {      
+       // After showing the modal window call a script function which will in turn
+       // call the controller extension function.
+       showBusyThenCallScript('submitBrfForArchApproval'); 
+    }
+  </script>
+  
+  <apex:form id="theForm" styleClass="slds-scope">
+  
+    <!-- Define a function callable from Javascript.  This will in turn call the controller extension function. -->
+    <apex:actionFunction name="submitBrfForArchApproval" action="{!submitBrfForArchApproval}" onComplete="hideBusy();" rerender="theForm"/>
+
+    <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}"/><br/><br/><br/>
+        <center><apex:commandButton value=" Ok " action="{!returnToBrf}" styleClass="slds-button slds-button_neutral"/>
+          </center>
+      </div>  
+    </apex:outputPanel>
+    
+  </apex:form> 
+  
+</apex:page>

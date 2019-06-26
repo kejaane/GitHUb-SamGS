@@ -1,0 +1,63 @@
+<!-- 
+ *=================================================================================================================
+ * Date         : 07/23/2018
+ * Developer    : Arshia Gulati
+ * Purpose      : The purpose of this class is to create BD Case from Benefit Design
+ *=================================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ *   Date        Developer       Tag   Description
+ *============+================+=====+=============================================================================
+ * 07/23/2018 | AG  | T01 | Intial Development. 
+ *=================================================================================================================
+ -->
+
+
+<apex:page showHeader="true" standardController="Case" extensions="AIA_BD_Case" sidebar="false" 
+           lightningStylesheets="true" docType="html-5.0" recordSetVar="BDcases" action="{!pageNavigation}">
+    
+   <apex:slds rendered="{!!isClassic}"/>
+   <style>
+       .pbButton{text-align: center !important;}
+       .pbButton:last-child {padding-right: 400px !important;}
+       .pickListHt{height:30px;}
+   </style>
+      
+    <apex:form >
+        <apex:pageBlock title="Case Information">
+            <apex:pageMessages escape="false"></apex:pageMessages>
+            <apex:actionFunction name="cancelRec" action="{!cancelFun}" immediate="true"/>
+		 <apex:pageBlockButtons >
+            <div align="center">
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Cancel" onclick="return cancelRec();" />
+             </div>    
+        </apex:pageBlockButtons>
+        
+         <!---------------------- This block is for displaying Case Information --------------------------------->
+            <apex:pageBlockSection title="Case Information" id="pgbs1" collapsible="false">
+                <apex:inputField value="{!BDCase.Origin}" required="true" /> 
+                <apex:outputField value="{!BDCase.OwnerId}"/>
+                <apex:inputField value="{!BDCase.AIA_Benefit_Design__c}" rendered="{!!isClassic}" required="true" /> 
+                <apex:inputField value="{!BDCase.Priority}"/>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                <apex:inputField value="{!BDCase.Status}" required="true"/>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                <apex:outputField value="{!BDCase.recordtypeid}" />
+             </apex:pageBlockSection>
+            
+          <!---------------------- This block is for displaying Description Information --------------------------------->  
+            <apex:pageBlockSection title="Description Information">
+            	 <apex:inputField value="{!BDCase.Subject}"/>
+                 <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            	 <apex:inputField value="{!BDCase.Description}"/>
+            </apex:pageBlockSection>
+          <!---------------------- This block is for displaying Account Information ---------------------------------> 
+            <apex:pageBlockSection title="Account Information">
+            	 <apex:inputField value="{!BDCase.ContactId}"/>
+            </apex:pageBlockSection>
+              
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

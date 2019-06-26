@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Business Associates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation__c</name>
+        <relationshipLabel><!-- Business Associates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Partner --></label>
+        <lookupFilter>
+            <errorMessage><!-- Only Partner can be selected in this field --></errorMessage>
+            <informationalMessage><!-- Select Partner --></informationalMessage>
+        </lookupFilter>
+        <name>Partner__c</name>
+        <relationshipLabel><!-- Business Associates (Partner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Partner/Vendor Name --></label>
+        <name>Partner_or_Vendor_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Account of Implementation --></label>
+        <name>Related_Account_of_Implementation__c</name>
+        <relationshipLabel><!-- Business Associates (Related Account of Implementation) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor</masterLabel>
+            <translation><!-- Vendor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vendor --></label>
+        <lookupFilter>
+            <errorMessage><!-- Only Vendor can be selected in this field --></errorMessage>
+            <informationalMessage><!-- Please select Vendor --></informationalMessage>
+        </lookupFilter>
+        <name>Vendor__c</name>
+        <relationshipLabel><!-- Business Associates (Vendor) --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Business Associate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Business Associates</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Select Related Record --></label>
+            <section>Select Related Record</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partner Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Select Related Record --></label>
+            <section>Select Related Record</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vendor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Select Related Record --></label>
+            <section>Select Related Record</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Contact --></label>
+        <name>Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Partner --></label>
+        <name>Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Vendor --></label>
+        <name>Vendor</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- New_Business_Associate --></label>
+        <name>New_Business_Associate</name>
+    </webLinks>
+</CustomObjectTranslation>

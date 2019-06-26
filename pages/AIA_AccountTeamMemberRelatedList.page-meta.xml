@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>41.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Logic to show Account Team related List on Acocunt Page &amp; Redirect to Add/Edit/Replace Account Team Member. US138.</description>
+    <label>AIA_AccountTeamMemberRelatedList</label>
+</ApexPage>

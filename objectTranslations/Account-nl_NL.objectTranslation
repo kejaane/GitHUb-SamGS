@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AG Contracts for Year --></label>
+        <name>AG_Contracts_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG Groups for Year --></label>
+        <name>AG_Groups_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG Rank --></label>
+        <name>AG_Rank__c</name>
+    </fields>
+    <fields>
+        <help><!-- AIA - Final NAEGS Adjustment Summary Revision Number --></help>
+        <label><!-- Final NAEGS Adjustment Summary Rev Num --></label>
+        <name>AIAFinal_NAEGS_Adjustment_Sumary_Rev_Num__c</name>
+    </fields>
+    <fields>
+        <label><!-- AIA Admin User --></label>
+        <name>AIA_Admin_User__c</name>
+        <relationshipLabel><!-- Accounts (AIA Admin User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- BD Revision Number --></label>
+        <name>AIA_BD_Revision_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Account Team PopUp? --></label>
+        <name>AIA_Display_Account_Team_PopUp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Alias 1 --></label>
+        <name>Account_Alias_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Alias 2 --></label>
+        <name>Account_Alias_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Alias 3 --></label>
+        <name>Account_Alias_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Dedicated Representative User --></label>
+        <name>Account_Dedicated_Representative_User__c</name>
+        <relationshipLabel><!-- Accounts (Account Dedicated Representative User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Effective Date --></label>
+        <name>Account_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Executive User --></label>
+        <name>Account_Executive_User__c</name>
+        <relationshipLabel><!-- Accounts (Account Executive User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- National Producer Number --></help>
+        <label><!-- Agency NPN --></label>
+        <name>Agency_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auditor User --></label>
+        <name>Auditor_User__c</name>
+        <relationshipLabel><!-- Accounts (Auditor User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Automated Enrollment Tech User --></label>
+        <name>Automated_Enrollment_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Automated Enrollment Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benchmark Code --></label>
+        <name>Benchmark_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- This  optional field is used to override the value of Benchmark Name field and defaults to None. Selecting any value other than &apos;None&apos; will cause the Benchmark Name field to use that selected value instead of the normal SIC driven assigned value. --></help>
+        <label><!-- Benchmark Name Override --></label>
+        <name>Benchmark_Name_Override__c</name>
+        <picklistValues>
+            <masterLabel>Business Services</masterLabel>
+            <translation><!-- Business Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction and Manufacturing</masterLabel>
+            <translation><!-- Construction and Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Services</masterLabel>
+            <translation><!-- Educational Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering, Accounting, Research, Management and Related Services</masterLabel>
+            <translation><!-- Engineering, Accounting, Research, Management and Related Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance, Insurance, and Real Estate</masterLabel>
+            <translation><!-- Finance, Insurance, and Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Services</masterLabel>
+            <translation><!-- Health Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Membership Organizations and Social Services</masterLabel>
+            <translation><!-- Membership Organizations and Social Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Administration</masterLabel>
+            <translation><!-- Public Administration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation, Communications, Electric, Gas and Sanitary Service</masterLabel>
+            <translation><!-- Transportation, Communications, Electric, Gas and Sanitary Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wholesale Trade and Retail Trade</masterLabel>
+            <translation><!-- Wholesale Trade and Retail Trade --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Benchmark Name --></label>
+        <name>Benchmark_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- BeneFact Coder User --></label>
+        <name>BeneFact_Coder_User__c</name>
+        <relationshipLabel><!-- Accounts (BeneFact Coder User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Coder User --></label>
+        <name>Benefit_Coder_User__c</name>
+        <relationshipLabel><!-- Accounts (Benefit Coder User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Contract Specialist User --></label>
+        <name>Benefit_Contract_Specialist_User__c</name>
+        <relationshipLabel><!-- Accounts (Benefit Contract Specialist User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Tester User --></label>
+        <name>Benefit_Tester_User__c</name>
+        <relationshipLabel><!-- Accounts (Benefit Tester User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing County Code --></label>
+        <name>Billing_County_Code__c</name>
+        <picklistValues>
+            <masterLabel>AA-Anne Arundel</masterLabel>
+            <translation><!-- AA-Anne Arundel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL-Allegany</masterLabel>
+            <translation><!-- AL-Allegany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA-Baltimore County</masterLabel>
+            <translation><!-- BA-Baltimore County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BC-Baltimore City</masterLabel>
+            <translation><!-- BC-Baltimore City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA-Carroll</masterLabel>
+            <translation><!-- CA-Carroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CE-Cecil</masterLabel>
+            <translation><!-- CE-Cecil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO-Caroline</masterLabel>
+            <translation><!-- CO-Caroline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CR-Charles</masterLabel>
+            <translation><!-- CR-Charles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CV-Calvert</masterLabel>
+            <translation><!-- CV-Calvert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DO-Dorchester</masterLabel>
+            <translation><!-- DO-Dorchester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FR-Frederick</masterLabel>
+            <translation><!-- FR-Frederick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA-Garrett</masterLabel>
+            <translation><!-- GA-Garrett --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HA-Harford</masterLabel>
+            <translation><!-- HA-Harford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HO-Howard</masterLabel>
+            <translation><!-- HO-Howard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KE-Kent</masterLabel>
+            <translation><!-- KE-Kent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO-Montgomery</masterLabel>
+            <translation><!-- MO-Montgomery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PG-Prince George's</masterLabel>
+            <translation><!-- PG-Prince George&apos;s --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA-Queen Anne's</masterLabel>
+            <translation><!-- QA-Queen Anne&apos;s --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SM-Saint Mary's</masterLabel>
+            <translation><!-- SM-Saint Mary&apos;s --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SO-Somerset</masterLabel>
+            <translation><!-- SO-Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA-Talbot</masterLabel>
+            <translation><!-- TA-Talbot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA-Washington</masterLabel>
+            <translation><!-- WA-Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WI-Wicomico</masterLabel>
+            <translation><!-- WI-Wicomico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WO-Worcester</masterLabel>
+            <translation><!-- WO-Worcester --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Billing County --></label>
+        <name>Billing_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Cycle --></label>
+        <name>Billing_Cycle__c</name>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21</masterLabel>
+            <translation><!-- 21 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Billing Tech User --></label>
+        <name>Billing_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Billing Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- BlueFund Health Care Payment Card --></label>
+        <name>BlueFund_Health_Care_Payment_Card__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blue Rewards Tech User --></label>
+        <name>Blue_Rewards_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Blue Rewards Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Broker Service Team --></label>
+        <name>Broker_Service_Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- CanGSCIPickUP --></label>
+        <name>CanGSCIPickUP__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select this field only when this Partner can act in the role of Consultant --></help>
+        <label><!-- Consultant --></label>
+        <name>Consultant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Coordinator User --></label>
+        <name>Contract_Coordinator_User__c</name>
+        <relationshipLabel><!-- Accounts (Contract Coordinator User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Manager User --></label>
+        <name>Contract_Manager_User__c</name>
+        <relationshipLabel><!-- Accounts (Contract Manager User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Tech User --></label>
+        <name>Contract_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Contract Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Control Plan --></label>
+        <name>Control_Plan__c</name>
+        <picklistValues>
+            <masterLabel>580</masterLabel>
+            <translation><!-- 580 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>690</masterLabel>
+            <translation><!-- 690 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copy from Renewal Date --></label>
+        <name>Copy_from_Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customized Bill --></label>
+        <name>Customized_Bill__c</name>
+    </fields>
+    <fields>
+        <label><!-- D-U-N-S # --></label>
+        <name>D_U_N_S__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Description --></label>
+        <name>Data_Quality_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Score --></label>
+        <name>Data_Quality_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Jurisdication value --></label>
+        <name>DocuSign_Jurisdication_value__c</name>
+    </fields>
+    <fields>
+        <label><!-- EGWP --></label>
+        <name>EGWP__c</name>
+    </fields>
+    <fields>
+        <label><!-- EIN Number --></label>
+        <name>EIN_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- EIN # --></label>
+        <name>EIN__c</name>
+    </fields>
+    <fields>
+        <help><!-- Effective Date of Migration FACETS to NASCO --></help>
+        <label><!-- Effective Date of Migration --></label>
+        <name>Effective_Date_of_Migration_Facets_to_N__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective date format --></label>
+        <name>Effective_date_format__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Routing --></label>
+        <name>Email_Routing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Tech User --></label>
+        <name>Enrollment_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Enrollment Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Entity ID --></label>
+        <name>Entity_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity Type : AG --></label>
+        <name>Entity_Type_AG__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity Type : FSP --></label>
+        <name>Entity_Type_FSP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity Type : GP --></label>
+        <name>Entity_Type_GP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity Type : PDB --></label>
+        <name>Entity_Type_PDB__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP Contracts for Year --></label>
+        <name>FSP_Contracts_for_year__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP Groups for Year --></label>
+        <name>FSP_Groups_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facets Account Number --></label>
+        <name>Facets_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facets Migration Contact User --></label>
+        <name>Facets_Migration_Contact_User__c</name>
+        <relationshipLabel><!-- Accounts (Facets Migration Contact User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Final Renewal Date --></label>
+        <name>Final_Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP Contracts for Year --></label>
+        <name>GP_Contracts_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP Groups for Year --></label>
+        <name>GP_Groups_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grandfathered PPACA Status --></label>
+        <name>Grandfathered_PPACA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grandfathered --></label>
+        <name>Grandfathered__c</name>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Groups Represented --></label>
+        <name>Groups_Represented__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Sub Groups? --></label>
+        <name>Has_Sub_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- HooversId --></label>
+        <name>HooversId__c</name>
+    </fields>
+    <fields>
+        <label><!-- House Account --></label>
+        <name>House_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account ID18 --></label>
+        <name>ID18__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Coordinator User --></label>
+        <name>Implementation_Coordinator_User__c</name>
+        <relationshipLabel><!-- Accounts (Implementation Coordinator User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>CEDE</masterLabel>
+            <translation><!-- CEDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Latest Dental Enrollment --></label>
+        <name>Latest_Dental_Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Drug Enrollment --></label>
+        <name>Latest_Drug_Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Enrollment Date --></label>
+        <name>Latest_Enrollment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Medical Enrollment --></label>
+        <name>Latest_Medical_Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Vision Enrollment --></label>
+        <name>Latest_Vision_Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal User --></label>
+        <name>Legal_User__c</name>
+        <relationshipLabel><!-- Accounts (Legal User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Check here if this is a Local Maryland Account --></help>
+        <label><!-- Local Maryland Account --></label>
+        <name>Local_Maryland_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Magellan --></label>
+        <name>Magellan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mast Tech User --></label>
+        <name>Mast_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Mast Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Medical Enrollment Represented --></label>
+        <name>Medical_Enrollment_Represented__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merged Account --></label>
+        <name>Merged_Account__c</name>
+        <relationshipLabel><!-- Merged Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Microsite URL --></label>
+        <name>Microsite_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- My Account --></label>
+        <name>My_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- NASCO Account Number --></label>
+        <name>NASCO_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- NASCO Original Effective Date --></label>
+        <name>NASCO_Original_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- National or Local --></label>
+        <name>National_or_Local__c</name>
+        <picklistValues>
+            <masterLabel>Local</masterLabel>
+            <translation><!-- Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Eligible Employees --></label>
+        <name>Number_of_Eligible_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Jurisdiction --></label>
+        <name>Other_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB Contracts for Year --></label>
+        <name>PDB_Contracts_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB Groups for Year --></label>
+        <name>PDB_Groups_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB Rank --></label>
+        <name>PDB_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- PGA Result --></label>
+        <name>PGA_Result__c</name>
+        <picklistValues>
+            <masterLabel>Account Specific</masterLabel>
+            <translation><!-- Account Specific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBU Specific</masterLabel>
+            <translation><!-- SBU Specific --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>Payment_Method__c</name>
+        <picklistValues>
+            <masterLabel>ACH Direct Debit</masterLabel>
+            <translation><!-- ACH Direct Debit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check</masterLabel>
+            <translation><!-- Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wire Transfer</masterLabel>
+            <translation><!-- Wire Transfer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Performance Guarantee End Date --></label>
+        <name>Performance_Guarantee_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Guarantee Start Date --></label>
+        <name>Performance_Guarantee_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pharmacy Operations User --></label>
+        <name>Pharmacy_Operations_User__c</name>
+        <relationshipLabel><!-- Accounts (Pharmacy Operations User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous Account Legal Name --></label>
+        <name>Previous_Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Production ID Card Tech User --></label>
+        <name>Production_ID_Card_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Production ID Card Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Proposal Specialist User --></label>
+        <name>Proposal_Specialist_User__c</name>
+        <relationshipLabel><!-- Accounts (Proposal Specialist User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- QA Auditor User --></label>
+        <name>QA_Auditor_User__c</name>
+        <relationshipLabel><!-- Accounts (QA Auditor User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rating State --></label>
+        <name>Rating_State__c</name>
+        <picklistValues>
+            <masterLabel>D</masterLabel>
+            <translation><!-- D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M</masterLabel>
+            <translation><!-- M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R</masterLabel>
+            <translation><!-- R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V</masterLabel>
+            <translation><!-- V --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RecType Agency NPN --></label>
+        <name>RecType_Agency_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecType_Entity_ID --></label>
+        <name>RecType_Entity_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecType Facets Account Number --></label>
+        <name>RecType_Facets_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recent_Sold_BRF_ID --></label>
+        <name>Recent_Sold_BRF_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recent_Sold_Opportunity_ID --></label>
+        <name>Recent_Sold_Opportunity_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Anniversary Month --></label>
+        <name>Renewal_Anniversary_Month__c</name>
+        <picklistValues>
+            <masterLabel>Apr</masterLabel>
+            <translation><!-- Apr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aug</masterLabel>
+            <translation><!-- Aug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dec</masterLabel>
+            <translation><!-- Dec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feb</masterLabel>
+            <translation><!-- Feb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jan</masterLabel>
+            <translation><!-- Jan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jul</masterLabel>
+            <translation><!-- Jul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jun</masterLabel>
+            <translation><!-- Jun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mar</masterLabel>
+            <translation><!-- Mar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nov</masterLabel>
+            <translation><!-- Nov --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oct</masterLabel>
+            <translation><!-- Oct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sep</masterLabel>
+            <translation><!-- Sep --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Renewal Date --></label>
+        <name>Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+        <picklistValues>
+            <masterLabel>AE BA</masterLabel>
+            <translation><!-- AE BA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AIA Admin</masterLabel>
+            <translation><!-- AIA Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Dedicated Rep</masterLabel>
+            <translation><!-- Account Dedicated Rep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Dedicated Rep Back-up</masterLabel>
+            <translation><!-- Account Dedicated Rep Back-up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Executive</masterLabel>
+            <translation><!-- Account Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Manager</masterLabel>
+            <translation><!-- Account Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actuary</masterLabel>
+            <translation><!-- Actuary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Audit</masterLabel>
+            <translation><!-- Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Audit Manager/Supervisor</masterLabel>
+            <translation><!-- Audit Manager/Supervisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Coder</masterLabel>
+            <translation><!-- BeneFact Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BeneFact Portal Tech</masterLabel>
+            <translation><!-- BeneFact Portal Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Admin Account Set-up</masterLabel>
+            <translation><!-- Benefit Admin Account Set-up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Admin Mgr/Sup</masterLabel>
+            <translation><!-- Benefit Admin Mgr/Sup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Admin Workflow Mgmt</masterLabel>
+            <translation><!-- Benefit Admin Workflow Mgmt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Coder</masterLabel>
+            <translation><!-- Benefit Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Contract Manager</masterLabel>
+            <translation><!-- Benefit Contract Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Contract Specialist</masterLabel>
+            <translation><!-- Benefit Contract Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit NASCO Tester</masterLabel>
+            <translation><!-- Benefit NASCO Tester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Tester</masterLabel>
+            <translation><!-- Benefit Tester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Tech</masterLabel>
+            <translation><!-- Billing Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue Rewards</masterLabel>
+            <translation><!-- Blue Rewards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueExchange Coder</masterLabel>
+            <translation><!-- BlueExchange Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Integration Manager</masterLabel>
+            <translation><!-- Business Integration Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAS</masterLabel>
+            <translation><!-- CAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cede Document Upload</masterLabel>
+            <translation><!-- Cede Document Upload --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claims</masterLabel>
+            <translation><!-- Claims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Coordinator</masterLabel>
+            <translation><!-- Contract Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Supervisor</masterLabel>
+            <translation><!-- Contract Supervisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Tech</masterLabel>
+            <translation><!-- Contract Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Marketing Communication User</masterLabel>
+            <translation><!-- Corporate Marketing Communication User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Marketing Communications</masterLabel>
+            <translation><!-- Corporate Marketing Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Support</masterLabel>
+            <translation><!-- Customer Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment</masterLabel>
+            <translation><!-- Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Tech</masterLabel>
+            <translation><!-- Enrollment Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facets Migration Contact</masterLabel>
+            <translation><!-- Facets Migration Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General User</masterLabel>
+            <translation><!-- General User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Coordinator</masterLabel>
+            <translation><!-- Implementation Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Manager</masterLabel>
+            <translation><!-- Implementation Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation PM</masterLabel>
+            <translation><!-- Implementation PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LG Leadership</masterLabel>
+            <translation><!-- LG Leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Qualifier</masterLabel>
+            <translation><!-- Lead Qualifier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAST Tech</masterLabel>
+            <translation><!-- MAST Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Management</masterLabel>
+            <translation><!-- Medical Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Management Staff</masterLabel>
+            <translation><!-- Medical Management Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASCO Account Implementer</masterLabel>
+            <translation><!-- NASCO Account Implementer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OBN Coder</masterLabel>
+            <translation><!-- OBN Coder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations Tech Suppt</masterLabel>
+            <translation><!-- Operations Tech Suppt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Par Plan</masterLabel>
+            <translation><!-- Par Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Guarantee Coordinator</masterLabel>
+            <translation><!-- Performance Guarantee Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy Management</masterLabel>
+            <translation><!-- Pharmacy Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy Operations</masterLabel>
+            <translation><!-- Pharmacy Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sales Consultant</masterLabel>
+            <translation><!-- Pre-Sales Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Privacy Office</masterLabel>
+            <translation><!-- Privacy Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Production ID Card</masterLabel>
+            <translation><!-- Production ID Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Manager</masterLabel>
+            <translation><!-- Proposal Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Specialist</masterLabel>
+            <translation><!-- Proposal Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA Auditor</masterLabel>
+            <translation><!-- QA Auditor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting</masterLabel>
+            <translation><!-- Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBU Project Manager</masterLabel>
+            <translation><!-- SBU Project Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Assistant</masterLabel>
+            <translation><!-- Sales Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Coordinator</masterLabel>
+            <translation><!-- Sales Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Director</masterLabel>
+            <translation><!-- Sales Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Manager</masterLabel>
+            <translation><!-- Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales VP</masterLabel>
+            <translation><!-- Sales VP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlements</masterLabel>
+            <translation><!-- Settlements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlements Analyst</masterLabel>
+            <translation><!-- Settlements Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stop Table Tech</masterLabel>
+            <translation><!-- Stop Table Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOS ID Card</masterLabel>
+            <translation><!-- TOS ID Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Director</masterLabel>
+            <translation><!-- UW Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Manager/Supervisor</masterLabel>
+            <translation><!-- UW Manager/Supervisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW VP</masterLabel>
+            <translation><!-- UW VP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriter</masterLabel>
+            <translation><!-- Underwriter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision Analyst</masterLabel>
+            <translation><!-- Vision Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Content Team</masterLabel>
+            <translation><!-- Web Content Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wellness</masterLabel>
+            <translation><!-- Wellness --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Assistant User --></label>
+        <name>Sales_Assistant_User__c</name>
+        <relationshipLabel><!-- Accounts (Sales Assistant User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Self-Bill Group --></label>
+        <name>Self_Bill_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Settlements Analyst User --></label>
+        <name>Settlements_Analyst_User__c</name>
+        <relationshipLabel><!-- Accounts (Settlements Analyst User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shipping County --></label>
+        <name>Shipping_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migrated</masterLabel>
+            <translation><!-- Migrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Termed</masterLabel>
+            <translation><!-- Termed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subgroup --></label>
+        <name>Subgroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- TDN --></label>
+        <name>TDN__c</name>
+        <picklistValues>
+            <masterLabel>No TDN</masterLabel>
+            <translation><!-- No TDN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDN Dental/HMO</masterLabel>
+            <translation><!-- TDN Dental/HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDN Disc</masterLabel>
+            <translation><!-- TDN Disc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TPA (Labor) --></label>
+        <name>TPA_Labor__c</name>
+        <picklistValues>
+            <masterLabel>American Benefit Corporation</masterLabel>
+            <translation><!-- American Benefit Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associated Administrators</masterLabel>
+            <translation><!-- Associated Administrators --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDA Administrators</masterLabel>
+            <translation><!-- CDA Administrators --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carday Associates</masterLabel>
+            <translation><!-- Carday Associates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEMGROUP</masterLabel>
+            <translation><!-- GEMGROUP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEBA</masterLabel>
+            <translation><!-- MEBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southern Benefit Administrators</masterLabel>
+            <translation><!-- Southern Benefit Administrators --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia Laborers</masterLabel>
+            <translation><!-- West Virginia Laborers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zenith Administrators</masterLabel>
+            <translation><!-- Zenith Administrators --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account URL --></label>
+        <name>Test_Account_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier Level --></label>
+        <name>Tier_Level__c</name>
+        <picklistValues>
+            <masterLabel>Elite</masterLabel>
+            <translation><!-- Elite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred</masterLabel>
+            <translation><!-- Preferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premier</masterLabel>
+            <translation><!-- Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SELECT</masterLabel>
+            <translation><!-- SELECT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Top Account Status --></label>
+        <name>Top_Account_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Account --></label>
+        <name>Top_Account__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tuesday-Morn --></label>
+        <name>Tuesday_Morn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwriter User --></label>
+        <name>Underwriter_User__c</name>
+        <relationshipLabel><!-- Accounts (Underwriter User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Track if customer has urgent cases??? --></help>
+        <label><!-- Urgent Cases --></label>
+        <name>Urgent_Cases__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Type --></label>
+        <name>Vendor_Type__c</name>
+        <picklistValues>
+            <masterLabel>CDH Funding</masterLabel>
+            <translation><!-- CDH Funding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment</masterLabel>
+            <translation><!-- Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID Card</masterLabel>
+            <translation><!-- ID Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vision Analyst User --></label>
+        <name>Vision_Analyst_User__c</name>
+        <relationshipLabel><!-- Accounts (Vision Analyst User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wellness Tech User --></label>
+        <name>Wellness_Tech_User__c</name>
+        <relationshipLabel><!-- Accounts (Wellness Tech User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 200+ Account --></label>
+        <name>X200_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- 200+ NASCO Account --></label>
+        <name>X200_NASCO_Account__c</name>
+    </fields>
+    <fieldSets>
+        <label><!-- Include on Adjustment Summary --></label>
+        <name>Include_on_Adjustment_Summary</name>
+    </fieldSets>
+    <layouts>
+        <layout>2-50 Account Layout</layout>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Entity Type --></label>
+            <section>Entity Type</section>
+        </sections>
+        <sections>
+            <label><!-- Grouping --></label>
+            <section>Grouping</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>200+ Account Layout</layout>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- D&amp;B Information --></label>
+            <section>D&amp;B Information</section>
+        </sections>
+        <sections>
+            <label><!-- Entity Type --></label>
+            <section>Entity Type</section>
+        </sections>
+        <sections>
+            <label><!-- Latest Enrollment Totals --></label>
+            <section>Latest Enrollment Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Main Address Information --></label>
+            <section>Main Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Performance Guarantee --></label>
+            <section>Performance Guarantee</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>51+ Account Layout</layout>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- D&amp;B Information --></label>
+            <section>D&amp;B Information</section>
+        </sections>
+        <sections>
+            <label><!-- Entity Type --></label>
+            <section>Entity Type</section>
+        </sections>
+        <sections>
+            <label><!-- Latest Enrollment Totals --></label>
+            <section>Latest Enrollment Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Main Address Information --></label>
+            <section>Main Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- D&amp;B Information --></label>
+            <section>D&amp;B Information</section>
+        </sections>
+        <sections>
+            <label><!-- Latest Enrollment Totals --></label>
+            <section>Latest Enrollment Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Main Address Information --></label>
+            <section>Main Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SBU 2-50 Account Layout</layout>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Entity Type --></label>
+            <section>Entity Type</section>
+        </sections>
+        <sections>
+            <label><!-- Grouping --></label>
+            <section>Grouping</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SBU 51+ Account Layout</layout>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- D&amp;B Information --></label>
+            <section>D&amp;B Information</section>
+        </sections>
+        <sections>
+            <label><!-- Entity Type --></label>
+            <section>Entity Type</section>
+        </sections>
+        <sections>
+            <label><!-- Latest Enrollment Totals --></label>
+            <section>Latest Enrollment Totals</section>
+        </sections>
+        <sections>
+            <label><!-- Main Address Information --></label>
+            <section>Main Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update Account --></label>
+        <name>AIA_Account_View</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Account --></label>
+        <name>Update_Account</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- 2-50 --></label>
+        <name>X2_50</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 51+ --></label>
+        <name>X51</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- 001: Enter a County Code only when the Billing State is &quot;MD&apos; --></errorMessage>
+        <name>Alex_E001_Billing_State_Must_Be_MD</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 001: Enter a County Code only when the Billing State is &quot;MD&apos; --></errorMessage>
+        <name>E001_Billing_State_Must_Be_MD</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 002: Enter a valid two-character abbreviation for Billing State. --></errorMessage>
+        <name>E002_Billing_State_US_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 003: Canada Billing Country requires a valid two-character abbreviation for Billing State --></errorMessage>
+        <name>E003_Billing_State_CAN_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 004: Enter a valid two-character abbreviation for Shipping State --></errorMessage>
+        <name>E004_Shipping_State_US_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 005: Canada Shipping Country requires a valid two-character abbreviation for Shipping State --></errorMessage>
+        <name>E005_Shipping_State_CAN_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 006: Enter a two character abbreviation or full name for Billing Country --></errorMessage>
+        <name>E006_Billing_Country_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 007: Enter a  two character abbreviation or full name for  Shipping Country --></errorMessage>
+        <name>E007_Shipping_Country_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 008: Enter an Account name with less than 100 characters --></errorMessage>
+        <name>E008_AccountName_Less_100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 009: Enter a 5 digit Zip/Postal code or enter a 9 digit Zip/postal code (i.e.: 12345 and 12345-1234) --></errorMessage>
+        <name>E009_Billing_PostalCode_US_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 010: If a Canadian Postal Code is entered it must be in the proper Canadian format --></errorMessage>
+        <name>E010_Billing_PostalCode_CAN_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 011: Enter a 5 digit Zip/Postal code or enter a 9 digit Zip/postal code (i.e.: 12345 and 12345-1234) --></errorMessage>
+        <name>E011_Shipping_PostalCode_US_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 012: If Canada Shipping Postal Code is entered it must be in the proper Canadian format --></errorMessage>
+        <name>E012_Shipping_PostalCode_CAN_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 013: Billing County Code must be selected when Billing State/Province is &quot;MD&quot; --></errorMessage>
+        <name>E013_Billing_County_Code_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ACC014: If Consultant is checked then Type must be &apos;Partner&apos; --></errorMessage>
+        <name>EACC014</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ACC015 : You are not authorized to create or Edit 2-50 type account. Please contact your System Administrator. --></errorMessage>
+        <name>EACC015</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ACC016 : The field(s) that you are trying to edit on this record are not editable. --></errorMessage>
+        <name>EACC016</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ACC021 : The Customer account field(s) that you are trying to edit on this record are not editable. --></errorMessage>
+        <name>EACC021</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ACCO17:  You are not authorized to edit the 51+  Account.Please contact your System Administrator. --></errorMessage>
+        <name>EACCO17</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ACCO18:  You are not authorized to change 2-50 record. Please contact your System Administrator. --></errorMessage>
+        <name>EACCO18</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EACCO 19: You are not authorized to edit this Account. Please contact your System Administrator. --></errorMessage>
+        <name>EACCO19</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EACCO 24: You are not authorized to edit this Account. Please contact your System Administrator. --></errorMessage>
+        <name>EACCO24</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EACCO 25: You are not authorized to edit this Account. Please contact your System Administrator. --></errorMessage>
+        <name>EACCO25</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 008: Enter an Account name with less than 51 characters --></errorMessage>
+        <name>zzzE008_AccountName_Less_51</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ACC20: If record type is 2-50 , then Type must be equal to &apos;Partner&apos; --></errorMessage>
+        <name>zzzEACC020</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EACCO22: An Account of type Partner  must have an Entity Id but cannot have a Facets Account Number. --></errorMessage>
+        <name>zzzEACCO22</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EACCO23: An Account of type Customer Must have a Facets Account Number but cannot have an Entity ID --></errorMessage>
+        <name>zzzEACCO23</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- BlueGLE --></label>
+        <name>BlueGLE</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CountyNameLookup --></label>
+        <name>CountyNameLookup</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Grandfathered_Rules --></label>
+        <name>Grandfathered_Rules</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Hoover_s_Account_Tools --></label>
+        <name>Hoover_s_Account_Tools</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Team_Members --></label>
+        <name>Manage_Team_Members</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Team_Members_DetailPage --></label>
+        <name>Manage_Team_Members_DetailPage</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NASCO_Account_Documents --></label>
+        <name>NASCO_Account_Documents</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Proposed_Products --></label>
+        <name>Proposed_Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SICCodeLookup --></label>
+        <name>SICCodeLookup</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- financialprofile --></label>
+        <name>financialprofile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- map --></label>
+        <name>map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- news --></label>
+        <name>news</name>
+    </webLinks>
+</CustomObjectTranslation>

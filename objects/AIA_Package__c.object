@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Coverage_Levels__c</fullName>
+        <externalId>false</externalId>
+        <label>Coverage Levels</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Limited</fullName>
+                    <default>false</default>
+                    <label>Limited</label>
+                </value>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – 2 PARTY (DP2)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DOMESTIC PARTNER – 2 PARTY (DP2)</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F)</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – FAMILY (DPF)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DOMESTIC PARTNER – FAMILY (DPF)</label>
+                </value>
+                <value>
+                    <fullName>FAMILY (FAM)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>FAMILY (FAM)</label>
+                </value>
+                <value>
+                    <fullName>INDIVIDUAL (IND)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>INDIVIDUAL (IND)</label>
+                </value>
+                <value>
+                    <fullName>PARENT/CHILD (P/C)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PARENT/CHILD (P/C)</label>
+                </value>
+                <value>
+                    <fullName>PARENT/CHILDREN (PCN)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PARENT/CHILDREN (PCN)</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED – 2 PARTY (SG2)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SAME GENDER MARRIED – 2 PARTY (SG2)</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F)</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED – FAMILY (SGF)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SAME GENDER MARRIED – FAMILY (SGF)</label>
+                </value>
+                <value>
+                    <fullName>SUBSCRIBER/SPOUSE (S/S)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SUBSCRIBER/SPOUSE (S/S)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Drug_Value_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Drug__c = true, 'Yes', 'No')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Drug Value Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drug__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Drug</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Effective_new_Date__c</fullName>
+        <description>Effective date on package  = Effective date on BRF (if request type = new/prospect)
+Effective date on package  =*manual* (if request type = other than new/prospect)</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Employee_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Status</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Cobra</fullName>
+                    <default>false</default>
+                    <label>Cobra</label>
+                </value>
+                <value>
+                    <fullName>Retiree</fullName>
+                    <default>false</default>
+                    <label>Retiree</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Group_Structure_Request_Form_Product__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.Group_Structure_Request_Form__c</field>
+                <operation>equals</operation>
+                <valueField>AIA_Group_Structure_Form_Product__c.Group_Structure_Request_Form__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>AIA_Group_Structure_Form_Product__c</referenceTo>
+        <relationshipLabel>Packages</relationshipLabel>
+        <relationshipName>Packages</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Group_Structure_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Group Structure Request Form</label>
+        <referenceTo>AIA_Group_Structure_Request_Form__c</referenceTo>
+        <relationshipLabel>Packages</relationshipLabel>
+        <relationshipName>Packages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Limited_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Limited Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>Coverage_Levels__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>INDIVIDUAL (IND)</fullName>
+                    <default>false</default>
+                    <label>INDIVIDUAL (IND)</label>
+                </value>
+                <value>
+                    <fullName>SUBSCRIBER/SPOUSE (S/S)</fullName>
+                    <default>false</default>
+                    <label>SUBSCRIBER/SPOUSE (S/S)</label>
+                </value>
+                <value>
+                    <fullName>PARENT/CHILD (P/C)</fullName>
+                    <default>false</default>
+                    <label>PARENT/CHILD (P/C)</label>
+                </value>
+                <value>
+                    <fullName>FAMILY (FAM)</fullName>
+                    <default>false</default>
+                    <label>FAMILY (FAM)</label>
+                </value>
+                <value>
+                    <fullName>PARENT/CHILDREN (PCN)</fullName>
+                    <default>false</default>
+                    <label>PARENT/CHILDREN (PCN)</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED – 2 PARTY (SG2)</fullName>
+                    <default>false</default>
+                    <label>SAME GENDER MARRIED – 2 PARTY (SG2)</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F)</fullName>
+                    <default>false</default>
+                    <label>SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F)</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED – FAMILY (SGF)</fullName>
+                    <default>false</default>
+                    <label>SAME GENDER MARRIED – FAMILY (SGF)</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – 2 PARTY (DP2)</fullName>
+                    <default>false</default>
+                    <label>DOMESTIC PARTNER – 2 PARTY (DP2)</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F)</fullName>
+                    <default>false</default>
+                    <label>DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F)</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – FAMILY (DPF)</fullName>
+                    <default>false</default>
+                    <label>DOMESTIC PARTNER – FAMILY (DPF)</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>INDIVIDUAL (IND)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SUBSCRIBER/SPOUSE (S/S)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>PARENT/CHILD (P/C)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>FAMILY (FAM)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>PARENT/CHILDREN (PCN)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SAME GENDER MARRIED – 2 PARTY (SG2)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SAME GENDER MARRIED – FAMILY (SGF)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>DOMESTIC PARTNER – 2 PARTY (DP2)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>DOMESTIC PARTNER – FAMILY (DPF)</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Medical_Benefit__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Medical Benefit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Package_Code_Notes_Other__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Package Code Notes Other</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Package_Code_Notes_Picklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Package Code Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>ACTIVE ESRD MEDICARE PRIMARY</fullName>
+                    <default>false</default>
+                    <label>ACTIVE ESRD MEDICARE PRIMARY</label>
+                </value>
+                <value>
+                    <fullName>COBRA MEDICARE PRIMARY</fullName>
+                    <default>false</default>
+                    <label>COBRA MEDICARE PRIMARY</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Group_Structure_Request_Form_Product__r.Proposed_Products__r.Plan_Product_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Standard_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Coverage_Levels__c, 'Standard') ,
+'- INDIVIDUAL (IND)'+ BR() +
+'- SUBSCRIBER/SPOUSE (S/S)'+ BR() +
+'- PARENT/CHILD (P/C)'+ BR() +
+'- FAMILY (FAM)'+ BR() +
+'- PARENT/CHILDREN (PCN)'+ BR() +
+'- SAME GENDER MARRIED – 2 PARTY (SG2)'+ BR() +
+'- SAME GENDER MARRIED – 2 PARTY AND FAMILY (SG2F)'+ BR() + 
+'- SAME GENDER MARRIED – FAMILY (SGF)'+ BR() +
+'- DOMESTIC PARTNER – 2 PARTY (DP2)'+ BR() +
+'- DOMESTIC PARTNER – 2 PARTY AND FAMILY (DP2F)'+ BR() +
+'- DOMESTIC PARTNER – FAMILY (DPF)'+ BR(),null)</formula>
+        <label>Standard Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TERM_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vision__c</fullName>
+        <externalId>false</externalId>
+        <label>Vision</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SELECT (not Davis)</fullName>
+                    <default>false</default>
+                    <label>SELECT (not Davis)</label>
+                </value>
+                <value>
+                    <fullName>NO</fullName>
+                    <default>false</default>
+                    <label>NO</label>
+                </value>
+                <value>
+                    <fullName>SELECT/BLUE PLUS</fullName>
+                    <default>false</default>
+                    <label>SELECT/BLUE PLUS</label>
+                </value>
+                <value>
+                    <fullName>SELECT/CORE</fullName>
+                    <default>false</default>
+                    <label>SELECT/CORE</label>
+                </value>
+                <value>
+                    <fullName>SELECT/VOLUNTARY</fullName>
+                    <default>false</default>
+                    <label>SELECT/VOLUNTARY</label>
+                </value>
+                <value>
+                    <fullName>BLUEVISION (CORE)</fullName>
+                    <default>false</default>
+                    <label>BLUEVISION (CORE)</label>
+                </value>
+                <value>
+                    <fullName>BLUEVISION PLUS</fullName>
+                    <default>false</default>
+                    <label>BLUEVISION PLUS</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY BLUE VISION PLUS</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY BLUE VISION PLUS</label>
+                </value>
+                <value>
+                    <fullName>BLUEVISION PLUS (MEDIGAP)</fullName>
+                    <default>false</default>
+                    <label>BLUEVISION PLUS (MEDIGAP)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Package</label>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Package Code</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Packages</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <validationRules>
+        <fullName>P001_Package_Code_Notes_Other</fullName>
+        <active>true</active>
+        <description>If  Package Code Notes value is "Other" then Package Code Notes Other is mandatory</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; IF( 
+AND( 
+(TEXT(Package_Code_Notes_Picklist__c ) = "Other"), 
+LEN( Package_Code_Notes_Other__c ) = 0), True, False)</errorConditionFormula>
+        <errorDisplayField>Package_Code_Notes_Other__c</errorDisplayField>
+        <errorMessage>Please enter Package Code Notes Other value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>P002_Vision_other_field</fullName>
+        <active>false</active>
+        <description>Vision Product lookup is blank, then Vision other field is mandatory</description>
+        <errorConditionFormula>DATEVALUE(CreatedDate) =  TODAY() 
+/** Commented this and added a dummy condition above
+Not($Permission.Ignore_Validation_Rules) &amp;&amp; if(AND( Group_Structure_Request_Form_Product__c = null, Vision_Other__c = null),true,false)
+**/</errorConditionFormula>
+        <errorDisplayField>Group_Structure_Request_Form_Product__c</errorDisplayField>
+        <errorMessage>If VIsion Product lookup is blank, then Vision other field is mandatory</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>P003_Termination_Date</fullName>
+        <active>true</active>
+        <description>When Request Type of related GSRF is "Prospect/New", the Termination Date must be blank.</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND( ISPICKVAL(Group_Structure_Request_Form__r.Implementation__r.Benefit_Request_Form__r.Request_Type__c, 'Prospect/New') , NOT( ISBLANK( TERM_Date__c) ) )</errorConditionFormula>
+        <errorDisplayField>TERM_Date__c</errorDisplayField>
+        <errorMessage>Termination date not valid for Request Type Prospect/New</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>P004_LimitedCoverage</fullName>
+        <active>true</active>
+        <description>if coverage is limited,limited coverage is mandatory</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND( ISPICKVAL( Coverage_Levels__c , 'Limited'), ISBLANK( Limited_Coverage__c ) )</errorConditionFormula>
+        <errorDisplayField>Limited_Coverage__c</errorDisplayField>
+        <errorMessage>if Coverage Level is limited, Limited Coverage is mandatory.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>P005_Effective_Date</fullName>
+        <active>true</active>
+        <description>Effective date should not be grater than termination date</description>
+        <errorConditionFormula>(Effective_new_Date__c &gt; TERM_Date__c) ||(ISNULL(Effective_new_Date__c) &amp;&amp; NOT(ISNULL(TERM_Date__c) ))</errorConditionFormula>
+        <errorDisplayField>Effective_new_Date__c</errorDisplayField>
+        <errorMessage>Please provide Effective date or should not be grater than Termination date</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Package</fullName>
+        <availability>online</availability>
+        <description>Created to validate weather parent record is locked</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add Packages</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AIA_GSM_CustomNewlistbutton?type=Package&amp;gsrfid={!AIA_Group_Structure_Request_Form__c.Id}</url>
+    </webLinks>
+</CustomObject>

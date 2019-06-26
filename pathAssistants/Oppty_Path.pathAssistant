@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Opportunity Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Complete MHP Testing for Medical Products&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Fill out ARC Comments&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Submit BRF for Approval&lt;/p&gt;</info>
+        <picklistValueName>ARC Approval</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AIA_Account_Legal_Name__c</fieldNames>
+        <fieldNames>Account_Jurisdiction__c</fieldNames>
+        <fieldNames>Account_Control_Plan__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Verify the Account’s Legal Name&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 13px; font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Complete Zip Code Verification if the Account is Virginia&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Request and Upload Cede Document if Required&lt;/p&gt;</info>
+        <picklistValueName>Benefit Request</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Business_Type__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Submit termination paperwork if existing business&lt;/p&gt;</info>
+        <picklistValueName>Dead</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;    &lt;/span&gt;Deliver Quote to Account for Review&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol; font-size: 13px;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Upload Signed Quote to AIA Documents&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;    &lt;/span&gt;Update the BRF Status&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Complete the Incumbent/Successor Fields, and the Won/Loss Reason&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;    &lt;/span&gt;Update the Opportunity Status&lt;/p&gt;</info>
+        <picklistValueName>Quote Delivered</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;   &lt;/span&gt;Upload RFP documentation to the AIA Documents Section&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol; font-size: 13px;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;   &lt;/span&gt;Schedule and Complete Bid Meeting&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 13px; font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;S&lt;/span&gt;end Sales Data Analyst Request Form to the Network Access team&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol; font-size: 13px;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;   &lt;/span&gt;Schedule and Complete RFP Kick-Off Meeting&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol; font-size: 13px;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;   &lt;/span&gt;Assign Additional RFP Tasks as needed&lt;/p&gt;</info>
+        <picklistValueName>RFP</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Upload Group Contract Application&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Confirm/Verify Special Requirements for Provider Services&lt;/p&gt;</info>
+        <picklistValueName>Sold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Review ARC Approved BRF&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Symbol;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot;font-size: 7pt;&quot;&gt;     &lt;/span&gt;Upload Quote/Rate Sheet to the AIA Documents section&lt;/p&gt;</info>
+        <picklistValueName>Underwriting</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>AIA_200</recordTypeName>
+</PathAssistant>

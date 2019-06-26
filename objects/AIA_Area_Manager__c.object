@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AIA_UserId__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>To avoid duplicate entries for same user</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>UserId</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_isActive__c</fullName>
+        <externalId>false</externalId>
+        <formula>Area_Manager__r.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>isActive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Area_Belong_to__c</fullName>
+        <externalId>false</externalId>
+        <label>Area(s) Belong to</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Dedicated Representative</fullName>
+                    <default>false</default>
+                    <label>Account Dedicated Representative</label>
+                </value>
+                <value>
+                    <fullName>Account Executive</fullName>
+                    <default>false</default>
+                    <label>Account Executive</label>
+                </value>
+                <value>
+                    <fullName>Account Manager</fullName>
+                    <default>false</default>
+                    <label>Account Manager</label>
+                </value>
+                <value>
+                    <fullName>AIA Admin</fullName>
+                    <default>false</default>
+                    <label>AIA Admin</label>
+                </value>
+                <value>
+                    <fullName>AIA User</fullName>
+                    <default>false</default>
+                    <label>AIA User</label>
+                </value>
+                <value>
+                    <fullName>Auditor</fullName>
+                    <default>false</default>
+                    <label>Auditor</label>
+                </value>
+                <value>
+                    <fullName>Automated Enrollment Tech</fullName>
+                    <default>false</default>
+                    <label>Automated Enrollment Tech</label>
+                </value>
+                <value>
+                    <fullName>BCM Coordinator</fullName>
+                    <default>false</default>
+                    <label>BCM Coordinator</label>
+                </value>
+                <value>
+                    <fullName>BeneFact Coder</fullName>
+                    <default>false</default>
+                    <label>BeneFact Coder</label>
+                </value>
+                <value>
+                    <fullName>BeneFact Portal Tech</fullName>
+                    <default>false</default>
+                    <label>BeneFact Portal Tech</label>
+                </value>
+                <value>
+                    <fullName>Benefit Admin Manager</fullName>
+                    <default>false</default>
+                    <label>Benefit Admin Manager</label>
+                </value>
+                <value>
+                    <fullName>Benefit Coder</fullName>
+                    <default>false</default>
+                    <label>Benefit Coder</label>
+                </value>
+                <value>
+                    <fullName>Benefit Contract Manager</fullName>
+                    <default>false</default>
+                    <label>Benefit Contract Manager</label>
+                </value>
+                <value>
+                    <fullName>Benefit Contract Specialist</fullName>
+                    <default>false</default>
+                    <label>Benefit Contract Specialist</label>
+                </value>
+                <value>
+                    <fullName>Benefit Design Approvers</fullName>
+                    <default>false</default>
+                    <label>Benefit Design Approvers</label>
+                </value>
+                <value>
+                    <fullName>Benefit Tester</fullName>
+                    <default>false</default>
+                    <label>Benefit Tester</label>
+                </value>
+                <value>
+                    <fullName>Billing Tech</fullName>
+                    <default>false</default>
+                    <label>Billing Tech</label>
+                </value>
+                <value>
+                    <fullName>BlueFund</fullName>
+                    <default>false</default>
+                    <label>BlueFund</label>
+                </value>
+                <value>
+                    <fullName>Blue Rewards Tech</fullName>
+                    <default>false</default>
+                    <label>Blue Rewards Tech</label>
+                </value>
+                <value>
+                    <fullName>Cede Document Tech</fullName>
+                    <default>false</default>
+                    <label>Cede Document Tech</label>
+                </value>
+                <value>
+                    <fullName>Claims</fullName>
+                    <default>false</default>
+                    <label>Claims</label>
+                </value>
+                <value>
+                    <fullName>Client Advisory Services</fullName>
+                    <default>false</default>
+                    <label>Client Advisory Services</label>
+                </value>
+                <value>
+                    <fullName>Contract Coordinator</fullName>
+                    <default>false</default>
+                    <label>Contract Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Contract Manager</fullName>
+                    <default>false</default>
+                    <label>Contract Manager</label>
+                </value>
+                <value>
+                    <fullName>Contract Tech</fullName>
+                    <default>false</default>
+                    <label>Contract Tech</label>
+                </value>
+                <value>
+                    <fullName>Enrollment Tech</fullName>
+                    <default>false</default>
+                    <label>Enrollment Tech</label>
+                </value>
+                <value>
+                    <fullName>Facets Migration Contact</fullName>
+                    <default>false</default>
+                    <label>Facets Migration Contact</label>
+                </value>
+                <value>
+                    <fullName>Implementation Coordinator</fullName>
+                    <default>false</default>
+                    <label>Implementation Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Implementation Manager</fullName>
+                    <default>false</default>
+                    <label>Implementation Manager</label>
+                </value>
+                <value>
+                    <fullName>Legal</fullName>
+                    <default>false</default>
+                    <label>Legal</label>
+                </value>
+                <value>
+                    <fullName>Magellan Tech</fullName>
+                    <default>false</default>
+                    <label>Magellan Tech</label>
+                </value>
+                <value>
+                    <fullName>MAIN Tech</fullName>
+                    <default>false</default>
+                    <label>MAIN Tech</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>MAST Tech</fullName>
+                    <default>false</default>
+                    <label>MAST Tech</label>
+                </value>
+                <value>
+                    <fullName>Medical Management Tech</fullName>
+                    <default>false</default>
+                    <label>Medical Management Tech</label>
+                </value>
+                <value>
+                    <fullName>Operations Tech Support Tech</fullName>
+                    <default>false</default>
+                    <label>Operations Tech Support Tech</label>
+                </value>
+                <value>
+                    <fullName>OTS Claims</fullName>
+                    <default>false</default>
+                    <label>OTS Claims</label>
+                </value>
+                <value>
+                    <fullName>Performance Guarantee Coordinator</fullName>
+                    <default>false</default>
+                    <label>Performance Guarantee Coordinator</label>
+                </value>
+                <value>
+                    <fullName>PGA Tech</fullName>
+                    <default>false</default>
+                    <label>PGA Tech</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy Management</fullName>
+                    <default>false</default>
+                    <label>Pharmacy Management</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy Operations</fullName>
+                    <default>false</default>
+                    <label>Pharmacy Operations</label>
+                </value>
+                <value>
+                    <fullName>Production ID Card Tech</fullName>
+                    <default>false</default>
+                    <label>Production ID Card Tech</label>
+                </value>
+                <value>
+                    <fullName>Proposal Specialist</fullName>
+                    <default>false</default>
+                    <label>Proposal Specialist</label>
+                </value>
+                <value>
+                    <fullName>QA Auditor</fullName>
+                    <default>false</default>
+                    <label>QA Auditor</label>
+                </value>
+                <value>
+                    <fullName>Sales Assistant</fullName>
+                    <default>false</default>
+                    <label>Sales Assistant</label>
+                </value>
+                <value>
+                    <fullName>Settlements Analyst</fullName>
+                    <default>false</default>
+                    <label>Settlements Analyst</label>
+                </value>
+                <value>
+                    <fullName>Stop Table Tech</fullName>
+                    <default>false</default>
+                    <label>Stop Table Tech</label>
+                </value>
+                <value>
+                    <fullName>Underwriter</fullName>
+                    <default>false</default>
+                    <label>Underwriter</label>
+                </value>
+                <value>
+                    <fullName>Vision Analyst</fullName>
+                    <default>false</default>
+                    <label>Vision Analyst</label>
+                </value>
+                <value>
+                    <fullName>Wellness Tech</fullName>
+                    <default>false</default>
+                    <label>Wellness Tech</label>
+                </value>
+                <value>
+                    <fullName>Workforce Management</fullName>
+                    <default>false</default>
+                    <label>Workforce Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Area_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>AIA_Account_Manager</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Areas__c</fullName>
+        <externalId>false</externalId>
+        <label>Area(s) Managed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Dedicated Representative</fullName>
+                    <default>false</default>
+                    <label>Account Dedicated Representative</label>
+                </value>
+                <value>
+                    <fullName>Account Executive</fullName>
+                    <default>false</default>
+                    <label>Account Executive</label>
+                </value>
+                <value>
+                    <fullName>Account Manager</fullName>
+                    <default>false</default>
+                    <label>Account Manager</label>
+                </value>
+                <value>
+                    <fullName>AIA Admin</fullName>
+                    <default>false</default>
+                    <label>AIA Admin</label>
+                </value>
+                <value>
+                    <fullName>AIA User</fullName>
+                    <default>false</default>
+                    <label>AIA User</label>
+                </value>
+                <value>
+                    <fullName>Auditor</fullName>
+                    <default>false</default>
+                    <label>Auditor</label>
+                </value>
+                <value>
+                    <fullName>Automated Enrollment Tech</fullName>
+                    <default>false</default>
+                    <label>Automated Enrollment Tech</label>
+                </value>
+                <value>
+                    <fullName>BCM Coordinator</fullName>
+                    <default>false</default>
+                    <label>BCM Coordinator</label>
+                </value>
+                <value>
+                    <fullName>BeneFact Coder</fullName>
+                    <default>false</default>
+                    <label>BeneFact Coder</label>
+                </value>
+                <value>
+                    <fullName>BeneFact Portal Tech</fullName>
+                    <default>false</default>
+                    <label>BeneFact Portal Tech</label>
+                </value>
+                <value>
+                    <fullName>Benefit Admin Manager</fullName>
+                    <default>false</default>
+                    <label>Benefit Admin Manager</label>
+                </value>
+                <value>
+                    <fullName>Benefit Coder</fullName>
+                    <default>false</default>
+                    <label>Benefit Coder</label>
+                </value>
+                <value>
+                    <fullName>Benefit Contract Specialist</fullName>
+                    <default>false</default>
+                    <label>Benefit Contract Specialist</label>
+                </value>
+                <value>
+                    <fullName>Benefit Design Approvers</fullName>
+                    <default>false</default>
+                    <label>Benefit Design Approvers</label>
+                </value>
+                <value>
+                    <fullName>Benefit Tester</fullName>
+                    <default>false</default>
+                    <label>Benefit Tester</label>
+                </value>
+                <value>
+                    <fullName>Billing Tech</fullName>
+                    <default>false</default>
+                    <label>Billing Tech</label>
+                </value>
+                <value>
+                    <fullName>BlueFund</fullName>
+                    <default>false</default>
+                    <label>BlueFund</label>
+                </value>
+                <value>
+                    <fullName>Blue Rewards Tech</fullName>
+                    <default>false</default>
+                    <label>Blue Rewards Tech</label>
+                </value>
+                <value>
+                    <fullName>Cede Document Tech</fullName>
+                    <default>false</default>
+                    <label>Cede Document Tech</label>
+                </value>
+                <value>
+                    <fullName>Claims</fullName>
+                    <default>false</default>
+                    <label>Claims</label>
+                </value>
+                <value>
+                    <fullName>Client Advisory Services</fullName>
+                    <default>false</default>
+                    <label>Client Advisory Services</label>
+                </value>
+                <value>
+                    <fullName>Contract Coordinator</fullName>
+                    <default>false</default>
+                    <label>Contract Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Contract Manager</fullName>
+                    <default>false</default>
+                    <label>Contract Manager</label>
+                </value>
+                <value>
+                    <fullName>Contract Tech</fullName>
+                    <default>false</default>
+                    <label>Contract Tech</label>
+                </value>
+                <value>
+                    <fullName>Enrollment Tech</fullName>
+                    <default>false</default>
+                    <label>Enrollment Tech</label>
+                </value>
+                <value>
+                    <fullName>Facets Migration Contact</fullName>
+                    <default>false</default>
+                    <label>Facets Migration Contact</label>
+                </value>
+                <value>
+                    <fullName>Implementation Coordinator</fullName>
+                    <default>false</default>
+                    <label>Implementation Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Implementation Manager</fullName>
+                    <default>false</default>
+                    <label>Implementation Manager</label>
+                </value>
+                <value>
+                    <fullName>Legal</fullName>
+                    <default>false</default>
+                    <label>Legal</label>
+                </value>
+                <value>
+                    <fullName>Magellan Tech</fullName>
+                    <default>false</default>
+                    <label>Magellan Tech</label>
+                </value>
+                <value>
+                    <fullName>MAIN Tech</fullName>
+                    <default>false</default>
+                    <label>MAIN Tech</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>MAST Tech</fullName>
+                    <default>false</default>
+                    <label>MAST Tech</label>
+                </value>
+                <value>
+                    <fullName>Medical Management Tech</fullName>
+                    <default>false</default>
+                    <label>Medical Management Tech</label>
+                </value>
+                <value>
+                    <fullName>Operations Tech Support Tech</fullName>
+                    <default>false</default>
+                    <label>Operations Tech Support Tech</label>
+                </value>
+                <value>
+                    <fullName>OTS Claims</fullName>
+                    <default>false</default>
+                    <label>OTS Claims</label>
+                </value>
+                <value>
+                    <fullName>Performance Guarantee Coordinator</fullName>
+                    <default>false</default>
+                    <label>Performance Guarantee Coordinator</label>
+                </value>
+                <value>
+                    <fullName>PGA Tech</fullName>
+                    <default>false</default>
+                    <label>PGA Tech</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy Management</fullName>
+                    <default>false</default>
+                    <label>Pharmacy Management</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy Operations</fullName>
+                    <default>false</default>
+                    <label>Pharmacy Operations</label>
+                </value>
+                <value>
+                    <fullName>Production ID Card Tech</fullName>
+                    <default>false</default>
+                    <label>Production ID Card Tech</label>
+                </value>
+                <value>
+                    <fullName>Proposal Specialist</fullName>
+                    <default>false</default>
+                    <label>Proposal Specialist</label>
+                </value>
+                <value>
+                    <fullName>QA Auditor</fullName>
+                    <default>false</default>
+                    <label>QA Auditor</label>
+                </value>
+                <value>
+                    <fullName>Sales Assistant</fullName>
+                    <default>false</default>
+                    <label>Sales Assistant</label>
+                </value>
+                <value>
+                    <fullName>Settlements Analyst</fullName>
+                    <default>false</default>
+                    <label>Settlements Analyst</label>
+                </value>
+                <value>
+                    <fullName>Stop Table Tech</fullName>
+                    <default>false</default>
+                    <label>Stop Table Tech</label>
+                </value>
+                <value>
+                    <fullName>Underwriter</fullName>
+                    <default>false</default>
+                    <label>Underwriter</label>
+                </value>
+                <value>
+                    <fullName>Vision Analyst</fullName>
+                    <default>false</default>
+                    <label>Vision Analyst</label>
+                </value>
+                <value>
+                    <fullName>Wellness Tech</fullName>
+                    <default>false</default>
+                    <label>Wellness Tech</label>
+                </value>
+                <value>
+                    <fullName>Workforce Management</fullName>
+                    <default>false</default>
+                    <label>Workforce Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Delegated_Manager_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Manager 1</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.Id</field>
+                <operation>notEqual</operation>
+                <valueField>$Source.Area_Manager__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>AIA_Area_Manager</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Delegated_Manager_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Manager 2</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.Id</field>
+                <operation>notEqual</operation>
+                <valueField>$Source.Area_Manager__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>User.Id</field>
+                <operation>notEqual</operation>
+                <valueField>$Source.Delegated_Manager_1__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>AIA_Area_Manager2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Delegated_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Delegated User</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.Id</field>
+                <operation>notEqual</operation>
+                <valueField>$Source.Area_Manager__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>AIA_User_Area_Mapping</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>AIA object to store the areas which an user is associated to &amp; which an user can manage.
+This object will be maintained by AIA Admin users.
+It also has fields to save 2 managers per user and store a delegated user for "manager" type of user. This will be used for maintenance of Account Teams for AIA.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>AIA User – Area Mapping</label>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>User Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>AIA User – Area Mapping</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>Area_Belong_to__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Areas__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Delegated_User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Area_Belong_to__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Areas__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Delegated_User__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Area_Belong_to__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Areas__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Delegated_User__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>UPDATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Area_Belong_to__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Areas__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Delegated_User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Area_Manager__c</columns>
+        <columns>AIA_isActive__c</columns>
+        <columns>Area_Belong_to__c</columns>
+        <columns>Areas__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>AIA_UserId__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Benefit_Testers</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Area_Manager__c</columns>
+        <columns>AIA_isActive__c</columns>
+        <columns>Area_Belong_to__c</columns>
+        <columns>Areas__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>AIA_UserId__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Area_Belong_to__c</field>
+            <operation>includes</operation>
+            <value>BeneFact Tester</value>
+        </filters>
+        <label>Benefit Testers</label>
+    </listViews>
+    <listViews>
+        <fullName>CAS_Team</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Area_Manager__c</columns>
+        <columns>AIA_isActive__c</columns>
+        <columns>Area_Belong_to__c</columns>
+        <columns>Areas__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>AIA_UserId__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Area_Belong_to__c</field>
+            <operation>equals</operation>
+            <value>Client Advisory Services</value>
+        </filters>
+        <label>CAS Team</label>
+    </listViews>
+    <listViews>
+        <fullName>Contract_Tech_Team</fullName>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Area_Manager__c</columns>
+        <columns>AIA_isActive__c</columns>
+        <columns>Area_Belong_to__c</columns>
+        <columns>Areas__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>AIA_UserId__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Area_Belong_to__c</field>
+            <operation>includes</operation>
+            <value>Contract Tech</value>
+        </filters>
+        <filters>
+            <field>Areas__c</field>
+            <operation>includes</operation>
+            <value>Contract Tech</value>
+        </filters>
+        <filters>
+            <field>AIA_isActive__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Contract Tech Team</label>
+    </listViews>
+    <listViews>
+        <fullName>Copy_of_All_managers</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Area_Manager__c</columns>
+        <columns>AIA_isActive__c</columns>
+        <columns>Area_Belong_to__c</columns>
+        <columns>Areas__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>AIA_UserId__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>AIA_Area_Manager__c.Manager</value>
+        </filters>
+        <label>Copy of All - managers</label>
+    </listViews>
+    <listViews>
+        <fullName>Settlements_Analysts</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Area_Manager__c</columns>
+        <columns>AIA_isActive__c</columns>
+        <columns>Area_Belong_to__c</columns>
+        <columns>Areas__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>AIA_UserId__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Area_Belong_to__c</field>
+            <operation>includes</operation>
+            <value>Settlements Analyst</value>
+        </filters>
+        <label>Settlements Analysts</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Manager</fullName>
+        <active>true</active>
+        <label>Manager</label>
+        <picklistValues>
+            <picklist>Area_Belong_to__c</picklist>
+            <values>
+                <fullName>AIA Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AIA User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Dedicated Representative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automated Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCM Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Portal Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Admin Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Contract Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Contract Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Approvers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Tester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Rewards Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BlueFund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cede Document Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Advisory Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facets Migration Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAIN Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAST Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magellan Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Management Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTS Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations Tech Support Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGA Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Guarantee Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production ID Card Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stop Table Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellness Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workforce Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Areas__c</picklist>
+            <values>
+                <fullName>AIA Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AIA User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Dedicated Representative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automated Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCM Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Portal Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Admin Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Contract Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Approvers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Tester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Rewards Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BlueFund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cede Document Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Advisory Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facets Migration Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAIN Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAST Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magellan Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Management Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTS Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations Tech Support Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGA Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Guarantee Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production ID Card Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stop Table Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellness Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workforce Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Non_Manager</fullName>
+        <active>true</active>
+        <label>Non-Manager</label>
+        <picklistValues>
+            <picklist>Area_Belong_to__c</picklist>
+            <values>
+                <fullName>AIA Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AIA User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Dedicated Representative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automated Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCM Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Portal Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Admin Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Contract Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Contract Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Approvers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Tester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Rewards Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BlueFund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cede Document Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Advisory Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facets Migration Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAIN Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAST Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magellan Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Management Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTS Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations Tech Support Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGA Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Guarantee Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production ID Card Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stop Table Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellness Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workforce Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Areas__c</picklist>
+            <values>
+                <fullName>AIA Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AIA User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Dedicated Representative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automated Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCM Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Portal Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Admin Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Contract Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Approvers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Tester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Rewards Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BlueFund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cede Document Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Advisory Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facets Migration Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAIN Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAST Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magellan Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Management Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTS Claims</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations Tech Support Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGA Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Guarantee Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production ID Card Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stop Table Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellness Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workforce Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

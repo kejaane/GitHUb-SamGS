@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Additional Benefit --></label>
+        <name>Additional_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Limitation --></label>
+        <name>Additional_Limitation__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Allowed Amount Customized --></label>
+        <name>Allowed_Amount_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Allowed Amount Default --></label>
+        <name>Allowed_Amount_Default__c</name>
+    </fields>
+    <fields>
+        <help><!-- INN Allowed Amount --></help>
+        <label><!-- INN Plan Pays --></label>
+        <name>Allowed_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Annual Maximum Applies --></label>
+        <name>AnnualMaximumApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BDP Name --></label>
+        <name>BDPName__c</name>
+    </fields>
+    <fields>
+        <label><!-- BDP NewBenefitValue --></label>
+        <name>BDPNewBenefitValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- BDP id --></label>
+        <name>BDPid__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF / BD # --></label>
+        <name>BRF_BD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Custom --></label>
+        <name>Benefit_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Customized --></label>
+        <name>Benefit_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Modified --></label>
+        <name>Benefit_Modified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Name --></label>
+        <name>Benefit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Non-Standard --></label>
+        <name>Benefit_Non_Standard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Record Type --></label>
+        <name>Benefit_Record_Type__c</name>
+        <picklistValues>
+            <masterLabel>BDD</masterLabel>
+            <translation><!-- BDD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF</masterLabel>
+            <translation><!-- BRF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Benefit Limitation/Mandate --></label>
+        <name>Benefit_Summary_Comment_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Limitation/Mandate Comment Codes --></label>
+        <name>Benefit_Summary_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Type --></label>
+        <name>Benefit_Type__c</name>
+        <picklistValues>
+            <masterLabel>Benefit</masterLabel>
+            <translation><!-- Benefit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limitation</masterLabel>
+            <translation><!-- Limitation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mandate</masterLabel>
+            <translation><!-- Mandate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Benefit --></label>
+        <name>Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- CS Benefit Name Drawloop --></label>
+        <name>CS_Benefit_Name_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cloned From Benefit --></label>
+        <name>Cloned_From_Benefit__c</name>
+        <relationshipLabel><!-- Benefit (Cloned From Benefit) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- CoInsurance-AmountValueSelected --></help>
+        <label><!-- INN CoInsurance --></label>
+        <name>CoInsurance_AmountValueSelected__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN CoInsurance Customized --></label>
+        <name>CoInsurance_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance - AmountHigh --></label>
+        <name>Coinsurance_AmountHigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance - AmountIncrement --></label>
+        <name>Coinsurance_AmountIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance - AmountLow --></label>
+        <name>Coinsurance_AmountLow__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance AddtionalIncrements --></label>
+        <name>Coinsurance_Amount_AddtionalIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance-Amount InvalidIncrements --></label>
+        <name>Coinsurance_Amount_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance - DefaultAmount --></label>
+        <name>Coinsurance_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- CommentCode Custom --></label>
+        <name>CommentCode_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- CommentCode NonStandard --></label>
+        <name>CommentCode_NonStandard__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Additional InvalidIncrement --></label>
+        <name>CopayType2_Additional_InvalidIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay - AmountHigh --></label>
+        <name>Copay_AmountHigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay - AmountIncrement --></label>
+        <name>Copay_AmountIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay - AmountLow --></label>
+        <name>Copay_AmountLow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Default Max Payment --></label>
+        <name>Copay_Default_Max_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Default Min Payment --></label>
+        <name>Copay_Default_Min_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Max Payment Customized --></label>
+        <name>Copay_Max_Payment_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Max Payment --></label>
+        <name>Copay_Max_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Min Payment Customized --></label>
+        <name>Copay_Min_Payment_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copay Min Payment --></label>
+        <name>Copay_Min_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 1 AdditionalInvalidIncrements --></label>
+        <name>Copay_Type_1_AdditionalInvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 - Additional Increments --></label>
+        <name>Copay_Type_1_Additional_Increments__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 - AliasName --></label>
+        <name>Copay_Type_1_AliasName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Copay_Type_1_AmountValueSelected --></help>
+        <label><!-- INN Copay 1 --></label>
+        <name>Copay_Type_1_AmountValueSelected__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Amount Customized --></label>
+        <name>Copay_Type_1_Amount_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 - Benefit Comment Codes --></label>
+        <name>Copay_Type_1_Benefit_Comment_Codes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Copay_Type_1_DeductibleApplies --></help>
+        <label><!-- INN Copay Deductible Applies --></label>
+        <name>Copay_Type_1_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Deductible Customized --></label>
+        <name>Copay_Type_1_Deductible_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 DefaultAmount --></label>
+        <name>Copay_Type_1_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 1 Default DeductibleApplies --></label>
+        <name>Copay_Type_1_Default_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Default IsCovered --></label>
+        <name>Copay_Type_1_Default_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 High --></label>
+        <name>Copay_Type_1_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Increment --></label>
+        <name>Copay_Type_1_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Individual Mandate --></label>
+        <name>Copay_Type_1_Individual_Mandate__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 IsCovered Customized --></label>
+        <name>Copay_Type_1_IsCovered_Customized__c</name>
+    </fields>
+    <fields>
+        <help><!-- Copay Type 1 - IsCovered --></help>
+        <label><!-- INN Copay IsCovered --></label>
+        <name>Copay_Type_1_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Is ASO Only --></label>
+        <name>Copay_Type_1_Is_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Jurisdiction` --></label>
+        <name>Copay_Type_1_Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Federal</masterLabel>
+            <translation><!-- Federal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Low --></label>
+        <name>Copay_Type_1_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Mandate Name --></label>
+        <name>Copay_Type_1_Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 1 Max --></label>
+        <name>Copay_Type_1_Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 2 Additional Increments --></label>
+        <name>Copay_Type_2_Additional_Increments__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 2 AliasName --></label>
+        <name>Copay_Type_2_AliasName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Copay Type 2 - AmountValueSelected --></help>
+        <label><!-- INN Copay 2 --></label>
+        <name>Copay_Type_2_AmountValueSelected__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Type 2 Amount Customized --></label>
+        <name>Copay_Type_2_Amount_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Benefit Comment Codes --></label>
+        <name>Copay_Type_2_Benefit_Comment_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Deductible Applies --></label>
+        <name>Copay_Type_2_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 DefaultAmount --></label>
+        <name>Copay_Type_2_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 High --></label>
+        <name>Copay_Type_2_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Increment --></label>
+        <name>Copay_Type_2_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Individual Mandate --></label>
+        <name>Copay_Type_2_Individual_Mandate__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 IsCovered --></label>
+        <name>Copay_Type_2_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Is ASO Only --></label>
+        <name>Copay_Type_2_Is_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Jurisdiction` --></label>
+        <name>Copay_Type_2_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Low --></label>
+        <name>Copay_Type_2_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Mandate Name --></label>
+        <name>Copay_Type_2_Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay 2 Max --></label>
+        <name>Copay_Type_2_Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Cost Share Additional Increments --></label>
+        <name>Cost_Share_AdditionalIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share Controller Drawloop 1 network --></label>
+        <name>Cost_Share_Controller_Drawloop_1_network__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share Controller Drawloop --></label>
+        <name>Cost_Share_Controller_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Cost Share Customized --></label>
+        <name>Cost_Share_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Cost Share Default Amount --></label>
+        <name>Cost_Share_Default_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Cost Share High --></label>
+        <name>Cost_Share_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Cost Share Increment --></label>
+        <name>Cost_Share_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Cost Share Invalid Increments --></label>
+        <name>Cost_Share_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Cost Share Low --></label>
+        <name>Cost_Share_Low__c</name>
+    </fields>
+    <fields>
+        <help><!-- Cost Share - SelectedAmount --></help>
+        <label><!-- INN Cost Share --></label>
+        <name>Cost_Share_SelectedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Share Type --></label>
+        <name>Cost_Share_Type__c</name>
+        <picklistValues>
+            <masterLabel>Dropdown_Yes_No</masterLabel>
+            <translation><!-- Dropdown_Yes_No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Text</masterLabel>
+            <translation><!-- Text --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Count of CommentCode Rec --></label>
+        <name>Count_of_CommentCode_Rec__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Benefit Comments Drawloop --></label>
+        <name>Custom_Benefit_Comments_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Benefit Comments --></label>
+        <name>Custom_Benefit_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Benefit --></label>
+        <name>Custom_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Davis Benefit Variable Default --></label>
+        <name>Davis_Benefit_Variable_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- Davis Benefit Variable --></label>
+        <name>Davis_Benefit_Variable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Davis Variable customized --></label>
+        <name>Davis_Variable_customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- DefaultPlanBenefitValue --></label>
+        <name>DefaultPlanBenefitValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- DentalOONAnnualMaximumApplies Customized --></label>
+        <name>DentalOONAnnualMaximumApplies_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental AnnualMaximumApplies Customized --></label>
+        <name>Dental_AnnualMaximumApplies_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental CoInsurance Customized --></label>
+        <name>Dental_CoInsurance_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental DeductibleApplies Customized --></label>
+        <name>Dental_DeductibleApplies_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental IsCovered Customized --></label>
+        <name>Dental_IsCovered_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental OON CoInsurance Customized --></label>
+        <name>Dental_OON_CoInsurance_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental OON DeductibleApplies Customized --></label>
+        <name>Dental_OON_DeductibleApplies_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dental OON IsCovered Customized --></label>
+        <name>Dental_OON_IsCovered_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount Customized --></label>
+        <name>Discount_Amount_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount Default --></label>
+        <name>Discount_Amount_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount Percent Customized --></label>
+        <name>Discount_Amount_Percent_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount Percent Default --></label>
+        <name>Discount_Amount_Percent_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Discount Amount Percent --></label>
+        <name>Discount_Amount_Percent__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Additional Discount --></label>
+        <name>Discount_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Discount Applies Default --></label>
+        <name>Discount_Applies_Default__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Discount Applies --></label>
+        <name>Discount_Applies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN Discount Applies customized --></label>
+        <name>Discount_Applies_customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dummy Parent Benefit Name --></label>
+        <name>Dummy_Parent_Benefit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Benefit Name --></label>
+        <name>Full_Benefit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouper --></label>
+        <name>Grouper__c</name>
+        <relationshipLabel><!-- Benefit --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- INN AA Drawloop --></label>
+        <name>INN_AA_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Coinsurance Drawloop --></label>
+        <name>INN_Coinsurance_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Copay Drawloop --></label>
+        <name>INN_Copay_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN DA Drawloop --></label>
+        <name>INN_DA_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Deductible Drawloop --></label>
+        <name>INN_Deductible_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Discount Applies Drawloop --></label>
+        <name>INN_Discount_Applies_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Discount Percent Drawloop --></label>
+        <name>INN_Discount_Percent_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN MandateLockDownInd --></label>
+        <name>INN_MandateLockDownInd__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN MappingBRFBenefitID --></label>
+        <name>INN_MappingBRFBenefitID__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN SA Drawloop --></label>
+        <name>INN_SA_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- IN 3Month DedCarryover Customized --></label>
+        <name>IN_3Month_DedCarryover_Customized__c</name>
+    </fields>
+    <fields>
+        <help><!-- Scheduled Amount renamed to Approximate Member Payment-w/Discount and changed to 13 character text field --></help>
+        <label><!-- IN Approx-Member-Payment-w/Disc Default --></label>
+        <name>IN_Approx_Member_Payment_w_Disc_Default__c</name>
+    </fields>
+    <fields>
+        <help><!-- Scheduled Amount renamed to Approximate Member Payment-w/Discount and changed to 13 character text field --></help>
+        <label><!-- IN Approximate Member Payment-w/Discount --></label>
+        <name>IN_Approximate_Member_Payment_w_Discount__c</name>
+    </fields>
+    <fields>
+        <help><!-- INN CostShare 3Month DedCarryover Default --></help>
+        <label><!-- IN CostShare 3Month DedCarryover Default --></label>
+        <name>IN_CostShare_3Month_DedCarryover_Default__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- INN CostShare 3Month DedCarryover Default --></help>
+        <label><!-- IN CostShare 3Month DeductibleCarryover --></label>
+        <name>IN_CostShare_3Month_DeductibleCarryover__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IS_ASO_Only --></label>
+        <name>IS_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- InNetwork ExtID Copay1 --></label>
+        <name>InNetwork_ExtID_Copay1__c</name>
+    </fields>
+    <fields>
+        <label><!-- InNetwork ExtID Copay2 --></label>
+        <name>InNetwork_ExtID_Copay2__c</name>
+    </fields>
+    <fields>
+        <label><!-- InNetwork Id --></label>
+        <name>InNetwork_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsAppGlobalCoinsurance --></label>
+        <name>IsAppGlobalCoinsurance__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsAppGlobalCopay --></label>
+        <name>IsAppGlobalCopay__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsEvenRow --></label>
+        <name>IsEvenRow__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsRelatedCostShareCheck --></label>
+        <name>IsRelatedCostShareCheck__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limitation/MandateCommentCode --></label>
+        <name>Limitation_MandateCommentCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limitation/MandateMaxRowValue --></label>
+        <name>Limitation_MandateMaxRowValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Yes/No --></label>
+        <name>Mandate_Yes_No__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- INN MaxPayment High --></label>
+        <name>MaxPayment_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN MaxPayment Increment --></label>
+        <name>MaxPayment_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN MaxPayment Low --></label>
+        <name>MaxPayment_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN MinPayment High --></label>
+        <name>MinPayment_Hiigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN MinPayment Increment --></label>
+        <name>MinPayment_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN MinPayment Low --></label>
+        <name>MinPayment_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsLimitationModified --></label>
+        <name>Modified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+    </fields>
+    <fields>
+        <label><!-- NewBenefitValue --></label>
+        <name>NewBenefitValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- ONN MandateLockDownInd --></label>
+        <name>ONN_MandateLockDownInd__c</name>
+    </fields>
+    <fields>
+        <label><!-- ONN MappingBRFBenefitID --></label>
+        <name>ONN_MappingBRFBenefitID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Scheduled Amount renamed to Approximate Member Payment-w/Discount and changed to 13 character text field --></help>
+        <label><!-- ON Approx-Member-Payment-w/Disc Default --></label>
+        <name>ON_Approx_Member_Payment_w_Disc_Default__c</name>
+    </fields>
+    <fields>
+        <help><!-- Scheduled Amount renamed to Approximate Member Payment-w/Discount and changed to 13 character text field --></help>
+        <label><!-- ON Approximate Member Payment-w/Discount --></label>
+        <name>ON_Approximate_Member_Payment_w_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- ON CostShare 3Month DeductibleCarryover --></label>
+        <name>ON_CostShare_3Month_DeductibleCarryover__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Default PlanBenefit NetValue --></label>
+        <name>OONDefaultPlanBenefitNetValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON 3Month DedCarryover Customized --></label>
+        <name>OON_3Month_DedCarryover_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON AA Drawloop --></label>
+        <name>OON_AA_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Allowed Amount Customized --></label>
+        <name>OON_Allowed_Amount_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Allowed Amount Default --></label>
+        <name>OON_Allowed_Amount_Default__c</name>
+    </fields>
+    <fields>
+        <help><!-- OON Allowed Amount --></help>
+        <label><!-- OON Plan Pays --></label>
+        <name>OON_Allowed_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Annual Maximum Applies --></label>
+        <name>OON_AnnualMaximumApplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- OON - CoInsurance - AmountValueSelected --></help>
+        <label><!-- OON CoInsurance --></label>
+        <name>OON_CoInsurance_AmountValueSelected__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance AddtionalIncrements --></label>
+        <name>OON_Coinsurance_AddtionalIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance AmountHigh --></label>
+        <name>OON_Coinsurance_AmountHigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance Amount Increment --></label>
+        <name>OON_Coinsurance_AmountIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance AmountLow --></label>
+        <name>OON_Coinsurance_AmountLow__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance Customized --></label>
+        <name>OON_Coinsurance_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance Default Amount --></label>
+        <name>OON_Coinsurance_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance Drawloop --></label>
+        <name>OON_Coinsurance_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Coinsurance Invalid Increments --></label>
+        <name>OON_Coinsurance_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay2 Additional InvalidIncrements --></label>
+        <name>OON_Copay2Additional_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay2 High --></label>
+        <name>OON_Copay2_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay2 Increment --></label>
+        <name>OON_Copay2_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay2 Low --></label>
+        <name>OON_Copay2_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 Default Deductible Applies --></label>
+        <name>OON_Copay_1_Default_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Copay1 Additional Increments --></label>
+        <name>OON_Copay_Additional_Increments__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay1 Additional Invalid Increments --></label>
+        <name>OON_Copay_Additional_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay1 AmountHigh --></label>
+        <name>OON_Copay_AmountHigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay1 Amount Increment --></label>
+        <name>OON_Copay_AmountIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay1 AmountLow --></label>
+        <name>OON_Copay_AmountLow__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Default Max Payment --></label>
+        <name>OON_Copay_Default_Max_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Default Min Payment --></label>
+        <name>OON_Copay_Default_Min_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Drawloop --></label>
+        <name>OON_Copay_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Max Payment Customized --></label>
+        <name>OON_Copay_Max_Payment_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Max Payment --></label>
+        <name>OON_Copay_Max_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Min Payment Customized --></label>
+        <name>OON_Copay_Min_Payment_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Min Payment --></label>
+        <name>OON_Copay_Min_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 AliasName --></label>
+        <name>OON_Copay_Type_1_AliasName__c</name>
+    </fields>
+    <fields>
+        <help><!-- OON Copay1 AmountValueSelected --></help>
+        <label><!-- OON Copay 1 --></label>
+        <name>OON_Copay_Type_1_AmountValueSelected__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Type 1 Amount Customized --></label>
+        <name>OON_Copay_Type_1_Amount_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 Benefit Comment Code --></label>
+        <name>OON_Copay_Type_1_Benefit_Comment_Cod__c</name>
+    </fields>
+    <fields>
+        <help><!-- OON - Copay Type 1 - DeductibleApplies --></help>
+        <label><!-- OON Copay Deductible Applies --></label>
+        <name>OON_Copay_Type_1_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Copay Type 1 - Deductible Customized --></label>
+        <name>OON_Copay_Type_1_Deductible_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 DefaultAmount --></label>
+        <name>OON_Copay_Type_1_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 Default IsCovered --></label>
+        <name>OON_Copay_Type_1_Default_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 Individual Mandate --></label>
+        <name>OON_Copay_Type_1_Individual_Mandate__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 IsCovered Customized --></label>
+        <name>OON_Copay_Type_1_IsCovered_Customized__c</name>
+    </fields>
+    <fields>
+        <help><!-- OON - Copay Type 1 - IsCovered --></help>
+        <label><!-- OON Copay IsCovered --></label>
+        <name>OON_Copay_Type_1_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 Is ASO Only --></label>
+        <name>OON_Copay_Type_1_Is_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 Jurisdiction --></label>
+        <name>OON_Copay_Type_1_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 1 Mandate Name --></label>
+        <name>OON_Copay_Type_1_Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Additional Increments --></label>
+        <name>OON_Copay_Type_2_Additional_Increments__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Alias Name --></label>
+        <name>OON_Copay_Type_2_AliasName__c</name>
+    </fields>
+    <fields>
+        <help><!-- OON Copay Type 2 AmountValueSelected --></help>
+        <label><!-- OON Copay 2 --></label>
+        <name>OON_Copay_Type_2_AmountValueSelected__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Benefit Comment Codes --></label>
+        <name>OON_Copay_Type_2_Benefit_Comment_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON - Copay Type 2 - Customized --></label>
+        <name>OON_Copay_Type_2_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Deductible Applies --></label>
+        <name>OON_Copay_Type_2_DeductibleApplies__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Default Amount --></label>
+        <name>OON_Copay_Type_2_DefaultAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Individual Mandate --></label>
+        <name>OON_Copay_Type_2_Individual_Mandate__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 IsCovered --></label>
+        <name>OON_Copay_Type_2_IsCovered__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Jurisdiction --></label>
+        <name>OON_Copay_Type_2_Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Copay 2 Mandate Name --></label>
+        <name>OON_Copay_Type_2_Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON CostShare 3MonthDedCarryover Default --></label>
+        <name>OON_CostShare_3MonthDedCarryover_Default__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Cost Share AdditionalIncrements --></label>
+        <name>OON_Cost_Share_AdditionalIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Cost Share - Customized --></label>
+        <name>OON_Cost_Share_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON - Cost Share - Default Amount --></label>
+        <name>OON_Cost_Share_Default_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Cost Share High --></label>
+        <name>OON_Cost_Share_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Cost Share Increment --></label>
+        <name>OON_Cost_Share_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Cost Share InvalidIncrements --></label>
+        <name>OON_Cost_Share_InvalidIncrements__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Cost Share Low --></label>
+        <name>OON_Cost_Share_Low__c</name>
+    </fields>
+    <fields>
+        <help><!-- OON - Cost Share - SelectedAmount --></help>
+        <label><!-- OON Cost Share --></label>
+        <name>OON_Cost_Share_SelectedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Custom Benefit --></label>
+        <name>OON_Custom_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON DA Drawloop --></label>
+        <name>OON_DA_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Amount Customized --></label>
+        <name>OON_Discount_Amount_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Amount Default --></label>
+        <name>OON_Discount_Amount_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON - Discount Amount Percent Customized --></label>
+        <name>OON_Discount_Amount_Percent_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Amount Percent Default --></label>
+        <name>OON_Discount_Amount_Percent_Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Amount Percent --></label>
+        <name>OON_Discount_Amount_Percent__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Additional Discount --></label>
+        <name>OON_Discount_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Applies Customized --></label>
+        <name>OON_Discount_Applies_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Applies Default --></label>
+        <name>OON_Discount_Applies_Default__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Applies Drawloop --></label>
+        <name>OON_Discount_Applies_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Applies --></label>
+        <name>OON_Discount_Applies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Discount Percent Drawloop --></label>
+        <name>OON_Discount_Percent_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON MaxPayment High --></label>
+        <name>OON_MaxPayment_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON MaxPayment Increment --></label>
+        <name>OON_MaxPayment_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON MaxPayment Low --></label>
+        <name>OON_MaxPayment_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON MinPayment High --></label>
+        <name>OON_MinPayment_Hiigh__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON MinPayment Increment --></label>
+        <name>OON_MinPayment_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON MinPayment Low --></label>
+        <name>OON_MinPayment_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Netwok Id --></label>
+        <name>OON_OutNetwok_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON SA Drawloop --></label>
+        <name>OON_SA_Drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON ScheduledAmounts Customized --></label>
+        <name>OON_ScheduledAmounts_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON ScheduledAmounts Default --></label>
+        <name>OON_ScheduledAmounts_Default__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- OON Scheduled Amounts --></help>
+        <label><!-- ON Approximate Member Payment-w/Discount --></label>
+        <name>OON_ScheduledAmounts__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Tier Type Customized --></label>
+        <name>OON_Tier_Type_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- OON Tier Type Default --></label>
+        <name>OON_Tier_Type_Default__c</name>
+        <picklistValues>
+            <masterLabel>Generic</masterLabel>
+            <translation><!-- Generic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OON Tier Type --></label>
+        <name>OON_Tier_Type__c</name>
+        <picklistValues>
+            <masterLabel>Generic</masterLabel>
+            <translation><!-- Generic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred</masterLabel>
+            <translation><!-- Non-Preferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred Specialty</masterLabel>
+            <translation><!-- Non-Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred</masterLabel>
+            <translation><!-- Preferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Specialty</masterLabel>
+            <translation><!-- Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Injectable</masterLabel>
+            <translation><!-- Self-Injectable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OutNetwork ExtID Copay1 --></label>
+        <name>OutNetwork_ExtID_Copay1__c</name>
+    </fields>
+    <fields>
+        <label><!-- OutNetwork ExtID Copay2 --></label>
+        <name>OutNetwork_ExtID_Copay2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCS Benefit Id --></label>
+        <name>PCS_Benefit_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name of the Proposed Product this benefit belongs to. --></help>
+        <label><!-- PP Name --></label>
+        <name>PPName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP id --></label>
+        <name>PPid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Benefit Name --></label>
+        <name>Parent_Benefit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent LimitBenefit --></label>
+        <name>Parent_Benefit__c</name>
+        <relationshipLabel><!-- Benefit --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent Mandate Benefit --></label>
+        <name>Parent_Mandate_Benefit__c</name>
+        <relationshipLabel><!-- Benefit (Parent Mandate Benefit) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Period Value --></label>
+        <name>Period_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Place of Service --></label>
+        <name>Place_of_Service__c</name>
+    </fields>
+    <fields>
+        <help><!-- The product category --></help>
+        <label><!-- Product Category --></label>
+        <name>Product_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related PP/BDP ID --></label>
+        <name>Proposed_ProductID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provider Type --></label>
+        <name>Provider_Type__c</name>
+        <picklistValues>
+            <masterLabel>Facility</masterLabel>
+            <translation><!-- Facility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facility Practitioner</masterLabel>
+            <translation><!-- Facility Practitioner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCP</masterLabel>
+            <translation><!-- PCP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialist</masterLabel>
+            <translation><!-- Specialist --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SF Benefit Name --></label>
+        <name>SF_PARENT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Scheduled Amounts Customized --></label>
+        <name>ScheduledAmounts_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- INN Scheduled Amounts Default --></label>
+        <name>ScheduledAmounts_Default__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- INN Scheduled Amounts --></help>
+        <label><!-- IN Approximate Member Payment-w/Discount --></label>
+        <name>ScheduledAmounts__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number SF --></label>
+        <name>Sequence_Number_SF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Three Month Deductible Carryover --></label>
+        <name>Three_Month_Deductible_Carryover__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tier Type Customized --></label>
+        <name>Tier_Type_Customized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier Type Default --></label>
+        <name>Tier_Type_Default__c</name>
+        <picklistValues>
+            <masterLabel>Generic</masterLabel>
+            <translation><!-- Generic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred Brand</masterLabel>
+            <translation><!-- Non-Preferred Brand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred Specialty</masterLabel>
+            <translation><!-- Non-Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Brand</masterLabel>
+            <translation><!-- Preferred Brand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Specialty</masterLabel>
+            <translation><!-- Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Injectable</masterLabel>
+            <translation><!-- Self-Injectable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tier Type --></label>
+        <name>Tier_type__c</name>
+        <picklistValues>
+            <masterLabel>Generic</masterLabel>
+            <translation><!-- Generic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred Brand</masterLabel>
+            <translation><!-- Non-Preferred Brand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Preferred Specialty</masterLabel>
+            <translation><!-- Non-Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Brand</masterLabel>
+            <translation><!-- Preferred Brand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Specialty</masterLabel>
+            <translation><!-- Preferred Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Injectable</masterLabel>
+            <translation><!-- Self-Injectable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Benefit</masterLabel>
+            <translation><!-- Benefit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost Share</masterLabel>
+            <translation><!-- Cost Share --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Variation Condition ID --></label>
+        <name>Variation_Condition_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variation Name --></label>
+        <name>Variation_Name__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Benefit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Benefit</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <fieldSets>
+        <label><!-- Include on Adjustment Summary --></label>
+        <name>Include_on_Adjustment_Summary</name>
+    </fieldSets>
+    <layouts>
+        <layout>BD Benefit Layout</layout>
+        <sections>
+            <label><!-- Coinsurance --></label>
+            <section>Coinsurance</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Defaults --></label>
+            <section>Copay Defaults</section>
+        </sections>
+        <sections>
+            <label><!-- Cost Share --></label>
+            <section>Cost Share</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Network 1 - Copay Type 1 --></label>
+            <section>Network 1 - Copay Type 1</section>
+        </sections>
+        <sections>
+            <label><!-- Network 1 - Copay Type 2 --></label>
+            <section>Network 1 - Copay Type 2</section>
+        </sections>
+        <sections>
+            <label><!-- Network 2 --></label>
+            <section>Network 2</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Benefit Layout</layout>
+        <sections>
+            <label><!-- Coinsurance --></label>
+            <section>Coinsurance</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Defaults --></label>
+            <section>Copay Defaults</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Type 1 --></label>
+            <section>Copay Type 1</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Type 2 --></label>
+            <section>Copay Type 2</section>
+        </sections>
+        <sections>
+            <label><!-- Cost Share --></label>
+            <section>Cost Share</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PP Benefit Layout</layout>
+        <sections>
+            <label><!-- 3 Month Deductible Carryover --></label>
+            <section>3 Month Deductible Carryover</section>
+        </sections>
+        <sections>
+            <label><!-- Coinsurance --></label>
+            <section>Coinsurance</section>
+        </sections>
+        <sections>
+            <label><!-- Copay Defaults --></label>
+            <section>Copay Defaults</section>
+        </sections>
+        <sections>
+            <label><!-- Cost Share --></label>
+            <section>Cost Share</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customized --></label>
+            <section>Customized</section>
+        </sections>
+        <sections>
+            <label><!-- Dental Grouper Section --></label>
+            <section>Dental Grouper Section</section>
+        </sections>
+        <sections>
+            <label><!-- Drug Min/Max Payment --></label>
+            <section>Drug Min/Max Payment</section>
+        </sections>
+        <sections>
+            <label><!-- Drug Tier Type --></label>
+            <section>Drug Tier Type</section>
+        </sections>
+        <sections>
+            <label><!-- Global Flag --></label>
+            <section>Global Flag</section>
+        </sections>
+        <sections>
+            <label><!-- Network 1 - Copay Type 1 --></label>
+            <section>Network 1 - Copay Type 1</section>
+        </sections>
+        <sections>
+            <label><!-- Network 1 - Copay Type 2 --></label>
+            <section>Network 1 - Copay Type 2</section>
+        </sections>
+        <sections>
+            <label><!-- Network 2 Copay Type 1 --></label>
+            <section>Network 2 Copay Type 1</section>
+        </sections>
+        <sections>
+            <label><!-- Network 2 Copay Type 2 --></label>
+            <section>Network 2 Copay Type 2</section>
+        </sections>
+        <sections>
+            <label><!-- Vision Customized --></label>
+            <section>Vision Customized</section>
+        </sections>
+        <sections>
+            <label><!-- Vision Fields --></label>
+            <section>Vision Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- BD Product --></label>
+        <name>BD_Product</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Proposed Product --></label>
+        <name>Proposed_Product</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Cost Selected field cannot be 1000 --></errorMessage>
+        <name>Cost_Share_Selected_Amount_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EBEN001: Coinsurance value entered should be between 0 and 100&apos; --></errorMessage>
+        <name>EBEN001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Minimum Payment cannot be greater than Maximum Payment --></errorMessage>
+        <name>Minimum_Payment_Greater_than_Max_payment</name>
+    </validationRules>
+</CustomObjectTranslation>

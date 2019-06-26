@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Administrator</fullName>
+        <default>false</default>
+        <label>Administrator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker</fullName>
+        <default>false</default>
+        <label>Broker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Full Service Producer</fullName>
+        <default>false</default>
+        <label>Full Service Producer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>General Producer</fullName>
+        <default>false</default>
+        <label>General Producer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Group</fullName>
+        <default>false</default>
+        <label>Group</label>
+    </standardValue>
+</StandardValueSet>

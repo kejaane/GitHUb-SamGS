@@ -1,0 +1,19 @@
+<!--
+=========================================================================================
+//      Date: 03/30/2018    
+// Developer: Tom Barrett
+//   Purpose: This Visualforce page is used in conjunction with the SM_PAcontroller class 
+//            controller which is used to provide the ability to run the SM_PA classes
+//            so that we no longer need to execute the profile audit process from the 
+//            developer console.
+//                                        
+//=========================================================================================
+//                                 Update History
+// Date       Developer     	Tag     Description
+//=========================================================================================
+//
+//=========================================================================================
+-->
+<apex:page StandardController="SM_Log__c" extensions="SM_PAcontroller" action="{!DoIt}" recordSetVar="" showHeader="false" >
+    
+</apex:page>

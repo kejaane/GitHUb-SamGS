@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$Carve_Out_RX_Approval__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r.Proposed_Products__r$Integrated_Carved_Out_Vendor__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r.Proposed_Products__r$Name</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1) AND ((2 AND 3) OR (4 AND 5) OR (6 AND 7))</booleanFilter>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r.Proposed_Products__r$Integrated_Carved_Out_Vendor__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$CreatedDate</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$CreatedDate</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessThan</operator>
+            <value>2/1/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$CreatedDate</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>2/1/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$CreatedDate</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessThan</operator>
+            <value>3/1/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$CreatedDate</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>3/1/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$CreatedDate</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessThan</operator>
+            <value>4/1/2017 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>BRF Rx Carve-Out v. PP Carve Out Vendor</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_w_Opportunities_BRF_s_and_Proposed_Prod__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$Account_Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

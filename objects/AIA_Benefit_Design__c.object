@@ -1,0 +1,2440 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AE_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Opportunity__r.Lead_Rep_Name_User__r.FirstName +' ' +Benefit_Request_Form__r.Opportunity__r.Lead_Rep_Name_User__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AE Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIAFinal_NAEGS_Adjustment_Sumary_Rev_Num__c</fullName>
+        <description>B-03453.Revision number of the BD when I changed over from paper format to AIA workflow in SF.</description>
+        <externalId>false</externalId>
+        <formula>Text(Account__r.AIAFinal_NAEGS_Adjustment_Sumary_Rev_Num__c)</formula>
+        <inlineHelpText>Final NAEGS Adjustment Summary Revision Number
+Value entered in the related Account record.</inlineHelpText>
+        <label>Final NAEGS Adjustment Summary Rev Num</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status_Benefact_Coder__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - Benefact Coder</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status_Benefit_Coder__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - Benefit Coder</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status_Benefit_Tester__c</fullName>
+        <description>Field to capture Approval Status of Benefit Tester - US1730</description>
+        <externalId>false</externalId>
+        <label>Approval Status - Benefit Tester</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status_Contract_Tech__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - Contract Tech</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status_NASCO_Benefit_Coder__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - NASCO Benefit Coder</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status_Pharmacy_Management__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status -  Pharmacy Management</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AIA_Approval_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>US:750 
+To check the record is submitted for approval.</description>
+        <externalId>false</externalId>
+        <label>AIA Approval Status</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Approver_Benefact_Coder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Benefact Coder</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Approver_Benefit_Coder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Benefit Coder</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design1CSz</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Approver_Benefit_Tester__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Field to capture Benefit Tester from Account team - US1730</description>
+        <externalId>false</externalId>
+        <label>Approver - Benefit Tester</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design0gqv</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Approver_Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>The Approver adds Reject Comments for the BD here</inlineHelpText>
+        <label>Approver Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Approver_MAST_Tech__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - MAST Tech</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Approver_Notes__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Approver Notes</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AIA_Approver_Pharmacy_Management__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Pharmacy Management</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design1Caa</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Approvers_Notified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approvers Notified</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Benefit_Coder_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefit Coder Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Benefit_Coder_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefit Coder Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Benefit_Coder_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefit Coder Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_Benefit_Tester_Approval_Start_Date__c</fullName>
+        <description>Created as part of US1730</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefit Tester Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Benefit_Tester_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefit Tester Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AIA_Benefit_Tester_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefit Tester Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AM_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Benefit_Request_Form__r.Opportunity__r.Service_Rep__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AM Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Opportunity__r.Account.Id</formula>
+        <label>Account Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Benefit Design</relationshipLabel>
+        <relationshipName>Benefit_Design</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Admin_Legal_Entity_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <label>Admin Legal Entity Drawloop</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CFMI</fullName>
+                    <default>false</default>
+                    <label>CFMI</label>
+                </value>
+                <value>
+                    <fullName>GHMSI</fullName>
+                    <default>false</default>
+                    <label>GHMSI</label>
+                </value>
+                <value>
+                    <fullName>CFBC</fullName>
+                    <default>false</default>
+                    <label>CFBC</label>
+                </value>
+                <value>
+                    <fullName>CFBC and GHMSI</fullName>
+                    <default>false</default>
+                    <label>CFBC and GHMSI</label>
+                </value>
+                <value>
+                    <fullName>CFBC and CFMI</fullName>
+                    <default>false</default>
+                    <label>CFBC and CFMI</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ancillary_Tech_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Ancillary Tech Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ancillary_Tech_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Ancillary Tech Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ancillary_Tech_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Ancillary Tech Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Initial_Submission_Date__c</fullName>
+        <description>B-03535</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Approval Initial Submission Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status_Analyst__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - Ancillary Tech</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approval_Status_MAST_Tech__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - MAST Tech</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approval_Status_Pharmacy_Operations__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - Pharmacy Operations</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approval_Status_Vision_Analyst__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status - Vision Analyst</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Waiting for Benefit Design Approval Team Approval</fullName>
+                    <default>true</default>
+                    <label>Waiting for Benefit Design Approval Team Approval</label>
+                </value>
+                <value>
+                    <fullName>Waiting for Benefit Design Meeting Approval</fullName>
+                    <default>false</default>
+                    <label>Waiting for Benefit Design Meeting Approval</label>
+                </value>
+                <value>
+                    <fullName>Initiating Benefit Design Restart</fullName>
+                    <default>false</default>
+                    <label>Initiating Benefit Design Restart</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approver_Ancillary_Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Ancillary Tech</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design_c</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Benefit_Coder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - NASCO Benefit Coder</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design_c1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Contract_Tech__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Contract Tech</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design_c2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Pharmacy_Operations__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver -Pharmacy Operations</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design0uN4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_QA_Auditor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - QA Auditor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design_c3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Vision_Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver-Vision Analyst</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design0u7Q</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BD_Approval_Date__c</fullName>
+        <description>B-03535</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>BD Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BRF_Name__c</fullName>
+        <description>Used for MEIDS integration - to pull the identity protection mandate. 2017 AIA May Release</description>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Name</formula>
+        <label>BRF Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BRF_Request_Type__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>BRF Request Type</label>
+        <length>250</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benefact_Coder_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefact Coder Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Benefact_Coder_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefact Coder Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Benefact_Coder_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefact Coder Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benefit_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Benefit Request Form</label>
+        <referenceTo>Benfit_Request_Form__c</referenceTo>
+        <relationshipLabel>Benefit Design</relationshipLabel>
+        <relationshipName>Benefit_Design</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Selection__c</fullName>
+        <externalId>false</externalId>
+        <label>Benefit Selection</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full Exclusion</fullName>
+                    <default>false</default>
+                    <label>Full Exclusion</label>
+                </value>
+                <value>
+                    <fullName>Emergency Contraception Exclusion</fullName>
+                    <default>false</default>
+                    <label>Emergency Contraception Exclusion</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BlueFund_Checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>BlueFund Checkbox</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Both_Checker__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Both Checker</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Compatible_Checker__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Compatible Checker</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Tech_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Contract Tech Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Tech_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Contract Tech Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Tech_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Contract Tech Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_BD_Drug_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of BD Drug Products</label>
+        <summaryFilterItems>
+            <field>AIA_Benefit_Design_Product__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Drug</value>
+        </summaryFilterItems>
+        <summaryForeignKey>AIA_Benefit_Design_Product__c.Benefit_Design__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_of_Benefit_Design_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of Benefit Design Product</label>
+        <summaryForeignKey>AIA_Benefit_Design_Product__c.Benefit_Design__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Days_to_Approve_BDF__c</fullName>
+        <description>B-03535 create a formula field that will capture the calculation of how long it took to approve the BD.  Formula:  BD Approval Date - Approval Initial Submission Date.</description>
+        <externalId>false</externalId>
+        <formula>If(ISBLANK(BD_Approval_Date__c),Today()-Approval_Initial_Submission_Date__c, BD_Approval_Date__c - Approval_Initial_Submission_Date__c)</formula>
+        <label>Days to Approve BD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_to_Approve_BD__c</fullName>
+        <description>B-03535 create a formula field that will capture the calculation of how long it took to approve the BD.  Formula:  BD Approval Date - Approval Initial Submission Date.</description>
+        <externalId>false</externalId>
+        <formula>If(ISBLANK(BD_Approval_Date__c),Today()-Approval_Initial_Submission_Date__c, BD_Approval_Date__c - Approval_Initial_Submission_Date__c)</formula>
+        <label>Days to Approve BD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drawloop_5_digit_account_number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Account__r.NASCO_Account_Number__c</formula>
+        <label>Drawloop 5 digit account number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drawloop_ADR_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Opportunity__r.ADR__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Drawloop ADR Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drawloop_ARC_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.ARC_Approval_Date__c</formula>
+        <label>Drawloop ARC Approval Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Drawloop_Benefit_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Benefit_Effective_Date__c</formula>
+        <label>Drawloop Benefit Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Drawloop_Control_Panel__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Benefit_Request_Form__r.Control_Plan__c)</formula>
+        <label>Drawloop Control Panel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drawloop_Effective_date_of_change__c</fullName>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Benefit_Effective_Date__c</formula>
+        <label>Drawloop Effective date of change</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Drawloop_Original_effective_date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Account__r.NASCO_Original_Effective_Date__c</formula>
+        <label>Drawloop Original effective date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Drawloop_Renewal_date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Account__r.Final_Renewal_Date__c</formula>
+        <label>Drawloop Renewal date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Drawloop_account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Account_Legal_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Drawloop account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drawloop_sub_group_account__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Benefit_Request_Form__r.Account__r.Has_Sub_Groups__c=true, Account__r.Account_Legal_Name__c,'NA')</formula>
+        <label>Drawloop sub group account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Facets_Group_ID__c</fullName>
+        <description>This field displays the value from associated opportunity. This is used for Salesforce-MEIDS integration.</description>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Opportunity__r.Facets_Grp_Num__c</formula>
+        <label>Facets Group ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FirstHelp_Checker__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Benefit_Request_Form__r.First_Help_Checker__c ,true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FirstHelp Checker</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Arrangement__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Benefit_Request_Form__r.Funding_Arrangements__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Funding Arrangement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Headquarters_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Implementation__r.Account__r.BillingStreet + " " + Implementation__r.Account__r.BillingCity + " " + Implementation__r.Account__r.BillingCountry + " " + Implementation__r.Account__r.BillingState + " " + Implementation__r.Account__r.BillingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Headquarters Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Identity_Protection__c</fullName>
+        <description>B-03894</description>
+        <externalId>false</externalId>
+        <label>Identity Protection</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipName>Benefit_Design_c</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Jurisdiction__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Benefit_Request_Form__r.Jurisdiction__c)</formula>
+        <label>Jurisdiction</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_Date_only__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATEVALUE( LastModifiedDate )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Modified Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MAST_Tech_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MAST Tech Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MAST_Tech_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MAST Tech Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MAST_Tech_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MAST Tech Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mail_Account_Dedicated_Rep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Account Dedicated Rep</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design8</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Account_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Account Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design9</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Ancillary_Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Ancillary Analyst</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_DesignKaP0</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Benefit_Admin_Account_Setup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Benefit Admin Account Setup</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Benefit_Admin_Workflow_Mgmt__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Benefit Admin Workflow Mgmt</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Benefit_NASCO_Tester__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Benefit NASCO Tester</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design7</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Implementation_PM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Implementation PM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_DesignbPBa</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Production_ID_Card__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Production ID Card</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Settlements_Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Settlements Analyst</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mail_Underwriter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Mail Underwriter</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Benefit_Design6</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>NASCO_Acct__c</fullName>
+        <description>This field displays the value from associated opportunity. This is used for Salesforce-MEIDS integration.</description>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Opportunity__r.NASCO_Acct_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NASCO Acct. #</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NASCO_Benefit_Coder_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>NASCO Benefit Coder Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>NASCO_Benefit_Coder_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>NASCO Benefit Coder Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>NASCO_Benefit_Coder_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>NASCO Benefit Coder Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nonprofit__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Helpt text: The Group organized and operates as a nonprofit entity.</inlineHelpText>
+        <label>Nonprofit</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Contract_End_Date__c</fullName>
+        <description>This field displays the value from associated opportunity. This is used for Salesforce-MEIDS integration.</description>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Opportunity__r.Contract_End_Date__c</formula>
+        <label>Opportunity Contract End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Effective_Date__c</fullName>
+        <description>This field displays the value from associated opportunity. This is used for Salesforce-MEIDS integration.</description>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Opportunity__r.Effective_Date__c</formula>
+        <label>Opportunity Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <description>Used for MEIDS integration - to pull the identity protection mandate. 2017 AIA May Release</description>
+        <externalId>false</externalId>
+        <formula>Benefit_Request_Form__r.Opportunity__r.Name</formula>
+        <label>Opportunity Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oppose_Contracteptive_Service__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Group opposes providing coverage for some or all of the contraceptive services required to be covered under section 2713 of the PHS Act and the companion provisions of ERISA and the Code on account of religious objections. The Group organized and oper</inlineHelpText>
+        <label>Oppose Contraceptive Service</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Religions_Exemption_Prerequisites__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>No</controllingFieldValue>
+                <valueName>Yes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>No</controllingFieldValue>
+                <valueName>No</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Parent_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>story 3416 - aia</description>
+        <externalId>false</externalId>
+        <label>Parent Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Benefit Design (Sub Group Account)</relationshipLabel>
+        <relationshipName>Benefit_DesignAccounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pharmacy_Management_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Pharmacy Management Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Pharmacy_Management_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Pharmacy Management Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Pharmacy_Management_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Pharmacy Management Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pharmacy_Operations_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Pharmacy Operations Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Pharmacy_Operations_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Pharmacy Operations Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Pharmacy_Operations_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Pharmacy Operations Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>QA_Auditor_Approval_Start_Date__c</fullName>
+        <description>This will be filled when QA Auditor receives notification to approve the BD</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>QA Auditor Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>QA_Auditor_Final_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>QA Auditor Final Notification</description>
+        <externalId>false</externalId>
+        <label>QA Auditor Final Notification</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>QA_Auditor_Initial_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>QA Auditor Initial Notification</description>
+        <externalId>false</externalId>
+        <label>QA Auditor Initial Notification</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>QA_Auditor__c</fullName>
+        <description>This field will be used for sending an email to NAEGS.Audit@carefirst.com for BD approval</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>QA Auditor</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_BRF__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related BRF</label>
+        <referenceTo>Benfit_Request_Form__c</referenceTo>
+        <relationshipLabel>Benefit Design (Related BRF)</relationshipLabel>
+        <relationshipName>Benefit_Design1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Religions_Exemption_Prerequisites__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Group official self-certified on company letterhead the group is a church, or a church’s integrated auxiliary(ies), or a convention or association of churches.</inlineHelpText>
+        <label>Religions Exemption Prerequisites</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Religious_Accommodations_Comments__c</fullName>
+        <externalId>false</externalId>
+        <formula>"To meet all criteria the group of services below should be \"Yes\""</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Religious Accommodations Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Religious_Organization__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Group holds itself out as a religious organization</inlineHelpText>
+        <label>Religious Organization</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Renewal_Effective_Date_Drawloop_Checker__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field will be updated by the workflow "AIA Renewal Effective Date Drawloop Checker" and this field is used in process builder "AIA BDF Renewal Date Population From BD"</description>
+        <externalId>false</externalId>
+        <label>Renewal Effective Date Drawloop Checker</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Effective_Date_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*IF( Benefit_Request_Form__r.Account__r.Has_Sub_Groups__c =true, Parent_Account__r.Final_Renewal_Date__c , Account__r.Final_Renewal_Date__c )*/
+
+
+Parent_Account__r.Final_Renewal_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Effective Date Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Revision_No_Drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>MID(Revision_Number__c , 5 , Len(Revision_Number__c)-4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revision No. Drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revision_Number_Technical__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.AIA_BD_Revision_Number__c</formula>
+        <label>Revision Number Technical</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revision_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>'SF - ' + TEXT(Revision_Number_Technical__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revision Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Self_Cert_for_Religious_Accommodation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Group has provided CareFirst self-certification stating it satisfies all religious accommodation criteria</inlineHelpText>
+        <label>Self Cert for Religious Accommodation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Source_BD__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Source BD</label>
+        <referenceTo>AIA_Benefit_Design__c</referenceTo>
+        <relationshipLabel>Benefit Design</relationshipLabel>
+        <relationshipName>Benefit_Design</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>true</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>In Review</fullName>
+                    <default>false</default>
+                    <label>In Review</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sub_Group_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>story 3416 - aia</description>
+        <externalId>false</externalId>
+        <label>Sub Group Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Benefit Design (Sub Group Account)</relationshipLabel>
+        <relationshipName>Benefit_DesignSubGroupAccounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>System__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( INCLUDES(Benefit_Request_Form__r.Opportunity__r.System__c, 'NASCO'), 'NASCO,', null) + 
+IF( INCLUDES(Benefit_Request_Form__r.Opportunity__r.System__c, 'FACETS'), 'FACETS,', null)</formula>
+        <label>System</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vision_Analyst_Approval_Start_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Vision Analyst Approval Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vision_Analyst_Response_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Vision Analyst Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vision_Analyst_Response_Days__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Vision Analyst Response (Days)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>account_legal_name_drawloop__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Benefit_Request_Form__r.Account__r.Has_Sub_Groups__c =true, Parent_Account__r.Account_Legal_Name__c , Account__r.Account_Legal_Name__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>account legal name drawloop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Benefit Design</label>
+    <nameField>
+        <displayFormat>BD-{00000000}</displayFormat>
+        <label>Benefit Design Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Benefit Design</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Implementation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Approval_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <fieldSets>
+        <fullName>Include_on_Adjustment_Summary</fullName>
+        <description>Fields that will be tracked on adjustment summary.</description>
+        <displayedFields>
+            <field>Headquarters_Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Identity_Protection__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Include on Adjustment Summary</label>
+    </fieldSets>
+    <listViews>
+        <fullName>Approved_BDs</fullName>
+        <columns>Account__c</columns>
+        <columns>Implementation__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Approval_Initial_Submission_Date__c</columns>
+        <columns>BD_Approval_Date__c</columns>
+        <columns>Days_to_Approve_BDF__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>zenimax</value>
+        </filters>
+        <label>Approved BDs</label>
+    </listViews>
+    <validationRules>
+        <fullName>EBD001</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND ( NOT ( TEXT ( Benefit_Request_Form__r.Grandfathered_Status__c ) = 'Non-Grandfathered' ), 
+(OR( ISCHANGED(Religions_Exemption_Prerequisites__c), ISCHANGED(Oppose_Contracteptive_Service__c), 
+ISCHANGED(Nonprofit__c ), ISCHANGED(Religious_Organization__c), ISCHANGED( Self_Cert_for_Religious_Accommodation__c ) ) ) )</errorConditionFormula>
+        <errorMessage>EBD001:You can edit Religious Exemption Prerequisites or Religious Accommodation section only if it is Non-Grandfathered in BRF.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD002</fullName>
+        <active>false</active>
+        <description>EBD002: Exemption is available to Non-grandfathered groups that satisfy exemption</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(TEXT(Religions_Exemption_Prerequisites__c)='No',
+(OR(NOT(ISBLANK(TEXT(Oppose_Contracteptive_Service__c ))),NOT(ISBLANK(TEXT(Nonprofit__c ))), 
+NOT(ISBLANK(TEXT(Self_Cert_for_Religious_Accommodation__c ))), NOT(ISBLANK(TEXT(Religious_Organization__c )))))))</errorConditionFormula>
+        <errorMessage>EBD002: Exemption is available to Non-grandfathered groups that satisfy exemption</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD005</fullName>
+        <active>false</active>
+        <description>EBD005:  Exemption is available to Non-grandfathered groups that satisfy exemption</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; 
+(AND(TEXT(Religions_Exemption_Prerequisites__c)='Yes', 
+AND(TEXT(Benefit_Selection__c)&lt;&gt;'Full Exclusion',TEXT(Benefit_Selection__c)&lt;&gt; Null) ,
+(OR((ISBLANK(TEXT(Oppose_Contracteptive_Service__c ))),(ISBLANK(TEXT(Nonprofit__c ))), 
+(ISBLANK(TEXT(Self_Cert_for_Religious_Accommodation__c ))), (ISBLANK(TEXT(Religious_Organization__c )))))))</errorConditionFormula>
+        <errorMessage>EBD005:  Exemption is available to Non-grandfathered groups that satisfy exemption</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD006</fullName>
+        <active>false</active>
+        <description>EBD006: Accommodation options are available to Non-grandfathered groups that satisfy all Accommodation requirements</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; 
+(AND(TEXT(Religions_Exemption_Prerequisites__c)='Yes', 
+AND(TEXT(Benefit_Selection__c)&lt;&gt;'Full Exclusion',TEXT(Benefit_Selection__c)&lt;&gt; 'Emergency Contraception Exclusion') , 
+(AND(NOT(ISBLANK(TEXT(Oppose_Contracteptive_Service__c ))),NOT(ISBLANK(TEXT(Nonprofit__c ))), 
+NOT(ISBLANK(TEXT(Self_Cert_for_Religious_Accommodation__c ))), NOT(ISBLANK(TEXT(Religious_Organization__c )))))))</errorConditionFormula>
+        <errorDisplayField>Benefit_Selection__c</errorDisplayField>
+        <errorMessage>EBD006: Accommodation options are available to Non-grandfathered groups that satisfy all Accommodation requirements</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD007</fullName>
+        <active>false</active>
+        <description>EBD007: Approval Status - NASCO Benefit Coder should be only N/A if Approver - NASCO Benefact Coder is blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,ISBLANK(Approver_Benefit_Coder__c) &amp;&amp; Text( AIA_Approval_Status_NASCO_Benefit_Coder__c)&lt;&gt;'N/A')</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_NASCO_Benefit_Coder__c</errorDisplayField>
+        <errorMessage>EBD007: Approval Status - NASCO Benefit Coder should be only N/A if Approver - NASCO Benefact Coder is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD008</fullName>
+        <active>true</active>
+        <description>EBD008: Approval Status - Ancillary Tech should be only N/A if Approver - Ancillary Tech is blank</description>
+        <errorConditionFormula>/*IF(ISNEW(),false,ISBLANK( Approver_Ancillary_Analyst__c  ) &amp;&amp; Text( Approval_Status_Analyst__c )&lt;&gt;'N/A')*/
+
+Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND( 
+ISPICKVAL( PRIORVALUE ( Approval_Status_Analyst__c ), "N/A"), 
+Text(Approval_Status_Analyst__c )= ""))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Analyst__c</errorDisplayField>
+        <errorMessage>EBD008: Approval Status - Ancillary Tech should be only N/A if Approver - Ancillary Tech is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD009</fullName>
+        <active>true</active>
+        <description>EBD009: Approval Status - Contract Tech should be only N/A Approver - Contract Tech is blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,ISBLANK(Approver_Contract_Tech__c) &amp;&amp; Text(   AIA_Approval_Status_Contract_Tech__c)&lt;&gt;'N/A')</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Contract_Tech__c</errorDisplayField>
+        <errorMessage>EBD009: Approval Status - Contract Tech should be only N/A Approver - Contract Tech is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD010</fullName>
+        <active>true</active>
+        <description>EBD010: Approval Status - Benefact Coder should be only N/A if Approver - Benefact Coder is blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,ISBLANK(AIA_Approver_Benefact_Coder__c) &amp;&amp; Text(AIA_Approval_Status_Benefact_Coder__c)&lt;&gt;'N/A')</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefact_Coder__c</errorDisplayField>
+        <errorMessage>EBD010: Approval Status - Benefact Coder should be only N/A if Approver - Benefact Coder is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD011</fullName>
+        <active>true</active>
+        <description>EBD011: Approval Status - MAST Tech should be only N/A Approver - MAST Tech is blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,ISBLANK(AIA_Approver_MAST_Tech__c) &amp;&amp; Text(    Approval_Status_MAST_Tech__c)&lt;&gt;'N/A')</errorConditionFormula>
+        <errorDisplayField>Approval_Status_MAST_Tech__c</errorDisplayField>
+        <errorMessage>EBD011: Approval Status - MAST Tech should be only N/A Approver - MAST Tech is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD012</fullName>
+        <active>true</active>
+        <description>EBD012: Approval Status - Ancillary Analyst Tech  should not be  N/A if Approver - Ancillary Analyst is not blank</description>
+        <errorConditionFormula>/*IF(ISNEW(),false,TEXT(Approval_Status_Analyst__c) = 'N/A' &amp;&amp; NOT(ISBLANK(Approver_Ancillary_Analyst__c)))*/
+
+Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(TEXT(Approval_Status_Analyst__c) = 'N/A' ,NOT(ISBLANK(Approver_Ancillary_Analyst__c)),NOT(ISNEW())))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Analyst__c</errorDisplayField>
+        <errorMessage>EBD012: Approval Status - Ancillary Analyst Tech  should not be  N/A if Approver - Ancillary Analyst is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD013</fullName>
+        <active>true</active>
+        <description>EBD013: Approval Status - Contract Tech  should not be  N/A if Approver - Contract Tech is not blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,TEXT( AIA_Approval_Status_Contract_Tech__c ) = 'N/A' &amp;&amp; NOT(ISBLANK( Approver_Contract_Tech__c  )))</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Contract_Tech__c</errorDisplayField>
+        <errorMessage>EBD013 Approval Status - Contract Tech  should not be  N/A if Approver - Contract Tech is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD014</fullName>
+        <active>false</active>
+        <description>EBD014: Approval Status - NASCO Benefit Coder should not be  N/A if Approver - NASCO Benefit Coder is not blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,TEXT(AIA_Approval_Status_NASCO_Benefit_Coder__c) = 'N/A' &amp;&amp; NOT(ISBLANK( Approver_Benefit_Coder__c)))</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_NASCO_Benefit_Coder__c</errorDisplayField>
+        <errorMessage>EBD014: Approval Status - NASCO Benefit Coder  should not be  N/A if Approver - NASCO Benefit Coder is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD015</fullName>
+        <active>true</active>
+        <description>EBD015: Approval Status - Benefact Coder  should not be  N/A if Approver - Benefact Coder is not blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,TEXT(AIA_Approval_Status_Benefact_Coder__c) = 'N/A' &amp;&amp; NOT(ISBLANK( AIA_Approver_Benefact_Coder__c)))</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefact_Coder__c</errorDisplayField>
+        <errorMessage>EBD015: Approval Status - Benefact Coder  should not be  N/A if Approver - Benefact Coder is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD016</fullName>
+        <active>true</active>
+        <description>EBD016: Approval Status - MAST Tech  should not be  N/A if Approver - MAST Tech is not blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,TEXT(Approval_Status_MAST_Tech__c) = 'N/A' &amp;&amp; NOT(ISBLANK(   AIA_Approver_MAST_Tech__c)))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_MAST_Tech__c</errorDisplayField>
+        <errorMessage>EBD016: Approval Status - MAST Tech  should not be  N/A if Approver - MAST Tech is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD017</fullName>
+        <active>true</active>
+        <description>EBD017: User can change status only from 'Rejected' to 'In Progress'</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;  $Setup.BDApprovalValidation__c.IsAppProcess__c = false &amp;&amp; OR((AND( ISCHANGED(Status__c) ,Text(Status__c)= "In Progress",TEXT(PRIORVALUE ( Status__c))!='Rejected')),AND(ISCHANGED(Status__c),Text(Status__c)= "In Review")) &amp;&amp; NOT(ISNEW()) &amp;&amp;  NOT(ISCLONE()) &amp;&amp; $Profile.Name != 'System Administrator'</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>EBD017: User can change status only from 'Rejected' to 'In Progress'</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD018</fullName>
+        <active>true</active>
+        <description>EBD018: Only QA Auditor can change status  to Approved or Rejected</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id != Approver_QA_Auditor__c, ISCHANGED(Status__c)  ,OR(TEXT(Status__c) = 'Approved',TEXT(Status__c)='Rejected'))) &amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp;  NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>EBD018: Only QA Auditor can change status  to Approved or Rejected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD019</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id !=   Approver_Contract_Tech__r.Id, ISCHANGED( AIA_Approval_Status_Contract_Tech__c ), TEXT(AIA_Approval_Status_Contract_Tech__c) !='')) &amp;&amp;   $Profile.Name != 'System Administrator' &amp;&amp;  NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Contract_Tech__c</errorDisplayField>
+        <errorMessage>EDB019: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD020</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id !=  AIA_Approver_Benefact_Coder__r.Id , ISCHANGED( AIA_Approval_Status_Benefact_Coder__c ), TEXT(AIA_Approval_Status_Benefact_Coder__c) !=''))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp;  NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefact_Coder__c</errorDisplayField>
+        <errorMessage>EDB020: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD021</fullName>
+        <active>false</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id !=  Approver_Benefit_Coder__r.Id , ISCHANGED(  AIA_Approval_Status_NASCO_Benefit_Coder__c  ), TEXT(AIA_Approval_Status_NASCO_Benefit_Coder__c) !=''))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp;  NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_NASCO_Benefit_Coder__c</errorDisplayField>
+        <errorMessage>EBd021: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD022</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id !=  AIA_Approver_MAST_Tech__r.Id , ISCHANGED(  Approval_Status_MAST_Tech__c ), TEXT(Approval_Status_MAST_Tech__c) !='')) &amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp;  NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>Approval_Status_MAST_Tech__c</errorDisplayField>
+        <errorMessage>EBD022: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD023</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>/*Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id != Approver_Ancillary_Analyst__r.Id , ISCHANGED( Approval_Status_Analyst__c ), NOT(ISBLANK( Approver_Ancillary_Analyst__c)) , OR(TEXT(AIA_Approval_Status_Contract_Tech__c)='Approved',TEXT(AIA_Approval_Status_Contract_Tech__c)='Rejected')))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp; NOT($Permission.AIA_Ignore_for_AIA_Admin)*/ 
+
+Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id != Approver_Ancillary_Analyst__r.Id , ISCHANGED( Approval_Status_Analyst__c ), NOT(ISBLANK( Approver_Ancillary_Analyst__c))))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp; NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Analyst__c</errorDisplayField>
+        <errorMessage>EBD023: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD024</fullName>
+        <active>true</active>
+        <description>EBD024: Approval Status - Benefit Tester should be only N/A if Approver - Benefit Tester is blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,ISBLANK(AIA_Approver_Benefit_Tester__c) &amp;&amp; Text( AIA_Approval_Status_Benefit_Tester__c)&lt;&gt;'N/A')</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefit_Tester__c</errorDisplayField>
+        <errorMessage>EBD024: Approval Status - Benefit Tester should be only N/A if Approver - Benefit Tester is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD025</fullName>
+        <active>true</active>
+        <description>EBD025: Approval Status - Benefit Tester should not be N/A if Approver - Benefit Tester is not blank</description>
+        <errorConditionFormula>IF(ISNEW(),false,TEXT(AIA_Approval_Status_Benefit_Tester__c) = 'N/A' &amp;&amp; NOT(ISBLANK( AIA_Approver_Benefit_Tester__c)))</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefit_Tester__c</errorDisplayField>
+        <errorMessage>EBD025: Approval Status - Benefit Tester should not be N/A if Approver - Benefit Tester is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD026</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id !=  AIA_Approver_Benefit_Tester__r.Id , ISCHANGED(  AIA_Approval_Status_Benefit_Tester__c), TEXT(AIA_Approval_Status_Benefit_Tester__c) !=''))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp;  NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefit_Tester__c</errorDisplayField>
+        <errorMessage>EBD026: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD027</fullName>
+        <active>true</active>
+        <description>EBD027: Approval Status - Pharmacy Operations should be only N/A if Approver - Pharmacy Operations is blank</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND( 
+ISPICKVAL( PRIORVALUE ( Approval_Status_Pharmacy_Operations__c), "N/A"), 
+Text(Approval_Status_Pharmacy_Operations__c)= ""))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Pharmacy_Operations__c</errorDisplayField>
+        <errorMessage>EBD027: Approval Status - Pharmacy Operations should be only N/A if Approver - Pharmacy Operations is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD028</fullName>
+        <active>true</active>
+        <description>EBD028: Approval Status - Pharmacy Operations  should not be  N/A if Approver -Pharmacy Operations is not blank</description>
+        <errorConditionFormula>/*IF(ISNEW(),false,TEXT(Approval_Status_Analyst__c) = 'N/A' &amp;&amp; NOT(ISBLANK(Approver_Ancillary_Analyst__c)))*/
+
+Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(TEXT(Approval_Status_Pharmacy_Operations__c) = 'N/A' ,NOT(ISBLANK(Approver_Pharmacy_Operations__c)),NOT(ISNEW())))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Pharmacy_Operations__c</errorDisplayField>
+        <errorMessage>EBD028: Approval Status - Pharmacy Operations  should not be  N/A if Approver -Pharmacy Operations is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD029</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id != Approver_Pharmacy_Operations__r.Id , ISCHANGED( Approval_Status_Pharmacy_Operations__c), NOT(ISBLANK( Approver_Pharmacy_Operations__c))))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp; NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Pharmacy_Operations__c</errorDisplayField>
+        <errorMessage>EBD029: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD030</fullName>
+        <active>true</active>
+        <description>EBD030: Approval Status - Vision Analyst should be only N/A if Approver-Vision Analyst is blank</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND( 
+ISPICKVAL( PRIORVALUE ( Approval_Status_Vision_Analyst__c), "N/A"), 
+Text(Approval_Status_Vision_Analyst__c)= ""))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Vision_Analyst__c</errorDisplayField>
+        <errorMessage>EBD030: Approval Status - Vision Analyst should be only N/A if Approver-Vision Analyst is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD031</fullName>
+        <active>true</active>
+        <description>EBD031: Approval Status - Vision Analyst  should not be  N/A if Approver-Vision Analyst is not blank</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(TEXT(Approval_Status_Vision_Analyst__c) = 'N/A' ,NOT(ISBLANK(Approver_Vision_Analyst__c)),NOT(ISNEW())))</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Vision_Analyst__c</errorDisplayField>
+        <errorMessage>EBD031: Approval Status - Vision Analyst  should not be  N/A if Approver-Vision Analyst is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD032</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id != Approver_Vision_Analyst__r.Id , ISCHANGED( Approval_Status_Vision_Analyst__c), NOT(ISBLANK( Approver_Vision_Analyst__c))))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp; NOT($Permission.AIA_Ignore_for_AIA_Admin)</errorConditionFormula>
+        <errorDisplayField>Approval_Status_Vision_Analyst__c</errorDisplayField>
+        <errorMessage>EBD032: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD033</fullName>
+        <active>true</active>
+        <description>EBD033: Approval Status - Benefit Coder should be only N/A if Approver-Benefit Coder is blank</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND( 
+ISPICKVAL( PRIORVALUE ( AIA_Approval_Status_Benefit_Coder__c), "N/A"), 
+Text(AIA_Approval_Status_Benefit_Coder__c)= ""))</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefit_Coder__c</errorDisplayField>
+        <errorMessage>EBD033: Approval Status - Benefit Coder should be only N/A if Approver-Benefit Coder is blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD035</fullName>
+        <active>true</active>
+        <description>EBD035: Approval Status - Benefit Coder  should not be  N/A if Approver-Benefit Coder is not blank</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(TEXT(AIA_Approval_Status_Benefit_Coder__c) = 'N/A' ,NOT(ISBLANK(AIA_Approver_Benefit_Coder__c)),NOT(ISNEW())))</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefit_Coder__c</errorDisplayField>
+        <errorMessage>EBD035: Approval Status - Benefit Coder  should not be  N/A if Approver-Benefit Coder is not blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBD037</fullName>
+        <active>true</active>
+        <description>Only specific person of the corresponding role can change this field</description>
+        <errorConditionFormula>/*Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id != AIA_Approver_Benefit_Coder__r.Id , ISCHANGED( AIA_Approval_Status_Benefit_Coder__c), NOT(ISBLANK( AIA_Approver_Benefit_Coder__c))))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp; NOT($Permission.AIA_Ignore_for_AIA_Admin)*/
+
+Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND($User.Id != AIA_Approver_Benefit_Coder__r.Id , ISCHANGED( AIA_Approval_Status_Benefit_Coder__c), NOT(ISBLANK( AIA_Approver_Benefit_Coder__c))))&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp; NOT($Permission.AIA_Ignore_for_AIA_Admin) &amp;&amp; NOT($User.Id=Approver_QA_Auditor__r.Id &amp;&amp; ISPICKVAL(Status__c, 'Rejected'))</errorConditionFormula>
+        <errorDisplayField>AIA_Approval_Status_Benefit_Coder__c</errorDisplayField>
+        <errorMessage>EBD037: You cannot change this field since you are not the authorized person</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>ADJ_Summary_Rajesh_POC</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>ADJ Summary Rajesh POC</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__looplus?sessionId={!$Api.Session_ID}&amp;eid={!AIA_Benefit_Design__c.Id}&amp;ddpIds=a19K0000001jadJIAQ</url>
+    </webLinks>
+    <webLinks>
+        <fullName>AIA_Send_for_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send for Approval</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_BD_SendForApproval</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Adjustment_Summary_BD</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Export Adjustment Summary</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_ExportAdjustmentSummary</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>BD_Clone_With_Products</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>BD Clone With Products</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/AIA_BDP_DeepClone1?id={!AIA_Implementation__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Export_Adjustment_Summary</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Export Adjustment Summary</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__looplus?sessionId={!$Api.Session_ID}&amp;eid={!AIA_Benefit_Design__c.Id}&amp;ddpIds=a190z000002AyEZ</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Benefit_Design</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>New Benefit Design</masterLabel>
+        <openType>replace</openType>
+        <page>AIA_BenefitDesignEditPage</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Zip</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Zip</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_ZipDocuments</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

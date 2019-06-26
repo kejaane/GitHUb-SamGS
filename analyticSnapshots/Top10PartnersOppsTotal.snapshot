@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used in conjunction with the chart Mike Felber&apos;s Distribution Channel Tracking dashboard</description>
+    <groupColumn>PARTNER_NAME</groupColumn>
+    <mappings>
+        <sourceField>PARTNER_NAME</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Top10PartnersOppTotal__c.Partner__c</targetField>
+    </mappings>
+    <mappings>
+        <aggregateType>Sum</aggregateType>
+        <sourceField>Opportunity.Potential_Contracts__c</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Top10PartnersOppTotal__c.Potential_Contracts__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>FORMULA1</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Top10PartnersOppTotal__c.Total_Opportunities__c</targetField>
+    </mappings>
+    <name>Top10PartnersOppsTotal</name>
+    <runningUser>thomas.barrett@carefirst.com</runningUser>
+    <sourceReport>Admin_Archived_Reports/Old_X02_0a_Partners_by_Contracts_spm</sourceReport>
+    <targetObject>Top10PartnersOppTotal__c</targetObject>
+</AnalyticSnapshot>

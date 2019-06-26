@@ -1,0 +1,14 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="true">
+<style type="text/css" media="all">
+body{margin: 0; padding: 0; color: #00000; background-color: #BEE3E3;}
+#DIV_Container {background-color: #BEE3E3; foreground-color: #39292;}
+</style>
+<div id="DIV_Container" align="center">
+
+<!-- 
+This countdown timer is from timeanddate.com
+-->
+<iframe src="http://free.timeanddate.com/countdown/i2u9gvqx/cf13/cm0/cu4/ct0/cs1/ca0/co0/cr0/ss0/cac00f/cpc000/pct/tcfff/fs100/szw448/szh189/iso2011-11-10T14:00:00" frameborder="0" width="88" height="108"></iframe> 
+
+</div>
+</apex:page>

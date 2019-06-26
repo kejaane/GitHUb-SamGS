@@ -1,0 +1,23 @@
+<!--
+ **********************************************************************************************
+ * Date         : 19/02/2018
+ * Developer    : Debkanti
+ * Purpose      : This is the lightning component to display the message to user if the 
+ *				  Opportunity status is under Approval Lightning Home Page.
+ **********************************************************************************************
+ *                    =======[Update History]======= 
+ * Date           Developer          Tag        Description
+ **********************************************************************************************
+ * 19/02/2018     Debkanti 	  					Initial build
+
+ **********************************************************************************************
+-->
+<aura:component implements="flexipage:availableForAllPageTypes" access="global"  controller="AIA_Record_Approval_Message_Controller">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="objClassController" type="AIA_Record_Approval_Message_Controller"/>
+    <div style="border:1px solid black; padding:18px; background-color:white" class="slds-text-heading--small slds-truncate slds-text-color_error">
+        {!v.objClassController.displayMsg} <br/>
+        {!v.objClassController.displayMsgEnd}
+        
+    </div>
+</aura:component>

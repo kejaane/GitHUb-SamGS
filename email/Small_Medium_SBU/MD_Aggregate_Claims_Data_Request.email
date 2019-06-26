@@ -1,0 +1,20 @@
+Please provide, by return email, the standard aggregate MED +RX claims data report form
+	from this Maryland Risk group's most recent renewal, (including the renewal currently being worked, if applicable)
+
+Date Request Received: ___________
+
+MANDATED CLIENT REPLY DEADLINE: ___________
+
+Group Name: {!Account.Name}
+Facets Group ID#:  {!Account.AccountNumber}
+
+--------------------------------------------------------------------------------------------
+For UW to Fill Out:
+
+FORM ATTACHED __________
+
+NO FORM ATTACHED
+Reason: _______________
+
+Group's renewal is Experience-Rated ( 50:50 or 100%):  (YES / NO) ____________
+If no, reply immediately and Sales will close the Request

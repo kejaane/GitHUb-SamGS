@@ -1,0 +1,19 @@
+<!--
+ * Date         : 05/25/2018
+ * Developer    : Asif K
+ * Purpose      : Visualforce page on Account Layout to show a PopUp message when a new Account is created
+ *                with Default AccountTeamMember as per US1789.
+ *============+================+=====+=============================================================================
+ *                                 Update History
+ *                                 ---------------
+ *   Date        Developer       Tag   Description
+ *============+================+=====+=============================================================================
+* 05/25/2018 | Asif K |     | Initial Version
+*===========+============+========================================================================================
+ */
+--->
+<apex:page StandardController="Account" sidebar="false" showHeader="false" lightningStylesheets="true">
+    <apex:slds />
+    <apex:pageMessage summary="Please confirm sales roles on the Account Team (Account Executive, Account Manager, Sales Assistant)" 
+                      severity="confirm" strength="3"/>
+</apex:page>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used in the DeactivateUser process</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>DeactivateUsers</name>
+    <style>freeForm</style>
+    <subject>CareFirst Saleforce.com User Deactivation Alert!</subject>
+    <textOnly>Dear User,
+ 
+The CareFirst Salesforce.com system is sending this automated email because you have not logged into Salesforce.com in over 60 days.  In order to maintain your license, you will need to use the system at least once every 90 days.
+
+If you do not log into Salesforce.com soon your login will be deactivated. Should you later require access, please contact a CareFirst Salesforce.com System Administrator.
+
+
+
+Thank you,
+Sales Project Management &amp; System Support (SPM&amp;SS)</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

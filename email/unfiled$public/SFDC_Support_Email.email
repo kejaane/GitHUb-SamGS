@@ -1,0 +1,8 @@
+Team,
+
+A new case has been emailed to the group from, {!Case.SuppliedEmail}. 
+
+{!Case.Subject}
+{!Case.Link}
+
+Thank you,

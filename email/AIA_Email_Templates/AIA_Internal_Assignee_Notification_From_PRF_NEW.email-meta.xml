@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AIA_Internal_Assignee_Notification_From_PRF_NEW</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA_Internal_Assignee_Notification_From_PRF_NEW</name>
+    <style>formalLetter</style>
+    <subject>Proposal Request Form Assignment</subject>
+    <textOnly>The Proposal Request Form for {!AIA_Workplan_Assignment__c.Account_Legal_Name__c} has been assigned to you as the new owner of the record.  Please click on the link below to view the proposal request information.
+https://carefirst--qaaia.cs4.my.salesforce.com/{!AIA_Workplan_Assignment__c.Proposal_Request_FormId__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

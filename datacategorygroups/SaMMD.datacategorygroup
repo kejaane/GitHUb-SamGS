@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Pharmacy / CVS</label>
+                    <name>Pharmacy_CVS</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>BlueFund / Blue Wallet</label>
+                    <name>BlueFund_Blue_Wallet</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Davis Vision</label>
+                    <name>Davis_Vision</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Magellan</label>
+                    <name>Magellan</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Carefirst Connect</label>
+                    <name>Carefirst_Connect</name>
+                </dataCategory>
+                <label>Vendor</label>
+                <name>Vendor</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Enrollment</label>
+                    <name>Enrollment</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Billing</label>
+                    <name>Billing</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Collections</label>
+                    <name>Collections</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Shop</label>
+                    <name>Shop</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Enhanced Portal</label>
+                    <name>Enhanced_Portal</name>
+                </dataCategory>
+                <label>Eligibility</label>
+                <name>Eligibility</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Contracts &amp; Compliance</label>
+                    <name>Contracts_Compliance</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Sales Dispatch</label>
+                    <name>Sales_Dispatch</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Sales Flashes</label>
+                    <name>Sales_Flashes</name>
+                </dataCategory>
+                <label>Sales</label>
+                <name>Sales</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Medical</label>
+                    <name>Medical</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Dental</label>
+                    <name>Dental</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Appeals</label>
+                    <name>Appeals</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>News Flashes</label>
+                    <name>News_Flashes</name>
+                </dataCategory>
+                <label>Service</label>
+                <name>Service</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>ACA</label>
+                    <name>ACA</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>NON ACA</label>
+                    <name>NON_ACA</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Grandfathered</label>
+                    <name>Grandfathered</name>
+                </dataCategory>
+                <label>Product Name</label>
+                <name>Product_Name</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>MD</label>
+                    <name>MD</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>DC</label>
+                    <name>DC</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>VA</label>
+                    <name>VA</name>
+                </dataCategory>
+                <label>Jurisdiction</label>
+                <name>Jurisdiction</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Fully Insured</label>
+                    <name>Fully_Insured</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Self Insured</label>
+                    <name>Self_Insured</name>
+                </dataCategory>
+                <label>Rating Arrangement</label>
+                <name>Rating_Arrangement</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>2018</label>
+                    <name>X2018</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>2017</label>
+                    <name>X2017</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>2016</label>
+                    <name>X2016</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>2015</label>
+                    <name>X2015</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>2014</label>
+                    <name>X2014</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>2013</label>
+                    <name>X2013</name>
+                </dataCategory>
+                <label>Year</label>
+                <name>Year</name>
+            </dataCategory>
+            <label>Broker Support</label>
+            <name>Broker_Support</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>SaMMD</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

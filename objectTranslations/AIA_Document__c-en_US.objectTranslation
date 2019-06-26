@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AIA Approval Status --></label>
+        <name>AIA_Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current BDD --></label>
+        <name>AIA_Current_BDD__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reporting only field and will not be added to the layout --></help>
+        <label><!-- Current Benefit Design --></label>
+        <name>AIA_Current_Benefit_Design_Document__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Billing Address --></label>
+        <name>Account_Billing_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Executive (Account Team) --></label>
+        <name>Account_Executive_Account_Team__c</name>
+        <relationshipLabel><!-- AIA Documents (Account Executive (Account Team)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name Alias --></label>
+        <name>Account_Name_Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adj Summary Revision # --></label>
+        <name>Adj_Summ_Revision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Date Time --></label>
+        <name>Approval_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Approval</masterLabel>
+            <translation><!-- In Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Approvals</masterLabel>
+            <translation><!-- In Approvals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Approver - Account Dedicated Representative --></help>
+        <label><!-- Approver - Account Dedicated Rep --></label>
+        <name>Approver_Account_Dedicated_Rep__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - Account Dedicated Rep) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Billing Tech --></label>
+        <name>Approver_Billing_Tech__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - Billing Tech) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Customer Support --></label>
+        <name>Approver_Customer_Support__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - Customer Support) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Implementation Team --></label>
+        <name>Approver_Implementation_Team__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - Implementation Team) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - AIA User --></label>
+        <name>Approver_Par_Plan__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - AIA User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - QA Auditor --></label>
+        <name>Approver_QA_Auditor__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - QA Auditor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Account Manager --></label>
+        <name>Approver_Sales_Service_Rep__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - Account Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver - Settlements Analyst --></label>
+        <name>Approver_Settlements_Tech__c</name>
+        <relationshipLabel><!-- AIA Documents (Approver - Settlements Analyst) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver name --></label>
+        <name>Approver_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment ID --></label>
+        <name>Attachment_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BAA Customized Email Body --></label>
+        <name>BAA_Customized_Email_Body__c</name>
+    </fields>
+    <fields>
+        <label><!-- BAA External user Name --></label>
+        <name>BAA_External_user_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit DesignFormType --></label>
+        <name>Benefit_DesignFormType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design Form --></label>
+        <name>Benefit_Design_Form__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design Product --></label>
+        <name>Benefit_Design_Product__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design --></label>
+        <name>Benefit_Design__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Benefit Request Form --></label>
+        <name>Benefit_Request_Form__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design</masterLabel>
+            <translation><!-- Benefit Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Form</masterLabel>
+            <translation><!-- Benefit Design Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Product</masterLabel>
+            <translation><!-- Benefit Design Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request Form</masterLabel>
+            <translation><!-- Benefit Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure Request Form</masterLabel>
+            <translation><!-- Group Structure Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation</masterLabel>
+            <translation><!-- Implementation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation><!-- Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Request Form</masterLabel>
+            <translation><!-- Proposal Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposed Product</masterLabel>
+            <translation><!-- Proposed Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workplan Assignment</masterLabel>
+            <translation><!-- Workplan Assignment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Claims Settlement Process Setup / Update --></label>
+        <name>Claims_Settlement_Process_Setup_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- ClonedFromAIADocID --></label>
+        <name>ClonedFromAIADocID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ClonedFromAIADocName --></label>
+        <name>ClonedFromAIADocName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+        <picklistValues>
+            <masterLabel>Account Setup</masterLabel>
+            <translation><!-- Account Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefits</masterLabel>
+            <translation><!-- Benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Communications</masterLabel>
+            <translation><!-- Corporate Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment &amp; Billing</masterLabel>
+            <translation><!-- Enrollment &amp; Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quality and Training</masterLabel>
+            <translation><!-- Quality and Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Status --></label>
+        <name>DocuSign_Status__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Document Approval Date --></label>
+        <name>Document_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Format --></label>
+        <name>Document_Format__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Name --></label>
+        <name>Document_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Status --></label>
+        <name>Document_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final</masterLabel>
+            <translation><!-- Final --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Document Type --></label>
+        <name>Document_Type__c</name>
+        <picklistValues>
+            <masterLabel>AIA Account Issue Documentation</masterLabel>
+            <translation><!-- AIA Account Issue Documentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Cancellation Termination and Transfer Request Form</masterLabel>
+            <translation><!-- Account Cancellation Termination and Transfer Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Implementation Workplan (Internal)</masterLabel>
+            <translation><!-- Account Implementation Workplan (Internal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Impmentation Milestone Workplan (External)</masterLabel>
+            <translation><!-- Account Impmentation Milestone Workplan (External) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Kick-off</masterLabel>
+            <translation><!-- Account Kick-off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Review Committee</masterLabel>
+            <translation><!-- Account Review Committee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Additional Documentation</masterLabel>
+            <translation><!-- Additional Documentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative Service Agreement</masterLabel>
+            <translation><!-- Administrative Service Agreement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative Services Agreement (ASA)</masterLabel>
+            <translation><!-- Administrative Services Agreement (ASA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Document</masterLabel>
+            <translation><!-- Benefit Design Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit EDC</masterLabel>
+            <translation><!-- Benefit EDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request Form</masterLabel>
+            <translation><!-- Benefit Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefits Contracts</masterLabel>
+            <translation><!-- Benefits Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Information Form</masterLabel>
+            <translation><!-- Billing Information Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueFund</masterLabel>
+            <translation><!-- BlueFund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueRewards Wellness</masterLabel>
+            <translation><!-- BlueRewards Wellness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Associate Agreement (BAA)</masterLabel>
+            <translation><!-- Business Associate Agreement (BAA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Associate Confirmation (BAC)</masterLabel>
+            <translation><!-- Business Associate Confirmation (BAC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAG (Carrier Account Group)</masterLabel>
+            <translation><!-- CAG (Carrier Account Group) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CVS Sales Support Request Form</masterLabel>
+            <translation><!-- CVS Sales Support Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cede Document</masterLabel>
+            <translation><!-- Cede Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Census Information</masterLabel>
+            <translation><!-- Census Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Letters</masterLabel>
+            <translation><!-- Client Letters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom BAA</masterLabel>
+            <translation><!-- Custom BAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Funding Letter</masterLabel>
+            <translation><!-- Custom Funding Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Department Notes</masterLabel>
+            <translation><!-- Department Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Department Number Notes</masterLabel>
+            <translation><!-- Department Number Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Data Card (EDC)</masterLabel>
+            <translation><!-- Enrollment Data Card (EDC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FACETS Classes Notes</masterLabel>
+            <translation><!-- FACETS Classes Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FACETS Sub Group Notes</masterLabel>
+            <translation><!-- FACETS Sub Group Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRID (UW)</masterLabel>
+            <translation><!-- GRID (UW) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Contract Application</masterLabel>
+            <translation><!-- Group Contract Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Screener Questionnaire</masterLabel>
+            <translation><!-- Group Screener Questionnaire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure Approval Notification</masterLabel>
+            <translation><!-- Group Structure Approval Notification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure Document</masterLabel>
+            <translation><!-- Group Structure Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure Request Form</masterLabel>
+            <translation><!-- Group Structure Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure with BGI</masterLabel>
+            <translation><!-- Group Structure with BGI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group/Medical - Billing Request Breakdown</masterLabel>
+            <translation><!-- Group/Medical - Billing Request Breakdown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marked Up Benefit Summary</masterLabel>
+            <translation><!-- Marked Up Benefit Summary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Materials</masterLabel>
+            <translation><!-- Marketing Materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Microsite</masterLabel>
+            <translation><!-- Microsite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscillaneous Correspondence</masterLabel>
+            <translation><!-- Miscillaneous Correspondence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mock ID Card</masterLabel>
+            <translation><!-- Mock ID Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Group Benefit Change Worksheet (NGBCW)</masterLabel>
+            <translation><!-- New Group Benefit Change Worksheet (NGBCW) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Enrollment Presentations</masterLabel>
+            <translation><!-- Open Enrollment Presentations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Ancillary (LTD, STD, Etc)</masterLabel>
+            <translation><!-- Other Ancillary (LTD, STD, Etc) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PNF (Plan Notification Form)</masterLabel>
+            <translation><!-- PNF (Plan Notification Form) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRF Assignment</masterLabel>
+            <translation><!-- PRF Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRF Documentation</masterLabel>
+            <translation><!-- PRF Documentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRF Workplan</masterLabel>
+            <translation><!-- PRF Workplan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Par Plan</masterLabel>
+            <translation><!-- Par Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Guarantee Agreements</masterLabel>
+            <translation><!-- Performance Guarantee Agreements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan Comparison</masterLabel>
+            <translation><!-- Plan Comparison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Sale SBC</masterLabel>
+            <translation><!-- Post Sale SBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Producer Service Fee Agreement (Signed)</masterLabel>
+            <translation><!-- Producer Service Fee Agreement (Signed) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Producer Service Fee Agreement (Unsigned)</masterLabel>
+            <translation><!-- Producer Service Fee Agreement (Unsigned) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Production Id Card</masterLabel>
+            <translation><!-- Production Id Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal</masterLabel>
+            <translation><!-- Proposal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation><!-- Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP Responses</masterLabel>
+            <translation><!-- RFP Responses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate EDC</masterLabel>
+            <translation><!-- Rate EDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Data Analyst Request</masterLabel>
+            <translation><!-- Sales Data Analyst Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Data Analyst Response</masterLabel>
+            <translation><!-- Sales Data Analyst Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signed Quote</masterLabel>
+            <translation><!-- Signed Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Benefit Summary</masterLabel>
+            <translation><!-- Standard Benefit Summary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary Of Benefits &amp; Coverage (SBCs)</masterLabel>
+            <translation><!-- Summary Of Benefits &amp; Coverage (SBCs) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supplemental Worksheet for NGBCW</masterLabel>
+            <translation><!-- Supplemental Worksheet for NGBCW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriting (Request For Quote)</masterLabel>
+            <translation><!-- Underwriting (Request For Quote) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsigned Quote</masterLabel>
+            <translation><!-- Unsigned Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Document View --></label>
+        <name>Document_View__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document_sent_to_FileNet --></label>
+        <name>Document_sent_to_FileNet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Recipient user email --></label>
+        <name>Docusign_Recipient_user_email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Sender --></label>
+        <name>Docusign_Sender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Submitter Email --></label>
+        <name>Docusign_Submitter_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Submitter Name --></label>
+        <name>Docusign_Submitter_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Docusign Recipient user name --></label>
+        <name>Docusign_send_user_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- FileNet URL1 --></label>
+        <name>FileNet_URL1__c</name>
+    </fields>
+    <fields>
+        <label><!-- FileNet URL --></label>
+        <name>FileNet_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filenet GUID --></label>
+        <name>Filenet_GUID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generated By --></label>
+        <name>Generated_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group ID --></label>
+        <name>Group_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Structure Document Approval Stage --></label>
+        <name>Group_Structure_Document_Approval_Stage__c</name>
+        <picklistValues>
+            <masterLabel>In Approval</masterLabel>
+            <translation><!-- In Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Step 6-New Business - Account Implementation</masterLabel>
+            <translation><!-- Step 6-New Business - Account Implementation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Step 7-Approved</masterLabel>
+            <translation><!-- Step 7-Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Step 7-Existing Business - Sales / Service Rep</masterLabel>
+            <translation><!-- Step 7-Existing Business - Sales / Service Rep --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Group Structure Request Form --></label>
+        <name>Group_Structure_Request_Form__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Reporting only field and will not be added to the layout --></help>
+        <label><!-- Historical Benefit Design --></label>
+        <name>Historical_Benefit_Design_Document__c</name>
+    </fields>
+    <fields>
+        <label><!-- House Account --></label>
+        <name>House_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is Settlement Analyst filled --></label>
+        <name>Is_Settlement_Analyst_filled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is sent for BAA Approval --></label>
+        <name>Is_sent_for_BAA_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAST Tech --></label>
+        <name>LGIT_Tech__c</name>
+        <relationshipLabel><!-- AIA Documents (MAST Tech) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mock ID AIA User Review reqd --></label>
+        <name>Mock_ID_Par_Plan_Review_reqd__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PRF Owner Email --></label>
+        <name>PRF_Owner_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Year --></label>
+        <name>Plan_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposal Request Form --></label>
+        <name>Proposal_Request_Form__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Proposed Products --></label>
+        <name>Proposed_Products__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- checkbox used by informatica cloud to pick only documents which are approved in salesforce &amp; then send to filenet --></help>
+        <label><!-- Ready for Filenet --></label>
+        <name>Ready_for_Filenet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Request --></label>
+        <name>Reason_for_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales User email --></label>
+        <name>Sales_User_email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seg ID --></label>
+        <name>Seg_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request Form</masterLabel>
+            <translation><!-- Benefit Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation><!-- Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRF</masterLabel>
+            <translation><!-- PRF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workplan Assignment</masterLabel>
+            <translation><!-- Workplan Assignment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub Department --></label>
+        <name>Sub_Department__c</name>
+        <picklistValues>
+            <masterLabel>Account Implementation Workplan (Internal)</masterLabel>
+            <translation><!-- Account Implementation Workplan (Internal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Impmentation Milestone Workplan (External)</masterLabel>
+            <translation><!-- Account Impmentation Milestone Workplan (External) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Kick-off</masterLabel>
+            <translation><!-- Account Kick-off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Review Committee</masterLabel>
+            <translation><!-- Account Review Committee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Acount Cancellation Termination and Transfer Request Form</masterLabel>
+            <translation><!-- Acount Cancellation Termination and Transfer Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative Services Agreement (ASA)</masterLabel>
+            <translation><!-- Administrative Services Agreement (ASA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Form</masterLabel>
+            <translation><!-- Benefit Design Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request Form</masterLabel>
+            <translation><!-- Benefit Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefits Contracts</masterLabel>
+            <translation><!-- Benefits Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefits Summaries</masterLabel>
+            <translation><!-- Benefits Summaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Information Form</masterLabel>
+            <translation><!-- Billing Information Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueFund</masterLabel>
+            <translation><!-- BlueFund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueRewards Wellness</masterLabel>
+            <translation><!-- BlueRewards Wellness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Associate Agreement (BAA)</masterLabel>
+            <translation><!-- Business Associate Agreement (BAA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Associate Confirmation (BAC)</masterLabel>
+            <translation><!-- Business Associate Confirmation (BAC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CVS Sales Support Request Form</masterLabel>
+            <translation><!-- CVS Sales Support Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cede Requests</masterLabel>
+            <translation><!-- Cede Requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Census</masterLabel>
+            <translation><!-- Census --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Letters</masterLabel>
+            <translation><!-- Client Letters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Data Card (EDC)</masterLabel>
+            <translation><!-- Enrollment Data Card (EDC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRID (UW)</masterLabel>
+            <translation><!-- GRID (UW) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Contract Application</masterLabel>
+            <translation><!-- Group Contract Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Screening Questionnaire</masterLabel>
+            <translation><!-- Group Screening Questionnaire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structures</masterLabel>
+            <translation><!-- Group Structures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID Cards</masterLabel>
+            <translation><!-- ID Cards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Materials</masterLabel>
+            <translation><!-- Marketing Materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Microsite</masterLabel>
+            <translation><!-- Microsite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscillaneous Correspondence</masterLabel>
+            <translation><!-- Miscillaneous Correspondence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Group Benefit Change Worksheet (NGBCW)</masterLabel>
+            <translation><!-- New Group Benefit Change Worksheet (NGBCW) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Enrollment Presentations</masterLabel>
+            <translation><!-- Open Enrollment Presentations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Ancillary (LTD, STD, Etc)</masterLabel>
+            <translation><!-- Other Ancillary (LTD, STD, Etc) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Guarantee Agreements</masterLabel>
+            <translation><!-- Performance Guarantee Agreements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan Comparison</masterLabel>
+            <translation><!-- Plan Comparison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP Requests</masterLabel>
+            <translation><!-- RFP Requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP Responses</masterLabel>
+            <translation><!-- RFP Responses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate Sheets</masterLabel>
+            <translation><!-- Rate Sheets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Data Analyst Request Form</masterLabel>
+            <translation><!-- Sales Data Analyst Request Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary Of Benefits &amp; Coverage (SBCs)</masterLabel>
+            <translation><!-- Summary Of Benefits &amp; Coverage (SBCs) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supplemental Worksheet for NGBCW</masterLabel>
+            <translation><!-- Supplemental Worksheet for NGBCW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriting (Request For Quote)</masterLabel>
+            <translation><!-- Underwriting (Request For Quote) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tax ID --></label>
+        <name>Tax_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team-Pharmacy Operations --></label>
+        <name>Team_Pharmacy_Operations__c</name>
+        <relationshipLabel><!-- AIA Documents (Team-Pharmacy Operations) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Team - Vision Analyst --></label>
+        <name>Team_Vision_Analyst__c</name>
+        <relationshipLabel><!-- AIA Documents (Team - Vision Analyst) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Assignment --></label>
+        <name>Workplan_Assignment__c</name>
+        <relationshipLabel><!-- AIA Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Zip File --></label>
+        <name>Zip_File__c</name>
+    </fields>
+    <fields>
+        <label><!-- approval size --></label>
+        <name>approval_size__c</name>
+    </fields>
+    <fields>
+        <label><!-- submitter --></label>
+        <name>submitter__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>AIA Document</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AIA Documents</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Docusign Document Layout</layout>
+        <sections>
+            <label><!-- Approvers --></label>
+            <section>Approvers</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Related Objects --></label>
+            <section>Related Objects</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>File Net Document Layout</layout>
+        <sections>
+            <label><!-- Approvers --></label>
+            <section>Approvers</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Related Objects --></label>
+            <section>Related Objects</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Recordtype for all AIA Documents related to Docusign documents like BAA, BAC etc --></description>
+        <label><!-- Non-Standard --></label>
+        <name>Non_Standard</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Recordtype for all AIA Documents other than Docusign documents like BAA, BAC etc --></description>
+        <label><!-- Standard --></label>
+        <name>Standard</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Error AIA002:  Adj Summary Revision # can have value only if BD is not blank --></errorMessage>
+        <name>AIA002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EDOC001: Adj. Summ. Revision # field can only be added to the Benefit Design NAEGS, not on any other document --></errorMessage>
+        <name>EDOC001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EDOC002: AIA Documents cannot be updated when Benefit Design status is In Review. --></errorMessage>
+        <name>EDOC002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EDOC003: For Document Type &quot;Unsigned Quote&quot; Description field cannot be blank --></errorMessage>
+        <name>EDOC003</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_AIA_Document --></label>
+        <name>Add_AIA_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- BAA_Rejection_Email --></label>
+        <name>BAA_Rejection_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Customized_BAA_for_Signature --></label>
+        <name>Send_Customized_BAA_for_Signature</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,233 @@
+<!-- 
+*===================================================================================================
+* Date         : 04/24/2018
+* Developer    : Rajesh Pennam
+* Purpose      : This is the VF page for adding account team members for accounts
+*===================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date          Developer     Tag   Description
+*===================================================================================================
+* 04/24/2018 | Rajesh Pennam |     | This page is used Add/Replace the Account Team Members
+* 04/30/2018 | Rajesh Pennam | T01 | US1610:Added new Panel to render and show an error message for users 
+*                                    who are not authorized to update the Account Team Roles
+* 05/07/2018 | Rajesh Penam  | T02 | US1790:Updated the logic to see the users and active tasks for Team Member Picklist
+* 05/16/2018 | Phanishankar P| T03 | Code to populate Account team members properly based on role (Defect 39319)
+* 01/30/2019 | Satya T       | T04 | Changed reference of standard Account Team Member with Custom Account Team Member.
+*===================================================================================================-->
+
+<apex:page standardController="Account" recordSetVar="Accounts" id="mainPG" extensions="AIA_Acc_TeamMemAdd_controller"  
+           sidebar="false" lightningStylesheets="true" docType="html-5.0" action="{!AIA_AccountTeamMember}" showHeader="false">
+    <apex:includeScript value="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"/>
+    <style>
+        .selectOpt{
+        font-family: monospace;
+        }
+    </style>
+    <!-- T03 Start -->
+    <script>
+    j$ = jQuery.noConflict();
+    var elem;
+    j$(document).on('change','.accrole',function(){
+        elem=j$(this);
+        });
+    function changetonone(){
+        elem.closest('td').next().find('select').val('');
+        }
+    function sendparam(selrole,cnt){            
+        sendparamtoclass(selrole,cnt);// this call the action function        
+    }
+    
+    </script>
+    <!-- T03 End -->
+    <apex:slds />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.AIAToastMessage, '/styles/salesforce-lightning-design-system.min.css')}"/>
+    <c:AIA_Account_Team_Roles_Component /> <!-- This component has all the CSS styling for the VF page -->
+    
+    <!-------------------------------------- Core VF Page Starts ---------------------------------------------------------------------->
+    <apex:form id="fm" enctype="multipart/form-data" styleClass="myFormStyle" >
+        <apex:actionFunction action="{!populateRole}" name="sendparamtoclass" reRender="tmplst" onComplete="sampleMethod();changetonone()" > 
+            <apex:param value="" name="param1"/>
+            <apex:param value="" name="param2" />            
+        </apex:actionFunction>        
+        
+        <!-- T01 -->
+        <apex:actionFunction action="{!listView}" name="lstviw" rerender="" />
+        <apex:outputPanel id="pnl1" rendered="{!displayEditPopup}">   
+            <!--This code is used for modal display -->
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+                <div align="center">
+                    <apex:outputText >Do you want Add/Update Account Team Roles</apex:outputText> <br/><br/><br/>
+                    <apex:commandButton value="Ok" action="{!addTeamMember}"/>
+                    <apex:commandButton value="cancel" action="{!cancelTeamPop}"/>
+                </div>  
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!displayFinalPopUp}" >
+                <!-- This code is used to show the Toast Message upon confirmation message --->
+                <div class="slds-notify_container slds-is-relative slds-show popupboxoverride" >
+                    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+                        <span class="slds-assistive-text">success</span>
+                        <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#success" />
+                            </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small ">Account Team Members were successfully added to  {!recCount}  accounts.</h2>
+                        </div>
+                        <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close">
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- This script is used for displaying the Toast for 5 seconds and auto redirect to Accounts List View Page --->   
+                <script type="text/javascript">
+                // Any js placed here will be fired when output panel is rerendered
+                (function(){
+                    var di = '{!displayFinalPopUp}';
+                    setTimeout(lstviw, 5000);  
+                })();
+                </script>
+            </apex:outputPanel> 
+            
+            <apex:pageBlock id="pgb" mode="maindetail">
+                <apex:pageMessages id="testerr"></apex:pageMessages>
+                <apex:outputLabel value="Add Team Members" for="addTeamMembers" style="color:#484848; margin-left: 500px; font-size:20px; font-weight:100;padding-bottom:15px !important"/> 
+                <hr style="margin: auto !important;"/>
+                <!-- This section to Populate all the accounts selected in the list view -->
+                
+                <apex:outputPanel styleClass="color marginToppgblk1" layout="block"> 
+                    <apex:pageBlockSection title="Accounts" collapsible="false" id="pbgs" columns="1">
+                        <apex:outputText style="font:18px;">{!accountNames}</apex:outputText>
+                    </apex:pageBlockSection>
+                </apex:outputPanel> 
+                
+                <apex:outputPanel id="tstPnl">                                                  
+                    <!-- This section is used to populate the user and their roles -->
+                    <apex:pageBlockTable headerClass="headHeight" value="{!lstATMWrappercls}" var="accountTeam" id="table" styleClass="slds-table slds-table_bordered slds-table_cell-buffer" style="width:100%">
+                        <apex:variable value="{!0}" var="Cnt" />
+                        
+                        <!-- This section to have the dynamic role populated depending on the user selection -->
+                        <apex:column headerValue="Account Role" id="comm1">
+                           <!-- T04 Start -->  
+                         <!-- <apex:selectList styleClass="accrole" value="{!accountTeam.ATM.TeamMemberRole}" onchange="sendparam(this.value,{!Cnt});" size="1" required="false" style="height:33px;" > -->
+                            <apex:selectList styleClass="accrole" value="{!accountTeam.ATM.TeamMemberRole__c}" onchange="sendparam(this.value,{!Cnt});" size="1" required="false" style="height:33px;" >
+                           <!-- T04 End -->      
+                                <apex:selectOptions value="{!allowedRoles}"  />
+                                
+                            </apex:selectList>                       
+                            <p id="errorcomm{!Cnt}"></p>                            
+                        </apex:column>
+                        
+                        <!-- This is the column header to have the User Name popoulated using a custom lookup component -->
+                        <apex:column headerValue="Team Member" style="padding-bottom:10px;padding-top:10px;" >
+                            <div id="mem" >                                
+                                <!-- T04 Start --> 
+                            <!-- <apex:selectList value="{!accountTeam.ATM.User}" size="1" required="false" style="height:33px; width:Auto;font-family: monospace,SalesforceSans-Regular,Arial,sans-serif !important;" id="tmplst" styleClass="someClass"> -->
+                               <apex:selectList value="{!accountTeam.ATM.UserId__c}" size="1" required="false" style="height:33px; width:Auto;font-family: monospace,SalesforceSans-Regular,Arial,sans-serif !important;" id="tmplst" styleClass="someClass">                                   
+                                <!-- T04 End -->
+                                    <div id="mem1">
+                                        <apex:selectOptions value="{!accountTeam.users}" />  
+                                    </div>                                  
+                                </apex:selectList>
+                            </div>                            
+                        </apex:column>
+                        <!-- This section to have the column to check if the user want to transfer Workplan assignments or not -->
+                        <apex:column headerValue="Transfer Active Workplan Tasks?" id="comm">                            
+                            <apex:selectList value="{!accountTeam.transferable}" size="1" required="false" style="height:33px; width:50px;">
+                                <apex:selectOption itemLabel="Yes" itemValue="Yes"/>
+                                <apex:selectOption itemLabel="No" itemValue="No"/>
+                            </apex:selectList>
+                            <p id="errorcomm{!Cnt}"></p>                            
+                        </apex:column>
+                        
+                        <!-- This column is used to delete the rows --->
+                        <apex:column headervalue="Delete">                            
+                            <apex:commandlink value="X" action="{!removeRowFromList}"  onComplete="sampleMethod();"  reRender="tstPnl" style="color:#404040;size:40px;text-shadow: 0px 1px, 1px 0px, 1px 1px;padding-left:15px;">
+                                <!-- Pass the row number to the controller so that we know which row to remove -->
+                                <apex:param name="index" value="{!Cnt}" assignTo="{!rowToRemove}" />
+                            </apex:commandlink>                            
+                            <apex:variable var="Cnt" value="{!Cnt+1}" />                            
+                        </apex:column>                        
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+                
+                <!----- This block is for user to add new team member to the page ----->
+                <div style="margin-left: 22px;font-weight:bold; margin-top:20px !important;">
+                    <apex:commandLink value="ADD ANOTHER TEAM MEMBER" action="{!addRow}" reRender="tstPnl,testerr" onComplete="sampleMethod();" />
+                </div>
+                
+                
+                <!-- This section is for button -->
+                <apex:pageBlock mode="maindetail">
+                    <apex:pageBlockButtons location="bottom" style="padding-top: 15px;margin-bottom:1rem;
+                                                                    padding-bottom: 16px;background:rgb(242, 242, 242, 1);" id="footerID"> <!-- margin-bottom:1rem; background:rgb(243, 242, 242);-->
+                        <div id="tst1" style="float: right; padding-right:10px;">
+                            <apex:commandButton value="Cancel" action="{!listView}" immediate="true"  />
+                            <apex:commandButton value="Add/Replace Members" action="{!addTeamMember}" style="background:rgba(0, 112, 210, 1.0); color:white;" />
+                        </div>
+                    </apex:pageBlockButtons>
+                </apex:pageBlock> 
+            </apex:pageBlock>
+            <!-- T01 -->
+        </apex:outputpanel>
+        
+        <!--T01 This panel is used to display only for user who are not authorized to access the Add/Replace Account Team Members -->
+        <apex:outputPanel id="pnl2" rendered="{!!displayEditPopup}">
+            <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!!displayEditPopup}">
+                <div align="center">
+                    <apex:outputText style="font-weight: normal;" value="You Are Not Authorized to Add/Replace Account Team Members"/> <br/><br/> 
+                    <!-- <apex:outputText style="font-weight:100" value="this text should be in bold"/> -->
+                    <apex:commandButton value="Ok" action="{!listView}" styleClass="padding-left:15px;"/>
+                </div>  
+            </apex:outputPanel>          
+        </apex:outputPanel> 
+    </apex:form>
+    
+    <!-- T02 -->
+    <!-- The below script is used to show the Active Tasks for the User-->
+    <script>
+    var $ = jQuery.noConflict();
+    $(document).ready(function() {
+        sampleMethod();
+        
+    });
+    function sampleMethod() {
+        var spacesToAdd = 5;
+        var biggestLength = 0;
+        
+        $(".someClass option").each(function(){
+            var parts = $(this).text().split('#');
+            var len = parts[0].length;
+            //var len = $(this).text().length;
+            if(len > biggestLength){
+                biggestLength = len;
+            }
+        });
+        console.log('biggestLength**'+biggestLength);
+        var padLength = biggestLength + spacesToAdd;
+        $(".someClass option").each(function(){
+        console.log('val'+ $(this).val());
+            var parts = $(this).text().split('#');
+            var strLength = parts[0].length;
+            for(var x=0; x<(padLength-strLength); x++){
+                parts[0] = parts[0]+' '; 
+            }
+            //var part2 = '';
+            if (typeof parts[1] == "undefined") {
+                $(this).text(parts[0].replace(/ /g, '\u00a0')).text;
+            }
+            else{
+                $(this).text(parts[0].replace(/ /g, '\u00a0')+parts[1]).text;
+            }
+        });
+    }    
+    </script>    
+</apex:page>

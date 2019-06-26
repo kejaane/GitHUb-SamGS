@@ -1,0 +1,227 @@
+<!--==========================================================================================================================
+ * Date         : 2/14/2017
+ * Developer    : Sree Harsha
+ * Purpose      : Benefit Design Deep Clone User Story B-03733.
+ *                Deep Clones the Benefit Design from last year along with all child objects including Benefit Design Form,
+ *                AIA documents and Benefit Design Products. User is given an option to choose BDP's and subsequently a PCS 
+ *                call is made for each BDP or plan and updated plan is stored in the new deep cloned Benefit Design but
+ *                user's customizations of data for the old plan are maintained.
+ *============================================================================================================================
+ *                                 Update History
+ *                                 --------------
+ * Date       |  Developer      | Tag  | Description
+ *============+==================+=====+======================================================================================
+ * 2/14/2017 |  Sree Harsha     |       | Initial Version    
+ * 04/02/2018| Raviteja V  		| T01   | Added clone functionality to Carefirst Private Exchange BD products
+ *============+==================+=====+======================================================================================
+-->
+<apex:page showHeader="true" standardController="AIA_Implementation__c" extensions="AIA_BD_DeepClone" sidebar="false" lightningStylesheets="{!!isClassic}" docType="html-5.0">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+     <apex:slds rendered="{!!isClassic}"/> <!-- T01 -->
+     <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+     
+          <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+      function sendRequest(planid,planIdValue,obj,BDPID,BDPName,BDPCat)
+      {
+          if(obj.checked)
+          {
+              //T01 Added parameter
+            ValidateAndCallPCS(planid,planIdValue,BDPID,BDPCat);
+          }
+          else
+          {
+            deleteBDP(BDPID,BDPName);
+          }
+      }
+      
+      function showOverlay(){
+          $('#loadingbackground').show();
+          $('#loadingbox').show();
+          
+      }
+    function hideOverlay(){
+        
+        $('#loadingbackground').hide();
+        $('#loadingbox').hide();
+    }
+    /* 
+      function showOverlay(){
+          $('#overlaypanel').show();
+      }
+      function hideOverlay(){
+          $('#overlaypanel').hide();
+      }
+     */ 
+   </script>
+   
+    <c:AIA_PCS_VF_Page_Styles />
+    
+    
+       <apex:form id="BRFDeepClone" enctype="multipart/form-data"> 
+ <apex:pageMessages />
+  <apex:actionFunction action="{!ValidateAndCallPCS}" status="overlayst" name="ValidateAndCallPCS" reRender="BRFDeepClone">
+      <apex:param name="planid" value=""/>
+      <apex:param name="planIdValue" value=""/>
+      <apex:param name="BDPID" value=""/>
+      <apex:param name="BDPCat" value=""/>
+  </apex:actionFunction>
+  <apex:actionFunction action="{!deleteBDP}" status="overlayst" name="deleteBDP" reRender="BRFDeepClone">
+       <apex:param name="BDPID" value=""/>
+       <apex:param name="BDPName" value=""/>
+    </apex:actionFunction>
+  <apex:actionStatus onstart="showOverlay();" onstop="hideOverlay();" id="overlayst"/> 
+   
+      <div class="overlay" id="overlaypanel">
+          <div id="loading-img"></div>
+      </div>
+
+<apex:pageBlock title="{!pagetitle}" id="thePageBlock">
+
+     <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText >Do you want to cancel BD Clone? </apex:outputText> <br/><br/><br/>
+        <apex:commandButton value="Ok" action="{!returnToBDP}"/>
+        <apex:commandButton value="cancel" action="{!cancelButton}"/>
+
+      </div>  
+    </apex:outputPanel>
+       <div Class="popupBackground" layout="block" id="loadingbackground" style="display:none"/>
+    <div Class="popupBox" layout="block" id="loadingbox" style="display:none">
+      <div align="center">
+          <br/><br/>
+          <div role="status" class="slds-spinner slds-spinner_medium" >
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+          </div><br/><br/>
+
+      </div>  
+    </div>
+           <div align="center" draggable="false" >
+           <apex:commandButton action="{!cancelBDP}"  value="{!IF(IsSummaryPanel,'Cancel and Back to BD','Cancel and Back to BD')}"  id="theCancelButton" styleClass="slds-button slds-button_neutral" />
+        <apex:commandButton action="{!back}" value="Back to BD Product Selection" rendered="{!IsSummaryPanel}" rerender="BRFDeepClone" id="thebackButton" styleClass="slds-button slds-button_neutral" />
+        <apex:commandButton action="{!next}"  value="{!IF(IsSummaryPanel,'Clone BD','Next')}" onclick="showOverlay();"  id="NextButton" rerender="BRFDeepClone" Oncomplete="hideOverlay();" styleClass="slds-button slds-button_neutral" />
+           </div>
+    <br/>
+    <!--- BD Panel for lightning User Start --> 
+    
+    
+   
+    <apex:outputPanel id="BDPanel" rendered="{!IsBrfPanel}">
+        
+        <apex:outputPanel rendered="{!!isClassic}"> <!-- T01--> 
+            <apex:pageBlockSection title="Information" columns="2">   
+                <apex:pageBlockSectionItem >
+                    <apex:outputlabel >  Source BD</apex:outputlabel>
+                    <Apex:Outputlink target="" value="/{!bd.Source_BD__c}">{!BDSource}</Apex:Outputlink> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputlabel >  Related BRF</apex:outputlabel>
+                    <Apex:Outputlink target="" value="/{!bd.Related_BRF__c}">{!RelatedBRF}</Apex:Outputlink> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputlabel >  Implementation</apex:outputlabel>
+                    <Apex:Outputlink target="" value="/{!bd.Implementation__c}">{!ImplementationBD}</Apex:Outputlink> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputlabel >Account</apex:outputlabel>
+                    <Apex:Outputlink target="" value="/{!bd.Account__c}">{!BDAccount}</Apex:Outputlink> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputlabel >Parent Account</apex:outputlabel>
+                    <Apex:Outputlink target="" value="/{!bd.Parent_Account__c}">{!BDParentAccount}</Apex:Outputlink> 
+                </apex:pageBlockSectionItem>
+          
+            </apex:pageBlockSection>
+            </apex:outputPanel>
+        <!--- BD Panel for lightning User End --> 
+         <!--- BD Panel for Classic User Start -->  
+        <apex:outputPanel rendered="{!isClassic}"> 
+            
+            <apex:pageBlockSection title="Information">
+                
+                <apex:inputfield value="{!bd.Source_BD__c}" required="True" />
+                <apex:inputfield value="{!bd.Related_BRF__c}" />
+                <apex:inputfield value="{!bd.Implementation__c}" />
+                <apex:inputfield value="{!bd.Account__c}" />
+                <apex:inputfield value="{!bd.Parent_Account__c}" />
+                
+            </apex:pageBlockSection>
+        </apex:outputPanel>
+        <!--- BD Panel for Classic User End --> 
+    <apex:pageBlockSection title="Related AIA Documents" columns="1">  
+    <apex:pageblockTable value="{!RelatedAIADocument}" var="AIAobj" columnsWidth="50%,75%,200%,350%,100%">
+         <apex:column headerValue="Select">
+                  <apex:outputPanel rendered="{!isClassic}">
+                   <apex:inputCheckbox value="{!AIAobj.checked}" styleclass="slds-input" style="width:15px;height:3px;"/>  
+                  </apex:outputPanel> 
+                  <apex:outputPanel rendered="{!!isClassic}">
+                     <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    
+                                    <label class="slds-checkbox">
+                                        <apex:inputcheckbox value="{!AIAobj.checked}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>  
+                   </apex:outputPanel>                                    
+                  </apex:column> 
+        <apex:column value="{!AIAobj.aiaDoc.Name}" headerValue="Name"/>
+        <apex:column value="{!AIAobj.aiaDoc.Document_Type__c}" headerValue="Document Type"/> 
+        <apex:column value="{!AIAobj.aiaDoc.Document_Name__c}" headerValue="Document Name"/>
+        <apex:column value="{!AIAobj.aiaDoc.Source__c}" headerValue="Source"/> 
+    </apex:pageblockTable>
+               </apex:pageBlockSection>
+
+    </apex:outputPanel>
+    <apex:outputPanel id="BDPPanel" rendered="{!IsPPPanel}">
+       <apex:pageBlockSection title="Related Proposed Products" columns="1">  
+    <apex:pageblockTable value="{!lstBDPWrapper}" var="BDPobj" columnsWidth="50%,75%,150%,150%,350%">
+        <apex:column headerValue="Select">
+            <apex:inputCheckbox onclick="showOverlay();sendRequest('{!BDPobj.bdp.Plan_Name__c}' , '{!BDPobj.bdp.Plan_Name__r.Plan_Id__c}', this, '{!BDPobj.bdp.Id}', '{!BDPobj.bdp.Name}','{!BDPobj.bdp.Product_Category__c}');" value="{!BDPobj.checked}" /> 
+        </apex:column> 
+        <apex:column value="{!BDPobj.bdp.Name}" headerValue="Name"/>
+        <apex:column value="{!BDPobj.bdp.Product_Category__c}" headerValue="Product Category"/> 
+        <apex:column value="{!BDPobj.bdp.Custom_New__c}" headerValue="Customization Type"/>
+        <apex:column value="{!BDPobj.bdp.Product_Parent_Name__c}" headerValue="Product Name"/> 
+    </apex:pageblockTable>
+    </apex:pageBlockSection>
+    </apex:outputPanel>
+    
+   <apex:outputPanel id="SummaryPanel" rendered="{!IsSummaryPanel}">
+      <apex:pageBlockSection title="Information">
+         <apex:outputField value="{!newBD.Source_BD__c}"/>
+         <apex:outputField value="{!newBD.Related_BRF__c}"/> 
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Related AIA Documents" columns="1">
+         <apex:pageblockTable value="{!selAIA_DocList}" var="AIAobj" columnsWidth="100%,150%,350%,150%">                  
+            <apex:column value="{!AIAobj.ClonedFromAIADocName__c}" headerValue="Name"/>
+            <apex:column value="{!AIAobj.Document_Type__c}" headerValue="Document Type"/>
+            <apex:column value="{!AIAobj.Document_Name__c}" headerValue="Document Name"/>
+            <apex:column value="{!AIAobj.Source__c}" headerValue="Source"/>
+         </apex:pageblockTable>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Related Benefit Design Products" columns="1">
+         <apex:pageblockTable value="{!bdpListToShow}" var="bdpobj" columnsWidth="100%,150%,150%,350%">
+            <apex:column value="{!bdpobj.Cloned_From_Name__c}" headerValue="Name"/>
+            <apex:column value="{!bdpobj.Product_Category__c}" headerValue="Product Category"/>
+            <apex:column value="{!bdpobj.Custom_New__c}" headerValue="Customization Type"/>
+            <apex:column value="{!bdpobj.Product_Parent_Name__c}" headerValue="Product Name"/>
+         </apex:pageblockTable>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Related Benefit Design Form" columns="1">
+         <apex:pageblockTable value="{!listBDFToshow}" var="bdfobj" columnsWidth="70%,100%,350%">
+            <apex:column value="{!bdfobj.name}" headerValue="Name"/>
+            <apex:column value="{!bdfobj.recordtype.name}" headerValue="Record Type Name"/>
+            <apex:column value="{!bdfobj.Account_Legal_Name__c}" headerValue="Account Legal Name"/>
+         </apex:pageblockTable>
+      </apex:pageBlockSection>
+   </apex:outputPanel>
+</apex:pageBlock> 
+</apex:form>
+</apex:page>

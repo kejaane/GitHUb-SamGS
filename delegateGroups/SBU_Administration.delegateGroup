@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DelegateGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groups>SBU Broker Compliance</groups>
+    <groups>SBU_Broker Sales Support</groups>
+    <groups>SBU_Non Platinum Support</groups>
+    <groups>SBU_Platinum Support</groups>
+    <groups>SBU Reporting Users</groups>
+    <label>SBU Administration</label>
+    <loginAccess>false</loginAccess>
+    <roles>SBU Management</roles>
+</DelegateGroup>

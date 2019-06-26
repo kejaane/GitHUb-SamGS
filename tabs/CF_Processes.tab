@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This page is for use by administrators and is automation support for the monthly import SOPs.</description>
+    <label>CF Processes</label>
+    <motif>Custom43: Jewel</motif>
+    <page>AutomationProcessList</page>
+</CustomTab>

@@ -1,0 +1,9 @@
+Please identify the new business consultant to create a new opportunity for this Dead renewal account.
+
+The opportunity name is {!Opportunity.Name}.
+
+Marked dead {!Opportunity.Contract_End_Date__c}.
+
+The won/loss reason is {!Opportunity.Won_Lost_Reason__c}.
+
+Click here to go to the opportunity {!Opportunity.Link}.

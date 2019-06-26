@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AE_Id__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AE Id</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AE_Name__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AE Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AG_Not_Found__c</fullName>
+        <description>Holds the AG id fro Enrollment import when a proper match is not found on account object</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AG Not Found</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AG_Rank_by_Contracts__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>if(isblank(AG__c),'04 - 322 ' + 'Direct',if(isblank( AG__r.AG_Rank__c ),'Not Ranked',
+    if(AG__r.AG_Rank__c&lt;10,'0'+text(AG__r.AG_Rank__c) + ' - ' + HYPERLINK('/'+ AG__c, text(AG__r.AG_Contracts_for_Year__c) + ' ' +  AG__r.Name ,'_self') ,text(AG__r.AG_Rank__c) + ' - ' + HYPERLINK('/'+ AG__c,text(AG__r.AG_Contracts_for_Year__c) + ' '+ AG__r.Name,'_self'))))</formula>
+        <label>AG Rank by Contracts</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AG_Rank_by_Groups__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(isblank(AG__c),'04 - 322 ' + 'Direct',if(isblank( AG__r.AG_Rank__c ),'Not Ranked',if(AG__r.AG_Rank__c&lt;10,'0'+text(AG__r.AG_Rank__c) + ' - ' 
++ HYPERLINK('/' + AG__c, text(AG__r.AG_Groups_for_Year__c) + ' ' + AG__r.Name , '_self') ,text(AG__r.AG_Rank__c) + ' - '
+ + HYPERLINK('/' + AG__c, text(AG__r.AG_Groups_for_Year__c) + ' '+ AG__r.Name, '_self'))))</formula>
+        <label>AG Rank by Groups</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AG__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>AG</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Enrollments_Account_AG</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AM_Id__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AM Id</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AM_Name__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AM Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Number__c</fullName>
+        <description>Nasco number</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <length>7</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active_Contract__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ISPICKVAL(Status__c, 'Active'), Contracts__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active Contract</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active_Group__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ISPICKVAL(Status__c, 'Active'), Groups__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active Group</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Break_Out_Level__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Break Out Level</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contracts__c</fullName>
+        <externalId>false</externalId>
+        <label>Contracts</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Curr_Baseline_Compensation_Owner__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Curr Baseline Compensation Owner</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Curr_Baseline_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>This field holds the number of contracts during the January reporting month i.e. where Rpt_Dt__c is like 'YYYY01' e.g. 201301. The field is used to calculate baseline contracts for retention book of business reports</description>
+        <externalId>false</externalId>
+        <label>Curr Baseline Contracts</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Curr_Fiscal_Year__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Curr Fiscal Year</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Account_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Customer Account Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Enrollments_Account_Customer</relationshipLabel>
+        <relationshipName>Enrollments_Account_Customer</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EIN__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>EIN</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrl_Rpt_Dt__c</fullName>
+        <description>Converts the RPT_DT__C format (CCYYMM) to CCYY-MM-01 then subtracts 1 day to get to the last day of the previous month then adds 35 days moving the date two months ahead then back to CCYY-MM-01 one month ahead of the original CCYYMM and finally subtract 1 day from that date to get to the last day of the original CCYYMM..
+Example CCYYMM starts of as 201307
+201307 to 2013-06-01 to 2013-08-?? to 2013-08-01 and finally subtracting a day making it 2013-07-31</description>
+        <externalId>false</externalId>
+        <formula>DATEVALUE(
+   TEXT(YEAR(DATEVALUE(TEXT(DATEVALUE(LEFT(Rpt_Dt__c,4)+ "-" + RIGHT(Rpt_Dt__c,2) + "-1" ) -1)) + 35)) + "-" +
+   TEXT(MONTH(DATEVALUE(TEXT(DATEVALUE(LEFT(Rpt_Dt__c,4)+ "-" + RIGHT(Rpt_Dt__c,2) + "-1" ) -1)) + 35)) + "-1"
+) -1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Enrl Rpt Dt</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FSP_Not_Found__c</fullName>
+        <description>Holds the FSP id that was not found in the account object as entity Id</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>FSP Not Found</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>FSP</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Enrollments_Account_FSP</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FSP_by_Contract__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/' + FSP__c, if(isblank(FSP__c),'Not FSP ', text(FSP__r.FSP_Contracts_for_year__c) + ' '+ FSP__r.Name), '_self')</formula>
+        <label>FSP by Contract</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSP_by_Group__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/' + FSP__c, if(isblank(FSP__c),'Not FSP ', text(FSP__r.FSP_Groups_for_Year__c) + ' '+ FSP__r.Name), '_self')
+
+/*
+if(isblank(FSP__c),'Not FSP ', text(FSP__r.FSP_Groups_for_Year__c) + ' '+ FSP__r.Name)
+*/</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FSP by Group</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GP_Not_Found__c</fullName>
+        <description>Holds the GP id that was not found on Account object</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>GP Not Found</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>GP</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Enrollments_Account_GP</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GP_by_Contract__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/' + GP__c, if(isblank(GP__c),'Not GP ', text(GP__r.GP_Contracts_for_Year__c) + ' '+ GP__r.Name), '_self')</formula>
+        <label>GP by Contract</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GP_by_Groups__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/' + GP__c, if(isblank(GP__c),'Not GP ', text(GP__r.GP_Groups_for_Year__c) + ' '+ GP__r.Name), '_self')</formula>
+        <label>GP by Groups</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group_Type__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Group Type</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Groups_Medical__c</fullName>
+        <externalId>false</externalId>
+        <label>Groups Medical</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Groups__c</fullName>
+        <externalId>false</externalId>
+        <label>Groups</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Latest_Enrollment__c</fullName>
+        <externalId>false</externalId>
+        <label>Latest Enrollment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Metal_Level__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Metal Level</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Business_Indicator__c</fullName>
+        <externalId>false</externalId>
+        <label>New Business Indicator</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>On_Cycle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field checks to be true if a record is on-cycle termed when termination date is exactly a month before renewal date provided that it is the same year or if the termination month is 12 and the renewal month is 1. The formula for this field exist on Enrollment_import_2_50 and its mapped here</description>
+        <externalId>false</externalId>
+        <label>On Cycle</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Enrollments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>PDB_Not_Found__c</fullName>
+        <description>Holds the PDB id that was not found in the account object as entity Id</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>PDB Not Found</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PDB_Rank_by_Contracts__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>if(isblank(PDB__c),'04 - 322 ' + 'Direct',if(isblank( PDB__r.PDB_Rank__c ),'Not Ranked',
+ if(PDB__r.PDB_Rank__c&lt;10,'0'+text(PDB__r.PDB_Rank__c) + ' - ' + HYPERLINK('/'+ PDB__c, text(PDB__r.PDB_Contracts_for_Year__c) + ' ' + PDB__r.Name ,'_self') ,text(PDB__r.PDB_Rank__c) + ' - ' + HYPERLINK('/'+ PDB__c,text(PDB__r.PDB_Contracts_for_Year__c) + ' '+ PDB__r.Name,'_self'))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PDB Rank by Contracts</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PDB_Rank_by_Groups__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(isblank(PDB__c),'04 - 322 ' + 'Direct',if(isblank( PDB__r.AG_Rank__c ),'Not Ranked',if(PDB__r.PDB_Rank__c&lt;10,'0'+text(PDB__r.PDB_Rank__c) + ' - ' 
++ HYPERLINK('/' + PDB__c, text(PDB__r.PDB_Groups_for_Year__c) + ' ' + PDB__r.Name , '_self') ,text(PDB__r.PDB_Rank__c) + ' - '
+ + HYPERLINK('/' + PDB__c, text(PDB__r.PDB_Groups_for_Year__c) + ' '+ PDB__r.Name, '_self'))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PDB Rank by Groups</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PDB__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>PDB</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Enrollments (Account)</relationshipLabel>
+        <relationshipName>Enrollments_Account_PDB</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PDB_by_Contract__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/' + PDB__c, if(isblank(PDB__c),'Not PDB ', text(PDB__r.PDB_Contracts_for_Year__c) + ' '+ PDB__r.Name), '_self')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PDB by Contract</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PDB_by_Groups__c</fullName>
+        <description>The hyperlink returns on reports with words but behind the scenes reports use the hyperlink value; therefore, you may have to use the operator 'Contains' or 'Not Contains' to get reporting to work like you expect.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK('/' + PDB__c, if(isblank(PDB__c),'Not GP ', text(PDB__r.PDB_Groups_for_Year__c) + ' '+ PDB__r.Name), '_self')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PDB by Groups</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prev_Baseline_Compensation_Owner__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Prev Baseline Compensation Owner</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prev_Baseline_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Prev Baseline Contracts</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prev_Fiscal_Year__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Prev Fiscal Year</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Processed_Type__c</fullName>
+        <description>Identifies if the record was from the Medical (M) or the Ancillary (A) file</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Processed Type</label>
+        <length>1</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reinstatement_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Reinstatement Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Anniversary_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Renewal Anniversary Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Reporting_Checkbox_Formula_Off_Cycle__c</fullName>
+        <description>this field checks true if either the status is active and the rpt_dt__c is a specified number/date or status is termed and is OFF cycle. This field is used in creating Retention reports to count active and termed data separately but in the same report. 
+Note: This field is being used by ReportingChecbox__c</description>
+        <externalId>false</externalId>
+        <formula>if( OR(AND(Rpt_Dt__c="201904",  ISBLANK(Termination_Date__c) ),
+      (AND(NOT(ISBLANK(Termination_Date__c)),On_Cycle__c = False))),True,False)</formula>
+        <label>Reporting_Checkbox_Formula_Off_Cycle</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reporting_Checkbox_Formula_On_Cycle__c</fullName>
+        <description>this field checks true if either the status is active and the rpt_dt__c is a specified number/date or status is termed and is on cycle. This field is used in creating Retention reports to count active and termed data separately but in the same report. 
+Note: This field is being used by ReportingChecbox__c</description>
+        <externalId>false</externalId>
+        <formula>if( OR(AND(Rpt_Dt__c="201904",  ISBLANK(Termination_Date__c) ),
+      (AND(NOT(ISBLANK(Termination_Date__c)),On_Cycle__c = True))),True,False)</formula>
+        <label>Reporting_Checkbox_Formula_On_Cycle</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reporting_Checkbox_Off_Cycle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Will hold the static data of Reporting_Checkbox_off_cycle__c copied from  Reporting_Checkbox_formula_off_cycle__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>holds the static data of Reporting_Checkbox_formula_off_cycle__c</inlineHelpText>
+        <label>Reporting Checkbox_Off_Cycle</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reporting_Checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Will hold the static data of Reporting_Checkbox_on_cycle__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>holds the static data of Reporting_Checkbox_formula_on_cycle__c</inlineHelpText>
+        <label>Reporting Checkbox_On_Cycle</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Risk__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Risk</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rpt_Dt__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Rpt Dt</label>
+        <length>6</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Run_Dt__c</fullName>
+        <description>Date that the import file was created</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Run Dt</label>
+        <length>23</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SB_Not_Found__c</fullName>
+        <description>holds the SB id of the contact that was not found</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>SB Not Found</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SB_Rank_by_Contracts__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(isblank(SB__c),'04 - 322 ' + 'Direct',if(isblank( SB__r.SB_Rank__c ),'Not Ranked',if(SB__r.SB_Rank__c&lt;10,'0'+text(SB__r.SB_Rank__c) + ' - ' 
++ HYPERLINK('/' + SB__c, text(SB__r.Contracts_for_Year__c) + ' ' + SB__r.FirstName + ' ' + SB__r.LastName, '_self') ,text(SB__r.SB_Rank__c) + ' - ' 
+ + HYPERLINK('/' + SB__c, text(SB__r.Contracts_for_Year__c) + ' '+ SB__r.FirstName + ' ' + SB__r.LastName, '_self'))))</formula>
+        <label>SB Rank by Contracts</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SB_Rank_by_Groups__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(isblank(SB__c),'04 - 322 ' + 'Direct',if(isblank( SB__r.SB_Rank__c ),'Not Ranked',if(SB__r.SB_Rank__c&lt;10,'0'+text(SB__r.SB_Rank__c) + ' - ' 
++HYPERLINK('/' + SB__c, text(SB__r.Groups_for_Year__c) + ' ' + SB__r.FirstName + ' ' + SB__r.LastName, '_self') ,text(SB__r.SB_Rank__c) + ' - ' 
++HYPERLINK('/' + SB__c, text(SB__r.Groups_for_Year__c) + ' '+ SB__r.FirstName + ' ' + SB__r.LastName, '_self'))))</formula>
+        <label>SB Rank by Groups</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SB__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SB</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Enrollments_Contact_SB</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sort_Key_Process_Type__c</fullName>
+        <description>This field is used by the Sort_Key__c formula field to provide a multi-column custom sort on the enrollment related list found on the opportunity page.  It allows a complete customized sort on the Processed_Type__c field as shown in the Case statement below.</description>
+        <externalId>false</externalId>
+        <formula>CASE( Processed_Type__c , 'M', '4', 
+                          'D', '3',
+                          'R', '2',
+                          'V', '1', 'X')</formula>
+        <label>Sort Key Process Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sort_Key__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Enrl_Rpt_Dt__c) + "/" +Sort_Key_Process_Type__c</formula>
+        <label>Sort Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Termed</fullName>
+                    <default>false</default>
+                    <label>Termed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Summary_Checkbox__c</fullName>
+        <description>This field checks true if either the status is active and the rpt_dt__c is a specified numbers/dates for the same Renewal anniversary year as the Year of the Rpt_dt, or status is termed and is on cycle.  
+Note: This field is being used by Joe for the block report. this check box also looks at december 2013 active file</description>
+        <externalId>false</externalId>
+        <formula>if(
+	OR(
+		AND(
+			AND(
+				(Rpt_Dt__c="201412" || (Rpt_Dt__c="201312") || Rpt_Dt__c="201512" || Rpt_Dt__c="201612" || Rpt_Dt__c="201712" || Rpt_Dt__c="201812"|| Rpt_Dt__c="201904"), 
+				(Left(Rpt_Dt__c,4) = TEXT(YEAR(Renewal_Anniversary_Date__c)))
+			),
+			ISBLANK(Termination_Date__c) ),
+      			(
+				AND(
+					NOT(ISBLANK(Termination_Date__c)),
+					On_Cycle__c = True)
+			)
+	),
+True,False
+)
+
+
+
+/**********************************************************/
+/*if(OR(AND(Rpt_Dt__c="201412", ISBLANK(Termination_Date__c)), 
+      AND(Rpt_Dt__c="201312", ISBLANK(Termination_Date__c)),
+     (AND(NOT(ISBLANK(Termination_Date__c)),On_Cycle__c = True))),True,False)
+*/
+/*
+if( OR(AND(Rpt_Dt__c="201412" || (Rpt_Dt__c="201312") ,  ISBLANK(Termination_Date__c) ),
+      (AND(NOT(ISBLANK(Termination_Date__c)),On_Cycle__c = True))),True,False)
+*/</formula>
+        <label>Summary_Checkbox</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>System__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>System</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Termination_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Termination_Reason__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Termination Reason</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object holds the actual enrollment data which is associated to the opportunity</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Enrollment</label>
+    <nameField>
+        <displayFormat>E-{00000}</displayFormat>
+        <label>Enrollments Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Enrollments</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Product__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contracts__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Risk__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Processed_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Run_Dt__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>System__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Rpt_Dt__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Opportunity__c</columns>
+        <columns>Rpt_Dt__c</columns>
+        <columns>System__c</columns>
+        <columns>Account_Number__c</columns>
+        <columns>Product__c</columns>
+        <columns>Contracts__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Reporthing_Checkbox_Count</fullName>
+        <booleanFilter>(1 AND 3) OR (2 AND 4)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Rpt_Dt__c</columns>
+        <columns>Reporting_Checkbox_Formula_Off_Cycle__c</columns>
+        <columns>Reporting_Checkbox_Formula_On_Cycle__c</columns>
+        <columns>Reporting_Checkbox_Off_Cycle__c</columns>
+        <columns>Reporting_Checkbox__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Summary_Checkbox__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Reporting_Checkbox__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Reporting_Checkbox_Off_Cycle__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Reporting_Checkbox_Off_Cycle__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Reporting_Checkbox__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Reporthing Checkbox Match</label>
+    </listViews>
+    <recordTypes>
+        <fullName>X2_50</fullName>
+        <active>true</active>
+        <description>2-50 Enrollment Record Type</description>
+        <label>2-50</label>
+        <picklistValues>
+            <picklist>Latest_Enrollment__c</picklist>
+            <values>
+                <fullName>N</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Y</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>X51</fullName>
+        <active>true</active>
+        <description>51+ Enrollment Record Type</description>
+        <label>51+</label>
+        <picklistValues>
+            <picklist>Latest_Enrollment__c</picklist>
+            <values>
+                <fullName>N</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Y</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

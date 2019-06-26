@@ -1,0 +1,113 @@
+<apex:page docType="html-5.0" standardController="AIA_Document__c" id="pageId" extensions="AIADocumentUploadController" recordSetVar="a">  
+    <apex:sectionHeader title="AIA Documents"/>
+    <apex:includeScript value="{!URLFOR($Resource.AIA_PostSales, '/js/jquery.min.js')}"/>
+    <script src="/soap/ajax/37.0/connection.js" type="text/javascript"></script>
+    <script>
+        var desc ='';
+    var parid='';
+    var oId='';
+    sforce.connection.sessionId='{!GETSESSIONID()}';
+    function storeDescription(){
+        var file = $("#file")[0].files[0];
+        if(file==null){
+            document.getElementById("errorid").style.display = "block";  
+            return false;
+        }{
+            callProcess(file.name);  
+        }
+        console.log('storing description-->{!$Component.pageId.formId.pgbkId.fid.sitemId.description}');
+        desc = document.getElementById('{!$Component.pageId.formId.pgbkId.fid.sitemId.description}').value;
+        console.log('storing description-->'+desc.value);
+        
+    }    
+    
+    function upload(pId,oppId) {
+        console.log('Description---->'+desc);
+        console.log('ParentId---->'+pId);
+        var file = $("#file")[0].files[0];
+        if(file==null){
+            // document.getElementById("errorid").style.display = "block";  
+            // return false;
+            return false;
+        }
+        
+        document.getElementById('imgid').style.visibility='visible';
+        var base64;
+        var reader = new FileReader();
+        var result;
+        reader.onload = function(e) {
+            //base64=reader.result;
+            base64 = e.target.result;
+            var split=base64.split(",");
+            console.log(split[1]);
+            var Attachment  = new sforce.SObject("Attachment");
+            Attachment.name=file.name;
+            Attachment.description=desc;
+            Attachment.parentId=pId;
+            Attachment.body=split[1];
+            Attachment.contentType=file.type;
+            console.log('Calling create');
+            result=sforce.connection.create([Attachment]);
+            console.log('Returned result is---->'+result[0].getBoolean("success"));
+            console.log('Returned result is--string-->'+result[0].id);
+            if(result[0].getBoolean("success")){
+                document.getElementById('imgid').style.visibility='hidden';
+                console.log('calling myfun');
+                oId=oppId;
+                myFunc(result[0].id);
+                
+            }else{
+                console.log('error occured while uploading attachment');
+            }
+        }
+        
+        reader.readAsDataURL(file); 
+        
+    }
+    
+    function redirect(){
+        console.log('inside redirect');
+        window.location='/'+oId; 
+        
+    }
+    </script>
+    
+    <apex:form id="formId" enctype="multipart/form-data">                
+        <apex:actionFunction name="myFunc" action="{!saveStandardAttachment}" reRender="rId" oncomplete="redirect()">            
+            <apex:param name="param1"  assignTo="{!attchId}" value=""/>            
+        </apex:actionFunction>      
+        
+        <apex:outputPanel id="rId">             
+        </apex:outputPanel>
+        <apex:pageMessages />
+        
+        <apex:pageBlock id="pgbkId">            
+            <apex:pageBlockButtons location="top">
+                <apex:actionFunction action="{!processUpload}" name="callProcess" reRender="rId" oncomplete="upload('{!fDocNetId}','{!recordID}')" >
+                    <apex:param name="fname" assignTo="{!fileName}" value=""/>
+                </apex:actionFunction>
+                <apex:commandButton value="Attach File"   onclick="storeDescription();" reRender="rId" />
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                <apex:inputfield value="{!fNetAttachment.Document_Status__c}" id="status"/>
+                <apex:inputfield value="{!fNetAttachment.Document_Type__c}" id="Doc_Type" required="true"/>
+                <apex:inputfield value="{!fNetAttachment.Active__c}" id="Active"/>
+                <apex:inputfield value="{!fNetAttachment.Start_Date__c}" id="StartDate"/>
+                <apex:inputfield value="{!fNetAttachment.End_Date__c}" id="EndDate"/>
+                <apex:inputfield value="{!fNetAttachment.Approval_Status__c}" id="ApprovalStatus"/>                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="fid" columns="1"> 
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="File" for="file"/>     
+                    <input type="file" id="file"/><img src="/img/loading32.gif" style="visibility:hidden;" id="imgid"/> <span id="errorid" style="display:none;color: red;"><h3>
+                    Please select file to upload</h3></span>       
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="sitemId">
+                    <apex:outputLabel value="Description" for="description"/> 
+                    <apex:inputTextarea id="description" value="{!description}"  rows="4" cols="50"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,97 @@
+<!--*=================================================================================================================
+ * Date         : 07/23/2018
+ * Developer    : Arshia Gulati
+ * Purpose      : The purpose of this Page is to create Account Issue Case from Benefit Design and Implementation
+ *=================================================================================================================
+ *                                 Update History
+ *                                 ---------------
+ *   Date        Developer       Tag   Description
+ *============+================+=====+=============================================================================
+ * 07/23/2018 | Gayathri       |     | Intial Development. 
+ *=================================================================================================================
+ *-->
+<apex:page showHeader="true" standardController="Case" extensions="AIA_Account_Issue_CaseExt" sidebar="false" 
+           lightningStylesheets="true"  recordSetVar="accIssuecases" docType="html-5.0" action="{!pageNavigation}">
+ <apex:slds rendered="{!!isClassic}"/>
+    <style>
+    .slds-scope img{padding-right: 15px;}
+    .pbButton{text-align: center !important;}
+       
+    </style>
+    <apex:form >
+    	<apex:pageBlock >
+            <apex:pageMessages escape="false"></apex:pageMessages>
+            <apex:actionFunction name="cancelRec" action="{!cancelFun}" immediate="true"/>
+            <!-- <apex:outputPanel rendered="{! !isClassic}">
+            <div class="slds-page-header">
+                <div class="slds-grid">
+                     <div class="slds-col slds-has-flexi-truncate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                        <svg class="slds-icon slds-icon-standard-user .slds-icon_small" aria-hidden="true">
+                            <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}"></use>
+                        </svg>
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-text-title_caps slds-line-height_reset">Edit Case</p>
+                        <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"
+                            title="this should match the Record Title">New Case</h1>
+                    </div>
+                </div>
+            </div>          
+            </div>
+            </div>
+        </apex:outputPanel>-->
+            <apex:pageBlockButtons >
+            <div align="center">
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Cancel" onclick="return cancelRec();" />
+                </div>
+            </apex:pageBlockButtons>
+            <!---------------------- This block is for displaying Case Information --------------------------------->
+            <apex:pageBlockSection title="Case Information" id="pgbs1" collapsible="false">
+            	<apex:inputField value="{!accountCase.Issue_Frequency__c}"/>
+                <apex:outputField value="{!accountCase.OwnerId}"/>
+                <apex:inputField value="{!accountCase.Origin}" required="true" />
+                <apex:inputField value="{!accountCase.Type}"/>
+                <apex:inputField value="{!accountCase.Performance_Guarantee_Agreement__c}"/>
+                <apex:inputField value="{!accountCase.Priority}"/>
+                <apex:inputField value="{!accountCase.Members_Impacted__c}"/>
+                <apex:inputField value="{!accountCase.Status}" required="true"/>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                <apex:outputField value="{!accountCase.recordtypeid}"/>
+            </apex:pageBlockSection>
+          <!---------------------- This block is for displaying Description Information --------------------------------->  
+            <apex:pageBlockSection title="Description Information">
+            	 <apex:inputField value="{!accountCase.Subject}"/>
+                 <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            	 <apex:inputField value="{!accountCase.Description}"/>
+            </apex:pageBlockSection>
+          <!---------------------- This block is for displaying Account Information ---------------------------------> 
+            <apex:pageBlockSection title="Account Information">
+            	 <apex:inputField value="{!accountCase.AccountId}"/>
+                 <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            	 <apex:inputField value="{!accountCase.ContactId}"/>
+            </apex:pageBlockSection>
+            <!---------------------- This block is for displaying Implementation Information ---------------------------------> 
+            <apex:pageBlockSection title="Implementation Information">
+            	 <apex:inputField value="{!accountCase.Issue_Category__c}"/>
+            	 <apex:inputField value="{!accountCase.Implementation__c}"/>
+                <apex:inputField value="{!accountCase.Issue_Sub_Category__c}"/>
+            </apex:pageBlockSection>
+            <!---------------------- This block is for displaying System Information ---------------------------------> 
+            <apex:pageBlockSection title="System Information">
+            	 <apex:inputField value="{!accountCase.Created_By_Department_Name__c}"/>
+            	 <apex:inputField value="{!accountCase.System_In_Which_Issue_Logged__c}"/>
+                 <apex:inputField value="{!accountCase.Closed_By__c}"/>
+                 <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                 <apex:inputField value="{!accountCase.Closed_By_Department_Name__c}"/>
+            </apex:pageBlockSection>
+              <apex:pageBlockSection title="Optional">
+                  <apex:inputCheckbox label="Assign using active assignment rule" value="{!isAssignmentRule}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+       
+    </apex:form>
+    
+</apex:page>

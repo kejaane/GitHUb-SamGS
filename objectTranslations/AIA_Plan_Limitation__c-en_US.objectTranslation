@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExtID --></label>
+        <name>ExtID__c</name>
+    </fields>
+    <fields>
+        <label><!-- IS ASO Only --></label>
+        <name>IS_ASO_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limitation_available --></label>
+        <name>Limitation_available__c</name>
+    </fields>
+    <fields>
+        <label><!-- MandateIndicator --></label>
+        <name>MandateIndicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- MandateName --></label>
+        <name>MandateName__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxAgeFrom --></label>
+        <name>MaxAgeFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxAgeTo --></label>
+        <name>MaxAgeTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxAgeType --></label>
+        <name>MaxAgeType__c</name>
+        <picklistValues>
+            <masterLabel>Days</masterLabel>
+            <translation><!-- Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Months</masterLabel>
+            <translation><!-- Months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Years</masterLabel>
+            <translation><!-- Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Years of Age</masterLabel>
+            <translation><!-- Years of Age --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MaxApply --></label>
+        <name>MaxApply__c</name>
+        <picklistValues>
+            <masterLabel>Per Breast</masterLabel>
+            <translation><!-- Per Breast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Condition</masterLabel>
+            <translation><!-- Per Condition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Ear</masterLabel>
+            <translation><!-- Per Ear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation><!-- Per Unit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MaxDurationType --></label>
+        <name>MaxDurationType__c</name>
+        <picklistValues>
+            <masterLabel>Admission</masterLabel>
+            <translation><!-- Admission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calendar Year</masterLabel>
+            <translation><!-- Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Day</masterLabel>
+            <translation><!-- Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Episode</masterLabel>
+            <translation><!-- Episode --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospice Eligibility Period</masterLabel>
+            <translation><!-- Hospice Eligibility Period --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lifetime</masterLabel>
+            <translation><!-- Lifetime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Birth</masterLabel>
+            <translation><!-- Live Birth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Months</masterLabel>
+            <translation><!-- Months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Months following patients death</masterLabel>
+            <translation><!-- Months following patients death --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan Year</masterLabel>
+            <translation><!-- Plan Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pregnancy</masterLabel>
+            <translation><!-- Pregnancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visit</masterLabel>
+            <translation><!-- Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weeks</masterLabel>
+            <translation><!-- Weeks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year-to-date</masterLabel>
+            <translation><!-- Year-to-date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Years</masterLabel>
+            <translation><!-- Years --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MaxDuration High --></label>
+        <name>MaxDuration_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxDuration Increment --></label>
+        <name>MaxDuration_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxDuration Low --></label>
+        <name>MaxDuration_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxDuration Range --></label>
+        <name>MaxDuration_Range__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxDuration Valid Ranges --></label>
+        <name>MaxDuration_Valid_Ranges__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxDuration --></label>
+        <name>MaxDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxRange Type --></label>
+        <name>MaxRange_Type__c</name>
+        <picklistValues>
+            <masterLabel>MaxDurationRange</masterLabel>
+            <translation><!-- MaxDurationRange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MaxDurationValid</masterLabel>
+            <translation><!-- MaxDurationValid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MaxValueRange</masterLabel>
+            <translation><!-- MaxValueRange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MaxValueValid</masterLabel>
+            <translation><!-- MaxValueValid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MaxRow InValid Ranges --></label>
+        <name>MaxRow_InValid_Ranges__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxRow Mandate Description --></label>
+        <name>MaxRow_Mandate_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxRow Value --></label>
+        <name>MaxRow_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxType --></label>
+        <name>MaxType__c</name>
+        <picklistValues>
+            <masterLabel>Attempts</masterLabel>
+            <translation><!-- Attempts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comprehensive Pulmonary Rehabilitation Program</masterLabel>
+            <translation><!-- Comprehensive Pulmonary Rehabilitation Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Days</masterLabel>
+            <translation><!-- Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dollars</masterLabel>
+            <translation><!-- Dollars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EKG</masterLabel>
+            <translation><!-- EKG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exam</masterLabel>
+            <translation><!-- Exam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hearing Aid</masterLabel>
+            <translation><!-- Hearing Aid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Care Days</masterLabel>
+            <translation><!-- Home Care Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Care Visits</masterLabel>
+            <translation><!-- Home Care Visits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Health Aide Visits</masterLabel>
+            <translation><!-- Home Health Aide Visits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mammogram</masterLabel>
+            <translation><!-- Mammogram --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pair of Contact Lenses/Eye Glasses</masterLabel>
+            <translation><!-- Pair of Contact Lenses/Eye Glasses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program</masterLabel>
+            <translation><!-- Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screening</masterLabel>
+            <translation><!-- Screening --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Units</masterLabel>
+            <translation><!-- Units --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visits</masterLabel>
+            <translation><!-- Visits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wig</masterLabel>
+            <translation><!-- Wig --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MaxValue High --></label>
+        <name>MaxValue_High__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxValue Increment --></label>
+        <name>MaxValue_Increment__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxValue Low --></label>
+        <name>MaxValue_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxValue Range --></label>
+        <name>MaxValue_Range__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxValue Valid Ranges --></label>
+        <name>MaxValue_Valid_Ranges__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaxValue --></label>
+        <name>MaxValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCS Benefit Id --></label>
+        <name>PCS_Benefit_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentBenefitName --></label>
+        <name>ParentBenefitName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Benefits --></label>
+        <name>Plan_Benefits__c</name>
+        <relationshipLabel><!-- Plan Limitation --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RecordType --></label>
+        <name>RecordType__c</name>
+        <picklistValues>
+            <masterLabel>BDD</masterLabel>
+            <translation><!-- BDD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRF</masterLabel>
+            <translation><!-- BRF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Term Date --></label>
+        <name>Term_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- TierAgeFrom --></label>
+        <name>TierAgeFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- TierAgeTo --></label>
+        <name>TierAgeTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- TierAgeType --></label>
+        <name>TierAgeType__c</name>
+        <picklistValues>
+            <masterLabel>Days</masterLabel>
+            <translation><!-- Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Years</masterLabel>
+            <translation><!-- Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TierLimitDurationType --></label>
+        <name>TierLimitDurationType__c</name>
+        <picklistValues>
+            <masterLabel>Calendar Year</masterLabel>
+            <translation><!-- Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incident</masterLabel>
+            <translation><!-- Incident --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lifetime</masterLabel>
+            <translation><!-- Lifetime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan Year</masterLabel>
+            <translation><!-- Plan Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TierLimitFrom --></label>
+        <name>TierLimitFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- TierLimitTo --></label>
+        <name>TierLimitTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- TierLimitType --></label>
+        <name>TierLimitType__c</name>
+        <picklistValues>
+            <masterLabel>Days</masterLabel>
+            <translation><!-- Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dollars</masterLabel>
+            <translation><!-- Dollars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Months</masterLabel>
+            <translation><!-- Months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Units</masterLabel>
+            <translation><!-- Units --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visits</masterLabel>
+            <translation><!-- Visits --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tier Value --></label>
+        <name>Tier_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>MaxRow</masterLabel>
+            <translation><!-- MaxRow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TierLimit</masterLabel>
+            <translation><!-- TierLimit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Variation Condition ID --></label>
+        <name>Variation_Condition_ID__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan Limitation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plan Limitation</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Plan Limitation Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- MaxRow Ranges --></label>
+            <section>MaxRow Ranges</section>
+        </sections>
+        <sections>
+            <label><!-- MaxRows --></label>
+            <section>MaxRows</section>
+        </sections>
+        <sections>
+            <label><!-- TierLimit --></label>
+            <section>TierLimit</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

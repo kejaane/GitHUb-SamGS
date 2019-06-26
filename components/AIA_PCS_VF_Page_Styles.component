@@ -1,0 +1,71 @@
+<!--==========================================================================================================================
+ * Date         : 4/7/2017
+ * Developer    : Sree Harsha
+ * Purpose      : Benefit Design Deep Clone User Story B-03733.
+ *                Styling component for VFPage AIA_BDP_DeepClone1
+ *============================================================================================================================
+ *                                 Update History
+ *                                 --------------
+ * Date       |  Developer       | Tag | Description
+ *============+==================+=====+======================================================================================
+ * 4/7/2017   |  Sree Harsha     |     | Initial Version                                         
+ *============+==================+=====+======================================================================================
+-->
+<apex:component >
+    <style>
+        table.grayTab tbody tr td {
+            padding: 0 0 0 10px;
+        }
+        
+        select {
+            border: none;
+        }
+        .ui-accordion-header{
+            padding-left:25px !important;
+        }
+        .form-control {
+            border: none;
+            box-shadow: none;
+            border-radius: none;
+            box-shadow: none;
+        }
+        
+        .middle {
+            vertical-align: middle;
+        }
+        
+        .gray {
+            color: #9aa0a0;
+        }
+        
+        .width5 {
+            width: 40%;
+        }
+        
+        .width2 {
+            width: 10%;
+        }
+        
+        input[type=text].input {
+            border: none;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+        #loading-img {
+        background: url(/img/loading32.gif) center center no-repeat;
+        height: 100%;
+        z-index: 100;
+    }
+    
+    .overlay {
+        background: #e9e9e9;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.7;
+    }
+    </style>
+</apex:component>

@@ -1,0 +1,85 @@
+<apex:page StandardController="Enrollment_Summary__c" extensions="enrollmentFilters2_199">
+<apex:form >
+        <apex:sectionheader title="Enrollment Summary" subtitle="Enrollment Summary 2-199">
+            <apex:pageBlock title="Filters" id="filterBlock" >
+                <apex:outputLabel value="Report On: " for="reportType"/>
+                <apex:selectList id="reportType" value="{!reportType}" size="1" required="true">
+                    <apex:selectOptions value="{!reportTypeList}"/>
+                </apex:selectList>&nbsp;&nbsp;
+                
+                <apex:outputLabel value="Type: " for="recType"/>
+                <apex:selectList id="recType" value="{!recType}" size="1" required="true">
+                    <apex:selectOptions value="{!recTypes}"/>
+                </apex:selectList>&nbsp;&nbsp;
+                
+                <!--<apex:outputLabel value="Month: " for="startMonth"/>
+                <apex:selectList id="month" value="{!month}" size="1" required="true" disabled="true">
+                    <apex:selectOptions value="{!monthList}"/>
+                </apex:selectList>
+                
+                <apex:outputLabel value="Year: " for="years"/>
+                <apex:selectList id="years" value="{!year}" size="1" required="true" disabled="true">
+                    <apex:selectOptions value="{!years}"/>
+                </apex:selectList>-->
+                <apex:outputLabel value="    " for="goButton"/>
+                <apex:commandButton action="{!Go}" value="Go" id="goButton" rerender="results,filterBlock"/>
+            </apex:pageBlock>
+             
+           
+        
+        
+        <apex:pageBlock title="Results" id="results">
+            <apex:pageblockTable value="{!results}" var="r">
+                <apex:column headerValue="Jursdiction" value="{!r.jurisdiction}" width="20%"/>
+                <apex:column headerValue="Starting Balance" width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.startingBalance}"/>
+						</apex:outputText>
+                    </apex:column>
+                <apex:column headerValue="New"  width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.newCount}"/>
+						</apex:outputText>
+                    </apex:column>
+                <apex:column headerValue="Termed" width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.termed}"/>
+						</apex:outputText>
+                    </apex:column>
+                <apex:column headerValue="Month End Balance" width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.monthEndBalance}"/>
+						</apex:outputText>
+                    </apex:column>
+            </apex:pageblockTable>
+            
+            <apex:pageblockTable value="{!totals}" var="r" style="background-color:lightgreen; font-weight:bold">
+                <apex:column headerValue="" width="20%" >
+                    <apex:outputText value="Total"/>
+                 </apex:column>   
+                <apex:column headerValue="Starting Balance" width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.startingBalance}"/>
+						</apex:outputText>
+                    </apex:column>
+                <apex:column headerValue="New"  width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.newCount}"/>
+						</apex:outputText>
+                    </apex:column>
+                <apex:column headerValue="Termed" width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.termed}"/>
+						</apex:outputText>
+                    </apex:column>
+                <apex:column headerValue="Month End Balance" width="20%">
+                	<apex:outputText value="{0, number, ###,###,##0}" >
+    						<apex:param value="{!r.monthEndBalance}"/>
+						</apex:outputText>
+                    </apex:column>
+            </apex:pageblockTable>
+           
+        </apex:pageBlock>
+            </apex:sectionheader>
+    </apex:form>
+</apex:page>

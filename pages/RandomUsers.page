@@ -1,0 +1,18 @@
+<apex:page controller="RandomUsers_Controller" tabStyle="User" readOnly="true" sidebar="false" title="Random Users" >
+    <apex:sectionHeader title="Random Users" subtitle="Random Users"/>   
+    <apex:form >      
+    <apex:pageblock id="randomUsers" >     
+        <apex:selectList id="howManyUsers" value="{!howManyUsers}" size="1" title="Select the number of random users to return">
+            <apex:selectOption itemValue="5" itemLabel="5"/>
+            <apex:selectOption itemValue="10" itemLabel="10"/>
+            <apex:selectOption itemValue="15" itemLabel="15"/>
+            <apex:selectOption itemValue="20" itemLabel="20"/>
+            <apex:selectOption itemValue="25" itemLabel="25"/>
+        </apex:selectList>         
+        <apex:commandButton action="{!buildRandomUserList}" value="Get Random Users" reRender="randomUsers"/>                       
+        <apex:pageblocktable value="{!randomUsers}" var="u">     
+            <apex:column headerValue="Names" value="{!u.FirstName} {!u.LastName}"/>                             
+        </apex:pageBlockTable>
+    </apex:pageBlock> 
+    </apex:form> 
+</apex:page>

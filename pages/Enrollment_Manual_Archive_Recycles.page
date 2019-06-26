@@ -1,0 +1,190 @@
+<!--
+// ========================================================================================
+//      Date: 03/12/2015
+// Developer: Tom Barrett (TPB)
+//   Purpose: Use to provide the Admin a preview list of what they select from the standard
+//            list view page for manual archiving of enrollment error recycle records.
+// ========================================================================================
+//                                 Update History
+// Date       Developer  Tag   	Description
+// ========================================================================================
+// 08/16/2018 Gayathri   T01	Added styling to make look and feel to be same in both 
+//								classic and lightning 
+// ========================================================================================
+-->
+<apex:page standardController="Enrollment_Recycle__c" extensions="Enrollment_Manual_Arch_Recycle_ContrlExt" recordSetvar="selectedRecycles" sidebar="false" lightningStylesheets="true" >            
+    <!--T01-->
+    <apex:slds rendered="{!!isClassic}"/>
+    <style>
+   		{! if(! isClassic,'.pbButton{text-align: center !important;}'+
+        '.pbButton:last-child {padding-right: 360px !important;}'+
+        '.slds-scope .slds-table td, body .slds-vf-data-table .headerRow th, body .slds-vf-data-table thead th{white-space:normal;}'+
+        'body .bPageBlock .pbSubheader h3, .slds-vf-scope .bPageBlock .pbSubheader h3{color:#fdfdfd;}','')}        
+	</style>
+    <!--T01--End-->
+    <script>
+        function colorPageBlock(pageblock, color) {
+            if (pageblock != null) pageblock.firstChild.style.cssText = "background-color: " + color + ";";
+        }
+    </script>
+
+    <apex:form >
+        <apex:pageBlock title="Enrollment Archive Recycle Error Review"> 
+            <apex:pageMessages />
+            <div class="slds-button">
+             <apex:pageBlockButtons >       
+                <apex:commandButton id="ArchiveButton" value="Archive" action="{!ArchiveSelection}" rendered="{!ArchiveButton}"/>                          
+                <apex:commandButton value="Return" action="{!cancel}" onclick="return confirmCancel()"/>             
+            </apex:pageBlockButtons>        
+            </div>
+            <apex:pageBlockSection id="pageBlockSection1" columns="1" title="Selected Enrollment Recycle Errors to Archive" rendered="{!PageBlockSection1}">  
+            <script>colorPageBlock(document.getElementById("{!$Component.pageBlockSection1}"), "blue");</script>       
+                <apex:pageBlockTable id="table1" value="{!selected}" var="er" width="100%">
+                    <apex:column headerValue="Account Name">
+                        <apex:outputField value="{!er.Account_Name__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Account Number">
+                        <apex:outputField value="{!er.Account_Number__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="Sales Rep">
+                        <apex:outputField value="{!er.Sales_Rep__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Error Message">
+                        <apex:outputField value="{!er.Error_Message__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="Error Number" rendered="false"> 
+                        <apex:outputField value="{!er.Error_Number__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="System">
+                        <apex:outputField value="{!er.System__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Product">
+                        <apex:outputField value="{!er.SFDC_Product__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="Contracts" style="text-align:right" width="50px">
+                        <apex:outputText value="{0, number, ##0}">
+                            <apex:param value="{!er.Contracts__c}"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Processed Type">
+                        <apex:outputText value="{!er.Processed_Type__c}"/>
+                    </apex:column>  
+                    <apex:column headerValue="Risk">
+                        <apex:outputText value="{!er.Risk__c}"/>
+                    </apex:column> 
+                    <apex:column headerValue="Rpt Dt">
+                        <apex:outputText value="{!er.Rpt_dt__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="Run Dt" rendered="false"> 
+                        <apex:outputField value="{!er.Run_Dt__c}"/>
+                    </apex:column> 
+                    <apex:column headerValue="Rating State" rendered="true">
+                        <apex:outputText value="{!er.Rating_State__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="New Business Indicator" rendered="true"> 
+                        <apex:outputText value="{!er.New_Business_Indicator__c}"/>
+                    </apex:column>                                                                                                                            
+                </apex:pageBlockTable>                   
+            </apex:pageBlockSection> 
+
+            <apex:pageblocksection columns="1" title="Failed To Archive Enrollment Recycle Errors" rendered="{!PageBlockSection2}">            
+                <apex:pageBlockTable id="table2" value="{!NotRecycledList}" var="er" width="100%">
+                    <apex:column headerValue="Account Name">
+                        <apex:outputField value="{!er.Account_Name__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Account Number">
+                        <apex:outputField value="{!er.Account_Number__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="Sales Rep">
+                        <apex:outputField value="{!er.Sales_Rep__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Error Message">
+                        <apex:outputField value="{!er.Error_Message__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="Error Number" rendered="false"> 
+                        <apex:outputField value="{!er.Error_Number__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="System">
+                        <apex:outputField value="{!er.System__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Product">
+                        <apex:outputField value="{!er.SFDC_Product__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="Contracts" style="text-align:right" width="50px">
+                        <apex:outputText value="{0, number, ##0}">
+                            <apex:param value="{!er.Contracts__c}"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Processed Type">
+                        <apex:outputText value="{!er.Processed_Type__c}"/>
+                    </apex:column>  
+                    <apex:column headerValue="Risk">
+                        <apex:outputText value="{!er.Risk__c}"/>
+                    </apex:column> 
+                    <apex:column headerValue="Rpt Dt">
+                        <apex:outputText value="{!er.Rpt_dt__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="Run Dt" rendered="false"> 
+                        <apex:outputField value="{!er.Run_Dt__c}"/>
+                    </apex:column> 
+                    <apex:column headerValue="Rating State" rendered="true">
+                        <apex:outputText value="{!er.Rating_State__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="New Business Indicator" rendered="true"> 
+                        <apex:outputText value="{!er.New_Business_Indicator__c}"/>
+                    </apex:column>                                                                                                                            
+                </apex:pageBlockTable>              
+            </apex:pageblocksection>  
+            
+            <apex:pageBlockSection id="PageBlockSection3" columns="1" title="Enrollment Recycle Errors Archived" rendered="{!PageBlockSection3}">    
+            <script>colorPageBlock(document.getElementById("{!$Component.pageBlockSection3}"), "Green");</script>        
+                <apex:pageBlockTable id="table3" value="{!selected}" var="er" width="100%">
+                    <apex:column headerValue="Account Name">
+                        <apex:outputField value="{!er.Account_Name__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Account Number">
+                        <apex:outputField value="{!er.Account_Number__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="Sales Rep">
+                        <apex:outputField value="{!er.Sales_Rep__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Error Message">
+                        <apex:outputField value="{!er.Error_Message__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="Error Number" rendered="false"> 
+                        <apex:outputField value="{!er.Error_Number__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="System">
+                        <apex:outputField value="{!er.System__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Product">
+                        <apex:outputField value="{!er.SFDC_Product__c}"/>
+                    </apex:column>   
+                    <apex:column headerValue="Contracts" style="text-align:right" width="50px">
+                        <apex:outputText value="{0, number, ##0}">
+                            <apex:param value="{!er.Contracts__c}"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Processed Type">
+                        <apex:outputText value="{!er.Processed_Type__c}"/>
+                    </apex:column>  
+                    <apex:column headerValue="Risk">
+                        <apex:outputText value="{!er.Risk__c}"/>
+                    </apex:column> 
+                    <apex:column headerValue="Rpt Dt">
+                        <apex:outputText value="{!er.Rpt_dt__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="Run Dt" rendered="false"> 
+                        <apex:outputField value="{!er.Run_Dt__c}"/>
+                    </apex:column> 
+                    <apex:column headerValue="Rating State" rendered="true">
+                        <apex:outputText value="{!er.Rating_State__c}"/>
+                    </apex:column> 
+                    <apex:column headervalue="New Business Indicator" rendered="true"> 
+                        <apex:outputText value="{!er.New_Business_Indicator__c}"/>
+                    </apex:column>                                                                                                                            
+                </apex:pageBlockTable>                   
+            </apex:pageBlockSection>          
+        </apex:pageBlock>             
+    </apex:form>
+</apex:page>

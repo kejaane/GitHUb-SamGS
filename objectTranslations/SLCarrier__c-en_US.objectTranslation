@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Offered By Carrier --></label>
+        <name>Offered_By_Carrier__c</name>
+        <picklistValues>
+            <masterLabel>CareFirst</masterLabel>
+            <translation><!-- CareFirst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HM</masterLabel>
+            <translation><!-- HM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IOARE</masterLabel>
+            <translation><!-- IOARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAS</masterLabel>
+            <translation><!-- RAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunlife</masterLabel>
+            <translation><!-- Sunlife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Symetra</masterLabel>
+            <translation><!-- Symetra --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- SL Carriers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Offered Carrier --></label>
+        <name>Other_Offered_Carrier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Declined --></label>
+        <name>Quote_Declined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Received --></label>
+        <name>Quote_Received__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>SL Carrier</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SL Carriers</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Stop Loss Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- 001: You do not have the permission to create or edit Carrier records. --></errorMessage>
+        <name>E001_Check_Create_Edit_Permission</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 002: Please type a value in the Other Offered Carrier field --></errorMessage>
+        <name>E002_Other_Offered_Carrier1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 003: Select &apos;Other&apos; when a value is in the Other Offered Carrier field --></errorMessage>
+        <name>E003_Other_Offered_Carrier2</name>
+    </validationRules>
+</CustomObjectTranslation>

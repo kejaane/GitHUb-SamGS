@@ -1,0 +1,86 @@
+<!--=========================================================================================
+ * Date         : 01/17/2017
+ * Developer    : RamaKrishna
+ * Purpose      : Custom Limitations page for user to enter data under Benefit.           
+ *
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer         Description
+ *===========+=============+================================================================
+ * 01/17/2017| RamaKrishna | Initial Version
+ * 16/02/2018| Debkanti	   | Slds tag added so that user can view the form in lightning view after 
+ *							 swithching to lightning.
+ *===========+=============+================================================================
+-->
+<apex:page standardController="AIA_Benefit_Design_Product__c" extensions="AIA_Cust_BDD_Limitations" action="{!Actions}" sidebar="false" lightningStyleSheets="{!!isClassic}">
+   <!--  <apex:sectionHeader title="Custom Limitations Edit" /> -->
+    <apex:slds rendered="{! !isClassic}"/>
+    <Style>
+        .slds-scope .slds-select {
+        width: 30%;
+    }
+    body .detailList, body .detailList table, .slds-scope .detailList, .slds-scope .detailList table {
+        table-layout: fixed;
+    }
+    body .bPageBlock .detailList .labelCol, .slds-scope .bPageBlock .detailList .labelCol {
+        text-align: center;
+    }
+    .hideListButton{
+        display:none;
+    }
+    </Style>
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock title="Add Custom Limitations" id="medical" mode="edit">
+
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Save & Add" action="{!save}" style="background:#4775d1; color:white;  width:110px" styleClass="slds-button slds-button_neutral"/>    
+                <!--<apex:commandButton value="Back to Benefits Page" action="{!BackToAddAdditionalBenefits}"/> -->
+                <apex:commandButton value="Back to Summary Page" action="{!cancel}" styleClass="slds-button slds-button_neutral"/>               
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Select Benefit"  columns="1">                
+               <!--    <apex:outputText label="Benefit Name" value="{!BenefitName}"/>  -->
+                    <apex:selectList size="1" value="{!selectedBenefit}" label="Benefit Name:" styleClass="slds-select">
+                        <apex:selectOptions value="{!BenefitNames}"/>
+                        <apex:actionSupport id="selectedBenefit" />   <!--  event="onchange" action="{!CreateBenefit}"-->
+                    </apex:selectList> 
+               <!-- </apex:outputText>  -->
+            </apex:pageBlockSection>                 
+                
+            <apex:outputPanel id="LimitationInfo">
+                    <apex:actionRegion >
+                        <apex:pageBlockSection title="Limitation Type" columns="1" >
+                            <apex:selectList label="Limitation Type:" multiselect="false" size="1" value="{!LmtType}" styleClass="slds-select">                                                                
+                                <apex:selectOptions value="{!LimitationType}"/>
+                                 <apex:actionSupport id="LmtType" event="onchange" action="{!doDisable}" rerender="LimitationInfo" />
+                            </apex:selectList>                
+                        </apex:pageBlockSection>
+                    </apex:actionRegion>
+                
+                <apex:pageBlockSection title="Limitations" columns="1" rendered="{!if(diableFlag='MaxRow',true,false)}">              
+                        <apex:inputField value="{!MaxRows.MaxValue__c}" required="false" styleClass="slds-text-body_regular"/>               
+                        <apex:inputField value="{!MaxRows.MaxType__c}" required="false" styleClass="slds-select"/>  
+                        <apex:inputField value="{!MaxRows.MaxApply__c}" required="false" styleClass="slds-select"/>                
+                        
+                        <apex:inputField value="{!MaxRows.MaxDuration__c}" required="false" StyleClass="slds-text-body_regular"/>
+                        <apex:inputField value="{!MaxRows.MaxDurationType__c}" required="false" styleClass="slds-select"/>                
+                      
+                        <apex:inputField value="{!MaxRows.MaxAgeFrom__c}" required="false" StyleClass="slds-text-body_regular"/> 
+                        <apex:inputField value="{!MaxRows.MaxAgeTo__c}" required="false" StyleClass="slds-text-body_regular"/>
+                  
+                        <apex:inputField value="{!MaxRows.MaxAgeType__c}" required="false" styleClass="slds-select"/>                                                                
+                    </apex:pageBlockSection> 
+                        
+                
+                    <apex:pageBlockSection title="Comment Codes" columns="1" rendered="{!if(diableFlag='Comment',true,false)}"> 
+                        <apex:inputField value="{!MaxRows.comment_codes__c}"/>  
+                   
+                    </apex:pageBlockSection>
+            </apex:outputPanel> 
+            
+            
+        </apex:pageBlock>           
+    </apex:form>
+</apex:page>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Report Date, format is YYYYMM. --></help>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jurisdiction --></label>
+        <name>Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Month End Balance Contracts --></label>
+        <name>Month_End_Balance_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month End Balance Groups --></label>
+        <name>Month_End_Balance_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month Name --></label>
+        <name>Month_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Change Contracts --></label>
+        <name>Net_Change_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Change Groups --></label>
+        <name>Net_Change_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Contract Growth Pct --></label>
+        <name>Net_Contract_Growth_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Group Growth Pct --></label>
+        <name>Net_Group_Growth_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Contract Sales Pct --></label>
+        <name>New_Contract_Sales_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Contracts --></label>
+        <name>New_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Group Sales Pct --></label>
+        <name>New_Group_Sales_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Groups --></label>
+        <name>New_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Cycle Contracts --></label>
+        <name>Off_Cycle_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Cycle Groups --></label>
+        <name>Off_Cycle_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Cycle Termed Contract Pct --></label>
+        <name>Off_Cycle_Termed_Contract_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Cycle Termed Contracts --></label>
+        <name>Off_Cycle_Termed_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Cycle Termed Groups Pct --></label>
+        <name>Off_Cycle_Termed_Groups_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Cycle Termed Groups --></label>
+        <name>Off_Cycle_Termed_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Cycle Contracts --></label>
+        <name>On_Cycle_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Cycle Groups --></label>
+        <name>On_Cycle_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Cycle Termed Contract Pct --></label>
+        <name>On_Cycle_Termed_Contract_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Cycle Termed Contracts --></label>
+        <name>On_Cycle_Termed_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Cycle Termed Groups Pct --></label>
+        <name>On_Cycle_Termed_Groups_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Cycle Termed Groups --></label>
+        <name>On_Cycle_Termed_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Contract Terms Pct --></label>
+        <name>Total_Contract_Terms_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Contracts --></label>
+        <name>Total_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Group Terms Pct --></label>
+        <name>Total_Group_Terms_Pct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Groups --></label>
+        <name>Total_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Termed Contracts --></label>
+        <name>Total_Termed_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Termed Groups --></label>
+        <name>Total_Termed_Groups__c</name>
+    </fields>
+    <fields>
+        <help><!-- Unique ID to be used for upserting records. --></help>
+        <label><!-- Unique ID --></label>
+        <name>Unique_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Enrollment Summary</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Enrollments Summary</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Summarized Enrollment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- 2-50 --></label>
+        <name>X2_50</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 51+ --></label>
+        <name>X51</name>
+    </recordTypes>
+</CustomObjectTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalDataSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customConfiguration>{&quot;sharepointConnectorUrl&quot;:&quot;https://share.carefirst.com/tos/pmo&quot;,&quot;singleSiteCollection&quot;:&quot;false&quot;,&quot;sstClientId&quot;:&quot;SP_Secure_Agent&quot;}</customConfiguration>
+    <isWritable>false</isWritable>
+    <label>Project 51 Sharepoint Folder</label>
+    <principalType>NamedUser</principalType>
+    <protocol>Password</protocol>
+    <type>ContentHubSharepoint</type>
+    <username>aac0624</username>
+</ExternalDataSource>

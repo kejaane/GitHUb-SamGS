@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <consumerKey>3MVG99OxTyEMCQ3j5kD04sUak4rt_KtLPXBw7dlgMopP4q2G4wOebRiYOn9L0tVwWkGsn6pHysmg2pk0MNkzA</consumerKey>
+    <consumerSecret>LG+Ho6aMC39vNoOe26XGQZKrP17PGKL3</consumerSecret>
+    <defaultScopes>refresh_token full</defaultScopes>
+    <friendlyName>Sandbox Manager</friendlyName>
+    <iconUrl>https://login.salesforce.com/icons/salesforce-white.png</iconUrl>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <logoutUrl>https://www.salesforce.com</logoutUrl>
+    <providerType>Salesforce</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <tokenUrl>https://test.salesforce.com/services/oauth2/token</tokenUrl>
+</AuthProvider>

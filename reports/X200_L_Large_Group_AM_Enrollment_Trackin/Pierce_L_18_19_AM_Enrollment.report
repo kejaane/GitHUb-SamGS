@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>Enrollment__c$Curr_Fiscal_Year__c</acrossGroupingContext>
+        <calculatedFormula>IF(PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY) = 0, 0, Enrollment__c.Contracts__c:SUM / 
+PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY))</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>ROW_GRAND_SUMMARY</downGroupingContext>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Retention Percentage Grd</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>Enrollment__c$Curr_Fiscal_Year__c</acrossGroupingContext>
+        <calculatedFormula>Enrollment__c.Contracts__c:SUM -  PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, Enrollment__c.Opportunity__c.Account.Name, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA3</developerName>
+        <downGroupingContext>Enrollment__c$Opportunity__c.Account</downGroupingContext>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>YTD Gain / Lost</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>Enrollment__c$Curr_Fiscal_Year__c</acrossGroupingContext>
+        <calculatedFormula>IF(PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY) = 0, 0, Enrollment__c.Contracts__c:SUM  - 
+PARENTGROUPVAL(Enrollment__c.Curr_Baseline_Contracts__c:SUM, ROW_GRAND_SUMMARY,GRAND_SUMMARY))</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA5</developerName>
+        <downGroupingContext>ROW_GRAND_SUMMARY</downGroupingContext>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>YTD Overall</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Enrollment__c$Contracts__c</field>
+    </columns>
+    <columns>
+        <field>Enrollment__c$Name</field>
+    </columns>
+    <description>LEX</description>
+    <filter>
+        <criteriaItems>
+            <column>Enrollment__c$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Enrollment__c.X51</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Processed_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>M</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enrollment__c$Opportunity__c.Service_Rep_s__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Linda Pierce</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Curr_Fiscal_Year__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Opportunity__c.Service_Rep_s__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Enrollment__c$Opportunity__c.Account</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Pierce, L. &apos;18-19&apos; AM Enrollment</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Enrollments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Enrollment__c$Enrl_Rpt_Dt__c</dateColumn>
+        <endDate>2019-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-01</startDate>
+    </timeFrameFilter>
+</Report>

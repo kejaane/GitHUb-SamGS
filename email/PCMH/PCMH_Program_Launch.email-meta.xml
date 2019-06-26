@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>PCMH Program Launch</name>
+    <style>formalLetter</style>
+    <subject>CareFirst ASO PCMH Program Launch</subject>
+    <textOnly>10455 Mill Run Circle
+Owings Mills, MD 21117-5559
+www.carefirst.com
+
+
+{!Today}   
+ 
+{!Account.Name}
+{!Account.BillingAddress}
+ 
+ 
+Dear {!Contact.Name}:
+ 
+As part of our effort to improve member care and the patient experience, CareFirst BlueCross BlueShield is pleased to announce Primary Care Medical Home (PCMH); a new and comprehensive approach to ensuring a greater and more meaningful provider-patient engagement. 
+ 
+The PCMH program is designed to provide primary care providers (PCPs) with a more complete view of their patients’ needs, as well as the care they are receiving from other providers. This enables the PCP to better manage the patient’s risk while encouraging them to maintaining better health, and ultimately producing better outcomes. 
+ 
+The CareFirst PCMH program is entirely voluntary for PCPs and members. It does not reduce employee benefits, nor does it affect the rules of the contracted coverage plan with CareFirst.  Further, it does not require employers to authorize participation on behalf of their employees. 
+ 
+CareFirst’s PCMH program reflects our belief that a patient’s PCP should be the quarterback, or central point, in efforts to improve health care quality and outcomes. As such, we encourage all CareFirst members to select and visit their PCP regularly, but especially those members at risk due to chronic conditions such as asthma, diabetes, chronic back pain, chronic obstructive pulmonary disease, congestive heart failure, coronary artery disease, hypertention, pediatric obesity and osteoarthritis. 
+ 
+A key component of the PCMH program is the development of care plans for those members with the most serious health issues and risks. Members considered to be “care plan eligible” receive a higher level of intervention, including a personalized care plan developed by their PCP. The care plan is an online record that documents the medical needs of a patient and specific actions the member should take to better manage or improve their condition. The member’s progress will be monitored by a team that includes the patient, their PCP, a local care coordinator and other care professionals with the goal of minimizing the member’s risks and improving their health.
+ 
+As a self-insured group, we seek your permission to offer this initiative to your employees and their dependents.  Your CareFirst Representative will be contacting you shortly to discuss the PCMH program and how your organization and your employees can benefit.
+
+ 
+Sincerely,
+
+Chet BurrellPresident and CEO
+
+
+CareFirst BlueCross BlueShield is the business name of CareFirst of Maryland, Inc. and is an independent licensee of the Blue Cross and Blue Shield Association.  ® Registered trademark of the Blue Cross and Blue Shield Association.  ®´ Registered trademark of CareFirst of Maryland, Inc.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

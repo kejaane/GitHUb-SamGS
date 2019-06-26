@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Date__c</fullName>
+        <description>Report Date, format is YYYYMM.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Report Date, format is YYYYMM.</inlineHelpText>
+        <label>Date</label>
+        <length>6</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jurisdiction__c</fullName>
+        <externalId>false</externalId>
+        <label>Jurisdiction</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                    <label>MD</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                    <label>VA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Month_End_Balance_Contracts__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Contracts__c + New_Contracts__c - Total_Termed_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month End Balance Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_End_Balance_Groups__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Groups__c +  New_Groups__c -  Total_Termed_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month End Balance Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(RIGHT(Date__c, 2),
+"01","Jan",
+"02","Feb",
+"03","Mar",
+"04","Apr",
+"05","May",
+"06","Jun",
+"07","Jul",
+"08","Aug",
+"09","Sep",
+"10","Oct",
+"11","Nov",
+"12","Dec",
+
+
+"")</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>Right(Date__c, 2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Change_Contracts__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Termed_Contracts__c -  New_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Change Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Change_Groups__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Termed_Groups__c -  New_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Change Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Contract_Growth_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Net_Change_Contracts__c /  On_Cycle_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Contract Growth Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Net_Group_Growth_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Net_Change_Groups__c /  On_Cycle_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Group Growth Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>New_Contract_Sales_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>New_Contracts__c /  On_Cycle_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>New Contract Sales Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>New_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>New Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Group_Sales_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>New_Groups__c /  On_Cycle_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>New Group Sales Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>New_Groups__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>New Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Off_Cycle_Contracts__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Contracts__c - On_Cycle_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Off Cycle Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Off_Cycle_Groups__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Groups__c - On_Cycle_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Off Cycle Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Off_Cycle_Termed_Contract_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Off_Cycle_Termed_Contracts__c /  On_Cycle_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Off Cycle Termed Contract Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Off_Cycle_Termed_Contracts__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Termed_Contracts__c - On_Cycle_Termed_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Off Cycle Termed Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Off_Cycle_Termed_Groups_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Off_Cycle_Termed_Groups__c /  On_Cycle_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Off Cycle Termed Groups Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Off_Cycle_Termed_Groups__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Termed_Groups__c - On_Cycle_Termed_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Off Cycle Termed Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>On_Cycle_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>On Cycle Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>On_Cycle_Groups__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>On Cycle Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>On_Cycle_Termed_Contract_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>On_Cycle_Termed_Contracts__c /  On_Cycle_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>On Cycle Termed Contract Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>On_Cycle_Termed_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>On Cycle Termed Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>On_Cycle_Termed_Groups_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>On_Cycle_Termed_Groups__c / On_Cycle_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>On Cycle Termed Groups Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>On_Cycle_Termed_Groups__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>On Cycle Termed Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Contract_Terms_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Termed_Contracts__c /  On_Cycle_Contracts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Contract Terms Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Group_Terms_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Termed_Groups__c /  On_Cycle_Groups__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Group Terms Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_Groups__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Termed_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Termed Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Termed_Groups__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Termed Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unique_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique ID to be used for upserting records.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique ID to be used for upserting records.</inlineHelpText>
+        <label>Unique ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT(Date__c,4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Enrollment Summary</label>
+    <nameField>
+        <displayFormat>SE-{00000}</displayFormat>
+        <label>Enrollment Summary Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Enrollments Summary</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Date__c</columns>
+        <columns>New_Contracts__c</columns>
+        <columns>New_Groups__c</columns>
+        <columns>Off_Cycle_Contracts__c</columns>
+        <columns>Off_Cycle_Groups__c</columns>
+        <columns>Off_Cycle_Termed_Groups__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Contracts</fullName>
+        <columns>Date__c</columns>
+        <columns>Jurisdiction__c</columns>
+        <columns>Total_Contracts__c</columns>
+        <columns>On_Cycle_Contracts__c</columns>
+        <columns>Off_Cycle_Contracts__c</columns>
+        <columns>Total_Termed_Contracts__c</columns>
+        <columns>On_Cycle_Termed_Contracts__c</columns>
+        <columns>Off_Cycle_Termed_Contracts__c</columns>
+        <columns>New_Contracts__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>Groups</fullName>
+        <columns>Date__c</columns>
+        <columns>Jurisdiction__c</columns>
+        <columns>Total_Groups__c</columns>
+        <columns>On_Cycle_Groups__c</columns>
+        <columns>Off_Cycle_Groups__c</columns>
+        <columns>Total_Termed_Groups__c</columns>
+        <columns>On_Cycle_Termed_Groups__c</columns>
+        <columns>Off_Cycle_Termed_Groups__c</columns>
+        <columns>New_Groups__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Groups</label>
+    </listViews>
+    <listViews>
+        <fullName>July_2014_Contracts</fullName>
+        <columns>Date__c</columns>
+        <columns>Jurisdiction__c</columns>
+        <columns>Total_Contracts__c</columns>
+        <columns>On_Cycle_Contracts__c</columns>
+        <columns>Off_Cycle_Contracts__c</columns>
+        <columns>Total_Termed_Contracts__c</columns>
+        <columns>On_Cycle_Termed_Contracts__c</columns>
+        <columns>Off_Cycle_Termed_Contracts__c</columns>
+        <columns>New_Contracts__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date__c</field>
+            <operation>equals</operation>
+            <value>201407</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Enrollment_Summary__c.X2_50</value>
+        </filters>
+        <label>July 2014 Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>July_2014_Groups</fullName>
+        <columns>Date__c</columns>
+        <columns>Jurisdiction__c</columns>
+        <columns>Total_Groups__c</columns>
+        <columns>On_Cycle_Groups__c</columns>
+        <columns>Off_Cycle_Groups__c</columns>
+        <columns>Total_Termed_Groups__c</columns>
+        <columns>On_Cycle_Termed_Groups__c</columns>
+        <columns>Off_Cycle_Termed_Groups__c</columns>
+        <columns>New_Groups__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date__c</field>
+            <operation>equals</operation>
+            <value>201407</value>
+        </filters>
+        <label>July 2014 Groups</label>
+    </listViews>
+    <recordTypes>
+        <fullName>X2_50</fullName>
+        <active>true</active>
+        <label>2-50</label>
+        <picklistValues>
+            <picklist>Jurisdiction__c</picklist>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>X51</fullName>
+        <active>true</active>
+        <label>51+</label>
+        <picklistValues>
+            <picklist>Jurisdiction__c</picklist>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AIA_BRF_Zip_Code_Validation__c</fullName>
+        <defaultValue>"networkaccess@carefirst.com"</defaultValue>
+        <description>Used to send email to RFP team when a new BRF is created under an Opportunity with VA jurisdiction for Zip Code Validation.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to send email to RFP team when a new BRF is created under an Opportunity with VA jurisdiction for Zip Code Validation.</inlineHelpText>
+        <label>AIA BRF Zip Code Validation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_OP4_Email_Address__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AIA OP4 Email Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ARC_Approval_Request_BCM_Email__c</fullName>
+        <description>ARC Approval will use this email address to notify BCM that an approval is pending.  Set to a value such as 'BCMARCApprovalRequests@carefirst.com'.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>ARC Approval will use this email address to notify BCM that an approval is pending.  Set to a value such as 'BCMARCApprovalRequests@carefirst.com'.</inlineHelpText>
+        <label>ARC Approval Request: BCM Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benefit_Admin_Account_Set_Up_team__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Benefit Admin Account Set Up team</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_To_MAST_team__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Email To MAST team</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>QA_Auditor__c</fullName>
+        <description>This is to hold a group email address as " NAEGS.Audit@carefirst.com" as part of approval process 'AIA Benefit Design Approval_7' which will send a notification for the BD approval</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>QA Auditor</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stop_Loss_Notification_Email_1__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Stop Loss Notification : Email 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stop_Loss_Notification_Email_2__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Stop Loss Notification : Email 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>This custom setting holds the emails to be added to email alerts in workflow rules</description>
+    <enableFeeds>false</enableFeeds>
+    <label>AIA Workflow Emails</label>
+    <visibility>Protected</visibility>
+</CustomObject>

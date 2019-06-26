@@ -1,0 +1,204 @@
+<!--==========================================================================================================================
+* Date         : 11/04/2017
+* Developer    : Sajitha Y
+* Purpose      : Benefit Design Form Review Page MCP US-250.
+*============================================================================================================================
+*                                 Update History
+*                                 --------------
+* Date       |  Developer       | Tag | Description
+*============+==================+=====+======================================================================================
+* 11/04/2017 |  Sajitha Y       |     | Initial Version
+* 02/05/2018 |  Gayathri P      | T02 | Added slds classes to match the look and feel of lightning 
+* 									    view with classic.
+* 02/28/2018 | Debkanti			| T03 | Added Logic to display different button for "MCP - Non Standard" and "MCP - Full Managed Care"
+*============+==================+=====+======================================================================================
+-->
+<apex:page standardController="AIA_Benefit_Design_Form__c" extensions="AIA_MCP_SavepageController" id="pg" sidebar="false" lightningStylesheets="true">
+    <apex:stylesheet value="{!$Resource.AIA_BDF_MCP_Style}" />
+    <!--T02  Start-->
+    <apex:slds rendered="{!!isClassic}"/>
+    <style>
+        .helpButton {
+        	display: inline !important;
+        }
+        {! if(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 340px !important;}'+ 
+   		'.slds-scope .detailList table {table-layout: auto;}'+
+        '.slds-scope .slds-table td{ white-space: normal; }'+
+        '.slds-scope .pbSubsection { overflow-x : overlay;}'+
+        '.slds-scope .bPageBlock .pbSubheader{background-color:#D5D8DC;}'+
+    	'.detailList {width: 345px !important; }'+
+        '.bPageBlock{border:none !important;}','')}
+         
+    	
+    </style>
+    <!--T02  End-->
+    <apex:form >
+        <!-------------------------------------------- BDF Detail Page -----------------------------------------------------> 
+        <apex:pageBlock title="Benefit Design Form Detail" mode="edit">
+            <apex:pageMessages />
+            <apex:pageBlockButtons >
+                <div class="slds-grid slds-wrap slds-align--absolute-center">
+                   	<apex:commandButton value="Edit" action="{!mcpedit}" styleClass="slds-button slds-button_neutral"/>
+                	<apex:commandButton value="Delete" action="{!Delete}" styleClass="slds-button slds-button_neutral"/>
+                    <!-- T03 Start -->
+                	<apex:commandButton value="Export Full MCP" action="{!export}" rendered="{!exportMcpFull}"/>
+                    <apex:commandButton value="Export MCP Non Standard" action="{!export}" rendered="{!!exportMcpFull}"/>
+                    <!-- T03 End -->
+                </div>
+               </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2" id="pbs1">
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Benefit_Design__c}" id="bdval" /> 
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.RecordtypeId}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Account_Legal_Name__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Renewal_Effective_Date__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Funding_Arrangement__c}"  id="fundar" />
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Original_Effective_Date__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.AE_Name__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Effective_Date_of_Change__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Managed_Care_Comments__c}" id="c"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Revision_Number__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.X5_Digit_Account_Number__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Legal_Entity_Drawloop_From_Admin__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Group_Numbers__c}"/>
+                <!--<apex:outputLabel ></apex:outputLabel>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Drawloop_Next__c}"/>
+                <apex:outputLabel ></apex:outputLabel>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.BD_Approval_Status__c}"/>
+                <apex:outputLabel ></apex:outputLabel>-->
+                <!--
+				<apex:outputField value="{!AIA_Benefit_Design_Form__c.Export_Full_MCP__c}" rendered="{!exportddp}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Export_Non_Standard_MCP__c}" rendered="{!!exportddp}"/>
+				-->
+            </apex:pageBlockSection>
+             <!--------------------------------------------Selected BDP'S ----------------------------------------------------->
+            
+            <!--<apex:pageBlock title="BDP'S Selected" id="pbs">-->
+            <apex:pageBlockSection title="Selected Benefit Design Products" columns="1" id="pbs">
+                <apex:pageBlockTable value="{!lstbdp}" var="bdp" styleClass="slds-table slds-table_bordered slds-table_cell-buffer" >
+                    <!--<apex:column headerValue="Selected">
+                        <apex:inputcheckbox value="{!bdp.SelectBDP__c}" selected="True" disabled="true" />
+                    </apex:column>-->
+                    <apex:column value="{!bdp.Plan_Product_Name__c}" headerValue="Product Name"/>
+                    <apex:column value="{!bdp.AIA_Magellan_Behavioral_Health__c}"/>
+                    <apex:column value="{!bdp.AIA_INN_Contracted_Provider_Penalty__c}"/>
+                    <apex:column value="{!bdp.Fully_Insured__c}"/>
+                    <apex:column value="{!bdp.AIA_Percent_and_Dollar_Penalty__c}"/>
+                    <apex:column value="{!bdp.AIA_Dollar_Penalty__c}"/>
+                    <apex:column value="{!bdp.Percentage_and_Dollar_Penalty_Other_Nons__c}"/>
+                    <apex:column value="{!bdp.AIA_Percent_Penalty__c}"/>
+                    <apex:column value="{!bdp.AIA_Up_to__c}"/>
+                    <apex:column value="{!bdp.Percentage_Penalty_Other_Nonstandard__c}"/>
+                </apex:pageBlockTable>  
+            </apex:pageBlockSection>
+            <!--</apex:pageBlock>-->
+            <!--------------------------------------------Vendor Information Section ----------------------------------------------------->
+            <!--<apex:pageBlock title="Vendor Information Section" id="pbs2">-->
+            <!--<apex:pageBlockSection title="Vendor Information Section" columns="1" id="pbs2">-->
+            <div class="pbSubheader brandTertiaryBgr tertiaryPalette"><h3>Vendor Information Section</h3></div>
+                <table class="VenInfo slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                    <th >Select </th>
+                    <th style="width:40">Vendor Name</th>
+                    <th >Vendor Phone</th>
+                    </thead>
+                    <tbody>
+                    <tr >
+                        <td>
+                            <apex:outputField styleclass="radio" value="{!AIA_Benefit_Design_Form__c.MCP_Checkbox__c}" rendered="{!isClassic}" />
+                            <!--T02  Start_To display the checkbox in lightning view-->
+                            <div style="{!if(isClassic,'display:none','')}">
+                              <img src="/img/checkbox_{!IF(AIA_Benefit_Design_Form__c.MCP_Checkbox__c, '', 'un')}checked.gif" title="{!IF(AIA_Benefit_Design_Form__c.MCP_Checkbox__c, 'Checked', 'Not Checked')}" />
+               			  	</div>
+                            <!--T02  End-->
+                            </td>
+                        <td>
+                            <apex:outputLabel >Care Management – Includes IP Mental Health/substance Abuse Precertification via Magellan. For CFMI products with no Magellan contract</apex:outputLabel>
+                        </td>
+                        <td>
+                            <apex:outputLabel >1-866-773-2884</apex:outputLabel>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:outputField styleclass="radio" value="{!AIA_Benefit_Design_Form__c.MCP_Checkbox2__c}" rendered="{!isClassic}" />
+                        	<!--T02  Start_To display the checkbox in lightning view-->
+                            <div style="{!if(isClassic,'display:none','')}">
+                              <img src="/img/checkbox_{!IF(AIA_Benefit_Design_Form__c.MCP_Checkbox2__c, '', 'un')}checked.gif" title="{!IF(AIA_Benefit_Design_Form__c.MCP_Checkbox2__c, 'Checked', 'Not Checked')}" />
+               			  	</div>
+                            <!--T02  End-->
+                         </td>
+                        <td>
+                            <apex:outputLabel >Care Management and Magellan Mental Health/Substance Abuse (for BluePreferred, IP only Level II, Level III, CFMI products with Magellan, BlueChoice or HealthyBlue products)</apex:outputLabel>
+                        </td>
+                        <td>
+                            <apex:outputLabel >1-866-773-2884 – Care Management,1-800-245-7013 – Magellan </apex:outputLabel>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:outputField styleclass="radio other" value="{!AIA_Benefit_Design_Form__c.MCP_Checkbox3__c}" rendered="{!isClassic}" />
+                        	<!--T02  Start_To display the checkbox in lightning view-->
+                            <div style="{!if(isClassic,'display:none','')}">
+                              <img src="/img/checkbox_{!IF(AIA_Benefit_Design_Form__c.MCP_Checkbox3__c, '', 'un')}checked.gif" title="{!IF(AIA_Benefit_Design_Form__c.MCP_Checkbox3__c, 'Checked', 'Not Checked')}" />
+               			  	</div>
+                            <!--T02  End-->
+                         </td>
+                        <td>
+                            <apex:outputLabel >Other</apex:outputLabel>&nbsp;&nbsp;(Enter Other Vendor Name)&nbsp;&nbsp;<apex:outputField value="{!AIA_Benefit_Design_Form__c.MCP_Other_Vendor_Name__c}" id="oname" styleclass="othervendor"/> 
+                        </td>
+                        <td>
+                            <apex:outputField value="{!AIA_Benefit_Design_Form__c.MCP_Other_Vendor_Phone__c}" id="ophone" styleclass="otherphone"/> 
+                        </td>
+                    </tr>
+                        </tbody>
+                </table>
+            <!--</apex:pageBlockSection>   -->
+            <!--</apex:pageBlock>-->
+            
+            <!----------------------------------------OutPatient Authorization Program -------------------------------------------------->
+            
+            <apex:pageBlockSection title="Outpatient Authorization Program" columns="2" id="pbs3" >
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Home_Health_Care__c}" id="hhc"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Clinical_Trials__c}" id="ct"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Hospice_Care__c}" id="hc"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Habilitative_Services_for_Children__c}" id="hsc"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Artificial_Insemination_IVF__c}" id="ai"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.IVF__c}" id="ivf"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Early_Intervention_Services__c}" id="eis"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.General_Anesthesia_for_Dental_care__c}" id="gad"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Applied_Behavioral_Analysis__c}" id="aba"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.OP_Private_Duty_Nursing__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Attended_Sleep_Studies__c}" id="ass"/>
+            </apex:pageBlockSection>
+            <!-------------------------------------------- PCMH / TCCI Program ----------------------------------------------------->
+            
+            <apex:pageBlockSection title="PCMH / TCCI Program" columns="1" id="pbs4">
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.PCMH_TCCI_Program_Help_Text__c}" />
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Patient_Centered_Medical_Home__c}" id="pcm"/>
+            </apex:pageBlockSection>
+            
+            <!-------------------------------------------- TCCI Cost Share Waiver----------------------------------------------------->
+            
+            <apex:pageBlockSection title="TCCI Cost Share Waiver" columns="1" id="pbs5">
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.TCCI_Cost_Share_Waiver_Help_Text__c}"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.TCCI_Cost_Share_Waiver__c}" id="tcci"/>
+            </apex:pageBlockSection>
+            
+            <!-------------------------------------------- DM/Wellness ----------------------------------------------------->
+            
+            <apex:pageBlockSection title="DM/Wellness" columns="1" id="pbs6">
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Integrated_DM_Wellness__c}" id="dw" />
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Stand_Alone_Disease_Management__c}" id="sad"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Stand_Alone_Wellness__c }" id="saw"/>
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.Customized_Wellness_Services__c}" id="cws"/>
+            </apex:pageBlockSection>
+            
+            <!-----------------------------------Additional and/or Nonstandard MC Provisions ---------------------------------------->
+            
+            <apex:pageBlockSection title="Additional and/or Non-standard Managed Care Provisions" columns="1">
+                <apex:outputField styleClass="largeBox" value="{!AIA_Benefit_Design_Form__c.Comments__c}"/>
+          </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+    <apex:relatedList list="AIA_Documents__r" />
+</apex:page>

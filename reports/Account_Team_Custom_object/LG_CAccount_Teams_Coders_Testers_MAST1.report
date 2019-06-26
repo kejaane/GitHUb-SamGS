@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.AccountTeamMembers$Name</field>
+    </columns>
+    <columns>
+        <field>Account.AccountTeamMembers$TeamMemberRole</field>
+    </columns>
+    <description>Custom Account Team</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.AccountTeamMembers$TeamMemberRole</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>BeneFact Coder,BeneFact Tester,Benefit Tester,MAST Tech,NASCO Benefit Coder</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>test for</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>LG Account Teams(Coders,Testers,MAST)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_with_customAccount_Team__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.AccountTeamMembers$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

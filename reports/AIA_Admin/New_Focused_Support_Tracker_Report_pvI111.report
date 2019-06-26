@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_14483016</developerName>
+        <masterLabel>Biz Areas</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Focused_Support_Tracker__c.Opened_By__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Barbara Howarth</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Barry Walton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Diane Flowers</sourceValue>
+            </sourceValues>
+            <value>Sales</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Cyndi Bell</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jessica Hartom</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kathy Norjen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kelly Welsh</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Chris Norris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Brandon Servary</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mallory Kusterer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Steven Foster</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rick Hoerl</sourceValue>
+            </sourceValues>
+            <value>Implementations</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Andrea Dawson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kimberly Wolfe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Laurie Jeter</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maria Mojica</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phillip Pope</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Starr Veronick</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sue Price</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tina Ware</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kerry Berko</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Milton Curry</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rachel Smith</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Beverly Martin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Donna Defries</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kathleen Williams</sourceValue>
+            </sourceValues>
+            <value>Operations</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Gireesh Ramanan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jess Strothers</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kathy Newson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lynn Whye</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Arshia Gulati</sourceValue>
+            </sourceValues>
+            <value>Project Team</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Leslie Swecker</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adrienne Robinson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mona Hebron</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sherry Chopper</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Donna Arbogast</sourceValue>
+            </sourceValues>
+            <value>Sales Support/QA</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Focused_Support_Tracker__c.Category__c</field>
+    </columns>
+    <columns>
+        <field>Focused_Support_Tracker__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Focused_Support_Tracker__c.Description__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Focused_Support_Tracker__c.Category__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Admin Task</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Focused_Support_Tracker__c.Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Resolved,Invalid,Duplicate</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Support Tracker Report- AIA Admin</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Focused_Support_Tracker__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

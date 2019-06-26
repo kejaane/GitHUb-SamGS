@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>false</default>
+        <label>Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Conversation</fullName>
+        <default>false</default>
+        <label>Phone Conversation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Thread</fullName>
+        <default>false</default>
+        <label>Email Thread</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In-Person Conversation</fullName>
+        <default>false</default>
+        <label>In-Person Conversation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Correspondence</fullName>
+        <default>false</default>
+        <label>Correspondence</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Broker Sales MD</fullName>
+        <default>false</default>
+        <label>Email: Broker Sales MD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Broker Sales 4</fullName>
+        <default>false</default>
+        <label>Email: Broker Sales 4</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Retro activity Request</fullName>
+        <default>false</default>
+        <label>Email: Retro activity Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: SBC Project</fullName>
+        <default>false</default>
+        <label>Email: SBC Project</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: BCS Specialist</fullName>
+        <default>false</default>
+        <label>Email: BCS Specialist</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Small Medium Group</fullName>
+        <default>false</default>
+        <label>Email: Small Medium Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Royal</fullName>
+        <default>false</default>
+        <label>Email: Royal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Indigo</fullName>
+        <default>false</default>
+        <label>Email: Indigo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Ocean</fullName>
+        <default>false</default>
+        <label>Email: Ocean</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Sapphire</fullName>
+        <default>false</default>
+        <label>Email: Sapphire</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Sky</fullName>
+        <default>false</default>
+        <label>Email: Sky</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Teal</fullName>
+        <default>false</default>
+        <label>Email: Teal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Compliance</fullName>
+        <default>false</default>
+        <label>Email: Compliance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ABA/BeneFact Coding Priority</fullName>
+        <default>false</default>
+        <label>ABA/BeneFact Coding Priority</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Benefit Coding Problem</fullName>
+        <default>false</default>
+        <label>Benefit Coding Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Benefit Testing Problem</fullName>
+        <default>false</default>
+        <label>Benefit Testing Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contracting Change</fullName>
+        <default>false</default>
+        <label>Contracting Change</label>
+    </standardValue>
+    <standardValue>
+        <fullName>iLog</fullName>
+        <default>false</default>
+        <label>iLog</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MAST Request</fullName>
+        <default>false</default>
+        <label>MAST Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OBN/Bx Audit</fullName>
+        <default>false</default>
+        <label>OBN/Bx Audit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin Level Change</fullName>
+        <default>false</default>
+        <label>Admin Level Change</label>
+    </standardValue>
+</StandardValueSet>

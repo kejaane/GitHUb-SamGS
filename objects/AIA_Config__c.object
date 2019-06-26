@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Run__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Uncheck this field if the code block/method/trigger should not be executed.</description>
+        <externalId>false</externalId>
+        <label>Run</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <description>It will be used to control execution of apex code block,methods or entire trigger itself.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>AIA Config</label>
+    <visibility>Public</visibility>
+</CustomObject>

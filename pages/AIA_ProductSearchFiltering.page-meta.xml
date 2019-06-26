@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>41.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Page for Product Search Filtering on button click on BRF or PP related List on BRF. 
+This page will have the logic for filtering the Plan Products based on implicit filters from BRF and user selected filters from this Visualforce page and redirect to the Proposed product.</description>
+    <label>AIA_ProductSearchFiltering</label>
+</ApexPage>

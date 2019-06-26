@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for values that require a Boolean value.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Checkbox</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Module_Name__c</fullName>
+        <description>Used to allow grouping of module dependent records together.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Used to allow grouping of module dependent records together.</inlineHelpText>
+        <label>Module Name</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Application Level</fullName>
+                    <default>true</default>
+                    <label>Application Level</label>
+                </value>
+                <value>
+                    <fullName>Deprovision User</fullName>
+                    <default>false</default>
+                    <label>Deprovision User</label>
+                </value>
+                <value>
+                    <fullName>Profile Audit</fullName>
+                    <default>false</default>
+                    <label>Profile Audit</label>
+                </value>
+                <value>
+                    <fullName>Provision User</fullName>
+                    <default>false</default>
+                    <label>Provision User</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Number__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Description__c</fullName>
+        <description>Enter a description that describes the records purpose.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Enter a detailed description that describes the records purpose and allows the user to understand how to use and which support field(s) are needed.</inlineHelpText>
+        <label>Record Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Text_Area_255__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Text Area 255</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <description>This CMT is used to hold dynamic data that can control how the Sandbox Manager reacts</description>
+    <label>SM Setting</label>
+    <pluralLabel>SM Settings</pluralLabel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All_Records</fullName>
+        <columns>Module_Name__c</columns>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Record_Description__c</columns>
+        <columns>Checkbox__c</columns>
+        <columns>Text_Area_255__c</columns>
+        <columns>Number__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Records</label>
+    </listViews>
+    <validationRules>
+        <fullName>ESMS001</fullName>
+        <active>true</active>
+        <description>This VR attempts to only allow commas to separate the data</description>
+        <errorConditionFormula>(DeveloperName = 'Email_That_SM_Module_Executed' &amp;&amp; 
+CONTAINS(Text_Area_255__c, ";")) || 
+(DeveloperName = 'Email_That_SM_Module_Executed' &amp;&amp;
+MID(Text_Area_255__c,LEN(Text_Area_255__c), 1) = ',') ||
+(DeveloperName = 'Email_That_SM_Module_Executed' &amp;&amp;
+ISBLANK(Text_Area_255__c))</errorConditionFormula>
+        <errorDisplayField>Text_Area_255__c</errorDisplayField>
+        <errorMessage>ESMS001: Emails must be separated by comma only, cannot end with a comma and cannot be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS002</fullName>
+        <active>true</active>
+        <description>This VR attempts to only allow commas to separate sandbox names</description>
+        <errorConditionFormula>(DeveloperName = 'Deprovision_Sandbox_Limit_List' || DeveloperName = 'Provision_Sandbox_Limit_List' || 
+DeveloperName = 'Profile_Audit_Sandbox_Limit_List') &amp;&amp; 
+(CONTAINS(Text_Area_255__c, ";") || 
+MID(Text_Area_255__c,LEN(Text_Area_255__c), 1) = ',')</errorConditionFormula>
+        <errorDisplayField>Text_Area_255__c</errorDisplayField>
+        <errorMessage>ESMS002: Sandbox Names must be separated by comma only and cannot end with a comma.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS003</fullName>
+        <active>true</active>
+        <errorConditionFormula>DeveloperName = 'Timeout' &amp;&amp; Number__c &lt; 10 || DeveloperName = 'Timeout' &amp;&amp; ISBLANK(Number__c)</errorConditionFormula>
+        <errorDisplayField>Number__c</errorDisplayField>
+        <errorMessage>ESMS003: The Timeout Number cannot be be less than 10 seconds for callouts and it cannot be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS004</fullName>
+        <active>true</active>
+        <errorConditionFormula>Record_Description__c == NULL</errorConditionFormula>
+        <errorDisplayField>Record_Description__c</errorDisplayField>
+        <errorMessage>ESMS004: The Record Description field cannot be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS005</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED(Module_Name__c) || 
+ISCHANGED(Record_Description__c) || 
+ISCHANGED(MasterLabel) ||
+ISCHANGED(DeveloperName)</errorConditionFormula>
+        <errorMessage>ESMS005: The following fields cannot be edited: Label, SM Setting Name or Record Description.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS006</fullName>
+        <active>true</active>
+        <description>This VR attempts to only allow commas to separate profile names</description>
+        <errorConditionFormula>DeveloperName = 'Profile_Audit_Profile_List' &amp;&amp; 
+(CONTAINS(Text_Area_255__c, ";") || 
+MID(Text_Area_255__c,LEN(Text_Area_255__c), 1) = ',')</errorConditionFormula>
+        <errorDisplayField>Text_Area_255__c</errorDisplayField>
+        <errorMessage>ESMS006: Profile Names must be separated by comma only and cannot end with a comma.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS007</fullName>
+        <active>true</active>
+        <description>Prevents any values less than 30 but allows 0 for the Delete_Log record.</description>
+        <errorConditionFormula>DeveloperName = 'Log_Deletion' &amp;&amp; Number__c &lt; 30 &amp;&amp; Number__c != 0</errorConditionFormula>
+        <errorDisplayField>Number__c</errorDisplayField>
+        <errorMessage>ESMS007: Log Deletion Number cannot be be less than 30 but 0 or blank is allowed.  If set to zero or blank then no deletion of the log records will occur.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS008</fullName>
+        <active>true</active>
+        <description>Disable the ability for Checkbox__c and Number__c fields to contain data</description>
+        <errorConditionFormula>(DeveloperName = 'Email_All_Critical_Log_Activity' || 
+DeveloperName = 'Email_That_SM_Module_Executed' ||
+DeveloperName = 'Deprovision_User_Sandbox_Limit_List' ||
+DeveloperName = 'Profile_Audit_Profile_List' ||
+DeveloperName = 'Profile_Audit_Sandbox_Limit_List' ||
+DeveloperName = 'Provision_Sandbox_Limit_List') &amp;&amp;
+/***EXCLUSION***/
+(Checkbox__c || !ISBLANK(Number__c))</errorConditionFormula>
+        <errorMessage>ESMS008: Only the Text Area 255 field can be filled in for this record.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS009</fullName>
+        <active>true</active>
+        <description>Disable the ability for Checkbox__c and Text_Area_255 fields to contain data</description>
+        <errorConditionFormula>(DeveloperName = 'Log_Deletion' ||
+DeveloperName = 'Timeout' ||
+DeveloperName = 'Email_Log_Delay') &amp;&amp;
+/***EXCLUSION***/
+(Checkbox__c || !ISBLANK(Text_Area_255__c))</errorConditionFormula>
+        <errorMessage>ESMS009: Only the Number field can be filled in for this record.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS010</fullName>
+        <active>true</active>
+        <description>Disable the ability for Number__c and Text_Area_255 fields to contain data</description>
+        <errorConditionFormula>(DeveloperName = 'Sandbox_Manager' || 
+DeveloperName = 'Deactivate_Users' ||
+DeveloperName = 'Profile_Audit' ||
+DeveloperName = 'Provision_Users') &amp;&amp;
+/***EXCLUSION***/
+(!ISBLANK(Text_Area_255__c) || !ISBLANK(Number__c))</errorConditionFormula>
+        <errorMessage>ESMS010: Only the Checkbox field can be filled in for this record.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS011</fullName>
+        <active>true</active>
+        <description>Require a value between 1 and 10.  If left blank code will default to 1</description>
+        <errorConditionFormula>DeveloperName = 'NC_Chunk_Setting' &amp;&amp; Number__c &gt; 10 ||
+DeveloperName = 'NC_Chunk_Setting' &amp;&amp; ISBLANK(Number__c) ||
+DeveloperName = 'NC_Chunk_Setting' &amp;&amp; Number__c = 0</errorConditionFormula>
+        <errorDisplayField>Number__c</errorDisplayField>
+        <errorMessage>ESMS011: Named Credential Chunk Setting must be between 1 and 10.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ESMS012</fullName>
+        <active>true</active>
+        <description>Prevents any values less than 30 but allows 0 for the Delete_Log record.</description>
+        <errorConditionFormula>DeveloperName = 'Email_Log_Delay' &amp;&amp; Number__c &lt; 5 || 
+DeveloperName = 'Email_Log_Delay' &amp;&amp; Number__c &gt; 60 || 
+DeveloperName = 'Email_Log_Delay' &amp;&amp; ISBLANK(Number__c)</errorConditionFormula>
+        <errorDisplayField>Number__c</errorDisplayField>
+        <errorMessage>ESMS012: The Email Log Delay Number must be between 5 and 60.</errorMessage>
+    </validationRules>
+</CustomObject>

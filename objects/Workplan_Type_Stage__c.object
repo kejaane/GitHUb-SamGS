@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>All_Assignments_Must_Be_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>All Assignments Must Be Completed before another stage can be started (set to in progress)</inlineHelpText>
+        <label>All Assignments Must Be Completed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Display_Order__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( RecordType.DeveloperName = 'Process', Sequence_Number__c, Parent_Workplan_Type_Stage__r.Sequence_Number__c + (Sequence_Number__c / 100))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Display Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Assignments__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Assignments</label>
+        <summaryFilterItems>
+            <field>AIA_Workplan_Type_Task__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>AIA_Workplan_Type_Task__c.Workplan_Type_Stage__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Sub_processes__c</fullName>
+        <description>Counts the no of sub - process records</description>
+        <externalId>false</externalId>
+        <label>Number of Sub-Processes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Workplan_Stage_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Workplan_Type_Stage__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Workplan Stage Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Workplan_Type_Stage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Workplan Type Stage</label>
+        <referenceTo>Workplan_Type_Stage__c</referenceTo>
+        <relationshipLabel>Workplan Type Stage</relationshipLabel>
+        <relationshipName>Workplan_Type_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sequence_Number__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The sequence number should be incremented in multiples of 10.</inlineHelpText>
+        <label>Sequence Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pre-Sales</fullName>
+                    <default>false</default>
+                    <label>Pre-Sales</label>
+                </value>
+                <value>
+                    <fullName>Group Structure &amp; Admin Setup</fullName>
+                    <default>false</default>
+                    <label>Group Structure &amp; Admin Setup</label>
+                </value>
+                <value>
+                    <fullName>Benefit Design &amp; Creation of NAEGS</fullName>
+                    <default>false</default>
+                    <label>Benefit Design &amp; Creation of NAEGS</label>
+                </value>
+                <value>
+                    <fullName>Open Enrollment, Materials &amp; Support</fullName>
+                    <default>false</default>
+                    <label>Open Enrollment, Materials &amp; Support</label>
+                </value>
+                <value>
+                    <fullName>Benefit Coding, Loading &amp; Testing</fullName>
+                    <default>false</default>
+                    <label>Benefit Coding, Loading &amp; Testing</label>
+                </value>
+                <value>
+                    <fullName>Enrollment &amp; ID Card Generation</fullName>
+                    <default>false</default>
+                    <label>Enrollment &amp; ID Card Generation</label>
+                </value>
+                <value>
+                    <fullName>Post Sales Document Generation</fullName>
+                    <default>false</default>
+                    <label>Post Sales Document Generation</label>
+                </value>
+                <value>
+                    <fullName>Billing (Monthly) Invoices</fullName>
+                    <default>false</default>
+                    <label>Billing (Monthly) Invoices</label>
+                </value>
+                <value>
+                    <fullName>Account &amp; Member Tools</fullName>
+                    <default>false</default>
+                    <label>Account &amp; Member Tools</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When a new stage is added, it should match one of the picklist values for the opportunity</inlineHelpText>
+        <label>Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Stage_Category__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>RFP</fullName>
+                    <default>false</default>
+                    <label>RFP</label>
+                </value>
+                <value>
+                    <fullName>Benefit Request</fullName>
+                    <default>false</default>
+                    <label>Benefit Request</label>
+                </value>
+                <value>
+                    <fullName>ARC Approval</fullName>
+                    <default>false</default>
+                    <label>ARC Approval</label>
+                </value>
+                <value>
+                    <fullName>Underwriting</fullName>
+                    <default>false</default>
+                    <label>Underwriting</label>
+                </value>
+                <value>
+                    <fullName>Quote Delivered</fullName>
+                    <default>false</default>
+                    <label>Quote Delivered</label>
+                </value>
+                <value>
+                    <fullName>Sold</fullName>
+                    <default>false</default>
+                    <label>Sold</label>
+                </value>
+                <value>
+                    <fullName>Dead</fullName>
+                    <default>false</default>
+                    <label>Dead</label>
+                </value>
+                <value>
+                    <fullName>Confirmation of Sales/Group Paperwork</fullName>
+                    <default>false</default>
+                    <label>Confirmation of Sales/Group Paperwork</label>
+                </value>
+                <value>
+                    <fullName>Account Kick-off Meeting</fullName>
+                    <default>false</default>
+                    <label>Account Kick-off Meeting</label>
+                </value>
+                <value>
+                    <fullName>Group Structure</fullName>
+                    <default>false</default>
+                    <label>Group Structure</label>
+                </value>
+                <value>
+                    <fullName>Implementation Plan</fullName>
+                    <default>false</default>
+                    <label>Implementation Plan</label>
+                </value>
+                <value>
+                    <fullName>Benefit Design Doc</fullName>
+                    <default>false</default>
+                    <label>Benefit Design Doc</label>
+                </value>
+                <value>
+                    <fullName>EDC</fullName>
+                    <default>false</default>
+                    <label>EDC</label>
+                </value>
+                <value>
+                    <fullName>Create MM</fullName>
+                    <default>false</default>
+                    <label>Create MM</label>
+                </value>
+                <value>
+                    <fullName>Benefit Setup</fullName>
+                    <default>false</default>
+                    <label>Benefit Setup</label>
+                </value>
+                <value>
+                    <fullName>CYC</fullName>
+                    <default>false</default>
+                    <label>CYC</label>
+                </value>
+                <value>
+                    <fullName>CYC BF App</fullName>
+                    <default>false</default>
+                    <label>CYC BF App</label>
+                </value>
+                <value>
+                    <fullName>Process Enrollment</fullName>
+                    <default>false</default>
+                    <label>Process Enrollment</label>
+                </value>
+                <value>
+                    <fullName>ID Cards</fullName>
+                    <default>false</default>
+                    <label>ID Cards</label>
+                </value>
+                <value>
+                    <fullName>BR Wellness</fullName>
+                    <default>false</default>
+                    <label>BR Wellness</label>
+                </value>
+                <value>
+                    <fullName>Setup CVS</fullName>
+                    <default>false</default>
+                    <label>Setup CVS</label>
+                </value>
+                <value>
+                    <fullName>Setup Davis</fullName>
+                    <default>false</default>
+                    <label>Setup Davis</label>
+                </value>
+                <value>
+                    <fullName>Setup Magellan</fullName>
+                    <default>false</default>
+                    <label>Setup Magellan</label>
+                </value>
+                <value>
+                    <fullName>Setup Facets Dental</fullName>
+                    <default>false</default>
+                    <label>Setup Facets Dental</label>
+                </value>
+                <value>
+                    <fullName>Carve-out RX</fullName>
+                    <default>false</default>
+                    <label>Carve-out RX</label>
+                </value>
+                <value>
+                    <fullName>Private Exchange</fullName>
+                    <default>false</default>
+                    <label>Private Exchange</label>
+                </value>
+                <value>
+                    <fullName>Perf Guarantee</fullName>
+                    <default>false</default>
+                    <label>Perf Guarantee</label>
+                </value>
+                <value>
+                    <fullName>ASA</fullName>
+                    <default>false</default>
+                    <label>ASA</label>
+                </value>
+                <value>
+                    <fullName>PP CFL</fullName>
+                    <default>false</default>
+                    <label>PP CFL</label>
+                </value>
+                <value>
+                    <fullName>BAA</fullName>
+                    <default>false</default>
+                    <label>BAA</label>
+                </value>
+                <value>
+                    <fullName>Accm Cnt Svcs</fullName>
+                    <default>false</default>
+                    <label>Accm Cnt Svcs</label>
+                </value>
+                <value>
+                    <fullName>Create Benefit Contract</fullName>
+                    <default>false</default>
+                    <label>Create Benefit Contract</label>
+                </value>
+                <value>
+                    <fullName>Generate Post Sale SBCs</fullName>
+                    <default>false</default>
+                    <label>Generate Post Sale SBCs</label>
+                </value>
+                <value>
+                    <fullName>Generate Monthly Invoices</fullName>
+                    <default>false</default>
+                    <label>Generate Monthly Invoices</label>
+                </value>
+                <value>
+                    <fullName>Create Microsite</fullName>
+                    <default>false</default>
+                    <label>Create Microsite</label>
+                </value>
+                <value>
+                    <fullName>Searchlight HealthCheck</fullName>
+                    <default>false</default>
+                    <label>Searchlight HealthCheck</label>
+                </value>
+                <value>
+                    <fullName>Employer Portal</fullName>
+                    <default>false</default>
+                    <label>Employer Portal</label>
+                </value>
+                <value>
+                    <fullName>MyAccount</fullName>
+                    <default>false</default>
+                    <label>MyAccount</label>
+                </value>
+                <value>
+                    <fullName>Mental Health Parity</fullName>
+                    <default>false</default>
+                    <label>Mental Health Parity</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Pre-Sales</controllingFieldValue>
+                <valueName>RFP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pre-Sales</controllingFieldValue>
+                <valueName>Benefit Request</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pre-Sales</controllingFieldValue>
+                <valueName>ARC Approval</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pre-Sales</controllingFieldValue>
+                <valueName>Underwriting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pre-Sales</controllingFieldValue>
+                <valueName>Quote Delivered</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pre-Sales</controllingFieldValue>
+                <valueName>Sold</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pre-Sales</controllingFieldValue>
+                <valueName>Dead</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Group Structure &amp; Admin Setup</controllingFieldValue>
+                <valueName>Account Kick-off Meeting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Group Structure &amp; Admin Setup</controllingFieldValue>
+                <valueName>Group Structure</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Group Structure &amp; Admin Setup</controllingFieldValue>
+                <valueName>Implementation Plan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Benefit Design &amp; Creation of NAEGS</controllingFieldValue>
+                <valueName>Benefit Design Doc</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Benefit Design &amp; Creation of NAEGS</controllingFieldValue>
+                <valueName>EDC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open Enrollment, Materials &amp; Support</controllingFieldValue>
+                <valueName>Create MM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Benefit Coding, Loading &amp; Testing</controllingFieldValue>
+                <valueName>Benefit Setup</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Benefit Coding, Loading &amp; Testing</controllingFieldValue>
+                <valueName>CYC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Benefit Coding, Loading &amp; Testing</controllingFieldValue>
+                <valueName>CYC BF App</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>Process Enrollment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>ID Cards</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>BR Wellness</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>Setup CVS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>Setup Davis</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>Setup Magellan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>Setup Facets Dental</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>Carve-out RX</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Enrollment &amp; ID Card Generation</controllingFieldValue>
+                <valueName>Private Exchange</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Post Sales Document Generation</controllingFieldValue>
+                <valueName>Perf Guarantee</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Post Sales Document Generation</controllingFieldValue>
+                <valueName>ASA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Post Sales Document Generation</controllingFieldValue>
+                <valueName>PP CFL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Post Sales Document Generation</controllingFieldValue>
+                <valueName>BAA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Post Sales Document Generation</controllingFieldValue>
+                <valueName>Accm Cnt Svcs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Post Sales Document Generation</controllingFieldValue>
+                <valueName>Create Benefit Contract</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Post Sales Document Generation</controllingFieldValue>
+                <valueName>Generate Post Sale SBCs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Billing (Monthly) Invoices</controllingFieldValue>
+                <valueName>Generate Monthly Invoices</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Account &amp; Member Tools</controllingFieldValue>
+                <valueName>Create Microsite</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Account &amp; Member Tools</controllingFieldValue>
+                <valueName>Searchlight HealthCheck</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Account &amp; Member Tools</controllingFieldValue>
+                <valueName>Employer Portal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Account &amp; Member Tools</controllingFieldValue>
+                <valueName>MyAccount</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Workplan_Type_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Workplan_Type__r.Workplan_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Workplan Type Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Workplan_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Workplan Type</label>
+        <referenceTo>AIA_Workplan_Type__c</referenceTo>
+        <relationshipLabel>Workplan Type Stage</relationshipLabel>
+        <relationshipName>AIA_Workplan_Type_Stage</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Workplan Type Stage</label>
+    <nameField>
+        <displayFormat>WTS-{00000}</displayFormat>
+        <label>Workplan Type Stage Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Workplan Type Stage</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Stage_Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Stage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Display_Order__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Active__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage_Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Display_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Stage_Category__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Stage__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Process</fullName>
+        <active>true</active>
+        <label>Process</label>
+        <picklistValues>
+            <picklist>Stage_Category__c</picklist>
+            <values>
+                <fullName>Account %26 Member Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Coding%2C Loading %26 Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design %26 Creation of NAEGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing %28Monthly%29 Invoices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment %26 ID Card Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Structure %26 Admin Setup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Enrollment%2C Materials %26 Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Sales Document Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Sales</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>ARC Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accm Cnt Svcs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Kick-off Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BR Wellness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Doc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Setup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CYC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CYC BF App</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve-out RX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmation of Sales%2FGroup Paperwork</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Benefit Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create MM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Microsite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employer Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generate Monthly Invoices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generate Post Sale SBCs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Structure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID Cards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental Health Parity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MyAccount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PP CFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Perf Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process Enrollment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote Delivered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RFP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Searchlight HealthCheck</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup CVS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup Davis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup Facets Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup Magellan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sub_Process</fullName>
+        <active>true</active>
+        <label>Sub-Process</label>
+        <picklistValues>
+            <picklist>Stage_Category__c</picklist>
+            <values>
+                <fullName>Account %26 Member Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Coding%2C Loading %26 Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design %26 Creation of NAEGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing %28Monthly%29 Invoices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment %26 ID Card Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Structure %26 Admin Setup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Enrollment%2C Materials %26 Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Sales Document Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Sales</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>ARC Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accm Cnt Svcs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Kick-off Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BR Wellness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Doc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Setup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CYC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CYC BF App</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve-out RX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmation of Sales%2FGroup Paperwork</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Benefit Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create MM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Microsite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employer Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generate Monthly Invoices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generate Post Sale SBCs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Structure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID Cards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MyAccount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PP CFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Perf Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process Enrollment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote Delivered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RFP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Searchlight HealthCheck</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup CVS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup Davis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup Facets Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup Magellan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>EWTS001</fullName>
+        <active>true</active>
+        <description>Validates the Stage Category on a SubProcess matches the Stage Category on the parent Process</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (RecordType.DeveloperName = "Sub_Process" &amp;&amp; TEXT(Stage_Category__c) &lt;&gt; TEXT(Parent_Workplan_Type_Stage__r.Stage_Category__c))</errorConditionFormula>
+        <errorDisplayField>Stage_Category__c</errorDisplayField>
+        <errorMessage>ETWS001: Stage Category must be the same as the parent Workplan Type Stage Category</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWTS002</fullName>
+        <active>true</active>
+        <description>When adding a workplan stage (subprocess) - you should only be able to select from the parent workplan type stages = process for that workplan type</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; IF( TEXT(Stage_Category__c)&lt;&gt; TEXT(Parent_Workplan_Type_Stage__r.Stage_Category__c), TRUE, FALSE) &amp;&amp; IF(RecordType.Name='Sub-Process',TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Stage_Category__c</errorDisplayField>
+        <errorMessage>Stage category for the sub-process must be the same as the stage category for the parent workplan type stage</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWTS003</fullName>
+        <active>false</active>
+        <description>If the workplan type.Active Flag = True, don't allow insert of new workplan type stages .</description>
+        <errorConditionFormula>(Not($Permission.Ignore_Validation_Rules)) &amp;&amp; ISNEW() &amp;&amp; Workplan_Type__r.Active__c</errorConditionFormula>
+        <errorMessage>You can not add new workplan type stages  for an active workplan type.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_WorkPlan_Type_Stage</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Sub-Process Stage</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>../apex/AIA_Intermediatpage?id={!Workplan_Type_Stage__c.Id}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>This notification is sent to selected user group when an ‘Elite’ case has remained in ‘In-Queue’ for more than 4 hours (includes weekends, holidays etc.)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>ZZ_SBU Internal Elite SLA 4 hours</name>
+    <style>formalLetter</style>
+    <subject>Elite Case# {!Case.CaseNumber} has not been ‘Accepted’ in 4 hours after it was received.</subject>
+    <textOnly>Dear {!Case.SLA_Category__c} team supervisor ,
+
+
+
+Elite Case#{!Case.CaseNumber} has not been &apos;Accepted&apos; by a user in 4 hours after it was received.
+
+
+
+Please review the &apos;Elite&apos; case and assign as necessary to meet the &apos;Service Level Agreements&apos;.
+
+
+
+Detail Case Link : {!Case.Link}
+
+
+
+
+Thank You,
+
+SFDC Team
+
+SFDCSupport@carefirst.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

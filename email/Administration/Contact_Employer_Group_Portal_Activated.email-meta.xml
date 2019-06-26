@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_SPM_SS_Letterhead</letterhead>
+    <name>Contact Employer Group Portal Activated</name>
+    <style>formalLetter</style>
+    <subject>Employer Group Portal Contact Activated</subject>
+    <textOnly>Please search in Salesforce.com for the account shown below.  Next locate the latest SOLD opportunity and screen shot the entire Legacy System Information section.  Finally, reply to this email and paste the copied section into the email and send it to to EmployerPortalUseraccountrequest@carefirst.com.
+
+
+
+Account Owner Name: {!Account.OwnerFullName}
+
+Account Owner Email: {!Account.OwnerEmail}
+
+Account Name: {!Account.Name}
+
+First Name: {!Contact.FirstName}
+
+Last Name: {!Contact.LastName}
+
+Email: {!Contact.Email}
+
+Employer Group Portal: {!if(Contact.Employer_Group_Portal__c, &quot;Yes&quot;,&quot;No&quot;)}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

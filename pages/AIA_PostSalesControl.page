@@ -1,0 +1,111 @@
+<apex:page standardStylesheets="false" standardController="AIA_Implementation__c" extensions="AIA_PostSalesController" action="{!getWorkplanData}">
+    <html>
+        <head>
+            <meta charset="utf-8"/>
+            <title>SalesForce Tab's</title>
+            
+            <!--
+            <link rel="stylesheet" type="text/css" href="style.css"/>
+            <apex:includescript value="//code.jquery.com/jquery-1.11.1.min.js" / >
+            <apex:includescript value="//code.jquery.com/circle-1.11.1.min.js" / >
+            -->
+            
+            <apex:includeScript value="{!URLFOR($Resource.AIA_PostSales, '/js/jquery.min.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.AIA_PostSales, '/js/circle.min.js')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.AIA_PostSales, '/css/style.css')}"  />
+        </head>
+        
+        <body>
+            <div class="maindiv clearfix"  style="margin:auto;width:95%">
+                <div style="float:right"><input type="checkbox" onclick="showAll(this)" />
+                    <label>Show All Sub-Process</label>
+                </div>
+                <div class="clearfix"></div>
+                
+                
+                <div class="tab-container" style="margin-left:14pc;">
+                    <!-- repeat tabs  start-->
+                    <!-- Add repeat tag here -->
+                    <!-- Below is an example -->
+                    <apex:variable value="{!0}" var="rowNum"/>
+                    <apex:repeat value="{!aiaProcessList}" var="aiaObj" id="theRepeat">
+                        
+                        <div class="TabOuter" align="center">
+                            <div class="TabBox" style="padding-top:20px;padding-right: 15px;padding-bottom:50px;padding-left:05px;">
+                                <div class="circle" id="circle-{!rowNum}" data-index="{!rowNum}" data-percentage="{!aiaObj.processCompletePercentage}"></div>
+                                <br/>
+                                <LABEL>{!aiaObj.processName}</LABEL>
+                            </div>
+                            <div class="TabList" align="left">
+                                <ul>
+                                    <apex:repeat value="{!aiaObj.subProcess}" var="subProObj" id="theRepeat">
+                                        <li style="cursor:pointer;" class="{!if(subProObj.subProcessStatus != 100, 'pending', 'success')}" data-link="{!subProObj.subProcessURL}" onclick="openUrl(this)">{!subProObj.subProcessName}</li>
+                                    </apex:repeat>
+                                </ul>
+                            </div>
+                        </div>
+                        <apex:variable var="rowNum" value="{!rowNum + 1}"/>
+                    </apex:repeat>
+                    
+                <!-- repeat tabs end-->
+                 </div>
+                
+                
+                <div class="clearfix"></div>
+            </div>
+        
+            
+            <script>
+            
+                var showAll = function(obj){
+                    if($(obj).is(":checked")){
+                                $(".tab-container").addClass("showAll");
+                    }
+                    else {
+                        $(".tab-container").removeClass("showAll");
+                    }
+                }
+            
+                var drawCircle = function(data){
+                    setTimeout(function() {
+                        Circles.create({
+                            id:                  'circle-'+data.index,
+                            radius:              30,
+                            value:               data.percentage,
+                            maxValue:            100,
+                            width:               6,
+                            text:                function(value){return value + '%';},
+                            colors:              ['#fff', '#00b050'],
+                            duration:            1000,
+                            wrpClass:            'circles-wrp',
+                            textClass:           'circles-text',
+                            valueStrokeClass:    'circles-valueStroke',
+                            maxValueStrokeClass: 'circles-maxValueStroke',
+                            styleWrapper:        true,
+                            styleText:           true
+                        });
+                    },0)
+                }
+                
+                var openUrl = function(obj){
+                    var data = $(obj).data();
+                    window.open(data.link)
+                }
+                
+                $(document).ready(function(){
+                    //alert( "welcome" );
+                    var circleTags = $(".circle") 
+                    $.each(circleTags,function(i,tag){
+                         var data = $(tag).data();
+                        drawCircle(data);
+                    });
+                })
+                
+               
+                
+                
+            </script>
+            
+        </body>
+    </html>
+</apex:page>

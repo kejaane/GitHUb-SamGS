@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>21.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Used primarily on the Health Blue Dashboard to get the users to the instruction on how to read the reports.</description>
+    <label>HB Dashboard Instructions</label>
+</ApexPage>

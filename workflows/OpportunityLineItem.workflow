@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>AIAFromOppLineItem</fullName>
+        <field>AIAFromOpplineItem__c</field>
+        <literalValue>1</literalValue>
+        <name>AIAFromOppLineItem</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>OpportunityId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>AIAFromOppLineItem</fullName>
+        <actions>
+            <name>AIAFromOppLineItem</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.AIAFromOpplineItem__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

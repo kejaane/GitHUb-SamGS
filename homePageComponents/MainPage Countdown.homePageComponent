@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;div style=&quot;text-align: right;&quot;&gt;&lt;iframe src=&quot;/apex/HomeComponentCountDownToEvent2?core.apexpages.devmode.url=1&quot; frameborder=&quot;0&quot; height=&quot;50%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

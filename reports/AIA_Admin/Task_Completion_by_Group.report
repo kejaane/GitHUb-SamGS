@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_40265661</developerName>
+        <masterLabel>Closed by Implementations</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CUST_LAST_UPDATE_NAME</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Toan Nguyen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cyndi Bell</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kathy Norjen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kelly Coiner</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kelly Welsh</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ryan Hilton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Veronica Williams</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maria Douthitt</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shannon Yospa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Steven Foster</sourceValue>
+            </sourceValues>
+            <value>Implementation Managers</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adrienne Robinson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Amanda Poole</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Barbara Howarth</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Barbara Jordan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Barb Patton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bryan Mulford</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Christopher Stolze</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Crystal Dove</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Donna Hase</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Elizabeth Fuhrman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Francie Ozonoff</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jennifer Fowler</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jose Cabrera</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Karen Gambrell</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Linda Pierce</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lindsay Caldwell</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Linda Thompson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lisa Quigg</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lynn Dods-Liming</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marlies Fisher</sourceValue>
+            </sourceValues>
+            <value>Sales</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Michelle Finney</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michele Weiss</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Molly McAllen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Paulette Freeman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shari Washington</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sheray Austin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sherry Schuyler</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Stacy Flemister</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Steve Krasnoff</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Susan Sachs</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Thomas Munns</sourceValue>
+            </sourceValues>
+            <value>Sales2</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Brandon Servary</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ginger Krempa</sourceValue>
+            </sourceValues>
+            <value>AIA Admin</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>AIA_Workplan_Assignment__c.Date_Completed__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_40265661</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Account_Name__c</field>
+    </columns>
+    <columns>
+        <field>CUST_LAST_UPDATE_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Task_Name__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Assigned_To__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Due_Date__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>AIA_Workplan_Assignment__c.Date_Completed__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_40265661</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Task Completion by Group</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AIA_Workplan_Assignment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>AIA_Workplan_Assignment__c.Date_Completed__c</dateColumn>
+        <endDate>2018-02-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-08-01</startDate>
+    </timeFrameFilter>
+</Report>

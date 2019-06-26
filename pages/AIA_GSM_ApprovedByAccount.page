@@ -1,0 +1,30 @@
+<!--/*===================================================================================================================
+* Date       : 09/27/2017
+* Developer  : Raviteja
+* Purpose    : US 106 - This is Page used on button to help change the status to Approved by Account
+*                                 Update History
+*                                 ---------------
+* Date       |      Developer        | Tag |   Description
+*============+=======================+=====+===============================================================================
+* 09/27/2017 |      Raviteja         |     | Initial Version
+* 02/09/2018 | Rajesh Nagandla       | T01 | Added SLDS to all components in page
+*============+=======================+=====+===============================================================================
+*-->
+<apex:page standardController="AIA_Group_Structure_Request_Form__c" extensions="AIA_GSRF_StatusByAccount" action="{!saveRecForApproved}" lightningStylesheets="true">
+   <!--T01 - start -->
+   <apex:slds rendered="{! !isClassic}"/>
+   <!--T01 - End -->
+   <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.status__c}
+    {!AIA_Group_Structure_Request_Form__c.Rejected_comments_by_Account__c}
+    {!AIA_Group_Structure_Request_Form__c.Implementation__c}
+    {!AIA_Group_Structure_Request_Form__c.Account_Legal_Name__c}
+    {!AIA_Group_Structure_Request_Form__c.Effective_date_format__c}
+    {!AIA_Group_Structure_Request_Form__c.Base_Group_Impact__c}
+    
+    </span>
+   <apex:pageMessages escape="false"></apex:pageMessages>
+    <apex:form styleClass="slds-scope">
+        <center><apex:commandButton value="Ok" action="{!backtogsrf}" styleClass="slds-button slds-button_neutral"/></center>
+    </apex:form>
+    
+</apex:page>

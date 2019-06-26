@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Case.Age_0_2__c:SUM+Case.Age_121_150__c:SUM+Case.Age_151_180__c:SUM+Case.Age_181__c:SUM+Case.Age_3_7__c:SUM+Case.Age_61_90__c:SUM+Case.Aged_15_21__c:SUM+Case.Aged_22_30__c:SUM+Case.Aged_31_60__c:SUM+Case.Aged_8_14__c:SUM+Case.Aged_91_120__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total Cases</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_77609195</developerName>
+        <masterLabel>Origin</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ORIGIN</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Email</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email Thread</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Broker Sales MD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Broker Sales 4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Retro activity Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: SBC Project</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: BCS Specialist</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Small Medium Group</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Royal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Indigo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Ocean</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Sapphire</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Sky</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Teal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Compliance</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA1</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Case.SLA_Category__c</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>OWNER</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Age_0_2__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Age_3_7__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Aged_8_14__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Aged_15_21__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Aged_22_30__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Aged_31_60__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Age_61_90__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Aged_91_120__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Age_121_150__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Age_151_180__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Age_181__c</field>
+    </columns>
+    <description>This report previews Open Aging Cases grouped by SLA followed by Origin and Case Owner</description>
+    <filter>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.SBU_Group_Case,Case.SBU_Member_Case,Case.SBU_Non_Member_Case,Case.SBU_Broker_Support_Internal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Received_Date__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.SLA_Category__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_77609195</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Age Range Summary By SLA and Owner-spm</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

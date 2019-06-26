@@ -1,0 +1,227 @@
+<!-- 
+   *===================================================================================================
+   * Date         : 02/20/2019
+   * Developer    : Gayathri Palanisamy
+   * Purpose      : This is the VF page for adding custom default account team members for users.
+   *===================================================================================================
+   *                                 Update History
+   *                                 ---------------
+   * Date          Developer     Tag   Description
+   *===================================================================================================
+   * 02/20/2019 |  Gayathri |         | Initial Version
+   *===================================================================================================
+   -->
+
+<apex:page standardcontroller="User" extensions="Default_Account_Team_Controller" lightningStylesheets="true">
+    <apex:slds />
+    <style>
+    .popupBox {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            width: 300px;
+            margin-left: -150px;
+        }
+        
+        .popupBackground {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: relative;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+    </style>
+    <apex:form id="atm">
+        <apex:pageMessages />
+        <apex:outputPanel rendered="{!!isInRelatedLst}">
+            <div class="slds-grid slds-wrap slds-align--absolute-center">
+                
+                <apex:commandButton action="{!saveDATM}" Value="Save"/>
+                <apex:commandbutton value="Cancel" action="{!cancelDATM}"/> 
+            </div>
+            
+            
+            
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <tr class="slds-text-title--caps">
+                    <th>Team Member</th> 
+                    <th>Account Access</th>
+                    <th>Contact Access</th>
+                    <th>Opportunity Access</th>
+                    <th>Case Access</th>
+                    <th>Team Role</th>
+                </tr>
+                
+                <apex:repeat value="{!addAccountTeamLst}" var="var">
+                    <tr>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    <apex:inputfield value="{!var.UserId__c}"/>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    <apex:inputfield value="{!var.Account_Access__c}"/>
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    <apex:inputfield value="{!var.Contact_Access__c}"/>
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    <apex:inputfield value="{!var.Opportunity_Access__c}"/>
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    <apex:inputfield value="{!var.Case_Access__c}"/>
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    <apex:inputfield value="{!var.Team_Role__c}"/>
+                                </div> 
+                            </div>
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </table>
+            
+            
+            
+        </apex:outputPanel>
+        
+        <!--<apex:outputPanel rendered="{!If(viewAccountTeamLst.size>0,true,false)}">-->
+        <apex:outputPanel >
+            <apex:actionFunction action="{!deleteAccTM}" reRender="popuppanel" name="deleteATM">
+            <apex:param name="atmid" value="" />
+        </apex:actionFunction>
+            <apex:outputPanel id="popuppanel">
+                    <apex:outputPanel rendered="{!displayPopUp}">
+                        <apex:outputPanel styleClass="popupBackground" layout="block" />
+                        <apex:outputPanel styleClass="popupBox" layout="block">
+                            <div align="Center">
+                                <apex:outputText value="Are you Sure you want to delete?" />
+                                <br/>
+                                <br/>
+                                <apex:commandButton value="Delete" onclick="delfinal()" />
+                                <apex:commandButton value="Cancel" action="{!cancelTeamPop}" />
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            
+            <div class='slds-button slds-float_right'>
+                <apex:commandButton action="{!enableAllRec}" value="View All/Add Members"/>
+            </div>
+            
+            
+            
+            
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <tr class="slds-text-title--caps">
+                    <th></th>
+                    <th>Team Member</th> 
+                    <th>Account Access</th>
+                    <th>Contact Access</th>
+                    <th>Opportunity Access</th>
+                    <th>Case Access</th>
+                    <th>Team Role</th>
+                </tr>
+                
+                <apex:repeat value="{!viewAccountTeamLst}" var="var">
+                    <tr>
+                        <td>
+                        	<apex:commandLink value="Delete" 
+                                                        onclick="DeleteAndRefreshPage('{!var.ownerId}','{!var.Id}');"
+                                                        action="{!showPopup}" immediate="true" id="del"
+                                                        reRender="popuppanel" />
+                        
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    {!var.UserId__r.Name}
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    {!var.Account_Access__c}
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    {!var.Contact_Access__c}
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    {!var.Opportunity_Access__c}
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    {!var.Case_Access__c}
+                                </div> 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-p-horizontal--small">
+                                <div class="slds-form-element__control">
+                                    {!var.Team_Role__c}
+                                </div> 
+                            </div>
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </table>
+            <apex:outputPanel rendered="{!If(AND(viewAccountTeamLst.size==0,isInRelatedLst),true,false)}">
+                <div style="text-align:center;font-size: 15px;">
+                    <apex:outputText value="No Members to display" /> 
+                </div>
+                
+            </apex:outputPanel> 
+            
+        </apex:outputPanel>  
+    </apex:form>
+    <script>
+    function DeleteAndRefreshPage(userId,atmid) {
+            	ownerId = userId;
+                atmids = atmid;
+            }
+    
+    function delfinal() {
+        		deleteATM(atmids); 
+                window.top.location.href = '/' + ownerId;
+            }
+    </script>
+</apex:page>

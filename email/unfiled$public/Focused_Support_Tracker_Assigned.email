@@ -1,0 +1,12 @@
+Hello,
+
+Following observation is reported by a production user and assigned to you:
+{!Focused_Support_Tracker__c.Description__c}
+
+Observation Number : {!Focused_Support_Tracker__c.Name}
+Link to the record : {!Focused_Support_Tracker__c.Link}
+
+Please start working on this observation & get back to user as early as possible.
+
+Thank you,
+Salesforce ApplicationTeam.

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AIA Document --></label>
+        <name>AIA_Document__c</name>
+        <relationshipLabel><!-- AIA Docusign Approval Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approver Name --></label>
+        <name>Approver_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name of the business area that requires the response. --></help>
+        <label><!-- Business Area to be Approved --></label>
+        <name>Business_Area_to_be_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Days to Approve --></label>
+        <name>Number_of_Days_to_Approve__c</name>
+    </fields>
+    <fields>
+        <help><!-- The day the response was submitted. --></help>
+        <label><!-- Response Date --></label>
+        <name>Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response --></label>
+        <name>Response__c</name>
+        <picklistValues>
+            <masterLabel>Accept</masterLabel>
+            <translation><!-- Accept --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reject</masterLabel>
+            <translation><!-- Reject --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>AIA Docusign Approval Response</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AIA Docusign Approval Responses</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>AIA Docusign Approval Response Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- DAP001:Please enter a comment for the rejected response --></errorMessage>
+        <name>DAP001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- DAR002: You are not authorized to change the response to this record --></errorMessage>
+        <name>DAR002</name>
+    </validationRules>
+</CustomObjectTranslation>

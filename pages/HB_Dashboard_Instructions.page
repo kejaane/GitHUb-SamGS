@@ -1,0 +1,16 @@
+<!--
+//=========================================================================================
+//                                 Update History
+// Date       Developer      Description
+//=========================================================================================
+// 02/20/2015 TPB            Deprecated code in the identified below that references 
+//                           the full URL and changed it to reference the relative URL 
+//=========================================================================================
+-->
+<apex:page >    
+    <br/><br/><br/><br/><br/><br/><br/>
+    <!-- TPB 02/20/2015
+    <font size="6"><center><a href="https://c.na4.content.force.com/servlet/servlet.FileDownload?file=01560000000SoWe">Health Blue Report Instructions Here!</a></center></font>
+    -->
+    <font size="6"><center><a href="/servlet/servlet.FileDownload?file=01560000000SoWe">Health Blue Report Instructions Here!</a></center></font>
+</apex:page>

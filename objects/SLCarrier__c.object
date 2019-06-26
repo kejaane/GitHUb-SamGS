@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Offered_By_Carrier__c</fullName>
+        <externalId>false</externalId>
+        <label>Offered By Carrier</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CareFirst</fullName>
+                    <default>false</default>
+                    <label>CareFirst</label>
+                </value>
+                <value>
+                    <fullName>IOARE</fullName>
+                    <default>false</default>
+                    <label>IOARE</label>
+                </value>
+                <value>
+                    <fullName>Symetra</fullName>
+                    <default>false</default>
+                    <label>Symetra</label>
+                </value>
+                <value>
+                    <fullName>HM</fullName>
+                    <default>false</default>
+                    <label>HM</label>
+                </value>
+                <value>
+                    <fullName>Sunlife</fullName>
+                    <default>false</default>
+                    <label>Sunlife</label>
+                </value>
+                <value>
+                    <fullName>RAS</fullName>
+                    <default>false</default>
+                    <label>RAS</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>SL_Carriers</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Other_Offered_Carrier__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Other Offered Carrier</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Declined__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Quote Declined</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Received__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Quote Received</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used as a related list for the Opportunity and Stop Loss Opportunity Page Layout to allow carrier date details to be entered</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>SL Carrier</label>
+    <nameField>
+        <displayFormat>SLC{0000}</displayFormat>
+        <label>SLC</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SL Carriers</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <validationRules>
+        <fullName>E001_Check_Create_Edit_Permission</fullName>
+        <active>true</active>
+        <description>Prevents any profile but Stop Loss or System Administrator from editing or saving records</description>
+        <errorConditionFormula>IF(OR($Profile.Name = "Stop Loss", $Permission.Ignore_Validation_Rules), FALSE, TRUE)</errorConditionFormula>
+        <errorMessage>001: You do not have the permission to create or edit Carrier records.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E002_Other_Offered_Carrier1</fullName>
+        <active>true</active>
+        <description>If the user selects Other in the Offered By Carrier picklist then make sure the Other Offered Carrier text box has a value</description>
+        <errorConditionFormula>ISPICKVAL(Offered_By_Carrier__c , "Other")  &amp;&amp; ISBLANK(Other_Offered_Carrier__c)</errorConditionFormula>
+        <errorDisplayField>Other_Offered_Carrier__c</errorDisplayField>
+        <errorMessage>002: Please type a value in the Other Offered Carrier field</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>E003_Other_Offered_Carrier2</fullName>
+        <active>true</active>
+        <description>If the user selects anything but Other in the Offered By Carrier picklist then make sure the Other Offered Carrier text box is blank</description>
+        <errorConditionFormula>NOT(ISPICKVAL(Offered_By_Carrier__c , "Other")) &amp;&amp; NOT(ISBLANK(Other_Offered_Carrier__c))</errorConditionFormula>
+        <errorDisplayField>Offered_By_Carrier__c</errorDisplayField>
+        <errorMessage>003: Select 'Other' when a value is in the Other Offered Carrier field</errorMessage>
+    </validationRules>
+</CustomObject>

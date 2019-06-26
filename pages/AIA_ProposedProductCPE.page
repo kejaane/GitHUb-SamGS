@@ -1,0 +1,57 @@
+<!--==========================================================================================================================
+* Date         : 2/07/2018
+* Developer    : Raviteja V
+* Purpose      : This VF page function is to auto-populate the BRF,Fundingarrangement,Account,Product category values in Lightning
+*============================================================================================================================
+*                                 Update History
+*                                 --------------
+* Date       |  Developer       | Tag | Description
+*============+==================================+=====+======================================================================
+* 2/07/2018 |  Raviteja V       |     | Initial Version                                         
+*============+==================+=====+======================================================================================
+-->
+<apex:page standardController="Proposed_Products__c" extensions="AIA_ProposedProductCPE" lightningStylesheets="true">
+    <apex:slds />
+    <style>
+       .pbButton{
+        text-align: center !important;
+        }
+        .pbButton:last-child {
+        padding-right: 340px !important;
+        } 
+
+    </style>
+    <apex:form styleClass="slds-form-element">
+        <apex:pageMessages ></apex:pageMessages>
+     <apex:pageBlock title="Proposed Products" id="privateExhange" >
+			<apex:pageBlockButtons >
+                	<apex:commandButton action="{!save}" value="Save" />
+                	<apex:commandButton action="{!cancel}" value="Cancel"/>
+                	
+            </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Information" columns="2" >
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.RecordtypeId}"  />
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Product_Category__c}"/>
+            <apex:inputField value="{!Proposed_Products__c.Benefit_Request_Form__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Funding_Arrangement__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Carve_Out_Integration__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Custom_New__c}"/>
+            <apex:inputField value="{!Proposed_Products__c.BRF_Account__c}" />
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Exchange_Package_Option__c}"/>
+            <apex:inputField value="{!Proposed_Products__c.Related_Medical_Product__c}"/>
+            <apex:inputField value="{!Proposed_Products__c.Sub_Group_Account__c}" /> 
+            <apex:inputField value="{!Proposed_Products__c.Is_RX_Integration_ARC_Approval_Required__c}"/>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Private Exchange Section" columns="2">
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Blue_Rewards__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Exchange_CDH_Type__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Exchange_CDH_Fund_Type__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Proposed_Products__c.Comments__c}"/>
+        </apex:pageBlockSection>
+
+
+    </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

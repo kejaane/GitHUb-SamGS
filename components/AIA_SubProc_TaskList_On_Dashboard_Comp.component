@@ -1,0 +1,269 @@
+<!--
+*====================================================================================================================
+* Date       : 05/20/2018
+* Developer  : Asif Kutagulla
+* Purpose    : Visualforce component to show list of tasks associated with a sub-process. This shows as a pop-up when
+*              Process hyperlink is clicked on Implementation Dashboard on the Implementation record. Story:US463
+*                               ========[Update History]=======
+*                     -----------------------------------------------------
+* Date         Developer    Tag         Description
+*====================================================================================================================
+* 05/20/2018 | Asif K     |     | Initial version
+* 08/02/2018 | Arshia     | T01 | Added hyperlink on Task Name and Owner Name
+* 10/08/2018 | Gayathri	  | T02 | Added slds cell wrap to owner field for fixing alignment issue in the dashboard
+*====================================================================================================================
+-->
+<apex:component controller="AIA_SubProc_TaskList_On_Dashboard_Ctlr">
+
+    <apex:attribute name="subProcID" type="String" required="true" assignTo="{!subProcessID}"
+        description="Record ID of the Sub Process for which this task list is being shown"
+    />
+
+    <apex:slds />
+
+    <!-- Page header and icon -->
+    <div style="width:250%;text-align:left;background-color:white;" id="componentMainDiv"> 
+        <div class="slds-page-header slds-grid" style="background-color:white;border:0px;">
+            <!-- style="background-color:white;" -->
+            <div class="slds-media slds-col">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-event" title="List of tasks associated with the Sub Process">
+                                <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#task" />
+                                </svg>
+                            </span>
+                </div>
+                <div class="slds-media__body" style="background-color:white;">
+                    <p class="slds-text-body_small slds-line-height_reset">Subprocess Tasks</p>
+                    <h1 class="slds-page-header__title slds-truncate slds-align-left" title="">
+                        <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Stage__c}"
+                        />
+                    </h1>
+                </div>
+            </div>
+            <div class="slds-col" style="text-align:right;">
+                <apex:commandButton action="{!RedirectToCustomTaskPage}" value="Create Custom Task" id="CustomTaskBtn" />
+            </div>
+        </div>
+    </div>
+
+    <div style="width:250%;background-color:white;">
+        <br/>
+    </div>
+
+    <!-- Sub Process Statistics -->
+    <div style="width:250%;" id="SubProcessStatsParentDiv">
+        <table class="slds-table slds-max-medium-table_stacked-horizontal" style="padding-left:5%;">
+            <thead>
+                <th scope="col">
+                    <div class="slds-truncate" title="Implementation Name">
+                        Implementation Name
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Process">
+                        Process
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Completion %">
+                        Completion %
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Total Tasks">
+                        Total Tasks
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Completed Tasks">
+                        Completed
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="SLA Breached Tasks">
+                        SLA Breached
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Blocked Tasks">
+                        Blocked Tasks
+                    </div>
+                </th>
+                <!--<th class="slds-cell-shrink" scope="col"></th>-->
+
+            </thead>
+            <tbody>
+                <tr class="slds-hint-parent">
+                    <td scope="row" data-label="Implementation Name">
+                        <div class="slds-truncate" title="">
+                            <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Process__r.Implementation__r.Name}"
+                            />
+                        </div>
+                    </td>
+                    <td data-label="Process Name">
+                        <div class="slds-truncate slds-cell-wrap" title="">
+                            <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Process__r.Stage__c}"
+                            />
+                        </div>
+                    </td>
+                    <td data-label="Sub-Process Completion %">
+                        <div class="slds-truncate" title="">
+                            <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Percent_Complete__c}"
+                            />
+                        </div>
+                    </td>
+                    <td data-label="Total Tasks in Sub-Process">
+                        <div class="slds-truncate" title="">
+                            <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Total_Task_Count__c}"
+                            />
+                        </div>
+                    </td>
+                    <td data-label="Completed Tasks in Sub-Process">
+                        <div class="slds-truncate" title="">
+                            <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.AIA_Number_of_Completed_tasks__c}"
+                            />
+                        </div>
+                    </td>
+                    <td data-label="SLA Breached Tasks in Sub-Process">
+                        <div class="slds-truncate" title="">
+                            <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Number_of_Tasks_SLA_Broken__c}"
+                            />
+                        </div>
+                    </td>
+                    <td data-label="Blocked Tasks in Sub-Process">
+                        <div class="slds-truncate" title="">
+                            <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Number_of_Blocked_Tasks__c}"
+                            />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="width:250%;background-color:white;text-align:left;">
+        <br/>
+        <apex:outputText rendered="{! IF(lstWPtasks.size==0, false, true) }" value="{!lstWPtasks[0].Sub_Process__r.Total_Task_Count__c} items | Sorted by {!sortFieldLabel}"
+            style="padding-left:5px;" />
+    </div>
+
+    <!-- Code to display Task List Table related to the sub-process clicked -->
+    <apex:outputPanel id="TaskTableOutputPanel">
+        <div style="width:250%;" id="TaskTableParentDiv">
+            <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                <thead style="border-bottom-color:rgb(0, 95, 178) !important;">
+                    <th scope="col">
+                        <div class="slds-truncate slds-cell-wrap" title="Task ID" style="color:rgb(0, 95, 178);">
+                            <apex:commandLink action="{!SortToggle}" rerender="TaskTableOutputPanel" status="TableUpdateStatus">
+                                <apex:param name="SortField" value="Name" assignTo="{!SortField}" />
+                                <apex:outputText value="Task ID {!IF(SortField=='Name',IF(SortDirection='ASC','▲','▼'),'')}"
+                                />
+                            </apex:commandLink>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate slds-cell-wrap" title="Task Description" style="color:rgb(0, 95, 178);">
+                            <apex:commandLink action="{!SortToggle}" rerender="TaskTableOutputPanel" status="TableUpdateStatus">
+                                <apex:param name="SortField" value="Description__c" assignTo="{!SortField}" />
+                                <apex:outputText value="Task Description {!IF(SortField=='Description__c',IF(SortDirection='ASC','▲','▼'),'')}"
+                                />
+                            </apex:commandLink>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Status">
+                            <apex:commandLink action="{!SortToggle}" rerender="TaskTableOutputPanel" status="TableUpdateStatus">
+                                <apex:param name="SortField" value="Status__c" assignTo="{!SortField}" />
+                                <apex:outputText value="Status {!IF(SortField=='Status__c',IF(SortDirection='ASC','▲','▼'),'')}"
+                                />
+                            </apex:commandLink>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Owner" style="color:rgb(0, 95, 178);">
+                            <apex:commandLink action="{!SortToggle}" rerender="TaskTableOutputPanel" status="TableUpdateStatus">
+                                <apex:param name="SortField" value="Owner.Name" assignTo="{!SortField}" />
+                                <apex:outputText value="Owner {!IF(SortField=='Owner.Name',IF(SortDirection='ASC','▲','▼'),'')}"
+                                />
+                            </apex:commandLink>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Start Date">
+                            <apex:commandLink action="{!SortToggle}" rerender="TaskTableOutputPanel" status="TableUpdateStatus">
+                                <apex:param name="SortField" value="Start_Date__c" assignTo="{!SortField}" />
+                                <apex:outputText value="Start Date {!IF(SortField=='Start_Date__c',IF(SortDirection='ASC','▲','▼'),'')}"
+                                />
+                            </apex:commandLink>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="SLA Indicator">
+                            <apex:commandLink action="{!SortToggle}" rerender="TaskTableOutputPanel" status="TableUpdateStatus">
+                                <apex:param name="SortField" value="SLA_Indicator__c" assignTo="{!SortField}" />
+                                <apex:outputText value="Alerts {!IF(SortField=='SLA_Indicator__c',IF(SortDirection='ASC','▲','▼'),'')}"
+                                />
+                            </apex:commandLink>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Due Date">
+                            <apex:commandLink action="{!SortToggle}" rerender="TaskTableOutputPanel" status="TableUpdateStatus">
+                                <apex:param name="SortField" value="ExpectedDate__c" assignTo="{!SortField}" />
+                                <apex:outputText value="Due Date {!IF(SortField=='ExpectedDate__c',IF(SortDirection='ASC','▲','▼'),'')}"
+                                />
+                            </apex:commandLink>
+                        </div>
+                    </th>
+
+                    <th class="slds-cell-shrink" scope="col"></th>
+
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!lstWPtasks}" var="tsk">
+                        <tr class="slds-hint-parent">
+                            <td scope="row" data-label="Task ID">
+                                <div class="slds-truncate" title="{!tsk.Name}" style="color:rgb(0, 95, 178);"><a href="{!baseUrl&tsk.Id}">{!tsk.Name}</a></div> <!--T01-->
+                            </td>
+                            <td data-label="Task Description">
+                                <div class="slds-truncate slds-cell-wrap" title="{!tsk.Description__c}" style="width:560px;color:rgb(0, 95, 178);">
+                                    <a href="{!baseUrl&tsk.Id}">{!tsk.Description__c}</a>    <!--T01-->
+                                </div>
+                            </td>
+                            <td data-label="Status">
+                                <div class="slds-truncate" title="{!tsk.Status__c}">{!tsk.Status__c}</div>
+                            </td>
+                            <!--T02 --Start -->
+                            <td data-label="Owner">
+                                <div class="slds-truncate slds-cell-wrap" title="{!tsk.Owner.Name}" style="color:rgb(0, 95, 178);"><a href="{!baseUrl&tsk.Owner.Id}">{!tsk.Owner.Name}</a></div>  <!--T01-->
+                            </td>
+                            <!--T02 --End -->
+                            <td data-label="Start Date">
+                                <div class="slds-truncate" title="{!tsk.Start_Date__c}">
+                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                        <apex:param value="{!tsk.Start_Date__c}" />
+                                    </apex:outputText>
+                                </div>
+                            </td>
+                            <td data-label="SLA Indicator">
+                                <div class="slds-truncate" title="SLA Indicator">
+                                    <apex:outputText escape="false" value="{!tsk.SLA_Indicator__c}" />
+                                </div>
+                            </td>
+                            <td data-label="Due Date">
+                                <div class="slds-truncate" title="{!tsk.ExpectedDate__c}">
+                                    <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                        <apex:param value="{!tsk.ExpectedDate__c}" />
+                                    </apex:outputText>
+                                </div>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </div>
+    </apex:outputPanel>
+    
+    
+</apex:component>

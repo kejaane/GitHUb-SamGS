@@ -1,0 +1,99 @@
+<!--
+*                                 Update History
+*                                 ---------------
+* Date        Developer    Tag         Description
+*==========================================================================================
+* 04/16/2018| Arshia   | T01 | This page is used to Create Custom Subprocess on Implementation record.
+*==========================================================================================
+-->
+
+<apex:page showHeader="true" standardController="AIA_Implementation__c"  extensions="AIA_Custom_SubProcess_Controller"  sidebar="false" lightningStylesheets="true" docType="html-5.0" showQuickActionVfHeader="true" >
+    <style type="text/css">
+        .saveButtonBackground{
+        color:white !important;
+        background:#0070d2 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <apex:slds rendered="{!!isClassic}"/> <!-- T01 -->
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <apex:form id="addtask" enctype="multipart/form-data">  
+        <apex:outputPanel rendered="{!IsAuthorized}">
+        <div id="modal_window">
+            
+            <div class="slds-form-element__control" style="width:90%;height:20%">
+                <apex:pageMessages id="pm"/>  
+            </div>
+            <br/>
+            <div class="slds-grid">
+                <div class="slds-col" style="width:90%;">
+                    <div class="slds-form-element" >
+                        <label style="color:#c23934">*</label><label>Process</label><br/>
+                        <div class="slds-form-element__control">
+                            <apex:selectList styleclass="slds-select" id="selected_list" value="{!slProcess}" required="false" size="1">
+                                <apex:selectOptions value="{!processList}" />
+                                <apex:actionSupport event="onchange" reRender="reSubProcess" action="{!changeSelection}"/>
+                            </apex:selectList>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="slds-form-element" >
+                        <apex:outputLabel value="Subprocess Sequence"/><br/>
+                        <div class="slds-form-element__control">
+                            <apex:selectList styleclass="slds-select" id="reSubProcess" value="{!slSubProcess}" required="false" size="1">
+                                <apex:selectOptions value="{!items}" />
+                                <apex:actionSupport event="onchange" action="{!changeSubProcess}" reRender=""/>
+                            </apex:selectList>
+                        </div>
+                    </div>                    
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="slds-col" style="width:90%;">
+                    <div class="slds-form-element">
+                        <label style="color:#c23934">*</label><label>Subprocess Name</label><br/>
+                        <div class="slds-form-element__control">
+                            <apex:inputtext id="theTextInput" value="{!NewSubprocess}" onchange="entSelected(this.value);return true;" styleClass="slds-input"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <apex:outputLabel styleClass="slds-nowrap" value="Custom subprocess will be placed after selected subprocess"/>
+            </div>          
+            
+        </div>        
+        
+        <apex:actionFunction action="{!SaveSubProcess}" name="SaveSubProcess" />
+        <script type='text/javascript' src='/canvas/sdk/js/publisher.js'>
+        </script> 
+        <script>        
+        // Activate 'Save button' when the panel shows up 
+        Sfdc.canvas.publisher.subscribe({name: "publisher.showPanel", 
+                                         onData:function(e) 
+                                       		{                                                
+                                                Sfdc.canvas.publisher.publish({name:"publisher.setValidForSubmit", payload:"true"}); 
+                                            }
+                                        }); 
+        // Subscribe to the Save button 
+        Sfdc.canvas.publisher.subscribe({ name: "publisher.post",  
+                                         onData:function(e) 
+                                       		{                                                 
+                                                SaveSubProcess();
+                                                if(document.getElementById("{!$Component.theTextInput}").value != ''){
+                                                Sfdc.canvas.publisher.publish({name: "publisher.close", payload:{ refresh:"true" }});
+                                                    }
+                                            }
+                                        }); 
+         
+        </script>
+             </apex:outputPanel>
+         <apex:outputPanel rendered="{!!IsAuthorized}">
+              <div align="center" style="height:200px">
+                  <br/>
+             </div>
+               <div align="center" >
+                <apex:outputText style="font-weight: normal;" value="You Are Not Authorized to Create Custom Subprocess"/> <br/><br/> 
+              </div>          
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

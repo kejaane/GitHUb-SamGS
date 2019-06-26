@@ -1,0 +1,5 @@
+Please review the attached BRF for preferred stop loss quote.
+ 
+Account Name: {!Benfit_Request_Form__c.Account__c}
+Effective Date: {!Benfit_Request_Form__c.Benefit_Effective_Date__c}
+Benefit Request Form: {!Benfit_Request_Form__c.Link}

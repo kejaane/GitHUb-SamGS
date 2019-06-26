@@ -1,0 +1,172 @@
+<!--=================================================================================================
+* Date         : 03/23/2018
+* Developer    : Rajesh Pennam
+* Purpose      : This VFpage is the customer service page redirect
+*
+*==================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date        Developer    Tag     Description
+*==================================================================================================
+* 03/23/2018| Rajesh Pennam    |     | Initial Version. It is developed according to US 369                                                                               
+*==================================================================================================
+*/
+-->
+
+
+
+
+<apex:page standardController="Account" extensions="AIA_CustomerServiceNumController" sidebar="false" lightningStylesheets="true" id="pge"  action="{!addrow}">
+    <apex:slds rendered="{!isClassic}"/>  
+    
+ <style>
+    .message.errorM3{
+    display:none;
+    }
+    .size:not(.multi){
+    width:120px;
+    }
+    
+    .headerRow{
+    overflow-x: auto;
+    }
+    .container {
+    min-width: 100%;
+    }​
+    select[multiple], select[size] {
+    font-size: 12px;
+    }
+    th[id*='gsrfhide'], td[id*='gsrfhide'],.dateFormat{
+    display:none;
+    }
+    {! IF(!IsClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 350px !important;}','')}        
+    {! IF(!IsClassic,'input,select,textarea{min-width:0rem !important;}','')}
+</style>
+          
+    <apex:form id="myform">
+    
+    <!--- This block is for the user to enter the details and save   --->
+    
+        <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+            <div align="center">
+                <apex:outputText value="Records Saved. Please Go to Accounts to view Records" style="Color:Blue;font-size:20px"/> <br/>
+            </div>  
+        </apex:outputPanel>
+    
+          <apex:outputPanel styleClass="table-responsive" id="cndchlDiv">
+                <apex:pageBlock title="Add Customer Service"  id="pb1">
+                    <!--<apex:variable var="i" value="{!0}"/>-->
+                    <apex:pageMessages id="pgmsg"/>
+                    <apex:pageBlockButtons location="top" >
+                        <apex:commandButton value="Save" action="{!saveRec}"   /> <!--- This function used to save the record once user enter the details   -->
+                        <apex:commandButton value="Cancel" action="{!addrowcancel}" immediate="true" /> <!-- This function is used to cancel the current page and redirect to Accounts Detail Page --->
+                        <apex:commandButton value="Back to Account" action="{!addrowcancel}" immediate="true"/> <!-- This function is used to redirect to accounts page  --->
+                    </apex:pageBlockButtons>
+                    <!--<apex:pageBlockSection>-->
+                    <apex:pageBlockTable value="{!csnLSt}" var="cns" id="table"  styleClass="slds-table slds-table_bordered slds-table_cell-buffer" >
+                        <apex:variable value="{!0}" var="Cnt"/>
+                        <apex:column headervalue="Action" >
+                            <apex:commandlink value="X" action="{!removeRowFromList}" immediate="true" rerender="table" style="color:red;size:2px" >
+                                <!-- Pass the row number to the controller so that we know which row to remove -->
+                                <apex:param name="index" value="{!Cnt}" assignTo="{!rowToRemove}"/>
+                            </apex:commandlink>
+                            <apex:variable var="Cnt" value="{!Cnt+1}"/>
+                        </apex:column>
+                        <apex:column headerValue="Area"  >
+                            <apex:inputField value="{!cns.Area__c}"  required="true"  styleClass="slds-input size" style="height:30px;" />
+                        </apex:column>
+                        <apex:column headerValue="Other Area"   >
+                            <apex:inputField value="{!cns.Other_Area__c}"  styleClass="size grpname"/>
+                        </apex:column>
+                        <apex:column headerValue="Service Number"  >
+                            <apex:inputField value="{!cns.Service_Number__c}" required="true"  styleClass="slds-input size" style="height:30px;"/>
+                        </apex:column>
+                        <apex:column headerValue="Phone Number" >
+                            <apex:inputField value="{!cns.Phone_Number__c}" required="true" onkeypress="return inputLimiter(event,'Numbers');" styleClass="size grpname" />
+                            <!--<p id="demo{!Cnt}"></p>-->
+                        </apex:column>
+                        <apex:column headerValue="Service Hours" >
+                            <apex:inputField value="{!cns.Service_Hours__c}" id="txtMobId" required="true" styleClass="slds-input size" style="height:30px;"/>
+                                
+                        </apex:column>
+                        <apex:column headerValue="Effective Date"   >
+                            <apex:inputField value="{!cns.Effective_Date__c}"  required="true"   />
+                        </apex:column>
+                        <apex:column headerValue="Term Date"  >
+                            <apex:inputField value="{!cns.Term_Date__c}"  />
+                        </apex:column>
+                        <apex:column headerValue="Comments" id="comm"  >
+                            <div id="comm{!Cnt}" style="padding-top:15px;">
+                              <apex:inputField value="{!cns.Comments__c}" styleClass="size " />
+                            </div>
+                            <p id="errorcomm{!Cnt}"></p>
+                           </apex:column>
+                    </apex:pageBlockTable>
+                    <!--</apex:pageBlockSection>-->
+                    <apex:pageblockButtons location="bottom">
+                        <div style="text-align:Middle;margin-right:30px;font-weight:bold;">
+                            <apex:commandLink value="Add New Row" action="{!addRow}" rerender="table" immediate="true" />
+                            &nbsp;|&nbsp;&nbsp;
+                            <apex:commandLink value="Remove Last Row" action="{!removeRow}" rerender="table" immediate="true" />
+                        </div>
+                    </apex:pageblockButtons>
+                </apex:pageBlock>
+            </apex:outputPanel>
+         
+       
+       <!--  The below script is used to control user to not to enter more than 10 digits in Phone number field ---->
+         
+         <script>
+        function inputLimiter(e,allow) {
+            var AllowableCharacters = '';
+            var phoneNumber = e.target.value.length;
+            console.log('phon***'+phoneNumber);
+            if (allow == 'Letters'){AllowableCharacters=' ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';}
+            if (allow == 'Numbers'){AllowableCharacters='1234567890';}
+            if (allow == 'NameCharacters'){AllowableCharacters=' ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-.\'';}
+            if (allow == 'NameCharactersAndNumbers'){AllowableCharacters='1234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-\'';}
+            if (allow == 'Currency'){AllowableCharacters='1234567890.';}
+            if(phoneNumber<10){
+                var k = document.all?parseInt(e.keyCode): parseInt(e.which);
+                if (k!=13 && k!=8 && k!=0){
+                    if ((e.ctrlKey==false) && (e.altKey==false)) {
+                    return (AllowableCharacters.indexOf(String.fromCharCode(k))!=-1);
+                    } else {
+                    return true;
+                    }
+                } else {
+                    return true;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        
+        </script>
+        <script type="text/javascript">
+        function ValidateMobNumber(mobilenum,count) {
+            //var mob = /^(\+91[\-\s]?)\d{10}$/;
+            var mob = /^(?:[0-9] ?){1,10}[0-9]$/;
+            
+            var txtMobile = mobilenum.value;
+            console.log('mobile***'+txtMobile);
+            //var txtMobile = document.getElementById('{!$Component.myform.txtMobId}');
+            if (mob.test(txtMobile) == false) {
+                //alert("Please enter valid mobile number.");
+                //txtMobile.focus();
+                console.log('Cnt****'+count);
+                var demcnt ="demo"+count;
+                document.getElementById(demcnt).innerHTML = 'Phone number not valid';
+                document.getElementById(demcnt).style.color = 'red';
+                return false;
+            }
+            else{
+                var demcnt ="demo"+count;
+                document.getElementById(demcnt).innerHTML = '';
+            return true;
+            }
+        }
+    </script>
+    </apex:form>
+</apex:page>

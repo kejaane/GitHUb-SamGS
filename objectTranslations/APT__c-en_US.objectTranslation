@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- APT Type --></label>
+        <name>APT_Type__c</name>
+        <picklistValues>
+            <masterLabel>Account Meeting</masterLabel>
+            <translation><!-- Account Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DPS Meeting</masterLabel>
+            <translation><!-- DPS Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP - Finalist Presentation</masterLabel>
+            <translation><!-- RFP - Finalist Presentation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date APT Requested --></label>
+        <name>Date_APT_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Functional Area --></label>
+        <name>Functional_Area__c</name>
+        <picklistValues>
+            <masterLabel>Claims</masterLabel>
+            <translation><!-- Claims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Informatics</masterLabel>
+            <translation><!-- Data Informatics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Management</masterLabel>
+            <translation><!-- Medical Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy Management</masterLabel>
+            <translation><!-- Pharmacy Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Meeting Date --></label>
+        <name>Meeting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Name --></label>
+        <name>Opportunity_Name__c</name>
+        <relationshipLabel><!-- APT --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>APT</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>APT</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>APT Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

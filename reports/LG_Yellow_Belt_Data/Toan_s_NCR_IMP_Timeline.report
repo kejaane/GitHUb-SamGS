@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Cases__r.Implementations__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Cases__r.Implementations__r$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Cases__r$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Cases__r.Implementations__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Cases__r.Implementations__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Cases__r.Implementations__r$LastModifiedDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Opportunities.Cases__r$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.AIA_NCR_Cases</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Cases__r.Implementations__r$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>toan nguyen</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Toan&apos;s NCR IMP Timeline</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AIA_NCR_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Opportunities$Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

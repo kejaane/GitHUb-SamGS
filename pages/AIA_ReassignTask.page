@@ -1,0 +1,163 @@
+<!-- 
+*============================================================================================
+* Date         : 04/30/2018
+* Developer    : AG
+* Purpose      : This page is called when a Reassign workplan task button is clicked on Workplan  
+*                Task List view. This is for reassigning task to a different user.
+*============================================================================================
+*                                 Update History
+*                                 ---------------
+* Date          Developer         Tag       Description
+*============================================================================================
+* 04/30/2018  | AG              |     | Intial Development. 
+* 05/14/2018  | AG   			| T01 | Updated to show Count of Active Tasks for each member.
+* 05/16/2018  | AG   			| T02 | Updated to show Info Message when Tasks with status 
+*										other than In-Progress are filtered.US-366
+*============================================================================================
+-->
+
+
+<apex:page showHeader="false" standardController="Workplan_Task__c" recordSetVar="Tasks"  extensions="AIA_ReassignTask_Controller"
+           sidebar="false" lightningStylesheets="true" docType="html-5.0" action="{!AIA_Tasks}">    
+    <apex:includeScript value="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"/>
+    <apex:slds />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <c:AIA_ReassignTask_CSS />   
+   
+    <apex:form id="fm" enctype="multipart/form-data" styleClass="myFormStyle" >
+       
+       <!-- If user selects workplan tasks from listview,display the records --> 
+       <apex:outputPanel id="pnl1" rendered="{!displayEditPopup}" > 
+           
+         <apex:pageBlock id="pgb" mode="maindetail" >
+             <div class="slds-form-element" style="align:center">
+                
+            <apex:outputLabel value="Re-Assign Team Member" style="margin-left:250px;color:#484848; font-size:20px; font-weight:100; padding:bottom:2200px; padding-left:50px;"/>
+                 <br/> <apex:outputLabel value=""></apex:outputLabel>
+                </div>
+             <apex:outputPanel id="pnlerror" rendered="{!IsError}" >
+                 <apex:pageMessage summary="Error: Please select New Team Member for all the records" severity="Error" strength="3" />
+                </apex:outputpanel> 
+             <!-- T02 - Start -->
+              <apex:outputPanel id="pnlInfo" rendered="{!IsFiltered}" >
+                  <apex:pageMessage summary="Info: Only In-Progress Tasks can be Re-assigned" severity="Info" strength="3" />
+                  </apex:outputpanel>
+             <!-- T02 - End -->
+                 <apex:repeat value="{!lstTaskWrapper}" var="Task" id="table">                    
+                       <div id="tst1" style="border-top: 1px solid #f2f2f2;border-left: 0px solid #f2f2f2;
+                                             border-right: 0px solid #f2f2f2;margin-bottom:0px" >
+                    <apex:pageBlockSection collapsible="false" columns="1" showHeader="false" title="bb">
+                    <apex:outputLabel value="Current Team Member"></apex:outputLabel>
+                    <apex:outputText styleClass="slds-output">{!Task.TaskOwner}</apex:outputText>
+                	</apex:pageBlockSection>
+                    <apex:pageBlockSection columns="2" >
+                    <apex:outputLabel value="Task" ></apex:outputLabel>
+                    <apex:outputLabel value="Description"></apex:outputLabel>
+                    <apex:outputText styleClass="slds-output">{!Task.TaskName}</apex:outputText>                    
+                    <apex:outputText styleClass="slds-output">{!Task.TaskDesc}</apex:outputText>	
+                        
+                    <apex:outputLabel value="New Team Member"></apex:outputLabel>
+                    <apex:outputLabel value="Team Role"></apex:outputLabel>
+                    <!-- T01 - Start - Added Style to display task count -->
+                        <apex:selectList size="1" id="slTeamMember" value="{!Task.selected_TeamMember}" style="height:33px; width:380px;font-size: 12px;font-family:  monospace,SalesforceSans-Regular,Arial,sans-serif  !important;" styleClass="AddSpaceInText" >
+                            <apex:selectOptions value="{!Task.lstTeamMembers}"></apex:selectOptions>                        
+                        </apex:selectList>  
+                     <!-- T01 - End -->
+                    <apex:outputText styleClass="slds-output">{!Task.TeamRole}</apex:outputText>                       
+                    </apex:pageBlockSection>
+                     </div>
+        </apex:repeat>
+                <apex:pageBlockButtons location="bottom" id="footerID"> 
+                 <div id="tst1" style="margin-bottom:0px;background:#f2f2f2;height:62px;padding-top:12px;border: 1px solid #dddbda;">
+                    <apex:commandButton style="height:35px;width:75px;margin-left:615px;border:1px solid #2574a9" value="Cancel" action="{!CancelAssign}" immediate="true"  />
+                    <apex:commandButton value="Re-assign" action="{!AssignTask}" style="height:37px;width:90px;background:#2574a9; color:white;" />
+                    </div>    
+                </apex:pageBlockButtons>
+       </apex:pageBlock>
+       </apex:outputpanel>
+     
+      <apex:outputPanel id="pnl2" rendered="{!!IsAuthorized}" >
+              <div align="center" >
+                <apex:outputText style="font-weight: normal;" value="You Are Not Authorized to Re-assign Tasks"/> <br/><br/> 
+                 <apex:commandButton value="Ok" action="{!CancelAssign}" styleClass="padding-left:15px;"/>
+              </div>          
+        </apex:outputPanel>              
+           
+        <apex:outputPanel id="pnl3" rendered="{!!IsIdSelected}" >                       
+            <div align="center" >
+                <apex:outputText style="font-weight: normal;" value="Please select In-Progress tasks to Re-assign"/> <br/><br/> 
+                 <apex:commandButton value="Ok" action="{!CancelAssign}" styleClass="padding-left:15px;"/>
+              </div> 
+            </apex:outputPanel>
+          
+        
+ 		<apex:outputPanel id="pnl4" rendered="{!LargeNumberSlected}"> 
+            <div align="center">
+                <apex:outputText style="font-weight: normal;" value="Please select upto 50 Tasks."/> <br/><br/> 
+                 <apex:commandButton value="Ok" action="{!CancelAssign}" styleClass="padding-left:15px;"/>
+              </div> 
+        </apex:outputpanel>                
+    </apex:form>
+  <!-- Script to have space between the Name of user and number of tasks in Dropdown list of New Team Member Field-->
+    <!-- T01 - Start -->
+    <script>
+    var $ = jQuery.noConflict();
+    $(document).ready(function() {
+        sampleMethod();
+        
+    });
+    function sampleMethod() {
+        var spacesToAdd = 2;
+        var biggestLength = 0;
+        var biggestNoLength = 0;
+        
+        $(".AddSpaceInText option").each(function(){
+            var parts = $(this).text().split('#');
+            var len = parts[0].length;
+            //var len = $(this).text().length;
+            if(len > biggestLength){
+                biggestLength = len;
+            }        
+            if (typeof parts[1] != "undefined") {
+            var tasks = parts[1].split('Active');
+            var numlen = tasks[0].length;
+            if(numlen > biggestNoLength){
+                biggestNoLength = numlen;
+            }
+                }
+        });       
+        if(biggestLength <19){
+            biggestLength = 19;
+            }
+        if(biggestNoLength <3){
+            biggestNoLength = 3;
+            }
+        var padLength = biggestLength + spacesToAdd;
+        $(".AddSpaceInText option").each(function(){            
+            var parts = $(this).text().split('#');
+            var strLength = parts[0].length;
+            
+            for(var x=0; x<(padLength-strLength); x++){
+                parts[0] = parts[0]+' '; 
+            }
+            
+            if (typeof parts[1] != "undefined") {
+            var task = parts[1].split('Active');
+            var numlen = task[0].length;
+          
+            for(var y=0; y<(biggestNoLength-numlen); y++){
+                parts[0] = parts[0]+' '; 
+            }
+            }       
+            if (typeof parts[1] == "undefined") {
+            	$(this).text(parts[0].replace(/ /g, '\u00a0')).text;
+            }
+            else{
+                $(this).text(parts[0].replace(/ /g, '\u00a0')+parts[1]).text;
+            }
+        });
+    }    
+    </script>
+ <!-- T01 - End -->
+</apex:page>

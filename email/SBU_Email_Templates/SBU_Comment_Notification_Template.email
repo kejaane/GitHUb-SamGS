@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p>Dear {!Contact.Name},</p><p><br></p><p>A new comment has been posted for the inquiry number {!Case.CaseNumber}</p><p><br></p><p><u>Comment:</u>&nbsp; {!Case.Last_Case_Comment}</p><p><br></p><p>Please click on the below link to view the inquiry referenced.</p><p>Communities Case Link<br></p><p><br></p><p><br></p><p class="p4" style="font-size: 12pt;"><font face="Arial, sans-serif">Thank you,</font></p><p class="p4" style="font-size: 12pt;"><font face="Arial, sans-serif">CareFirst Broker Service Team</font></p><p class="p1" style="font-size: 12pt;"></p><p class="p5" style="font-size: 12pt;"><font face="Arial, sans-serif"><span class="s1">+</span>&nbsp;1-(888)-423-2757<span class="s1">&nbsp;</span></font></p><p><br></p><p><br></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

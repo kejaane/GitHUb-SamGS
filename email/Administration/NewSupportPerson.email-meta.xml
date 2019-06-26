@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email Users informing them of a new SFDC support person</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>NewSupportPerson</name>
+    <style>freeForm</style>
+    <subject>New Contact Person</subject>
+    <textOnly>Dear Salesforce.com User,
+ 
+
+Until further notice, please contact Tom Barrett (thomas.barrett@carefirst.com) for Salesforce.com support.  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Thank you,
+Sales Project Management &amp; System Support (SPM&amp;SS)</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

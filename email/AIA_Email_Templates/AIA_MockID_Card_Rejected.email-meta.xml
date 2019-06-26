@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA_MockID_Card_Rejected</name>
+    <style>freeForm</style>
+    <subject>{!AIA_Document__c.Name}  approval has been rejected .</subject>
+    <textOnly>Mock Id Card Document for  has been {!AIA_Document__c.Account__c}
+rejected. Please request LGIT to correct the document and re-submit it
+
+for approval.
+
+{!AIA_Document__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

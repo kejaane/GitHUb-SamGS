@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AIA Workplan Type Task --></label>
+        <name>AIA_Workplan_Type_Task__c</name>
+        <relationshipLabel><!-- Workplan Assignment (AIA Workplan Type Task) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Legal Name --></label>
+        <name>Account_Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Plan Implementation --></label>
+        <name>Account_Plan_Implementation__c</name>
+        <relationshipLabel><!-- Workplan Assignment (Account Plan Implementation) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Workplan Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <picklistValues>
+            <masterLabel>Approve</masterLabel>
+            <translation><!-- Approve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirm</masterLabel>
+            <translation><!-- Confirm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create</masterLabel>
+            <translation><!-- Create --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Request</masterLabel>
+            <translation><!-- Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send</masterLabel>
+            <translation><!-- Send --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upload</masterLabel>
+            <translation><!-- Upload --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assigned Date/Time --></label>
+        <name>Assigned_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Error --></label>
+        <name>Assignment_Error__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Request Form --></label>
+        <name>Benefit_Request_Form__c</name>
+        <relationshipLabel><!-- Workplan Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Accepted --></label>
+        <name>Date_Accepted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Completed --></label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Workplan Type Task --></label>
+        <name>Dependent_Workplan_Type_Task__c</name>
+        <relationshipLabel><!-- Workplan Assignment (Dependent Workplan Type Task) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Action - Comments --></label>
+        <name>External_Action_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Action - Completed By --></label>
+        <name>External_Action_Completed_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Action - Completed On --></label>
+        <name>External_Action_Completed_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Action - Target Completion --></label>
+        <name>External_Action_Target_Completion__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Action - Target Start --></label>
+        <name>External_Action_Target_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Assignee --></label>
+        <name>External_Assignee__c</name>
+        <relationshipLabel><!-- Workplan Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Internal Assignee --></label>
+        <name>Internal_Assignee__c</name>
+        <relationshipLabel><!-- Workplan Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Milestone --></label>
+        <name>Milestone__c</name>
+    </fields>
+    <fields>
+        <label><!-- My Assignment Check --></label>
+        <name>My_Assignment_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Workplan Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PRF Owner Email --></label>
+        <name>PRF_Owner_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRF Owner Name --></label>
+        <name>PRF_Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Sales Implementation --></label>
+        <name>Post_Sales_Implementation__c</name>
+        <relationshipLabel><!-- Workplan Assignment (Post Sales Implementation) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Proposal Request Form --></label>
+        <name>Proposal_Request_Form__c</name>
+        <relationshipLabel><!-- Workplan Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RFP Summary --></label>
+        <name>RFP_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reminder Date/Time --></label>
+        <name>Reminder_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reminder --></label>
+        <name>Reminder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Notification --></label>
+        <name>Send_Notification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Stage1</masterLabel>
+            <translation><!-- Stage1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage2</masterLabel>
+            <translation><!-- Stage2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage3</masterLabel>
+            <translation><!-- Stage3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage4</masterLabel>
+            <translation><!-- Stage4 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Required</masterLabel>
+            <translation><!-- Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- System Generated --></label>
+        <name>System_Generated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Code --></label>
+        <name>Task_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Description --></label>
+        <name>Task_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Name --></label>
+        <name>Task_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used For --></label>
+        <name>Used_For__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workplan Stage --></label>
+        <name>Workplan_Stage__c</name>
+        <relationshipLabel><!-- Workplan Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Workplan Type Task --></label>
+        <name>Workplan_Type_Task__c</name>
+        <relationshipLabel><!-- Workplan Assignment (Workplan Type Task) --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Workplan Assignment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Workplan Assignment</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>AIA Workplan Assignment Layout</layout>
+        <sections>
+            <label><!-- Assignee --></label>
+            <section>Assignee</section>
+        </sections>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- External Action Information --></label>
+            <section>External Action Information</section>
+        </sections>
+        <sections>
+            <label><!-- Key Dates --></label>
+            <section>Key Dates</section>
+        </sections>
+        <sections>
+            <label><!-- PRF Summary --></label>
+            <section>PRF Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+        <sections>
+            <label><!-- Reminder --></label>
+            <section>Reminder</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PRF Assignment Layout</layout>
+        <sections>
+            <label><!-- Assginee --></label>
+            <section>Assginee</section>
+        </sections>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Key Dates --></label>
+            <section>Key Dates</section>
+        </sections>
+        <sections>
+            <label><!-- PRF Summary --></label>
+            <section>PRF Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+        <sections>
+            <label><!-- Reminder --></label>
+            <section>Reminder</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Workplan Assignment Layout</layout>
+        <sections>
+            <label><!-- Assignee --></label>
+            <section>Assignee</section>
+        </sections>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Error --></label>
+            <section>Error</section>
+        </sections>
+        <sections>
+            <label><!-- External Action Information --></label>
+            <section>External Action Information</section>
+        </sections>
+        <sections>
+            <label><!-- Key Dates --></label>
+            <section>Key Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+        <sections>
+            <label><!-- Reminder --></label>
+            <section>Reminder</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- PRF Assignment --></label>
+        <name>PRF_Assignment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Workplan Assignment --></label>
+        <name>Workplan_Assignment</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- EWPA001: Only Administrators or the creator of an Assignment can change the Due Date. --></errorMessage>
+        <name>EWPA001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPA001: Only Administrators or the creator of an Assignment can change the Due Date. --></errorMessage>
+        <name>EWPA001_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPA002: Please select only one external or Internal Assignee. --></errorMessage>
+        <name>EWPA002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPA003: User cannot change the status once it is &quot;Completed&quot; --></errorMessage>
+        <name>EWPA003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPA004: User cannot change the status once it is &quot;Not Required&quot; --></errorMessage>
+        <name>EWPA004</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPA005: If assignment is required the status can not be set to &quot;Not Required&quot; --></errorMessage>
+        <name>EWPA005</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EWPA006: Completed Workplan Assignments cannot be Reassigned --></errorMessage>
+        <name>EWPA006</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AIA_Workplan_Assignment_Document --></label>
+        <name>AIA_Workplan_Assignment_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_PRF_Assignment --></label>
+        <name>New_PRF_Assignment</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account_Rate__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How is the account rated for Retirees, Cobra and ESRD Medicare?</inlineHelpText>
+        <label>Account Rate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Individual Rate</fullName>
+                    <default>false</default>
+                    <label>Individual Rate</label>
+                </value>
+                <value>
+                    <fullName>All Coverage Levels</fullName>
+                    <default>false</default>
+                    <label>All Coverage Levels</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Account_Specified_Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Proposed_Products__r.Account_Specified_Product_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Specified Product Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alpha_Prefix__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Alpha Prefix</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alpha_Prefix_check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for checking alpha prefix in AIA_GSM_GSRFProductTriggerHelper as per us 234 point 7</description>
+        <externalId>false</externalId>
+        <label>Alpha Prefix check</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CDH_Fund_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Proposed_Products__r.CDH_Fund_Type__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CDH Fund Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CDH_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Proposed_Products__r.CDH_Type__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CDH Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CDH__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Proposed_Products__r.CDH__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CDH</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Coverage_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Coverage Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Limited</fullName>
+                    <default>false</default>
+                    <label>Limited</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deductible__c</fullName>
+        <externalId>false</externalId>
+        <label>Deductible</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Two</fullName>
+                    <default>false</default>
+                    <label>Two</label>
+                </value>
+                <value>
+                    <fullName>Three</fullName>
+                    <default>false</default>
+                    <label>Three</label>
+                </value>
+                <value>
+                    <fullName>Four</fullName>
+                    <default>false</default>
+                    <label>Four</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deps_Count__c</fullName>
+        <defaultValue>'0'</defaultValue>
+        <description>used in drawloop</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Deps Count</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Domestic_Partner__c</fullName>
+        <externalId>false</externalId>
+        <label>Domestic Partner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Employee_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Cobra</fullName>
+                    <default>false</default>
+                    <label>Cobra</label>
+                </value>
+                <value>
+                    <fullName>Retiree</fullName>
+                    <default>false</default>
+                    <label>Retiree</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FACETS_Group_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Group_Structure_Request_Form__r.Implementation__r.Account__r.Facets_Account_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FACETS Group Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSA_BlueFund__c</fullName>
+        <externalId>false</externalId>
+        <formula>Proposed_Products__r.FSA_BlueFund__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FSA BlueFund</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Arrangement__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Proposed_Products__r.Funding_Arrangement__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Funding Arrangement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group_Structure_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Group Structure Request Form</label>
+        <referenceTo>AIA_Group_Structure_Request_Form__c</referenceTo>
+        <relationshipName>Group_Structure_Request_Form_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Groups_count__c</fullName>
+        <defaultValue>'0'</defaultValue>
+        <description>used in drawloop</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Groups count</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gsp_Opened__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Gsp Opened</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Account_Covering_Medicare_Retirees__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Account Covering Medicare Retirees?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Limited_Coverage_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Limited Coverage Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>Coverage_Level__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>INDIVIDUAL</fullName>
+                    <default>false</default>
+                    <label>INDIVIDUAL</label>
+                </value>
+                <value>
+                    <fullName>SUBSCRIBER/SPOUSE</fullName>
+                    <default>false</default>
+                    <label>SUBSCRIBER/SPOUSE</label>
+                </value>
+                <value>
+                    <fullName>PARENT/CHILD</fullName>
+                    <default>false</default>
+                    <label>PARENT/CHILD</label>
+                </value>
+                <value>
+                    <fullName>FAMILY</fullName>
+                    <default>false</default>
+                    <label>FAMILY</label>
+                </value>
+                <value>
+                    <fullName>PARENT/CHILDREN</fullName>
+                    <default>false</default>
+                    <label>PARENT/CHILDREN</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED - 2 PARTY</fullName>
+                    <default>false</default>
+                    <label>SAME GENDER MARRIED - 2 PARTY</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED - 2 PARTY AND FAMILY</fullName>
+                    <default>false</default>
+                    <label>SAME GENDER MARRIED - 2 PARTY AND FAMILY</label>
+                </value>
+                <value>
+                    <fullName>SAME GENDER MARRIED - FAMILY</fullName>
+                    <default>false</default>
+                    <label>SAME GENDER MARRIED - FAMILY</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – 2 PARTY</fullName>
+                    <default>false</default>
+                    <label>DOMESTIC PARTNER – 2 PARTY</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – 2 PARTY AND FAMILY</fullName>
+                    <default>false</default>
+                    <label>DOMESTIC PARTNER – 2 PARTY AND FAMILY</label>
+                </value>
+                <value>
+                    <fullName>DOMESTIC PARTNER – FAMILY</fullName>
+                    <default>false</default>
+                    <label>DOMESTIC PARTNER – FAMILY</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>INDIVIDUAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SUBSCRIBER/SPOUSE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>PARENT/CHILD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>FAMILY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>PARENT/CHILDREN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SAME GENDER MARRIED - 2 PARTY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SAME GENDER MARRIED - 2 PARTY AND FAMILY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>SAME GENDER MARRIED - FAMILY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>DOMESTIC PARTNER – 2 PARTY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>DOMESTIC PARTNER – 2 PARTY AND FAMILY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited</controllingFieldValue>
+                <valueName>DOMESTIC PARTNER – FAMILY</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Platform_Indicator__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Proposed_Products__r.Addition_to_Platform_Indicator__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Platform Indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Line__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Proposed_Products__r.Plan_Name__r.Product_Line__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Line</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Proposed_Products__r.Plan_Product_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposed_Products__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Proposed Product</label>
+        <referenceTo>Proposed_Products__c</referenceTo>
+        <relationshipLabel>Group Structure Products</relationshipLabel>
+        <relationshipName>Group_Structure_Request_Form_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Medical_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Medical Product</label>
+        <referenceTo>AIA_Group_Structure_Form_Product__c</referenceTo>
+        <relationshipLabel>Group Structure Products</relationshipLabel>
+        <relationshipName>Group_Structure_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Standard_Coverage_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Coverage_Level__c , 'Standard') ,
+'- INDIVIDUAL'+ BR() +
+'- SUBSCRIBER/SPOUSE'+ BR() +
+'- PARENT/CHILD'+ BR() +
+'- FAMILY'+ BR() +
+'- PARENT/CHILDREN'+ BR() +
+'- SAME GENDER MARRIED'+ BR() , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Standard Coverage Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscriber Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1- Active</fullName>
+                    <default>false</default>
+                    <label>1- Active</label>
+                </value>
+                <value>
+                    <fullName>2 - Non Medicare Retirees</fullName>
+                    <default>false</default>
+                    <label>2 - Non Medicare Retirees</label>
+                </value>
+                <value>
+                    <fullName>3 - Medicare Retirees</fullName>
+                    <default>false</default>
+                    <label>3 - Medicare Retirees</label>
+                </value>
+                <value>
+                    <fullName>4 - Cobra</fullName>
+                    <default>false</default>
+                    <label>4 - Cobra</label>
+                </value>
+                <value>
+                    <fullName>5 - Medicare and Non Medicare Retirees</fullName>
+                    <default>false</default>
+                    <label>5 - Medicare and Non Medicare Retirees</label>
+                </value>
+                <value>
+                    <fullName>6 - LTD</fullName>
+                    <default>false</default>
+                    <label>6 - LTD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TERM_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>TERM Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vision_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Proposed_Products__r.Addition_to_Platform_Indicator__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Platform Indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Will_There_Be_Non_Funded_Participants__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Will There Be Non-Funded Participants?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>packages_count__c</fullName>
+        <defaultValue>'0'</defaultValue>
+        <description>used in drawloop</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>packages count</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>total_count__c</fullName>
+        <description>used in drawloop</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>total count</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Group Structure Product</label>
+    <nameField>
+        <displayFormat>GSP-{000000}</displayFormat>
+        <label>Group Structure Product Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Group Structure Products</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Product_Line__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Name__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Dental</fullName>
+        <active>true</active>
+        <label>Dental</label>
+        <picklistValues>
+            <picklist>Account_Rate__c</picklist>
+            <values>
+                <fullName>All Coverage Levels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Coverage_Level__c</picklist>
+            <values>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deductible__c</picklist>
+            <values>
+                <fullName>Four</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Three</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Two</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Domestic_Partner__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employee_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retiree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Limited_Coverage_Level__c</picklist>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INDIVIDUAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILDREN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUBSCRIBER%2FSPOUSE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subscriber_Category__c</picklist>
+            <values>
+                <fullName>1- Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Medicare and Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - LTD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Drug</fullName>
+        <active>true</active>
+        <label>Drug</label>
+        <picklistValues>
+            <picklist>Account_Rate__c</picklist>
+            <values>
+                <fullName>All Coverage Levels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Coverage_Level__c</picklist>
+            <values>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deductible__c</picklist>
+            <values>
+                <fullName>Four</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Three</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Two</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Domestic_Partner__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employee_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retiree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Limited_Coverage_Level__c</picklist>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INDIVIDUAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILDREN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUBSCRIBER%2FSPOUSE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subscriber_Category__c</picklist>
+            <values>
+                <fullName>1- Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Medicare and Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - LTD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Medical</fullName>
+        <active>true</active>
+        <label>Medical</label>
+        <picklistValues>
+            <picklist>Account_Rate__c</picklist>
+            <values>
+                <fullName>All Coverage Levels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Coverage_Level__c</picklist>
+            <values>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deductible__c</picklist>
+            <values>
+                <fullName>Four</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Three</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Two</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Domestic_Partner__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employee_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retiree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Limited_Coverage_Level__c</picklist>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INDIVIDUAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILDREN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUBSCRIBER%2FSPOUSE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subscriber_Category__c</picklist>
+            <values>
+                <fullName>1- Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Medicare and Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - LTD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Vision</fullName>
+        <active>true</active>
+        <label>Vision</label>
+        <picklistValues>
+            <picklist>Account_Rate__c</picklist>
+            <values>
+                <fullName>All Coverage Levels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Coverage_Level__c</picklist>
+            <values>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deductible__c</picklist>
+            <values>
+                <fullName>Four</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Three</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Two</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Domestic_Partner__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employee_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retiree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Limited_Coverage_Level__c</picklist>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMESTIC PARTNER %E2%80%93 FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INDIVIDUAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PARENT%2FCHILDREN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - 2 PARTY AND FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAME GENDER MARRIED - FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUBSCRIBER%2FSPOUSE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subscriber_Category__c</picklist>
+            <values>
+                <fullName>1- Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Cobra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Medicare and Non Medicare Retirees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - LTD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

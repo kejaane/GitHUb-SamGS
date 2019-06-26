@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Benfit_Request_Form__c$Request_Type__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$ARC_Approval_Status__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Status__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$ARC_Comments__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r.AIA_Documents__r$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c.Implementations__r.AIA_Documents__r$Document_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Request_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Off-Cycle,Off-Cycle - Administrative Change,Off-Cycle - Administrative and Benefit Change,Renewal - Administrative Changes,Renewal - Admin and Benefit Changes,Set-up Change - Administrative Changes,Set-up Change - Admin and Benefit Changes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c.Implementations__r.AIA_Documents__r$Document_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Benefit Design Document,Benefit EDC,Benefits Contracts,Enrollment Data Card (EDC),Mock ID Card,Production Id Card,Rate EDC,Group Structure Approval Notification,Other</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$ARC_Approval_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Approved by Committee</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>Benfit_Request_Form__c$ARC_Approval_Date__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Benfit_Request_Form__c$Account_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Benfit_Request_Form__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Off-Cycle Changes w/ or w/out GS Docs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>BRF_w_IMP_w_o_Docs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Benfit_Request_Form__c.Implementations__r$Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

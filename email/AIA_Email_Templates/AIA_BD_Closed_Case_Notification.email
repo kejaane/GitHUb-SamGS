@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div class="gmail_default"><div class="gmail_default">Hello&nbsp;</div><div class="gmail_default">Case {!Case.CaseNumber} for Benefit Design &nbsp;{!Case.AIA_Benefit_Design__c} is Closed.<span style="font-size: 12pt;">{!Case.Link}</span></div><div class="gmail_default"><span style="font-size: 12pt;"><br></span></div><div class="gmail_default">Please move the Benefit Design &nbsp;{!Case.AIA_Benefit_Design__c}&nbsp;from Rejected to In Progress before making changes to the Benefit Design Package.&nbsp;</div><div class="gmail_default">Thanks</div></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><p style="font-family: arial; font-size: 12pt;"><br></p><p style="font-family: arial; font-size: 16px;"><br></p></div>]]></td>
+</tr>
+</table>

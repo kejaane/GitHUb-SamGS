@@ -1,0 +1,9 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><span lang="EN" style="color: rgb(38, 38, 38);">SLA
+for Case {!Case.CaseNumber} has been reached. Please review it and provide a
+resolution as soon as possible.</span><font>
+</font></font></p><p style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><br></font></p><p style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">Below is a link to the Issue (Case):</font></p><p><font face="Arial, sans-serif">{!Case.Link}<span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; &nbsp;</span></font></p><p style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif">&nbsp;</font></p>]]></td>
+</tr>
+</table>

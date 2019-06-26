@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>STAGE_NAME</acrossGroupingContext>
+        <calculatedFormula>PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, STAGE_NAME) / PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>GRAND_SUMMARY</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Grand Total Ratio</masterLabel>
+        <scale>1</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>STAGE_NAME</acrossGroupingContext>
+        <calculatedFormula>PARENTGROUPVAL(RowCount, Opportunity.Market_Segment__c, STAGE_NAME) / PARENTGROUPVAL(RowCount, Opportunity.Market_Segment__c, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>Opportunity.Market_Segment__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Market Segment Ratio</masterLabel>
+        <scale>1</scale>
+    </aggregates>
+    <columns>
+        <field>Opportunity.Potential_Contracts__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Estimated_Actual_Contracts__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Lead_Rep_Name_User__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Market_Segment__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>51-199,200+</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Dental Only,Ancillary Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Business__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Labor New Business Sales,New Business Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Underwriting_Entity__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DC,MD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Effective_Date__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STAGE_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Market_Segment__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>A5 - NB Close Ratiov2</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

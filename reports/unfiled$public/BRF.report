@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Benfit_Request_Form__c$Id</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Contract_Period__c</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Number_of_Months_for_Contract_Period__c</field>
+    </columns>
+    <description>Contract period=’Standard 12-Months’ and ‘Number of months for Contract Period’ is not blank</description>
+    <filter>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Contract_Period__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Standard - 12 Months</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Number_of_Months_for_Contract_Period__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>BRF-NOOFMonths</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Benefit_Request_Form__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Benfit_Request_Form__c$ARC_Approval_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

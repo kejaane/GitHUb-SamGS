@@ -1,0 +1,101 @@
+<!--=========================================================================================
+ * Date         : 01/28/2017
+ * Developer    : RamaKrishna
+ * Purpose      : To delete custom benefits and limitations for PP
+ *
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer          Tag       Description
+ *===========+=================+=====+===========================================================
+ * 01/28/2017| RamaKrishna     |     | Initial Version 
+ * 02/01/2018| Rajesh Nagandla | T01 | Added SLDS classes to all components/tags                                         
+ *===========+============+================================================================
+-->
+<apex:page controller="AIA_Custom_Benefits_Delete_Cls" tabStyle="Proposed_Products__c" lightningStylesheets="true">    
+    <!--T01 Start-->
+   <apex:slds rendered="{! !isClassic}"/>
+   <style>
+   {! IF($User.UITheme!='Theme3','.slds-scope .pbHeader .pbButton:last-child {padding-right: 534px;} !important;','')}        
+   /*.slds-select_container:before {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 63.5rem;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+.slds-scope select[size='1'] {
+    max-width: 10%;
+    }*/
+   <!--T01 End-->
+    </style>
+    <apex:form styleClass="slds-scope">
+        <apex:pageMessages escape="false" />
+        <apex:pageBlock title="Delete Custom Benefits/ Limitations">
+                <apex:pageBlockButtons location="Top">   
+                        <apex:commandButton value="Delete" action="{!CommonDeleteMethod}" styleClass="slds-button slds-button_neutral"/>    
+                     <!--   <apex:commandButton value="Delete Benefits" action="{!DeleteBenfits}"/>     -->
+                     <!--   <apex:commandButton value="Delete Limitations" action="{!DeleteLimitations}"/>   -->
+                        <apex:commandButton value="Back to Summary Page" action="{!Cancel}" styleClass="slds-button slds-button_neutral"/>
+               </apex:pageBlockButtons>
+            
+                <apex:outputPanel id="Benefits">
+                        <apex:actionRegion >
+                            <apex:outputText label="Benefit Name:" value="Benefit Name:"/> &nbsp; &nbsp; &nbsp;
+                            <br/>
+                            <br/>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-select_container" style="width:350px; ">
+                                        <apex:selectList size="1" value="{!selectedBenefit}" styleClass="slds-select">                                    
+                                            <apex:selectOptions value="{!BenefitNames}"/>
+                                            <apex:actionSupport id="selectedBenefit" event="onchange" action="{!SelectedBenfits}" /> 
+                                        </apex:selectList>    
+                                    </div>
+                                </div>                                
+                        </apex:actionRegion>               
+                        <br/>
+            
+
+                    
+          <!--  <apex:outputPanel id="Benefits"> -->
+                 <!--  <apex:actionRegion > -->
+                        <apex:pageBlockSection title="Select Benefits for Deletion" columns="1" rendered="{!if(isBenSelected!='--None--' && GrouperObj.name ='Additional Services',true,false)}">                  
+                             <apex:pageblockTable value="{!BenefitWrap}" var="b">
+                                     <apex:column headerValue="Select">
+                                         <apex:inputCheckbox value="{!b.selected}"/>                                                                                          
+                                     </apex:column> 
+                                     <apex:column value="{!b.benefit.Benefit_Name__c}" />                                          
+                            </apex:pageblockTable>
+                        </apex:pageBlockSection>  
+                <!--   </apex:actionRegion>   -->           
+          <!--  </apex:outputPanel>  -->
+        
+        
+                
+                <apex:pageBlockSection title="Select Limitations for Deletion" columns="1" rendered="{!if(isBenSelected!='--None--',true,false)}"> 
+                      <!--  <apex:outputtext label="Limitation Name:" value="{!LmtName}"/>  -->
+                        <apex:pageblockTable value="{!CommentCodeWrap}" var="b" >
+                                <apex:column headerValue="Select">
+                                    <apex:inputCheckbox value="{!b.selected}">                                        
+                                    </apex:inputCheckbox>
+                                </apex:column> 
+                                <apex:column value="{!b.CommentCode.comment_codes__c}" /> 
+                                <apex:column value="{!b.CommentCode.MaxValue__c}" /> 
+                                <apex:column value="{!b.CommentCode.MaxType__c}" /> 
+                                <apex:column value="{!b.CommentCode.MaxApply__c}" />                                 
+                                <apex:column value="{!b.CommentCode.MaxDuration__c}" /> 
+                                <apex:column value="{!b.CommentCode.MaxDurationType__c}" /> 
+                                <apex:column value="{!b.CommentCode.MaxAgeFrom__c}" /> 
+                                <apex:column value="{!b.CommentCode.MaxAgeTo__c}" /> 
+                                <apex:column value="{!b.CommentCode.MaxAgeType__c}" />                                                                           
+                        </apex:pageblockTable>  
+                </apex:pageBlockSection>
+                    
+                    
+             </apex:outputPanel>  
+        </apex:pageBlock>           
+    </apex:form>
+</apex:page>

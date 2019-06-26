@@ -1,0 +1,178 @@
+<!--===================================================================================================================
+* Date       : 9/18/2017
+* Developer  : Raviteja vadapalli
+* Purpose    : Vf page for add multiple Department at the same time and add /remove the particualr data/line item.
+*                                 Update History
+*                                 ---------------
+* Date       |     Developer        | Tag |   Description
+*============+======================+=====+====================================================================================
+* 02/06/2018|		Raviteja    	| T01  | Added SLDS changes
+* 02/22/2018|       Debkanti        | T02  | Added Javascript to fetch the input no of rows and modified the add more row section
+*                                            and chenge the "Ok" button functionality.
+*============+======================+=====+====================================================================================
+-->
+<apex:page standardController="AIA_Department__c" extensions="AIA_MultipleDepartmentAdd" sidebar="false" lightningStylesheets="true">
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+    <!-- T01 -- Start -->
+    <apex:slds rendered="{! IF( isClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.AIA_GSRFMultiplePages,'glyphicons-only-bootstrap-master/css/bootstrap.min.css')}"/>
+    <!-- T01 -- End --> 
+    <style>
+        .size:not(.multi){
+        width:150px !important;
+        }
+        .message{
+        display:none;
+        }
+        .headerRow{
+        overflow-x: auto;
+        }
+        .container {
+        min-width: 100%;
+        }​
+        select[multiple], select[size] {
+        font-size: 12px;
+        }
+        th[id*='gsrfhide'], td[id*='gsrfhide'],.dateFormat{
+        display:none;
+        } 
+        .dates{
+        width:80px;
+        }
+        
+        <!-- T01 -- Start -->  
+        .multiSelectPicklistTable tbody tr:first-child{
+        display:none
+        }
+        {! IF(! isClassic,'.slds-scope .slds-table--cell-buffer tr>td:first-child, .slds-scope .slds-table--cell-buffer tr>th:first-child, .slds-scope .slds-table_cell-buffer tr>td:first-child, .slds-scope .slds-table_cell-buffer tr>th:first-child {                padding-left: 0rem !important;            }            .multi{            height:100px !important;            }   ','')}                                               
+        {! IF(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 385px !important;}','')}        
+        {! IF(! isClassic,'input,select,textarea{min-width:35px !important;}.multiSelectPicklistCell a {width:25px;height:25px}','')}
+        {! IF(! isClassic,'.headerRow{font-size:9.5px !important}','.headerRow{font-size:12px !important;overflow-x: auto !important;}')}    		
+        <!-- T01 -- End -->   
+    </style>
+    <apex:includeScript value="{!$Resource.AIA_GSM_LineItems}"/>
+    <script>
+    j$ = jQuery.noConflict();
+    function arrows(){
+        var right="{!URLFOR($Resource.AIA_GSRFRelatedArrows,'Us-660-arrows/right-arrow.png')}";
+        var left="{!URLFOR($Resource.AIA_GSRFRelatedArrows,'Us-660-arrows/left-arrow.png')}";
+        {! if(! isClassic,"j$('.picklistArrowRight').parent().css('background-image','url('+right+')');j$('.picklistArrowRight').parent().css('background-repeat','no-repeat');j$('.picklistArrowLeft').parent().css('background-image','url('+left+')');j$('.picklistArrowLeft').parent().css('background-repeat','no-repeat');","")}   
+        {! if(! isClassic,"j$('.picklistArrowRight,.picklistArrowLeft').remove()","")} 
+    }
+    j$(document).ready(function() { 
+        arrows();
+        
+    });
+    <!-- T02 -- Start --> 
+        j$(document).on('keyup','.inp',function(){
+            var size=j$('.inp').val();
+            j$('.donebtn').attr('onclick','passparams('+size+');return false;');
+        });
+    <!-- T02 -- End --> 
+        </script>
+    <!-- T01 -- Start -->
+    <apex:form id="modal">
+        
+        <!-- Define a modal dialog box used to show status messages to the user. -->
+        <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+        <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+            <div align="center">
+                <apex:outputText value="{!msg}"/><br/><br/><br/>
+                <!--apex:commandButton value="Ok" action="{!cancel}"/-->
+                <!-- T02 -- Start -->
+                <apex:commandButton value="Ok" action="{!refresh}"/>
+                <!-- T02 -- End -->
+            </div>  
+        </apex:outputPanel>
+    </apex:form>
+    <!--T01    - End -->
+    <!--apex:form style="margin-left:15px">
+
+        Add <apex:inputText value="{!multipleRowsize}"/> more rows
+        <apex:commandButton value="Done" onclick="passparam();" immediate="true" rerender="table"/>
+        <apex:actionFunction action="{!multipleRows}" name="passparam">
+        <apex:param assignTo="{!multipleRowsize}" value="{!multipleRowsize}"/>
+        </apex:actionFunction>
+    </apex:form-->
+    
+    
+    <apex:form >
+        <!-- T02 -- Start --> 
+        <!--Passing parameters to size in controller where onclick is prepared by JS -->
+        <apex:actionFunction name="passparams" action="{!multipleRows}"  reRender="table" immediate="true" oncomplete="loadtexts();arrows();">
+            <apex:param name="p1" assignTo="{!multipleRowsize}" value=""  />
+        </apex:actionFunction> 
+        Add&nbsp;<apex:inputText value="{!multipleRowsize}" styleClass="inp"/> more rows&nbsp;
+        <apex:commandbutton value="Done" onclick="" styleclass="donebtn" oncomplete="loadtexts();arrows();"/>
+        <!-- T02 -- End --> 
+        <div class="container">
+            <div class="table-responsive"> 
+                <apex:pageBlock title="Department Multiple Entry" >
+                    <apex:pageBlockButtons >
+                        <apex:commandButton value="Save" action="{!save}" oncomplete="loadtexts();checkerror();arrows();" reRender="table,modal" />
+                        <apex:commandButton value="Cancel" action="{!cancel}" />
+                    </apex:pageBlockButtons>
+                    
+                    <apex:pageBlockTable value="{!objectRecords}" var="a" id="table" >
+                        <apex:variable value="{!0}" var="Cnt"/>
+                        
+                        <apex:column headervalue="Action">
+                            <apex:commandlink value="X" oncomplete="loadtexts();arrows();" action="{!removeRowFromList}" immediate="true" rerender="table" style="color:red;size:2px">
+                                <!-- Pass the row number to the controller so that we know which row to remove -->
+                                <apex:param name="index" value="{!Cnt}" assignTo="{!rowToRemove}"/>
+                            </apex:commandlink> 
+                            <apex:variable var="Cnt" value="{!Cnt+1}"/>              
+                        </apex:column> 
+                        <apex:column headerValue="Department Number" >
+                            <apex:inputField value="{!a.Name}"  required="true" styleClass="size" />
+                        </apex:column> 
+                        <apex:column headerValue="Effective Date" >
+                            <apex:inputField value="{!a.Effective_new_Date__c}" styleClass="size" />
+                        </apex:column>
+                        <apex:column headerValue="Termination Date">
+                            <apex:inputField value="{!a.TERM_Date__c}"  styleClass="size"  />
+                        </apex:column>
+                        <apex:column headerValue="Employee Status">
+                            <div Class='emp' style="display:none;    position: relative;
+                                                    margin-left: -100px;
+                                                    z-index: 99;" >
+                                <apex:inputField value="{!a.Employee_Status__c}"  styleClass="size multi employee" onchange="getText(this,'gettext')" />
+                            </div>
+                            <div class="requiredInput">
+                                <div class="requiredBlock"></div>
+                                <label class='glyphicon glyphicon-sound-stereo hidee' style="font-size:20px;color:grey"></label><br/>
+                                <span class='erroricon' style="color: #d74c3b;;font-style: bold;display:none"><b>Error:</b> You must enter a value</span>
+                            </div>
+                            <label class='selectedvalsemp' style="font-size:10px"></label>
+                        </apex:column>
+                        <apex:column headerValue="Department Number Notes">
+                            <apex:inputField value="{!a.Department_Number_Notes_Txt__c}" styleClass="size"/>
+                        </apex:column>
+                        <apex:column headerValue="Department Name">
+                            <apex:inputField value="{!a.Department_Name__c}" styleClass="size"/>
+                        </apex:column>
+                        <apex:column headerValue="Department Notes">
+                            <apex:inputField value="{!a.Department_Notes_Txt__c}" styleClass="size"/>
+                        </apex:column>
+                        <apex:column headerValue="Group Structure Request Form" id="gsrfhide">
+                            <apex:inputField value="{!a.Group_Structure_Request_Form__c}"  styleClass="size"/>
+                        </apex:column>
+                        <apex:column headerValue="Product">
+                            <apex:inputField value="{!a.Group_Structure_Request_Form_Product__c}" styleClass="size"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:pageblockButtons location="bottom">
+                        <div style="text-align:middle;margin-right:30px;font-weight:bold;">
+                            <apex:commandLink value="Add New Row" action="{!addRow}" rerender="table" immediate="true" oncomplete="loadtexts();arrows();" />
+                            &nbsp;|&nbsp;&nbsp;
+                            <apex:commandLink value="Remove Last Row" action="{!removeRow}" rerender="table" immediate="true" oncomplete="loadtexts();arrows();"/>                
+                        </div>
+                    </apex:pageblockButtons> 
+                    
+                </apex:pageBlock>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

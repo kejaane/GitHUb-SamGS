@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div><br></div><div><blockquote style="color: rgb(38, 38, 38); font-family: &quot;proxima nova&quot;, &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255); margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none;">A new Implementation for {!AIA_Implementation__c.Account__c}&nbsp;has been created for a new sold Benefit Request Form effective {!AIA_Implementation__c.Backend_BRF_Effective_Date__c}. Please review the details here:&nbsp;{!AIA_Implementation__c.Link}</blockquote><blockquote style="color: rgb(38, 38, 38); font-family: &quot;proxima nova&quot;, &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255); margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none;"><br></blockquote><blockquote style="color: rgb(38, 38, 38); font-family: &quot;proxima nova&quot;, &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255); margin: 0px 0px 0px 40px; padding: 0px; border: none; vertical-align: baseline; quotes: none;"><br>Thanks,<br>AIA Support</blockquote></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

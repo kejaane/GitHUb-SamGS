@@ -1,0 +1,24 @@
+<!--/*===================================================================================================================
+* Date       : 09/07/2017
+* Developer  : Raviteja
+* Purpose    : us-79 This is Page to help change the status to Assigned to Owner
+*                                 Update History
+*                                 ---------------
+* Date       |      Developer        | Tag |   Description
+*============+============+=========================================================================================
+* 09/07/2017 |      Raviteja         |     | Initial Version
+* 02/09/2018 | Rajesh Nagandla       | T01 | Added SLDS to all components in page
+*============+============+=========================================================================================
+*-->
+<apex:page standardController="AIA_Group_Structure_Request_Form__c" extensions="AIA_GSRF_AssignToOwner" action="{!saveRec}" lightningStylesheets="true">
+   <!--T01 - start -->
+   <apex:slds rendered="{! !isClassic}"/>
+   <!--T01 - End -->
+   <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.status__c}</span>
+   <!--apex:pageMessages ></apex:pageMessages-->
+    <apex:pageMessages escape="false"></apex:pageMessages>
+    <apex:form styleClass="slds-scope">
+   <center><apex:commandButton value="Ok" action="{!backtogsrf}" styleClass="slds-button slds-button_neutral"/></center>
+    </apex:form>
+    
+</apex:page>

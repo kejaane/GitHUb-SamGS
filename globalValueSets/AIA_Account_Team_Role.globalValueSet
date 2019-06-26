@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Account Dedicated Rep Back-up</fullName>
+        <default>false</default>
+        <label>Account Dedicated Rep Back-up</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Dedicated Representative</fullName>
+        <default>false</default>
+        <label>Account Dedicated Representative</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Executive</fullName>
+        <default>false</default>
+        <label>Account Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Manager</fullName>
+        <default>false</default>
+        <label>Account Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Actuary</fullName>
+        <default>false</default>
+        <label>Actuary</label>
+    </customValue>
+    <customValue>
+        <fullName>AIA Admin</fullName>
+        <default>false</default>
+        <label>AIA Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>AIA User</fullName>
+        <default>false</default>
+        <label>AIA User</label>
+    </customValue>
+    <customValue>
+        <fullName>Ancillary Analyst</fullName>
+        <default>false</default>
+        <label>Ancillary Analyst</label>
+    </customValue>
+    <customValue>
+        <fullName>Audit Manager/Supervisor</fullName>
+        <default>false</default>
+        <label>Audit Manager/Supervisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Auditor</fullName>
+        <default>false</default>
+        <label>Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Automated Enrollment Tech</fullName>
+        <default>false</default>
+        <label>Automated Enrollment Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>BeneFact Coder</fullName>
+        <default>false</default>
+        <label>BeneFact Coder</label>
+    </customValue>
+    <customValue>
+        <fullName>BeneFact Portal Tech</fullName>
+        <default>false</default>
+        <label>BeneFact Portal Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>BeneFact Tester</fullName>
+        <default>false</default>
+        <label>BeneFact Tester</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefit Admin Manager</fullName>
+        <default>false</default>
+        <label>Benefit Admin Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefit Admin Workflow Mgmt</fullName>
+        <default>false</default>
+        <label>Benefit Admin Workflow Mgmt</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefit Contract Manager</fullName>
+        <default>false</default>
+        <label>Benefit Contract Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefit Contract Specialist</fullName>
+        <default>false</default>
+        <label>Benefit Contract Specialist</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefit NASCO Tester</fullName>
+        <default>false</default>
+        <label>Benefit NASCO Tester</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing Tech</fullName>
+        <default>false</default>
+        <label>Billing Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>BlueExchange Coder</fullName>
+        <default>false</default>
+        <label>BlueExchange Coder</label>
+    </customValue>
+    <customValue>
+        <fullName>Blue Rewards Tech</fullName>
+        <default>false</default>
+        <label>Blue Rewards Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Integration Manager</fullName>
+        <default>false</default>
+        <label>Business Integration Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Cede Document Tech</fullName>
+        <default>false</default>
+        <label>Cede Document Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Claims</fullName>
+        <default>false</default>
+        <label>Claims</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Advisory Services</fullName>
+        <default>false</default>
+        <label>Client Advisory Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract Coordinator</fullName>
+        <default>false</default>
+        <label>Contract Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract Manager</fullName>
+        <default>false</default>
+        <label>Contract Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract Tech</fullName>
+        <default>false</default>
+        <label>Contract Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Marketing Communications</fullName>
+        <default>false</default>
+        <label>Corporate Marketing Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Marketing Communication User</fullName>
+        <default>false</default>
+        <label>Corporate Marketing Communication User</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Support</fullName>
+        <default>false</default>
+        <label>Customer Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Enrollment</fullName>
+        <default>false</default>
+        <label>Enrollment</label>
+    </customValue>
+    <customValue>
+        <fullName>Enrollment Tech</fullName>
+        <default>false</default>
+        <label>Enrollment Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Facets Migration Contact</fullName>
+        <default>false</default>
+        <label>Facets Migration Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Implementation Coordinator</fullName>
+        <default>false</default>
+        <label>Implementation Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Implementation Manager</fullName>
+        <default>false</default>
+        <label>Implementation Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Implementation PM</fullName>
+        <default>false</default>
+        <label>Implementation PM</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead Qualifier</fullName>
+        <default>false</default>
+        <label>Lead Qualifier</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal</fullName>
+        <default>false</default>
+        <label>Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>LG Leadership</fullName>
+        <default>false</default>
+        <label>LG Leadership</label>
+    </customValue>
+    <customValue>
+        <fullName>MAIN Tech</fullName>
+        <default>false</default>
+        <label>MAIN Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>MAST Tech</fullName>
+        <default>false</default>
+        <label>MAST Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Management Staff</fullName>
+        <default>false</default>
+        <label>Medical Management Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Management Tech</fullName>
+        <default>false</default>
+        <label>Medical Management Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>NASCO Account Implementer</fullName>
+        <default>false</default>
+        <label>NASCO Account Implementer</label>
+    </customValue>
+    <customValue>
+        <fullName>NASCO Benefit Coder</fullName>
+        <default>false</default>
+        <label>NASCO Benefit Coder</label>
+    </customValue>
+    <customValue>
+        <fullName>OBN Coder</fullName>
+        <default>false</default>
+        <label>OBN Coder</label>
+    </customValue>
+    <customValue>
+        <fullName>Operations Tech Support Tech</fullName>
+        <default>false</default>
+        <label>Operations Tech Support Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Par Plan</fullName>
+        <default>false</default>
+        <label>Par Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>Performance Guarantee Coordinator</fullName>
+        <default>false</default>
+        <label>Performance Guarantee Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacy Management</fullName>
+        <default>false</default>
+        <label>Pharmacy Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacy Operations</fullName>
+        <default>false</default>
+        <label>Pharmacy Operations</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre-Sales Consultant</fullName>
+        <default>false</default>
+        <label>Pre-Sales Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Privacy Office</fullName>
+        <default>false</default>
+        <label>Privacy Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Production ID Card Tech</fullName>
+        <default>false</default>
+        <label>Production ID Card Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Proposal Manager</fullName>
+        <default>false</default>
+        <label>Proposal Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Proposal Specialist</fullName>
+        <default>false</default>
+        <label>Proposal Specialist</label>
+    </customValue>
+    <customValue>
+        <fullName>QA Auditor</fullName>
+        <default>false</default>
+        <label>QA Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Reporting</fullName>
+        <default>false</default>
+        <label>Reporting</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Assistant</fullName>
+        <default>false</default>
+        <label>Sales Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Coordinator</fullName>
+        <default>false</default>
+        <label>Sales Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Director</fullName>
+        <default>false</default>
+        <label>Sales Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Manager</fullName>
+        <default>false</default>
+        <label>Sales Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales VP</fullName>
+        <default>false</default>
+        <label>Sales VP</label>
+    </customValue>
+    <customValue>
+        <fullName>SBU Project Manager</fullName>
+        <default>false</default>
+        <label>SBU Project Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Service</fullName>
+        <default>false</default>
+        <label>Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Settlements</fullName>
+        <default>false</default>
+        <label>Settlements</label>
+    </customValue>
+    <customValue>
+        <fullName>Settlements Analyst</fullName>
+        <default>false</default>
+        <label>Settlements Analyst</label>
+    </customValue>
+    <customValue>
+        <fullName>Stop Table Tech</fullName>
+        <default>false</default>
+        <label>Stop Table Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>TOS ID Card</fullName>
+        <default>false</default>
+        <label>TOS ID Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Underwriter</fullName>
+        <default>false</default>
+        <label>Underwriter</label>
+    </customValue>
+    <customValue>
+        <fullName>UW Director</fullName>
+        <default>false</default>
+        <label>UW Director</label>
+    </customValue>
+    <customValue>
+        <fullName>UW Manager/Supervisor</fullName>
+        <default>false</default>
+        <label>UW Manager/Supervisor</label>
+    </customValue>
+    <customValue>
+        <fullName>UW VP</fullName>
+        <default>false</default>
+        <label>UW VP</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Content Team</fullName>
+        <default>false</default>
+        <label>Web Content Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Wellness Tech</fullName>
+        <default>false</default>
+        <label>Wellness Tech</label>
+    </customValue>
+    <description>Added as part of 2018 R1 release</description>
+    <masterLabel>AIA Account Team Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

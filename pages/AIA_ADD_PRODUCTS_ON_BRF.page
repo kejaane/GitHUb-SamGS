@@ -1,0 +1,90 @@
+<!--
+ * Purpose      : This is the VF page to copy the products in Proposed Product related list of BRF.
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer         Tag     Description
+ *===========+================+=====+===========================================================
+  01/31/2018 |Gayathri        | T01 | Added slds classes to match the look and feel of lightning 
+									  view with classic. 
+ *==============================================================================================
+ 
+ -->
+<apex:page showHeader="true" controller="AIA_Add_Products_On_BRF_Cls"  sidebar="false" tabStyle="Proposed_Products__c" lightningStylesheets="true">
+       <apex:form > 
+ <apex:pageMessages />
+<!--T01  Start-->
+<apex:slds rendered="{!!isClassic}"/>
+<apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+<!--T01  End-->
+ <apex:pageBlock title="Proposed Product List" id="thePageBlock" >
+    <apex:pageBlockButtons > 
+         <div class="slds-grid slds-wrap slds-align--absolute-center">
+                <apex:commandButton value="Save" action="{!callsave}"/>
+             	<apex:commandButton value="Back To BRF" action="{!BackToBRF}"/>
+        </div>
+    </apex:pageBlockButtons>
+<!--T01 Start_Style for alligning buttons and the table in lightning view-->
+ 	<style>
+       {! if(! isClassic,
+        '.slds-scope .pbHeader .pbButton{float:left;}'+
+        '.slds-scope .detailList table {table-layout:auto;}'+
+        '.slds-scope .pbBottomButtons .pbButtonb{padding-left: 180px;}'+
+        '.slds-scope .bPageBlock .pbSubheader{background-color:#f3f2f2;}'+
+        '.slds-scope .pbBody{overflow:visible;width : 157%;}','')}  
+        .slds-scope .detailList {
+        	width: 320px !important;
+        	} 
+    	.bPageBlock{
+        	border:none !important;
+        	box-shadow: none !important;
+    	}
+        .slds-scope .lookupHoverDetail .pbHeader .pbTitle:first-child {
+        	width : 50% !important;
+        }
+    </style>
+     <!-- Define a modal dialog box used to show status messages to the user. -->
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText value="{!msg}"/><br/><br/><br/>
+        <apex:commandButton value="Okay" action="{!returnToBRF}"/>
+      </div>  
+    </apex:outputPanel>
+ <!--T01  End-->  
+       <apex:pageBlockSection title="Add Products" columns="1">
+           <apex:pageblockTable value="{!PPSelectList}" var="p" styleClass="slds-table slds-table--bordered slds-table--cell-buffer slds-truncate">
+              <apex:column headerValue="Select">
+                        <apex:inputCheckbox value="{!p.selected}">
+                            <apex:actionSupport event="onchange" action="{!AutoSelectAncillaryProducts}" rerender="thePageBlock">
+                                <apex:param assignTo="{!selectedId}" value="{!p.Product.id}" name="selectedI"/> 
+                                <apex:param assignTo="{!selectedFlg}" value="{!p.selected}" name="selectedF"/> 
+                            </apex:actionSupport>
+                        </apex:inputCheckbox>
+                    </apex:column>
+               		<apex:column value="{!p.Product.name}" headerClass="slds-truncate" />
+                    <apex:column value="{!p.Product.Benefit_Request_Form__c}" headerClass="slds-truncate"/>
+                    <apex:column value="{!p.Product.Custom__c}" headerClass="slds-truncate" rendered="{!isClassic}" />
+               		<!--T01  Start_Column to display the checkbox in lightning view-->
+               		<apex:column headerValue="{!$ObjectType.Proposed_Products__c.Fields.Custom__c.label}" headerClass="slds-truncate" rendered="{!((!isClassic)&&PPSelectList.size>0)}" >
+               			<img src="/img/checkbox_{!IF(p.Product.Custom__c, '', 'un')}checked.gif" title="{!IF(p.Product.Custom__c, 'Checked', 'Not Checked')}" />
+               		</apex:column>
+               		<!--T01  End-->
+             		<apex:column value="{!p.Product.Product_Category__c}" headerClass="slds-truncate"/>
+                    <apex:column value="{!p.Product.Product_Name__c}" headerClass="slds-truncate"/>
+                    <apex:column value="{!p.Product.Account_Specified_Product_Name__c}" headerClass="slds-truncate"/>
+                    <apex:column value="{!p.Product.Plan_Name__c}" headerClass="slds-truncate"/>
+                    <apex:column value="{!p.Product.Funding_Arrangement__c}" headerClass="slds-truncate"/>
+                    <apex:column value="{!p.Product.Benefits_Completed__c}" headerClass="slds-truncate"/>
+                    <apex:column value="{!p.Product.ARC_Approved__c}" headerClass="slds-truncate" rendered="{!isClassic}" />
+           			<!--T01  Start_Column to display the checkbox in lightning view-->
+               		<apex:column headerValue="{!$ObjectType.Proposed_Products__c.Fields.ARC_Approved__c.label}" headerClass="slds-truncate" rendered="{!((!isClassic)&&PPSelectList.size>0)}" >
+               			<img src="/img/checkbox_{!IF(p.Product.ARC_Approved__c, '', 'un')}checked.gif" title="{!IF(p.Product.ARC_Approved__c, 'Checked', 'Not Checked')}" />
+               		</apex:column>
+               		<!--T01  End-->
+           </apex:pageblockTable>
+           </apex:pageBlockSection>   
+         
+</apex:pageBlock> 
+</apex:form>
+</apex:page>

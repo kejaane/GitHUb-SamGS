@@ -1,0 +1,54 @@
+<!--
+/*=========================================================================================
+ * Date			: 4/10/15
+ * Developer	: Ken Gill
+ * Purpose   	:
+ *              This page is the initial page that is displayed when a
+ *              user access the automation feature by navigating to the
+ *              ‘Imports’ custom tab. The page displays a list of
+ *              links for the available SOPs that have an automation
+ *              console. Selecting a specific link then navigates
+ *              to the selected SOPs commands console page. The URL
+ *              passes the importType parameter which tells the backend
+ *              AutomationProcessController which specific type of
+ *              AutomationImportManager to instantiate to use as a command
+ *              delegate for the selected process type.
+ *
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 10/15/15  |  KG    |	Initial Version                                         
+ *   	     |        | 
+ *=========================================================================================
+ */
+ -->
+<apex:page sidebar="false">
+    <style type="text/css">
+        ol {
+            margin:0;
+            padding:0;
+            text-align: left;
+        }
+        ol  li {
+            padding: 2px 5px;               
+        }
+
+    </style>
+        
+    <apex:messages />
+    <apex:form >
+        <apex:pageBlock title="Select an Import Process from the list below:" >
+          <ol>
+            <!-- A reference to  {!ImportManager.Import51_BrokerActivty} in the link 
+                 parameters below does not work, so the importType parameter constant that determines which ImportManager is configured is hardcoded. It should correspond to the contants
+                 defined in ImportManager- KG 3/14/15 -->
+           <!-- <li> <apex:outputLink value="/apex/AutomationProcessView?importType=junkvalue">TESTING Monthly 51+ Broker Activity Import</apex:outputLink> </li>   -->
+            <li> <apex:outputLink value="/apex/AutomationProcessView?importType=Import250_BrokerActivity">Monthly 2-50 Broker Activity Import</apex:outputLink> </li>
+            <li> <apex:outputLink value="/apex/AutomationProcessView?importType=Import51_Enrollment">Monthly 51+ Enrollment Import</apex:outputLink> </li>
+            <li> <apex:outputLink value="/apex/AutomationProcessView?importType=Import250_Enrollment">Monthly 2-50 Enrollment Import</apex:outputLink> </li>
+          </ol>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

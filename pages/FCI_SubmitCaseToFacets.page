@@ -1,0 +1,15 @@
+<apex:page standardController="Case" extensions="FCI_SubmitCaseToFacetsController" action="{!submitCaseToFacets}">
+
+	<apex:form >
+
+		<apex:pageBlock >
+			<apex:pageBlockSection columns="1" rendered="true">
+				<apex:pageMessages escape="false" />
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+
+		<apex:commandButton action="{!cancel}" value="Back" id="theButton"/>
+
+	</apex:form>
+
+</apex:page>

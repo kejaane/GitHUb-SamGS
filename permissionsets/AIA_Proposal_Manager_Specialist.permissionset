@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives access to RFP Summary Field on PRF Object</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>AIA Proposal Manager/Specialist</label>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Benfit_Request_Form__c.Zip_Code_Validation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.Meeting_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PRF__c.RFP_Summary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.Meeting_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

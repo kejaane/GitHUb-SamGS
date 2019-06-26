@@ -1,0 +1,2 @@
+{!Account.LastModifiedBy} has updated the account legal name for  {!Account.Previous_Account_Legal_Name__c}.  Effective immediately, the new account legal name is {!Account.Account_Legal_Name__c}.  To view the account record in AIA, please click the link below. 
+{!Account.Link}.

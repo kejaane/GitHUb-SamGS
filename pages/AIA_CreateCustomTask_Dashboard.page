@@ -1,0 +1,250 @@
+<!--
+*===================================================================================================================
+* Date       : 06/12/2018
+* Developer  : Arshia Gulati
+* Purpose    : US463 - Created for changes related to add custom task button on Implementation Dashboard page. This
+*              This has similar functionality as AIA_CreateCustomTask page except page styling & usage of publisher  
+*              actions. AIA_CreateCustomTask page could not be referenced directly due to constraints of different 
+*              styling on individual scenarios and also because standard controller & standard publisher actions 
+*              are used in one instance & they are not used in another instance.
+* 
+*                                 Update History
+*                                 ---------------
+* Date         Developer        Tag         Description
+*====================================================================================================================
+* 06/12/2018 | Asif Kutagulla |     | Initial version
+*====================================================================================================================
+-->
+<apex:page showHeader="true" standardController="AIA_Implementation__c" extensions="AIA_Custom_Task_Controller"
+    sidebar="false" lightningStylesheets="true" docType="html-5.0" showQuickActionVfHeader="true" title="Create Custom Task">
+    <apex:includeScript value="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"
+    />
+    <style type="text/css">
+        .saveButtonBackground {
+            color: white !important;
+            background: #0070d2 !important;
+        }
+        
+        .slds-modal__container {
+            max-width: 90rem !important;
+            width: 90% !important;
+        }
+
+    </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+
+    <apex:slds rendered="{!!isClassic}" />
+    <!-- T01 -->
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}" />
+
+    <apex:form id="addtask" enctype="multipart/form-data" style="margin-left:15%; margin-right:15%;">
+        <h2 class="title slds-text-heading--medium" style="text-align:center">
+            Create Custom Task
+        </h2>
+        <b><hr/></b>
+        <apex:outputPanel rendered="{!IsAuthorized}">
+            <div id="modal_window">
+                <div class="slds-form-element__control" style="width:90%;height:10%">
+                    <apex:pageMessages id="pm" />
+                </div>
+
+                <div class="slds-grid">
+                    <div class="slds-col" style="width:90%;">
+                        <div class="slds-form-element">
+                            <label style="color:#c23934">*</label><label>Task Name</label><br/>
+                            <div class="slds-form-element__control">
+                                <apex:inputfield id="custTask_task_name" value="{!objTask.Task_Name__c}" styleClass="slds-input"
+                                />
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="slds-form-element">
+                            <label style="color:#c23934">*</label><label>Subprocess</label><br/>
+                            <div class="slds-form-element__control">
+                                <apex:selectList styleclass="slds-select" id="reSubProcess" value="{!slSubprocess}"
+                                    size="1" style="height:33px;">
+                                    <apex:selectOptions value="{!subprocessList}" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <br/>
+                        <!--  Start-T03 - Added Team Role SelectList -->
+                        <div class="slds-form-element">
+                            <label style="color:#c23934">*</label><label>Team Role</label><br/>
+                            <div class="slds-form-element__control">
+                                <apex:selectList styleclass="slds-select" id="slTeamRole" value="{!selected_TeamRole}"
+                                    size="1" style="height:33px;">
+                                    <apex:selectOptions value="{!TeamRoleList}" />
+                                    <apex:actionSupport event="onchange" reRender="slTeamMember" action="{!SelectTeamMember}"
+                                        oncomplete="sampleMethod();" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <!-- End-T03 - Added Team Role SelectList -->
+                        <br/>
+                        <div class="slds-form-element">
+                            <label style="color:#c23934">*</label><label>Assign to Team Member</label><br/>
+                            <div class="slds-form-element__control">
+                                <!-- Start-T03 - Replaced lookup component with SelectList -->
+                                <!-- Start -T04 - Change styleclass -->
+                                <apex:selectList id="slTeamMember" value="{!selected_TeamMember}" size="1" style="height:33px; width:300px;font-size: 12px;font-family: monospace,Arial !important;"
+                                    styleClass="someClass">
+                                    <apex:selectOptions value="{!TeamMemberList}" />
+                                    <apex:actionSupport onbeforedomupdate="sampleMethod();" />
+                                </apex:selectList>
+                                <!-- End - T04 - Change styleclass -->
+                                <!--  End-T03 - Replaced lookup component with SelectList -->
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="slds-form-element">
+                            <!-- T05 - Start -->
+                            <div class="slds-form-element__control">
+                                <label>Task Due Date</label><br/>
+                                <apex:inputText disabled="true" rendered="true" style="width:100%;" id="DueDate"
+                                    label="" value="{!strDueDate}" styleClass="slds-output"
+                                />
+                            </div>
+                            <!-- T05 - End -->
+                        </div>
+                        <br/>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="slds-col" style="width:90%;">
+                        <div class="slds-form-element">
+                            <label style="color:#c23934">*</label><label>Task Description</label><br/>
+                            <div class="slds-form-element__control">
+                                <apex:inputfield label="" id="custTask_task_desc" value="{!objTask.Description__c}"
+                                    styleClass="slds-input" />
+                            </div>
+                        </div>
+                        <br/>
+                        <div style="height:85px">
+                            <br/>
+                        </div>
+                        <br/>
+                        <div class="slds-form-element">
+                            <label style="color:#c23934">*</label><label>Total Days to Complete Task (SLA)</label><br/>
+                            <!-- T05 - Start -->
+                            <div class="slds-form-element__control">
+                                <apex:inputField id="custTask_days" label="" value="{!objTask.Total_Days_to_Complete_Task_SLA__c}"
+                                    styleClass="slds-input">
+                                    <apex:actionSupport event="onchange" action="{!SetDueDate}" oncomplete="return true;"
+                                        reRender="DueDate" />
+                                </apex:inputField>
+                            </div>
+                            <!-- T05 - End -->
+                        </div>
+                        <br/>
+                        <div class="slds-form-element">
+                            <label>SLA Day Type</label><br/>
+                            <div class="slds-form-element__control" style="width:40%;">
+                                <apex:selectRadio value="{!daytype}">
+                                    <!-- T05 - Start -->
+                                    <apex:actionSupport event="onchange" action="{!SetDueDate}" reRender="DueDate" />
+                                    <!-- T05 - End -->
+                                    <apex:selectOption itemLabel="Business" itemValue="Business" />
+                                    <apex:selectOption itemLabel="Calendar" itemValue="Calendar" />
+                                </apex:selectRadio>
+                            </div>
+                            <label>Select what days count toward the SLA</label><br/>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </apex:outputPanel>
+
+        <!-- output panel for error message -->
+        <apex:outputPanel rendered="{!!IsAuthorized}">
+            <div align="center" style="height:200px">
+                <br/>
+            </div>
+            <div align="center">
+                <apex:outputText style="font-weight: normal;" value="You Are Not Authorized to Create Custom Task"
+                /> <br/><br/>
+            </div>
+        </apex:outputPanel>
+
+        <!-- buttons to save and cancel -->
+        <div style="display: flex; align-items: center; justify-content: center; margin-top:3%;">
+            <apex:commandButton value="Save" action="{!SaveTask}" styleClass="slds-button slds-button_brand"
+            />
+            <apex:commandButton value="Cancel" action="{!CancelTask}" styleClass="slds-button slds-button_brand"
+            />
+        </div>
+
+    </apex:form>
+    <style>
+        body .dataCol select,
+        .slds-scope .dataCol select {
+            max-width: 100%;
+        }
+
+    </style>
+    <!-- Script to have space between the Name of user and number of tasks in Dropdown list of New Team Member Field-->
+    <!-- T04 - Start -->
+    <script>
+        var $ = jQuery.noConflict();
+        $(document).ready(function() {
+            sampleMethod();
+
+        });
+
+        function sampleMethod() {
+            var spacesToAdd = 2;
+            var biggestLength = 0;
+            var biggestNoLength = 0;
+
+            $(".someClass option").each(function() {
+                var parts = $(this).text().split('#');
+                var len = parts[0].length;
+                //var len = $(this).text().length;
+                if (len > biggestLength) {
+                    biggestLength = len;
+                }
+                if (typeof parts[1] != "undefined") {
+                    var tasks = parts[1].split('Active');
+                    var numlen = tasks[0].length;
+                    if (numlen > biggestNoLength) {
+                        biggestNoLength = numlen;
+                    }
+                }
+            });
+            if (biggestLength < 19) {
+                biggestLength = 19;
+            }
+            if (biggestNoLength < 5) {
+                biggestNoLength = 5;
+            }
+            var padLength = biggestLength + spacesToAdd;
+            $(".someClass option").each(function() {
+                var parts = $(this).text().split('#');
+                var strLength = parts[0].length;
+
+                for (var x = 0; x < (padLength - strLength); x++) {
+                    parts[0] = parts[0] + ' ';
+                }
+
+                if (typeof parts[1] != "undefined") {
+                    var task = parts[1].split('Active');
+                    var numlen = task[0].length;
+
+                    for (var y = 0; y < (biggestNoLength - numlen); y++) {
+                        parts[0] = parts[0] + ' ';
+                    }
+                }
+                if (typeof parts[1] == "undefined") {
+                    $(this).text(parts[0].replace(/ /g, '\u00a0')).text;
+                } else {
+                    $(this).text(parts[0].replace(/ /g, '\u00a0') +
+                        parts[1]).text;
+                }
+            });
+        }
+
+    </script>
+    <!-- T04 - End -->
+
+</apex:page>

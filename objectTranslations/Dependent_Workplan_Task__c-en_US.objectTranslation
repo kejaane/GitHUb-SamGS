@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Dependent Task - Description --></label>
+        <name>Dependent_Task_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Task - New Business Role --></label>
+        <name>Dependent_Task_New_Business_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Task - Renewal Business Role --></label>
+        <name>Dependent_Task_Renewal_Business_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Task --></label>
+        <name>Dependent_Task__c</name>
+        <relationshipLabel><!-- Template Workplan Tasks Where this task is Dependent --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Task - Description --></label>
+        <name>Primary_Task_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Task - New Business Role --></label>
+        <name>Primary_Task_New_Business_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Task - Renewal Business Role --></label>
+        <name>Primary_Task_Renewal_Business_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Task --></label>
+        <name>Primary_Task__c</name>
+        <relationshipLabel><!-- Template Workplan Tasks Which are Dependent on this Task --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Dependent Workplan Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dependent Workplan Tasks</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Dependent Workplan Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

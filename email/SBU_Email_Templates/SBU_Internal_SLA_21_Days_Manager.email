@@ -1,0 +1,29 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="p1">Dear {!Case.SLA_Category__c} team supervisor ,</p><p class="p1"><br></p><p class="p1">Case#<span style="background-color: rgb(255, 255, 255);">{!Case.CaseNumber}&nbsp;</span>&nbsp;has been in assigned state for ‘21 Days’ and has not been closed.</p><p class="p1"><br></p><p class="p1">Please review the case.</p><p class="p1"><br></p><p class="p1">Detail Case Link : {!Case.Link}</p><p class="p2"><br></p><p class="p1">Thank You,</p><p class="p1" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="p1">SFDC Team</p><p class="p1"><a href="mailto:SFDCSupport@carefirst.com">SFDCSupport@carefirst.com</a></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

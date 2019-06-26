@@ -1,0 +1,90 @@
+<!--
+========================================================================================
+//      Date: 07/28/2011
+// Developer: Tom Barrett (TPB)
+//   Purpose: This VF page is used to display and group our homegrown tools/apps
+// ========================================================================================
+//                                 Update History
+// Date       Developer     Description
+// ========================================================================================
+// 06/24/2012 TPB           Added the new section named Administrator Use Only - Misc. and
+//                          the Random User List link.
+// 05/20/2016 TPB           Added Account Merger link
+// 08/14/2018 Debkanti		Added SLDS to make compatable with classic and lightning.
+// ========================================================================================
+-->
+<apex:page controller="CFCT_CustomToolsHomePage_controller" lightningStylesheets="true">
+    <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <style>
+    {! IF(! IsClassic,'body .bPageTitle .pageDescription, .slds-vf-scope .bPageTitle .pageDescription {font-size: 1.75rem;line-height: 1;}','')}
+    {! IF(! IsClassic,'body .pbTitle .mainTitle, .slds-vf-scope .pbTitle .mainTitle {font-size: 17px;}','')}
+    </style>
+    <!-- T01 -- End -->
+<apex:sectionHeader title="" subtitle="Quality Center"/> 
+        <apex:pageblock title="Data Quality" >
+            <apex:pageblockSection title="Opportunity" columns="3"> 
+                <apex:pageBlockSectionItem >                   
+                    <apex:outputLink value="{!$Page.CFCT_OppWithoutPartners}"
+                                     title="Shows Opportunities without Partners">
+                                     Opportunities Without Partners
+                    </apex:outputLink> 
+                </apex:pageBlockSectionItem>   
+                <apex:pageBlockSectionItem >                   
+                    <apex:outputLink value="{!$Page.CFCT_OwnerLeadRepNoMatch}"
+                                     title="Shows Opportunities where Owner does not match Lead Rep">
+                                     Owner Does Not Match Lead Rep
+                    </apex:outputLink> 
+                </apex:pageBlockSectionItem>  
+                <apex:pageBlockSectionItem >  </apex:pageBlockSectionItem>        
+            </apex:pageblockSection>
+            <apex:pageblockSection rendered="{! IF(IsClassic,false,true)}"></apex:pageblockSection>
+            <apex:pageblocksection title="Administrator Use Only" rendered="{!SysAdmin}" columns="3">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLink value="{!$Page.CFCT_MassContactOwnerChange}">Mass Contact Owner Change</apex:outputLink>                     
+                </apex:pageBlockSectionItem>
+                <apex:pageblocksectionItem >
+                    <apex:outputLink value="{!$Page.CFCT_UsersNotInChatterGroups}" 
+                                     title="Provides a list of users that are missing from a predefined list of Chatter Groups">
+                                     Users Missing From Chatter Groups
+                    </apex:outputLink>
+                </apex:pageblocksectionItem>               
+                <apex:pageblocksectionItem >
+                    <apex:outputLink value="{!$Page.CFCT_AccountMerger}" 
+                                     title="Copies contacts from one account to another and mainly used when two copies merge together.">
+                                     Account Merger
+                    </apex:outputLink>
+                </apex:pageblocksectionItem>                             
+            </apex:pageblocksection>
+            <apex:pageblockSection rendered="{! IF(IsClassic,false,true)}"></apex:pageblockSection>
+            <apex:pageblockSection title="Administrator Use Only - Misc." rendered="{!SysAdmin}">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLink title="Returns a random list of users" value="{!$Page.RandomUsers}">Random User List</apex:outputLink>
+                </apex:pageBlockSectionItem>
+            </apex:pageblockSection>
+<!--
+            <apex:pageblockSection title="Account Related">
+                <h4>Anything related to Account Stuff can go here...</h4>
+            </apex:pageblockSection>
+-->
+        </apex:pageblock> 
+<!--
+        <apex:pageBlock title="Misc Tools">
+            <h4>Miscellaneous tools can go here...</h4>
+        </apex:pageBlock> 
+        <apex:pageBlock title="SFDC SRG">
+            <apex:pageblockSection title="Documents">
+                <apex:pageBlockSectionItem >            
+                    <h4>Links to documents can go here</h4>
+                </apex:pageBlockSectionItem>          
+            </apex:pageblockSection>
+            <apex:pageblockSection title="Videos">
+                <apex:pageBlockSectionItem >            
+                    <h4>Links to video -- if SFDC allows these file types.  The point is we can create sub section under the SFDC SRG</h4>
+                </apex:pageBlockSectionItem>          
+            </apex:pageblockSection>        
+        </apex:pageBlock> 
+-->
+
+</apex:page>

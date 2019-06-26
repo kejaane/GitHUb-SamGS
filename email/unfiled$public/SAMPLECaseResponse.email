@@ -1,0 +1,15 @@
+Dear {!User.FirstName},
+
+We have received your Sales Force request and our team is currently working to resolve it.
+
+{!Case.Solution_Description}
+
+Thank you,
+
+{!User.Name}
+{!User.Title}
+{!User.Phone}
+
+Case Description;
+
+{!Case.Description}

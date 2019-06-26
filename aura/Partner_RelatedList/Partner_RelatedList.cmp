@@ -1,0 +1,4 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId" access="global" controller="LEX_Opp_Rel_List_Cntl" >
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+ 	<aura:attribute name="recordId" type="Id" />
+</aura:component>

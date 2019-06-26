@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set will give access to CEDE section fields of BRF/OPP for AIA in 200+ Opportunity</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>AIA Cede Document</label>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Benfit_Request_Form__c.Valid_Cede_Document_Uploaded__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

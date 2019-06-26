@@ -1,0 +1,152 @@
+<!-- 
+*=================================================================================================
+* Date         : 08/27/2018
+* Developer    : Gayathri Palanisamy
+* Purpose      : This VF page is used in Account record page as a Visualforce component.
+*                 This VF Page is created as a workaround to add partners related list in account 
+since Standard Partner related list is not available in lightning due to lightning limitation.
+*=================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date         Developer         Tag     Description
+*============+=================+=====+============================================================
+*============+=================+=====+============================================================ 
+-->
+
+
+<apex:page standardController="Account" extensions="AIA_Standard_Partner_Related_ListExtn" showHeader="false" sidebar="false" lightningStylesheets="true" title="View All Partners">
+    <apex:slds />
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"/>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+    <apex:includeScript value="{!URLFOR($Resource.AIA_TableSorter, 'tablesorter/jquery.tablesorter.min.js')}"/>
+
+    <script type="text/javascript">
+        $j = jQuery.noConflict();    
+        $j(document).ready(function () {
+        $j("[id$=viewAllTable]").tablesorter();
+        });    
+    </script>
+    <apex:form id="PartnerList">
+        <!--This Panel will rendered when there is no partner available in the Account-->
+        <apex:outputPanel rendered="{!!enableTable}">
+            <div class="slds-align_absolute-center" style="height: 5rem;">
+                <p>
+                No Records to display
+                </p>
+            </div>
+            
+        </apex:outputPanel>
+    <!-- This panel will be rendered when there is some partners associated with the account , 
+        and the page is viewed in Related List-->
+    <apex:outputPanel rendered="{!(!viewAllRec && enableTable)}">
+    
+        <div class='slds-button slds-float_right'>
+                <apex:commandButton action="{!enableAllRec}" value="View All"/>
+        </div>
+        <apex:outputPanel >
+            
+               <table class='slds-table slds-table_bordered slds-table_cell-buffer'>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Partner">Partner</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Opportunity">Opportunity</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Role">Role</div>
+                    </th>
+                </tr>
+                <apex:repeat value="{!accPartnerMap}" var="partner">
+                    <tr>
+                        <td scope="row" data-label="Partner">
+                            <div class="slds-truncate" title="Partner"><a href="/{!accPartnerMap[partner].AccountToId}">{!accPartnerMap[partner].AccountTo.Name}</a></div>
+                        </td>
+                        
+                        <td scope="row" data-label="Opportunity">
+                            <div class="slds-truncate" title="Opportunity"><a href="/{!accPartnerMap[partner].OpportunityId}">{!accPartnerMap[partner].Opportunity.Name}</a></div>
+                        </td>
+                        <td scope="row" data-label="Role">
+                            <div class="slds-truncate" title="Role">{!accPartnerMap[partner].Role}</div>
+                        </td>
+                        
+                    </tr>
+                </apex:repeat>
+            </table>
+                      
+            
+        </apex:outputPanel>
+        
+        </apex:outputPanel>
+        <!--This panel will be rendered for view All Page-->
+        <apex:outputPanel rendered="{!viewAllRec}">
+        <div class="slds-card">
+        <div class="slds-card__header">
+        
+            <div class="slds-page-header">
+                <div class="slds-grid">
+                     <div class="slds-col slds-has-flexi-truncate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                        <svg class="slds-icon slds-icon-standard-user .slds-icon_small" aria-hidden="true">
+                            <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#account')}"></use>
+                        </svg>
+                    </div>
+                    <div class="slds-media__body" id="viewAllpartner">
+                        <p class="slds-text-title_caps slds-line-height_reset">Partners</p>
+                        <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"
+                            title="{!accName}">{!accName}</h1>
+                        <div class="slds-col slds-align-bottom">
+                        <p class="slds-text-body--small">
+                            {!partnerCount} items
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>          
+            </div>
+            </div> 
+            <div class="slds-card__header">
+            <apex:outputPanel >
+                <div>
+                    <apex:commandButton value="Go Back to Account" action="{!goToAccount}" /> 
+                </div>
+            </apex:outputPanel>  
+            </div>
+            
+            </div>
+            <div class="slds-card__body">
+            <apex:pageBlock id="TablePanel">
+                <apex:pageBlockTable value="{!accPartnerMap}" var="Part" id="viewAllTable">
+                    <apex:column >
+                     <apex:facet name="header">
+                         <apex:outputLink styleClass="header">Partner</apex:outputLink>
+                        
+                     </apex:facet>
+                     <div class="slds-truncate" title="Partner"><a href="/{!accPartnerMap[Part].AccountToId}">{!accPartnerMap[Part].AccountTo.Name}</a></div>
+                     
+                  </apex:column>
+                    <apex:column >
+                     <apex:facet name="header">
+                         <apex:outputLink styleClass="header">Opportunity</apex:outputLink>
+                        
+                     </apex:facet>
+                     <div class="slds-truncate" title="Opportunity"><a href="/{!accPartnerMap[Part].OpportunityId}">{!accPartnerMap[Part].Opportunity.Name}</a></div>
+                     
+                  </apex:column>
+                    <apex:column >
+                     <apex:facet name="header">
+                         <apex:outputLink styleClass="header">Role</apex:outputLink>
+                        </apex:facet>
+                     <div class="slds-truncate" title="Role">{!accPartnerMap[Part].Role}</div>
+                     
+                  </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+            </div>
+            </div>
+        </apex:outputPanel>
+    
+    </apex:form>
+</apex:page>

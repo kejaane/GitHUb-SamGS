@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Cascade</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>FSP GPs</relationshipLabel>
+        <relationshipName>FSP_GPs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Effective_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FSP_GP_NPN__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Agency_NPN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FSP GP NPN</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSP_GP__c</fullName>
+        <externalId>false</externalId>
+        <label>FSP/GP</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FSP</fullName>
+                    <default>false</default>
+                    <label>FSP</label>
+                </value>
+                <value>
+                    <fullName>GP</fullName>
+                    <default>false</default>
+                    <label>GP</label>
+                </value>
+                <value>
+                    <fullName>Direct</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Direct</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>None</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>FSP/GP</relationshipLabel>
+        <relationshipName>FSP_GPs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Partner__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>FSP_GP__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AP Benefit Advisors, LLC</fullName>
+                    <default>false</default>
+                    <label>AP Benefit Advisors, LLC</label>
+                </value>
+                <value>
+                    <fullName>Benefit Design Group, LLC</fullName>
+                    <default>false</default>
+                    <label>Benefit Design Group, LLC</label>
+                </value>
+                <value>
+                    <fullName>BenefitMall</fullName>
+                    <default>false</default>
+                    <label>BenefitMall</label>
+                </value>
+                <value>
+                    <fullName>CBIZ</fullName>
+                    <default>false</default>
+                    <label>CBIZ</label>
+                </value>
+                <value>
+                    <fullName>Direct</fullName>
+                    <default>false</default>
+                    <label>Direct</label>
+                </value>
+                <value>
+                    <fullName>Employee Benefits Corporation of America</fullName>
+                    <default>false</default>
+                    <label>Employee Benefits Corporation of America</label>
+                </value>
+                <value>
+                    <fullName>Group Benefit Services</fullName>
+                    <default>false</default>
+                    <label>Group Benefit Services</label>
+                </value>
+                <value>
+                    <fullName>Hamilton Insurance Agency</fullName>
+                    <default>false</default>
+                    <label>Hamilton Insurance Agency</label>
+                </value>
+                <value>
+                    <fullName>Insurance Marketing Center, Inc.</fullName>
+                    <default>false</default>
+                    <label>Insurance Marketing Center, Inc.</label>
+                </value>
+                <value>
+                    <fullName>Kelly &amp; Associates Insurance Group</fullName>
+                    <default>false</default>
+                    <label>Kelly &amp; Associates Insurance Group</label>
+                </value>
+                <value>
+                    <fullName>NCAS</fullName>
+                    <default>false</default>
+                    <label>NCAS</label>
+                </value>
+                <value>
+                    <fullName>Potomac Basin Group Assoc., Inc.</fullName>
+                    <default>false</default>
+                    <label>Potomac Basin Group Assoc., Inc.</label>
+                </value>
+                <value>
+                    <fullName>Crawford Advisors, LLC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Crawford Advisors, LLC</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>AP Benefit Advisors, LLC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Benefit Design Group, LLC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>BenefitMall</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Direct</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Group Benefit Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Hamilton Insurance Agency</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Kelly &amp; Associates Insurance Group</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FSP</controllingFieldValue>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>NCAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>CBIZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Employee Benefits Corporation of America</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Insurance Marketing Center, Inc.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GP</controllingFieldValue>
+                <valueName>Potomac Basin Group Assoc., Inc.</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Primary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Producer of Record</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a custom object to add new FSP/GPs. It is created to support the updates to be sent to Broker Hub(632.0 project).</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>FSP GP</label>
+    <nameField>
+        <displayFormat>FSPGP-{000000}</displayFormat>
+        <label>FSP GP Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>FSP GPs</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>New_FSP_GP</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New FSP/GP</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/FSP_GP_RelatedList_Page?controlCaching=1&amp;oppid={!Opportunity.Id}</url>
+    </webLinks>
+</CustomObject>

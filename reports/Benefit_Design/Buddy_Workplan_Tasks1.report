@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$AIA_Implementation__c.Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task__c.Task_Name__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task__c.AIA_Task_Assigned_Date__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task__c.ExpectedDate__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task__c.AIA_SLA_Days__c</field>
+    </columns>
+    <columns>
+        <field>Workplan_Task__c.Total_Days_to_Complete_Task_SLA__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Workplan_Task__c.Task_Name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Complete BeneFact Coder Coding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task__c.Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Completed,Not Required</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task__c.Parent_Sub_Process_Stage__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Benefit Setup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Workplan_Task__c.Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Test for EGP Account</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Workplan_Task__c.Account__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Buddy Workplan Tasks</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Workplan_Task__c@Workplan_Task__c.Implementation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Workplan_Task__c.End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

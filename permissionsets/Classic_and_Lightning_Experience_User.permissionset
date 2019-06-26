@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created as part of lightning migration project for AIA.  But this can be reused by other projects.
+This is intended for users who need to work in both classic and lightning experience.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Classic &amp; Lightning Experience User</label>
+</PermissionSet>

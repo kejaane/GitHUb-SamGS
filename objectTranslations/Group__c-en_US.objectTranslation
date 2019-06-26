@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Agency Agent Id --></label>
+        <name>Agency_Agent_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Effective Date --></label>
+        <name>Agency_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency ID --></label>
+        <name>Agency_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency NPN --></label>
+        <name>Agency_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Name --></label>
+        <name>Agency_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Termination Date --></label>
+        <name>Agency_Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Effective Date --></label>
+        <name>Agent_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent ID --></label>
+        <name>Agent_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent NPN --></label>
+        <name>Agent_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Name --></label>
+        <name>Agent_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Term Date --></label>
+        <name>Agent_Term_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP Effective Date --></label>
+        <name>FSP_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP/GP/PDB ID --></label>
+        <name>FSP_GP_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP/GP/PDB Name --></label>
+        <name>FSP_GP_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP ID --></label>
+        <name>FSP_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP NPN --></label>
+        <name>FSP_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP Name --></label>
+        <name>FSP_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP Termination Date --></label>
+        <name>FSP_Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP Effective Date --></label>
+        <name>GP_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP ID --></label>
+        <name>GP_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP NPN --></label>
+        <name>GP_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP Name --></label>
+        <name>GP_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP Termination Date --></label>
+        <name>GP_Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Effective Date --></label>
+        <name>Group_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group ID --></label>
+        <name>Group_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Termination Date --></label>
+        <name>Group_Term_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Segment --></label>
+        <name>Market_Segment__c</name>
+        <picklistValues>
+            <masterLabel>199+</masterLabel>
+            <translation><!-- 199+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-50</masterLabel>
+            <translation><!-- 2-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51+</masterLabel>
+            <translation><!-- 51+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51-199</masterLabel>
+            <translation><!-- 51-199 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PDB Effective Date --></label>
+        <name>PDB_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB ID --></label>
+        <name>PDB_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB NPN --></label>
+        <name>PDB_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB Name --></label>
+        <name>PDB_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB Termination Date --></label>
+        <name>PDB_Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migrated</masterLabel>
+            <translation><!-- Migrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Termed</masterLabel>
+            <translation><!-- Termed --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Group-Agent</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Groups-Agents</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Group Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

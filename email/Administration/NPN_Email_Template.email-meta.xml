@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>NPN Email Template</name>
+    <style>freeForm</style>
+    <subject>NPN Update</subject>
+    <textOnly>Please update the NPN for the Primary Broker on the Contact Role related list and/or the Partner marked as Primary on the Partner related list associated to this opportunity. : {!Opportunity.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

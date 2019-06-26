@@ -1,0 +1,195 @@
+<!--
+*============+================+============================================================================
+* Date       : 11/10/2017
+* Developer  : Goutham Rapolu
+* Purpose    : Logic to show Account Team related List on Acocunt Page & Redirect to Add/Edit/Replace 
+*              Account Team Member. US138.
+*                              *******[Update History]*******                  
+*============+================+=====+======================================================================
+* Date       +  Developer     + Tag + Description
+*============+================+=====+======================================================================
+* 11/10/2017 | Goutham Rapolu |     | Initial version
+* 05/16/2018 | Sajitha Y      | T01 | Added slds classes to match the look and feel of lightning 
+*                                     view with classic.
+* 07/02/2018 | Asif Kutagulla | T02 | Removed ISAccountExe == 'TRUE' & added AreaManagerUser == 'TRUE' 
+* 07/05/2018 | Sajitha Y      | T03 | Added ISAccountExe == 'TRUE' for Add Default team 
+* 08/13/2018 | Arshia G       | T04 | Set Panel render value
+* 01/30/2019 | Satya T        | T05 | Changed reference of standard Account Team Member with Custom Account Team Member.
+* 04/24/2019 | Satya T        | T06 | Added condition for Default Account Team permission set. If user has this permission
+                                      set, they can see the "Default Account Team button"
+*============+================+=====+======================================================================
+-->
+
+<apex:page standardController="Account" extensions="AIA_AccountTeamMemberController" showHeader="false" sidebar="false" lightningStylesheets="true">
+    <!-- T01 - start -->
+    <apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <!-- T01 - End -->
+
+    <apex:form >
+        <apex:actionFunction action="{!deleteAccTM}" reRender="popuppanel" name="deleteATM"
+            oncomplete="refresh();">
+            <apex:param name="accountid" value="" />
+            <apex:param name="atmid" value="" />
+        </apex:actionFunction>
+    </apex:form>
+    
+    <apex:form >
+        <apex:outputPanel id="ATMPanel">
+            <apex:pageBlock helpTitle="Account Team Help" helpUrl="https://help.salesforce.com/articleView?id=accountteam_def"
+                tabStyle="Account">
+
+                <!--T01 - Start This code is used for modal display  -->
+                <apex:outputPanel id="popuppanel">
+                    <apex:outputPanel rendered="{!displayPopUp}">
+                        <apex:outputPanel styleClass="popupBackground" layout="block" />
+                        <apex:outputPanel styleClass="popupBox" layout="block">
+                            <div align="Center">
+                                <apex:outputText value="Are you Sure you want to delete?" />
+                                <br/>
+                                <br/>
+                                <apex:commandButton value="Delete" onclick="delfinal()" />
+                                <apex:commandButton value="Cancel" action="{!cancelTeamPop}" />
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+
+                <apex:actionFunction action="{!DefaultAccountTeam}" reRender="dummy" name="defaultAccountTeam"/>
+                <apex:pageMessages />
+                
+                <!-- BUTTONS -->
+                    <!-- T02 Removed ISAccountExe == 'TRUE' & added AreaManagerUser == 'TRUE' -->
+                    
+                <apex:pageBlockButtons location="Top">
+                     <!--T03 - Start -->
+                    <apex:outputPanel style="display:{!IF(ISAccountExe == 'TRUE' || ISAdmin_User == 'TRUE' || isDefaultTeam_User =='TRUE' ||(CONTAINS($Profile.Name,'Admin')) ,'block','none')}"><!-- T06-->
+                        <div class="slds-float_right">
+                            <a class="btn" href="javascript:defaultAccountTeamaction('{!accountid}')">Add Default Account Team</a>
+                        </div>
+                        </apex:outputPanel>
+                     <!--T03 - End -->
+                        <apex:outputPanel style="display:{!IF( AreaManagerUser == 'TRUE' || ISAdmin_User == 'TRUE' || (CONTAINS($Profile.Name,'Admin')) ,'block','none')}">
+                        <div align="Right">
+                            <apex:commandButton value="Manage Team Members" action="{!ManageTeamMember}" />
+                        </div>
+                    </apex:outputPanel>
+                </apex:pageBlockButtons>
+                <!-- DEFAULT ACCOUNT TEAM - TABLE -->
+                <apex:pageBlockTable value="{!atmList}" var="atm">
+                    <apex:column >
+                        <!-- T02 Removed ISAccountExe == 'TRUE' & added AreaManagerUser == 'TRUE' -->
+                        <!-- T03 Added ISAccountExe == 'TRUE' & Removed AreaManagerUser == 'TRUE' -->
+                        <apex:outputPanel style="display:{!IF(ISAccountExe == 'TRUE' || (EditATMTrue == 'TRUE' || ISAdmin_User == 'TRUE' || (CONTAINS($Profile.Name,'Admin'))) ,'block','none')}"> 
+                            <apex:outputPanel >
+                                <apex:outputText >
+                                    <!-- T05 Start -->
+                                   <!-- <apex:commandLink value="Delete" 
+                                                        onclick="DeleteAndRefreshPage('{!atm.AccountId}','{!atm.Id}');"
+                                                        action="{!showPopup}" immediate="true" id="del"
+                                                        reRender="popuppanel" /> -->
+                                         <apex:commandLink value="Delete" 
+                                                        onclick="DeleteAndRefreshPage('{!atm.AccountId__c}','{!atm.Id}');"
+                                                        action="{!showPopup}" immediate="true" id="del"
+                                                        reRender="popuppanel" />
+                                     <!-- T05 End -->
+                                </apex:outputText>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:column>
+                  <!-- T05 Start -->
+                   <!-- <apex:column value="{!atm.User.Name}" />
+                        <apex:column value="{!atm.TeamMemberRole}" /> -->
+                   
+                    <apex:column value="{!atm.UserId__r.Name}" />
+                    <apex:column value="{!atm.TeamMemberRole__c}" />
+                    <!-- T05 End -->
+                </apex:pageBlockTable>
+                <apex:inputTextarea id="displayPopUp" value="{!displayPopUp}" styleClass="setvaldisplayPopUp" style="display:none;"/>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS092, 'assets/styles/salesforce-lightning-design-system-vf.css')}"/>
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+        <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script type="text/javascript">
+            var accntid = '';
+            var atmids = '';
+
+            function refresh() {
+                $(".setvaldisplayPopUp").val(false);  //T04
+             }
+
+            function delfinal() {
+                 deleteATM(accntid, atmids); 
+                window.top.location.href = '/' + accntid;  //T04
+            }
+
+            function DeleteAndRefreshPage(accid, atmid) {
+                accntid = accid;
+                atmids = atmid;
+            }
+
+            function defaultAccountTeamaction(accid) {
+                defaultAccountTeam();
+                setTimeout(function() {
+                    window.top.location.href = '/' + accid;
+                }, 1000);
+            }
+
+        </script>
+    </apex:form>
+    
+    <!-- T01 - Start-->
+    <style type="text/css">
+        .pbHeader .pbTitle h2 {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .popupBox {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            width: 300px;
+            margin-left: -150px;
+        }
+        
+        .popupBackground {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: relative;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        {
+            ! IF(!IsClassic, '.pbButtonb .btn, .slds-scope input.btn{color:#16325c;}', '')
+        }
+        
+        {
+            ! IF(! IsClassic, '.headerRow{font-size:12px !important;}.headerRow{color:#16325c;}', '')
+        }
+        
+        {
+            ! IF(!IsClassic, '.slds-vf-data-table td, .slds-scope .slds-vf-data-table .dataCell{color:#0070d2;}', '')
+        }
+        
+        {
+            ! IF(!IsClassic, '.slds-vf-data-table td, .slds-scope .slds-vf-data-table .dataCell{font-size:14px !important;}', '')
+        }
+
+    </style>
+    <!-- T01 - End-->
+
+</apex:page>

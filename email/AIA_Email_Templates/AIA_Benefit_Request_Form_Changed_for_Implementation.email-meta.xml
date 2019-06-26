@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>AIA Benefit Request Form Changed for Implementation</name>
+    <style>formalLetter</style>
+    <subject>Benefit Request Form Changed for Implementation {!AIA_Implementation__c.Backend_Name__c} under {!AIA_Implementation__c.Account__c}</subject>
+    <textOnly>Implementation {!AIA_Implementation__c.Backend_Name__c} for {!AIA_Implementation__c.Account__c} has been updated with a new sold Benefit Request Form effective {!AIA_Implementation__c.Backend_BRF_Effective_Date__c}. Please review the details here: {!AIA_Implementation__c.Link}
+Thanks,
+AIA Support</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

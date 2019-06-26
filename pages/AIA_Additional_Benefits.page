@@ -1,0 +1,315 @@
+<!--
+*************************************************************************************************************************************************
+*  Class            : AIA_Additional_Benefits
+*  Author           : Satya Tirumalasetti
+*  Description      : Visualforce page to add new benefits inside Salesforce for a plan, under the Additional Services grouper. Applicable for 
+*                     ASO only  
+*  Modification Log :
+* -----------------------------------------------------------------------------------------------------------------------------------------------
+*  Author          Date-Modified  Tag   Description of Change
+* -----------------------------------------------------------------------------------------------------------------------------------------------
+* Satya T           02/01/2017          Initial version
+* Asif Kutagulla    03/05/2017    T01   Validate if both In-Network & Out-of-Network Covered are N/A if either one is N/A and validate if both 
+*                                       In-Network & Out-of-Network Deductible are None if either one is None. B-03639 
+* Ramakrishna       04/03/2017    T02   VFpage has been re-designed as per the story B-03772
+* Debkanti          25/01/2018    T03   Added SLDS tags to accomodate look of Lightning
+* Rajesh Pennam     02/28/2018    T04   Added Custom CSS for Apex Page Messages    
+*************************************************************************************************************************************************
+-->
+<apex:page controller="AIA_Additional_BenefitsController" sidebar="False" docType="html-5.0" lightningStyleSheets="true">
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <apex:slds rendered="{!!isClassic}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS092, 'assets/styles/salesforce-lightning-design-system-vf.css')}"/>
+        <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/bootstrap.css')}" rel="stylesheet"/>
+        <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/bootstrap-theme.css')}" rel="stylesheet"/>
+        <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/overwrite.css')}" rel="stylesheet"/>
+        <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/brokerNew.css')}" rel="stylesheet"/>
+        <link href="{!URLFOR($Resource.PP_SumCSS, 'SummaryCSS/common-use.css')}" rel="stylesheet"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+         
+        <apex:outputPanel rendered="{!isClassic}">
+        <apex:sectionHeader title="Add Custom Benefits" />
+        </apex:outputPanel>
+    <!-- Lightning Header Start-->
+        <apex:outputPanel rendered="{!!isClassic}" >
+            <div class="slds-page-header">
+                <div class="slds-grid">
+                    <h1><font size="4">ADD CUSTOM BENEFITS 
+                        </font></h1>
+                </div>
+            </div>
+        </apex:outputPanel>
+    <apex:form >
+        <!--<apex:Pagemessages escape="false" />-->
+        <style>
+           .slds-scope input[type="text"] {
+                min-width: 0rem;
+                font-size: 16px;
+            }
+            .slds-scope input[type] ~ input[type]{
+                margin-left: .5rem;
+                vertical-align: inherit;
+                height: 30px;
+            }
+            .slds-scope button, .slds-scope input[type=button], .slds-scope input[type=reset], .slds-scope input[type=submit] {
+                -webkit-appearance: button;
+                cursor: pointer;
+                height: 30px;
+            }
+            .slds-scope select[size='1'] {
+                min-width: 8rem; 
+                font-size: 14px;
+            }
+            .slds-scope select {
+                text-transform: none;
+                min-width: 8rem;
+                font-size: 14px;
+                height: calc(1.875rem + (1px*12));
+            }
+            .slds-scope .slds-select {
+                background-color: #fff;
+                color: #16325c;
+                border: 1px solid #d8dde6;
+                border-radius: .25rem;
+                width: 100%;
+                transition: border .1s linear,background-color .1s linear;
+                height: calc(1.875rem + (1px * 12));
+            }
+            .slds-scope .data2Col td {
+                vertical-align: top;
+            }
+            .slds-scope .slds-select_container:before {
+                border-bottom: 5px solid #061c3f;
+                top: calc((1.75rem / 2) - 1px);
+            }
+           .slds-scope .slds-select_container:after {
+                border-top: 5px solid #061c3f;
+                bottom: calc((1.75rem / 2) - 1px);
+            }
+            
+            table.grayTab tbody tr td {
+                padding: 0 0 0 10px;
+            }
+            
+            select {
+                border: none;
+            }
+            
+            .ui-accordion-header {
+                padding-left: 25px !important;
+            }
+            
+            .form-control {
+                border: none;
+                box-shadow: none;
+                border-radius: none;
+                box-shadow: none;
+            }
+            
+            .middle {
+                vertical-align: middle;
+            }
+            
+            .gray {
+                color: #9aa0a0;
+            }
+            
+            .width5 {
+                width: 40%;
+            }
+            
+            .width2 {
+                width: 10%;
+            }
+            
+            input[type=text].input {
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;
+            }
+            
+            #loading-img {
+                background: url(/img/loading32.gif) center center no-repeat;
+                height: 100%;
+                z-index: 20;
+            }
+            
+            .overlay {
+                background: #e9e9e9;
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                opacity: 0.7;
+            }
+            <!-- T04 Changes Starts Here-->
+             .msgIcon {
+                    display: none!important
+                } 
+                 .customMessage * {
+                    color: ##ffffff!important;
+                    font-size: 20px!important;
+                } 
+               .message {
+                    opacity: 1
+                } <!-- T04 Changes Ends Here -->
+
+        </style>
+    <apex:pageBlock >
+                <!--
+                <br></br>                           
+            &nbsp;&nbsp;<apex:commandButton value=" Add Record " action="{!AddRecord}" reRender="panelbody1"/>
+                <br></br>  -->          
+            <apex:outputpanel id="panelbody1" layout="block">
+            <!-- <apex:Pagemessages escape="false" /> -->
+ 
+ 
+ <!--- Added by Rajesh T04 Changes starts Here-->        
+                <script>
+                    $(document).ready(function(){
+                       overridePageMessages();    
+                    });
+                
+                    function overridePageMessages(){    
+                        var textureEffect = '';
+                        //Uncomment below line for texture effect on page messages
+                        textureEffect = 'slds-theme--alert-texture';
+                
+                        <!-- $('.errorM3').addClass('slds-notify slds-notify--alert slds-theme--error customMessage '+textureEffect);  -->                  
+                        $('.errorM3').addClass('customMessage '+textureEffect);
+                        <!--  $('.errorM3').removeClass('errorM3'); -->
+                        
+                     }
+                </script>
+                <apex:Pagemessages escape="false"/>              
+    <!----- Added by Rajesh T04 Changes Ends Here ------>          
+
+                
+                <apex:pageBlockSection collapsible="false" columns="1" >   <!-- rendered="{!if(benfitList.size > 0,true,false)}"-->
+                    <!--<div id="dd" class="table-responsive slds">  -->
+                    <apex:outputpanel id="panelbody" layout="block">
+                        <!--<div class="table-responsive slds">-->
+                        <table class="{! if(isClassic,'table table-condensed lightblueTab mobile-adjustment','table table-condensed mobile-adjustment')}">
+                                <thead>
+                                        <tr>
+                                            <th width="10%" style="{! if(isClassic,'text-align:left; vertical-align:middle;','text-align:left; vertical-align:middle;font-size:12px;')}" rowspan="2">
+                                                <strong>Benefit Name   </strong>&nbsp;&nbsp;&nbsp;
+                                            </th>
+                                            <th width="10%" style="{! if(isClassic,'text-align:left; vertical-align:middle;','text-align:left; vertical-align:middle;font-size:12px;')}" rowspan="2">
+                                                <strong>Place of Service   </strong>&nbsp;&nbsp;&nbsp;
+                                            </th>
+                                            <th width="30%" colspan="4" style="{! if(isClassic,'text-align:left; vertical-align:middle;','text-align:left; vertical-align:middle;font-size:12px;')}" scope="In-Network">
+                                                <strong>In-Network </strong>
+                                            </th>
+                                            <th width="30%" colspan="4" style="{! if(isClassic,'text-align:left; vertical-align:middle;','text-align:left; vertical-align:middle;font-size:12px;')}" scope="Out-of-Network">
+                                                <strong>Out-of-Network </strong>
+                                            </th>
+                                            <th width="10%" colspan="1" style="{! if(isClassic,'text-align:left; vertical-align:middle;','text-align:left; vertical-align:middle;font-size:12px;')}" rowspan="2">
+                                                <strong>Comments </strong>
+                                            </th>
+                                        </tr>  
+                                        <tr>
+                                          <!--  <th style="vertical-align:middle;"><strong>Benefit Name </strong>&nbsp;&nbsp;</th>  
+                                            <th style="vertical-align:middle;"><strong>Place of Service </strong>&nbsp;&nbsp;</th>   -->
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Covered </strong>&nbsp;&nbsp;</th>
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Coinsurance </strong></th>
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Deductible </strong></th>
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Copay  </strong> <br/></th>
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Covered </strong>&nbsp;&nbsp;</th>
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Coinsurance </strong></th>
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Deductible </strong></th>
+                                            <th style="{! if(isClassic,'vertical-align:middle;','vertical-align:middle;font-size:12px;')}"><strong>Copay </strong> <br/></th>
+                                        </tr>
+                                </thead>
+
+                            <tbody>
+                                <apex:repeat value="{!lstWrapper}" var="bn">  
+                                    <tr>
+                                        <td>
+                                            <apex:inputText label="Benefit Name" value="{!bn.benefit.Dummy_Parent_Benefit_Name__c}" styleClass="form-control input" />  
+                                        </td>
+                                    <td>      <div class="slds-form-element__control">
+                                                <div class="slds-select_container">                                       
+                                            <apex:selectList value="{!bn.benefit.Place_of_Service__c}" size="1" styleClass="form-control input slds-select">                                              
+                                                    <apex:selectOption itemLabel="--None--" itemvalue="--None--" />  
+                                                    <apex:selectOption itemLabel="In-Patient" itemvalue="In-Patient" />  
+                                                    <apex:selectOption itemLabel="Out-Patient" itemvalue="Out-Patient" /> 
+                                                    <apex:selectOption itemLabel="General" itemvalue="General" />   
+                                         </apex:selectList>  
+                                        </div>
+                                        </div>
+                                        </td>
+                                        <td> 
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-select_container"> 
+                                            <apex:selectList value="{!bn.benefit.Copay_Type_1_IsCovered__c}" size="1" styleClass="form-control input slds-select">
+                                               <!-- <apex:selectOption itemLabel="--None--" itemvalue="--None--" /> -->
+                                                <apex:selectOptions value="{!CoveredPicklistValues}" />
+                                            </apex:selectList> 
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <apex:inputField value="{!bn.benefit.CoInsurance_AmountValueSelected__c}" styleClass="form-control input" />
+                                        </td>
+                                        <td>
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-select_container">
+                                            <apex:inputField value="{!bn.benefit.Copay_Type_1_DeductibleApplies__c}" styleClass="form-control input slds-select" />
+                                                </div>
+                                            </div>
+                                                </td>
+                                        <td >
+                                            <apex:inputText value="{!bn.benefit.Copay_Type_1_AmountValueSelected__c}" styleClass="form-control input"/>                                           
+                                        </td>
+                                        <td>  
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-select_container">                                          
+                                            <apex:selectList value="{!bn.benefit.OON_Copay_Type_1_IsCovered__c}" size="1" styleClass="form-control input slds-select">                                                
+                                                <apex:selectOptions value="{!CoveredPicklistValues}" />
+                                            </apex:selectList> 
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <apex:inputField value="{!bn.benefit.OON_CoInsurance_AmountValueSelected__c}" styleClass="form-control input" />
+                                        </td>
+                                        <td>
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-select_container">
+                                            <apex:inputField value="{!bn.benefit.OON_Copay_Type_1_DeductibleApplies__c}"  styleClass="form-control input slds-select" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <apex:inputText value="{!bn.benefit.OON_Copay_Type_1_AmountValueSelected__c}" styleClass="form-control input"/>                                            
+                                        </td>
+                                        <td>
+                                            <apex:inputText value="{!bn.benefit.Custom_Benefit_Comments__c}" styleClass="form-control input"/>                                            
+                                        </td>
+                                    </tr>
+                                </apex:repeat> 
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+                
+                
+            </apex:outputPanel>                                 
+            &nbsp;&nbsp;<apex:commandButton style="{! if(isClassic,'','vertical-align:middle;font-size:12px;')}" value=" Add Record " action="{!AddRecord}" reRender="panelbody1"/>
+            <br></br>
+        </apex:pageBlock>
+                <div class="clearfix col-md-12 col-sm-12 col-xs-12 m-top-20 slds-grid slds-wrap slds-align--absolute-center font-size:12px">
+                    <div class="col-md-5 col-md-offset-4 col-sm-2  col-sm-offset-3 col-xs-6">
+                        <apex:outputPanel >
+                            <apex:commandButton styleClass="slds-button_neutral slds-button" style="{! if(isClassic,'background:#4775d1; color:white;width:130px','vertical-align:middle;font-size:14px;slds-button;')}" action="{!addAdditionalBenefits}" value="Save & Back to Summary"/> &nbsp;
+                            <apex:commandButton styleClass="slds-button" action="{!redirectToPropProduct}" style="{! if(isClassic,'','vertical-align:middle;font-size:14px;slds-button;')}" value="Cancel"/>&nbsp;&nbsp;
+                            <!--<apex:commandButton action="{!redirectToLimitation}" value="Add Limitations" /> -->
+                        </apex:outputPanel>
+                    </div>
+                </div>
+    </apex:form>
+    </apex:page>

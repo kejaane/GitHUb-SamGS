@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Benfit_Request_Form__c$Name</field>
+    </columns>
+    <columns>
+        <field>Benfit_Request_Form__c$Request_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Funding_Arrangements__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>ASO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$Grandfathered_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Non-Grandfathered</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Benfit_Request_Form__c$CreatedDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1/1/2018 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Cloned ASO BRFs w GrandFathered Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Benefit_Request_Form__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Benfit_Request_Form__c$ARC_Approval_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

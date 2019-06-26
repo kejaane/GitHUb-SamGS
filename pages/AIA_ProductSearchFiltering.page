@@ -1,0 +1,315 @@
+<!--------------------------------------------------------------------------------------
+                      ----===[ HISTORY ]===---
+ Date        Developer        Description
+------------------------------------------------------------------------------------
+ 8/3/2016  Goutham Rapolu  This is to Display the Page for Product Search Filtering on button click on BRF or PP related List on BRF. 
+                            This page will have the logic for filtering the Plan Products based on implicit filters from BRF and 
+                            user selected filters from this Visualforce page and redirect to the Proposed product.
+ 1/24/2017  | Raviteja 	  | T01 | Added SLDS in page
+
+-->
+
+<apex:page controller="AIA_ProductSearchFilteringController" sidebar="false" lightningStylesheets="true">
+    <!-- T01 - start -->
+    <apex:slds rendered="{! !isClassic }"/>
+    <style>
+    .headerlinks{
+        color:black !important;
+        text-decoration:none !important;
+        }
+    </style>
+    <!-- T01 - End -->
+    
+    <apex:form styleClass="slds-scope">
+    
+       
+          
+        <table width="100%" border="0" class="slds-table slds-table_bordered slds-table_cell-buffer">
+          <tr>  
+            
+            <!-- Search Criteria ProductName, productCategory, productLine, CDH, CDHtype, CDHfundType  -->
+            
+            <td width="200" valign="top">
+        
+              <apex:pageBlock title="Search" mode="edit" id="criteria">
+              
+              
+     
+                  <script type="text/javascript">
+                  function doSearch() {
+                    searchServer(
+                        document.getElementById("productName").value,
+                        document.getElementById("productCategory").value,
+                        document.getElementById("productLine").options[document.getElementById("productLine").selectedIndex].value,
+                        document.getElementById("CDH").options[document.getElementById("CDH").selectedIndex].value,
+                        document.getElementById("CDHtype").options[document.getElementById("CDHtype").selectedIndex].value,
+                        document.getElementById("CDHfundType").options[document.getElementById("CDHfundType").selectedIndex].value
+                      );
+                  }
+                  
+                   function doSearchfinal() {
+                    searchServerfinal(
+                        document.getElementById("productName").value,
+                        document.getElementById("productCategory").value,
+                        document.getElementById("productLine").options[document.getElementById("productLine").selectedIndex].value,
+                        document.getElementById("CDH").options[document.getElementById("CDH").selectedIndex].value,
+                        document.getElementById("CDHtype").options[document.getElementById("CDHtype").selectedIndex].value,
+                        document.getElementById("CDHfundType").options[document.getElementById("CDHfundType").selectedIndex].value
+                      );
+                  }
+
+            <!-- Search Criteria for Drug Product - ProductName, productCategory = Drug (Default), productLine, CDH, CDHtype, CDHfundType  -->
+            
+                  window.onload = function(e){ 
+                            var addPlan=getURLParam('addPlan', window.location.href);
+                            console.log('addPlan value--->'+addPlan);
+                      if(addPlan!=null){
+                          if(addPlan=='Drug')
+                          {
+                                document.getElementById("productCategory").value="Drug";
+                                document.getElementById("productCategory").disabled="true";    
+                          }
+                          else if(addPlan=='Dental')
+                          {
+                                document.getElementById("productCategory").value="Dental";
+                                document.getElementById("productCategory").disabled="true";                                  
+                          }
+                          else if(addPlan=='Vision')
+                          {
+                                document.getElementById("productCategory").value="Vision";
+                                document.getElementById("productCategory").disabled="true";                                  
+                          }                          
+                          doSearch();
+                      }
+                            
+                  }
+                  
+                  function defaultProductCategory(){
+                      var addPlan=getURLParam('addPlan', window.location.href);
+                      console.log('addPlan value--->'+addPlan);
+                   }
+                  
+                  function getURLParam( name, url ) {
+                          if (!url) url = location.href;
+                          name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+                          var regexS = "[\\?&]"+name+"=([^&#]*)";
+                          var regex = new RegExp( regexS );
+                          var results = regex.exec( url );
+                          return results == null ? null : results[1];
+                   }
+                  
+                 
+                  </script> 
+            
+                  <apex:actionFunction name="searchServer" action="{!runSearch}" rerender="results,debug,errors,ppli">
+                      <apex:param name="productName" value="" />
+                      <apex:param name="productCategory" value="" />
+                      <apex:param name="productLine" value="" />
+                      <apex:param name="CDH" value="" />
+                      <apex:param name="CDHtype" value="" />
+                      <apex:param name="CDHfundType" value="" />
+                  </apex:actionFunction>
+                  
+                   <apex:actionFunction name="searchServerfinal" action="{!runSearch}" rerender="results,debug,errors">
+                      <apex:param name="productName" value="" />
+                      <apex:param name="productCategory" value="" />
+                      <apex:param name="productLine" value="" />
+                      <apex:param name="CDH" value="" />
+                      <apex:param name="CDHtype" value="" />
+                      <apex:param name="CDHfundType" value="" />
+                  </apex:actionFunction>
+            
+                  <table cellpadding="2" cellspacing="2" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                  <tr>
+                    <td style="font-weight:bold;">Product Category<br/>
+                            <!-- T01 - start Added SLDS form element and select for lightning-->
+                         <div class="slds-form-element__control">
+    						<div class="slds-select_container">
+                              <select id="productCategory" onchange="doSearch();" class='slds-select'>
+                                <option value=""></option>
+                                <apex:repeat value="{!ProdCategoryItems}" var="prodCat">
+                                  <option value="{!prodCat}">{!prodCat}</option>
+                                </apex:repeat>
+                              </select>
+                             </div>
+                        </div>
+                            <!-- T01 - End -->
+
+                    </td>
+                  </tr>
+              
+               <tr>
+              
+                    <td style="font-weight:bold;">Product Line<br/>
+                         <apex:outputPanel id="ppli"> 
+                             <div class="slds-form-element__control">
+    						<div class="slds-select_container">
+                                <select id="productLine" onchange="doSearchfinal();" class='slds-select'>
+                              
+                                   <option value=""></option>
+                                    <apex:repeat value="{!ProdLine}" var="prodLine">
+                                      <option value="{!prodLine}">{!prodLine}</option>
+                                    </apex:repeat>
+                                  
+                              </select>
+                            </div>
+                             </div>
+                    </apex:outputPanel> 
+                    </td>
+                     
+                  </tr>
+               
+                  <tr>
+                    <td style="font-weight:bold;">Product Name<br/>
+                    <input type="text" id="productName" onkeyup="doSearch();"/>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td style="font-weight:bold;">CDH<br/>
+                           <div class="slds-form-element__control">
+    						<div class="slds-select_container">
+                                  <select id="CDH" onchange="doSearch();" class='slds-select'>
+                                      <option value=""></option>
+                                      <apex:repeat value="{!CDHitems}" var="item">
+                                          <option value="{!item}">{!item}</option>
+                                      </apex:repeat>
+                                  </select>
+                               </div>
+                          </div>
+                      </td>
+                      </tr>
+                      <tr>
+                          <td style="font-weight:bold;">CDH Type<br/>
+                               <div class="slds-form-element__control">
+    						<div class="slds-select_container">
+                                      <select id="CDHtype" onchange="doSearch();" class='slds-select'>
+                                          <option value=""></option>
+                                          <apex:repeat value="{!CDHtypeItems}" var="cdhItem">
+                                              <option value="{!cdhItem}">{!cdhItem}</option>
+                                          </apex:repeat>
+                                      </select>
+                                   </div>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="font-weight:bold;">CDH Fund Type<br/>
+                               <div class="slds-form-element__control">
+    						<div class="slds-select_container">
+                                      <select id="CDHfundType" onchange="doSearch();" class='slds-select'>
+                                          <option value=""></option>
+                                          <apex:repeat value="{!CDHfundTypeItems}" var="cdhfundItem">
+                                              <option value="{!cdhfundItem}">{!cdhfundItem}</option>
+                                          </apex:repeat>
+                                      </select>	
+                                   </div>
+                                </div>
+                          </td>
+                      </tr>
+                  </table>
+        
+              </apex:pageBlock>
+        
+            </td>
+            
+            <!-- Search results -->
+             <td valign="top">
+                <apex:outputPanel style="{! if(isClassic,'float:left;','')}">
+                               <apex:actionStatus id="fetchStatus">
+                                   <apex:facet name="start">
+                                       <apex:outputPanel >
+                                           <img src="/img/loading.gif"/><I><H2>Please wait...</H2></I>
+                                       </apex:outputPanel>
+                                   </apex:facet>
+                               </apex:actionStatus>
+                </apex:outputPanel>
+                           
+                <apex:pageBlock mode="edit" id="results">
+               
+                        <apex:commandButton action="{!cancelButton}" value="Return to Benefit Request Form" id="theCancelButton" />
+             
+                    <br/>
+                 <apex:pageblockButtons styleclass="slds-grid" >
+                         
+                               <apex:commandButton reRender="results" styleClass="slds-input slds-size_1-of-8" status="fetchStatus" value="First " action="{!first}" disabled="{!!hasPrevious}" title="First Page" />
+                               <apex:commandButton reRender="results" styleClass="slds-input slds-size_1-of-8" status="fetchStatus" value="Previous " action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page" />
+                               <apex:commandButton reRender="results" styleClass="slds-input slds-size_1-of-8" status="fetchStatus" value="Next " action="{!next}" disabled="{!!hasNext}" title="Next Page" />
+                               <apex:commandButton reRender="results" styleClass="slds-input slds-size_1-of-8" status="fetchStatus" value="Last" action="{!last}" disabled="{!!hasNext}" title="Last Page" /> 
+                                                     
+                   </apex:pageblockButtons>
+                  
+                  
+                    <apex:pageBlockTable value="{!planList}" var="p">
+
+                        <apex:column >
+                            <apex:facet name="header">
+
+                                <apex:commandLink styleClass="headerlinks" value="Plan Name" action="{!toggleSort}" rerender="results,debug">
+                                    <apex:param name="sortField" value="planName" assignTo="{!sortField}"/>
+                                </apex:commandLink>
+                               
+                            </apex:facet>
+                            <apex:outputLink ></apex:outputLink>
+                            <apex:outputLink value="/apex/AIA_ProposedProductSummary?planId={!p.id}&brfId={!$CurrentPage.parameters.brfId}" rendered="{!IF($CurrentPage.parameters.ppid=='',TRUE,FALSE)}" id="theLink">{!p.Plan_Name__c}</apex:outputLink>
+                             <apex:outputLink value="/apex/AIA_ProposedProductSummary?planId={!p.id}&brfId={!$CurrentPage.parameters.brfId}&ppid={!$CurrentPage.parameters.ppid}"  rendered="{!IF($CurrentPage.parameters.ppid!='',TRUE,FALSE)}" id="theLink1">{!p.Plan_Name__c}</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:facet name="header">
+
+                                <apex:commandLink styleClass="headerlinks" value="Option" action="{!toggleSort}" rerender="results,debug">
+                                    <apex:param name="sortField" value="Option" assignTo="{!sortField}"/>
+                                </apex:commandLink>
+                               
+                            </apex:facet>
+                            <apex:outputLink ></apex:outputLink>
+                            <apex:outputLink value="/apex/AIA_ProposedProductSummary?planId={!p.id}&brfId={!$CurrentPage.parameters.brfId}" rendered="{!IF($CurrentPage.parameters.ppid=='',TRUE,FALSE)}" >{!p.Option__c}</apex:outputLink>
+                             <apex:outputLink value="/apex/AIA_ProposedProductSummary?planId={!p.id}&brfId={!$CurrentPage.parameters.brfId}&ppid={!$CurrentPage.parameters.ppid}"  rendered="{!IF($CurrentPage.parameters.ppid!='',TRUE,FALSE)}" >{!p.Option__c}</apex:outputLink>
+                        </apex:column>
+
+                        <apex:column >
+                            <apex:facet name="header">
+
+                                <apex:commandLink styleClass="headerlinks" value="Jurisdiction" action="{!toggleSort}" rerender="results,debug">
+                                    <apex:param name="sortField" value="Jurisdiction" assignTo="{!sortField}"/>
+                                </apex:commandLink>
+                               
+                            </apex:facet>
+                            <apex:outputLink ></apex:outputLink>
+                            <apex:outputLink value="/apex/AIA_ProposedProductSummary?planId={!p.id}&brfId={!$CurrentPage.parameters.brfId}" rendered="{!IF($CurrentPage.parameters.ppid=='',TRUE,FALSE)}" >{!p.Jurisdiction__c}</apex:outputLink>
+                             <apex:outputLink value="/apex/AIA_ProposedProductSummary?planId={!p.id}&brfId={!$CurrentPage.parameters.brfId}&ppid={!$CurrentPage.parameters.ppid}"  rendered="{!IF($CurrentPage.parameters.ppid!='',TRUE,FALSE)}">{!p.Jurisdiction__c}</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:commandLink styleClass="headerlinks" value="Skeleton plan" action="{!toggleSort}" rerender="results,debug">
+                                    <apex:param name="sortField" value="Skeleton plan" assignTo="{!sortField}"/>
+                                </apex:commandLink>
+                            </apex:facet>
+                            <div class="slds-form-element">
+                              <div class="slds-form-element__control">
+                                <span class="slds-checkbox">	
+                            		<apex:inputcheckbox Value="{!p.Skeleton_Plan__c}" disabled="true" />
+                                    <span class="slds-checkbox_faux"></span>
+                                  </span>
+                                </div>
+                            </div>
+                        </apex:column>
+                        
+                    </apex:pageBlockTable>
+                    
+                </apex:pageBlock>
+            
+            </td>
+            
+          </tr>
+        </table>
+        
+   <!-- Debug SOQL query section -->  
+        
+        <apex:pageBlock title="Debug - SOQL (Displayed to System Administrators Only)" id="debug" rendered="{!$Profile.Name=='System Administrator'}">
+            <apex:outputText value="{!debugSoql}" />           
+        </apex:pageBlock>    
+    </apex:form>
+    
+</apex:page>

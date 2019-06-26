@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AIA_Implementation__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Name</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Business_Type__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Owner</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c$Benefit_Request_Form__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.Workplan_Tasks__r$Name</field>
+    </columns>
+    <columns>
+        <field>AIA_Implementation__c.Workplan_Tasks__r$Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>AIA_Implementation__c.Workplan_Tasks__r$Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Completed,Not Required</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AIA_Implementation__c$Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>,test for egp</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AIA_Implementation__c$Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>AIA_Implementation__c$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Active Tasks by IMP Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AIA_Implementations_w_Tasks__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>AIA_Implementation__c$Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

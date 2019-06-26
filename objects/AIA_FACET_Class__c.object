@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Effective_New_Date__c</fullName>
+        <description>Effective date on package  = Effective date on BRF (if request type = new/prospect)
+Effective date on package  =*manual* (if request type = other than new/prospect)</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Employee_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Status</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ACTIVE</fullName>
+                    <default>false</default>
+                    <label>ACTIVE</label>
+                </value>
+                <value>
+                    <fullName>RETIREE</fullName>
+                    <default>false</default>
+                    <label>RETIREE</label>
+                </value>
+                <value>
+                    <fullName>COBRA</fullName>
+                    <default>false</default>
+                    <label>COBRA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FACETS_Classes_Notes__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>FACETS Classes Notes</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Group_Structure_Request_Form_Product__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>(2 OR 3) AND 1</booleanFilter>
+            <filterItems>
+                <field>$Source.Group_Structure_Request_Form__c</field>
+                <operation>equals</operation>
+                <valueField>AIA_Group_Structure_Form_Product__c.Group_Structure_Request_Form__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>AIA_Group_Structure_Form_Product__c.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Vision</value>
+            </filterItems>
+            <filterItems>
+                <field>AIA_Group_Structure_Form_Product__c.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Dental</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>AIA_Group_Structure_Form_Product__c</referenceTo>
+        <relationshipLabel>FACETS Classes</relationshipLabel>
+        <relationshipName>FACET_Classes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Group_Structure_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Group Structure Request Form</label>
+        <referenceTo>AIA_Group_Structure_Request_Form__c</referenceTo>
+        <relationshipName>FACET_Classes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Description_other__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Product Description other</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Group_Structure_Request_Form_Product__r.Proposed_Products__r.Plan_Product_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Product description</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BLUEDENTAL PLUS</fullName>
+                    <default>false</default>
+                    <label>BLUEDENTAL PLUS</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY BLUEDENTAL PLUS</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY BLUEDENTAL PLUS</label>
+                </value>
+                <value>
+                    <fullName>BLUEDENTAL BASIC</fullName>
+                    <default>false</default>
+                    <label>BLUEDENTAL BASIC</label>
+                </value>
+                <value>
+                    <fullName>PREFERRED (PPO) DENTAL</fullName>
+                    <default>false</default>
+                    <label>PREFERRED (PPO) DENTAL</label>
+                </value>
+                <value>
+                    <fullName>TRADITIONAL DENTAL</fullName>
+                    <default>false</default>
+                    <label>TRADITIONAL DENTAL</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY PERFERRED DENTAL</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY PERFERRED DENTAL</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY TRADITIONAL DENTAL</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY TRADITIONAL DENTAL</label>
+                </value>
+                <value>
+                    <fullName>BLUEDENTAL PREFERRED (MEDIGAP)</fullName>
+                    <default>false</default>
+                    <label>BLUEDENTAL PREFERRED (MEDIGAP)</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY BLUEDENTAL PREFERRED (MEDIGAP)</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY BLUEDENTAL PREFERRED (MEDIGAP)</label>
+                </value>
+                <value>
+                    <fullName>BLUEDENTAL TRADITIONAL (MEDIGAP)</fullName>
+                    <default>false</default>
+                    <label>BLUEDENTAL TRADITIONAL (MEDIGAP)</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY BLUEDENTAL TRADTIONAL (MEDIGAP)</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY BLUEDENTAL TRADTIONAL (MEDIGAP)</label>
+                </value>
+                <value>
+                    <fullName>BLUEDHMO</fullName>
+                    <default>false</default>
+                    <label>BLUEDHMO</label>
+                </value>
+                <value>
+                    <fullName>DENTAL HMO</fullName>
+                    <default>false</default>
+                    <label>DENTAL HMO</label>
+                </value>
+                <value>
+                    <fullName>FREESTANDING DENTAL HMO (DHMO)</fullName>
+                    <default>false</default>
+                    <label>FREESTANDING DENTAL HMO (DHMO)</label>
+                </value>
+                <value>
+                    <fullName>DENTAL HMO OPT-OUT</fullName>
+                    <default>false</default>
+                    <label>DENTAL HMO OPT-OUT</label>
+                </value>
+                <value>
+                    <fullName>BLUE PLUS</fullName>
+                    <default>false</default>
+                    <label>BLUE PLUS</label>
+                </value>
+                <value>
+                    <fullName>VOLUNTARY</fullName>
+                    <default>false</default>
+                    <label>VOLUNTARY</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TERM_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>FACETS Class</label>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>FACETS Classes Number</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>FACETS Classes</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <validationRules>
+        <fullName>F001_Product_Description_Other</fullName>
+        <active>false</active>
+        <description>if Product description is null/blank, then Product description  other field must be populated</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; if(AND(  Group_Structure_Request_Form_Product__c = null,  Product_Description_other__c = null),true,false)</errorConditionFormula>
+        <errorDisplayField>Product_Description_other__c</errorDisplayField>
+        <errorMessage>Product Description is blank.  A Product Description of Other must be provided.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>F002_Termination_Date</fullName>
+        <active>true</active>
+        <description>When Request Type of related GSRF is "Prospect/New", the Term Date must be blank.</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND( ISPICKVAL(Group_Structure_Request_Form__r.Implementation__r.Benefit_Request_Form__r.Request_Type__c, 'Prospect/New') , NOT( ISBLANK( TERM_Date__c) ) )</errorConditionFormula>
+        <errorDisplayField>TERM_Date__c</errorDisplayField>
+        <errorMessage>Termination date not valid for Request Type Prospect/New</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_FACET_Class</fullName>
+        <availability>online</availability>
+        <description>Created to validate weather parent record is locked</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New FACETS Class</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AIA_GSM_CustomNewlistbutton?type=Facetclass&amp;gsrfid={!AIA_Group_Structure_Request_Form__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_FacetClass</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New FACET Class</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AIA_GSM_MultipleFacetAdd?type=Facet&amp;gsrfid={!AIA_Group_Structure_Request_Form__c.Id}</url>
+    </webLinks>
+</CustomObject>

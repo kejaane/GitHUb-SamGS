@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>custom permission to ignore validation rules in apex code on brf object. classes in which this is used- CF_CustomPermissionsReader_Helper, CF_CustomPermissionsReader, AIA_BRFTriggerHelper, AIA_BRFTriggerHandler</description>
+    <label>AIA Ignore BRF Validation Rules</label>
+</CustomPermission>

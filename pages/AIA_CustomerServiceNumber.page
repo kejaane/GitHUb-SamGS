@@ -1,0 +1,280 @@
+<!--
+*==================================================================================================
+* Date         : 03/23/2018
+* Developer    : Rajesh Pennam
+* Purpose      : This VFpage is the inline page on the account layout for the user to enter Customer
+*                Service data and upate
+*==================================================================================================
+*                                 Update History
+*                                 ---------------
+* Date        Developer          Tag     Description
+*==================================================================================================
+* 03/23/2018| Rajesh Pennam    |     | Initial Version. It is developed according to US 369                                                                               
+*==================================================================================================
+-->
+
+<apex:page standardController="Account" extensions="AIA_CustomerServiceNumController" sidebar="false" lightningStylesheets="true" id="pge" >
+    <apex:slds rendered="{!isClassic}"/> 
+    
+    
+    <!-- This Styling for User entry table -->
+    <style type="text/css">
+   .headClassArea {
+   padding: 1% !important; 
+   padding-left: 50px !important;
+   }
+    .headClass {
+   padding: 1% !important; 
+        
+   }
+   .headClassComments {
+   padding: 1% !important; 
+   padding-left: 20px !important;
+        
+   }
+   
+        
+    </style>
+    
+    <!-- This styling is for Tabs -- >
+    <style>
+        .activeTab { background-color: #F1F1F1; color:black; background-image:none; height:22px; font-family:Arial,​Helvetica,​sans-serif; font-size:12px }
+        .inactiveTab {  color:black; background-image:none; height:22px; font-family:Arial,​Helvetica,​sans-serif; font-size:12px }
+        .rich-tabhdr-side-cell {
+            border-top-color: #f9f0f0 !important;
+            padding-bottom: 6px !important;
+        }
+    </style> 
+    
+    <!-- This block is used for Autopopulation of Customer Service button depending on the Account Team Role and Permissions Set -->
+    
+    <apex:form id="myform" rendered="{!formdisplay}">
+      
+      <!-- This panel is used for redirect the Customer Service VF Page for user to enter detials --->
+      
+         <apex:outputPanel id="csnparDiv">
+        <apex:outputPanel styleClass="container" id="csnDiv" rendered="{!hasCreateOpt}"> 
+            <!--<apex:commandButton action="{!addRowRedirect}" value="Add Customer Service Number" rendered="{!!showAddPkg}" reRender="csnDiv,cndchlDiv"  />-->
+             <apex:commandlink action="{!addRowRedirect}"  target="_blank" rendered="{!!showAddPkg}" Style="text-decoration: none;">  <!-- target="_blank" -->
+               <apex:commandButton value="Add Customer Service Number" reRender="csnDiv,cndchlDiv"/>
+             </apex:commandLink>
+            
+        </apex:outputPanel>
+            </apex:outputPanel> 
+           
+            
+        <!--- This is block is used to display the active records, If Term Data is Blank then those records will be in Active Tab  -->    
+        <apex:pageMessages />
+        <apex:outputPanel id="tabpnlDiv">
+            
+            
+            <!-- This panel is used for redirect the Customer Service VF Page for user to enter detials --->
+      
+                   
+            
+            <apex:tabPanel switchType="client" selectedTab="name2" id="theTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
+                <apex:tab label="Active" name="Active" id="tabOne">
+                    <apex:outputPanel id="tableactPnl">
+                    <apex:pageBlock rendered="{!ActiveCSN.size==0}"> No records</apex:pageBlock>
+                    <apex:pageBlock id="pb" mode="inlineEdit" rendered="{!ActiveCSN.size>0}">
+                    
+                                       
+                        <apex:pageBlockButtons rendered="{!hasCreateOpt}" location="top">
+                            <apex:commandbutton value="Save" action="{!save1}" />
+                                                     
+                        </apex:pageBlockButtons>
+                        
+                        <!--<div style="overflow: scroll; height: 200px;">-->
+                            
+                        <!-- <apex:outputPanel layout="block" style="overflow:auto; height:260px;margin: 0 2px"> -->
+                             
+                        <apex:pageBlockTable value="{!ActiveCSN}" var="act" id="tableact">
+                            <!-- <apex:column value="{!act.Area__c}"/>
+                            <apex:column value="{!act.Service_Number__c}"/>
+                            <apex:column value="{!act.Phone_Number__c}"/>
+                            <apex:column value="{!act.Service_Hours__c}"/>
+                            <apex:column value="{!act.Effective_Date__c}"/> -->
+                            <apex:column headerValue="Action" rendered="{!hasCreateOpt}">
+                                <apex:commandLink value="Del" action="{!deleteRec}"  styleClass="delete"  >
+                                    <apex:param name="recid" value="{!act.id}" />
+                                </apex:commandLink>
+                            </apex:column>
+                            <apex:column headerValue="Area" >
+                                <apex:outputfield value="{!act.Area__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}" />
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            <apex:column headerValue="Other Area" >
+                                <apex:outputfield value="{!act.Other_Area__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            <apex:column headerValue="Service Number" >
+                                <apex:outputfield value="{!act.Service_Number__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            <apex:column headerValue="Phone Number" >
+                                <apex:outputfield value="{!act.Phone_Number__c}" ><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            
+                            
+                            <apex:column headerValue="Service Hours" >
+                                <apex:outputfield value="{!act.Service_Hours__c}" ><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            
+                            <apex:column headerValue="Effective Date" >
+                                <apex:outputfield value="{!act.Effective_Date__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            <apex:column headerValue="Term date" >
+                                <apex:outputfield value="{!act.Term_Date__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            <!-- <apex:column value="{!act.Comments__c}"/> -->
+                            <apex:column headerValue="Comments" style="width: 183px !important;word-wrap: break-word !important;min-width: 100px !important;">
+                                <apex:outputField value="{!act.Comments__c}"  ><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}" />
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputField>
+                               
+                            </apex:column>
+                        </apex:pageBlockTable>
+                            
+                         
+                         <!-- </apex:outputpanel> -->
+                            
+                        <apex:panelGrid columns="7">
+                            <apex:commandButton status="fetchStatus"  value="|<" action="{!setCon.first}" disabled="{!!setCon.hasPrevious}" title="First Page"/>
+                            <apex:commandButton status="fetchStatus" value="<" action="{!setCon.previous}" disabled="{!!setCon.hasPrevious}" title="Previous Page"/>
+                            <apex:commandButton status="fetchStatus"  value=">" action="{!setCon.next}" disabled="{!!setCon.hasNext}" title="Next Page"/>
+                            <apex:commandButton status="fetchStatus"  value=">|" action="{!setCon.last}" disabled="{!!setCon.hasNext}" title="Last Page"/>
+                            <apex:outputText >{!(setCon.pageNumber * size)+1-size}-{!IF((setCon.pageNumber * size)>noOfRecords, noOfRecords,(setCon.pageNumber * size))} of {!noOfRecords}</apex:outputText>
+                            <!--<apex:commandButton status="fetchStatusAct" value="Refresh" action="{!refresh}" title="Refresh Page"/>
+                            <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                                <apex:actionStatus id="fetchStatusAct" startText="Fetching..." stopText=""/>
+                            </apex:outputPanel>-->                       
+                        </apex:panelGrid>
+                    </apex:pageBlock>
+
+                        </apex:outputPanel>
+                </apex:tab>
+                <!-------------------------------------------------------------------------------------------------------------------------------------------->
+                
+                <!--- This is block is used to display the In-active records, If Term Data is Not Blank then those records will be in In-Active Tab  --> 
+                
+                <apex:tab label="InActive" name="InActive" id="tabTwo">
+                    <apex:outputPanel id="tablePnl">
+                    <apex:pageBlock rendered="{!InActiveCSN.size==0}"> No records</apex:pageBlock>
+                    <apex:pageBlock id="inactpb" mode="inlineEdit" rendered="{!InActiveCSN.size>0}">                        
+                         
+                         <apex:pageBlockButtons rendered="{!hasCreateOpt}" location="top">
+                            <apex:commandbutton value="Save" action="{!saveinAct}"/>
+                        </apex:pageBlockButtons>
+                        <div style="overflow: scroll; height: 200px;">
+                        <apex:pageBlockTable value="{!InActiveCSN}" var="inAct" id="tableInact">
+                            <!-- <apex:column value="{!inAct.Area__c}"/>
+                            <apex:column value="{!inAct.Service_Number__c}"/>
+                            <apex:column value="{!inAct.Phone_Number__c}"/>
+                            <apex:column value="{!inAct.Service_Hours__c}"/>
+                            <apex:column value="{!inAct.Effective_Date__c}"/>
+                            <apex:column value="{!inAct.Term_Date__c}"/> -->
+                            <apex:column headerValue="Action" rendered="{!hasCreateOpt}">
+                                <apex:commandLink value="Del" action="{!deleteRec}"  styleClass="delete" > <!-- rerender="tablePnl,tableInact" -->
+                                    <apex:param name="recid" value="{!inAct.id}" />
+                                </apex:commandLink>
+                            </apex:column>
+
+                            <apex:column headerValue="Area" >
+                                <apex:outputfield value="{!inAct.Area__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle" rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                            </apex:column>
+                            <apex:column headerValue="Other Area" >
+                                <apex:outputfield value="{!inAct.Other_Area__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+                            <apex:column headerValue="Service Number" >
+                                <apex:outputfield value="{!inAct.Service_Number__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle" rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                            </apex:column>
+                            <apex:column headerValue="Phone Number" >
+                                <apex:outputfield value="{!inAct.Phone_Number__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle" rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                            </apex:column>
+                            <apex:column headerValue="Service Hours" >
+                                <apex:outputfield value="{!inAct.Service_Hours__c}" ><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle"  rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                               
+                            </apex:column>
+
+                            <apex:column headerValue="Effective Date" >
+                                <apex:outputfield value="{!inAct.Effective_Date__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle" rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                            </apex:column>
+                            
+                            <apex:column headerValue="Term date" >
+                                <apex:outputfield value="{!inAct.Term_Date__c}"><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle" rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                            </apex:column>
+                            
+                            <!-- <apex:column value="{!inAct.Comments__c}"/> -->
+                            <apex:column headerValue="Comments" style="width: 183px !important;word-wrap: break-word !important;min-width: 100px !important;">
+                                <apex:outputfield value="{!inAct.Comments__c}" ><apex:inlineEditSupport event="ondblclick" disabled="{!!hasCreateOpt}"/>
+                                 <apex:image value="/img/func_icons/util/pencil12.gif" style="vertical-align:middle" rendered="{!isclassic}"/>
+                                </apex:outputfield>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                        </div>
+                        <!------------------------------------------------------------------------------------------------------------------------------------------------>
+                        
+                        <!-- This Block is used for Pagination -->
+                        
+                        <apex:panelGrid columns="7">
+                            <apex:commandButton status="fetchStatus"  value="|<" action="{!inActSetCon.first}" disabled="{!!inActSetCon.hasPrevious}" title="First Page"/>
+                            <apex:commandButton status="fetchStatus"  value="<" action="{!inActSetCon.previous}" disabled="{!!inActSetCon.hasPrevious}" title="Previous Page"/>
+                            <apex:commandButton status="fetchStatus"  value=">" action="{!inActSetCon.next}" disabled="{!!inActSetCon.hasNext}" title="Next Page"/>
+                            <apex:commandButton status="fetchStatus"  value=">|" action="{!inActSetCon.last}" disabled="{!!inActSetCon.hasNext}" title="Last Page"/>
+                            <!--<apex:outputText >{!(inActSetCon.pageNumber * inActsize)+1-inActsize}-{!IF((inActSetCon.pageNumber * inActsize)>inActnoOfRecords, inActnoOfRecords,(inActSetCon.pageNumber * inActsize))} of {!inActnoOfRecords}</apex:outputText>-->
+                            <apex:outputText >{!(inActSetCon.pageNumber * inActsize)+1-inActsize}-{!IF((inActSetCon.pageNumber * inActsize)>inActnoOfRecords, inActnoOfRecords,(inActSetCon.pageNumber * inActsize))} of {!inActnoOfRecords}</apex:outputText>
+                            <!--<apex:commandButton status="fetchStatus" value="Refresh" action="{!InActrefresh}" title="Refresh Page"/>
+                            <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                                <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+                            </apex:outputPanel>-->
+                            
+                        </apex:panelGrid>
+                    </apex:pageBlock>
+                        
+                        </apex:outputPanel>
+                </apex:tab>
+                
+            </apex:tabPanel>
+            <apex:outputPanel id="buttons" style="float:right !important;">
+                <!-- <apex:commandButton status="fetchStatus" value="Refresh BothPannels" action="{!refreshCNSNew}" title="Refresh Page"/> -->
+                <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                    <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:outputPanel>
+             
+    </apex:form>
+</apex:page>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AE Id --></label>
+        <name>AE_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- AE Name --></label>
+        <name>AE_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG Not Found --></label>
+        <name>AG_Not_Found__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG Rank by Contracts --></label>
+        <name>AG_Rank_by_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG Rank by Groups --></label>
+        <name>AG_Rank_by_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- AG --></label>
+        <name>AG__c</name>
+        <relationshipLabel><!-- Enrollments (AG) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- AM Id --></label>
+        <name>AM_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- AM Name --></label>
+        <name>AM_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active Contract --></label>
+        <name>Active_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active Group --></label>
+        <name>Active_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Break Out Level --></label>
+        <name>Break_Out_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracts --></label>
+        <name>Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Curr Baseline Compensation Owner --></label>
+        <name>Curr_Baseline_Compensation_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Curr Baseline Contracts --></label>
+        <name>Curr_Baseline_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Curr Fiscal Year --></label>
+        <name>Curr_Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Account Name --></label>
+        <name>Customer_Account_Name__c</name>
+        <relationshipLabel><!-- Enrollments_Account_Customer --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- EIN --></label>
+        <name>EIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrl Rpt Dt --></label>
+        <name>Enrl_Rpt_Dt__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP Not Found --></label>
+        <name>FSP_Not_Found__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP --></label>
+        <name>FSP__c</name>
+        <relationshipLabel><!-- Enrollments (FSP) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- FSP by Contract --></label>
+        <name>FSP_by_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- FSP by Group --></label>
+        <name>FSP_by_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP Not Found --></label>
+        <name>GP_Not_Found__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP --></label>
+        <name>GP__c</name>
+        <relationshipLabel><!-- Enrollments (GP) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GP by Contract --></label>
+        <name>GP_by_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- GP by Groups --></label>
+        <name>GP_by_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Type --></label>
+        <name>Group_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Groups Medical --></label>
+        <name>Groups_Medical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Groups --></label>
+        <name>Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Enrollment --></label>
+        <name>Latest_Enrollment__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Metal Level --></label>
+        <name>Metal_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Business Indicator --></label>
+        <name>New_Business_Indicator__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- On Cycle --></label>
+        <name>On_Cycle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PDB Not Found --></label>
+        <name>PDB_Not_Found__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB Rank by Contracts --></label>
+        <name>PDB_Rank_by_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB Rank by Groups --></label>
+        <name>PDB_Rank_by_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB --></label>
+        <name>PDB__c</name>
+        <relationshipLabel><!-- Enrollments (Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PDB by Contract --></label>
+        <name>PDB_by_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDB by Groups --></label>
+        <name>PDB_by_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prev Baseline Compensation Owner --></label>
+        <name>Prev_Baseline_Compensation_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prev Baseline Contracts --></label>
+        <name>Prev_Baseline_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prev Fiscal Year --></label>
+        <name>Prev_Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processed Type --></label>
+        <name>Processed_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reinstatement Date --></label>
+        <name>Reinstatement_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Anniversary Date --></label>
+        <name>Renewal_Anniversary_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reporting_Checkbox_Formula_Off_Cycle --></label>
+        <name>Reporting_Checkbox_Formula_Off_Cycle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reporting_Checkbox_Formula_On_Cycle --></label>
+        <name>Reporting_Checkbox_Formula_On_Cycle__c</name>
+    </fields>
+    <fields>
+        <help><!-- holds the static data of Reporting_Checkbox_formula_off_cycle__c --></help>
+        <label><!-- Reporting Checkbox_Off_Cycle --></label>
+        <name>Reporting_Checkbox_Off_Cycle__c</name>
+    </fields>
+    <fields>
+        <help><!-- holds the static data of Reporting_Checkbox_formula_on_cycle__c --></help>
+        <label><!-- Reporting Checkbox_On_Cycle --></label>
+        <name>Reporting_Checkbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risk --></label>
+        <name>Risk__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rpt Dt --></label>
+        <name>Rpt_Dt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Run Dt --></label>
+        <name>Run_Dt__c</name>
+    </fields>
+    <fields>
+        <label><!-- SB Not Found --></label>
+        <name>SB_Not_Found__c</name>
+    </fields>
+    <fields>
+        <label><!-- SB Rank by Contracts --></label>
+        <name>SB_Rank_by_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- SB Rank by Groups --></label>
+        <name>SB_Rank_by_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- SB --></label>
+        <name>SB__c</name>
+        <relationshipLabel><!-- Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sort Key Process Type --></label>
+        <name>Sort_Key_Process_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Key --></label>
+        <name>Sort_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Termed</masterLabel>
+            <translation><!-- Termed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Summary_Checkbox --></label>
+        <name>Summary_Checkbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- System --></label>
+        <name>System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Date --></label>
+        <name>Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Reason --></label>
+        <name>Termination_Reason__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Enrollment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Enrollments</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Enrollment 2-50 Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Enrollment 51+ Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Enrollment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- 2-50 Enrollment Record Type --></description>
+        <label><!-- 2-50 --></label>
+        <name>X2_50</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- 51+ Enrollment Record Type --></description>
+        <label><!-- 51+ --></label>
+        <name>X51</name>
+    </recordTypes>
+</CustomObjectTranslation>

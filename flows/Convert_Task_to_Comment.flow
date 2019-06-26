@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Convert Task to Comment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Convert Task to Comment</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Comment_from_Task</name>
+        <label>Create Comment from Task</label>
+        <locationX>377</locationX>
+        <locationY>172</locationY>
+        <connector>
+            <targetReference>Delete_Task</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CommentBody</field>
+            <value>
+                <elementReference>sTask.Description</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>sTask.WhatId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CaseComment</object>
+    </recordCreates>
+    <recordDeletes>
+        <name>Delete_Task</name>
+        <label>Delete Task</label>
+        <locationX>383</locationX>
+        <locationY>309</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>sTask.Id</elementReference>
+            </value>
+        </filters>
+        <object>Task</object>
+    </recordDeletes>
+    <startElementReference>Create_Comment_from_Task</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>sTask</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+</Flow>

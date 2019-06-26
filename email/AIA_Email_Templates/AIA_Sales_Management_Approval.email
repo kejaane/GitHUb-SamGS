@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);"><font><font color="#000000" face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12px;">A Benefit Request Form has been created for&nbsp;</span></font><font color="#000000" face="arial"><span style="font-size: 12px;">{!Benfit_Request_Form__c.Account_Name__c} and requires your approval for an off cycle or retroactive change. Please review the information on the link below and respond using&nbsp;the "Sales Management Approval Status" field on the Benefit Request Form screen:</span></font></font></span><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="background-color: rgb(255, 255, 255);"><font color="#262626" face="Proxima Nova, Lucida Sans Unicode, Lucida Grande, sans-serif"><span style="font-size: 12px;"><br></span></font></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!Benfit_Request_Form__c.Link}</div>]]></td>
+</tr>
+</table>

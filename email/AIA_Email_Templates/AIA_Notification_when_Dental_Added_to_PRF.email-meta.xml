@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When a new dental is added to PRF then this email template will be used in the workflow to notify user</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA Notification when Dental Added to PRF</name>
+    <style>formalLetter</style>
+    <subject>Dental Products Added to Proposal Request Form for {!PRF__c.Account_Name__c}</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

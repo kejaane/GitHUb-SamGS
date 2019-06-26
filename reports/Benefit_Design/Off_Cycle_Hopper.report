@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$ARC_Approval_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$ARC_Comments__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$Request_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>off-cycle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities.Benfit_Request_Forms__r$Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Revised Approved,Inactive</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Opportunities$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Opportunities.Benfit_Request_Forms__r$Request_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Off-Cycle Hopper Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_w_Opportunities_BRF_s_and_Proposed_Prod__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$Account_Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,377 @@
+<!-- =========================================================================================
+ * Date         : 01/21/2018
+ * Developer    : Rajesh Pennam
+ * Purpose      : This is the VF page for the BRF Deep Clone
+ *                
+ *=========================================================================================
+ *                                 Update History
+ *                                 ---------------
+ * Date       Developer        Tag         Description
+ *============================================================================================
+   01/18/2018|Rajesh Pennam| T01   | Added SLDS to page
+   03/14/2018| Debkanti    | T02   | Modified SLDS tags to make compatible with Classic and Lightning
+ * 04/02/2018| Raviteja V  | T03   | Added clone functionality to Carefirst Private Exchange Proposed products
+ *=========================================================================================
+ 
+ -->
+
+<apex:page showHeader="true" standardController="Benfit_Request_Form__c" extensions="AIA_BRF_DeepClone"  sidebar="false"  lightningStylesheets="{!!isClassic}" docType="html-5.0"> 
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+   
+   <apex:slds rendered="{!!isClassic}"/> <!-- T01 -->
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+
+   
+   <style>
+      table.grayTab tbody tr td {
+      padding: 0 0 0 10px;
+      }
+      select {
+      border: none;
+      }
+      .ui-accordion-header{
+      padding-left:25px !important;
+      }
+      .form-control {
+      border: none;
+      box-shadow: none;
+      border-radius: none;
+      box-shadow: none;
+      }
+      .middle {
+      vertical-align: middle;
+      }
+      .gray {
+      color: #9aa0a0;
+      }
+      .width5 {
+      width: 40%;
+      }
+      .width2 {
+      width: 10%;
+      }
+      input[type=text].input {
+      border: none;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      }
+      #loading-img {
+      background: url(/img/loading32.gif) center center no-repeat;
+      height: 100%;
+      z-index: 100;
+      }
+      .overlay {
+      background: #e9e9e9;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.7;               
+      }
+      
+      .dateFormat{
+       visibility:hidden;
+     }
+      
+   </style>
+   
+   <!---------------------------------- This block is to display buttons and Title of Page ----------------------------------------------------> 
+   
+   <apex:form id="BRFDeepClone" enctype="multipart/form-data">
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+      <div align="center">
+        <apex:outputText >Do you want to cancel BRF ? </apex:outputText> <br/><br/><br/>
+        <apex:commandButton value="Ok" action="{!returnToBRF}"/>
+        <apex:commandButton value="cancel" action="{!cancelBRF}"/>
+
+      </div>  
+    </apex:outputPanel>
+       <div Class="popupBackground" layout="block" id="loadingbackground" style="display:none"/>
+    <div Class="popupBox" layout="block" id="loadingbox" style="display:none">
+      <div align="center">
+          <br/><br/>
+          <div role="status" class="slds-spinner slds-spinner_medium" >
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+          </div><br/><br/>
+
+      </div>  
+    </div>
+      <apex:pageMessages id="e"/>
+       <apex:actionFunction action="{!ValidateAndCallPCS}" status="overlayst" name="ValidateAndCallPCS" reRender="BRFDeepClone" >
+         <apex:param name="planid" value=""/>
+         <apex:param name="palanIdValue" value=""/>
+         <apex:param name="PPID" value=""/>
+         <apex:param name="PPCat" value=""/> 
+      </apex:actionFunction>  <!-- @ Rajesh Commented from 104 to 108 -->
+      <apex:actionFunction action="{!deletePP}" status="overlayst" name="deletePP" reRender="BRFDeepClone">
+         <apex:param name="PPID" value=""/>
+         <apex:param name="PPName" value=""/>
+      </apex:actionFunction>
+      <apex:actionStatus onstart="showOverlay();" onstop="hideOverlay();" id="overlayst"/>
+      <div class="overlay" id="overlaypanel">
+         <div id="loading-img"></div>
+      </div>
+      <apex:pageBlock title="{!pagetitle}" id="thePageBlock" >
+      
+         <div align="center" draggable="false" >
+           
+           <apex:commandButton action="{!back}" value="Back to Product Selection" rendered="{!IsSummaryPanel}" rerender="BRFDeepClone" id="thebackButton" styleClass="slds-button slds-button_neutral" />
+           
+           <apex:commandButton action="{!cancelButton}"  value="{!IF(IsSummaryPanel,'Cancel and Back to BRF','Cancel and Back to BRF')}"  id="theCancelButton" styleClass="slds-button slds-button_neutral" />
+           
+           <apex:commandButton action="{!next}"  value="{!IF(IsSummaryPanel,'Clone BRF','Next')}" onclick="showOverlay()"  id="NextButton" rerender="BRFDeepClone" Oncomplete="hideOverlay()" styleClass="slds-button slds-button_neutral" />
+          
+         </div>
+         <br/>
+         
+         
+         
+         <!-------------------------------------------------  This Block is to display The Information Section ------------------------------------------------------>
+         
+         
+         <apex:outputPanel id="BRFPanel" rendered="{!IsBrfPanel}" >
+            
+             <apex:outputPanel rendered="{!!isClassic}"> <!-- T01--> 
+            <apex:pageBlockSection title="Information"> </apex:pageBlockSection>   
+            
+        
+             <div class="slds-grid slds-grid_vertical">
+           
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_5-of-12">
+                  <div class="slds-form--horizontal">
+                    <c:SLDSDynamicLookup SLDSResourceName="{!$Resource.SLDS_VF}" ObjectApiName="Opportunity" DisplayFieldApiNames="Name" DisplayFieldsPattern="Name" LabelName="Opportunity" SetValueToField="{!brfObj.Opportunity__c}" SetNameToField="{!opportunityName}"/>
+                  </div>
+              </div>
+             <br/>
+
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_5-of-12">
+                     <div class="slds-form--horizontal">       
+                            <div class="slds-form-element">
+                            <b>   <label class="slds-form-element__label" for="ReuestTypeId">Request Type<abbr class="slds-required">*</abbr></label>
+</b>
+                  <div class="slds-form-element__control">
+                         <apex:inputField value="{!BRF.Request_Type__c}"  styleClass="slds-input slds-lookup" id="ReuestTypeId" style="margin-right:-100px;" />
+
+                  </div>
+                </div>
+                </div>
+              </div>
+             
+              <br/>
+
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_5-of-12">
+                  <div class="slds-form--horizontal"> 
+                  <div class="slds-form-element">
+                  <b> <label class="slds-form-element__label" for="EffectiveDateId">Effective date <abbr class="slds-required">*</abbr></label>  </b>
+
+                 <div class="slds-form-element__control">
+                     <apex:inputfield value="{!BRF.Benefit_Effective_Date__c}" required="false"/>
+
+                </div>
+              </div>
+              </div>
+             </div>
+           </div>
+                
+           </apex:outputPanel>
+           
+           <apex:outputPanel rendered="{!isClassic}"> 
+            <apex:pageBlockSection title="Information" >                                   
+               <apex:inputfield value="{!brfObj.Opportunity__c}" required="True" />
+               <apex:inputfield value="{!BRF.Request_Type__c}" required="True" /> 
+               <apex:inputfield value="{!BRF.Benefit_Effective_Date__c}" required="True" />
+               
+            </apex:pageBlockSection>
+          </apex:outputPanel>
+          <br/> 
+          
+          <!--------------------------------------------------------------------------------------------------------------------------------------------->
+          
+          <!-------------------------------------- This Block contains the section which shows all the documents from the original BRF ------------------>
+           
+            <apex:pageBlockSection title="Related AIA Documents" columns="1">
+               <apex:pageblockTable value="{!RelatedAIADocument}" var="AIAobj"  columnsWidth="10%,15%,20%,40%,15%" rendered="{!!isClassic}">
+                  <apex:column headerValue="Select">
+                  <!--apex:outputPanel rendered="{!isClassic}">
+                   <apex:inputCheckbox value="{!AIAobj.checked}" styleclass="slds-input" style="width:15px;height:14px;"/>  
+                  </apex:outputPanel--> 
+                  <apex:outputPanel rendered="{!!isClassic}">
+                     <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    
+                                    <label class="slds-checkbox">
+                                        <apex:inputcheckbox value="{!AIAobj.checked}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>  
+                   </apex:outputPanel>                                    
+                  </apex:column>
+                  <apex:column value="{!AIAobj.aiaDoc.Name}" headerValue="Name"  />
+                  <apex:column value="{!AIAobj.aiaDoc.Document_Type__c}" headerValue="Document Type" />
+                  <apex:column value="{!AIAobj.aiaDoc.Document_Name__c}" headerValue="Document Name" />
+                  <apex:column value="{!AIAobj.aiaDoc.Source__c}" headerValue="Source" />
+               </apex:pageblockTable>
+                <apex:pageblockTable value="{!RelatedAIADocument}" var="AIAobj" rendered="{!isClassic}">
+                  <apex:column headerValue="Select">
+                  <apex:outputPanel rendered="{!isClassic}">
+                   <apex:inputCheckbox value="{!AIAobj.checked}" styleclass="slds-input" style="width:15px;height:14px;"/>  
+                  </apex:outputPanel> 
+                  <apex:outputPanel rendered="{!!isClassic}">
+                     <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    
+                                    <label class="slds-checkbox">
+                                        <apex:inputcheckbox value="{!AIAobj.checked}" />
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>  
+                   </apex:outputPanel>                                    
+                  </apex:column>
+                  <apex:column value="{!AIAobj.aiaDoc.Name}" headerValue="Name"  />
+                  <apex:column value="{!AIAobj.aiaDoc.Document_Type__c}" headerValue="Document Type" />
+                  <apex:column value="{!AIAobj.aiaDoc.Document_Name__c}" headerValue="Document Name" />
+                  <apex:column value="{!AIAobj.aiaDoc.Source__c}" headerValue="Source" />
+               </apex:pageblockTable>
+            </apex:pageBlockSection>
+         </apex:outputPanel>
+         <apex:outputPanel id="PPPanel" rendered="{!IsPPPanel}" styleClass="custom2">
+            <apex:pageBlockSection title="Related Proposed Products" columns="1">
+               <apex:pageblockTable value="{!lstPPWrapper}" var="PPobj" rendered="{!isClassic}" columnsWidth="10%,20%,20%,20%,30%">
+                  <apex:column headerValue="Select">
+                   <apex:outputPanel rendered="{!isClassic}">
+                     <apex:inputCheckbox onclick="sendRequest('{!PPobj.PP.Plan_Name__c}' , '{!PPobj.PP.Plan_Name__r.Plan_Id__c}', this,  '{!PPobj.PP.Id}', '{!PPobj.PP.Name}','{!PPobj.PP.Product_Category__c}');" value="{!PPobj.checked}" styleclass="slds-input" style="width:15px;height:14px;"  />
+                   </apex:outputPanel>
+                   
+                   <!--apex:outputPanel rendered="{!!isClassic}">
+                       <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    
+                                    <label class="slds-checkbox">
+                                        <apex:inputCheckbox onclick="showOverlay();sendRequest('{!PPobj.PP.Plan_Name__c}' , '{!PPobj.PP.Plan_Name__r.Plan_Id__c}', this,  '{!PPobj.PP.Id}', '{!PPobj.PP.Name}');" value="{!PPobj.checked}" styleclass="slds-input" style="width:15px;height:3px;"/>
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>                  
+                   
+                   </apex:outputPanel-->
+                   
+                  </apex:column>
+                  <apex:column value="{!PPobj.PP.Name}" headerValue="Name"/>
+                  <apex:column value="{!PPobj.PP.Product_Category__c}" headerValue="Product Category"/>
+                  <apex:column value="{!PPobj.PP.Custom_New__c}" headerValue="Customization Type"/>
+                  <apex:column value="{!PPobj.PP.Product_Parent_Name__c}" headerValue="Product Name"/>
+               </apex:pageblockTable>
+                <apex:pageblockTable value="{!lstPPWrapper}" var="PPobj" columnsWidth="10%,15%,20%,20%,35%" rendered="{!!isClassic}">
+                  <apex:column headerValue="Select">
+                   <apex:outputPanel rendered="{!isClassic}">
+                       <!-- T03	-	start-->
+                       <!--passing product category to JS method -->
+                     <apex:inputCheckbox onclick="sendRequest('{!PPobj.PP.Plan_Name__c}' , '{!PPobj.PP.Plan_Name__r.Plan_Id__c}', this,  '{!PPobj.PP.Id}', '{!PPobj.PP.Name}','{!PPobj.PP.Product_Category__c}');" value="{!PPobj.checked}" styleclass="slds-input" style="width:15px;height:14px;"  />
+                       <!--	T03	-	End	-->
+                   </apex:outputPanel>
+                   
+                   <apex:outputPanel rendered="{!!isClassic}">
+                       <div class="slds-form-element ">
+                                <div class="slds-form-element__control"  style="width:300px; margin-left:25px;">
+                                    
+                                    <label class="slds-checkbox">
+                       					<!-- T03	-	Start-->
+                                        <apex:inputCheckbox onclick="showOverlay();sendRequest('{!PPobj.PP.Plan_Name__c}' , '{!PPobj.PP.Plan_Name__r.Plan_Id__c}', this,  '{!PPobj.PP.Id}', '{!PPobj.PP.Name}','{!PPobj.PP.Product_Category__c}');" value="{!PPobj.checked}" styleclass="slds-input" style="width:15px;height:3px;"/>
+               					        <!-- T03	-	End-->
+                                        <span class="slds-checkbox--faux" />
+                                    </label>
+                                </div>
+                            </div>                  
+                   
+                   </apex:outputPanel>
+                   
+                  </apex:column>
+                  <apex:column value="{!PPobj.PP.Name}" headerValue="Name" width="50%"/>
+                  <apex:column value="{!PPobj.PP.Product_Category__c}" headerValue="Product Category" width="50%"/>
+                  <apex:column value="{!PPobj.PP.Custom_New__c}" headerValue="Customization Type" width="50%"/>
+                  <apex:column value="{!PPobj.PP.Product_Parent_Name__c}" headerValue="Product Name" width="50%"/>
+               </apex:pageblockTable>
+            </apex:pageBlockSection>
+         </apex:outputPanel>
+         <apex:outputPanel id="SummaryPanel" rendered="{!IsSummaryPanel}">
+            <apex:pageBlockSection title="Information">
+               <apex:outputText value="{!BRF.Opportunity__r.Name}"/>
+               <apex:outputText value="{!BRF.Request_Type__c}"/> 
+            
+              <apex:outputText label="Benefit Effective Date" value="{0,date,MM'/'dd'/'yyyy}">
+                <apex:param value="{!BRF.Benefit_Effective_Date__c}" />
+              </apex:outputText>
+
+
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Related AIA Documents" columns="1" >
+               <apex:pageblockTable value="{!selAIA_DocList}" var="AIAobj" columnsWidth="20%,20%,30%,30%" rendered="{!!isClassic}">                  
+                  <apex:column value="{!AIAobj.ClonedFromAIADocName__c}" headerValue="Name" />
+                  <apex:column value="{!AIAobj.Document_Type__c}" headerValue="Document Type" />
+                  <apex:column value="{!AIAobj.Document_Name__c}" headerValue="Document Name" />
+                  <apex:column value="{!AIAobj.Source__c}" headerValue="Source"/>
+               </apex:pageblockTable>
+                <apex:pageblockTable value="{!selAIA_DocList}" var="AIAobj" rendered="{!isClassic}">                  
+                  <apex:column value="{!AIAobj.ClonedFromAIADocName__c}" headerValue="Name" />
+                  <apex:column value="{!AIAobj.Document_Type__c}" headerValue="Document Type" />
+                  <apex:column value="{!AIAobj.Document_Name__c}" headerValue="Document Name" />
+                  <apex:column value="{!AIAobj.Source__c}" headerValue="Source"/>
+               </apex:pageblockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Related Proposed Products" columns="1">
+               <apex:pageblockTable value="{!ppListToShow}" var="PPobj" columnsWidth="20%,20%,20%,40%" rendered="{!!isClassic}">
+                  
+                  <apex:column value="{!PPobj.Cloned_From_Name__c}" headerValue="Name"/>
+                  <apex:column value="{!PPobj.Product_Category__c}" headerValue="Product Category"/>
+                  <apex:column value="{!PPobj.Custom_New__c}" headerValue="Customization Type"/>
+                  <apex:column value="{!PPobj.Product_Parent_Name__c}" headerValue="Product Name"/>
+               </apex:pageblockTable>
+                <apex:pageblockTable value="{!ppListToShow}" var="PPobj" rendered="{!isClassic}" columnsWidth="15%,15%,15%,40%">
+                  
+                  <apex:column value="{!PPobj.Cloned_From_Name__c}" headerValue="Name"/>
+                  <apex:column value="{!PPobj.Product_Category__c}" headerValue="Product Category"/>
+                  <apex:column value="{!PPobj.Custom_New__c}" headerValue="Customization Type"/>
+                  <apex:column value="{!PPobj.Product_Parent_Name__c}" headerValue="Product Name"/>
+               </apex:pageblockTable>
+            </apex:pageBlockSection>
+         </apex:outputPanel>
+      </apex:pageBlock>
+   </apex:form>
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script type="text/javascript">
+   
+      function sendRequest(planid,planIdValue,obj,PPid,ppName,PPCat)
+      {
+          debugger;
+          if(obj.checked)
+          {
+              //T04	 Added PPCat parameter
+            ValidateAndCallPCS(planid,planIdValue,PPid,PPCat);
+          }
+          else
+          {
+           deletePP(PPid,ppName);
+          }
+      }
+      function showOverlay(){
+          $('#loadingbackground').show();
+          $('#loadingbox').show();
+          
+      }
+    function hideOverlay(){
+        
+        $('#loadingbackground').hide();
+        $('#loadingbox').hide();
+    }
+      
+                
+   </script>
+</apex:page>

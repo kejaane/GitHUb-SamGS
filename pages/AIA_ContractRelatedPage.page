@@ -1,0 +1,84 @@
+<!--==========================================================================================================================
+* Date         : 2/19/2018
+* Developer    : Raviteja V
+* Purpose      : This VF page function is to auto-populate the Account,implementation values.
+*============================================================================================================================
+*                                 Update History
+*                                 --------------
+* Date       |  Developer       | Tag | Description
+*============+==================================+=====+======================================================================
+* 2/19/2018 |  Raviteja V       |     | Initial Version    
+* 3/08/2018 |  Phanishankar P   | T01 | Layout changes 
+*============+==================+=====+======================================================================================
+-->
+<apex:page standardController="Contract" extensions="AIA_ContractRelatedPage" lightningStylesheets="true">
+    <apex:slds rendered="{! !isClassic}" />
+    <style>
+        {!    IF(!IsClassic,'body input[type=\"text\"], .slds-scope input[type=\"text\"] {min-width: 13rem !important;height:30px !important;}.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 250px !important;}','')}
+		{! IF(!IsClassic,'body select, body select[size=\"0\"], body select[size=\"1\"], .slds-scope select[size=\"0\"], .slds-scope select[size=\"1\"], .slds-scope {     min-width: 12rem !important;         height:30px !important;}','')}       
+        {! IF(!IsClassic,'body .dataCol select, .slds-scope .dataCol select {   max-width: 13rem; !important}','')}
+    </style>
+    <!--	Replicate VF page as the detail page of Contract standard page	-->
+    <apex:form styleClass="slds-form-element">
+        <apex:pageMessages ></apex:pageMessages>
+     <apex:pageBlock title="Contract Edit" id="privateExhange" >
+			<apex:pageBlockButtons >
+                	<apex:commandButton action="{!save}" value="Save" />
+                	<apex:commandButton action="{!cancel}" value="Cancel"/>
+                	
+            </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Contract Information" columns="2" >
+            <apex:inputField value="{!Contract.AccountId}"  />
+            <apex:inputField value="{!Contract.Implementation__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.AIA_Status__c}"/>
+            <apex:outputField value="{!Contract.OwnerId}" />
+            <!--T01 Start -->
+            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            <!--T01 End -->
+            <apex:inputField styleClass="slds-input" value="{!Contract.Status}"/>
+         </apex:pageBlockSection>
+        
+       <apex:pageBlockSection title="Address Information" columns="1">
+            <apex:inputField styleClass="slds-input" value="{!Contract.BillingStreet}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.BillingCity}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.BillingState}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.BillingPostalCode}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.BillingCountry}"/>
+       </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Contract Data" columns="2">
+            <apex:inputField styleClass="slds-input" value="{!Contract.Type__c}"/>
+            <apex:inputField value="{!Contract.Supervisor_Review_Req_d__c}"/>
+            <!-- T01 add required for Start Date/ContactTerm -->
+            <apex:inputField styleClass="slds-input" value="{!Contract.StartDate}" required="true"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.BSS_Codes__c}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.ContractTerm}" required="true"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.OwnerExpirationNotice}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.Description}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.SpecialTerms}"/>
+        </apex:pageBlockSection>
+         
+         <apex:pageBlockSection title="Approvals" columns="2">
+            <apex:inputField value="{!Contract.Approved_Internal__c}"/>
+            <apex:inputField value="{!Contract.Approver_Contract_Supervisor__c}"/>
+            <apex:inputField value="{!Contract.Approved_Sales__c}"/>
+            <apex:inputField value="{!Contract.Approver_C_C__c}"/>
+            <apex:inputField value="{!Contract.Approved_Account__c}"/>
+            <apex:inputField value="{!Contract.Approver_Sales_Service_Rep__c}"/>
+             <!--T01 Start -->
+             <apex:pageBlockSectionItem />
+            <!--T01 End -->            
+            <apex:inputField value="{!Contract.Approver_Legal__c}"/>
+             <apex:pageBlockSectionItem />            
+            <apex:inputField value="{!Contract.Approver_Audit__c}"/>
+        </apex:pageBlockSection>
+         <apex:pageBlockSection title="Signatures" columns="2">
+             <apex:inputField value="{!Contract.CustomerSignedId}"/>
+            <apex:inputField value="{!Contract.CompanySignedId}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.CustomerSignedTitle}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.CompanySignedDate}"/>
+            <apex:inputField styleClass="slds-input" value="{!Contract.CustomerSignedDate}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock> 
+    </apex:form>
+</apex:page>

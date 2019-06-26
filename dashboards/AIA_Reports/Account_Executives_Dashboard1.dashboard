@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Adrienne Robinson</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Ann Pederson</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Barbara Jordan</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Barb Patton</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Barry Walton</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Carolyn Drumgoole</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Christopher Stolze</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Cindy Horn</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Dave Thomas</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Denise Dunn</values>
+        </dashboardFilterOptions>
+        <name>Account Owner</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Diane Flowers</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Evelyn Bradshaw</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Evelyn Bradshaw</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Jean Sewell</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Jeff Wise</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Kal Attia</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>LaKrista Shires</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Molly McAllen</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Paul Chopper</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Romil Aparentado</values>
+        </dashboardFilterOptions>
+        <name>Account Owner</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Stacy Flemister</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Steve Krasnoff</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Tricia Lehmann</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Cheryl Starr</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Amie Grabarek</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Bryan Mulford</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Mascia Griebe</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Frank Maneen</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Major Lewis</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Francie Ozonoff</values>
+        </dashboardFilterOptions>
+        <name>Account Owner</name>
+    </dashboardFilters>
+    <dashboardGridLayout>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>ColumnStacked</componentType>
+                <dashboardFilterColumns>
+                    <column>CREATED</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>CREATED</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>CREATED</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>true</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>NAME</groupingColumn>
+                <groupingColumn>Opportunity.Stage_Status__c</groupingColumn>
+                <groupingSortProperties/>
+                <header>LG Opps Status</header>
+                <legendPosition>Right</legendPosition>
+                <report>Large_Group_Account_Executives/LG_Opps_Status</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowValueDescending</sortBy>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <componentType>Metric</componentType>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <footer>BRFs Submitted to U/W</footer>
+                <groupingSortProperties/>
+                <header>Quote Status</header>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#E2CE7D</indicatorMiddleColor>
+                <metricLabel>RFQs</metricLabel>
+                <report>Large_Group_Underwriting/BRFs_Submitted_to_Underwriting</report>
+                <showRange>false</showRange>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>2</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <componentType>Table</componentType>
+                <dashboardFilterColumns>
+                    <column>Account$Owner</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account$Owner</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account$Owner</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <groupingSortProperties/>
+                <header>Group Information</header>
+                <indicatorHighColor>#54C254</indicatorHighColor>
+                <indicatorLowColor>#C25454</indicatorLowColor>
+                <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+                <report>Large_Group_Account_Executives/LG_BOB_w_Products</report>
+                <showPicturesOnTables>true</showPicturesOnTables>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>NASCO Group Info &amp; Products</title>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>ColumnStacked</componentType>
+                <dashboardFilterColumns>
+                    <column>FK_$Benfit_Request_Form__c.Account_Executive_Account_Team__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>FK_$Benfit_Request_Form__c.Account_Executive_Account_Team__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>FK_$Benfit_Request_Form__c.Account_Executive_Account_Team__c</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>true</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>Quotes Loaded</footer>
+                <groupingColumn>FK_$Benfit_Request_Form__c.Opportunity__c</groupingColumn>
+                <groupingColumn>FK_$Benfit_Request_Form__c.Status__c</groupingColumn>
+                <groupingSortProperties/>
+                <legendPosition>Bottom</legendPosition>
+                <report>Large_Group_Underwriting/Submitted_to_U_W_Quote_Uploaded</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Submitted to U/W &amp; Quote Uploaded</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>2</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>ColumnStacked</componentType>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>true</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>FK_NAME</groupingColumn>
+                <groupingColumn>Benfit_Request_Form__c.ARC_Approval_Status__c</groupingColumn>
+                <groupingSortProperties/>
+                <legendPosition>Bottom</legendPosition>
+                <report>Large_Group_Account_Executives/X200_Renewal_New_ARC_Status</report>
+                <showPercentage>false</showPercentage>
+                <showValues>false</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>200+ Arc Status</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>4</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <componentType>Table</componentType>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <groupingSortProperties/>
+                <indicatorHighColor>#54C254</indicatorHighColor>
+                <indicatorLowColor>#C25454</indicatorLowColor>
+                <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+                <report>Large_Group_Account_Executives/LG_Book_of_Business_NASCO_Medical</report>
+                <showPicturesOnTables>true</showPicturesOnTables>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>NASCO Groups</title>
+            </dashboardComponent>
+            <rowIndex>4</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>true</enableHover>
+                <expandOthers>false</expandOthers>
+                <footer>Per Opportunity</footer>
+                <groupingSortProperties/>
+                <legendPosition>Bottom</legendPosition>
+                <report>Large_Group_Account_Executives/BRF_Status_by_Account</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>false</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>BRF Status</title>
+                <useReportChart>true</useReportChart>
+            </dashboardComponent>
+            <rowIndex>6</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <componentType>Table</componentType>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <groupingSortProperties/>
+                <indicatorHighColor>#54C254</indicatorHighColor>
+                <indicatorLowColor>#C25454</indicatorLowColor>
+                <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+                <report>Large_Group_Account_Executives/LG_Book_of_Business_Facets_Medical</report>
+                <showPicturesOnTables>true</showPicturesOnTables>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Facets Groups</title>
+            </dashboardComponent>
+            <rowIndex>8</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>FORMULA1</column>
+                </chartSummary>
+                <componentType>Gauge</componentType>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>USERS.NAME</column>
+                </dashboardFilterColumns>
+                <displayUnits>Integer</displayUnits>
+                <gaugeMax>14.0</gaugeMax>
+                <gaugeMin>0.0</gaugeMin>
+                <groupingSortProperties/>
+                <indicatorBreakpoint1>2.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>7.0</indicatorBreakpoint2>
+                <indicatorHighColor>#C23934</indicatorHighColor>
+                <indicatorLowColor>#00716B</indicatorLowColor>
+                <indicatorMiddleColor>#E2CE7D</indicatorMiddleColor>
+                <report>Large_Group_Process_Monitoring/ARC_Approval_Turnaround</report>
+                <showPercentage>false</showPercentage>
+                <showRange>false</showRange>
+                <showTotal>true</showTotal>
+                <showValues>false</showValues>
+                <title>ARC Turnaround Report</title>
+            </dashboardComponent>
+            <rowIndex>10</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <componentType>Table</componentType>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_OWNER</column>
+                </dashboardFilterColumns>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <groupingSortProperties/>
+                <indicatorHighColor>#54C254</indicatorHighColor>
+                <indicatorLowColor>#C25454</indicatorLowColor>
+                <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+                <report>Large_Group_Account_Executives/LG_Book_of_Business_Non_NASCO_Medical</report>
+                <showPicturesOnTables>true</showPicturesOnTables>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Non NASCO Business</title>
+            </dashboardComponent>
+            <rowIndex>12</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <numberOfColumns>9</numberOfColumns>
+        <rowHeight>80</rowHeight>
+    </dashboardGridLayout>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>true</isGridLayout>
+    <runningUser>ruth.senyefia@carefirst.com</runningUser>
+    <textColor>#000000</textColor>
+    <title>AE Dashboard (Ruth)</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

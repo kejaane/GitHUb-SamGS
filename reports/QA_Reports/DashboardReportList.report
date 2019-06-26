@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Dashboard$Folder</field>
+    </columns>
+    <columns>
+        <field>Dashboard$Title</field>
+    </columns>
+    <columns>
+        <field>Dashboard$DeveloperName</field>
+    </columns>
+    <columns>
+        <field>Dashboard.DashboardComponents$CustomReport</field>
+    </columns>
+    <columns>
+        <field>Dashboard$RunningUser</field>
+    </columns>
+    <columns>
+        <field>Dashboard.DashboardComponents$ComponentType</field>
+    </columns>
+    <description>Returns a list of Dashboard Folders, Dashboards and Reports associated to each other</description>
+    <filter>
+        <criteriaItems>
+            <column>Dashboard$NamespacePrefix</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>DashboardReportList</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Reports_Related_To_Dashboards__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Dashboard$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

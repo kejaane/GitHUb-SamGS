@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Template to send SLA notification to the ‘Supervisor / Manager’ when a ‘Case’ has remained in ‘Open’ state (not ‘In-Queue or ‘Closed’) for more than 7 days (175 hours)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>ZZ_SBU Internal SLA 7 Days Manager</name>
+    <style>formalLetter</style>
+    <subject>{!Case.SLA_Category__c} Case# {!Case.CaseNumber} is aged &apos;7 Days&apos; and is not &apos;Closed&apos;</subject>
+    <textOnly>Dear {!Case.SLA_Category__c} team supervisor ,
+
+
+
+Case#{!Case.CaseNumber}  has been in assigned state for ‘7 Days’ and has not been closed.
+
+
+
+Please review the case.
+
+
+
+Detail Case Link : {!Case.Link}
+
+
+
+Thank You,
+
+
+SFDC Team
+
+SFDCSupport@carefirst.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

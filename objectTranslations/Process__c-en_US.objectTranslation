@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Days taken to complete the process --></label>
+        <name>AIA_Days_taken_to_complete_the_process__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Completed Sub Process --></label>
+        <name>AIA_Number_of_Completed_Sub_Process__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process End Date --></label>
+        <name>AIA_Process_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Start Date --></label>
+        <name>AIA_Process_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Sub Process Must Be Completed --></label>
+        <name>All_Sub_Process_Must_Be_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation --></label>
+        <name>Implementation__c</name>
+        <relationshipLabel><!-- Process --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number of Sub-Processes(Expected) --></label>
+        <name>Number_of_Sub_processes_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total SLA Broken Tasks-All SubProcesses --></label>
+        <name>Number_of_Tasks_SLA_Broken__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Processes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Percentage completion of Process based on counts of Tasks under each associated Sub Process --></help>
+        <label><!-- Percent Complete --></label>
+        <name>Percent_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Condition --></label>
+        <name>Process_Condition__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-Cycle</masterLabel>
+            <translation><!-- Off-Cycle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Termination</masterLabel>
+            <translation><!-- Termination --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ZZZProcess Name --></label>
+        <name>Process_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Template --></label>
+        <name>Process_Type__c</name>
+        <relationshipLabel><!-- Processes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>ARC Approval</masterLabel>
+            <translation><!-- ARC Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accm Cnt Svcs</masterLabel>
+            <translation><!-- Accm Cnt Svcs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account &amp; Member Tools</masterLabel>
+            <translation><!-- Account &amp; Member Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Financial Contracts</masterLabel>
+            <translation><!-- Account Financial Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Kick-off Meeting</masterLabel>
+            <translation><!-- Account Kick-off Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAA</masterLabel>
+            <translation><!-- BAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BR Wellness</masterLabel>
+            <translation><!-- BR Wellness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Coding, Loading, &amp; Testing</masterLabel>
+            <translation><!-- Benefit Coding, Loading, &amp; Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design &amp; Creation of NAEGS</masterLabel>
+            <translation><!-- Benefit Design &amp; Creation of NAEGS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Design Doc</masterLabel>
+            <translation><!-- Benefit Design Doc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Request</masterLabel>
+            <translation><!-- Benefit Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benefit Setup</masterLabel>
+            <translation><!-- Benefit Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing (Monthly) Invoices</masterLabel>
+            <translation><!-- Billing (Monthly) Invoices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CSR</masterLabel>
+            <translation><!-- CSR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CYC</masterLabel>
+            <translation><!-- CYC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carve-out RX</masterLabel>
+            <translation><!-- Carve-out RX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Benefit Contract</masterLabel>
+            <translation><!-- Create Benefit Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dead</masterLabel>
+            <translation><!-- Dead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EDC</masterLabel>
+            <translation><!-- EDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment &amp; ID Card Generation</masterLabel>
+            <translation><!-- Enrollment &amp; ID Card Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generate Post Sale SBCs</masterLabel>
+            <translation><!-- Generate Post Sale SBCs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure</masterLabel>
+            <translation><!-- Group Structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Structure &amp; Admin Setup</masterLabel>
+            <translation><!-- Group Structure &amp; Admin Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID Cards</masterLabel>
+            <translation><!-- ID Cards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Plan</masterLabel>
+            <translation><!-- Implementation Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Materials</masterLabel>
+            <translation><!-- Marketing Materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Enrollment, Materials, &amp; Support</masterLabel>
+            <translation><!-- Open Enrollment, Materials, &amp; Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PP CFL</masterLabel>
+            <translation><!-- PP CFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perf Guarantee</masterLabel>
+            <translation><!-- Perf Guarantee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Sales Document Generation</masterLabel>
+            <translation><!-- Post Sales Document Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Process Enrollment</masterLabel>
+            <translation><!-- Process Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal</masterLabel>
+            <translation><!-- Proposal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Delivered</masterLabel>
+            <translation><!-- Quote Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP</masterLabel>
+            <translation><!-- RFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup CVS</masterLabel>
+            <translation><!-- Setup CVS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Davis</masterLabel>
+            <translation><!-- Setup Davis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Facets Dental</masterLabel>
+            <translation><!-- Setup Facets Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Magellan</masterLabel>
+            <translation><!-- Setup Magellan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriting</masterLabel>
+            <translation><!-- Underwriting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Progress</masterLabel>
+            <translation><!-- In-Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Required</masterLabel>
+            <translation><!-- Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Sub process(Actual) --></label>
+        <name>Sub_Process_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total BlockedTasks-All SubProcesses --></label>
+        <name>Total_BlockedTasks_All_SubProcesses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Completed Tasks-All SubProcesses --></label>
+        <name>Total_Completed_Tasks_All_SubProcesses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total NotRequired Tasks-All SubProcesses --></label>
+        <name>Total_NotRequired_Tasks_All_SubProcesses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Tasks-All SubProcesses --></label>
+        <name>Total_Tasks_All_SubProcesses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used For --></label>
+        <name>Used_For__c</name>
+        <picklistValues>
+            <masterLabel>Post-Sales</masterLabel>
+            <translation><!-- Post-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sales</masterLabel>
+            <translation><!-- Pre-Sales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Process</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Processes</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Process Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Metrics --></label>
+            <section>Metrics</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- P001:User cannot change the status once it is &quot;Completed&quot; --></errorMessage>
+        <name>P001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PRO001:User cannot change the status once it is &quot;Completed&quot; --></errorMessage>
+        <name>PRO001</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>AIA Sales Director/Underwriter Director</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>AIA Sales Director/Underwriter Director</label>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Benfit_Request_Form__c.Carve_Out_RX_Approval__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Benfit_Request_Form__c.Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Benfit_Request_Form__c.Sales_Management_Approval__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Benfit_Request_Form__c.Sales__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

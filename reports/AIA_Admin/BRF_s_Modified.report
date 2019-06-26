@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_92685707</developerName>
+        <masterLabel>BRF Support</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Opportunity.Benfit_Request_Forms__r$Request_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Prospect/New</sourceValue>
+            </sourceValues>
+            <value>New Biz</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Renewal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>RFP</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renew As-is</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renewal - Administrative Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renewal - Benefit Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Renewal - Admin and Benefit Changes</sourceValue>
+            </sourceValues>
+            <value>Renewal AE</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Off-Cycle - Administrative Change</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Off-Cycle - Benefit Change</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Off-Cycle - Administrative and Benefit Change</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set-up Change - Administrative Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set-up Change - Benefit Changes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set-up Change - Admin and Benefit Changes</sourceValue>
+            </sourceValues>
+            <value>AM Support</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Opportunity.Benfit_Request_Forms__r$CreatedDate</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_92685707</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Benfit_Request_Forms__r$Request_Type__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Benfit_Request_Forms__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Benfit_Request_Forms__r$Sales_Consultant_Account_Manager__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Benfit_Request_Forms__r$Account_Legal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$StageName</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Benfit_Request_Forms__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Benfit_Request_Forms__r$LastModifiedBy</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>test for,test qa,servary</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>Opportunity.Benfit_Request_Forms__r$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_92685707</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Benfit_Request_Forms__r$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>BRF&apos;s Modified</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_with_BRF_s__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Benfit_Request_Forms__r$CreatedDate</dateColumn>
+        <endDate>2018-01-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-10-01</startDate>
+    </timeFrameFilter>
+</Report>

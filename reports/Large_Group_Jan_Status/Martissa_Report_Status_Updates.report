@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>Account</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Account.Implementations__r$Business_Type__c</field>
+        </columns>
+        <columns>
+            <field>Account.Implementations__r.AIA_Documents__r$Document_Type__c</field>
+        </columns>
+        <columns>
+            <field>Account.Implementations__r.AIA_Documents__r$Name</field>
+        </columns>
+        <columns>
+            <field>Account.Implementations__r.AIA_Documents__r$Approval_Status__c</field>
+        </columns>
+        <columns>
+            <field>Account.Implementations__r$Enrollment_Processed__c</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Account.Implementations__r$Status__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Not Started,In-Progress</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Account.Implementations__r.AIA_Documents__r$Document_Type__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Benefit Design Document,Group Structure Document,Benefit EDC,Benefits Contracts,Enrollment Data Card (EDC),Mock ID Card,Production Id Card,Rate EDC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Account.Implementations__r.AIA_Documents__r$Approval_Status__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>notEqual</operator>
+                <value>Rejected</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Accounts w/ Implementations and block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Accounts_w_Implementations_and_Doc__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Account.Implementations__r$Effective_Date__c</dateColumn>
+            <endDate>2018-01-01</endDate>
+            <interval>INTERVAL_CUSTOM</interval>
+            <startDate>2018-01-01</startDate>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>Account</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Account.Implementations__r.AIA_Workplan_Stage1__r$Workplan_Stage__c</field>
+        </columns>
+        <columns>
+            <field>Account.Implementations__r.AIA_Workplan_Stage1__r$Status__c</field>
+        </columns>
+        <columns>
+            <field>Account.Implementations__r.AIA_Workplan_Stage1__r$Tasks_Completed__c</field>
+        </columns>
+        <columns>
+            <field>Account.Implementations__r.AIA_Workplan_Stage1__r$Name</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Account.Implementations__r.AIA_Workplan_Stage1__r$Workplan_Stage__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>contains</operator>
+                <value>group structure,benefit setup,benefit design,enrollment,edc,cards</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Account.Implementations__r$Status__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Not Started,In-Progress</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>AIA Accounts w/ IMP, WTS, WTA block 2</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>AIA_Accounts_w_IMP_WTS_WTA__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <sortColumn>Account.Implementations__r.AIA_Workplan_Stage1__r$Workplan_Stage__c</sortColumn>
+        <sortOrder>Asc</sortOrder>
+        <timeFrameFilter>
+            <dateColumn>Account.Implementations__r$Effective_Date__c</dateColumn>
+            <endDate>2018-01-01</endDate>
+            <interval>INTERVAL_CUSTOM</interval>
+            <startDate>2018-01-01</startDate>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Account</joinTable>
+    </blockInfo>
+    <description>January 2018</description>
+    <format>MultiBlock</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Implementations__r$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Implementations__r$Description__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Martissa Report (Status Updates)</name>
+    <reportType>Accounts_w_Implementations_and_Doc__c</reportType>
+    <showDetails>true</showDetails>
+</Report>

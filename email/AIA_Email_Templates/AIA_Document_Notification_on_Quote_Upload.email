@@ -1,0 +1,12 @@
+Hello 
+<br>
+<br>
+A Quote document is uploaded by the Underwriter to {!AIA_Document__c.Benefit_Request_Form__c} for {!AIA_Document__c.Account_Legal_Name__c} 
+<br>
+<br>
+Please verify the document 
+<br>
+{!AIA_Document__c.Link} 
+<br>
+<br>
+Thank you

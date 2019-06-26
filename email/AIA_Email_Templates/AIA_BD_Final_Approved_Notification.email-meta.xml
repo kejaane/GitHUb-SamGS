@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AIA BD Final Approver Notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>AIA BD Final Approved Notification</name>
+    <style>freeForm</style>
+    <subject>The Benefit Design {!AIA_Benefit_Design__c.Name} is Approved</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

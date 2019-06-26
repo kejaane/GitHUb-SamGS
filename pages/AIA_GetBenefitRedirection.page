@@ -1,0 +1,35 @@
+<!--====================================================================================================================
+* Date         : 01/25/2018
+* Developer    : Debkanti
+* Purpose      : To redirect to getBenefit page if proposed product has data else redirect to proposed product.
+*=====================================================================================================================
+*                                 Update History
+* -----------------------------------------------------------------------------------------------------------------
+* Date       | Developer       | Tag |     Description
+*============+=================+=====+=====================================================================================
+* 01/25/2018 | Debkanti		   | T01 |  Redirection to getBenefit
+*============+============+===========================================================================================
+-->
+
+
+<apex:page standardController="Proposed_Products__c" extensions="AIA_GetBenefitRedirection" >
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+       Autorun();
+   });
+        </script>
+    <apex:form id="fId">
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+        <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+          <div align="center">
+            <apex:outputText value="{!msg}"/><br/><br/><br/>
+            <apex:commandButton value="Ok" action="{!redirectOld}"/>
+          </div>  
+     </apex:outputPanel>
+     </apex:form>
+    <apex:form >
+        <apex:actionFunction action="{!popUp}" name="callAutorun" reRender="fId"/>
+         <apex:actionFunction action="{!redirect}" name="Autorun" oncomplete="callAutorun();"/>
+    </apex:form>
+</apex:page>

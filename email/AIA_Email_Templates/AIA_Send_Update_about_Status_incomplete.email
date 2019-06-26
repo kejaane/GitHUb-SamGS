@@ -1,0 +1,6 @@
+GSRF complete {!AIA_Group_Structure_Request_Form__c.Account_Legal_Name__c} - {!AIA_Group_Structure_Request_Form__c.Effective_date_format__c} there is an issue or clarification needed before Group Structure can begin.
+
+Reject comments:
+{!AIA_Group_Structure_Request_Form__c.Reject_Comments__c}
+
+GSRF - {!AIA_Group_Structure_Request_Form__c.Link}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>EmailId__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>EmailId</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <description>This is used to store the list of user's emails who will be sent with final electronically signed copy of BAA or BAC documents</description>
+    <enableFeeds>false</enableFeeds>
+    <label>AIA Docusign Emails</label>
+    <visibility>Public</visibility>
+</CustomObject>

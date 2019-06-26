@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_New_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Status --></label>
+        <name>Employee_Status__c</name>
+        <picklistValues>
+            <masterLabel>ACTIVE</masterLabel>
+            <translation><!-- ACTIVE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COBRA</masterLabel>
+            <translation><!-- COBRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RETIREE</masterLabel>
+            <translation><!-- RETIREE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FACETS Classes Notes --></label>
+        <name>FACETS_Classes_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Group_Structure_Request_Form_Product__c</name>
+        <relationshipLabel><!-- FACETS Classes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Group Structure Request Form --></label>
+        <name>Group_Structure_Request_Form__c</name>
+        <relationshipLabel><!-- FACETS Classes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Description other --></label>
+        <name>Product_Description_other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product description --></label>
+        <name>Product_description__c</name>
+        <picklistValues>
+            <masterLabel>BLUE PLUS</masterLabel>
+            <translation><!-- BLUE PLUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLUEDENTAL BASIC</masterLabel>
+            <translation><!-- BLUEDENTAL BASIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLUEDENTAL PLUS</masterLabel>
+            <translation><!-- BLUEDENTAL PLUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLUEDENTAL PREFERRED (MEDIGAP)</masterLabel>
+            <translation><!-- BLUEDENTAL PREFERRED (MEDIGAP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLUEDENTAL TRADITIONAL (MEDIGAP)</masterLabel>
+            <translation><!-- BLUEDENTAL TRADITIONAL (MEDIGAP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLUEDHMO</masterLabel>
+            <translation><!-- BLUEDHMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DENTAL HMO</masterLabel>
+            <translation><!-- DENTAL HMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DENTAL HMO OPT-OUT</masterLabel>
+            <translation><!-- DENTAL HMO OPT-OUT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FREESTANDING DENTAL HMO (DHMO)</masterLabel>
+            <translation><!-- FREESTANDING DENTAL HMO (DHMO) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PREFERRED (PPO) DENTAL</masterLabel>
+            <translation><!-- PREFERRED (PPO) DENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRADITIONAL DENTAL</masterLabel>
+            <translation><!-- TRADITIONAL DENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY</masterLabel>
+            <translation><!-- VOLUNTARY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY BLUEDENTAL PLUS</masterLabel>
+            <translation><!-- VOLUNTARY BLUEDENTAL PLUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY BLUEDENTAL PREFERRED (MEDIGAP)</masterLabel>
+            <translation><!-- VOLUNTARY BLUEDENTAL PREFERRED (MEDIGAP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY BLUEDENTAL TRADTIONAL (MEDIGAP)</masterLabel>
+            <translation><!-- VOLUNTARY BLUEDENTAL TRADTIONAL (MEDIGAP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY PERFERRED DENTAL</masterLabel>
+            <translation><!-- VOLUNTARY PERFERRED DENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLUNTARY TRADITIONAL DENTAL</masterLabel>
+            <translation><!-- VOLUNTARY TRADITIONAL DENTAL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Termination Date --></label>
+        <name>TERM_Date__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>FACETS Class</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FACETS Classes</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>FACET Class Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Product Description is blank.  A Product Description of Other must be provided. --></errorMessage>
+        <name>F001_Product_Description_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Termination date not valid for Request Type Prospect/New --></errorMessage>
+        <name>F002_Termination_Date</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_FACET_Class --></label>
+        <name>New_FACET_Class</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_FacetClass --></label>
+        <name>New_FacetClass</name>
+    </webLinks>
+</CustomObjectTranslation>

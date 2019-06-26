@@ -1,0 +1,7 @@
+{!User.FirstName},
+
+Your SF case; {!Case.Subject}, has been closed.  Please let us know if you have any questions or if you feel your issue continues.
+
+Thank you,
+
+SFDC Team,

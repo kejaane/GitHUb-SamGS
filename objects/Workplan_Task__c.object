@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>AIA_Document__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>AIA Document</label>
+        <referenceTo>AIA_Document__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AIA_SLA_Days__c</fullName>
+        <description>Days left to complete the task - US302</description>
+        <externalId>false</externalId>
+        <label>Days Left to Complete Task</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_Task_Assigned_Date__c</fullName>
+        <description>Date in which the task is assigned to the user</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Task Assigned Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AccountID__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>AccountID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_SLA__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual SLA</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benefit_Design_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Benefit Design Form</label>
+        <referenceTo>AIA_Benefit_Design_Form__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Design_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Benefit Design Product</label>
+        <referenceTo>AIA_Benefit_Design_Product__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Design__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Benefit Design</label>
+        <referenceTo>AIA_Benefit_Design__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Benefit Request Form</label>
+        <referenceTo>Benfit_Request_Form__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks_Of_BRF</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Blocker_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Another Task that is blocking the current task</description>
+        <externalId>false</externalId>
+        <label>Blocker Task</label>
+        <referenceTo>Workplan_Task__c</referenceTo>
+        <relationshipLabel>Blocker Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Click_the_Link__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Click the Link</label>
+        <length>254</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ExpectedDate__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Task Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expected_SLA__c</fullName>
+        <externalId>false</externalId>
+        <formula>Workplan_Task_Template__r.Expected_SLA__c</formula>
+        <label>Expected SLA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group_Structure_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Group Structure Request Form</label>
+        <referenceTo>AIA_Group_Structure_Request_Form__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsUpdateFromVF__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field will be set when Status is updated to blocked from VF Page as user should not be allowed to set status to blocked from detail page.</description>
+        <externalId>false</externalId>
+        <label>IsUpdateFromVF</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NotStartedStatusCheck__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This will be marked as true when task status changes from Not-Required to Not-Started</description>
+        <externalId>false</externalId>
+        <label>NotStartedStatusCheck</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Days_SLA_is_Past_Due__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Actual_SLA__c &gt;  Expected_SLA__c , (Actual_SLA__c - Expected_SLA__c), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of Days SLA is Past Due?</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Implementation_ID__c</fullName>
+        <description>This field will store Opp/Imp ID when tasks are generated from Opportunity/Implementation</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Opportunity/Implementation ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks_Of_Oppty</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName&amp;' '&amp;Owner:User.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Sub_Process_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Sub_Process__r.Stage__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Sub Process Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Process__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Process</label>
+        <referenceTo>Process__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Proposal_Request_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Proposal Request Form</label>
+        <referenceTo>PRF__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Products__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Proposed Products</label>
+        <referenceTo>Proposed_Products__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RelatedObjectId__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>RelatedObjectId</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLA_Broken__c</fullName>
+        <externalId>false</externalId>
+        <formula>(AIA_SLA_Days__c &lt; 0) || (Actual_SLA__c &gt; Expected_SLA__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLA Broken?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SLA_Day_Type__c</fullName>
+        <description>Field to check whether to consider Actual days or business days for expected date</description>
+        <externalId>false</externalId>
+        <label>SLA Day Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Business</fullName>
+                    <default>false</default>
+                    <label>Business</label>
+                </value>
+                <value>
+                    <fullName>Calendar</fullName>
+                    <default>false</default>
+                    <label>Calendar</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SLA_Indicator__c</fullName>
+        <description>If Actual_SLA__c &gt; Expected_SLA__c, show Red Icon else show Green Icon
+Formula:IF( Actual_SLA__c &gt;  Expected_SLA__c  ,
+IMAGE("/servlet/servlet.FileDownload?file=015V00000007RQw", "Start", 25, 25),
+IMAGE("/servlet/servlet.FileDownload?file=015V00000007RQx", "Start", 25, 25))</description>
+        <externalId>false</externalId>
+        <formula>IF( AND(Text(Status__c) == "In Progress",NOT(ISBLANK(ExpectedDate__c))),IF( AIA_SLA_Days__c &lt;= 0 ,IMAGE("/servlet/servlet.FileDownload?file=0150z000001lF1M", "Violated",12,12) &amp;" "&amp; TEXT(AIA_SLA_Days__c) ,IF(AIA_SLA_Days__c ==1,IMAGE("/servlet/servlet.FileDownload?file=0150z000001lF1N", "Warning",12,12)&amp;" "&amp;TEXT(AIA_SLA_Days__c),TEXT(AIA_SLA_Days__c)))&amp;IF(NOT(ISBLANK(AIA_SLA_Days__c))," day","")&amp;IF(AIA_SLA_Days__c &gt; 1,"s",""),
+IF(AND(  Text(Status__c) == "Blocked" ),IMAGE("/servlet/servlet.FileDownload?file=0150z000001lF1L", "Blocked",12,12) &amp;" "&amp; TEXT(AIA_SLA_Days__c) &amp;  IF(  NOT(ISBLANK(AIA_SLA_Days__c))," day",""  ) &amp; IF(AIA_SLA_Days__c &gt; 4,"s",""), ""))</formula>
+        <label>Alerts</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Send Notification</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sequence_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Sequence Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Task assigned date</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>false</default>
+                    <label>Not Started</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Not Required</fullName>
+                    <default>false</default>
+                    <label>Not Required</label>
+                </value>
+                <value>
+                    <fullName>Blocked</fullName>
+                    <default>false</default>
+                    <label>Blocked</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sub_Process__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sub Process</label>
+        <referenceTo>Sub_Process__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Task_Name__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Task Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Owner_Type__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Task Owner Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Owner__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Task Owner</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Workplan_Task_Template__r.Task_Type__c)</formula>
+        <label>Task Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Days_to_Complete_Task_SLA__c</fullName>
+        <description>This field value will store the expected SLA days, the task needs to be completed</description>
+        <externalId>false</externalId>
+        <label>Total Days to Complete Task (SLA)</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Used_For__c</fullName>
+        <externalId>false</externalId>
+        <label>Used For</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pre-Sales</fullName>
+                    <default>false</default>
+                    <label>Pre-Sales</label>
+                </value>
+                <value>
+                    <fullName>Post-Sales</fullName>
+                    <default>false</default>
+                    <label>Post-Sales</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Workplan_Task_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Workplan Task Template</label>
+        <referenceTo>Workplan_Task_Template__c</referenceTo>
+        <relationshipLabel>Workplan Tasks</relationshipLabel>
+        <relationshipName>Workplan_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>AIA - Custom Object used to capture the runtime version of tasks which are created from Workplan Task Template. The status of these tasks can be updated by the users. This object is related to Opportunity and Implementation objects since Pre-Sales &amp; Post-Sales tasks are created in this object and assigned to the user.
+This object will replace the old functionality. 
+This is implemented for Nov-2017 Release.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <label>Workplan Task</label>
+    <nameField>
+        <displayFormat>Workplan Task - {0000}</displayFormat>
+        <label>Workplan Task</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Workplan Tasks</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.FIRST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SLA_Indicator__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Implementation__c</customTabListAdditionalFields>
+        <listViewButtons>Reassign_Tasks</listViewButtons>
+        <listViewButtons>Update_to_Blocked</listViewButtons>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>AIA_My_Task_Going_to_breach</fullName>
+        <booleanFilter>1 AND (2 OR 3) and 4</booleanFilter>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>ExpectedDate__c</columns>
+        <columns>Expected_SLA__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Task_Owner__c</columns>
+        <columns>SLA_Indicator__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>SLA_Day_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <filters>
+            <field>AIA_SLA_Days__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>AIA_SLA_Days__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Owner_Name__c</field>
+            <operation>equals</operation>
+            <value>kendra perry</value>
+        </filters>
+        <label>My Workplan Tasks (SLA Breached)</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Group_s_Task_SLA_Breached</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Start_Date__c</columns>
+        <columns>Implementation__c</columns>
+        <columns>ExpectedDate__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Implementation__c</field>
+            <operation>contains</operation>
+            <value>177217</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>My Group's Task (SLA Breached)</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Workplan_Assignment</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Implementation__c</columns>
+        <columns>Status__c</columns>
+        <columns>ExpectedDate__c</columns>
+        <columns>SLA_Indicator__c</columns>
+        <columns>Task_Owner_Type__c</columns>
+        <columns>Task_Owner__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Not Required</value>
+        </filters>
+        <label>01- My Open Workplan Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>Pharmacy_Benefits</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>SLA_Indicator__c</columns>
+        <columns>ExpectedDate__c</columns>
+        <columns>Implementation__c</columns>
+        <columns>Stage__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Task_Owner__c</columns>
+        <columns>Owner_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Owner_Name__c</field>
+            <operation>contains</operation>
+            <value>mcdade</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started,In Progress</value>
+        </filters>
+        <label>Transfer Workplan Tasks</label>
+        <sharedTo>
+            <group>AIA_Admin_Team</group>
+            <group>SystemAdministrators</group>
+        </sharedTo>
+    </listViews>
+    <validationRules>
+        <fullName>WPT001</fullName>
+        <active>true</active>
+        <description>User cannot change the status once it is "Completed"</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(ISPICKVAL(PRIORVALUE( Status__c ),"Completed")&amp;&amp; ISCHANGED( Status__c ))</errorConditionFormula>
+        <errorMessage>WPT001: User cannot change the status once it is "Completed"</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>WPT002</fullName>
+        <active>true</active>
+        <description>User cannot change the status to "Blocked" from detail page</description>
+        <errorConditionFormula>Not(IsUpdateFromVF__c) &amp;&amp; ISPICKVAL(Status__c,"Blocked")</errorConditionFormula>
+        <errorMessage>WPT002: User cannot change the status to "Blocked" from Detail page</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>AIA_New_Custom_Task</fullName>
+        <availability>online</availability>
+        <description>This button is used to create custom task in BRF as part of US228</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Custom Task</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/AIA_CreateBRFCustomTask?brfid={!Benfit_Request_Form__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Reassign_Tasks</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Reassign Tasks</masterLabel>
+        <openType>noSidebar</openType>
+        <page>AIA_ReassignTask</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Reassign_WorkplanTasks</fullName>
+        <availability>online</availability>
+        <description>This button is created as  a part of US366</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Reassign Workplan Tasks</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_ReassignWorkplanTask</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Update_to_Blocked</fullName>
+        <availability>online</availability>
+        <description>This button is created as  a part of US2254</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Update to Blocked</masterLabel>
+        <openType>sidebar</openType>
+        <page>AIA_UpdateBlockedStatus</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

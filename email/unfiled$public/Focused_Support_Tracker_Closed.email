@@ -1,0 +1,13 @@
+Hello,
+
+Your observation reported with following description has been closed:
+{!Focused_Support_Tracker__c.Description__c}
+
+Observation Number : {!Focused_Support_Tracker__c.Name}
+Resolution Details: 
+{!Focused_Support_Tracker__c.Resolution_Provided__c}
+
+Please let us know if you have any questions or if you feel your issue continues.
+
+Thank you,
+Salesforce ApplicationTeam.

@@ -1,0 +1,284 @@
+<!--====================================================================================================================
+* Date         : 03/16/2017
+* Developer    : Rajesh Pennam
+* Purpose      : To make the Document Type field a driven from Parent Object field
+*=====================================================================================================================
+*                                 Update History
+* -----------------------------------------------------------------------------------------------------------------
+* Date       | Developer       | Tag |     Description
+*============+=================+=====+=====================================================================================
+* 03/16/2017 | Rajesh Pennam   | T01 | Updated the page with new field Category
+* 03/16/2017 | Rajesh Pennam   | T02 | Added new value Adj Summary Revision# field and will be valid only for BD
+* 06/30/2017 | Rajesh Pennam   | T03 | Added logic to make document type mandatory
+* 08/28/2017 | Rajesh Pennam   | T04 | Added new field Description to AIA Document
+* 01/18/2018 | Debkanti        | T05 | Added Lightning design to page.
+* 01/18/2018 | Rajesh Nagandla | T06 | Disabling Cancel button on clicking Attachfile.
+*============+============+===========================================================================================
+-->
+
+<apex:page docType="html-5.0" standardController="AIA_Document__c" id="pageId" extensions="AIADocumentUploadController" recordSetVar="a" lightningStyleSheets="true">  
+    <!--T05-Start-->
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <!--T05-End-->
+    <apex:slds rendered="{!!isClassic}"/>
+    <!--apex:sectionHeader title="AIA Documents"/-->
+    
+    <!--Rajesh Changes Starts Here T03 
+    <style>
+        #doctypeerrorid {
+        
+        }
+       
+    </style>
+    Rajesh Changes Ends Here T03-->
+    <apex:includeScript value="{!URLFOR($Resource.AIA_PostSales, '/js/jquery.min.js')}"/>
+    <script src="/soap/ajax/37.0/connection.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    var desc ='';
+    var parid='';
+    var oId='';
+    sforce.connection.sessionId='{!GETSESSIONID()}';
+    function storeDescription(){
+        $('.attachFile').attr("disabled", "disabled");
+        <!--T06-Start-->
+        $('.cancelbutton').attr("disabled", "disabled");
+        <!--T06-End-->
+        var file = $("#file")[0].files[0];
+        var isclassic = '{!IsClassic}';
+        //alert('{!IsClassic} -'+isclassic);
+        <!--Rajesh Changes Starts Here T03-->
+            var doctype = $(".doctype").val();   
+        
+        if(!doctype){
+            document.getElementById("doctypeerrorid").style.display = "block";  
+            $('.attachFile').removeAttr('disabled');
+            <!--T06-Start-->
+            $('.cancelbutton').removeAttr('disabled');
+            <!--T06-End-->
+            return false;
+        }else {
+            document.getElementById("doctypeerrorid").style.display = "none";
+            
+        } 
+        <!--Rajesh Changes Ends Here T03-->
+            if(file==null){
+                document.getElementById("errorid").style.display = "block";  
+                $('.attachFile').removeAttr('disabled');
+                <!--T06-Start-->
+                $('.cancelbutton').removeAttr('disabled');
+                <!--T06-End-->
+                return false;
+            }
+        <!--Rajesh Chagnes Starts Here T03-->
+            else {
+                document.getElementById("errorid").style.display = "none";  
+                callProcess(file.name);
+                /*if(isclassic == 'true'){
+                    alert('classic');
+                    callProcess(file.name); 
+                }
+                else{
+                    alert('lightning');
+                    licallProcess(file.name);
+                }*/
+            }
+        <!--Rajesh Changes Ends Here T03-->
+        console.log('storing description-->{!$Component.pageId.formId.pgbkId.fid.sitemId.description}');
+        desc = document.getElementById('{!$Component.pageId.formId.pgbkId.fid.sitemId.description}').value;
+        console.log('storing description-->'+desc.value);
+    }      
+    
+    function upload(pId,oppId,disMess) {
+        console.log('Description---->'+desc);
+        console.log('ParentId---->'+pId);
+        console.log('Display Message--->'+disMess);
+        var file = $("#file")[0].files[0];
+        if(file==null || disMess!=''){
+            var errorDiv = document.getElementById('verrorid');
+            errorDiv.innerHTML = "<h3>Error:"+disMess+"</h3>";
+            errorDiv.style.display = 'block';
+            $('.attachFile').removeAttr('disabled');
+            $('.cancelbutton').removeAttr('disabled');
+            return false;
+        }
+        
+        document.getElementById('imgid').style.visibility='visible';
+        var base64;
+        var reader = new FileReader();
+        var result;
+        reader.onload = function(e) {
+            //base64=reader.result;
+            base64 = e.target.result;
+            var split=base64.split(",");
+            //console.log(split[1]);
+            
+            var Attachment  = new sforce.SObject("Attachment");
+            Attachment.name=file.name;
+            Attachment.description=desc;
+            Attachment.parentId=pId;
+            Attachment.body=split[1];
+            Attachment.contentType=file.type;
+            console.log('Calling create');
+            result=sforce.connection.create([Attachment]);
+            console.log('Returned result is---->'+result[0].getBoolean("success"));
+            console.log('Returned result is--string-->'+result[0].id);
+            if(result[0].getBoolean("success")){
+                document.getElementById('imgid').style.visibility='hidden';
+                console.log('calling myfun');
+                oId=oppId;
+                //alert("Hellow: "+oId);
+                myFunc(result[0].id);
+                
+            }else{
+                console.log('error occured while uploading attachment');
+                console.log('Error Message--->'+result[0].errors.message);
+            }
+        }
+        
+        reader.readAsDataURL(file); 
+        
+    }
+    
+    function redirect(){
+        //alert("hello: "+oId);
+        var isclassic = '{!IsClassic}';
+        console.log('inside redirect');
+        if(isclassic == 'true'){
+            //alert("in Classic redirction");
+            window.location='/'+oId;
+            //sforce.one.navigateToURL('/'+oId);
+        }
+        else{
+            //alert("in lightning redirction");
+            //window.location='/'+oId;
+            //sforce.one.navigateToURL('/'+oId);
+            licallProcess();
+        }
+    }
+    
+   $(document).on('change',".slds-file-selector__input",function() {
+       var file = $("#file")[0].files[0];
+       $('.filename').text(file.name);
+   });
+    
+    </script>
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:form id="fId">
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+        <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayPopUp}">
+          <div align="center">
+            <apex:outputText value="{!msg}"/><br/><br/><br/>
+            <apex:commandButton value="Ok" action="{!returnToOpp}"/>
+          </div>  
+     </apex:outputPanel>
+     </apex:form>
+    <apex:form id="formId" enctype="multipart/form-data" styleClass="slds-scope">
+        <!-- Define a modal dialog box used to show status messages to the user. -->
+        <!--T05-Start-->
+        
+        <!--T05-End-->
+        <apex:actionFunction name="myFunc" action="{!saveStandardAttachment}" reRender="rId" oncomplete="redirect()">            
+            <apex:param name="param1"  assignTo="{!attchId}" value=""/>            
+        </apex:actionFunction>      
+        
+        <apex:outputPanel id="rId">             
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!isClassic}">
+        <apex:sectionHeader title="AIA Documents"/>
+        </apex:outputPanel>
+        <!-- Lightning Header Start-->
+        <apex:outputPanel rendered="{!!isClassic}" >
+            <div class="slds-page-header">
+                <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <div class="slds-media slds-no-space slds-grow">
+                            <div class="slds-media__figure">
+                                <svg class="slds-icon slds-icon-standard-user .slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}"></use>
+                                </svg>
+                            </div>
+                            <div class="slds-media__body">
+                                <p class="slds-text-title_caps slds-line-height_reset">AIA Documents</p> 
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+        </apex:outputPanel>
+        <!-- Lightning Header End-->
+        
+        <apex:pageBlock id="pgbkId" >
+            
+            <apex:pageBlockButtons location="top">
+                <apex:actionFunction action="{!processUpload}" name="callProcess" reRender="rId" oncomplete="upload('{!fDocNetId}','{!recordID}','{!displayMessage}')" >
+                    <apex:param name="fname" assignTo="{!fileName}" value=""/>
+                </apex:actionFunction>
+                <apex:actionFunction action="{!liprocessUpload}" name="licallProcess" reRender="fId">
+                </apex:actionFunction>
+                <div class="slds-grid slds-wrap slds-align--absolute-center">
+                    <!--<apex:commandButton value="Attach File" onclick="storeDescription();" reRender="rId"/> -->
+                    <apex:commandButton styleClass="attachFile" value="Attach File" onclick="storeDescription();return false;" reRender="rId" disabled="{!isAttachmentDisable}" /> 
+                    <apex:commandButton styleClass="cancelbutton" action="{!cancel}" value="Cancel" immediate="true" html-formnovalidate="formnovalidate"/>
+                </div>
+            </apex:pageBlockButtons>
+			<span id="verrorid" style="display:none;color: red;text-align:center" value="Document Status"></span>  
+            <apex:outputPanel rendered="{!!isAttachmentDisable}"> 
+                
+                <apex:pageBlockSection columns="1" >
+                        <apex:inputfield style="width:40%" StyleClass="slds-select" rendered="{! not(isGSRF) }"  value="{!fNetAttachment.Document_Status__c}" id="status"/>
+                      
+                    <!-- Rajesh Changes Starts here T01 -->    
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel >Category</apex:outputLabel>
+                <apex:outputText >{!fNetAttachment.Category__c}
+                    <apex:outputPanel style="display:none;visibility:hidden">
+                        <apex:inputField style="width:40%" StyleClass="slds-select" value="{!fNetAttachment.Category__c}" /></apex:outputpanel>
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+            <!-- Rajesh Changes Ends here -->
+                    <!--Rajesh Changes Starts Here T03-->
+                <apex:inputfield style="width:40%" styleClass="doctype slds-select" value="{!fNetAttachment.Document_Type__c}" /> <!--added by rajesh-->
+                    <div class="slds-grid slds-wrap slds-align--absolute-center color-text-required">
+                    <span id="doctypeerrorid" style="{! if(isClassic,'margin-left: 250px;display:none;color: red;align:center;','display:none;color: red')}"><h3>
+                    EDOC002 : Please select the document type </h3></span>
+                    </div>
+                <!--Rajesh Changes Ends Here T03-->
+                    <apex:inputfield rendered="{! not(isGSRF) }" value="{!fNetAttachment.Active__c}" id="Active"/>
+                    <apex:inputfield rendered="{! not(isGSRF) }" value="{!fNetAttachment.Start_Date__c}" id="StartDate"/>
+                    <apex:inputfield rendered="{! not(isGSRF) }" value="{!fNetAttachment.End_Date__c}" id="EndDate"/>
+                    <apex:inputfield style="width:40%" StyleClass="slds-select" rendered="{! not(isGSRF) }" value="{!fNetAttachment.Approval_Status__c}" id="ApprovalStatus"/>
+                
+                    
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection id="fid" columns="1">
+                    <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="File" for="file"/>
+                   <input type="file" class="slds-file-selector__input slds-assistive-text"  id="file" aria-labelledby="file-selector-primary-label file-selector-secondary-label" />
+                    <img src="/img/loading32.gif" style="visibility:hidden;" id="imgid"/>
+                    <label class="slds-file-selector__body"  id="file-selector-secondary-label" for="file">
+                        <span class="slds-file-selector__button slds-button slds-button_neutral" style="{!if(isClassic,'display:none','display:block')}">
+                            Upload Files                            
+                        </span>
+                            </label>
+                        <label class='filename' style="{! if(isClassic,'display:none','')}"></label>
+                        <span id="errorid" style="display:none;color: red;"><h3>
+                            Please select file to upload</h3></span>
+                    </apex:pageBlockSectionItem>
+                    <!-- Rajesh Added New Field T02, Changes Starts Here  -->
+                    <apex:pageBlockSectionItem rendered="{! not(isGSRF) }" id="sitemId1">
+                        <apex:outputLabel value="Adj Summary Revision #" for="Adj Summary Revision #"/> 
+                        <apex:inputfield value="{!fNetAttachment.Adj_Summ_Revision__c}" id="AdjSumm"/>
+                    </apex:pageBlockSectionItem>   
+                    <!-- Rajesh Added New Field, Changes Ends Here  -->  
+                    <apex:pageBlockSectionItem id="sitemId">
+                        <apex:outputLabel value="Description" for="description"/> 
+                        <apex:inputTextarea id="description" value="{!fNetAttachment.Description__c}"  rows="4" cols="50"/>
+                    </apex:pageBlockSectionItem>               
+                    
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

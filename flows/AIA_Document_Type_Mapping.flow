@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>myVariable_waitStartTimeAssignment</name>
+        <label>myVariable_waitStartTimeAssignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myDecision</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Doc Type Changed?</label>
+        </rules>
+    </decisions>
+    <description>Update Department &amp; Sub Department based on Document Type</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(OR(ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Account  Implementation Workplan (Internal)&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Account Impmentation Milestone Workplan (External)&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;PRF Assignment&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Account Kick-off&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Account Cancellation Termination and Transfer Request Form&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Enrollment Data Card (EDC)&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Group Structures&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Miscillaneous Correspondence&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;New Group Benefit Change Worksheet (NGBCW)&apos;),
+ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Supplemental Worksheet for NGBCW&apos;)
+ ),&apos;Account Setup&apos;,
+ IF(OR(ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Account Review Committee&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Benefit Design Form&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Benefit Request Form&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;BlueFund&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;BlueRewards Wellness&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Dental&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Other Ancillary (LTD, STD, Etc)&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Pharmacy&apos;),
+ ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Vision&apos;)
+  ),&apos;Benefits&apos;,
+  IF(OR(ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Administrative Services Agreement (ASA)&apos;),
+  ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Benefits Contracts&apos;),
+  ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Business Associate Agreement (BAA)&apos;),
+  ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Business Associate Confirmation (BAC)&apos;),
+  ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Compliance&apos;),
+  ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Group Contract Application&apos;),
+  ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Performance Guarantee Agreements&apos;)
+   ),&apos;Legal&apos;,
+   IF(OR(ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Cede Requests&apos;),
+   ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;RFP Requests&apos;),
+   ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;RFP Responses&apos;),
+   ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Sales Data Analyst Request Form&apos;)
+    ),&apos;Sales&apos;,
+    IF(OR(ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Benefits Summaries&apos;),
+    ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Marketing Materials&apos;),
+    ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Microsite&apos;),
+    ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Open Enrollment Presentations&apos;),
+    ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Plan Comparison&apos;),
+    ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Summary Of Benefits &amp; Coverage (SBCs)&apos;)
+     ),&apos;Marketing&apos;,
+     IF(OR(ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Census&apos;),
+     ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;GRID (UW)&apos;),
+     ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Group Screening Questionnaire&apos;),
+     ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Rate Sheets&apos;),
+     ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Underwriting (Request For Quote)&apos;)
+      ),&apos;Finance&apos;,
+      IF(OR(ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;Billing Information Form&apos;),
+      ISPICKVAL([AIA_Document__c].Sub_Department__c,&apos;ID Cards&apos;)
+      ),&apos;Enrollment &amp; Billing&apos;,&apos;&apos;
+      
+       )
+      )
+     )
+    ))))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A2_Department_c</name>
+        <dataType>String</dataType>
+        <expression>IF(OR(ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Account  Implementation Workplan (Internal)&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Account Impmentation Milestone Workplan (External)&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;PRF Assignment&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Account Kick-off&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Account Cancellation Termination and Transfer Request Form&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Enrollment Data Card (EDC)&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Group Structures&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Miscillaneous Correspondence&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;New Group Benefit Change Worksheet (NGBCW)&apos;),
+ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Supplemental Worksheet for NGBCW&apos;)
+ ),&apos;Account Setup&apos;,
+ IF(OR(ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Account Review Committee&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Benefit Design Form&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Benefit Request Form&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;BlueFund&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;BlueRewards Wellness&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Dental&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Other Ancillary (LTD, STD, Etc)&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Pharmacy&apos;),
+ ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Vision&apos;)
+  ),&apos;Benefits&apos;,
+  IF(OR(ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Administrative Services Agreement (ASA)&apos;),
+  ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Benefits Contracts&apos;),
+  ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Business Associate Agreement (BAA)&apos;),
+  ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Business Associate Confirmation (BAC)&apos;),
+  ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Compliance&apos;),
+  ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Group Contract Application&apos;),
+  ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Performance Guarantee Agreements&apos;)
+   ),&apos;Legal&apos;,
+   IF(OR(ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Cede Requests&apos;),
+   ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;RFP Requests&apos;),
+   ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;RFP Responses&apos;),
+   ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Sales Data Analyst Request Form&apos;)
+    ),&apos;Sales&apos;,
+    IF(OR(ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Benefits Summaries&apos;),
+    ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Marketing Materials&apos;),
+    ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Microsite&apos;),
+    ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Open Enrollment Presentations&apos;),
+    ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Plan Comparison&apos;),
+    ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Summary Of Benefits &amp; Coverage (SBCs)&apos;)
+     ),&apos;Marketing&apos;,
+     IF(OR(ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Census&apos;),
+     ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;GRID (UW)&apos;),
+     ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Group Screening Questionnaire&apos;),
+     ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Rate Sheets&apos;),
+     ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Underwriting (Request For Quote)&apos;)
+      ),&apos;Finance&apos;,
+      IF(OR(ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;Billing Information Form&apos;),
+      ISPICKVAL({!myVariable_current.Sub_Department__c},&apos;ID Cards&apos;)
+      ),&apos;Enrollment &amp; Billing&apos;,&apos;&apos;
+      
+       )
+      )
+     )
+    ))))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(OR(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;PRF Workplan&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;PRF Documentation&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;PRF Assignment&apos; )
+ ),&apos;RFP Responses&apos;
+,
+IF(OR(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Other&apos; ),(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;AIA Account Issue Documentation&apos; )),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Additional Documentation&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Par Plan&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Renewal&apos; )
+ ),&apos;Other Ancillary (LTD, STD, Etc)&apos;,
+IF(OR(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Group Screener Questionnaire&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Group Structure Approval Notification&apos; )
+),&apos;Group Screening Questionnaire&apos;,
+IF(OR(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Quote&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Unsigned Quote&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Signed Quote&apos; )
+),&apos;Rate Sheets&apos;,
+IF(OR(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Mock ID Card&apos; ),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Production ID Card&apos; )
+),&apos;ID Cards&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Group Structure Document&apos;),&apos;Group Structures&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Benefit Design Document&apos;),&apos;Benefit Design Form&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Cede Document&apos;),&apos;Cede Requests&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Proposal&apos;),&apos;RFP Requests&apos;,
+IF(OR(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Sales Data Analyst Request&apos;),
+ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Sales Data Analyst Response&apos; )),&apos;Sales Data Analyst Request Form&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Census Information&apos;),&apos;Census&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Marked Up Benefit Summary&apos;),&apos;Benefits Summaries&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Post Sale SBC&apos;),&apos;Summary Of Benefits &amp; Coverage (SBCs)&apos;,
+IF(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;Standard Benefit Summary&apos;),&apos;Benefit Request Form&apos;,
+TEXT([AIA_Document__c].Document_Type__c)
+))))))))))))))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_3_myRule_1_A1_Sub_Department_c</name>
+        <dataType>String</dataType>
+        <expression>IF(OR(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;PRF Workplan&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;PRF Documentation&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;PRF Assignment&apos; )
+ ),&apos;RFP Responses&apos;
+,
+IF(OR(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Other&apos; ),(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;AIA Account Issue Documentation&apos; )),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Additional Documentation&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Par Plan&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Renewal&apos; )
+ ),&apos;Other Ancillary (LTD, STD, Etc)&apos;,
+IF(OR(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Group Screener Questionnaire&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Group Structure Approval Notification&apos; )
+),&apos;Group Screening Questionnaire&apos;,
+IF(OR(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Quote&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Unsigned Quote&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Signed Quote&apos; )
+),&apos;Rate Sheets&apos;,
+IF(OR(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Mock ID Card&apos; ),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Production ID Card&apos; )
+),&apos;ID Cards&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Group Structure Document&apos;),&apos;Group Structures&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Benefit Design Document&apos;),&apos;Benefit Design Form&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Cede Document&apos;),&apos;Cede Requests&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Proposal&apos;),&apos;RFP Requests&apos;,
+IF(OR(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Sales Data Analyst Request&apos;),
+ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Sales Data Analyst Response&apos; )),&apos;Sales Data Analyst Request Form&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Census Information&apos;),&apos;Census&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Marked Up Benefit Summary&apos;),&apos;Benefits Summaries&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Post Sale SBC&apos;),&apos;Summary Of Benefits &amp; Coverage (SBCs)&apos;,
+IF(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;Standard Benefit Summary&apos;),&apos;Benefit Request Form&apos;,
+TEXT({!myVariable_current.Document_Type__c})
+))))))))))))))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>
+NOT(ISPICKVAL([AIA_Document__c].Document_Type__c,&apos;&apos;))
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT(ISPICKVAL({!myVariable_current.Document_Type__c},&apos;&apos;))</expression>
+    </formulas>
+    <interviewLabel>AIA_Document_Type_Mapping-11_AIA_Document__c</interviewLabel>
+    <label>AIA Document Type Mapping for FILENET</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>AIA_Document__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>RecursiveCountVariable</name>
+        <value>
+            <elementReference>RecursiveCountVariable</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[AIA_Document__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Update Sub Department</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_1_A2</targetReference>
+        </connector>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Sub Department</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Sub_Department__c</field>
+            <value>
+                <elementReference>formula_3_myRule_1_A1_Sub_Department_c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>AIA_Document__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[AIA_Document__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A2</name>
+        <label>Update Department</label>
+        <locationX>100</locationX>
+        <locationY>300</locationY>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Department</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Department__c</field>
+            <value>
+                <elementReference>formula_2_myRule_1_A2_Department_c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>AIA_Document__c</object>
+    </recordUpdates>
+    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>AIA_Document__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>AIA_Document__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_waitStartTimeVariable</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Flow.CurrentDateTime</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>RecursiveCountVariable</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+</Flow>

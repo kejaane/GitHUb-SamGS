@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AttachmentSize --></label>
+        <name>AttachmentSize__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReqTimeStamp --></label>
+        <name>ReqTimeStamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- ResTimeStamp --></label>
+        <name>ResTimeStamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- ResponseTime --></label>
+        <name>ResponseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusCode --></label>
+        <name>StatusCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusDescription --></label>
+        <name>StatusDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp (milli seconds) --></label>
+        <name>Time_Stamp_milli_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- msgData --></label>
+        <name>msgData__c</name>
+    </fields>
+    <fields>
+        <label><!-- msgType --></label>
+        <name>msgType__c</name>
+    </fields>
+    <fields>
+        <label><!-- relatedData --></label>
+        <name>relatedData__c</name>
+    </fields>
+    <fields>
+        <label><!-- result --></label>
+        <name>result__c</name>
+    </fields>
+    <fields>
+        <label><!-- sourceAddress --></label>
+        <name>sourceAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- source --></label>
+        <name>source__c</name>
+    </fields>
+    <fields>
+        <label><!-- targetAddress --></label>
+        <name>targetAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- target --></label>
+        <name>target__c</name>
+    </fields>
+    <fields>
+        <label><!-- timeStamp --></label>
+        <name>timeStamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- transactionID --></label>
+        <name>transactionID__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>IntegrationLog</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>IntegrationLogs</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>IntegrationLog__c Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

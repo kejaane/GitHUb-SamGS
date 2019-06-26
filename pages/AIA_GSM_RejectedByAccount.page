@@ -1,0 +1,24 @@
+<!--/*===================================================================================================================
+* Date       : 09/27/2017
+* Developer  : Raviteja
+* Purpose    : US 117 - This is Page uesed in button to help change the status to Rejected by Account
+*                                 Update History
+*                                 ---------------
+* Date       |      Developer        | Tag |   Description
+*============+=======================+=====+====================================================================================
+* 09/27/2017 |      Raviteja         |     | Initial Version
+* 02/10/2018 | Rajesh Nagandla       | T01 | Added SLDS to all components in page
+*============+=======================+=====+====================================================================================
+*-->
+<apex:page standardController="AIA_Group_Structure_Request_Form__c" extensions="AIA_GSRF_StatusByAccount" action="{!saveRecForRejected}" lightningStylesheets="true">
+   <!--T01 - start -->
+   <apex:slds rendered="{! !isClassic}"/>
+   <!--T01 - End -->
+   <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.status__c}</span>
+   <span style='display:none'>{!AIA_Group_Structure_Request_Form__c.Rejected_comments_by_Account__c}</span>
+   <apex:pageMessages ></apex:pageMessages>
+    <apex:form styleClass="slds-scope">
+        <center><apex:commandButton value="Ok" action="{!backtogsrf}" styleClass="slds-button slds-button_neutral"/></center>
+    </apex:form>
+    
+</apex:page>

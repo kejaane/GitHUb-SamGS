@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>AIA ID Card sent for approvals</name>
+    <style>freeForm</style>
+    <subject>Verify information filled out in the ID card request form</subject>
+    <textOnly>HI, Please verify information filled out in the ID card request form {!ID_Card__c.Link}
+
+
+
+
+
+AIA Automation</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

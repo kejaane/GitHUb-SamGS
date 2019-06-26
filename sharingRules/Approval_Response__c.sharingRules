@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AIA_BCM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow user to enter a response.</description>
+        <label>AIA BCM</label>
+        <sharedTo>
+            <group>AIA_BCM</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA BCM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_Benefit_Coder</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow group to enter a response</description>
+        <label>AIA Benefit Coder</label>
+        <sharedTo>
+            <group>AIA_Benefit_Coder</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA Benefit Coder</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_Benefit_Tester</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allows group to enter a response</description>
+        <label>AIA Benefit Tester</label>
+        <sharedTo>
+            <group>AIA_Benefit_Tester</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA Benefit Tester</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_CDH_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow user to enter a response.</description>
+        <label>AIA CDH Team</label>
+        <sharedTo>
+            <group>AIA_CDH_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA CDH Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_Dental_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow user to enter a response.</description>
+        <label>AIA Dental Team</label>
+        <sharedTo>
+            <group>AIA_Dental_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA Dental Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_MAST</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow group member to enter a response.</description>
+        <label>AIA MAST</label>
+        <sharedTo>
+            <group>AIA_MAST</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA MAST</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_Pharmacy_Management</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow user to enter a response.</description>
+        <label>AIA Pharmacy Management</label>
+        <sharedTo>
+            <group>AIA_Pharmacy_Management</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA Pharmacy Management</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_RX_Marketing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share approval response records so RX Marketing can approve/reject.</description>
+        <label>AIA_RX Marketing</label>
+        <sharedTo>
+            <group>AIA_RX_Marketing</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA RX Marketing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_Vision_Analyst</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow group to enter a response</description>
+        <label>AIA Vision Analyst</label>
+        <sharedTo>
+            <group>AIA_Vision_Analyst</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA Vision Analyst</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AIA_Wellness</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow user to enter a response.</description>
+        <label>AIA Wellness</label>
+        <sharedTo>
+            <group>AIA_Wellness</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA Wellness</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ancillary_Analyst_Setup</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow group to enter a response.</description>
+        <label>Ancillary Analyst Setup</label>
+        <sharedTo>
+            <group>AIA_Ancillary_Analyst_Setup</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA Ancillary Analyst Setup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BeneFACT_Coding</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow member of the group to enter a response.</description>
+        <label>BeneFACT Coding</label>
+        <sharedTo>
+            <group>AIA_BeneFACT_Coding</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA BeneFACT Coding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>NASCO_Benefit_Coding</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow group to enter a response.</description>
+        <label>NASCO Benefit Coding</label>
+        <sharedTo>
+            <group>AIA_NASCO_Benefit_Coding</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Area__c</field>
+            <operation>equals</operation>
+            <value>AIA NASCO Benefit Coding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Response__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

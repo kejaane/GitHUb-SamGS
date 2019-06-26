@@ -1,0 +1,73 @@
+<!--
+========================================================================================
+//   
+// ========================================================================================
+//                              Update History
+// Date       Developer      	Description
+// ========================================================================================
+// 08/14/2018 Debkanti	|T01|	Added SLDS to make compatable with classic and lightning.  
+// ========================================================================================
+-->
+<apex:page Controller="CFCT_AccountMergerController" tabStyle="Account" lightningStylesheets="true">
+     <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF(IsClassic,false,true)}" />
+    <apex:styleSheet value="{!$Resource.ModalDialogCSS}"/>
+    <style>
+    {! IF(! IsClassic,'body .pbHeader .pbTitle:first-child, body .pbHeader .pbButton:first-child, .slds-vf-scope .pbHeader .pbTitle:first-child, .slds-vf-scope .pbHeader .pbButton:first-child {padding-left: 0;width: 44%;}','')}
+    </style>
+     <!-- T01 -- End -->
+    <font weight="bold" color="darkblue" size="5">Account Merger</font>
+    <p><h1><font color="darkblue">Account Merger is not the normal data merge process but rather a process to handle when two companies merge but the source account data must remain intact for historical tracking. <br/><br/>
+                              <u>The following actions are performed:</u><br/><br/>
+                              1. &nbsp; Account Merger copies the selected source account's related contacts to the Destination Account's related contacts and prefix's 'merged_' to 
+                                        the source contacts first name and email fields. <br/>
+                              2. &nbsp; If the source Account's contact has an entity id it is removed and copied to the destination Account's contact.<br/>
+                              3. &nbsp; The destination contacts mailing information is derived from the destination Account's billing information.  This mimics the standard Salesforce 
+                                        functionality when creating a contact and the mailing information is left blank.<br/>
+                              4. &nbsp; The Merged Account field is populated on the source Account with the destination Account name (lookup) and the destination account 
+                                 with the source Account name, providing a linkage for a 360 degree view or merged accounts of this nature.<br/>
+                              5. &nbsp; Finally, a Chatter post is created on the source and destination accounts informing the user of the merged.</font></h1></p>   
+    <apex:form >    
+        <apex:pageBlock id="pageBlock1" >   
+            <apex:pageMessages id="showMsg"></apex:pageMessages>    
+            <apex:pageBlockButtons location="top" >                
+                <apex:commandButton value="Get Source Contacts" action="{!getSourceContacts}" rerender="showMsg, pageBlock2" />                     
+            </apex:pageBlockButtons>
+
+         
+            
+            <apex:pageBlockSection title="Select the Source and Destination (Master) Accounts" >                                   
+                <apex:inputField label="Source Account" value="{!source.Merged_Account__c}" />                                 
+                <apex:inputField label="Destination Account (Master)" value="{!destination.Merged_Account__c}" />              
+            </apex:pageBlockSection>               
+        </apex:pageBlock>            
+     
+        <!-- PAGEBLOCK TO DISPLAY LIST OF CONTACTS TO SELECT -->     
+        <apex:pageblock id="pageBlock2" >
+            <apex:pageblockButtons >
+                <apex:commandButton value="Copy Selected Contacts" action="{!copySelectedContacts}" disabled="{!disableCopySelectedContactsButton}" /> 
+            </apex:pageblockButtons>
+            
+            <apex:pageBlockSection title="Select Source Contacts to Copy to the Selected Destination Account"  columns="1" collapsible="false"> 
+                <p><h1><font color="red">CAUTION:</font> Do not click the 'Copy Selected Contacts' button more than once as it will create duplicate destination contact records for every addtional click!</h1></p>           
+                                 
+            <!-- In our table we are displaying the cContact records -->
+            <apex:pageBlockTable id="pageBlockTable" value="{!contacts}" var="c" rendered="{!showPageBlockTable}" > 
+                <apex:column width="1%" >
+                    <!-- This is our selected Boolean property in our wrapper class -->
+                    <apex:inputCheckbox value="{!c.selected}" />
+                </apex:column>
+                <!-- This is how we access the contact values within our cContact container/wrapper -->
+                <apex:column headerValue="Record Type" value="{!c.con.RecordType.Name}" width="5%" />
+                <apex:column value="{!c.con.Name}" width="10%" />
+                <apex:column value="{!c.con.Email}" width="15%" />                
+                <apex:column headerValue="Change Email" width="15%">                
+                    <apex:inputText value="{!c.changeEmail}" />
+                </apex:column>
+                <apex:column value="{!c.con.Phone}" width="10%" />
+                <apex:column value="{!c.con.Entity_ID__c}" width="5%" />
+            </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageblock>         
+    </apex:form>
+</apex:page>

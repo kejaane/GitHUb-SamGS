@@ -1,0 +1,118 @@
+<!--
+*=================================================================================================================
+* Date         : 12/07/2017
+* Developer    : Goutham Rapolu
+* Purpose      : Page for New Benefit Request Form page on Opportunity Related Lists. 
+*                logic to create new BRF based on Funding Arrangement of Opportunity.
+*=================================================================================================================
+*                                 Update History
+*                                 ---------------
+*   Date        Developer       Tag   Description
+*============+================+=====+=============================================================================
+* 12/07/2017 | Goutham Rapolu |     | Initial Version
+* 03/21/2017 | Gayathri P	  | T01 | Added code for navigation to detail page after creating BRF
+*===========+=================+=====+=============================================================================
+*
+-->
+<apex:page standardController="Benfit_Request_Form__c" extensions="AIA_BRF_RecordTypeRedirect"  lightningStylesheets="true">
+    <apex:includeLightning />
+   <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+    <apex:includeScript value="/lightning/lightning.out.js"/>
+    <apex:slds rendered="{! !isClassic}" />
+    <style>
+        {! if(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 45px !important;}','')}
+        {! if(! isClassic,'select{background-color: #fff;color: #16325c;border: 1px solid #d8dde6;border-radius: .25rem;width: 100%;transition: border .1s linear,background-color .1s linear;height: calc(1.875rem + (1px * 2));}','')}
+        body input[type="text"], .slds-scope input[type="text"] {
+        min-width: 0rem; 
+        }
+    </style>
+    
+    <apex:form styleClass="slds-scope">
+        <apex:pageBlock rendered="{!showMsg}">
+            <div class="bPageTitle">
+                <div class="ptBody">
+                    <img src="/s.gif" alt="Opportunity" class="pageTitleIcon" title="Opportunity"/>
+                    <h1 class="pageType">Opportunity: 
+                        <span  class="titleSeparatingColon">:</span>
+                    </h1>
+                    <h2 class="pageDescription">{!Opp.Name}</h2>
+                </div>
+            </div>
+        </apex:pageBlock>
+        
+        
+        
+        
+        <apex:pageBlock rendered="{!!showMsg}">
+            <div id="lightning" /> 
+            
+            <script>
+            console.log("Inside VF");
+            var oppFundingArr = '{!OppFundingArrangement}'
+            var layout = '';
+            var isClassic = "{!IsClassic}";
+            if(oppFundingArr =='Risk')
+            {
+                layout = 'c:AIA_BRF_Risk_Layout';
+            }
+            else if(oppFundingArr =='Both')
+            {
+                layout = 'c:AIA_BRF_Both_Layout';
+            }
+                else if(oppFundingArr =='Other')
+                {
+                    layout = 'c:AIA_BRF_Other_Layout';
+                }
+                    else if(oppFundingArr =='Non-Risk')
+                    {
+                        layout = 'c:AIA_BRF_ASO_Layout';
+                       
+                    }
+            $Lightning.use("c:AIA_Create_New_BRF", function() {
+                $Lightning.createComponent(layout, { label : "" }, "lightning", function(cmp) {
+                    //T01 -- Start
+                    $A.eventService.addHandler({
+                                       event: 'force:navigateToSObject',
+                                       handler: function(event) {
+                                           if(isClassic)
+                                           {
+                                             window.parent.location = '/' + event.getParams().recordId;
+                                            }
+                                           else{
+                                               sforce.one.navigateToSObject(event.getParams().recordId);
+                                           }
+                                       }
+                                   });
+                    //T01 -- End
+                });  
+            });
+            //T01--Start Code to pevent refresh of VF page
+            j$ = jQuery.noConflict();
+    		j$(document).ready(function() {
+        	j$(document).on('click','button',function(){
+                        return false;
+                        });
+    		});
+            //T01 -- End
+            </script>
+        </apex:pageBlock>
+        
+        
+        <apex:pageBlock rendered="{!showMsg}">
+            <apex:pageMessages />
+            
+            <apex:pageblocksection title="Update Account Legal Name Verified" rendered="{!!LegalAccountNameVerified}" columns="1">
+                <!--apex:inputtext value="{!Opp.AIA_Account_Legal_Name__c}" required="true"/-->
+                <apex:outputText value="{!Opp.AIA_Account_Legal_Name__c}"/>
+                <apex:inputField value="{!Opp.Legal_Account_Name_Verified__c}" required="true"/>        
+            </apex:pageblocksection>
+            
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Back" action="{!back}"  styleClass="slds-button slds-button_neutral"/>
+                <apex:commandButton value="Save & Continue" action="{!UpdateOpp}" rendered="{!!LegalAccountNameVerified}"   styleClass="slds-button slds-button_neutral"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+        
+    </apex:form>
+</apex:page>

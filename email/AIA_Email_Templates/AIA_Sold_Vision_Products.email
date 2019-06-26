@@ -1,0 +1,2 @@
+{!Benfit_Request_Form__c.Account_Legal_Name__c} is sold with vision/drug products effective {!Benfit_Request_Form__c.Benefit_Effective_Date__c}. Please click the link below to view the Benefit Request Form to obtain the sold product information. 
+{!Benfit_Request_Form__c.Link}

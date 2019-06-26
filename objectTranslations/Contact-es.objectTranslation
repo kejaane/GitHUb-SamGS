@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account ID18 --></label>
+        <name>AccountID18__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Agent Id --></label>
+        <name>Agency_Agent_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent ID --></label>
+        <name>Agent_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- National Producer Number --></help>
+        <label><!-- Broker NPN --></label>
+        <name>Broker_NPN__c</name>
+    </fields>
+    <fields>
+        <help><!-- 5 Being the best --></help>
+        <label><!-- Broker Rating --></label>
+        <name>Broker_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Broker Service Team 2-50 --></label>
+        <name>Broker_Service_Team_2_50_roll_up__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Service Team 51+ --></label>
+        <name>Broker_Service_Team_51_roll_up__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Service Team --></label>
+        <name>Broker_Service_Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- CF Client Golf Outing --></label>
+        <name>CF_Client_Golf_Outing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ciam Id --></label>
+        <name>Ciam_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community User Type --></label>
+        <name>Community_User_Type__c</name>
+        <picklistValues>
+            <masterLabel>Assistant</masterLabel>
+            <translation><!-- Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker Agent</masterLabel>
+            <translation><!-- Broker Agent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contracts for Year --></label>
+        <name>Contracts_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Description --></label>
+        <name>Data_Quality_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Score --></label>
+        <name>Data_Quality_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employer Group Portal --></label>
+        <name>Employer_Group_Portal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity ID --></label>
+        <name>Entity_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity Type : SB --></label>
+        <name>Entity_Type_SB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>Full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Groups for Year --></label>
+        <name>Groups_for_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecType Broker NPN --></label>
+        <name>RecType_Broker_NPN__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecType_Entity_ID --></label>
+        <name>RecType_Entity_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is used by the apex batch jobs to update the  values for the Qualtrics Surveys --></help>
+        <label><!-- SBU/Market Segment --></label>
+        <name>SBU_Market_Segment__c</name>
+        <picklistValues>
+            <masterLabel>200+</masterLabel>
+            <translation><!-- 200+ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SB Rank --></label>
+        <name>SB_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier Level  2-50 --></label>
+        <name>Tier_Level_2_50__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier Level 2-50 --></label>
+        <name>Tier_Level_2_50_roll_up__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier Level  51+ --></label>
+        <name>Tier_Level_51__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier Level 51+ --></label>
+        <name>Tier_Level_51_roll_up__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier Level --></label>
+        <name>Tier_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- TopAccount --></label>
+        <name>TopAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- ValidateCompleteness --></label>
+        <name>ValidateCompleteness__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2-50 Account --></label>
+        <name>X2_50_Account__c</name>
+        <relationshipLabel><!-- 2-50 Community Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 2-50 Contact ID --></label>
+        <name>X2_50_Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2-50 Contact --></label>
+        <name>X2_50_Contact__c</name>
+        <relationshipLabel><!-- 2-50 Community Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 51+Account --></label>
+        <name>X51_Account__c</name>
+        <relationshipLabel><!-- 51+ Community Contact --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 51+ Contact ID --></label>
+        <name>X51_Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- 51+Contact --></label>
+        <name>X51_Contact__c</name>
+        <relationshipLabel><!-- 51+ Community Contact --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>2-50 Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Functions --></label>
+            <section>Contact Functions</section>
+        </sections>
+        <sections>
+            <label><!-- Grouping --></label>
+            <section>Grouping</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>51+ Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Functions --></label>
+            <section>Contact Functions</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Community User Contact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Functions --></label>
+            <section>Contact Functions</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SBU 2-50  Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Functions --></label>
+            <section>Contact Functions</section>
+        </sections>
+        <sections>
+            <label><!-- Grouping --></label>
+            <section>Grouping</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SBU 51+ Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Functions --></label>
+            <section>Contact Functions</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- This is the record type that will be used for community User Creation --></description>
+        <label><!-- Community User Contact --></label>
+        <name>Community_User_Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 2-50 --></label>
+        <name>X2_50</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 51+ --></label>
+        <name>X51</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- 001: Account Name is required --></errorMessage>
+        <name>E001_Account_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 002: Phone is required --></errorMessage>
+        <name>E002_Phone_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 003: Email is required --></errorMessage>
+        <name>E003_Email_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CON004:This Record is not editable. Please contact your System Administrator. --></errorMessage>
+        <name>ECON004</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ECON005: You are not authorized to edit the 51+ Contact.Please contact your System Administrator. --></errorMessage>
+        <name>ECON005</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ECON006: You are not authorized to edit the 2-50 Contact.Please contact your System Administrator. --></errorMessage>
+        <name>ECON006</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ECON007: Account Record Type Does not Match. Please Choose the correct Account Record Type. --></errorMessage>
+        <name>ECON007</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ECON008: Email is required --></errorMessage>
+        <name>ECON008</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Hoover_s_Contact_Tools --></label>
+        <name>Hoover_s_Contact_Tools</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- map --></label>
+        <name>map</name>
+    </webLinks>
+</CustomObjectTranslation>

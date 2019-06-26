@@ -1,0 +1,9 @@
+<p>Hello There!</p>
+
+<p>You have received this message because the last run of the scheduleContactCompletionEffort ran enough times for this week.</p>
+<p>In addition, the reset job completed successfully.</p>
+
+<p>You may want to run the Completeness Report to get a measure of how much effort the users are putting into completing their data.</p>
+
+Thank you,<br>
+The CareFirst SFDC Development Team

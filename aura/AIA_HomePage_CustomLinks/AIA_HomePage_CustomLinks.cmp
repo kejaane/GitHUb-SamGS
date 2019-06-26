@@ -1,0 +1,36 @@
+<!--
+ **********************************************************************************************
+ * Date         : 01/25/2018
+ * Developer    : Gayathri Palanisamy
+ * Purpose      : This is the lightning component to display the existing custom links of the 
+ *				  Classic Home Page in Lightning Home Page.
+ **********************************************************************************************
+ *                    =======[Update History]======= 
+ * Date           Developer          Tag        Description
+ **********************************************************************************************
+ * 01/25/2018     Gayathri 	  					Initial build
+ **********************************************************************************************
+-->
+<aura:component controller="AIA_HomePage_CustomLinks_Controller" implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="url" type="map" description="Map to assign the url of the links"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <article class="slds-card slds-card_boundary">
+        <div class="slds-card__header slds-grid">
+        	<header class="slds-media slds-media--center slds-has-flexi-truncate">
+        		<div class="slds-media__body">
+    				<h1><span style="font-weight: 700;" class="slds-text-heading--small slds-truncate">Custom Links</span></h1>
+    				</div>
+        	</header>
+    	</div>
+        <!--List to display the Custom links-->
+        <div class="slds-card__body slds-card__body--inner">
+    		<ul class="slds-list--vertical slds-has-inline-block-links--space slds-list--dotted">
+        		<li class="slds-list__item "><a href="{!v.url.AIA_SIC_Codes_Lookup}" class="slds-text-link">SIC Codes Lookup</a></li>
+    			<li class="slds-list__item"><a href="{!v.url.AIA_NASCO_Account_Documents}" class="slds-text-link">NASCO Account Documents</a></li>
+      			<li class="slds-list__item"><a href="{!v.url.AIA_Sales_Resource_Guide}" class="slds-text-link">Sales Resource Guide (SRG)</a></li>
+            	<li class="slds-list__item"><a href="{!v.url.AIA_CareFirst_Broker_Portal}" class="slds-text-link">CareFirst Broker Portal</a></li>
+                <li class="slds-list__item"><a href="{!v.url.AIA_Files_Home}" class="slds-text-link">Upload AIA Mandates</a></li>
+           </ul>
+        </div>
+    </article>
+</aura:component>

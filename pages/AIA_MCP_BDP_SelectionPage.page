@@ -1,0 +1,249 @@
+<!--==========================================================================================================================
+* Date         : 04/11/2017
+* Developer    : Rajesh Nagandla
+* Purpose      : Benefit Design Form MCP US-250.
+*============================================================================================================================
+*                                 Update History
+*                                 --------------
+* Date       |  Developer         | Tag | Description
+*============+====================+=====+======================================================================================
+* 04/11/2017 | Rajesh Nagandla    |     | Initial Version
+* 02/01/2018 | Gayathri Palanisamy| T02 | Added slds classes to match the look and feel of lightning 
+* 									      view with classic.
+*============+==================+=====+======================================================================================
+-->
+<apex:page standardController="AIA_Benefit_Design_Form__c" extensions="AIA_MCP_BDP_SelectionController" id="pg" lightningStylesheets="true">
+    <apex:pageMessages id="Message" ></apex:pageMessages>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+    <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.4/jquery.autosize.min.js" />
+    <!--T02 Start-->
+    <apex:slds rendered="{!!isClassic}"/>
+    <!--T02  End-->
+    <style>
+    .penaltyinfo{
+        display:none;
+    }
+    .checkboxtd{
+        width:100px;
+    }
+        .helpButton {
+        	display: inline !important;
+        }
+    <!--T02--Start-->
+        {! if(! isClassic,'.pbButton{text-align: center !important;}.pbButton:last-child {padding-right: 140px !important;float:left;}'+
+        '.bPageBlock{border:none !important;box-shadow: none !important;}'+
+        '.slds-scope .bPageBlock .pbSubheader{background-color:#D5D8DC;}'+
+        ' .slds-scope .slds-notify_container{position:relative;}'+
+        '#subheader2{width:188%;}','')}        
+	<!--T02--End-->
+    </style>
+    <script>
+    j$ = jQuery.noConflict();
+    
+    function getbdps(){
+        //alert('Test');
+        var val = document.getElementById('pg:fm:pb:pbs1:bdval_lkid').value;
+        //alert(val);
+        CallApexMethod(val);
+    }
+    function checkBDPall(){ 
+           j$( ".checkBDP" ).each(function() {
+            if(j$(this).is(':checked')){
+                 var relatedclass= parseInt(j$(this).closest('tr').attr('class'));
+                 j$('.'+relatedclass).show();
+                 
+            }
+            else{
+                 var relatedclass= parseInt(j$(this).closest('tr').attr('class'));
+                 j$('.'+relatedclass+':not(".checkboxtr")').hide();
+            }
+           });
+       }
+    j$(document).ready(function(){
+        getbdps();
+        checkBDPall();
+        j$(document).on("change",'.checkBDP',function(){
+            if(j$(this).is(':checked')){
+                 var relatedclass= parseInt(j$(this).closest('tr').attr('class'));
+                 j$('.'+relatedclass).show();
+                 
+            }
+            else{
+                 var relatedclass= parseInt(j$(this).closest('tr').attr('class'));
+                 j$('.'+relatedclass+':not(".checkboxtr")').hide();
+                
+            }
+        });
+        
+    });
+    </script> 
+    <apex:Form id="fm">
+        <apex:actionFunction immediate="true" name="CallApexMethod" action="{!getproducts}" reRender="bdprecords" oncomplete="checkBDPall();">
+            <apex:param id="bdnode" name="node" value=""/>
+        </apex:actionFunction>
+        <div>
+            
+       
+        <apex:pageBlock title="Select Benefit Design Products" mode="edit" id="pb">
+            <apex:pageBlockSection columns="2" id="pbs1">
+                <apex:inputField value="{!AIA_Benefit_Design_Form__c.Benefit_Design__c}" id="bdval" onchange="getbdps();"/> 
+                <apex:outputField value="{!AIA_Benefit_Design_Form__c.RecordtypeId}"/>
+            </apex:pageBlockSection>
+            <apex:outputPanel id="bdprecords">
+                <div class="pbSubheader brandTertiaryBgr tertiaryPalette"><h3 class="slds-section-title">Select Benefit Design Products</h3></div>
+                
+                <apex:outputPanel id="bdprecords1" rendered="{!!displaymsg}">
+                <table class="list slds-table slds-table--bordered slds-table--cell-buffer" >
+                    <tr class="headerRow">
+                    <th class="headerRow slds-truncate">Select</th>
+                    <th class="headerRow slds-truncate">BDP Name</th>
+                    <th class="headerRow slds-truncate">Plan Product Name</th>
+                    </tr>
+                    <apex:variable value="{!0}" var="refer"/>
+
+                    <apex:repeat var="wap" value="{!bdpWrappers}">
+                        <tr class="{!refer} checkboxtr">
+                            <td class="checkboxtd slds-truncate slds-input">
+                                <apex:inputcheckbox value="{!wap.isSelected}" styleclass="checkBDP">
+                                    <apex:actionSupport event="onclick" action="{!updateBdp}" reRender="test">
+                                        <apex:param name="bdpID" assignto="{!selectedbp}" value="{!wap.bdprorec.id}"/>
+                                        <apex:param name="isselected" assignto="{!isselected}" value="{!wap.isSelected}"/> 
+                                    </apex:actionsupport>
+                                </apex:inputcheckbox>
+                            </td>
+                            <td class="slds-truncate">{!wap.bdprorec.name}</td>
+                            <td class="slds-truncate">{!wap.bdprorec.Plan_Product_Name__c}</td>
+                            
+                        </tr>
+                        <!--<table border="1">-->
+                        <!-- <apex:repeat var="ind" value="{!wap.bdprolst}"> -->
+                        <tr class='penaltyinfo {!refer}'>
+                            <td style='border:none'></td>
+                            <td colspan="3" class='pbSubheader brandTertiaryBgr tertiaryPalette slds-section-title' id="subheader2"> INN or Contracted Provider Penalty </td>
+                        	
+                        </tr>
+                        <tr class='penaltyinfo {!refer}'>
+                            <td style='border:none'></td>
+                            <!--<apex:variable value="{!wap.bdpRecID}" var="INNcontracProvID"/>-->
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	INN or Contracted Provider Penalty&nbsp;&nbsp;
+                                </div>
+                                <div class="slds-form-element__control">
+                                	<div class="slds-select_container">
+                                 		<apex:inputField value="{!wap.bdprorec.AIA_INN_Contracted_Provider_Penalty__c}" id="INNcontracProvID" styleClass="slds-select" />
+                            		</div>
+                                </div>
+                                </td>
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	Magellan Behavioral Health&nbsp;&nbsp;
+                                </div>
+                                <div class="slds-form-element__control">
+                                	<div class="slds-select_container">
+                                		<apex:inputField value="{!wap.bdprorec.AIA_Magellan_Behavioral_Health__c}" styleClass="slds-select"/>
+                                	</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class='penaltyinfo {!refer}'>
+                            <td style='border:none'></td>
+                            <td colspan='3' class='pbSubheader brandTertiaryBgr tertiaryPalette slds-section-title' id="subheader2"> ONN-Non Contracted providers Member Penalty </td>
+                           
+                        </tr>
+                        <tr class='penaltyinfo {!refer}'>
+                            <td style='border:none'></td>
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	Member Penalty&nbsp;&nbsp;
+                                </div>
+                                <div class="slds-form-element__control">
+                                	<div class="slds-select_container">
+                                		<apex:inputField value="{!wap.bdprorec.Fully_Insured__c}" styleClass="slds-select"/>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	Percentage and Dollar Penalty&nbsp;&nbsp;
+                                </div>
+                                <div class="slds-form-element__control">
+                                	<div class="slds-select_container">
+                                		<apex:inputField value="{!wap.bdprorec.AIA_Percent_and_Dollar_Penalty__c}" styleClass="slds-select"/>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class='penaltyinfo {!refer}'>
+                            <td style='border:none'></td>
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	Dollar Penalty&nbsp;&nbsp;
+                                </div>
+                                <div class="slds-form-element__control">
+                                   <apex:inputField value="{!wap.bdprorec.AIA_Dollar_Penalty__c}" styleClass="slds-input" /> 
+                                </div>
+                            </td>
+                            <td style='border:none'><apex:outputlabel styleClass="slds-form-element__label">Percent and Dollar Penalty Other Nonstandard
+                            </apex:outputlabel> &nbsp;&nbsp;
+                                <div class="slds-form-element__control">
+                                	<apex:inputField value="{!wap.bdprorec.Percentage_and_Dollar_Penalty_Other_Nons__c}" styleClass="slds-input"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class='penaltyinfo {!refer}'>
+                            <td style='border:none'></td>
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	Percentage Penalty&nbsp;&nbsp;
+                                </div>
+                            	<div class="slds-form-element__control">
+                                	<div class="slds-select_container">
+                                		<apex:inputField value="{!wap.bdprorec.AIA_Percent_Penalty__c}" styleClass="slds-select"/>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	Up to $ &nbsp;&nbsp;
+                                </div>
+                                 <div class="slds-form-element__control">
+                                	<apex:inputField value="{!wap.bdprorec.AIA_Up_to__c}" styleClass="slds-input" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class='penaltyinfo {!refer}'>
+                            <td style='border:none'></td>
+                            <td style='border:none'>
+                                <div class="slds-form-element__label">
+                                	Percentage Penalty Other Nonstandard&nbsp;&nbsp;
+                                </div>
+                                <div class="slds-form-element__control">
+                                	<apex:inputField value="{!wap.bdprorec.Percentage_Penalty_Other_Nonstandard__c}" styleClass="slds-input"/>
+                                </div>
+                            </td>
+                        </tr>    
+                            <apex:variable var="refer" value="{!refer+1}"/>              
+                    </apex:repeat>
+                </table>
+                </apex:outputPanel>
+                <apex:panelGrid id="theGrid" styleClass="slds-notify slds-notify_container" rendered="{!displaymsg}">
+                <div class="slds-notify slds-notify--alert slds-theme--alert-texture" role="alert">
+                    <span class="slds-assistive-text"></span>
+                    <h2 style="{!if(isClassic,'color:red','')}">There are no medical products to associate with the MCP form. Please click on Cancel button to go back to previous page.</h2>
+                </div>
+                </apex:panelGrid>
+            </apex:outputPanel>
+            <apex:outputPanel id="test">
+            </apex:outputPanel>
+            <apex:pageBlockButtons >
+                <div class="slds-button slds-grid slds-grid--align-center">
+                	<apex:commandButton action="{!Next}" value="Save & Next" reRender="Message" styleClass="slds-button slds-button_neutral"/>
+                	<apex:commandButton action="{!cancel}" value="Cancel" styleClass="slds-button slds-button_neutral"/>
+                </div>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        </div>
+    </apex:Form>
+               
+</apex:page>

@@ -1,0 +1,3 @@
+{!ID_Card__c.Name} for {!ID_Card__c.Implementation__c} has been Rejected.
+
+You may navigate to the ID Card by clicking on the link below {!ID_Card__c.Link}

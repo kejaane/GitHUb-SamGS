@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- BDPName --></label>
+        <name>BDPName__c</name>
+    </fields>
+    <fields>
+        <label><!-- BRF ID --></label>
+        <name>BRF_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design Product --></label>
+        <name>Benefit_Design_Product__c</name>
+        <relationshipLabel><!-- AIA RxMandates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mandate Apply --></label>
+        <name>Mandate_Apply__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Description --></label>
+        <name>Mandate_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Effective Date --></label>
+        <name>Mandate_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Jurisdiction --></label>
+        <name>Mandate_Jurisdiction__c</name>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mandate Name --></label>
+        <name>Mandate_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mandate Term Date --></label>
+        <name>Mandate_Term_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network Rules AliasName --></label>
+        <name>Network_Rules_AliasName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PPName --></label>
+        <name>PPName__c</name>
+    </fields>
+    <fields>
+        <help><!-- The product category --></help>
+        <label><!-- Product Category --></label>
+        <name>Product_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Products --></label>
+        <name>Proposed_Products__c</name>
+        <relationshipLabel><!-- AIA RxMandates --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>AIA RxMandate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AIA RxMandates</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <fieldSets>
+        <label><!-- Include on Adjustment Summary --></label>
+        <name>Include_on_Adjustment_Summary</name>
+    </fieldSets>
+    <layouts>
+        <layout>AIA RxMandate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Network Rules --></label>
+        <name>Network_Rules</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Plan Rx Mandate --></label>
+        <name>Plan_Rx_Mandate</name>
+    </recordTypes>
+</CustomObjectTranslation>

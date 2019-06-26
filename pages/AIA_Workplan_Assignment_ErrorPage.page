@@ -1,0 +1,22 @@
+<!--
+ *                                 Update History
+ *                                 ---------------
+ * Date        Developer    Tag         Description
+ *==========================================================================================
+* 01/26/2018| Raviteja   | T01 | Added SLDS classes to all components/tags 
+ *==========================================================================================
+ -->
+<apex:page standardController="AIA_Workplan_Assignment__c" lightningStylesheets="true">
+    <!-- T01 -- Start -->
+	<apex:slds rendered="{! IF($User.UITheme=='Theme3',false,true)}" />
+<style>
+  {! IF($User.UITheme=='Theme3','.errorM4 .msgIcon, .errorSmall {    background-image: url(/img/samples/flag_red.gif) !important;}.myCustomMessage .message {    background: none  !important;    border: none !important;}','') }
+</style>
+    <!-- T01 -- End -->
+
+    <apex:outputPanel styleClass="myCustomMessage" rendered="{!IF( AIA_Workplan_Assignment__c.Assignment_Error__c!='',true, false )}">
+        <apex:pageMessage severity="error"
+                          strength="3"
+                          summary="This particular Assignment Role has Multiple Names on Account Team/No Name is Assigned, So the Owner of this Record is set to present user" />
+    </apex:outputPanel>
+</apex:page>

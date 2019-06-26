@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Related Plan Name --></label>
+        <name>AIA_Related_Plan_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Design Product --></label>
+        <name>Benefit_Design_Product__c</name>
+        <relationshipLabel><!-- Related Benefit Design Products (Benefit Design Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product category drawloop --></label>
+        <name>Product_category_drawloop__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product full Name --></label>
+        <name>Product_full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Benefit Design Product --></label>
+        <name>Related_Benefit_Design_Product__c</name>
+        <relationshipLabel><!-- Related Benefit Design Products (Related Benefit Design Product) --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Related Benefit Design Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Related Benefit Design Products</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Related Benefit Design Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

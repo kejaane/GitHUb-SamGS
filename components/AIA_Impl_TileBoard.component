@@ -1,0 +1,112 @@
+<!--
+*====================================================================================================================
+* Date       : 05/20/2018
+* Developer  : Asif Kutagulla
+* Purpose    : Visualforce component to show list of Sub Processes associated with a process on the Implementation 
+*              dashboard. This component is called from Dashboard VF page on Implementation record.Story:US463
+*                               ========[Update History]=======
+*                     -----------------------------------------------------
+* Date         Developer    Tag         Description
+*====================================================================================================================
+* 05/20/2018 | Asif K     |     | Initial version
+* 08/17/2018 | Arshia G   | T01 | Updated for Subprocess color change US3856
+*====================================================================================================================
+-->
+<apex:component controller="AIA_Impl_TileBoard_Controller">
+    <apex:attribute name="ProcessHtmlID" type="String" required="true" description="HTML ID of the Process for which this task list is being shown"
+    />
+    <!-- <apex:attribute name="subProcessList" type="Sub_Process__c[]" required="true" assignTo="{!lstSubProcesses}" 
+                    description="List of sub processes associated with each process on the Implementation"/> -->
+    <apex:attribute name="procID" type="String" required="true" assignTo="{!processID}"
+        description="ID of the Process record. This will be input to component controller in order to retrieve the list of sub processes associated with this process id"
+    />
+   
+    <apex:variable var="TileColorNum" value="{!0}" />
+
+    <apex:repeat value="{!lstSubProcesses}" var="tile">
+        <div class="demo-only " style="margin-left:5px;margin-right:5px;">
+            <!-- AIA_Implementation_Dashboard_CSS -->
+            <ul class="slds-has-dividers_around-space" id="TaskListRepeat_Section">
+                <li class="slds-item" 
+                    style="margin-bottom:5px; 
+                           border-left:5px solid {!lstTileColors[mod(TileColorNum,7)]};
+                           background-color:{!IF(AND(tile.Status__c!=NULL,tile.Number_of_Tasks_SLA_Broken__c!=NULL,tile.Number_of_Tasks_SLA_Broken__c>0,tile.Status__c != 'Not Required'),subProcTileColors_Status['SLA Breached'],subProcTileColors_Status[tile.Status__c])};">
+                    <article class="slds-tile slds-tile_board">
+                        <div class="slds-grid">
+                            <div class="slds-col slds-col_bump-left" style="width:90%">
+                                <!-- <h3 class="slds-tile__title slds-truncate" title="{!tile.Stage__c}"><a href="javascript:void(0);">{!tile.Stage__c}</a></h3> <a href="javascript:void(0);">-->
+                                <h3 class="slds-tile__title slds-truncate" title="{!tile.Stage__c}">
+                                    <apex:commandLink action="{!displayTaskListModalSetter}" rerender="SubProcessTaskList"
+                                        value="{!tile.Stage__c}" type="text/html" immediate="true" id="cmdLink">
+                                        <apex:param name="clickedSubProcessIDParam" value="{!tile.Id}" assignTo="{!clickedSubProcessID}" />
+                                    </apex:commandLink>
+                                </h3>
+                            </div>
+                            <div class="slds-col slds-col_bump-right" style="text-align:right; width:10%">
+                                <apex:image value="{!$Resource.AIA_Blocked_Icon}" style="vertical-align:middle" 
+                                            rendered="{! IF(AND(tile.Number_of_Blocked_Tasks__c!=NULL,tile.Number_of_Blocked_Tasks__c>0), true, false) }"/>
+                                <!-- 
+                                <span class="slds-icon_container" title="This SubProcess contains blocked tasks">
+                                    <svg class="slds-icon slds-icon-text-error" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#error')}" />
+                                    </svg>
+                                </span>
+                                 -->
+                            </div>
+                        </div>
+                        <!-- {!tile.Stage__c}</a> -->
+                        <div class="slds-tile__detail" style="margin-top:5px;">
+                            
+                            <div class="slds-grid">
+                                <div class="slds-col slds-col_bump-left">
+                                    <apex:outputText style="font-size:smaller;" value="{!if(tile.Status__c == 'Not Required','Not Required',tile.Percent_Complete__c)}{!if(tile.Status__c == 'Not Required','','% Complete')}">  <!--T01-->
+                                 <!--<apex:outputText style="font-size:smaller;" value="{!tile.Percent_Complete__c} % Complete"> -->
+                                        
+                                    </apex:outputText>
+                                </div>
+                                <div class="slds-col slds-col_bump-right" style="text-align:right;">
+                                    <apex:outputText value="{!tile.AIA_Number_of_Completed_tasks__c+tile.AIA_Number_of_Not_Required_Tasks__c}/{!tile.Total_Task_Count__c} Tasks"
+                                                     style="font-size:smaller;">
+                                    </apex:outputText>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+
+        <apex:variable var="TileColorNum" value="{!TileColorNum + 1}" />
+    </apex:repeat>
+
+    <div class="slds-align_absolute-center">
+        <apex:commandLink action="{!getFullListOfTiles}" value="Show {!ShowMoreLinkSize} more"
+            rerender="{!ProcessHtmlID}" rendered="{!displayShowMoreLink}" />
+    </div>
+
+    <!--To show the task list associated with sub process, as a modal dialog - Start-->
+    <apex:outputPanel id="SubProcessTaskList">
+        <!-- Output Panel to show the background for the panel which show task list belonging to a sub process -->
+        <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayTaskListModal}"
+                            id="popupBckGrndPanel" />
+        <!-- Output panel to show the task list for sub process -->
+        <apex:outputPanel styleClass="popupBox" layout="block" rendered="{!displayTaskListModal}"
+                            id="popupBoxPanel" style="background-color:white;">
+            <!-- div to show the close icon for the popup -->
+            <div align="right" style="background-color:white; border:0px;">
+                <div style="width:250%;background-color:white;">
+                    <apex:commandButton style="text-align:right;border:0px;" rendered="{!displayTaskListModal}"
+                        action="{!closeTaskListModal}" id="ModalCloseIcon" rerender="SubProcessTaskList"
+                        value="X"/>
+                </div>
+            </div>
+            
+            <!-- Visualforce component which shows the task list of a sub process -->
+            <div align="center">
+                <c:AIA_SubProc_TaskList_On_Dashboard_Comp subProcID="{!clickedSubProcessID}" />
+            </div>
+        </apex:outputPanel>
+    </apex:outputPanel>
+    <!--To show the task list associated with sub process, as a modal dialog - End-->
+
+</apex:component>

@@ -1,0 +1,31 @@
+<apex:page standardController="AIA_Benefit_Design_Product__c" >
+
+ <style type="text/css">   
+        .imgclass:hover{   
+            background-image: url(/img/help/helpOrbs.gif);   
+            background-repeat: no-repeat;   
+            width: 16px;   
+            height: 15px;      
+            background-position: right;   
+          
+        }   
+        .imgclass{   
+            background-image: url(/img/help/helpOrbs.gif);   
+            background-repeat: no-repeat;   
+            width: 16px;   
+            height: 15px;   
+        }   
+    </style>   
+    
+  <!-- Begin Default Content REMOVE THIS -->
+  <Strong><h1>Global Maternity Services :</h1></Strong>
+ <img src="/s.gif" Class="imgclass" title="Turnkey for all Fully-Insured Accounts. For Self-insured existing Accounts will be turnkey upon the effective date of the Account’s Women’s Preventive benefit. New Accounts will be on their Effective Date." />
+Updating Global Maternity to pay pre-natal visits as part of the Women’s Preventive benefit.<br> </br>
+
+(Individual Pre-natal office visits are already included in existing Women’s Preventative Health Services)<br> </br>
+ 
+For new accounts where PPACA fields apply – use account effective date.<br> </br>
+ 
+For existing accounts where PPACA fields apply – manually enter the first time BD is created – when cloning just default date from previous BD<br/>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

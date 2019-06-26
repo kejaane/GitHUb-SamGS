@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_42827607</developerName>
+        <masterLabel>Origin</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ORIGIN</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Email: Broker Sales MD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Broker Sales 4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Retro activity Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: SBC Project</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: BCS Specialist</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Small Medium Group</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Royal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Indigo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Ocean</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Sapphire</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Sky</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Teal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email: Compliance</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email Thread</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Case.SLA_Category__c</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>Case.Received_Date__c</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>Case.Age_between_Receipt_and_Last_Update__c</field>
+    </columns>
+    <columns>
+        <field>Case.Routed_To__c</field>
+    </columns>
+    <columns>
+        <field>Case.Routed_To_Description__c</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>Case.Facets_Subject__c</field>
+    </columns>
+    <columns>
+        <field>Case.Group_ID__c</field>
+    </columns>
+    <description>This report provides cases that are Routed grouped by SLA</description>
+    <filter>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Routed_To__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.SBU_Group_Case,Case.SBU_Member_Case,Case.SBU_Non_Member_Case,Case.SBU_Broker_Support_Internal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Facets_Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.SLA_Category__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Broker Service Routed Summary Report-spm</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CASE_NUMBER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

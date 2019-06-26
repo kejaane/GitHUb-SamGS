@@ -1,0 +1,23 @@
+<!--************************************************************************************************************
+ *  Page             : Messages_And_Alerts
+ *  Author           : Arshia Gulati
+ *  Description      : Message alert on Home Page to switch to Google Chrome for better Lightning experience.
+ *                          
+ * ----------------------------------------------------------------------------------------------------------
+ *  Author          Date-Modified      Tag      Description of Change
+ * ----------------------------------------------------------------------------------------------------------
+ *
+ */
+-->
+<apex:page standardController="User" extensions="Messages_And_Alerts_Controller"> 
+    <apex:outputPanel rendered="{!IsClassic}">
+    <apex:pageBlock title="Messages and Alerts">
+       <apex:outputLabel style="color:red" value="{!ChromeMessage}">                   
+        </apex:outputLabel> 
+    </apex:pageBlock>
+   </apex:outputPanel>
+    <apex:outputPanel rendered="{!!IsClassic}">
+        <apex:outputLabel style="color:red" value="{!ChromeMessage}">  
+        </apex:outputLabel>  
+    </apex:outputPanel>
+</apex:page>

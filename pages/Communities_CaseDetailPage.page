@@ -1,0 +1,324 @@
+<!--
+/* =========================================================================================
+ * Date         : 08/01/2016
+ * Developer    : Laveen Kattela
+ * Purpose      : This VF Page refers to the Community View detail case page "Body section".This  page will be displayed when a Community user click on to open a particular Case record.
+ *                
+ *                1.It displays "Contact Details" section  -  The Contact person person to whom the case is created  
+ *                2.It displays "Group / Subscriber Information" section  
+ *                3.It displays "Case Details" section 
+ *                4.It displays "Add a Comments" button - user can add the comments to that particular case
+ *                5.It displays "Resoulution Reason" section- this section only visible to user when status is "closed" 
+ *                6.It displays "Case Timeline" section - history of the case comments    
+ *=========================================================================================
+ * Update History
+ *  ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 08/01/16   |  Laveen Kattela    | Initial Version                                          
+ *===========+============+================================================================
+ */
+ -->
+
+<apex:page showHeader="false" controller="Communities_CaseDetailPage"  sidebar="false" standardStylesheets="false">
+  
+<html lang="en" class="oxh">
+
+<body lang="EN-US">
+<apex:form id="fm" enctype="multipart/form-data">
+    <apex:actionFunction name="addAttach" action="{!addAttachment}"/>
+    <apex:composition template="Communities_HeaderMeta"></apex:composition>
+
+    <!-- main container for all dynamic feature content-->
+    <div class="cf-main-container" ng-controller="ctrl">
+     <c:Communities_Header />
+   
+     <div class="body-container row clearfix ">
+        <ol class="breadcrumb form-group">
+            <li><a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_HomePage">Home</a></li>
+            <li class="active">My Cases</li>
+        </ol>   
+        <h1> Case Details</h1>
+        <!-- error ends here  information section before login message  -->
+        
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix" style="margin-bottom:0px;table-layout:fixed!important;">
+                
+                        <div class="clearfix form-group "> 
+            <apex:messages styleClass="alert-error" style="margin-top: 0px;"/>
+                               <div class="panelTop">
+                                      <h3>Contact Details</h3>
+                               </div>
+                               <div class=" panelContent" >
+                                        <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Broker Agent">Contact Name:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12">  {!myCase.Contact.Name }  </div>
+                                       </div>
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Broker Email">Contact Email:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> {!myCase.Contact.email}  </div>
+                                       </div>
+                                        <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Broker Phone:">Contact Phone:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> <span class="m-right-15"> {!myCase.Contact.Phone}  </span>   <span>  </span>  </div>
+                                       </div>
+                                       
+                               </div>
+                        </div> 
+                       
+                        <div class="clearfix form-group "> 
+                               <div class="panelTop">
+                                      <h3>Group / Subscriber Information  </h3>
+                               </div>
+                               <div class=" panelContent" >                            
+                                         <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12">  <label for="Group Id">Group ID:</label> </div>
+                                         
+                                         <div class="col-md-4 col-sm-4 col-xs-12">  {!ccobj.Groupid}  </div>
+                                       </div>                                       
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label>Subscriber ID:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> {!myCase.Subscriber_ID__c} </div>  
+                                        
+                                       </div> 
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label>Member Type:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12"> {!myCase.Member_Type__c}</div>
+                                         
+                                       </div> 
+                               </div>
+                        </div>
+
+                        <div class="clearfix form-group"> 
+                               <div class="panelTop">
+                                      <h3>Case Details</h3>
+                               </div>
+                               <div class=" panelContent" style="width: auto;  height: auto;" >
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Status">Status:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12">  {!myCase.Broker_Status__c}  </div>
+                                       </div>
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Origin">Origin:</label> </div>
+                                         <div class="col-md-4 col-sm-4 col-xs-12">  {!myCase.Origin}  </div>
+                                       </div>
+                                       <div class="form-group row">
+                                         <div class="col-md-2 col-sm-4 col-xs-12"> <label for="Subject">Subject:</label> </div>
+                                         <div class="col-md-10 col-sm-10 col-xs-12"> {!myCase.Subject}   </div>
+                                       </div>
+                                       <!--<div class="clearfix form-group">
+                                        <label for="Subject">Subject:</label> 
+                                        <p>Unable to add a subscriber to a Group</p>
+                                       </div> -->
+                                       <div class="clearfix form-group">
+                                        <label for="Description"> Description: </label>
+                                        <p> {!myCase.Description}</p>                                      
+                                        
+                                       </div>
+                                       <div class="clearfix form-group">
+                                        <label for="Description"> Attachments:</label><br/>
+                                        <apex:repeat value="{!cattList}" var="item" id="rep2">
+                                        <p>
+                                       <!-- <img src="{!URLFOR($Resource.Communities_Resource, '/content/img/attachment-ico.png')}" class="m-right-15" alt="attach files"/>{!item.name} --> 
+                                         <img src="{!URLFOR($Resource.Communities_Resource, '/content/img/attachment-ico.png')}" class="m-right-15" alt="attach files"/><apex:outputLink value="{!URLFOR($Action.Attachment.Download, item.id)}" target="">{!item.name}</apex:outputLink> </p>
+                                         </apex:repeat>                                       
+                    <!-- Following line added by Rajesh -->
+                                        <!--<label>Attachment:</label> --->
+                                        <apex:inputFile value="{!Attach.Body}" fileName="{!Attach.Name}" id="file" fileSize="{!FileSize}" size="5"/>
+                                        <div class="col-md-3 col-sm-3 col-xs-12 m-top-xs-10" href=""> 
+                                        <apex:commandButton value="Save Attachment" style="margin-top:10px;margin-left:-15px" styleClass="btn btn-default btn-lg btn-block" onclick="addAttachment();return false;"/> 
+                                        <!-- Rajesh Changes Done -->
+                                        
+                                         </div>
+                                        
+                                       </div>
+                               </div>
+                        </div> 
+                        <apex:outputPanel rendered="{!myCase.IsClosed}">
+                        <div class="clearfix form-group" > 
+                               <div class="panelTop">
+                                  <h3> Resolution   <span class="pull-right f12 m-right-15" > Posted on: <a> <apex:outputField value=" {!mycase.Resolution_Reason_Posted_Date__c}"/></a></span>   </h3>
+                                  <!--    <h3> Resolution   <span class="pull-right f12 m-right-15" > Posted on: <a>{!mycase.Resolution_Reason_Posted_Date__c}</a></span>   </h3> -->
+                               </div>
+                               <div class=" panelContent" >
+                                 <p>{!myCase.Resolution_Reason__c}</p>
+                                </div>
+                        </div>
+                        </apex:outputPanel>
+                        <!--<div class="row form-group  m-top-40">
+                            <div class="col-md-12 col-sm-12 col-xs-12"> 
+                                 <p class="f18"><b> Resolution</b>     <span class="pull-right f12"> Posted on: 06/15/2016 10:15AM</span></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit tortor, sagittis ut fermentum vel, dictum vel elit. Nullam tempus, turpis ut lobortis porta, nisl ipsum molestie odio, ut mollis ligula ligula sit amet libero. Aliquam efficitur lacus ex, sit amet sodales arcu pharetra sed. Vestibulum nibh diam, molestie maximus iaculis et, efficitur et odio.</p>
+                            
+                            </div>
+                        </div>  -->
+                        <apex:outputPanel rendered="{!!myCase.IsClosed}">   
+                        <div class="form-group clearfix row">
+                             <div class="col-md-3 col-sm-3  col-xs-12">
+                             <a href="#" id='addCommentClick'> <span class="smallblueachcor m-right-15"><img src="{!URLFOR($Resource.Communities_Resource, '/content/img/add_ico.png')}" alt="Add Comments"/></span>Add a Comments </a>
+                             </div>
+                        </div>
+                        <div class="clearfix row form-group" id="close">                                    
+                                    <div class="col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-3 col-xs-12 m-top-xs-10"> <a href="/{!$Label.BrokerPortalCommunity}/apex/SBU_Communities_My_Cases_Page" class="btn btn-default btn-lg btn-block" >Close</a> </div>
+                        </div>
+                      
+                    <div id="addComment">   
+                    <div class="clearfix form-group"> 
+                               <div class="panelTop">
+                                      <h3>Add a Comment</h3>
+                               </div>
+                               <div class=" panelContent">
+                                      
+                                       <div class="clearfix form-group">
+                                        <label for="Description"> Comment: </label><b style="color:red;font-weight:bold;display:inline-block;font-size:20px;">*</b>
+                                        
+                                        <textarea class="form-control" rows="5" id="Description" minlenght="2" required="true"  placeholder="Please enter the comment"  ></textarea>
+                                                                              
+                                        
+                                       </div>
+                                       
+                               </div>
+                        </div>
+
+                        
+                        <div class="clearfix row form-group">
+                                    <div class="col-md-3 col-md-offset-3 col-sm-3  col-sm-offset-3 col-xs-12">
+                                      <a id="saveandclose"  class="btn btn-primary btn-block">Save and Close</a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-12 m-top-xs-10" href=""> <a id="cancel" href="" class="btn btn-default btn-lg btn-block">Cancel</a> </div>
+                        </div>
+                        </div>
+                        </apex:outputPanel>
+                        <div class="row m-top-40" >
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                           <p class="f16">Case Timeline </p>
+                          
+                            <table width="100%" class="table grayTab m-top-10" style="margin-bottom:0px;table-layout:fixed!important;">
+                                          <thead class="hidden-xs">
+                                            <tr>
+                                              <th>Date and Time</th>
+                                             <!-- <th>Action</th> -->
+                                              <th>By</th>
+                                              <th>Comments</th>                                           
+                                            </tr>
+                                          </thead>  
+                                          <tbody>
+                                          <!--
+                                            <tr>
+                                              <td> <span class="visible-xs pull-left"> Date and Time</span> 01/01/2016 10:45 </td>                                              
+                                              <td> <span class="visible-xs pull-left"> Action</span>  Case Assigned </td>
+                                              <td> <span class="visible-xs pull-left"> By</span>Sales Rep</td>
+                                              <td> <span class="visible-xs pull-left"> Comments</span>  </td>                                             
+                                            </tr>-->
+                                            <apex:repeat value="{!coblist}" var="item" id="theRepeat">
+                                             <tr>
+                                              <td> <span class="visible-xs pull-left"> Date and Time</span>
+                                              <apex:outputField value="{!item.cc.CreatedDate}" />  
+                                            <!--    <apex:outputText value="{!item.cd}"/>  --> </td>  
+                                                                                      
+                                            <!--   <td> <span class="visible-xs pull-left"> Action</span>  
+                                                  <apex:outputField value="{!item.Field}"/> </td> -->
+                                              <td> <span class="visible-xs pull-left"> By</span>
+                                              <apex:outputText value="{!item.cn}"/> </td>
+                                              <td style="word-wrap:break-word;"> <span class="visible-xs pull-left"> Comments</span> 
+                                                <apex:outputText value="{!item.cb}"/>  </td>                       
+                                            </tr>
+                                            </apex:repeat>
+                                            
+                                            
+                                        </tbody>
+                                </table>
+                            
+                        
+                        </div>                      
+                        </div>    
+            </div>
+            
+             
+        <!--- BODY CONTAINER ENDS HERE -->
+         </div>
+     <!-- ### MAIN CONTIANER END HERE ### -->
+     </div>
+<!-- ### DESKTOP / TABLET FOOTER ### -->
+
+    <script>
+            function addAttachment(){
+                //alert("hi");
+                addAttach();
+                }
+        </script>
+ 
+        <script>
+            svgeezy.init(false, 'png');
+        </script> 
+        <!-- ### END SWAPS SVG TO PNG IF NOT SUPPORTED  ### --> 
+        <!-- ### MEGAMENU APPEND CLASS TO ANOTHER ELEMENT  ### -->
+        <script>
+            $('li.dropdown').hover(
+                function(){ $(this).find('.mm-arrow').addClass('hover') },
+                function(){ $(this).find('.mm-arrow').removeClass('hover') }
+                )
+        </script>
+
+        <script>
+           
+        </script>
+
+        <!--### CURRENT DATE ### -->
+        <script type="text/javascript">
+
+            var d = new Date();
+            document.getElementById("current-date").innerHTML = (d.getMonth() + 1) + '/' + d.getDate() + '/' +  d.getFullYear();
+            $('.shopAlternatButton').click(function(e){
+                e.stopPropagation();
+            });
+        </script>
+        <script type="text/javascript">
+        
+        
+        
+          $("#addComment").hide();
+          $("#addCommentClick").click(function(e){
+              // $("#close").hide();
+              //$("#addCommentClick").hide();
+               $("#addComment").show();
+                e.preventDefault();
+           });
+           $("#cancel").click(function(e){
+                $("#addComment").hide();
+           }); 
+           $( "#Description" ).keypress(function() {
+                var commt = $("#Description").val(); 
+                if(commt.length>0){
+                    $('#Description').css('border-color', '');
+                }
+           });
+           $("#saveandclose").click(function(e){
+                var commt = $("#Description").val(); 
+                var cid ='{!$CurrentPage.parameters.id}';
+                if(commt.length>0){
+                    
+                    Visualforce.remoting.Manager.invokeAction(
+                     '{!$RemoteAction.Communities_CaseDetailPage.CreateCaseCommnet}',commt ,cid ,
+                         function(result, event) {
+                           //location.reload();
+                           $( location ).attr("href", '/{!$Label.BrokerPortalCommunity}/apex/SBU_Communities_My_Cases_Page?cn='+'{!myCase.CaseNumber}'); 
+                     });
+                 }
+                 else{
+                    $('#Description').css('border-color', 'red');
+                    //alert('Please enter Comment');
+                 }
+                
+           });   
+          
+
+        </script>   
+        <c:Communities_Footer />        
+
+</apex:form>
+    </body>
+    </html>
+
+
+
+</apex:page>

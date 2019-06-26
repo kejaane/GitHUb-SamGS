@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AIA_NCR_And_Benefit_Design_Case_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>The purpose of this Sharing Rule is to allow the AIA users to have R/W access to all AIA Cases</description>
+        <label>AIA NCR And Benefit Design Case Access</label>
+        <sharedTo>
+            <group>AIA_NCR_Benefit_Design_Cases</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AIA Benefit Design Cases,AIA Account Issue,AIA NCR Cases</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Broker_Service_Rep_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Broker Service Rep Sharing</label>
+        <sharedTo>
+            <role>SBU_Service</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>SBU_Management</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SBU_Management_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SBU Management Sharing</label>
+        <sharedTo>
+            <role>SBU_Management</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>SBU_Management</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SBU_Staff_and_Assistants</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SBU Staff and Assistants</label>
+        <sharedTo>
+            <role>SBU_Staff_and_Assistants</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>SBU_Management</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

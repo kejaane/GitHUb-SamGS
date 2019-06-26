@@ -1,0 +1,283 @@
+<!--
+/* =========================================================================================
+ * Date         : 08/01/2016
+ * Developer    : Laveen Kattela
+ * Purpose      : This VF Page refers to the Community Home page "Body section".This Home page will be displayed when a Community user login's Via Community portal.
+ *                It is the default page for both "Broker Agent" and "Assistant" 
+ *                1.It has "MY CASES" section to left side (Which only visiable's to Broker Agent)     - Open Cases , Resolved Cases & Closed Cases 
+ *                2.It has "AGENCY CASES" section to Right side (visiable to Broker Agent & Assistant)  - Open Cases , Resolved Cases & Closed Cases
+ *                3. Create New Case Button - where user can navigate to create a new case
+ *                4. "Recent Cases" section grid view - when the User logged in, it defaults to shows the Recently created Cases.
+ *                5. The Grid View Contains list of fields to display - Case Number,Subject ,Group Name ID,Subscriber ID,Status & Created on.
+ *                6. Click on "Case Number" or "Subject" Hyper link navigate to "Case Detail page"
+ *                7. View all button - Show's intially ten cases. If user click of "view all" button it shows all the remianing case to the user.  
+ *=========================================================================================
+ * Update History
+ *  ---------------
+ * Date       Developer         Description
+ *===========+============+================================================================
+ * 08/01/16   |  Laveen Kattela    | Initial Version                                          
+ *===========+============+================================================================
+ */
+ -->
+<apex:page showHeader="false" controller="Communities_HomePage" sidebar="false" standardStylesheets="false">
+
+<html lang="en" class="oxh">
+
+    <script>
+      var app = angular.module('MyApp', []);
+      
+      
+      app.controller('ctrl', function($scope) { 
+          $scope.csummary ;
+          $scope.viewAllbutton = false;
+          $scope.title ='Recent';
+          $scope.RecordsLimit =10;
+          
+          $scope.CaseSummary= function() {
+            Visualforce.remoting.Manager.invokeAction(
+             '{!$RemoteAction.Communities_HomePage.getCaseSummary}', 
+             function(result, event) {
+               $scope.csummary= result;              
+               //$scope.$apply() ;
+               $scope.safeApply();
+               console.log($scope.csummary.mycaseList.length);
+             });
+            console.log($scope.csummary); 
+            //console.log(csummary.myCases); 
+            
+         }
+         $scope.CaseSummary();
+         
+         <!-- Script for View all button  -->
+         $scope.ViewAll = function() {
+             console.log('ViewAll');
+             $scope.viewAllbutton  = true;
+             $scope.RecordsLimit =$scope.csummary.caseList.length;
+             //$scope.$apply() ;
+             //$scope.csummary.caseList = $scope.csummary.mycaseList;
+             //$scope.$apply() ;
+             
+         };
+         <!-- Dynamic Change of Title of the case in the grid view based on user click, renders the list of cases bases on user selection. and Limit up to 10 records intially  -->
+         $scope.StatusChange = function(svar) {
+             $scope.RecordsLimit =10
+             <!--  If user click "view" on my cases section, this condition satisfies and changes the title on the view  -->
+             if(svar == 'All')
+             {
+                $scope.csummary.caseList = $scope.csummary.mycaseList;
+                $scope.title ='All';
+             }
+             if(svar == 'Open')
+             {
+                $scope.csummary.caseList = $scope.csummary.openCasesList;
+                $scope.title ='Open';
+             }
+             if(svar == 'In-Progress')
+             {
+                $scope.csummary.caseList = $scope.csummary.INprogressCasesList;
+                $scope.title ='In-Progress';
+             }
+             if(svar == 'Closed')
+             {
+                $scope.csummary.caseList = $scope.csummary.closedCasesList;
+                $scope.title ='Closed';
+             }
+             if(svar == 'AAll')
+             {
+                $scope.csummary.caseList = $scope.csummary.AgencyCasesList;
+                $scope.title ='All Agency';
+             }
+             if(svar == 'AOpen')
+             {
+                $scope.csummary.caseList = $scope.csummary.AopenCasesList;
+                $scope.title ='All Open';
+             }
+             if(svar == 'AIn-Progress')
+             {
+                $scope.csummary.caseList = $scope.csummary.AINprogressCasesList;
+                $scope.title ='All In-Progress';
+             }
+             if(svar == 'AClosed')
+             {
+                $scope.csummary.caseList = $scope.csummary.AclosedCasesList;
+                $scope.title ='All Closed';
+            }
+            if($scope.csummary.caseList.length > $scope.RecordsLimit)
+            $scope.viewAllbutton = false;
+             //$scope.$apply() ;
+             $scope.safeApply();
+         
+         };
+         $scope.safeApply = function(fn) {
+          var phase = this.$root.$$phase;
+          if(phase == '$apply' || phase == '$digest') {
+            if(fn && (typeof(fn) === 'function')) {
+              fn();
+            }
+          } else {
+            this.$apply(fn);
+          }
+        };
+         
+          
+      });
+  
+  </script>
+
+
+<body lang="EN-US" ng-app="MyApp">
+<!-- By convention, for our "own" classes, to differentiate from bootstrap, we will prefix everything w/ cf-.. any class w/o cf- is
+    assumed to be a bootstrap style --> 
+    
+     <apex:composition template="Communities_HeaderMeta"></apex:composition>
+
+    <!-- main container for all dynamic feature content-->
+    <!-- MY CASES Section - Passing the dynamic list of case values through Remote action from controller  -->
+    <div class="cf-main-container" ng-controller="ctrl">
+     <c:Communities_Header />
+    <div class="body-container row clearfix ">
+        
+             <div class="row">
+                  <!-- This  Section  visible to both Broker agent and Assistant, based on this flag  ng-show="csummary.isShowMyCasses"   -->
+                  <div class="col-md-6 col-sm-6 col-xs-12" ng-show="csummary.isShowMyCasses">
+                        <div  class=" col-md-4 col-sm-8 col-xs-8">
+                         <h3> My Cases :<span >{{csummary.mycaseList.length}}</span></h3>
+                        </div>
+                         <div  class=" col-md-4 col-sm-4 col-xs-4 m-top-15">
+                        <span> <a href="#" ng-click="StatusChange('All')">  View </a> </span>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div  class=" col-md-3 col-sm-4 col-xs-12">
+                        <span>  Open Cases: </span>  <span> <a href="#" ng-click="StatusChange('Open')">  {{csummary.openCasesList.length }} </a> </span>
+                        </div>
+                        <div  class=" col-md-4 col-sm-4 col-xs-12">
+                        <span>  In-Progress Cases: </span>  <span> <a href="#" ng-click="StatusChange('In-Progress')">  {{csummary.INprogressCasesList.length}}  </a> </span>
+                        </div>
+                        <div  class=" col-md-4 col-sm-4 col-xs-12">
+                        <span>  Closed Cases: </span>  <span> <a href="#" ng-click="StatusChange('Closed')"> {{csummary.closedCasesList.length}}</a> </span>
+                        </div>
+                 </div>
+                  <!--  "AGENCY CASES" Section - This section is only visible to Assistant. Passing the Dynamic values through remote action from controller  -->
+                  <div class="col-md-6 col-sm-6 col-xs-12" ng-show="csummary.isShowAgencyCasses">
+                    <div  class=" col-md-5 col-sm-8 col-xs-8">
+                     <h3> Agency Cases : <span> {{csummary.AgencyCasesList.length}} </span> </h3>
+                    </div>
+                     <div  class=" col-md-4 col-sm-4 col-xs-4 m-top-20">
+                    <span> <a href="#" ng-click="StatusChange('AAll')">  View </a> </span>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div  class=" col-md-3 col-sm-4 col-xs-12">
+                    <span>  Open Cases: </span>  <span> <a href="#" ng-click="StatusChange('AOpen')">  {{csummary.AopenCasesList.length}} </a> </span>
+                    </div>
+                    <div  class=" col-md-4 col-sm-4 col-xs-12">
+                    <span>  In-Progress Cases: </span>  <span> <a href="#" ng-click="StatusChange('AIn-Progress')">  {{csummary.AINprogressCasesList.length}} </a> </span>
+                    </div>
+                    <div  class=" col-md-4 col-sm-4 col-xs-12">
+                    <span>  Closed Cases: </span>  <span> <a href="#" ng-click="StatusChange('AClosed')">  {{csummary.AclosedCasesList.length}}</a> </span>
+                    </div>
+             </div>
+             </div>
+             
+                    <!-- Create New Case Button logic -->
+                 <div class=" col-md-12 col-sm-12 col-xs-12 m-top-30">
+                                     
+                    <div class="panelContentBorder clearfix">
+                        <div class=" col-md-4 col-sm-4 col-xs-12"> <h3> {{title }} Cases</h3>   </div>
+                        <div class=" col-md-3 col-sm-3 col-xs-12  pull-right m-top-10">  <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_NewCasepage" class="btn btn-primary btn-lg btn-block" >Create a New Case</a>   </div>
+                        
+                        <div class="clearfix"> </div>
+                        <div class="row">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            
+                                <table width="100%" class="table grayTab m-top-10" style="margin-bottom:0px;table-layout:fixed!important;">
+                                          <thead class="hidden-xs">
+                                            <tr>
+                                              <th>Case Number</th>
+                                              <th>Subject</th>
+                                              <th>Group Name ID</th>
+                                              <th>Subscriber ID</th>
+                                              <th>Status</th>
+                                              <th>Created on</th>
+                                            </tr>
+                                          </thead>  
+                                          <tbody> 
+                                          <!-- Logic for grid list View of case. Used ng-repeat to display the cases in bulkified mode.And setting the limit of case display to 10 intially,In an latest created order  -->
+                                            <tr ng-repeat="case in csummary.caseList | limitTo:RecordsLimit | orderBy : '-Createdon'">
+                                              <td> <span class="visible-xs pull-left"> Case Number</span><a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_CaseDetailPage?id={{case.cid}}"> {{case.CaseNumber}} </a></td>                                             
+                                              <td style="word-wrap:break-word;"> <span class="visible-xs pull-left"> Subject</span> <a href="/{!$Label.BrokerPortalCommunity}/apex/Communities_CaseDetailPage?id={{case.cid}}"> {{case.Subject}} </a> </td>
+                                              <td> <span class="visible-xs pull-left"> Group Name ID</span> {{case.GroupNameID}}</td>
+                                              <td> <span class="visible-xs pull-left"> Subscriber ID</span>  {{case.SubscriberID}}</td>
+                                              <td> <span class="visible-xs pull-left"> Status</span>  {{case.Status}}</td>
+                                              <td> <span class="visible-xs pull-left"> Created on</span>  {{case.Createdon|date:'M/d/yyyy h:mm a'}} </td>                                            
+                                            </tr>
+                                            
+                                            <!--<tr>
+                                              <td colspan="6" class="text-center">  <a href="#"> View All </a> </td>
+                                            
+                                            </tr> -->
+                                        </tbody>
+                                </table>
+                                <!-- View all button code  -->
+                                <div ng-hide="viewAllbutton" ng-click="ViewAll" class="col-md-offset-5 col-md-2 col-sm-offset-5 col-sm-2 col-xs-12  m-top-15 form-group">  <a href="#" ng-hide="viewAllbutton" class="btn btn-primary btn-lg btn-block" ng-click="ViewAll()">View All</a>   </div>
+                        </div>      
+                        </div>    
+                          
+                    </div>
+
+
+                    
+            </div> 
+
+         
+        <!--- BODY CONTAINER ENDS HERE -->
+         </div>
+     <!-- ### MAIN CONTIANER END HERE ### -->
+     </div>
+<!-- ### DESKTOP / TABLET FOOTER ### -->
+
+
+<c:Communities_Footer /> 
+
+    </body>
+    <!-- ### MEGAMENU APPEND CLASS TO ANOTHER ELEMENT  ### -->
+        <script>
+            $('li.dropdown').hover(
+                function(){ $(this).find('.mm-arrow').addClass('hover') },
+                function(){ $(this).find('.mm-arrow').removeClass('hover') }
+                )
+        </script>
+   <!--
+        <script>
+            $(document).ready(function(e){
+                $(".view_all_content").click(function(e){
+
+                    $(".show_all_content").toggle();
+                })
+                
+                
+                /*More Inf0*/
+                
+                $('.paneleach').on('click','span.glyphicon-round-plus',function(e) {
+                    
+                    $(this).parents('.paneleach').find('.expandingcontent').show();
+                    $(this).addClass('glyphicon-round-minus').removeClass('glyphicon-round-plus');
+                    
+                    
+                });
+                $('.paneleach').on('click','span.glyphicon-round-minus',function(e) {
+                $(this).parents('.paneleach').find('.expandingcontent').hide();
+                    $(this).addClass('glyphicon-round-plus').removeClass('glyphicon-round-minus');
+                });
+                /*$('.paneleach').each(function(e)
+                {
+                    var abc =$(this).find('.paneleachtop .odd').height();
+                    if(abc>$(this).parents('.paneleach').find(
+                });
+                */
+            });
+        </script>  -->
+    </html>
+
+
+</apex:page>
